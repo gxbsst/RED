@@ -1,0 +1,14 @@
+#container {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+}
+#preContent {
+    background-image: url(/engine_files/substruct/images/admin/body_background_top_white.png);
+    background-repeat: no-repeat;
+    height: 83px;
+}
+#contentBody {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+    clear: both;
+    padding: 0px;
+    width: 879px;
+}

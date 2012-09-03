@@ -1,0 +1,29 @@
+<%= render :partial => 'sidebar' %>
+
+<div class="notice">
+  <h3>RED ACCOUNT - REGISTERED CONTACT DETAILS</h3>
+  <p>NOTE: Product that is not possessed by the original Buyer may be sent to an Authorized Red Service Center for an evaluation fee of $500. Red will provide a quotation for the re-certification of the product to existing Red product specifications at time of repair. “Customer” is defined as an entity who obtained Red product by other means than directly from Red. For details see <%= link_to 'RED Terms & Conditions', { :controller => "static_pages", :action => "terms" }, :target => "_blank" %> Section 6.</p>
+</div>
+<%= form_tag({}, :class => "spider") %>
+	<p class="disabled">
+		<label for="customer_first_name">Name</label>
+		<%= text_field "customer", "first_name", :size => 10, :class => "text-input", :readonly => "readonly" %>
+		-
+		<%= text_field "customer", "last_name", :size => 15, :class => "text-input", :readonly => "readonly" %>
+	</p>
+	<p class="disabled">
+		<label for="customer_name">Company</label>
+		<%= text_field "customer", "name", :size => 30, :class => "text-input", :readonly => "readonly" %>
+	</p>
+	<p>
+		<label for="customer_email">Email</label>
+		<%= text_field "customer", "email", :size => 30, :class => "text-input" %>
+	</p>
+	<p>
+		<label for="customer_phone">Phone</label>
+		<%= text_field "customer", "phone", :size => 30, :class => "text-input" %>
+	</p>
+	<p>
+	  <%= submit_tag "Update", :class => 'button' %>
+	</p>
+<%= end_form_tag %>

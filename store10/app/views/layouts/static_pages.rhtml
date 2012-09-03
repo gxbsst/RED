@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><%= page_title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="<%= _('GLOBAL|WEBSITE_DESCRIPTION') %>" />
+    <meta name="keywords" content="<%= _('GLOBAL|WEBSITE_KEYWORDS') %>" />
+    <!-- Google Analytics -->
+    <%= javascript_include_tag 'urchin', 'application' %>
+    <script type="text/javascript">
+      _uacct = "UA-666652-2";
+      urchinTracker();
+    </script>
+    <%= stylesheet_link_tag 'global' %>
+    <%= stylesheet_if_exists params[:lang], "#{params[:controller]}/#{params[:controller]}", "#{params[:controller]}/#{params[:action]}" %>
+    <!--[if  IE 6 | IE 5  ]>
+    <%= stylesheet_link_tag 'ie_fix' %>
+    <%= javascript_include_tag 'pngfix' %>
+    <![endif]-->
+    <link rel="alternate" type="application/rss+xml" href="/rss/recon" title="recon" />
+  </head>
+
+  <body>
+    <div id="wraper">
+      <div id="header">
+        <%= link_to image_tag('/skin/img/logo/logo.png', :alt => 'Logo'),
+          { :lang => params[:lang] }, :title => _('GLOBAL|LOGO_LINK_HINT'), :id => 'logo' %>
+          <%= render :partial => 'static_pages/global/main_navigation' %>
+        </div>
+
+        <div id="content">
+          <%= @content_for_layout %>
+          <div style="clear: both;"></div>
+        </div>
+
+        <%= render :partial => "static_pages/global/footer" %>
+      </div>
+    </body>
+  </html>

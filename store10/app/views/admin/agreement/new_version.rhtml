@@ -1,0 +1,57 @@
+<%= javascript_include_tag "admin/preview.js" %>
+
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><%= link_to 'Back to Agreement', {:action => 'edit', :id => @agreement} %></li>
+  </ul>
+  
+    <%= form_tag :action => "save_version", :id => @version.id %>
+  
+  <div id="content">
+    <label for="version_content">Content:</label>
+    <div class="info" id="textile-note" style="float:left;">
+      HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
+    </div>
+    <div style="float:right">
+      <input type="submit" value="Preview" name="commit" onclick="preview(this.form, '<%= params[:controller]%>');return false;"/>
+    </div>
+    <div style="clear:both;"></div>
+    <% if @version.new_record? %>
+      <p>
+        <%= text_area :version, :content, :class => 'textArea' %>
+        <%= error_message_on(:version, :content) %>
+        <%= hidden_field :agreement, :id %>
+      </p>
+    <% else %>
+      <p>
+        <%= text_area :version, :content, :class => 'textArea', :readonly => true %>
+        <%#= text_area :version, :content, :class => 'textArea' %>
+        <%#= error_message_on(:version, :content) %>
+        <%#= hidden_field :agreement, :id %>
+      </p>
+    <% end %>
+  </div>
+  
+  <div class="line">&nbsp;</div>
+  
+    <% if @version.new_record? %>
+    <div style="float:left">
+      <%= submit_tag "Save", :class => 'button hundredfifty' %>
+    </div>
+  <% else %>
+    <!--div class="line">&nbsp;</div-->
+    <div sytle="float:left">
+      <%#= submit_tag "Save", :class => 'button hundredfifty' %>
+    </div>
+    <div style="float:right">
+      <%#= link_to "Delete This Version", {:action => 'destroy_version', :id => @version}, :confirm => "Are you sure?", :class => 'button hundredfifty' %>
+    </div>
+  <% end %>
+  <% end_form_tag %>
+
+  <div class='clear'></div>
+  <div id="preview-content" style="display: none"></div>
+  
+</div>
+<div class='clear'>&nbsp;</div>

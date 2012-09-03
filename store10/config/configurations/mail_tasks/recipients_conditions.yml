@@ -1,0 +1,42 @@
+# Set up available conditions for picking up recipients in admin/mails
+# by Jerry Guo <hozaka@gmail.com>
+#
+# Rules
+# 1. While searching for a product, item_id must be the first parameter.
+# 2. While searching records between a range, the less value must be placed before the greater value.
+
+# Regular Conditions
+waiting_for_product:
+  descript: Waiting for this product
+  sql_clause: item_id = ? AND confirmed_dlv IS NULL
+  type: With Condition
+  display_products: 1
+
+already_have_product:
+  descript: Already have this product
+  sql_clause: item_id = ? AND confirmed_dlv IS NOT NULL
+  type: With Condition
+  display_products: 1
+
+have_product_with_serial_number_between:
+  descript: Have product with serial number between
+  sql_clause: item_id = ? AND sales_item_reservation_number BETWEEN ? AND ?
+  params_count: 2
+  type: With Condition
+  display_products: 1
+
+# Groups
+r3d_sdk_users:
+  descript: Users of R3D SDK
+  sql_clause: r3dsdk_user = true
+  type: In Group
+
+post_users:
+  descript: Post Users
+  sql_clause: post_user = true
+  type: In Group
+
+red_one_users:
+  descript: RED ONE Users ( non-owner )
+  sql_clause: red_one_user = true
+  type: In Group

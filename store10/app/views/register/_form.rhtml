@@ -1,0 +1,71 @@
+<%#= error_messages_for 'warranty_registration' %>
+ <%#= error_message_on "warranty_registration", "serial_number" %>
+<%#= country_options_for_select() %> 
+  <div id="name_outer">
+<p class="p1" id="first_name"><label for="warranty_registration_first_name"><%=  _('REGISTER|FIRST_NAME') %>:</label>
+<%= text_field 'warranty_registration', 'first_name'  %></p>
+<%= javascript_include_tag 'prototype' %>
+<p id="last_name" class="p1"><label for="warranty_registration_last_name" ><%=  _('REGISTER|LAST_NAME') %>:</label>
+<%= text_field 'warranty_registration', 'last_name'  %></p></div>
+
+<p id="company" class="p2"><label for="warranty_registration_company"><%=  _('REGISTER|COMPANY') %>:</label><%= text_field 'warranty_registration', 'company'  %></p>
+
+<!-- <p id="product_Categories" class="p2"><label for="warranty_registration_product_tag"><%=  _('REGISTER|PRODUCT_CATEGORIES') %>:</label>
+  <%# selected_country = instance_variable_get("@order_address").country_id.to_s %>
+<%= render_component( :action => "product_categories_select", :params => {:select_name => "order_address", :selected => 1}) %></p>  
+<p id="product" class="p2"><label for="warranty_registration_product"><%=  _('REGISTER|PRODUCT') %>:</label><%= text_field 'warranty_registration', 'product'  %></p> -->
+
+<p id="serial_number" class="p2"><label for="warranty_registration_serial_number"><%=  _('REGISTER|SERIAL_NUMBER') %>:</label><%= text_field 'warranty_registration', 'serial_number'  %><%= error_message_on "warranty_registration", "serial_number" %>
+</p>
+
+<fieldset class="contact_infomation">
+<LEGEND><%= _('REGISTER|CONTACT_INFORMATION') %></LEGEND>
+<p id="address1" class="p3"><label for="warranty_registration_address1"><%=  _('REGISTER|ADDRESS1') %>:</label><%= text_field 'warranty_registration', 'address1'  %></p>
+
+<p id="address2" class="p3"><label for="warranty_registration_address2"><%=  _('REGISTER|ADDRESS2') %>:</label><%= text_field 'warranty_registration', 'address2'  %></p>
+
+<p id="p_country" class="p3"><label for="warranty_registration_country"><%=  _('REGISTER|COUNTRY') %>:</label>
+<%#= render_component(:controller => "countries", :action => "select_list", :params => {:select_name => "warranty_registration", :selected => 'country'}) %>
+<%= country_select 'warranty_registration','country',priority_countries=['United States'],{},{:onchange => "change_country(this.value)"} %>
+<span id="loading" style="display:none;color:red;">Loading...</span></p>
+
+<%#= state_select 'warranty_registration', 'state', country='US' %>
+
+<%#=  observe_field :warranty_registration_country, :frequency=>0.5,
+# :update=>"state_select",
+# :url=> {:action=>'state_select', :only_path=>false},
+# :loading => "Element.show('loading')",
+# :complete => "Element.hide('loading')",
+# :with=>"'country=' + encodeURIComponent(value)" %>
+
+<p id="state_select" class="p3"><%= render :partial => 'state_select', :locals => { :current_country => @warranty_registration.country } %></p>
+<script type="text/javascript" language="javascript" >
+// <![CDATA[
+  	var country = $('warranty_registration_country').value;
+	// new Ajax.Updater('state_select','../register/state_select?country='+country, {asynchronous:true, evalScripts:true});
+
+  function change_country(country) {
+    		new Ajax.Updater('state_select','../register/state_select?country='+country, {asynchronous:true, evalScripts:true});
+  		}
+//$('warranty_registration_serial_number').onblur = function() {Validator.check([{text:this.value, pattern:/[A-Z]{3}-\d{3}-[A-Z]{3}/, message: 'Please format the Serial Number use:ABC-123-XYZ'}])}
+    
+// ]]>
+</script>
+
+<p id="city" class="p3"><label for="warranty_registration_city"><%=  _('REGISTER|CITY') %>:</label><%= text_field 'warranty_registration', 'city'  %></p>
+
+
+<p id="zip" class="p3"><label for="warranty_registration_zip"><%=  _('REGISTER|ZIP') %>:</label>
+
+<%= text_field 'warranty_registration', 'zip'  %>
+<%= error_message_on "warranty_registration", "zip" %>
+
+</p>
+
+
+<p id="phone_number" class="p3"><label for="warranty_registration_phone_number"> <%=  _('REGISTER|PHONE_NUMBER') %>:</label><%= text_field 'warranty_registration', 'phone_number'  %></p>
+
+<p id="email_addess" class="p3"><label for="warranty_registration_email_address"><%=  _('REGISTER|EMAIL_ADDRESS') %>:</label><%= text_field 'warranty_registration', 'email_address'  %><%= error_message_on "warranty_registration", "email_address" %>
+</p>
+<!--[eoform:warranty_registration]-->
+</fieldset>

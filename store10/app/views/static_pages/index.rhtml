@@ -1,0 +1,146 @@
+<% content_for(:head) do %>
+  <script type="text/javascript" src="/javascripts/prototype_for_homepage.js"></script>
+  <script type="text/javascript" src="/javascripts/banner_slider.js"></script>
+  <script type="text/javascript"src="/javascripts/scriptaculous_for_homepage.js"></script> 
+  <script type ="text/javascript">
+  setAuto(); 
+  </script>
+  <%= stylesheet_link_tag 'v2/pages/homepage' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('GLOBAL|WELCOME') %></h1>
+<% end %>
+
+<div id="hero">
+  <div id="crossfade"> 
+    <div id="feature2" class="fader"> 
+      <div class="image">
+        <%= link_to image_tag('http://red.cachefly.net/14/index/epic.jpg', :size => '215x536'), '/epic_scarlet' %>
+        <%= link_to image_tag('http://red.cachefly.net/14/index/scarlet.jpg', :size => '215x536'), '/epic_scarlet' %>
+        <%= link_to image_tag('http://red.cachefly.net/13/red_one.jpg', :size => '215x536'), :controller => 'cameras' %>
+        <a href="/redray" class='no-margin'>
+		<%#= link_to image_tag('http://red.cachefly.net/13/red_ray.jpg', :size => '215x536'), {:action => 'redray'}, :class => 'no-margin' %>
+		<%= image_tag('http://red.cachefly.net/13/red_ray.jpg', :size => '215x536') %>
+		</a>
+      </div>
+      <div class="text"></div>
+    </div>
+    
+    <% if @red_china || params[:lang] == "zh_CN" # RED China Event, only for "zh_CN" %>
+    <div id="feature1" class="fader">
+      <div class="image">
+        <%= link_to(
+          image_tag("/skin/img/index/hero_china.jpg", :alt => "RED China", :size => "910x537"),
+          :controller => "event", :action => "red_china", :lang => nil
+        ) %>
+      </div>
+      <div class="text"></div>
+    </div>
+    <script type="text/javascript">
+      new CrossFader('feature2', 'feature1');
+    </script>
+    <% end %>
+    
+  </div>
+</div>
+
+<div id="firmware" class="block-heading">
+  Current RED ONE Firmware :
+  <%= link_to "Release Build 17", :controller => "support", :action => "release_history", :id => 4 %>
+  |
+  <%= link_to "RED ALERT!  <span>v3.6.0</span>", :controller => "support", :action => "release_history", :id => 3 %>
+  |
+  <%= link_to "REDCINE <span>v3.1.8</span>", :controller => "support", :action => "release_history", :id => 6 %>
+  |
+  <%= link_to "More...", :controller => "support" %>
+</div>
+
+<div id="news" class="transparent-25">
+  <div id="recon" class="transparent-50">
+    <h2>
+      <a href="http://www.reduser.net/forum/forumdisplay.php?f=29" ><%= _('HOME|RECON|LINK') %></a>
+    </h2>
+    <span><%= _('HOME|RECON|SCRIPT|LINK') %> | <a href="/rss/recon" class="rss">RSS</a></span>
+    <ul>
+      <% @red_con[0..5].each do |news| %>
+      <li>
+        <%= link_to truncate(news.title,30), news.link,:alt => news.title %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <div id="reduser-news" class="transparent-50">
+    <h2>
+      <a href="http://www.reduser.net/forum/index.php" ><%= _('HOME|REDUSER.NET|LINK') %></a>
+    </h2>
+    <span><%= _('HOME|REDUSER.NET|SCRIPT|LINK') %> | <a href="/rss/reduser" class="rss">RSS</a></span>
+    <ul>
+      <% @red_user_news[0..5].each do |news| %>
+      <li>
+        <%= link_to truncate(news.title,30), news.link,:alt => news.title %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  
+  <div id="hot_news" class="transparent-50">
+    <div id="au">
+      <div class="outer" onmouseout="setAuto();" onmouseover="Mea(0);clearAuto();">
+        <div class="inner">
+          <a href="/developer"><img src="/images/homepage/r3d_sdk.png" alt="" height="155" width="450"></a>
+        </div>
+      </div><!--end .outer-->
+      <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(1);clearAuto();">
+        <div class="inner">
+          <img src="/images/homepage/serving.jpg" alt="" height="155" width="450">
+        </div>
+      </div><!--end .outer-->
+      <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(2);clearAuto();">
+        <div class="inner">
+          <a href="/indie/thenothingmen"><img src="/images/homepage/thenothingmen.jpg" alt="" height="155" width="450"></a>
+        </div>
+      </div><!--end .outer-->
+      <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(3);clearAuto();">
+        <div class="inner">
+          <a href="interviews"><img src="/images/homepage/interviews.jpg" alt="" height="155" width="450"></a>
+        </div>
+      </div><!--end .outer-->
+      <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(4);clearAuto();">
+        <div class="inner">
+          <a href="red_mythbusters"><img src="/images/homepage/redmythbusters.jpg" alt="" height="155" width="450"></a>
+        </div>
+      </div><!--end .outer-->
+      <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(5);clearAuto();">
+        <div class="inner">
+          <a href="shot_on_red"><img src="/images/homepage/crossingtheline.jpg" alt="" height="155" width="450"></a>
+        </div>
+      </div><!--end .outer-->
+    </div><!--end au-->
+    <div id="control_panel">
+      <a id="pause" onclick="setPause();return false" href="#" name="pause"><img src="/images/theme/pause.gif" alt=""></a>
+      <ul id="No">
+        <li id="t0" class="active">
+          <a onmouseout="setAuto();" onmouseover="Mea(0);clearAuto();">1</a>
+        </li>
+        <li id="t1">
+          <a onmouseout="setAuto();" onmouseover="Mea(1);clearAuto();">2</a>
+        </li>
+        <li id="t2">
+          <a onmouseout="setAuto();" onmouseover="Mea(2);clearAuto();">3</a>
+        </li>
+        <li id="t3">
+          <a onmouseout="setAuto();" onmouseover="Mea(3);clearAuto();">4</a>
+        </li>
+        <li id="t4">
+          <a onmouseout="setAuto();" onmouseover="Mea(4);clearAuto();">5</a>
+        </li>
+        <li id="t5">
+          <a onmouseout="setAuto();" onmouseover="Mea(5);clearAuto();">6</a>
+        </li>
+      </ul>
+    </div><!--end #control_panel-->
+  </div><!--end#hot_news-->
+  <div class="clear"></div>
+</div>

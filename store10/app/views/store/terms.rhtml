@@ -1,0 +1,30 @@
+<style type="text/css">
+  #content h2 a.printable_agreement {
+    float: right;
+    color: #FFF;
+    margin: 9px;
+    font-weight: normal;
+    font-size: 9pt;
+    text-decoration: underline;
+  }
+  h2 {
+    margin: 0;
+  }
+</style>
+<div id="content" style="margin-top:0;">
+  <div id="terms_box">
+    <h2>
+      <%= link_to "Printable Version", { :controller => "static_pages", :action => "printable_terms", :id => @agreement.agreement.name }, :target => "_blank", :class => "printable_agreement" %>
+      &nbsp;&nbsp;<%= _('TERMS|TITLE') %>
+    </h2>
+    <div id="terms_content">
+      <%= textilize @agreement.content %>
+    </div>
+    <%= form_tag :action => "terms" %>
+    <div id="terms_buttons">
+      <%= submit_tag 'Accept' %>
+      <%= submit_tag 'Decline' %>
+    </div>
+    <%= end_form_tag %>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+require 'rubygems'
+require 'fastercsv'
+
+lines = FasterCSV.read('blast.csv')
+
+
+lines.each do |line|
+  if line[3] == '598.49'
+    shipping_method = 'Fed Ex International Priority'
+  elsif line[3] == '185.29'
+    shipping_method = 'Fed Ex 2 Day Air'
+  end
+  
+  ERP::Customer.find_by_account_num(line.first).update_attributes( :subtotal => line[2], :shipping => line[3], :tax => line[4], :balance => line[5], :to_transfer => line[6], :transfer_amount => line[6], :shipping_method => shipping_method )
+  
+end

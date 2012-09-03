@@ -1,0 +1,28 @@
+#tech_specs_content{
+	margin-top: 10px;	
+	
+}
+
+#tech_specs_content .inner {
+	float:left;
+	width: 204px;
+	margin: 10px 10px;
+	*margin: 10px 8px;
+
+}
+#tech_specs_content #inner1 {
+}
+
+#tech_specs_content .inner .thumbs {
+	margin-top: 10px;
+	border: 1px solid #333;
+}
+
+#tech_specs_content .inner table tr th {
+	line-height: 200%;
+	text-align: left;
+}
+
+#tech_specs_content .inner tr.price {
+	color:#fefefe;
+}

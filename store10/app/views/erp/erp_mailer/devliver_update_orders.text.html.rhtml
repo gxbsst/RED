@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>RED / My Account</title>
+  <style type="text/css" media="screen">
+
+  </style>
+</head>
+<body>
+  <div id="wrapper" >
+  <h2>AX Error: <%= @ax_error%></h2>
+  
+  <% @orders.each do |order| %>
+  
+  <h3>#<%= order[:sales_id]%></h3>
+  <table class="orders">
+    <tr class="orders_tr1"><th>Bill To</th><th>Ship To</th></tr>
+    <tr class="orders_tr2">
+      <td>
+        <!-- Address of  Invoice to -->
+        <table class="invoice">
+          <tr class="invoice_tr1"><th>Country</th><th>Street</th><th>State / Province / State</th><th>City</th><th>Postal / Zip Code</th></tr>
+          <tr class="invoice_tr2"><td><%= order[:invoice][:icounty] %></td><td><%= order[:invoice][:istreet] %></td><td><%= order[:invoice][:istate] %></td><td><%= order[:invoice][:icity] %></td><td><%= order[:invoice][:izip_code] %></td></tr>
+        </table> 
+      </td>
+      <!-- Address of Delivery to -->
+      <td>
+        <table class="delivery">
+          <tr class="delivery_tr1"><th>Country</th><th>Street</th><th>State / Province / State</th><th>City</th><th>Postal / Zip Code</th></tr>
+          <tr class="delivery_tr2"><td><%= order[:delivery][:dcounty] %></td><td><%= order[:delivery][:dstreet] %></td><td><%= order[:delivery][:dstate] %></td><td><%= order[:delivery][:dcity] %></td><td><%= order[:delivery][:dzip_code] %></td></tr>
+        </table> 
+      </td>
+    </tr>   
+    <tr>
+      <td colspan=2>
+        <!-- Line Orders  -->
+        <table class="line_orders">
+          <tr class="line_orders_tr1"><th>Name</th><th>SKU</th><th>Status</th><th>Quantity</th><th>Price</th><th>Subtotal</th></tr>
+          
+          <% order[:lines].each do |line| %>
+          
+          <tr class="line_orders_tr2"><td><%= line[:item_id] %></td><td><%= line[:item_id] %></td><td></td><td><%= line[:sales_qty] %></td><td></td><td></td></tr>
+          
+          <% end %>
+          
+        </table>
+      </td>
+    </tr>
+    <table>
+      
+    <% end %>
+</div>
+    </body>
+    <html>

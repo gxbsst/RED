@@ -1,0 +1,69 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__) + '/../config/boot'
+RAILS_ENV = ENV['RAILS_ENV'] = ARGV.shift || 'development'
+require RAILS_ROOT + '/config/environment'
+
+
+def log_exception(user, exception)
+  File.open("#{RAILS_ROOT}/log/deliver_creation_emails.failed_list", 'w+') do |file|
+    file << "\"#{user.name}\" <#{user.email_address}>"
+  end
+end
+
+def deliver_emails(users)
+  result = { :success => 0, :failed => 0 }
+  start_time = Time.now
+  puts "#{users.size} emails in queue...."
+  puts "--------------------"
+  
+  users.each_index do |index|
+    user = users[index]
+    begin
+      puts "Sending email to #{user.name} <#{user.email_address}>"
+      StoreUserNotify.deliver_auto_generated(user, "http://www.red.com/reset_pwd/#{user.security_token}")
+      StoreUser.update user.id, :creation_email => true
+      puts "Email sent successfully."
+      result[:success] += 1
+    rescue => e
+      log_exception(user, e)
+      puts "Exception: #{e.message}"
+      result[:failed] += 1
+    ensure
+      puts "----- (#{index + 1} of #{users.size}) -----"
+    end
+  end
+  
+  puts ""
+  puts "Operation completed in #{Time.now - start_time}(ms)"
+  puts "Success: #{result[:success]}, Failed: #{result[:failed]}"
+  puts "List of failed emails has been saved as 'log/deliver_creation_emails.failed_list'." if result[:failed] > 0
+end
+
+def get_integer_input(max)
+  print "How many emails to send (max to #{max}, 0 to exit): "
+  input = gets
+  unless input =~ /\d+/ && input.to_i <= max
+    puts "ERROR: Invalid value\n"
+    get_integer_input(max)
+  else
+    exit(0) if input.to_i == 0
+    return input.to_i
+  end
+end
+
+def main
+  user_condition = {
+    :conditions => ["ax_store_user_logs.status = 'CREATE' AND store_users.creation_email = ?", false],
+    :joins => 'JOIN ax_store_user_logs ON store_users.email_address = ax_store_user_logs.email_address'
+  }
+  
+  users_count = StoreUser.count user_condition
+  users = StoreUser.find(
+    :all,
+    user_condition.merge(:limit => get_integer_input(users_count), :select => 'store_users.*')
+  )
+  deliver_emails(users)
+end
+
+main

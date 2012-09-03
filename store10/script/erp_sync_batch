@@ -1,0 +1,58 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+RAILS_ROOT = File.dirname(__FILE__) + '/..'
+envs = Dir.glob("#{RAILS_ROOT}/config/environments/*").collect{|file| File.basename(file, '.rb')}
+
+if ARGV[0].nil?
+  puts "\n  Please specify process environment:"
+  puts "  eg: erp_sync_batch |#{envs.join('|')}|\n "
+  exit 0
+end
+
+#===============================================
+# avoid concurrency conditions
+# record process id by lock file
+#===============================================
+lock_file = "#{RAILS_ROOT}/script/erp_sync_batch.lock"
+if File.file?(lock_file)
+  #=============================================
+  # if lock file exist, get it from lock file
+  #=============================================
+  pid = open(lock_file) {|f| f.read }
+
+  #=============================================
+  # check the process id if exist
+  # if process id matched in '/proc', exit
+  #=============================================
+  if Dir.entries('/proc').include? pid
+    puts "\n  erp_sync_batch is running...\n "
+    exit 0
+  end
+end
+
+begin
+  #===============================================
+  # write or rewrite process id to lock file
+  #===============================================
+  open(lock_file, 'w') {|f| f << Process.pid.to_s }
+
+  ENV['RAILS_ENV'] = ARGV[0]
+  require RAILS_ROOT + "/config/environment"
+  erp_logs = ERP::ERPLog.find(:all, :conditions => ['update_complete = 0 and created_at >= ?', 30.minutes.ago])
+  
+  erp_logs.each do |erp_log|
+    begin
+      ERP::ERPAgent.post(:erp_log => erp_log)    
+    rescue => ex
+      puts ex.message
+      ERP::ERPMailer.deliver_modification_failed(erp_log)
+    end
+  end
+rescue => ex
+  puts ex.message
+  raise
+ensure
+  FileUtils.rm lock_file if File.file? lock_file
+end

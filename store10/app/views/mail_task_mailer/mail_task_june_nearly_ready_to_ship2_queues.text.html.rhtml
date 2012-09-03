@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>RED Digital Cinem</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF;background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table>
+      <!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;">
+        <h3><%=h @queue.name %> -</h3>
+        <p> Congratulations, you have (<span style="color:#00d8ff;"><%=h @queue.deliverable_redone_quantity %></span>) RED ONE&trade; camera(s) that are nearly ready to ship. </p>
+        <h2>ORDER SUMMARY</h2>
+        <p>Your open orders can be found at <a href="http://www.red.com/my_account" style="color: #f5ffd4; font-weight: bold;">www.red.com/my_account</a>.  You will need to log on with your user name ( <%= @queue.email_address %> ) and password. If you forgot your password, please use our <a href="http://www.red.com/account/forgot_password" style="color: #FFF;">Password Recovery Page</a>  to securely reset your password.  In the My Account section, you will have the option to view your open orders, order history, contact information, change your password, billing address, and shipping addresses as well as see the total balance on your RED account.   In the open order section, you can delete items as well as move them from one order to another.  If you still need to add any accessories to your order, please add them at <a href="http://www.red.com/store" style="color: #FFF;">RED.com/store: </a></p>
+<ol>
+	<li>Choose "Deposit Only" when adding the additional accessories</li>
+	<li>During checkout, choose "Wire Transfer" as the payment method</li>
+	<li>Rather than remitting the deposit then balance separately, you can simply wire the entire outstanding balance</li>
+</ol>
+<p>Any new orders will be grouped under your existing account and be seen in My Account when posted.</p>
+				<p>PLEASE NOTE THAT THE MY ACCOUNT SECTION OF RED.COM IS IN BETA.  IF YOU SEE ANY ERRORS OR BUGS, PLEASE EMAIL ME AT <a style="color:#FFF;font-weight:bold;text-decoration: none;" href="mailto:<%= @queue.staff_email_address %>"><%= @queue.staff_email_address %></a> IMMEDIATELY.</p>
+     <p class='note'><span>NOTES:</span> 
+          <ul style="padding-left:38px;">
+						<li>* All prepaid deposits will be applied to this order. Additional prepayments can be made at anytime via wire transfer, check drawn from a US bank, or cash.</li>
+            <li>* EVFs, 18-50 ZOOM LENS (METRIC), BLACK ALUMINUM RODS, RED RAID DRIVE, and 50-150 ZOOM LENSES (IMPERIAL) are in limited supply and backorders for that product are currently being fulfilled in order of RED ONE delivery date. If they do not ship with your above order, they will ship separately as soon as they are available.</li>
+            <li>* “Coming Soon” accessories (ie, not currently released for delivery):</li>
+            <ul style="margin:8px 0;">
+              <li>RED FLASH DRIVE</li>
+							<li>16 GB COMPLACT FLASH CARDS</li>
+              <li>RED PRO PRIME SET OF LENSES (BOTH IMPERIAL AND METRIC)</li>
+              <li>RED PRO 18-85 ZOOM LENS (BOTH IMPERIAL AND METRIC)</li>
+              <li>50-150 ZOOM LENS (METRIC)</li>
+              <li>18-50 ZOOM LENS (METRIC)</li>
+              <li>300mm PRIME LENS (METRIC)</li>
+              <li>CARBON FIBER RODS (STANDARD)</li>
+							<li>RED PRO 7" LCD</li>
+              <li>RED LENS MOTOR</li>
+            </ul>
+
+						<li>All parts subject to availability.</li>
+            <li>If you think you might qualify for any California or Washington tax exemptions, please notify me immediately at <a style="color:#FFFFFF;font-weight:bold;text-decoration: underline;" href='mailto:<%= @queue.staff_email_address %>'><%= @queue.staff_email_address %></a>.</li>
+          </ul>
+        </p>
+				<p>WE WILL SEND AN UPDATED ORDER SUMMARY EMAIL ON JULY 14TH SO PLEASE ATTEMPT TO MAKE ANY AND ALL ORDER ADJUSTMENTS BY END OF THE DAY ON JULY 11TH SO THEY ARE REFLECTED IN THIS EMAIL BLAST. THIS WILL INCLUDE CURRENT ORDER TOTALS, PAYMENT INFORMATION, DELIVERY OPTIONS, AND OTHER CRITICAL INFORMATION. THE ORDER TOTALS WILL INCLUDE ALL ITEMS ORDERED – AVAILABLE, BACKORDERED, AND COMING SOON. YOU CAN CHOOSE TO PAY FOR YOUR ENTIRE ORDER NOW AND HAVE PRODUCT SHIP AS IT BECOMES AVAILABLE OR ONLY PAY FOR AVAILABLE PRODUCT AT THIS TIME.</p>
+        <p>CAMERAS WILL BEGIN SHIPPING ONLY WHEN FINAL PAYMENT HAS BEEN RECEIVED BY RED. THIS DELIVERY BATCH WILL BEGIN SHIPPING ON JULY 14th IN ORDER OF PAYMENT RECEIVED TO RED.</p>
+        <h2>PAYMENT INSTRUCTIONS</h2>
+				<p>We want to make it clear that even wire transfers can take up to 3-5 days to get to us and that there is a wire transfer fee. Payment for the balance of your order must be completed via wire transfer, check drawn on a US bank, or cash equivalent.</p>
+        <p>
+          <strong>NOTES: </strong>
+          Checks will require a (10) day clearing period once received by RED before order will ship.
+        </p>
+        <p>When executing the wire transfer, you are responsible for transferring the net of <strong><%= number_to_currency((@queue.total_due <= 0.0) ? 0.0 : @queue.total_due) %></strong> (USD). In addition, you should select to pay any fees associated with the transfer.  Wire transfer instructions:</p>
+        <table width="600px" cellpadding="2" cellspacing="1" bgcolor="#000000" bordercolor="#000000">
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Amount to Transfer : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= number_to_currency((@queue.total_due <= 0.0) ? 0.0 : @queue.total_due) %> USD plus any associated wire transfer fees</font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Name : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_name] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Address : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_address] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">ABA Routing Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:aba_routing_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">SWIFT Code : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:swift_code] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">To Credit : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:to_credit] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Account Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:account_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Reference Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= "#{@queue.ax_account_number}" %> <%= "/ #{@queue.last_name}" unless @queue.last_name.blank? %></font></td></tr>
+        </table>
+        <p>The REFERENCE NUMBER IS VERY IMPORTANT. Be certain to include the REFERENCE NUMBER on your transfer to avoid delay in crediting the payment to your account and shipping your camera.</p>
+        <h2>ACCOUNT INFORMATION</h2>
+				<p>Please use <a href="http://www.red.com/my_account" style="color: #F5FFD4; font-weight: bold;">www.red.com/my_account</a> to confirm/update all of your contact information to ensure your order is processed and delivered in the most efficient manner.</p>
+        <h2>CONTACT US</h2>
+        <p>In an effort to best facilitate our customers in a timely manner, we are making all contacts via email and would encourage you to respond in kind to me at <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="mailto:<%= @queue.staff_email_address %>" ><%= @queue.staff_email_address %></a>. Please always include your RED ONE serial number or customer number in the subject line of any email sent to RED so that we may locate your account quickly. Due to the large volume of sales, direct contact by phone is only encouraged in the event that we are unable to resolve an inquiry by email.</p>
+        <h2>ACCESSORY INFORMATION</h2>
+        <h3 style="margin-left:30px;">LENSES</h3>
+        <p style="margin-left:30px;">RED ONE is designed to shoot full 4K using any of the Super 35mm size, PL mount Cine lenses that you already own. 2K can be shot using any Super 16mm PL mount cine lens. We also offer the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/58" >NIKON MOUNT </a>and <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/57" >B4 to PL ADAPTOR</a> to leverage your existing lens investment.  If you're migrating to RED ONE from video or from still photography, we recommend that you start with our Wide Angle, Close Focus <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/32">RED 18-50mm T3 Zoom Lens</a>. If you're planning to shoot at longer distances, we recommend the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/34">RED 300mm Prime Lens</a>. Also, you should consider the RED 50-150 T3 Zoom and RED 18-85 Zoom Lenses.</p>
+        <h3 style="margin-left:30px;">MONITORING OPTIONS</h3>
+        <p style="margin-left:30px;">Your order should contain a <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/38">RED LCD</a>, a <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/37">RED EVF</a> or both. If you do not have the EVF or LCD, you'll need to use external monitors connected via HD-SDI (720p or 1080p) to check focus, track shots, and operate the menu system. </p>
+        <h3 style="margin-left:30px;">POWER OPTIONS</h3>
+        <p style="margin-left:30px;">Your RED ONE  draws approximately 70W @ 14V of unregulated DC power. Additional RED accessories draw power directly off of the RED ONE camera body. To supply power, you'll need either RED BRICK 140Wh batteries, or the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/78">AC Power Adapter</a> if mobile operation is not required. We recommend the purchase of a <a href="http://www.red.com/store/product_detail/39" style="color:#FFF;font-weight:bold;text-decoration: underline;" >RED POWER PACK</a> including: sequential dual battery RED charger and (2) RED BRICK 140Wh batteries. </p>
+        <h3 style="margin-left:30px;">STORAGE OPTIONS</h3>
+        <p style="margin-left:30px;">Shooting REDCODE RAW 4K with 4 channel sound @ 24fps require approximately 2GB/minute of digital storage. We strongly recommend that every RED ONE camera include the
+        <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/15">RED FLASH (CompactFlash) Read/Write module</a>. Each <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/store/product_detail/61">8GB RED CompactFlash Card</a> stores approximately 4 minutes of 4K footage, approximately the same storage as a standard 35mm 400 foot roll of film. Meanwhile, the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/60">320GB RED DRIVE</a> supports approximately 160 minutes of 4K footage. </p>
+        <h3 style="margin-left:30px;">MOUNTING ACCESSORIES</h3>
+        <p style="margin-left:30px;">We strongly recommend that you purchase the BASE PRODUCTION PACK, allowing you to simultaneously mount RED BRICK batteries, RED DRIVE storage, and other accessories. The<a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/35"> BASE PRODUCTION PACK</a>  includes the DOVETAIL shoulder pad which should  be used for handheld applications.  When a solid tripod, camera cart, Steadicam, etc. mounting application is required, a RED CHEESEPLATE should be used.  RED also offers the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/45">ARRI 19mm Base</a> and <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/43">ARRI 15mm Base</a> for additional mounting flexibility. For ultra-lightweight shooting, the <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/44"> RED BATTERY BELT CLIP</a>, <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/53">TOP MOUNT</a>, <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/53">TOP HANDLE</a> and<a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/38"> RED LCD</a> provide a perfect combination.</p>
+        <h3 style="margin-left:30px;">MISCELLANEOUS ACCESSORIES</h3>
+        <p style="margin-left:30px;">Many RED customers pick up extra <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/71">BOLT SETS</a>, <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/83">RED WING NUTS</a>, <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/89">90mm LOGO</a> and <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/75">110mm BUZZSAW METAL ICON</a>. We also have a <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="https://www.red.com/store/product_detail/72">15MM ADAPTOR</a> that mounts on a UNIVERSAL MOUNT and allows the use of 15MM rods part of matte boxes, follow focus, etc.</p>
+        <h2>OTHER</h2>
+        <p>As of receiving the updated order summary email on <strong>July 14th</strong> you will have (30) days to make final payment for your camera package(s) in the range of #<%= @queue.class::Delivery_range_begin %> - #<%= @queue.class::Delivery_range_end %>.  If you wish to delay delivery of your camera package (for any reason), you can by notifying RED at <a style="color:#FFFFFF;font-weight:bold;text-decoration: underline;" href='mailto:orders@red.com'>orders@red.com</a> by <strong>August 14th</strong>.  Once you decide you are ready to take delivery of your camera, you can send final payment and RED has (30) days to work you back into the delivery rotation. Your camera serial number will remain intact.</p>
+        <p>Before your order will ship, you must accept RED's <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/terms">Terms and Conditions</a>.</p>
+        <p>RED will also contact you about any future training sessions or events at RED as the information becomes available.</p>
+        <p>Thank you for your order and we look forward to having you as part of the RED family!</p>
+        <p>
+          <br/>
+          - RED BOMB SQUAD<br />
+          <a style="color:#FFF;font-weight:bold;text-decoration: none;" href="mailto:<%= @queue.staff_email_address %>">&nbsp;&nbsp;&nbsp;<%= @queue.staff_email_address %></a><br/>
+          &nbsp;&nbsp;&nbsp;949.206.7900
+        </p>
+        <!-- end div#content -->
+      </div>
+      <!--end div#wrapper -->
+    </div>
+  </body>
+</html>

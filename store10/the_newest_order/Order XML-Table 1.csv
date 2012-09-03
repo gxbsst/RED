@@ -1,0 +1,60 @@
+"<?xml version=""1.0"" encoding=""UTF-8"" ?>"
+"- <SalesOrder xmlns=""http://schemas.microsoft.com/dynamics/2006/02/documents/SalesOrder"">"
+"- <SalesTable class=""entity"">"
+  <CustAccount>CU 0104911</CustAccount>
+  <DeliveryCity>Hoboken</DeliveryCity>
+  <DeliveryCountryRegionId>US</DeliveryCountryRegionId>
+  <DeliveryDate>2009-04-10</DeliveryDate>
+  <DeliveryState>NJ</DeliveryState>
+  <DeliveryStreet>710 Clinton Street</DeliveryStreet>
+  <DeliveryZipCode>07030</DeliveryZipCode>
+  <PurchOrderFormNum>WIRE307493825</PurchOrderFormNum>
+"- <SalesLine class=""entity"">"
+  <ItemId>101001</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>403001</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>804010</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>502006SM</ItemId>
+  <SalesQty>3</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>302002</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>301001</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>402002</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <SalesLine class=""entity"">"
+  <ItemId>603001</ItemId>
+  <SalesQty>1</SalesQty>
+  <SalesUnit>Ea</SalesUnit>
+  </SalesLine>
+"- <Address class=""entity"">"
+  <City>Hoboken</City>
+  <CountryRegionId>US</CountryRegionId>
+  <State>NJ</State>
+  <Street>710 Clinton Street</Street>
+  <ZipCode>07030</ZipCode>
+  </Address>
+  </SalesTable>
+  </SalesOrder>

@@ -1,0 +1,74 @@
+<div id="open_order_<%= open_order.id %>" class="list">
+	<h3>#<%= open_order.order_number %></h3>
+	
+	<p class="summary">
+		Total: <%= number_to_currency open_order.total %>,
+		Modified: <%= modified_date( open_order ) %>
+	</p>
+	
+	<div class="addresses_handler">
+		<a href="#" onclick="toggleAddress('<%= open_order.id || open_order.object_id %>', this); return false;">
+			Bill To: <span id="address_summary_<%= open_order.bill_to_address.id %>"><%=h open_order.bill_to_address.handle %></span>
+		</a>
+		<a href="#" onclick="toggleAddress('<%= open_order.id || open_order.object_id %>', this); return false;">
+			Ship To: <span id="address_summary_<%= open_order.ship_to_address.id %>"><%=h open_order.ship_to_address.handle %></span>
+		</a>
+	</div>
+    <div style="clear:both;"></div>	
+	<div class="addresses" id="addresses_<%= open_order.id || open_order.object_id %>" style="display: none;">
+      <div class="dl_outer">
+		<dl id="address_<%= open_order.bill_to_address.id %>">
+			<%= render :partial => (open_order.bill_to_address.new_record? ? "order_address" : "edit_order_address"), :locals => { :address => open_order.bill_to_address, :order_address => open_order.bill_to_address } %>
+		</dl>
+		<dl id="address_<%= open_order.ship_to_address.id %>">
+			<%= render :partial => (open_order.ship_to_address.new_record? ? "order_address" : "edit_order_address"), :locals => { :address => open_order.ship_to_address, :order_address => open_order.ship_to_address } %>
+		</dl>
+      </div>
+	</div>
+	
+	<table cellpadding="2" cellspacing="2" border="0" width="100%" class="sales_order">
+		<tr>
+			<td class="no_border"></td>
+			<th class="name">Name</th>
+			<th class="sku">SKU</th>
+			<th class="status">Status</th>
+			<th class="qty">Quantity</th>
+			<th class="price">Price</th>
+			<th class="subtotal">Subtotal</th>
+		</tr>
+	</table>
+	
+	<ul id="open_order_lines_<%= open_order.id %>" class="open_order_lines">
+		<% open_order.sales_lines.each do |line| %>
+		<li id="open_order_line_<%= line.id %>" class="sales_line <%= 'draggable' if line.modifiable? %>" order="<%= open_order.id %>">
+			<table cellpadding="2" cellspacing="2" border="0" width="100%" class="sales_order">
+				<tr>
+					<td class="no_border">
+					<% if !line.modifiable? %>
+						<%= image_tag "my_account/lock.gif" %>
+					<% else %>
+						<img src="/images/my_account/drag_handle.gif" class="drag_handle" />
+						<%= link_to_function image_tag('my_account/trash.gif'), "OpenOrder.deleteSalesLine(#{line.id});" %>
+					<% end %>
+					</td>
+					<td class="name"><%= sales_line_product_tag( line ) %></td>
+					<td class="sku"><%= line.item_id %></td>
+					<td class="status"><%= line.status %></td>
+					<td class="qty">
+						<%=
+						if line.modifiable?
+							link_to_function line.sales_qty.to_i, "", :class => "edit_qty", :rel => line.id, :order_id => open_order.id
+						else
+							line.sales_qty.to_i
+						end
+						%>
+					</td>
+					<td class="price"><%= number_to_currency line.display_price %></td>
+					<td class="subtotal"><%= number_to_currency( line.display_price * line.sales_qty ) %></td>
+				</tr>
+			</table>
+		</li>
+		<% end %>
+	</ul>
+	
+</div>

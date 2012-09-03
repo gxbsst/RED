@@ -1,0 +1,77 @@
+#contact_us {
+	width: 500px;
+	float: left;
+}
+	#queue_selector input {
+		float: left;
+	}
+	#queue_selector label {
+		display: block;
+		float: left;
+		width: 450px;
+		padding: 2px 5px;
+	}
+	#queue_selector .form_field {
+		clear: left;
+		margin: 5px 0;
+	}
+#fields {
+	padding: 1em;
+}
+	#fields label {
+		display: block;
+		font-weight: bold;
+		font-size: 110%;
+		margin: 1em 0 0.2em 0;
+	}
+	.tip {
+		display: block;
+		font-style: italic;
+	}
+
+#company-info {
+	float: right;
+	width: 300px;
+	padding-left: 30px;
+	border-left: 1px solid #CCC;
+}
+
+/* Toggle optional fields for special queue */
+/* Style for custom fields */
+.optional_field {
+	display: none;
+}
+	#contact_product_type {
+		width: 200px;
+	}
+	.Website #problem_url {
+		display: block;
+	}
+	.TechSupport #phone, .TechSupport #product_type, .TechSupport #serial_no, .TechSupport #attachment {
+		display: block;
+	}
+	.TechSupport #subscript {
+		display: block;
+		margin-left: 80px;
+		width: 450px;
+	}
+
+
+table {
+	width:75%;
+	border: 3px solid #CCC;
+}
+	th, td {
+		padding: 5px 10px;
+	}
+	th {
+		text-align: right;
+		background-color: #F0F0F0;
+	}
+	td {
+		background-color: #F6F6F6;
+	}
+
+.button {
+	margin-right: 2em;
+}

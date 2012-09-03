@@ -1,0 +1,14 @@
+<h1 id="cameras-h1">
+  <%= params[:action].titleize %>
+</h1>
+
+<ul class="navigator">
+  <li><%= nav_link_to 'Overview', :id => nil %></li>
+  <%= content_tag('li', nav_link_to('Epic X', :id => 'epic_x')) if params[:action] == 'epic' %>
+  <%= content_tag('li', nav_link_to('Quotes', :id => 'quotes')) if params[:action] == 'red_one' %>
+  <li><%= nav_link_to 'Tech Specs', :id => 'tech_specs' %></li>
+  <li><%= nav_link_to 'Technology', :id => 'technology' %></li>
+  <%= content_tag('li', nav_link_to('Gallery', :id => 'gallery')) unless params[:action] == 'red_one' %>
+  <%= content_tag('li', nav_link_to('Workflow', :id => 'workflow')) if params[:action] == 'red_one' %>
+  <%= content_tag('li', link_to('Brochure', '/epic_scarlet')) unless params[:action] == 'red_one' %>
+</ul>

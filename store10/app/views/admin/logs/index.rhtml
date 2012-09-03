@@ -1,0 +1,29 @@
+<style type="text/css" media="screen">
+  #left{min-height: 100px; float: left;}
+  #contentBody { min-height: 400px; float: left; }
+</style>
+<div id="fullContent">
+<h1>Search Logs</h1>
+<div id="search_box" style="position:absolute;right:0;top:-10px; text-align: right;">
+ <%= render :partial => 'search_form' %>
+ </div>
+ </div>
+<div id="fullContent">  
+  
+  <% if @sales_line_order_logs %>
+  <%= render :partial => 'list' %>
+  
+   <!-- PAGINATION -->
+   <p align="right"><%= link_to(h('< Previous'), {:page => @logs_pages.current.previous, :list => params[:list]}) + " | " if @logs_pages.current.previous %>
+   <%= pagination_links(@logs_pages, :window_size => 10, :params => {:list => params[:list]}) %>
+   <%= " | " + link_to(h('Next >'), {:page => @logs_pages.current.next, :list => params[:list]}) if @logs_pages.current.next %></p>
+   <!-- PAGINATION -->
+   
+  <p align="right"> <%= link_to "Search All", :action => "index", :list => 'all' %></p>
+   <% else %>
+    <p>Search Result.</p>
+  <% end %>
+
+  
+</div>
+

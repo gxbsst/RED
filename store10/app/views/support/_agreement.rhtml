@@ -1,0 +1,7 @@
+<%= form_tag url_for, :id => 'agreement' %>
+	<%= textile agreement.content %>
+	<div class="buttons">
+		<%= submit_tag 'Accept' %>
+		<%= submit_tag 'Decline' %>
+	</div>
+<%= end_form_tag %>

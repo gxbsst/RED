@@ -1,0 +1,22 @@
+<table class="list" cellpadding="0" cellspacing="0">
+  <colgroup>
+    <col style="width: 25%;"/>
+    <col style="width: 25%;"/>
+    <col style="width: 25%;"/>
+    <col style="width: 25%;"/>
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Company</th>
+    <th>Email Address</th>
+    <th>ERP Account</th>
+  </tr>
+  <% for user in @users %>
+  <tr class="<%= alternate %>">
+    <td><%= link_to user["name"], :action => 'edit', :id => user %></td>
+    <td><%=h user.company %></td>
+    <td><%=h user.email_address %></td>
+    <td><%=h user.erp_account_number %></td>
+  </tr>
+  <% end %>
+</table>

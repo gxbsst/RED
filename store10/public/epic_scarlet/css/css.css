@@ -1,0 +1,57 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+a:link,a:visited{
+color:#194F95; text-decoration:none; outline-style:none; outline-width:medium;
+}
+html {
+	background-image: url(/images/theme/background.jpg);
+
+}
+
+body {
+	background: transparent url(http://red.cachefly.net/14/shadow.png) repeat-y center top;
+	*background: none;
+	text-align: center;
+}
+
+#wrapper {
+	background: #000 url( http://red.cachefly.net/14/background-content.jpg );
+	width: 1091px;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	margin: 0 auto;
+}
+
+
+.lines {
+	margin: 20px 0;
+	width: 1091px;
+}
+
+.epic {
+	margin: 0 auto;
+	width: 1006px;
+	height: 1150px;
+	padding-top: 200px;
+	background: url(http://red.cachefly.net/14/epic_bg.jpg) center center no-repeat;
+	
+	
+}
+.images-outer {
+	width: 736px;
+	margin: 0 auto;
+}
+.images-outer table tr td {
+	padding: 5px;
+}
+#page_14_hero img {
+	margin-top: 15px;
+}
+#page_14_hero {
+	height: 700px;
+	
+}
+

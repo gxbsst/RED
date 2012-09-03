@@ -1,0 +1,29 @@
+<div id='left'>
+	<h1><%= @title %></h1>
+	<ul class="navigation secondary">
+		<li><a href="/admin/events/">Back to All People List</a></li>
+	</ul>
+<%  @group_by_province.each do |prov| %>
+  <p>
+  <strong style="color:red"><%= prov.first.province %></strong>共报名<strong style="color:red"><%= prov.size %></strong>人：
+  </p>
+   <% prov.each do |p| %>
+      <%= "#{p.city}  :  #{link_to(h(p.name), :action => 'edit', :id => p.id ) }" %>
+	    <ul> 
+	     <li><span style='color:blue'>Email:</span> <%= p.email%></li>
+	     <li><span style='color:blue'>手机：</span><%= p.mobile_phone %></li>
+	     <li><span style='color:blue'>固话：</span><%= p.fixed_phone %> </li>
+		 <li><span style='color:blue'>经营范围： </span><%= p.scope_of_business.split(';').join(' | ') %></li>
+	     <li><span style='color:blue'>参与的其他人： </span><%= p.participanter_name %> </li>
+
+	    </ul>
+        <p/>
+   <% end %>
+
+<% end %>
+
+</div>
+
+<%= render(:partial => 'right_side') %>
+
+<div style="clear:both;" />

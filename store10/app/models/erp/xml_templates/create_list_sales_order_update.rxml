@@ -1,0 +1,54 @@
+doc.createListSalesOrderUpdate :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/SalesOrderUpdate" do
+  doc.DocumentContext do
+    doc.MessageId UUID.random_create.to_s
+    doc.SourceEndpointUser 'red.local\rdcwebservice'
+    doc.SourceEndpoint "RedDotCom"
+    doc.DestinationEndpoint "AxRED"
+  end
+  doc.SalesOrderUpdate do
+    # doc.DocPurpose
+    # doc.SenderId
+    
+    # Generate "SalesTableUpdate" nodes for given orders
+    @orders.each do |order|
+      doc.SalesTableUpdate_1 :class => "entity" do
+        doc.DeliveryCity order.ship_to_address.city
+        doc.DeliveryCountryRegionId order.ship_to_address.country_region_id
+        doc.DeliveryCounty order.ship_to_address.county
+        # doc.DeliveryDate order.delivery_date.strftime( "%Y-%m-%d" )
+        doc.DeliveryDate Time.now.strftime( "%Y-%m-%d" )
+        doc.DeliveryState order.ship_to_address.state
+        doc.DeliveryStreet order.ship_to_address.street
+        doc.DeliveryZipCodeId order.ship_to_address.zip_code
+        doc.DlvModeId order.delivery_mode_id
+        
+        doc.InvoiceCity order.bill_to_address.city
+        doc.InvoiceCountry order.bill_to_address.country_region_id
+        doc.InvoiceName "Billing Address"
+        doc.InvoiceState order.bill_to_address.state
+        doc.InvoiceStreet order.bill_to_address.street
+        doc.InvoiceZipCodeId order.bill_to_address.zip_code
+        
+        # doc.Revision
+        doc.SalesId order.sales_id
+        # doc.TransDate
+        # Sales lines under this order
+        order.sales_lines.each do |line|
+          
+          # Completed sales line are locked (un-modifiable)
+          # next if line.completed?
+          
+          doc.SalesLineUpdate_1 :class => "entity" do
+            doc.InventTransId line.invent_trans_id
+            doc.ItemId line.item_id
+            # doc.Revision
+            doc.SalesId order.sales_id
+            doc.SalesQty line.sales_qty
+            doc.SalesUnit line.sales_unit
+          end
+        end
+      end
+    end
+    
+  end
+end

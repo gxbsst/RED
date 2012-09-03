@@ -1,0 +1,6 @@
+<span >State/Province:</span>
+<select id="order_address_state" name="order_address[state]">
+  <% @us_state_list.each do |state| %>
+    <option value="<%= state.keys.to_s %>" <%= state.keys.to_s == @state ? "selected" : "" %>><%= state.values.to_s %></option>
+  <% end %>
+</select>

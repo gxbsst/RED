@@ -1,0 +1,28 @@
+<h1>Products in this configuration</h1>
+
+  <div class="listContainer" style="height: 300px;">
+    <table cellspacing="0" cellpadding="0" class="list">
+      <tr>
+        <th colspan="3">Product Name</th>
+      </tr>
+      <% @configuration.example_configuration_products.each do |item| %>
+      <tr class="<%= alternate %>">
+        <td><%= item.product.name %></td>
+        <td>x<%= item.quantity %></td>
+        <td><%= link_to image_tag("/engine_files/substruct/images/trash.gif"), :action => "remove_configuration_product", :id => item.id %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+  
+<h1>Products available in package...</h1>
+
+<%= form_tag %>
+  <%= select_tag "product_id", options_for_select(ProductPackageProduct.find(:all).sort{|a, b| a.product.name <=> b.product.name}.collect{|node| [node.product.name, node.product.id]}), :style => "width: 250px; font-size: 8pt;" %>
+  <%= text_field_tag "product_quantity", "1", :class => "textInput", :style => "width: 40px" %>
+  <%= link_to_function "Append", "this.parentNode.submit();", :style => "margin-left: 10px" %>
+<%= end_form_tag %>
+
+<p style="margin-top: 20px;">
+  <%= link_to_function "Close This Window", "window.top.hidePopWin(true)", :class => "button hundredfifty" %>
+</p>

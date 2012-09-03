@@ -1,0 +1,57 @@
+<% content_for(:head) do %>
+  <%= javascript_include_tag 'highslide/highslide' %>
+  <script type="text/javascript">
+    hs.graphicsDir = '/javascripts/highslide/graphics/';
+    hs.captionId = 'the-caption';
+    hs.outlineType = 'rounded-white';
+    hs.showCredits = false;
+  </script>
+  <%= stylesheet_link_tag 'highslide', 'v2/pages/cameras/overview' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('NAVIGATION|CAMERAS') %> / RED ONE</h1>
+<% end %>
+
+<div class="banner">
+  <img src="/images/pages/cameras/banner.png" alt="Cameras" title="" />
+</div>
+
+<div class="text-content">
+  <hr />
+  <img src="/images/pages/cameras/obsolete.png" title="<%= _('CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE') %>" class="float-left" />
+  <%= _('CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE|TEXT') %>
+  
+  <hr />
+  <img src="/images/pages/cameras/red-one-overview.png" title="RED ONE Overview" class="float-left" />
+  <p>
+    <img src="/images/pages/cameras/no-pixel-shifting.png" title="<%= _('CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE') %>" />
+  </p>
+  <%= _('CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE|TEXT') %>
+  <p>
+    <img src="/images/pages/cameras/modular-design.png" title="<%= _('CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN') %>" />
+  </p>
+  <%= _('CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN|TEXT') %>
+</div>
+
+<div id="gallery" class="content-block transparent-50">
+  <h2>RED ONE&trade; Gallery</h2>
+  <div class="photos">
+    <%=
+    html = []
+    (1..9).to_a.each do |i|
+      html << link_to(
+        image_tag(
+          "/images/pages/cameras/gallery/red-one-thumb-#{i}.jpg",
+          :alt => 'RED ONE Photo', :align => 'absmiddle'
+        ),
+        "/skin/img/photo_zoom/redone_#{i}.jpg",
+        :onclick => 'return hs.expand(this)'
+      )
+    end
+    html
+    %>
+    <img style="margin-top:0; "src="/images/theme/logo.png"  alt ="RED Logo">
+    <div class="clear"></div>
+  </div>
+</div>

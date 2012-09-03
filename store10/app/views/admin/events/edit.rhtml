@@ -1,0 +1,16 @@
+<div id="left">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/events/">Back to people List</a></li>
+  </ul>
+
+<%= start_form_tag({:action => 'update', :id => @participant}, :multipart => true) %>
+
+    <%= render :partial => 'form',:object => @participant %>
+
+</div>
+
+<%= render(:partial => 'right_side') %>
+<div style="clear:both;" />
+<!-- end form tag here to grab tags on products -->
+<%= end_form_tag %>

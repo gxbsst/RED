@@ -1,0 +1,61 @@
+h3 {
+	font-weight: normal;
+	font-size: 14pt;
+	margin: 0.5em 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCC;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 20px 0;
+}
+fieldset legend {
+  font-size: 16pt;
+  margin: 5px 0;
+}
+
+/* Style in sales order */
+.sales_order {
+  color: #CCC;
+  background-color: #222;
+  width: 100%;
+  line-height: 20px;
+  margin: 5px 0;
+  text-align: center;
+  border: 5px solid #222;
+}
+#content .sales_order a {
+  text-decoration: none;
+  color: #FFF;
+}
+#content .sales_order a:hover {
+  text-decoration: underline;
+  color: #FFF;
+}
+.currency {
+  text-align: right;
+}
+.product_name {
+  text-align: left;
+}
+.sales_order th {
+  border-bottom: 2px solid #666;
+  color: #FFF;
+}
+.sales_line:hover, .selected {
+  background-color: DarkRed;
+  color: #FFF;
+}
+#content .sales_line:hover a, #content .selected a {
+  text-decoration: underline;
+}
+/*
+.sales_order th {
+  border-bottom: 1px solid #CCC;
+}
+.sales_order td {
+  border-top: 1px solid #CCC;
+}
+*/

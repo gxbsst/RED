@@ -1,0 +1,48 @@
+<%= javascript_include_tag "admin/mails" %>
+
+<%= form_tag :id => @mail_template.id %>
+  <div id="left">
+    <h1>Edit / Create Mail Template</h1>
+    
+    <ul class="navigation secondary">
+      <li>
+        <%= link_to "Back to tasks list", :action => "index" %>
+      </li>
+    </ul>
+    
+    <p>
+      <label for="mail_template_name">Template Name</label>
+      <%= text_field :mail_template, :name, :class => "textInput" %>
+    </p>
+    <p>
+      <label for="mail_template_description">Description</label>
+      <%= text_area :mail_template, :description, :rows => 2, :class => "textArea" %>
+    </p>
+    <p>
+      <label for="mail_template_subject">Subject</label>
+      <%= text_field :mail_template, :subject, :class => "textInput" %>
+    </p>
+    <p>
+      <label for="mail_template_from">From</label>
+      <%= mail_from_edit_tag :mail_template, :class => "textInput" %>
+    <p>
+      <label for="mail_template_body">
+        Template Body
+        <%= link_to_template_guide %>
+      </label>
+      <%= text_area :mail_template, :body, :rows => 10, :class => "textArea"%>
+    </p>
+    
+    <p>
+      <%= submit_tag "Save Template", :class => "button hundredfifty" %>
+      <%= submit_tag "Preview", :class => "button hundredthirty" %>
+    </p>
+  </div>
+
+  <div id="right">
+    <%= render :partial => "templates_list" %>
+    <%= render :partial => "template_variables", :object => @mail_template.variables %>
+  </div>
+<%= end_form_tag %>
+
+<div class="clear" />

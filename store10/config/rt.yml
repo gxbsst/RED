@@ -1,0 +1,23 @@
+server_settings:
+  new_ticket_url: https://rt.red.com/Ticket/Create.html
+  basic_auth:
+    username: rt
+    password: redrt1999
+
+default_fields:
+  id: new
+  Status: new
+  Owner: 10
+  
+attributes_to_fields:
+  Requestors: requestor
+  Queue: rt_queue
+  Subject: subject
+  Content: content
+  Object-RT::Ticket--CustomField-1-Value: user_agent
+  Object-RT::Ticket--CustomField-2-Value: user_screen
+  Object-RT::Ticket--CustomField-4-Value: url
+  Object-RT::Ticket--CustomField-5-Values: product_type
+  Object-RT::Ticket--CustomField-6-Values: rt_serials
+  Object-RT::Ticket--CustomField-7-Value: phone
+  Attach: attachment

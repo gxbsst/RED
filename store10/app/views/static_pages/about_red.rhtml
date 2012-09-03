@@ -1,0 +1,12 @@
+<% content_for(:heading) do %>
+  <h1>ABOUT RED</h1>
+<% end %>
+
+<div class="banner">
+  <%= image_tag('/images/pages/about-red/banner.png',
+    :alt => 'About RED', :title => '', :size => '600x340') %>
+</div>
+<div class="text-content">
+  <h1><%= _('ABOUT_RED|TITLE') %></h1>
+  <%= textilize _('ABOUT_RED|TEXT') %>
+</div>

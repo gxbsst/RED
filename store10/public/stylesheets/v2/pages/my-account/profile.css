@@ -1,0 +1,7 @@
+#wraper #content .disabled label {
+	color: Gray;
+}
+#wraper #content .disabled input {
+	background-color: #DDD;
+	color: Gray;
+}

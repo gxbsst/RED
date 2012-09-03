@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html; charset=utf8" http-equiv="Content-Type" />
+  <title><%= @page_title %></title>
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
+  <link href="/stylesheets/v2/pages/indie/aathemovie.css" media="screen" rel="Stylesheet" type="text/css" />
+  <script type="text/javascript" charset="utf-8">
+    function display(order,total) {
+       for (i=1; i<=total; i++) {
+         element1 = 'inner' + i;
+         element2 = 'a' + i;
+         document.getElementById(element1).className = 'hidden';
+         document.getElementById(element2).className = '';         
+       }  
+          element1 = 'inner' + order;
+          element2 = 'a' + order;
+          document.getElementById(element1).className = 'show';
+          document.getElementById(element2).className = 'cur';
+     }
+     window.onload = function() {
+       page = window.location.toString().split("?")[1];
+       if(page == "2") {
+         display(2,3);
+       } else if (page == "3") {
+         display(3,3);
+       } else {
+         display(1,3);
+       }
+     }
+  </script>
+</head>
+<body>
+
+  <div class="pages-nav">
+    <a onclick="display(3,3);" id="a3" href="#">3</a>
+    <a onclick="display(2,3);" id="a2" href="#">2</a>
+    <a onclick="display(1,3);" id="a1" class="cur" href="#">1</a>
+    
+  </div>
+  <div class="images-outer">
+    <div class="show" id="inner1">
+      <img src="/images/pages/indie/Achchamundu10_11_1_e.jpg">
+    </div>
+
+    <div class="hidden" id="inner2">
+      <img src="/images/pages/indie/Achchamundu10_11_2_e.jpg">
+    </div>
+
+    <div class="hidden" id="inner3">
+      <img src="/images/pages/indie/Achchamundu10_11_3_e.jpg">
+    </div>
+
+  </div>
+</body>
+</html>

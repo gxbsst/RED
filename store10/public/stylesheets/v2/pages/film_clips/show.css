@@ -1,0 +1,22 @@
+#description ul {
+	list-style-type: none;
+}
+#description ul li {
+	margin: 6px 0;
+}
+#description ul li strong {
+	color: #FFF;
+	display: block;
+	float: left; 
+	width: 90px;
+}
+#image-outer img {
+	margin-right: 20px; 
+	
+}
+#image-outer {
+	float: left;
+	height: 300px;
+	width: 150px;
+	
+}

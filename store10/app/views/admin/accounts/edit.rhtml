@@ -1,0 +1,42 @@
+<div id="left">
+  <h1><%=h @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/accounts/index">Back to Accounts</a></li>
+  </ul>
+  <%= start_form_tag :action => 'update', :id => @store_user %>
+  
+  <div id="send_mail"></div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="store_user_field">
+    <%= render :partial => 'account' %>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="line">&nbsp;</div>
+  <%= submit_tag "Update", :class => 'button hundredfifty' %>
+  <div style="float:right;">
+    <%#= link_to 'Delete This Account', {:action => 'destroy', :id => @store_user}, :confirm => 'Are you sure?', :class => 'button hundredfifty' %>
+  </div>
+  <%= end_form_tag %>
+</div>
+
+<div id="right">
+  <div class="clear">&nbsp;</div>
+  <%= link_to_remote 'Send password mail', {:update => 'send_mail', :url => {:action => 'reset_password', :id => @store_user.id}}, :class => 'button hundredfifty' %>
+  <div style="clear:both;"></div>
+  <h1>Search Accounts</h1>
+  <%= start_form_tag :action => 'search' %>
+  <input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" />
+  <%= submit_tag('Go', {:class => 'button fifty'}) %>
+  <div class="clear info">&nbsp;</div>
+  <span class="info">Search by Name, Email, Company</span>
+  <br/>
+  <span class="info">or ERP Account</span>
+  <%= end_form_tag %>
+  
+  <h1>Undo Changes</h1>
+  <p>To roll back all un-commited changes done by customer in MyAccount, click the link below</p>
+  <%= link_to "Undo Changes", :action => "undo_changes", :id => @store_user.erp_account_number unless @store_user.erp_account_number.blank? %>
+</div>
+<div class="clear">&nbsp;</div>

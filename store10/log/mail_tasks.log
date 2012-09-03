@@ -1,0 +1,31 @@
+# Logfile created on Tue Aug 26 15:05:04 +0800 2008 by /
+  [4;36;1mSQL (0.000197)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Table 'mail_tasks.schema_info' doesn't exist: SELECT version FROM schema_info[0m
+  [4;36;1mCountry Load (0.000000)[0m   [0;1mMysql::Error: #42S02Table 'mail_tasks.countries' doesn't exist: SELECT * FROM countries WHERE (fedex_code IS NOT NULL) ORDER BY name [0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Table 'mail_tasks.schema_info' doesn't exist: SELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.002151)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.021256)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.003229)[0m   [0;1mCREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;35;1mSQL (0.000578)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddMailTasks (1)
+  [4;36;1mSQL (0.003041)[0m   [0;1mCREATE TABLE tasks (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `description` text, `subject` varchar(255), `from` varchar(255), `variables` text, `template_body` text, `template_id` int(11), `mails_count` int(11) DEFAULT 0 NOT NULL, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.053944)[0m   [0mCREATE INDEX `tasks_created_at_index` ON tasks (`created_at`)[0m
+  [4;36;1mSQL (0.004012)[0m   [0;1mCREATE TABLE mails (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `task_id` int(11), `email` varchar(255) NOT NULL, `first_name` varchar(255), `last_name` varchar(255), `company_name` varchar(255), `account_num` varchar(16), `sales_id` varchar(16), `red_one_serial_number` varchar(32), `token` varchar(128), `content` text NOT NULL, `rep_email` varchar(255), `created_at` datetime, `updated_at` datetime, `read_at` datetime, `sent_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.006582)[0m   [0mCREATE INDEX `mails_task_id_index` ON mails (`task_id`)[0m
+  [4;36;1mSQL (0.010936)[0m   [0;1mCREATE INDEX `mails_email_index` ON mails (`email`)[0m
+  [4;35;1mSQL (0.068409)[0m   [0mCREATE INDEX `mails_account_num_index` ON mails (`account_num`)[0m
+  [4;36;1mSQL (0.011849)[0m   [0;1mCREATE INDEX `mails_sales_id_index` ON mails (`sales_id`)[0m
+  [4;35;1mSQL (0.034987)[0m   [0mCREATE INDEX `mails_red_one_serial_number_index` ON mails (`red_one_serial_number`)[0m
+  [4;36;1mSQL (0.008568)[0m   [0;1mCREATE INDEX `mails_token_index` ON mails (`token`)[0m
+  [4;35;1mSQL (0.142399)[0m   [0mCREATE INDEX `mails_created_at_index` ON mails (`created_at`)[0m
+  [4;36;1mSQL (0.003262)[0m   [0;1mCREATE TABLE templates (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `description` text, `subject` varchar(255) NOT NULL, `from` varchar(255) NOT NULL, `body` text NOT NULL, `variables` text, `created_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.008595)[0m   [0mCREATE INDEX `templates_name_index` ON templates (`name`)[0m
+  [4;36;1mSQL (0.046754)[0m   [0;1mCREATE INDEX `templates_created_at_index` ON templates (`created_at`)[0m
+  [4;35;1mSQL (0.003180)[0m   [0mCREATE TABLE delivery_logs (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_id` int(11) NOT NULL, `content` text, `successful` tinyint(1) DEFAULT 0 NOT NULL, `description` text, `created_at` datetime, `bounced_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.042710)[0m   [0;1mCREATE INDEX `delivery_logs_mail_id_index` ON delivery_logs (`mail_id`)[0m
+  [4;35;1mSQL (0.015349)[0m   [0mCREATE INDEX `delivery_logs_successful_index` ON delivery_logs (`successful`)[0m
+  [4;36;1mSQL (0.050435)[0m   [0;1mCREATE INDEX `delivery_logs_created_at_index` ON delivery_logs (`created_at`)[0m
+  [4;35;1mSQL (0.028300)[0m   [0mUPDATE schema_info SET version = 1[0m

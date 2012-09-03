@@ -1,0 +1,45 @@
+<div id="left">
+  <%= form_tag :action => 'update', :id => @revision %>
+    <h1>Editing Entity in "<%= @lang.display_name %>"</h1>
+    
+    <ul class="navigation secondary">
+      <li><%= link_to "Back to Entities", :action => "list" %></li>
+    </ul>
+    
+    <h2><%= titleize @revision.entity.name %></h2>
+
+    <% unless @completions.empty? %>
+    <div id="uncompleted_tasks">
+      <p><%= @completions.size %> uncompleted task(s) found for this entity:</p>
+      <ul>
+        <% @completions.each do |completion| %>
+        <li>
+          <dt>
+            <%= completion.task.name %>
+            (<%= time_ago_in_words completion.task.created_at %> ago)
+          </dt>
+          <dd><%= completion.task.description || "- No Description -" %></dd>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+    
+    <p class="description">
+      Current Revision: <%= @revision.revision %>
+      <br />
+      <%= @revision.entity.description || '- No description for this entity -'%>
+    </p>
+    
+    <label>
+      Content:
+      <%= text_area :revision, :text, :rows => 15, :class => 'textArea' %>
+    </label>
+    
+    <%= submit_tag 'Save Change', :class => 'button hundredfifty' %>
+  <%= end_form_tag %>
+</div>
+
+<%= render :partial => 'revisions' %>
+
+<div class="clear"></div>

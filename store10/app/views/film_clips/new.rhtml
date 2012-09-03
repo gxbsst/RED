@@ -1,0 +1,147 @@
+<% content_for :head do %>
+  <style type="text/css" media="screen">
+    form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    form p {
+      float: left;
+      width: 50%;
+      margin: 0.5em 0;
+    }
+      form p.columns_2 {
+        float: none;
+        clear: both;
+        width: auto;
+      }
+        p.columns_2 .text-input {
+          width: 93%;
+        }
+      p .text-input {
+        width: 85%;
+      }
+    label {
+      display: block;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+    select.text-input {
+      margin: 10px 0;
+    }
+    #errors {
+      color: #C00;
+    }
+    #summary_outer {
+      width: 323px;
+      float:left;
+    }
+    #thumbnail_outer {
+      width: 323px;
+      float: left;
+      clear: none;
+      margin-left: 59px;
+    }
+    #film_clip_summary {
+      width: 323px;
+      clear: none;
+      height: 207px;
+      
+    }
+    #film_clip_film_type  {
+      margin: 0;
+    }
+  </style>
+  <%= stylesheet_link_tag 'v2/schema-white' %>
+<% end %>
+
+<% content_for :heading do %>
+  <h1>Upload</h1>
+<% end %>
+
+<div class="text-content with-border">
+  <h2>
+    Upload your movie to "Shot on RED"
+  </h2>
+  
+  <% unless @film_clip.errors.empty? %>
+  <div id="errors">
+    <ul>
+      <%= @film_clip.errors.full_messages.map { |message| content_tag('li', message) } %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <% form_for :film_clip, :url => { :action => 'create' }, :html => { :multipart => true } do |form| %>
+  <% form.with_options(:class => 'text-input') do |f| %>
+    <p>
+      <label for="film_clip_title">Title</label>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <label for="film_clip_studio">Studio</label>
+      <%= f.text_field :studio %>
+    </p>
+    <p>
+      <label for="film_clip_producer">Producer</label>
+      <%= f.text_field :producer %>
+    </p>
+    <p>
+      <label for="film_clip_director">Director</label>
+      <%= f.text_field :director %>
+    </p>
+    <p>
+      <label for="film_clip_dp">DP</label>
+      <%= f.text_field :dp %>
+    </p>
+    <p>
+      <label for="film_clip_cast">CAST</label>
+      <%= f.text_field :cast %>
+    </p>
+    <p>
+      <label for="film_clip_camera_sn">RED ONE (Shot on which serial #s)</label>
+      <%= f.text_field :camera_sn %>
+    </p>
+    <p>
+      <label for="film_clip_lenses_used">RED LENSES</label>
+      <%= f.text_field :producer %>
+    </p>
+    <p>
+      <label for="film_clip_film_type">Type</label>
+      <%= f.select :film_type, FilmClip::FILM_TYPES, {}, :class => 'text-input', :style => 'width: 337px' %>
+    </p>
+    <p>
+      <label for="film_clip_release_date">Release Date</label>
+      <%= f.text_field :release_date %>
+    </p>
+    <div class="clear"></div>
+    <p>
+      <label for="film_clip_website_url">URL of Website</label>
+      <%= f.text_field :website_url %>
+    </p>
+    <p>
+      <label for="film_clip_trailer">URL of Trailer</label>
+      <%= f.text_field :trailer_url %>
+    </p>
+    <p>
+      <label for="film_clip_actual_footage_url">URL of Actual Footage</label>
+      <%= f.text_field :actual_footage_url %>
+    </p>
+    <p class="columns_2" id="summary_outer">
+      <label for="film_clip_summary" >Summary</label>
+      <%= form.text_area :summary, :class => 'text-input', :rows => 4, :cols => 75 %>
+    </p>
+    <p class="columns_2" id="thumbnail_outer">
+      <label for="film_clip_thumbnail">Image for Preview</label>
+      <%= form.file_field :thumbnail %><br />
+      <%= image_tag "/images/red_logo.jpg",  :size => '134x193', :id => "red_logo", :align => "left", :style => "margin-right: 10px; margin-top: 2px;border: 2px solid #DDD;" %>
+      For best results, please upload a 134 x 193 pixel JPEG or PNG of your Movie Poster like the example here. 
+      
+    </p>
+    <div class="clear"></div>
+    <p class="buttons">
+      <%= submit_tag 'Submit', :class => 'button' %>
+    </p>
+    
+    <div class="clear"></div>
+  <% end %><% end %>
+</div>

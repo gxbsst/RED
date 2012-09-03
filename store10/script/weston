@@ -1,0 +1,8 @@
+#!/bin/bash
+export WEBRICK_PORT=3000
+export APACHE_PORT=3001
+
+ruby script/server -d --port=$WEBRICK_PORT
+apache2 -d ~/red -f config/apache-devsite.conf -e debug -C "Listen $APACHE_PORT"
+# 注意: -c 等于放在httpd.conf的后面,但是大写的 -C 等于放在httpd.conf的前面
+

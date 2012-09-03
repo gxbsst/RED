@@ -1,0 +1,90 @@
+@import url(../store/store.css);
+
+/* Sidebar Styles */
+#sidebar h2 {
+	font-weight: bold;
+}
+
+/* Notice */
+.notice {
+	background-color: #FFD;
+	border: 1px solid #FC0;
+	padding: 5px;
+	margin: 5px 0;
+}
+#wraper #content .notice h3 {
+	margin: 0;
+	color: DarkRed;
+	text-transform: uppercase;
+	font-size: 12pt;
+}
+.notice ul {
+	list-style-position: inside;
+	padding: 0;
+	margin: 5px;
+}
+
+/* Content */
+.content {
+	padding: 30px 10px 10px 230px;
+	background: transparent url(/skin/img/store/sidebar_bg.png) repeat-y;
+	height: auto !important;
+	height: 480px;
+	min-height: 500px;
+}
+
+/* Form */
+form {
+	margin: 20px;
+}
+label {
+	display: block;
+	font-weight: bold;
+	padding: 2px 0;
+}
+form .textInput {
+	font-size: 12pt;
+}
+form.spider {
+	margin: 0;
+	padding: 10px 20px;
+	background: transparent url(/images/my_account/spider.jpg) no-repeat right 20px;
+	border: 2px solid #EEE;
+}
+#wraper #content .error {
+  display: block;
+  color: #F00;
+  font-weight: bold;
+}
+#wraper #content form .subscript {
+	color: Gray;
+	font-size: 90%;
+	display: block;
+}
+#wraper #content .errors {
+	background-color: #FFD;
+	border-left: 3px solid #FC0;
+	padding-left: 10px;
+	color: #F00;
+	font-style: italic;
+}
+
+/* List Table Style */
+.list {
+	background-color: #F7F7F7;
+	padding: 20px 5px;
+	margin: 5px 0;
+	border-bottom: 1px solid #CCC;
+}
+.list table th {
+	border-bottom: 2px solid #CCC;
+}
+.list table td {
+	border-bottom: 1px solid #CCC;
+}
+.list table .no_border {
+	border: none;
+}
+.list table tr.current {
+	background-color: #E9E9E9;
+}

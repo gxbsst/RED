@@ -1,0 +1,18 @@
+<%= error_messages_for 'participant' %>
+
+<div class="float">
+  <p>
+    <label for="product_title">活动名称</label>
+    <%= text_field :event, :name, :class => 'textInput'  %>
+  </p> 
+  <p>
+    <label for="product_title">活动描述</label>
+    <%= text_area :event, :description, :rows => 10,:cols => 29 %>
+  </p>
+  <p>
+	<%= submit_tag 'Save This Event', :class => 'button hundredthirty' %>
+	<div style="float:right;">
+		<%= link_to 'Delete This Event', {:action => 'destroy', :id => @event}, :confirm => 'Are you sure?', :class => 'action' %>
+	</div>
+  </p>
+</div>

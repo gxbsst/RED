@@ -1,0 +1,27 @@
+<tr id="product_row_<%= product_package_product.product_id %>">
+	<th>
+		<%= quantity_tag product_package_product, :highlight => "product_row_#{product_package_product.product_id}" %>
+		<%=
+			node = product_package_product
+			if node.description.blank?
+				node.product.name
+			else
+				link_to_function node.product.name + " &#187;", "toggleDescPanel(#{node.id});", :class => "panelHandle"
+			end
+		%>
+	</th>
+	<td class="price_column" id="subtotal_<%= product_package_product.product_id %>">
+		<%= number_to_currency product_package_product.product.price %>
+	</td>
+</tr>
+
+<% unless product_package_product.description.blank? # Description Panel of product %>
+<tr id="descPanel_<%= product_package_product.id %>" class="description_panel" style="display: none;">
+	<td colspan="2">
+		<div class="description">
+			<%= @image = node.product.images.first; image_tag url_for_file_column("image", "path", "small"), :align => "left", :class => "product_image" %>
+			<%= textile product_package_product.description %>
+		</div>
+	</td>
+</tr>
+<% end %>

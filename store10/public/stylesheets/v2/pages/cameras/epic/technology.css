@@ -1,0 +1,7 @@
+.text-content {
+	text-align: center;
+}
+
+.text-content p, .text-content h3 {
+	text-align: left;
+}

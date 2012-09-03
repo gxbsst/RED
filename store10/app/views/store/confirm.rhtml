@@ -1,0 +1,232 @@
+<style>
+  #rvtable2 tr .td3 input { background: #5d5d5d;}
+  .notice {
+    margin-left: 177px;
+    font-size: 10pt;
+    background-color: #FFD;
+    border: 1px solid #FC0;
+    color: DarkRed;
+    padding: 5px 10px;
+    margin-top: 5px;
+  }
+</style>
+<% if @cart.has_buy_now_product? %>
+<div id="notice_1" class="notice">
+  All orders have a minimum of a 3-5 days processing time once payment has been received by RED.
+</div>
+<% end %>
+<% if @order_summary.dangerous_goods_due > 0 %>
+<div id="notice_2" class="notice">
+A <%= number_to_currency(@order_summary.dangerous_goods_due == 50 ? 50 : 100) %> fee will be added to your shipping fees for Hazardous Product handling.</div>
+<% end %>
+<div id="cn_box1" class="box1">
+  <div class="bottom">
+    <h3 class="shadow" id="pmh31" title="Confirm your order">
+      <span>Confirm your order</span>
+    </h3>
+    <div class="clearing">
+    </div>
+    <div class="box_inner">
+      <form>
+        <div class="boxinner1">
+          <div class="left">
+            <table >
+              <tr class="tr1">
+                <td class="td1"><strong>Bill to</strong></td>
+                <td class="td2"><input type="button" value="Edit" onclick="window.location.href='<%= url_for :action => 'bill_to' %>'" /></td>
+              </tr>
+              
+              <tr class="tr2">
+                <td class="td1"></td>
+                <td class="td2">
+                  <% if @payment.credit_card_payment? %>
+                <%= @payment.cardholder_name %><br />
+                  <% elsif @payment.wire_transfer_payment? %>
+                <%= "#{@bill_to.first_name} #{@bill_to.last_name}" %><br/>
+                  <% end %>
+                  
+                  <%= "#{@bill_to.company}<br />" unless @bill_to.company.blank? %>
+                  
+                  <%= @bill_to.address %><br />
+                  <% if !@bill_to.address_two.nil? %>
+                <%= @bill_to.address_two %><br />
+                  <% end %>
+                  
+                  <% if !@bill_to.city.nil? %>
+                <%= @bill_to.city %>
+                  <% end %>
+                  
+                  <% if !@bill_to.state.nil? %>
+                <%= @bill_to.state %>
+                  <% end %>
+                  
+                  <% if !@bill_to.zip.nil? %>
+                <%= @bill_to.zip %>
+                  <% end %>
+                  <br />
+                  
+                  <%= @bill_to.country.name %>
+                </td>
+              </tr>
+              
+              <tr class="tr3">
+                <td class="td1"><strong>Paid via</strong></td>
+                <td class="td2">
+                  <% if @payment.credit_card_payment? %>
+                    <span>Credit Card: <%= session[:safe_cc_number] %></span>
+                  <% elsif @payment.wire_transfer_payment? %>
+                    <span>Wire Transfer</span>
+                  <% end %>
+                  
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          <div class="right">
+            <table >
+              <tr class="tr1">
+                <td class="td1">Ship to</td>
+                <td class="td2">
+                <input type="button" value="Edit" onclick="window.location.href='<%= url_for :action => 'ship_to_edit' %>'" />
+                       </td>
+              </tr>
+              <tr class="tr2">
+                <td class="td1"></td>
+                <td class="td2"><%= @ship_to.first_name %>&nbsp;<%= @ship_to.last_name %><br/>
+                  <% if !@ship_to.company.nil? %>
+                <%= @ship_to.company %><br />
+                  <% end %>
+                  <%= @ship_to.address %><br />
+                  <% if !@ship_to.address_two.nil? %>
+                <%= @ship_to.address_two %><br />
+                  <% end %>
+                  
+                  <% if !@ship_to.city.nil? %>
+                <%= @ship_to.city %>
+                  <% end %>
+                  
+                  <% if !@ship_to.state.nil? %>
+                <%= @ship_to.state %>
+                  <% end %>
+                  
+                  <% if !@ship_to.zip.nil? %>
+                <%= @ship_to.zip %>
+                  <% end %>
+                  <br />
+                  
+                  <%= @ship_to.country.name %>
+                </td>
+              </tr>
+              
+            </table>
+          </div>
+          <!--end boxinner1-->
+        </div>
+      </form> 
+      
+      <div class="clearing">
+      </div>
+      
+      <div class="boxinner2">
+        <%= form_tag :id => 'place_order' %>
+        <div class="submit"><span style="font-weight:bold;font-size:12px;">Current Account Summary</span></div>
+        <% @order_summary.buy_now_shipping_options.each do |i| %>
+          <div>
+            <%= radio_button_tag('shipping_charge', i.shipping_charge.to_s, i.shipping_charge.to_s == @order_summary.shipping_charge.to_s, :id => i.delivery_mode, :onchange => "document.getElementById('update').click();") %>
+            <label for="<%=i.delivery_mode%>"><%= "#{number_to_currency(i.shipping_charge)} - #{i.description}"%></label>
+          </div>
+        <% end %>
+        <table id="rvtable2" cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>SKU</th>
+              <th>Quantity</th>
+              <th>Unit</th>
+              <th>Subtotal</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <script type="text/javascript">
+            function checkQty(qty,item)
+            {
+              if (qty >20){
+                alert("Only 20 Items may be added at one time.");
+                return $(item).value="20"
+              }
+              else{
+                return $(item).value=qty
+              }
+            }
+          </script>
+          <tbody>
+            <% @cart.items.each do |item| %>
+              <tr class="tr1" onMouseOver="this.style.backgroundColor='#383838'" onMouseOut="this.style.backgroundColor='transparent'">
+                <td class="td1"><%= item.name %><%= " (DEPOSIT ONLY)" if item.payment_method == "deposit" %></td>
+                <td class="td2"><%= item.product.erp_product_item %></td>
+                <td class="td3"><%= text_field_tag "items[#{item.product_id},#{item.payment_method}]", item.quantity, :id => "#{item.product_id}_#{item.payment_method}", :onchange => "checkQty(this.value, this.id)", :size => 3, :maxlength => 2 %></td>
+                <td class="td4"><%= number_to_currency(item.unit_price) %></td>
+                <td class="td6"><%= number_to_currency(item.subtotal) %></td>
+                <td class="td7"><%= link_to 'Remove', :action => 'remove_from_cart', :id => item.product_id, :qty => item.quantity, :payment_method => item.payment_method %></td>
+              </tr>
+            <% end %>
+            <tr class="tr1">
+              <td class="td1" colspan="3"></td>
+              <td class="td4">Subtotal</td>
+              <td class="td6"><%= number_to_currency(@order_summary.subtotal) %></td>
+              <td class="">&nbsp;</td>
+            </tr>
+            <% if @order_summary.shipping_charge != 0.0 %>
+              <tr class="tr1">
+                <td class="td1" colspan="3"></td>
+                <td class="td4">Shipping</td>
+                <td class="td6"><%= number_to_currency(@order_summary.shipping_charge) %></td>
+                <td class="">&nbsp;</td>
+              </tr>
+            <% end %>
+            <tr class="tr1">
+              <td class="td8" colspan="4">Estimated Sales Tax <%= "*" if @order_summary.tax_rate != 0.0 %></td>
+              <td class="td6"><%= number_to_currency(@order_summary.estimated_sales_tax) %></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr class="tr1">
+              <td class="td8" colspan="4">Total Due Today</td>
+              <td class="td6"><strong style="color: #0eff4c;"><%= number_to_currency(@order_summary.total_due) %></strong></td>
+              <td>&nbsp;</td>
+            </tr>
+            <% if @order_summary.estimated_balance != 0.0 %>
+              <tr class="tr1">
+                <td class="td8" colspan="4">Estimated Balance</td>
+                <td class="td6"><%= number_to_currency(@order_summary.estimated_balance) %></td>
+                <td>&nbsp;</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <dl>
+          <dt>&nbsp;</dt>
+          <dt><%= "&nbsp;&nbsp;*&nbsp;&nbsp; Estimated #{@order_summary.state} Sales Tax Rate of #{@order_summary.tax_rate}%." if @order_summary.tax_rate != 0.0 %></dt>
+          <dt>&nbsp;</dt>
+          <dt>&nbsp;</dt>
+        </dl>
+        <div class="clearing">
+        </div>
+        <table class="cntable3">
+          <tr class="tr1">
+            <td class="td1">
+              <%= link_to "Continue Shopping", :action => "index" -%>
+            </td>
+            <td class="td2">
+              <%= submit_tag "Update", :name => 'update', :id => 'update' -%>
+            </td>
+            <td class="td2">
+              <%= submit_tag "Place Order", :onclick => "this.form.submit();this.setAttribute('disabled','disabled');" -%>
+            </td>
+          </tr>
+        </table>
+        <%= end_form_tag %>
+      </div>
+    </div>
+  </div>
+</div>

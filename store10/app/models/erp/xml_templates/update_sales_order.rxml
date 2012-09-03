@@ -1,0 +1,30 @@
+doc.createSalesOrderUpdate :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/SalesOrderUpdate" do
+  doc.DocumentContext do
+    doc.MessageId UUID.random_create.to_s
+    doc.SourceEndpointUser 'red.local\rdcwebservice'
+    doc.SourceEndpoint "RedDotCom"
+    doc.DestinationEndpoint "AxRED"
+  end
+  doc.SalesOrderUpdate do
+    doc.SenderId "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xsi:nil" => "true"
+    doc.SalesTableUpdate_1 :class => "entity" do
+      doc.DeliveryCity @order.ship_to_address.city
+      doc.DeliveryCountryRegionId @order.ship_to_address.country_region_id
+      doc.DeliveryCounty @order.ship_to_address.county
+      # doc.DeliveryDate ( @order.delivery_date.strftime( "%Y-%m-%d" ) if !@order.delivery_date.nil? )
+      doc.DeliveryDate ""
+      doc.DeliveryStreet @order.ship_to_address.street
+      doc.DeliveryZipCodeId @order.ship_to_address.zip_code
+      doc.SalesId @order.sales_id
+      @order.sales_lines.each do |line|
+        doc.SalesLineUpdate_1 :class => "entity" do
+          doc.InventTransId line.invent_trans_id
+          doc.ItemId line.item_id
+          doc.SalesId @order.sales_id
+          doc.SalesQty line.sales_qty
+          doc.SalesUnit line.sales_unit
+        end
+      end
+    end
+  end
+end

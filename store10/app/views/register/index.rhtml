@@ -1,0 +1,33 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag(
+    'v2/schema-white',
+    'v2/pages/register/register'
+      ) %>
+<% end %>
+
+
+<% content_for(:heading) do %>
+  <h1>REGISTER</h1>
+<% end %>
+
+
+<div id="register_outer">
+<% if flash[:notice] %>
+<div id="message">
+  <%= flash[:notice] %>
+</div>
+<% end %>
+<!-- begin div.caption -->
+<div id="caption">
+  <%=  _('REGISTER|CAPTION') %>
+  
+</div>
+<!-- end div.caption -->
+
+<%= form_tag :controller => 'register' %>
+
+  <%= render :partial => 'form' %>
+  <p class="submit_out"><%= submit_tag "Register" %></p>
+<%= end_form_tag %>
+
+</div>

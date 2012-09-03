@@ -1,0 +1,192 @@
+# Logfile created on Thu Jul 31 01:38:43 +0800 2008 by /
+  [4;36;1mSQL (0.000236)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.033399)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000666)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000453)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000411)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000301)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000306)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000288)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000303)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000340)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000327)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000314)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000305)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000298)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000337)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000295)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to MailTaskJulyForRedDayInvitedQueues (23)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_july_for_red_day_invited_queues': DROP TABLE mail_task_july_for_red_day_invited_queues[0m
+  [4;36;1mSQL (0.081673)[0m   [0;1mCREATE TABLE mail_task_july_for_red_day_invited_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `account_balance` float DEFAULT 0.0, `discounts` float DEFAULT 0.0, `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `contact_person_name` varchar(255), `contact_person_select_address` varchar(255), `address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime, `serial_numbers` varchar(255)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000514)[0m   [0mUPDATE schema_info SET version = 23[0m
+  [4;36;1mSQL (0.003532)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.066546)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000662)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000502)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000488)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000443)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000419)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000463)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000345)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000309)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000298)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000302)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000285)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000280)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000577)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000330)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000319)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000344)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000324)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to MailTaskJulyRedOneDeliveryLastCallQueues (24)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'mail_task_july_red_one_delivery_last_call_queues': DROP TABLE mail_task_july_red_one_delivery_last_call_queues[0m
+  [4;35;1mSQL (0.420951)[0m   [0mCREATE TABLE mail_task_july_red_one_delivery_last_call_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `contact_person_name` varchar(255), `contact_person_select_address` varchar(255), `address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime, `serial_numbers` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.007503)[0m   [0;1mUPDATE schema_info SET version = 24[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.067932)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000336)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000356)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000360)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000316)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000305)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000310)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000303)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000438)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000334)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000295)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000344)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000329)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000320)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000323)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000319)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000291)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000298)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000348)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000331)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to MailTaskAugNearlyReadyToShipQueues (25)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_nearly_ready_to_ship_queues': DROP TABLE mail_task_aug_nearly_ready_to_ship_queues[0m
+  [4;36;1mSQL (0.166943)[0m   [0;1mCREATE TABLE mail_task_aug_nearly_ready_to_ship_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `account_balance` float DEFAULT 0.0, `discounts` float DEFAULT 0.0, `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `contact_person_email_address` varchar(255), `contact_person_first_name` varchar(255), `contact_person_last_name` varchar(255), `contact_person_name` varchar(255), `contact_person_selected_address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_nearly_ready_to_ship_queue_line_items': DROP TABLE mail_task_aug_nearly_ready_to_ship_queue_line_items[0m
+  [4;36;1mSQL (0.075310)[0m   [0;1mCREATE TABLE mail_task_aug_nearly_ready_to_ship_queue_line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_aug_nearly_ready_to_ship_queue_id` int(11), `ax_order_number` varchar(255), `confirmed_lv` varchar(255), `delivered_in_total` int(11), `invoiced_in_total` int(11), `item_id` varchar(255), `item_name` varchar(255), `remain_sales_physical` int(11), `sales_item_reservation_number` varchar(255), `sales_qty` int(11), `sales_unit` varchar(255), `price` float DEFAULT 0.0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.044069)[0m   [0mUPDATE schema_info SET version = 25[0m
+  [4;36;1mSQL (0.062787)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.065175)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000593)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000442)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000468)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000453)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000421)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000431)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000324)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000314)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000318)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000311)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000310)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000309)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000301)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000327)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000309)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000295)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000313)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000313)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000304)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000305)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to MailTaskAugReadyToShipQueues (26)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'mail_task_aug_ready_to_ship_queues': DROP TABLE mail_task_aug_ready_to_ship_queues[0m
+  [4;35;1mSQL (0.080410)[0m   [0mCREATE TABLE mail_task_aug_ready_to_ship_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `account_balance` float DEFAULT 0.0, `discounts` float DEFAULT 0.0, `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `contact_person_email_address` varchar(255), `contact_person_first_name` varchar(255), `contact_person_last_name` varchar(255), `contact_person_name` varchar(255), `contact_person_selected_address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'mail_task_aug_ready_to_ship_queue_line_items': DROP TABLE mail_task_aug_ready_to_ship_queue_line_items[0m
+  [4;35;1mSQL (0.036072)[0m   [0mCREATE TABLE mail_task_aug_ready_to_ship_queue_line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_aug_ready_to_ship_queue_id` int(11), `ax_order_number` varchar(255), `confirmed_lv` varchar(255), `delivered_in_total` int(11), `invoiced_in_total` int(11), `item_id` varchar(255), `item_name` varchar(255), `remain_sales_physical` int(11), `sales_item_reservation_number` varchar(255), `sales_qty` int(11), `sales_unit` varchar(255), `price` float DEFAULT 0.0) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000689)[0m   [0;1mUPDATE schema_info SET version = 26[0m
+  [4;36;1mSQL (0.287554)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.415736)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'engine_schema_info' already exists: CREATE TABLE engine_schema_info (engine_name varchar(255), version int(11))[0m
+  [4;36;1mSQL (0.000767)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000423)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000359)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000394)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000397)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000373)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000326)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000345)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000310)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000294)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000309)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000355)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000374)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000366)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000296)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000294)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000283)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000293)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000305)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to MailTaskAugNearlyReadyToShip2Queues (27)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_nearly_ready_to_ship2_queues': DROP TABLE mail_task_aug_nearly_ready_to_ship2_queues[0m
+  [4;36;1mSQL (2.393367)[0m   [0;1mCREATE TABLE mail_task_aug_nearly_ready_to_ship2_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `account_balance` float DEFAULT 0.0, `discounts` float DEFAULT 0.0, `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `contact_person_email_address` varchar(255), `contact_person_first_name` varchar(255), `contact_person_last_name` varchar(255), `contact_person_name` varchar(255), `contact_person_selected_address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_nearly_ready_to_ship2_queue_line_items': DROP TABLE mail_task_aug_nearly_ready_to_ship2_queue_line_items[0m
+  [4;36;1mSQL (0.351723)[0m   [0;1mCREATE TABLE mail_task_aug_nearly_ready_to_ship2_queue_line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_aug_nearly_ready_to_ship2_queue_id` int(11), `ax_order_number` varchar(255), `confirmed_lv` varchar(255), `delivered_in_total` int(11), `invoiced_in_total` int(11), `item_id` varchar(255), `item_name` varchar(255), `remain_sales_physical` int(11), `sales_item_reservation_number` varchar(255), `sales_qty` int(11), `sales_unit` varchar(255), `price` float DEFAULT 0.0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000722)[0m   [0mUPDATE schema_info SET version = 27[0m
+  [4;36;1mSQL (0.000416)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to MailTaskAugReadyToShip2Queues (28)
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_ready_to_ship2_queues': DROP TABLE mail_task_aug_ready_to_ship2_queues[0m
+  [4;36;1mSQL (0.058172)[0m   [0;1mCREATE TABLE mail_task_aug_ready_to_ship2_queues (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_id` int(11), `ax_account_number` varchar(255), `account_balance` float DEFAULT 0.0, `discounts` float DEFAULT 0.0, `email_address` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `phone` varchar(255), `address` varchar(255), `contact_person_email_address` varchar(255), `contact_person_first_name` varchar(255), `contact_person_last_name` varchar(255), `contact_person_name` varchar(255), `contact_person_selected_address` varchar(255), `invoice_address` varchar(255), `invoice_city` varchar(255), `invoice_country_region_id` varchar(255), `invoice_state` varchar(255), `invoice_street` varchar(255), `delivery_address` varchar(255), `delivery_city` varchar(255), `delivery_country_region_id` varchar(255), `delivery_state` varchar(255), `delivery_street` varchar(255), `assign_to` varchar(255), `complete` tinyint(1) DEFAULT 0, `sid` varchar(255), `readed_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S02Unknown table 'mail_task_aug_ready_to_ship2_queue_line_items': DROP TABLE mail_task_aug_ready_to_ship2_queue_line_items[0m
+  [4;36;1mSQL (0.036417)[0m   [0;1mCREATE TABLE mail_task_aug_ready_to_ship2_queue_line_items (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mail_task_aug_ready_to_ship2_queue_id` int(11), `ax_order_number` varchar(255), `confirmed_lv` varchar(255), `delivered_in_total` int(11), `invoiced_in_total` int(11), `item_id` varchar(255), `item_name` varchar(255), `remain_sales_physical` int(11), `sales_item_reservation_number` varchar(255), `sales_qty` int(11), `sales_unit` varchar(255), `price` float DEFAULT 0.0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000492)[0m   [0mUPDATE schema_info SET version = 28[0m
+  [4;36;1mSQL (0.000215)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.030792)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mCountry Load (0.000000)[0m   [0;1mMysql::Error: #42S02Table 'mail.countries' doesn't exist: SELECT * FROM countries WHERE (fedex_code IS NOT NULL) ORDER BY name [0m

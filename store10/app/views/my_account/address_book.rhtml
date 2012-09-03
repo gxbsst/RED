@@ -1,0 +1,45 @@
+<%= render :partial => 'sidebar' %>
+
+<div class="notice">
+  <h3>Default Shipping and Default Billing Address</h3>
+  <p>Default Shipping and Default Billing address selections will be used in the future to expedite creation of NEW ORDERS during online checkout.<br />
+  These settings <strong>DO NOT</strong> change the address for your current Open Orders.
+  </p>
+</div>
+
+<%= form_tag(
+	{ :action => "set_default_address" },
+	:class => "list"
+)%>
+	<table border="0" cellpadding="4" cellspacing="2" width="100%" style="text-align: center;">
+		<colgroup valign="middle">
+			<col width="120" />
+			<col width="120" />
+			<col />
+			<col width="30" />
+		</colgroup>
+		
+		<thead>
+			<tr>
+				<th>Set As Default Shipping Address</th>
+				<th>Set As Default Billing Address</th>
+				<th>Address</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @customer.addresses.each do |address| %>
+			<tr>
+				<td><%= radio_button_tag "ship_to_id", address.id, @customer.ship_to_id == address.id %></td>
+				<td><%= radio_button_tag "bill_to_id", address.id, @customer.bill_to_id == address.id %></td>
+				<td align="left"><%= link_to address.handle, :id => address %></td>
+				<td><%= link_to image_tag("my_account/trash.gif"), :id => address, :method => "delete" %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<p><%= submit_tag "Save", :class => 'button' %></p>
+<%= end_form_tag %>
+
+<%= render :partial => "address_editor" %>

@@ -1,0 +1,36 @@
+= link_to(image_tag('theme/logo.png', :size => '156x156', :id => 'logo'), :controller => 'static_pages')
+%h1.logo-text
+  = image_tag('theme/logo-text.png', :size => '270x35', :alt => 'RED Digital Cinema', :id => 'logo-text')
+%ul#navigator.navigator
+  %li
+    = nav_link_to _('NAVIGATION|HOME'), :controller => 'static_pages', :action => 'index'
+  %li#cameras
+    = nav_link_to _('NAVIGATION|CAMERAS'), :controller => 'cameras'
+  %li
+    = nav_link_to _('NAVIGATION|LENSES'), :controller => 'static_pages', :action => 'lenses'
+  %li#accessories
+    = nav_link_to _('NAVIGATION|ACCESSORIES'), :controller => 'accessories'
+  %li
+    = nav_link_to _('NAVIGATION|GALLERY'), :controller => 'static_pages', :action => 'shot_on_red'
+  %li
+    = nav_link_to _('NAVIGATION|SUPPORT'), :controller => 'support'
+  %li
+    = link_to 'FAQ','http://www.red.com/faq'
+  %li
+    = nav_link_to _('NAVIGATION|STORE'), :controller => 'store'
+   
+#shopping-cart-status
+
+%ul#navigator-cameras.navigator.sub-navigator
+  %li= nav_link_to 'RED ONE', :controller => 'cameras', :action => 'red_one'
+  %li= nav_link_to 'Scarlet', :controller => 'cameras',:action => 'scarlet'
+  %li= nav_link_to 'Epic', :controller => 'cameras', :action => 'epic'
+
+%ul#navigator-accessories.navigator.sub-navigator
+  %li= nav_link_to _('GLOBAL|RED_RAILS_SYSTEM'), :controller => 'accessories', :action => 'index'
+  %li= nav_link_to _('GLOBAL|DIGITAL_STORAGE'), :controller => 'accessories',:action => 'digital_storage'
+  %li= nav_link_to _('GLOBAL|POWER_SYSTEM'), :controller => 'accessories', :action => 'power_system'
+  %li= nav_link_to _('GLOBAL|MONITORING_OPTIONS'), :controller => 'accessories', :action => 'monitoring_options'
+
+%div.heading
+  = yield(:heading) || "<h1>#{ _('GLOBAL|WELCOME') }</h1>"

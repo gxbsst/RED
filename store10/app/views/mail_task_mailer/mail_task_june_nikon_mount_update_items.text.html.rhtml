@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>RED Digital Cinem</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF;background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table>
+      <!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;">
+        <h3><%=h @queue.name %> -</h3>
+   			<p>RED has developed a solution for improving the mounting stability of Nikon lenses when using the RED Nikon mount adaptor. Through the installation of small rubber bushings under the springs, newer Nikon lenses can be very firm in the mount. If you have older Nikon lenses, you can remove the bushings to allow them to fit. Therefore, RED is going to be mailing two of the rubber bushings to each RED ONE owner who has had a NIKON MOUNT delivered before July 8, 2008. We are also providing an installation tutorial link below.</p>
+
+				<p align="center"><a href="http://www.red.com/nikon_pads" style="color: #FFF;"><img align="center" border=0 src="http://www.red.com/skin/img/nikon_pads.png"  alt="" /></a></p>
+			
+			<p align="center"><a href="http://www.red.com/nikon_pads" style="color: #FFF;">www.red.com/nikon_pads</a></p>
+
+			<p>	Please confirm the address you want this kit sent to is: 
+				<table cellpadding="0" cellspacing="0" bordercolor="#000000" style="border:collapse;border:0;" width="100%">
+        	<tr><th style="width: 80px; text-align:right; background-color: #202020; padding: 2px;">SHIP TO :</th><th style="background-color: #202020;"></th></tr>
+          <tr>
+					<td style="text-align: right;font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;">Name :</td>
+					<td style="font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;"><%=h @queue.ship_to_name %></td>
+					</tr>
+					<tr>
+					<td style="text-align: right;font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;">Street :</td>
+					<td style="font-weight: normal;font-size:12px;background-color: #202020; height: 20px;padding:1px 2px 0 2px;"> <%= "#{@queue.delivery_street}<br/>" unless @queue.delivery_street.blank? %></td>
+					</tr>
+          <tr>
+					<td style="text-align: right;font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;">City :</td>
+					<td style="font-weight: normal;font-size:12px;background-color: #202020; height: 20px;padding:1px 2px 0 2px;"><%=h @queue.delivery_city unless @queue.delivery_city.blank? %></td>
+					</tr>
+          <tr>
+					<td style="text-align: right;font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;">State :</td>
+					<td style="font-weight: normal;font-size:12px;background-color: #202020; height: 20px;padding:1px 2px 0 2px;"><%=h @queue.delivery_state unless @queue.delivery_state.blank? %></td>
+					</tr>
+					
+          <tr>
+					<td style="text-align: right;font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:5px 2px 0 2px;">Country :</td>
+					<td style="font-weight: normal;font-size:12px;background-color: #202020; height: 16px;padding:1px 2px 0 2px;"><%=h @queue.delivery_country_region_id unless @queue.delivery_country_region_id.blank? %></td>
+					</tr>
+
+          </tr>
+        </table>
+				
+				 <br />Once you have confirmed the address, we will process this kit order for you at no charge.  Please confirm by emailing John Restivo, one of our BOMB SQUAD reps, at restivo@red.com .  He is handling the fulfillment of these kits.</p>
+
+        <p>
+          		Thanks,<br />
+							RED BOMB SQUAD<br />
+        </p>
+        <!-- end div#content -->
+      </div>
+      <!--end div#wrapper -->
+    </div>
+  </body>
+</html>

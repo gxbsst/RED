@@ -1,0 +1,41 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag 'highslide/highslide' %>
+<script type="text/javascript">
+        hs.graphicsDir = '/javascripts/highslide/graphics/';
+        hs.captionId = 'the-caption';
+        hs.outlineType = 'drop-shadow';
+        hs.showCredits = false;
+</script>
+<%= stylesheet_link_tag 'highslide', 'v2/pages/accessories/digigtal_storage' %>
+<% end %>
+<% content_for(:heading) do %>
+  <h1><%= _('ACCESSORIES|SUB_NAVIGATION|DIGITAL_STORAGE') %></h1>
+<% end %>
+<div class="banner">
+	<img src="/images/pages/accessories/digigtal_storage_hero.png" alt="" align="center" />
+</div>
+<div id="red_drive" class="text-content" >
+	<hr />
+	<img style="margin-right: 20px; margin-bottom: 20px; " src="/images/pages/accessories/red_drive.png" alt="" align="left" />
+	<h2><img align="center" src="/images/pages/accessories/reddrive-text.png" alt="" /></h2>
+	<p>The RED-DRIVE™ is the workhorse of RED ONE™ digital media choices. It is both the lowest priced and highest capacity media available at this time. It is an outboard media format that can be mounted in the RED RAIL CRADLE on the camera body or RAIL system. It interfaces with the camera via the Drive Connector LEMO. The 320GB RED-DRIVE™ is made up of two 2.5" 160GB laptop hard drives arranged in a hardware-based RAID 0. The drives are in a RAID for data transfer speeds – it cannot be reconfigured to record in a RAID 1 mirrored formatting. The RED-DRIVE™ is capable of recording between two and three hours of 4K REDCODE™ RAW footage. To the user, what goes on inside of the RED-DRIVE™ can be most easily explained as "magic pixies." No matter how you look at it, storing two to three hours of 4K REDCODE™ RAW footage on a drive smaller than an ASC manual is downright unbelievable.</p>
+</div><!--end #red_drive-->
+<div id="red_ram"  class="text-content">
+	<hr />
+	<img   style="margin-top: 70px; margin-left: 20px; " src="/images/pages/accessories/red_ram.png" alt="" align="right" />
+	<h2><img align="center" src="/images/pages/accessories/redram-text.png" alt="" /></h2>
+  <p>The RED-RAM&trade; is the highest-capacity solid-state [flash] digital media option available for the RED ONE&trade;. It has an identical form factor to the RED-DRIVE&trade;, but is made up of solid-state media instead of spinning media. It is an outboard media format that can be mounted in the RED RAIL CRADLE on the camera body or RAIL system. It interfaces with the camera via the Drive Connector LEMO.<br /><br />
+          		The 128GB RED-RAM&trade; is made up of two 2.5" 64GB solid-state laptop flash drives arranged in a hardware-based RAID 0.
+          	</p>
+          	<p>The RED-RAM&trade; is capable of recording roughly thirty to forty minutes of 4K REDCODE&trade; RAW footage. </p>
+</div><!--end #red_ram-->
+<div id="red_cf" class="text-content">
+	<hr />
+	<img style="margin-right: 20px; margin-top: 10px; " src="/images/pages/accessories/red_cf.png" alt="" align="left" />
+	<h2><img align="center" src="/images/pages/accessories/module-text.png" alt="" /></h2>
+	The REDFLASH (CF) MODULE has become the de facto standard method of recording on the RED ONE. The Module does not actually store data – instead it adds an interface into which CompactFlash media cards can be inserted. This recording solution is now included with every RED ONE at the additional cost of $500. Offering the equivalent of a 400ft film reel per 8GB card, this "necessity" also provides the solution for a speedy and reliable firmware upgrade path.
+	<div class="images_outer"> 
+	   <a href="/images/pages/accessories/cf8.jpg" onclick="return hs.expand(this)"><img src="/images/pages/accessories/cf8_thumb.jpg" alt="" /></a>
+	   <a href="/images/pages/accessories/cf16.jpg" onclick="return hs.expand(this)"><img src="/images/pages/accessories/cf16_thumb.jpg" alt="" /></a>
+	  </div>
+</div><!--end #red_cf-->

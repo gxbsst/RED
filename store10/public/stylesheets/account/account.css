@@ -1,0 +1,8 @@
+@import url('../indent_content.css');
+
+#content div.content { margin: 20px auto; }
+#content form { width: 430px; height: 155px; background: url(/skin/img/store/login_box2_bg.png) no-repeat top left; padding: 0 10px; text-align: center; }
+  #content div.content form h2 { text-transform: none; text-align: left; font-size: 1.3em; line-height: 30px; height: 30px; verticle-align: center; }
+  #content form label { display: block; margin: 5px 0; text-align: left; }
+  #content form .input_field { padding: 1px; height: 16px; width: 300px; border-width: 1px; }
+  #content form input.button { background: url(/skin/img/store/submit_bg_1.png); width: 140px; height: 25px; margin: 5px 0; border: none; color: #FFF; }

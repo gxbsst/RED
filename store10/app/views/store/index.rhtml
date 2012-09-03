@@ -1,0 +1,200 @@
+<% content_for(:heading) do %>
+  <h1>RED Store</h1>
+<% end %>
+
+<div id="notice">
+  <h3>ACCESSORIES FOR RED ONE OWNERS: No deposit required</h3>
+  <p>
+    Limited quantities of many accessories are in stock. To make best use of available inventory, clients who have already taken delivery of RED ONE can now order additional accessories for immediate order processing - no deposit phase required. Just use the new "BUY NOW" button to add to your cart.        </p>
+    <p class="subscript">
+      NOTE: Invoice history will be automatically checked to verify your eligibility as part of the checkout.
+    </p>
+  </div>
+
+<%
+# Products will be displaied in this order.
+# You can change this variable if necessary.
+# The value of each element is the product code.
+
+# product_order = [
+# 	['101001', '603001'],
+# 	['202002', '202004', '202003', '202005', '201001'],
+
+# 	['302002', '302001', '301001', '502001'],
+# 	['403001', '401001', '402001'],
+# 	['501001', '501002', '502005', '502006'],
+# 	['804003', '804004', '602018', '404001'],
+# 	['804015', '601007', '602009', '602020'],
+# 	['804013', '804014', '309001', '309003'],
+# 	['601003L', '601003R', '602016', '602012'],
+# 	['602008', '602010', '601006', '601002'],
+# 	['604002', '604001', '101208', '201101'],
+# 	['602021', '101137', '602019', '804011'],
+# 	['804010', '601014', '601015', '601016'],
+# 	['601012', '601004', '601008', '601005'],
+
+# 	['901008', '902026', nil, nil]
+# ]
+
+product_order = []
+p = []
+
+@products.each do |product|
+  unless product.end_of_line
+    p << product
+  end
+  if product.end_of_line
+    p << product
+    product_order << p
+    p=[]
+    next
+  end
+end
+
+# Lens (Code: 202002) has a "Imperial" version. The same as 202004.
+# Codes below provide a selector to switch between these two pairs of lenses.
+# @switch_codes = ['202002', '202003', '202004', '202005']
+# switch_texts = ['Imperial', 'Imperial', 'Metric', 'Metric']
+
+
+# @switch_text = [
+#                  { '202002' => 'Imperial' ,'202004' => 'Metric' },
+#                  { '202003' => 'Imperial' ,'202005' => 'Metric' },
+#                  { '202001' => 'Imperial', '202006' => 'Metric' },
+#                  { '201007' => 'Imperial', '201008' => 'Metric' }
+#               ]
+
+# @switch_codes = @switch_text.inject([]) {|c,i| c << i.keys }.flatten
+
+@switch_codes = []
+product_order.uniq.each do |line|
+  line.compact.each do |product|
+    if product.tags.map(&:name).include?("Lenses")
+      if product.name.match(/\(([^(]*)\)$/)
+        if $1.strip.upcase == "I" || $1.strip.upcase == "M"
+          @switch_codes << product.code
+        end
+      end
+    end
+  end
+end
+
+
+product_order.uniq.each do |line|
+	line.compact.each do |product|
+		raise product.code if product.nil? # Check for each code in collection.
+		%>
+		
+		<% if product.tags.map(&:name).include?("Lenses") %>
+		<% product.name.match(/\(([^(]*)\)$/) %>
+		<%= "<div class = 'product columns_#{(line.size > 4) ? 4 : line.size }'  id = 'product_#{product.code}'   style = #{'display:none' if $1 && ($1.strip.upcase == "M")} >" %>
+
+   <% else %>
+     <%= "<div class = 'product columns_#{(line.size > 4) ? 4 : line.size }' id = 'product_#{product.code}' >" %> 
+  
+   <% end %>
+   
+   
+   
+		<% if product.code == '902026' # Specified T-Shirt link %>
+		<%= link_to image_tag("/image/path/normal/#{product.code}.png", :title => product.name), :action => 't_shirt' %>
+		<% elsif product.code == '903001' # RED Caps %>
+		  <%= link_to image_tag("/image/path/normal/#{product.code}.png", :title => 'RED Caps'), :action => 'red_caps' %>
+		<% else %>
+		<%= link_to(
+		 image_tag("/image/path/normal/#{product.code}.png", :title => product.name), 
+		 { :controller => 'store',:action => 'product_detail', :id => product.erp_product_item } 
+		 )%>
+		<% end %>
+		
+		<%=
+		def if_include_swith(line,switch_codes)
+		  flag = false
+		  switch_codes.flatten.each do |code|
+		    flag = true if line.include?(code)
+		  end
+      return flag
+		end
+		%>
+
+    <% if if_include_swith(line.map{|l| l.code}, @switch_codes) %>
+      <div class="product_info_swith">
+    <%elsif line.map{|l| l.code}.include?("403001")%>
+      <div class="product_info_subscript">
+    <%else%>
+      <div class="product_info">
+    <%end%>		
+	
+			<% if product.code == '902026' %>
+			<a href="/store/t_shirt">RED T-SHIRTS</a>
+			<span class="price"><%= number_to_currency(product.price, :precision => 0) %></span>
+			<% elsif product.code == '903001' %>
+			  <%= link_to 'RED Caps', :action => 'red_caps' %>
+			  <span class="price"><%= number_to_currency(product.price, :precision => 0) %></span>
+			<% else %>
+			<%= link_to product.name, { :action => 'product_detail', :id => product.erp_product_item }, :title => product.name %>
+			<%= '<p class="subscript">CHARGER, 2 BATTERIES, POWER & CAMERA CABLES</p>' if product.code == '403001' %>
+			<p class="price"><%= number_to_currency(product.price,:precision => 0) %></p>
+		
+			<%=
+			
+      def get_value(product,code)
+        codes = []
+        h = ""
+        @switch_codes.in_groups_of(2){|i| codes << i}
+        codes.each do |i|
+          if i.include?(code.to_s)
+            if product.tags.map(&:name).include?("Lenses")
+              if product.name.match(/\(([^(]*)\)$/)
+                if $1.strip.upcase == "I"
+                  h = "Imperial" 
+                elsif  $1.strip.upcase == "M"
+                  h = "Metric"
+                end
+              end
+            end
+          end
+        end
+        h
+      end
+      
+      def next_code(code)
+        codes = []
+        h = []
+        @switch_codes.in_groups_of(2){|i| codes << i}
+        codes.each do |i|
+          h << i if i.include?(code)
+        end
+        h.flatten.select{|i| i != code }.first
+      end
+		  
+			# Calibration Select
+      if @switch_codes.include? product.code
+        calibration = get_value(product,product.code)
+        [
+          [radio_button_tag(product.code, "", calibration == "Imperial", :next => (calibration == "Imperial" ? "" : next_code(product.code)), :onclick => "return switchCalibration(this)"), "Imperial"],
+          [radio_button_tag(product.code, "", calibration == "Metric", :next => (calibration == "Metric" ? "" : next_code(product.code)), :onclick => "return switchCalibration(this)"), "Metric"]
+          ].flatten.join
+        end
+				%>
+				<% end %>
+			</div>
+	</div>
+			<% end %>
+			
+			<div style="clear:both;"></div>
+			<% end %>
+
+			<script type="text/javascript">
+			function switchCalibration(element) {
+				
+				var next = element.getAttribute("next");
+				if (next == "")
+				return false
+				else {
+					element.parentNode.parentNode.style.display = "none";
+					$("product_" + element.getAttribute('next')).style.display = "inline";
+					return false;
+				}
+			}
+			</script>

@@ -1,0 +1,77 @@
+<style type="text/css" media="screen">
+  h1 {
+    margin: 5px 0;
+  }
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+  }
+    li {
+      padding: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background-color: #EEE;
+      margin: 5px 0;
+    }
+    li:hover {
+      background-color: LightSteelBlue;
+    }
+    li a {
+      position: absolute;
+      right: 20px;
+      font-weight: normal;
+      font-size: 9pt;
+    }
+  .button {
+    margin-left: 15px;
+  }
+  .buttons {
+    float: right;
+  }
+</style>
+
+<script type="text/javascript" src="/javascripts/dragdrop.js"></script>
+<script type="text/javascript">
+  // Un-set the "sticked" attribute to false of selected film clip.
+  function unStick(link) {
+    new Ajax.Request(link.href);
+  }
+  
+  // Play an animation and then remove the film clip element from page afer
+  // completed.
+  function removeFilmClip(id) {
+    var elementId = 'film_clip[' + id + ']';
+    new Effect.DropOut(elementId, {
+      afterFinish: function() {
+        $(elementId).remove();
+      }
+    })
+  }
+  
+  onload = function() {
+    Sortable.create('film_clips');
+  }
+</script>
+
+<h1>Manage Film Clips Layout</h1>
+
+<%= form_tag :action => 'save_position' %>
+  <div class="listContainer" style="height: 310px">
+    <ol id="film_clips">
+      <% @film_clips.each do |film_clip| %>
+      <li id="film_clip[<%= film_clip.id %>]">
+        <%= hidden_field_tag 'film_clips[]', film_clip.id %>
+        <%= h film_clip.title %>
+        <%= link_to 'remove', { :action => 'remove_from_top', :id => @film_clip },
+          :onclick => "unStick(this);return false;" %>
+      </li>
+      <% end %>
+    </ol>
+  </div>
+
+  <p class="buttons">
+    <input type="submit" value="Save" class="button hundred" />
+    <input type="button" value="Cancel" onclick="window.top.hidePopWin(false)" class="button hundred" />
+  </p>
+<%= end_form_tag %>

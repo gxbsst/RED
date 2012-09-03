@@ -1,0 +1,2 @@
+page.insert_html :bottom, 'list','</li><li class="even" name="break_line" id="break_line" style="position: relative;"><ul><li> -break- </li><li></ul></li>' 
+

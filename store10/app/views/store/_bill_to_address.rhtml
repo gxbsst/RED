@@ -1,0 +1,31 @@
+<div id="addressouter">
+  <div class="bottom1">
+    <h3 style="margin-top:10px;margin-bottom:15px;">BILLING ADDRESS:</h3>
+    <div id="addressouter1">
+      <div id="xfer_name" style="display:none">
+        <p class="imput1"><span>Your First Name:</span><%= text_field :order_address, 'first_name' %></p>
+        <p class="imput1"><span>Your Last Name:</span><%= text_field :order_address, 'last_name' %></p>
+      </div>
+      <p class="input3"><span>Company Name:</span><%= text_field :order_address, 'company' %></p>
+      <p class="input9</p>">
+        <span >Country:</span>
+        <% selected_country = instance_variable_get("@order_address").country_id.to_s %>
+        <%= render_component(:controller => "countries", :action => "select_list", :params => {:select_name => "order_address", :selected => selected_country}) %>
+      </p>
+      <p class="input3"><span >Address 1:</span><%= text_field :order_address, 'address' %></p>
+      <p class="input4"><span >Address 2:</span><%= text_field :order_address, 'address_two' %></p>
+      <p class="input6"><span >City:</span><%= text_field :order_address, 'city' %></p>	
+      <p class="input7" id="state"><span>State/Province:</span><%= text_field( :order_address, 'state') %></p>
+      <script type="text/javascript">
+       var country = $F('country')
+       var state   = $('order_address_state').value;
+       new Ajax.Updater('state','/countries/select_state?country='+country+'&state='+state, {asynchronous:true, evalScripts:true});
+       function change_country(country) {
+       var state = $('order_address_state').value;
+       new Ajax.Updater('state','/countries/select_state?country='+country+'&state='+state, {asynchronous:true, evalScripts:true});}
+      </script>
+      <p class="input5"><span >ZIP/Post Code:</span><%= text_field :order_address, 'zip' %></p>	
+      <p class="input8"><span>Phone Number:</span><%= text_field :order_address, 'telephone' %></p>
+    </div>
+  </div>
+</div>

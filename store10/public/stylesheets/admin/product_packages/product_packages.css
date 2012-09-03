@@ -1,0 +1,84 @@
+.sortable {
+	list-style: none;
+	padding: 0;
+}
+.sortable li {
+	border: 1px solid #CCC;
+	padding: 5px;
+	margin: 5px 0;
+	background-color: #FFF;
+	position: relative;
+}
+.sortable li .handle {
+	display: none;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	cursor: move;
+}
+.sortable li:hover {
+	background-color: #FFC;
+}
+.sortable li:hover .handle {
+	display: block;
+}
+.sortable a {
+	font-size: 9pt;
+	text-decoration: none;
+}
+.sortable a:hover {
+	color: OrangeRed;
+	text-decoration: underline;
+}
+.sortable li p {
+	margin: 0.5em 0;
+	padding: 0 0 0 20px;
+	font-size: 8pt;
+}
+
+#append_node {
+	padding: 5px;
+	background-color: #CCF;
+	position: relative;
+}
+#append_node .save_button {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	padding: 0 10px;
+}
+#append_node .subscript {
+	font-size: 8pt;
+	color: Blue;
+	padding: 0;
+	margin: 2px 0;
+}
+#new_package_name, #product_id {
+	width: 300px;
+	display: none;
+}
+.show_package #new_package_name, .show_product #product_id {
+	display: inline;
+}
+
+#child_nodes_status {
+	text-align: right;
+	padding: 0;
+}
+#child_nodes_status #processing {
+	font-weight: bold;
+	color: Red;
+	float: left;
+}
+#child_nodes_status input {
+	padding: 0 10px;
+}
+
+.delete_link {
+	font-weight: normal;
+	color: Red !important;
+	font-size: 9pt;
+	text-decoration: underline;
+	margin-right: 5px;
+	line-height: 30px;
+}

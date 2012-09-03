@@ -1,0 +1,17 @@
+<%= form_tag %>
+	<p>
+		<label for="package_name">Package Name</label>
+		<%= text_field "package", "name", :class => "textInput", :size => 60 %>
+	</p>
+	<p>
+		<label for="package_description">Description:</label>
+		<%= text_area "package", "description", :cols => "80", :rows => "10", :class => "textArea" %>
+	</p>
+	<p>
+		<label for="package_additional_html">Additional HTML</label>
+		<%= text_area "package", "additional_html", :cols => 80, :rows => 5, :class => "textArea" %>
+	</p>
+	<p>
+		<input type="submit" value="Save Package" class="button hundredfifty" />
+	</p>
+<%= end_form_tag %>

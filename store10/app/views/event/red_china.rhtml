@@ -1,0 +1,92 @@
+<%= javascript_include_tag "prototype", "effects" %>
+
+<% if flash[:notice] %>
+<div id="flash" style="display:none;">
+  <h2><%= g_("NOTICE_TITLE") %></h2>
+  <p><%= flash[:notice] %></p>
+  <p align="center">
+    <%= link_to_function g_("CLOSE"), "new Effect.BlindUp('flash')" %>
+  </p>
+</div>
+<script type="text/javascript">
+  new Effect.BlindDown('flash');
+</script>
+<% end %>
+
+<%= form_tag({:action => "create", :id => params[:id]}) %>
+  <h3><%= g_("TITLE") %></h3>
+  <%= g_("DESCRIPTION", true) %>
+  
+  <div id="language_selector">
+  <%=
+  [["english", "English"], ["simplified", "简体中文"], ["traditional", "繁體中文"]].collect { |lang|
+    link_to(lang.last, :action => "red_china", :id => lang.first)
+  }.join(" | ")
+  %>
+  </div>
+  
+  <div class="fields">
+    <label for="participant_name"><em>*</em><%= g_("NAME") %></label>
+    <%= text_field :participant, :name, :class => "input_field" %>
+    <label for="participant_email"><em>*</em><%= g_("EMAIL") %></label>
+    <%= text_field :participant, :email, :class => "input_field" %>
+    <label for="participant_mobile_phone"><em>*</em><%= g_("MOBILE_PHONE") %></label>
+    <%= text_field :participant, :mobile_phone, :class => "input_field" %>
+    <label for="participant_fixed_phone"><%= g_("FIXED_PHONE") %></label>
+    <%= text_field :participant, :fixed_phone, :class => "input_field" %>
+    <div class="clear"></div>
+  </div>
+  
+  <div class="fields">
+    <label for="participant_company_name"><%= g_("COMPANY_NAME") %></label>
+    <%= text_field :participant, :company_name, :class => "input_field" %>
+    <label for="participant_city"><em>*</em><%= g_("CITY") %></label>
+    <%= text_field :participant, :city, :class => "input_field" %>
+    <label for="participant_province"><em>*</em><%= g_("PROVINCE") %></label>
+    <%= text_field :participant, :province, :class => "input_field" %>
+    <label for="participant_post_code"><%= g_("POSTCODE") %></label>
+    <%= text_field :participant, :post_code, :class => "input_field" %>
+    <label for="participant_address"><%= g_("ADDRESS") %></label>
+    <%= text_field :participant, :address, :class => "input_field" %>
+    <label for="participant_company_website"><%= g_("WEBSITE") %></label>
+    <%= text_field :participant, :company_website, :class => "input_field" %>
+    <div class="clear"></div>
+  </div>
+  
+  <div class="fields">
+    <label for="participant_scope_of_business"><em>*</em><%= g_("BUSINESS") %></label>
+    <div class="check_boxes">
+      <% %w{movie television advertisement documentary distributor exhibition}.each do |item| %>
+      <span>
+        <input type="checkbox" name="participant[scope_of_business][]" value="<%= item %>">
+        <%= g_(item.upcase) %>
+      </span>
+      <% end %>
+    </div>
+    <label for="participant_others"><%= g_("OTHERS") %></label>
+    <input type="text" name="participant[scope_of_business][]" id="partcipiant_others" class="input_field" />
+    
+    <label for="participant_camera_type_using"><%= g_("CAMERA_TYPE") %></label>
+    <%= text_field :participant, :camera_type_using, :class => "input_field" %>
+    <label for="participant_serial_number"><%= g_("SERIAL_NUMBER") %></label>
+    <%= text_field :participant, :serial_number, :class => "input_field" %>
+    <div class="clear"></div>
+  </div>
+  
+  <div class="fields">
+    <label for="participant_reason"><%= g_("PURPOSE") %></label>
+    <%= text_area :participant, :reason, :class => "input_field" %>
+    <label for="participant_participanter_name"><%= g_("PARTICIPANT_NAMES") %></label>
+    <%= text_area :participant, :participanter_name, :class => "input_field" %>
+    <label for="participant_available_time"><%= g_("AVAILABLE_TIME") %></label>
+    <%= text_area :participant, :available_time, :class => "input_field" %>
+  </div>
+  <%= hidden_field :participant, :event_id %>
+  
+  <p id="subscript">
+    <em><%= g_("SUBSCRIPT") %></em>
+  </p>
+  <p id="buttons">
+    <%= submit_tag g_("SUBMIT") %>
+  </p>
+<%= end_form_tag %>

@@ -1,0 +1,44 @@
+<% content_for(:head) do %>
+  <%= javascript_include_tag 'highslide/highslide' %>
+  <script type="text/javascript">
+    hs.graphicsDir = '/javascripts/highslide/graphics/';
+    hs.captionId = 'the-caption';
+    hs.outlineType = 'rounded-white';
+    hs.showCredits = false;
+  </script>
+  <%= stylesheet_link_tag 'highslide', 'v2/pages/accessories/redrails' %>
+<% end %>
+<% content_for(:heading) do %>
+  <h1><%= _('NAVIGATION|ACCESSORIES') %></h1>
+<% end %>
+<div class="banner">
+	<img align="center" src="/images/pages/accessories/red_rails_system_hero.png" alt="" />
+</div>
+<div id="modula_design" class="text-content" >
+	<hr/>
+	<img align="left" style="margin-right: 20px; " src="/images/pages/accessories/modular_thumb.png" alt="" />
+  
+  <h2><img align="center" src="/images/pages/accessories/design-text.png" alt="" /></h2>
+  <%= _('ACCESSORIES|RED_RAILS_SYSTEM|MODULA_DESIGN|TEXT') %>
+	<div class="images-outer">
+		<img src="/images/pages/accessories/redone-thumb-1.png" alt="" />
+		<img src="/images/pages/accessories/redone-thumb-2.png" alt="" />
+		<img src="/images/pages/accessories/redone-thumb-3.png" alt="" />
+		<img src="/images/pages/accessories/redone-thumb-4.png" alt="" />
+		<img src="/images/pages/accessories/redone-thumb-5.png" alt="" />
+	</div>
+</div>
+<div id="red_rail" class="text-content">
+	<hr/>
+	<img style="margin-left: 20px; " src="/images/pages/accessories/red_rail.png" alt="" align="right" />
+	
+  <h2><img align="center" src="/images/pages/accessories/redrail-text.png" alt="" /></h2>
+  <%= _('ACCESSORIES|RED_RAILS_SYSTEM|RED_RAIL|TEXT') %>
+</div>
+<div id="flexibility" class="text-content">
+	<hr/>
+	<img  style="margin-right: 20px; " align="left" src="/images/pages/accessories/red_one_thumb.png" alt="" />
+  <h2><img align="center" src="/images/pages/accessories/isthekey-text.png" alt="" /></h2>
+  <%= _('ACCESSORIES|RED_RAILS_SYSTEM|FLEXIBILITY|TEXT') %>
+</div>
+<div style="clear: both;"></div>

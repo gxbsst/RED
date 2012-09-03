@@ -1,0 +1,39 @@
+#header { background-image: url(/engine_files/substruct/images/admin/header_background_logo_new.png); }
+#navigation { margin-left: 40px; }
+
+label {
+	padding: 3px 0;
+}
+#container p {
+  line-height: 1.2em;
+}
+p.subscript {
+	color: #F90;
+	margin: 1em 0;
+	padding: 0;
+}
+p.subscript em {
+	color: DarkRed;
+}
+
+#processing {
+	font-weight: bold;
+	color: OrangeRed;
+	float: right;
+}
+
+#right a.button {
+  float: none;
+}
+#right .textInput, #right .textArea {
+  width: 195px;
+}
+
+table#products_list.list tr a:link {
+	color:#EEEEEE;
+
+}
+
+input.update_store_sort{
+width:13px;
+}

@@ -1,0 +1,91 @@
+--- 
+rights_014: 
+  actions: index,list,search,edit,show
+  name: Products - View
+  id: "14"
+  controller: products
+rights_003: 
+  actions: "*"
+  name: Rights - Admin
+  id: "3"
+  controller: rights
+rights_015: 
+  actions: new,create,edit,update,destroy
+  name: Questions - CRUD
+  id: "15"
+  controller: questions
+rights_004: 
+  actions: "*"
+  name: Products - Admin
+  id: "4"
+  controller: products
+rights_016: 
+  actions: index,list,search,edit,show
+  name: Questions - View
+  id: "16"
+  controller: questions
+rights_005: 
+  actions: "*"
+  name: Content - Admin
+  id: "5"
+  controller: content_nodes
+rights_017: 
+  actions: new,create,edit,update,destroy
+  name: Tags - CRUD
+  id: "17"
+  controller: tags
+rights_006: 
+  actions: "*"
+  name: Questions - Admin
+  id: "6"
+  controller: questions
+rights_018: 
+  actions: index,list,search,edit,show
+  name: Tags - View
+  id: "18"
+  controller: tags
+rights_007: 
+  actions: "*"
+  name: Roles - Admin
+  id: "7"
+  controller: roles
+rights_008: 
+  actions: "*"
+  name: Tags - Admin
+  id: "8"
+  controller: tags
+rights_009: 
+  actions: new,create,edit,update,destroy
+  name: Orders - CRUD
+  id: "9"
+  controller: orders
+rights_010: 
+  actions: index,list,search,edit,show
+  name: Orders - View
+  id: "10"
+  controller: orders
+rights_011: 
+  actions: new,create,edit,update,destroy
+  name: Content - CRUD
+  id: "11"
+  controller: content_nodes
+rights_012: 
+  actions: index,list,search,edit,show
+  name: Content - View
+  id: "12"
+  controller: content_nodes
+rights_001: 
+  actions: "*"
+  name: Orders - Admin
+  id: "1"
+  controller: orders
+rights_013: 
+  actions: new,create,edit,update,destroy
+  name: Products - CRUD
+  id: "13"
+  controller: products
+rights_002: 
+  actions: "*"
+  name: Users - Admin
+  id: "2"
+  controller: users

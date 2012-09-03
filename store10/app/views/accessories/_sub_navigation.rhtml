@@ -1,0 +1,17 @@
+<!-- <ul id="sub_navigation" class="navigation"> <li><%= link_to _('CAMERAS|SUB_NAVIGATION|INTRODUCING_RED_ONE'), { :action => 'index' }, :class => 'introducing' %></li>
+	<li><%= link_to _('CAMERAS|SUB_NAVIGATION|TECH_SPECS'), { :action => 'tech_specs' }, :class => 'tech_specs' %></li>
+	<li><%= link_to _('CAMERAS|SUB_NAVIGATION|FORMAT_OPTIONS'), { :action => 'format_options' }, :class => 'format_options' %></li>
+	<li><%= link_to _('CAMERAS|SUB_NAVIGATION|PHOTO_TOUR'), { :action => 'photo_tour' }, :class => 'photo_tour' %></li>
+	<li><%= link_to _('GLOBAL|BUY_NOW'), :controller => 'store' %></li>
+</ul>
+-->
+
+<div id="sub_navigation">
+<ul>
+<li id="i1"><%= link_to 'RED Rails System', {:action => 'index'}, :class => 'introducing' %></li>
+<li><%= link_to 'Digital Storage', {:action => 'digital_storage'}, :class => 'quotes' %></li>
+<li><%= link_to 'Power System', { :action => 'power_system' }, :class => 'tech_specs' %></li>
+<li id="i6"><%= nav_link_to 'Monitoring Options', {:action => 'monitoring_options'}, :class => 'technology'  %></li>
+</ul>
+</div><!--end #sub_navigation-->
+<div style="clear:both;"></div>

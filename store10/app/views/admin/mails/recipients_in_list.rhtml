@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'admin/mails/select_recipients' %>
+<%= javascript_include_tag 'admin/mails' %>
+<script type="text/javascript">
+  var conditions = <%= MailTasks::RecipientsConditions::CONFIGURATION.to_json%>;
+</script>
+
+<%= form_tag(
+  {},
+  :class => "recipients_conditions",
+  :id => "recipients_conditions_form"
+) %>
+  <h1>Select Recipients with Account Numbers / Serial Number</h1>
+  <label for="accounts">Paste the list of numbers in the text box below</label>
+  <%= text_area_tag "accounts" %>
+  
+  <label>
+    <input type="checkbox" name="ignore_do_not_contact" value="1" />
+    Ignore "Do Not Contact" setting
+  </label>
+  
+  <%= link_to_function( "Preview", "queryForRecipients(false);",
+    :class => "button hundred", :id => "preview_button" ) %>
+<%= end_form_tag %>
+
+<div id="select_recipients_wrapper">
+  <%= render :partial => "mail_recipients" %>
+</div>
+
+<div class="line"></div>
+
+<%= link_to_function "OK", "queryForRecipients(true);", :class => "button hundred" %>
+<%= link_to_function "Cancel", "window.top.hidePopWin(false)", :class => "button hundred", :style => "margin-left: 10px;" %>

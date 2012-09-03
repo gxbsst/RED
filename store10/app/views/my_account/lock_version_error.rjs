@@ -1,0 +1,2 @@
+page.alert('Attention. Your Order History has been updated while you were working. Please click "OK" to refresh this page. If the problem continues, please contact customer service.')
+page << "location.reload()"

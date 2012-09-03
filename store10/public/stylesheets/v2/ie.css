@@ -1,0 +1,78 @@
+/*
+	Supports these listed features for Internet Explorer:
+	* Alpha-Transparent .png files
+*/
+* {
+	zoom: 1;
+}
+	.navigator li, #sidebar li {
+		display: inline;
+	}
+	.navigator a, #sidebar li a {
+		display: inline-block;
+	}
+body {
+	background: none;
+}
+
+
+.transparent-25 {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/theme/transparent-25.png", sizingMethod="scale");
+}
+.transparent-50 {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/theme/transparent-50.png", sizingMethod="scale");
+}
+	.transparent-25 a, .transparent-50 a {
+		position: relative;
+	}
+#footer #language {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/theme/globe.png", sizingMethod="crop");
+}
+#footer p {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/theme/grenade.png", sizingMethod="crop");
+}
+body {
+	background-image: none;
+	margin: 0 auto;
+}
+#news.transparent-25 {
+	height: 187px;
+	overflow: hidden;
+}
+hr {
+	height: 0px;
+	background-image: none;
+	border-top: 2px solid #666;
+}
+#gallery .photos {
+	background-image: none;
+}
+.button {
+	border: none;
+}
+#header .heading {
+	zoom: normal;
+}
+
+#header .heading #cameras-h1 {
+	zoom: normal;
+	margin-top: 20px;
+}
+.heading h1 span {
+	height: 29px;
+	width: 129px;
+	line-height: normal;
+	font-size: 10px;
+	
+}
+#content #cameras_gallery {
+	margin: 0 auto;
+	width: auto;
+}
+#content #cameras_gallery a {
+	margin: 10px 9px;
+}

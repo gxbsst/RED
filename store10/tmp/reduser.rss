@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+	<channel>
+		<title>Reduser.net - 1,2</title>
+		<link>http://www.reduser.net/forum</link>
+		<description>Red One 4k digital camera</description>
+		<language>en</language>
+		<lastBuildDate>Tue, 28 Oct 2008 13:57:45 GMT</lastBuildDate>
+		<generator>vBulletin</generator>
+		<ttl>60</ttl>
+		<image>
+			<url>http://205.234.135.241/forum/images/style/misc/rss.jpg</url>
+			<title>Reduser.net - 1,2</title>
+			<link>http://www.reduser.net/forum</link>
+		</image>
+		<item>
+			<title><![CDATA[New reduser server "feels" faster!]]></title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21096&amp;goto=newpost</link>
+			<pubDate>Tue, 28 Oct 2008 12:07:45 GMT</pubDate>
+			<description>... or is it just me here, in Europe? 
+ 
+I had a couple of errors reporting from the page in the last few months. nothing serious, but the server...</description>
+			<content:encoded><![CDATA[<div>... or is it just me here, in Europe?<br />
+<br />
+I had a couple of errors reporting from the page in the last few months. nothing serious, but the server surely felt the flood of new users. I think the issues will be gone now, as the new server seems to be quite powerful. The response times are a dream!<br />
+<br />
+I also like the new simpler layout. Less is more, sometimes, even at RED.<br />
+<br />
+Congratulations!</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Jonas</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21096</guid>
+		</item>
+		<item>
+			<title>Reel number change</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21076&amp;goto=newpost</link>
+			<pubDate>Mon, 27 Oct 2008 21:57:39 GMT</pubDate>
+			<description>Hello, 
+ 
+I was wondering if anyone knew how to change the reel number? Not the slate letter but the set of numbers that follow the slate letter. 
+...</description>
+			<content:encoded><![CDATA[<div>Hello,<br />
+<br />
+I was wondering if anyone knew how to change the reel number? Not the slate letter but the set of numbers that follow the slate letter.<br />
+<br />
+Thanks,<br />
+<br />
+chadac</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>chadac</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21076</guid>
+		</item>
+		<item>
+			<title>Models or Diagrams of Red bodies</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21073&amp;goto=newpost</link>
+			<pubDate>Mon, 27 Oct 2008 20:36:23 GMT</pubDate>
+			<description><![CDATA[Hey sorry if this has been posted or is in the wrong sub forum, but I couldn't find much in my searches. :help:  
+ 
+My stereoscopic cine class is...]]></description>
+			<content:encoded><![CDATA[<div>Hey sorry if this has been posted or is in the wrong sub forum, but I couldn't find much in my searches. :help: <br />
+<br />
+My stereoscopic cine class is looking to construct a 3D rig to use in class with 2 Red cameras. I'm looking for CAD models or some sort of diagrams showing scale or dimensions of the camera bodies. I need this for the Red's lenses too.<br />
+<br />
+Does anyone know where I can find this, or has anyone made their own models of their Red's? I emailed Red support and they said they didn't have anything available to the public like this. <br />
+<br />
+Let me know if I'm not making sense or you need more info. Thanks in advance for your help.</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>wtfbj</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21073</guid>
+		</item>
+		<item>
+			<title>going back to build 16</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21052&amp;goto=newpost</link>
+			<pubDate>Mon, 27 Oct 2008 13:14:17 GMT</pubDate>
+			<description>Just want to be sure I understand correctly: If I up-date to build 17, I can allways go back to build 16? 
+ 
+Thanks 
+Brian</description>
+			<content:encoded><![CDATA[<div>Just want to be sure I understand correctly: If I up-date to build 17, I can allways go back to build 16?<br />
+<br />
+Thanks<br />
+Brian</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>goffb</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21052</guid>
+		</item>
+		<item>
+			<title>Red and 4:4:4</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21048&amp;goto=newpost</link>
+			<pubDate>Mon, 27 Oct 2008 11:10:44 GMT</pubDate>
+			<description><![CDATA[In order to try and clear up some confusion and help people understand why "4:4:4" notation (chroma subsampling notation) is inappropriate when...]]></description>
+			<content:encoded><![CDATA[<div>In order to try and clear up some confusion and help people understand why &quot;4:4:4&quot; notation (chroma subsampling notation) is inappropriate when talking about the Red, I've written this. Thanks to Graeme for his comments and suggestions. Hope it helps.<br />
+<br />
+<b><font size="3">Why “4:4:4” has nothing to do with the Red One camera</font></b><br />
+<br />
+<b><font size="2">History</font></b><br />
+<br />
+First, a bit of history. Originally, there was black &amp; white television. Then came colour. To accommodate black &amp; white televisions, colour was added to the original luma (brightness) signal through a new chroma (colour) signal, thus keeping colour separate and black &amp; white televisions viable. In addition to making sure that black &amp; white televisions were still useful, this was also an intelligent division of the visual data because less bandwidth was used for the chroma signal, which the human eye is much less sensitive to compared with luma.<br />
+<br />
+<b><font size="2">Y’CbCr</font></b><br />
+<br />
+In the digital world, the standard for separating luma and chroma is the Y'CbCr colour space – Y’ represents luma (gamma-corrected), Cb and Cr are used for blue and red channels. The green colour information is derived mathematically. As stated above, the human eye is less sensitive to colour information than brightness information. Naturally, digital video could also use this fact to save bandwidth. In digital video, the process of reducing chroma information translated into subsampling – that is, decreasing the resolution for the chroma channels.<br />
+<br />
+<b><font size="2">Subsampling</font></b><br />
+<br />
+Analogue television used much less bandwidth for the chroma signal than the luma – approximately one quarter. So the effective ratio of bandwidth would be 4:1, with the luma signal using four times the bandwidth of the chroma. The same effect is achieved in digital video through subsampling – reducing the resolution. Due to the original, analogue numbers, subsampling uses a “4” to describe a full-resolution (luma) channel. To achieve subsampling the chroma resolution is cut to one half or one quarter. Chroma subsampling notation describes this as 4:2:2 and 4:2:0 (or 4:1:1), respectively. The first number is the luma channel and the second and third numbers are chroma channels (Cb and Cr). Normally, this describes the horizontal sampling per scan line. However “4:2:0” is a special case that indicates the chroma channels are halved both horizontally and vertically. So, a subsampled 4:2:2 or 4:2:0 image will either have lost half or three quarters of the original chroma data.<br />
+<br />
+<b><font size="2">RGB</font></b><br />
+<br />
+Y’CbCr is a way of storing colour visual information – that is, a colour space. RGB is another colour space. RGB, of course, stores the information in a completely different way. Instead of separating luma and chroma, all the information is derived by mixing red, blue and green channels. As RGB is not designed to separate the chroma information, it is not suited for chroma subsampling.<br />
+<br />
+<b><font size="2">Bayer Pattern</font></b><br />
+<br />
+A CMOS image sensor most often uses a Bayer-pattern filter to produce colour information. The Bayer-pattern filter divides the light into red, green and blue (RGB), so that each photosite captures one of those three colour channels. One photosite correlates to one pixel in the output and because only one colour channel is captured per pixel, the full RGB image has to be re-constructed through a process called “demosaicing”. There are several approaches to this and getting the best result is both a science and an art.<br />
+<br />
+<b><font size="2">Conclusion</font></b><br />
+<br />
+Demosaicing and subsampling are performed in completely different colour spaces, RGB and Y’CbCr, respectively. They are also two very different processes. Subsampling reduces bandwidth by reducing resolution. Information is lost in that process. Demosaicing, on the other hand, is a method of interpolation in which none of the existing data is compromised.<br />
+<br />
+The Red One does not perform chroma subsampling and it operates in RGB colour space. The RAW data captured by the camera and stored as Redcode RAW is Bayer-patterned RGB and this data is demosaiced into full RGB data. It is therefore meaningless to use subsampling notation when discussing the quality of the Mysterium sensor, the quality of native Recode RAW footage or demosaiced Redcode footage. It would only be appropriate if the image data is later converted to Y’CbCr colour space, in which case, the user has complete control of the quality.</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>lightman</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21048</guid>
+		</item>
+		<item>
+			<title>so,i there real output 1080p on prw?</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21042&amp;goto=newpost</link>
+			<pubDate>Mon, 27 Oct 2008 07:17:11 GMT</pubDate>
+			<description>Hi, 
+As i read the threads about 1080p output i understand that is the only playback option.And i cant view in 1080p (on my SonyLMD-2450W) while i...</description>
+			<content:encoded><![CDATA[<div>Hi,<br />
+As i read the threads about 1080p output i understand that is the only playback option.And i cant view in 1080p (on my SonyLMD-2450W) while i shoot.<br />
+Or iam wrong ?</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Rafffaello</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21042</guid>
+		</item>
+		<item>
+			<title>RED School</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21024&amp;goto=newpost</link>
+			<pubDate>Sun, 26 Oct 2008 19:32:57 GMT</pubDate>
+			<description>Hey all- 
+I just wanted to inform those of you considering going to film school that the Berkeley Digital Film Institute has a RED in their class...</description>
+			<content:encoded><![CDATA[<div>Hey all-<br />
+I just wanted to inform those of you considering going to film school that the Berkeley Digital Film Institute has a RED in their class curriculum. It hasn't been updated on their website yet, but RED is in their arsenal.<br />
+You can check them out here...<br />
+<br />
+<a href="http://www.berkeleydigital.com" target="_blank">www.berkeleydigital.com</a><br />
+<br />
+<br />
+-J</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Jeff Deveraux</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21024</guid>
+		</item>
+		<item>
+			<title>REDs performance at altitude?</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21020&amp;goto=newpost</link>
+			<pubDate>Sun, 26 Oct 2008 17:41:12 GMT</pubDate>
+			<description><![CDATA[Hi folks, 
+ 
+I'm considering using RED for a project that will be shot between 2000m-2400m (6000ft-7200ft) above sea-level and knowing that some...]]></description>
+			<content:encoded><![CDATA[<div>Hi folks,<br />
+<br />
+I'm considering using RED for a project that will be shot between 2000m-2400m (6000ft-7200ft) above sea-level and knowing that some electronic/computer equipment (hard-drives esp) have performance issues the higher up one takes them is there anything I should know or watch out for? <br />
+<br />
+Do REDDRIVEs work reliably at altitude? <br />
+<br />
+Last time I took a camera up to 3000m-4000m (Mont Blanc) all kinds of odd things started happening to the kit (sticking buttons that activated or deactivated various modes plus a few mounting screws working loose) - though it was a fairly rapid ascent 15mins in the cable car!<br />
+<br />
+This will not be shot on board an aircraft so vibration is not an issue I'm more concerned/interested in the effects of lower air-pressure on the gear.<br />
+<br />
+I'm sure others here have shot at altitude (and I know some have done parachute work!) I'd very much appreciate any &quot;real world&quot; experience/advice.<br />
+<br />
+Thanks<br />
+<br />
+JohnF</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>JohnF</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21020</guid>
+		</item>
+		<item>
+			<title>Build 17 - Where is it?</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21013&amp;goto=newpost</link>
+			<pubDate>Sun, 26 Oct 2008 15:05:04 GMT</pubDate>
+			<description>Is it only me or do you think too that the release version of Build 17 is taking longer than anticipated? I thought that after the codec-focused...</description>
+			<content:encoded><![CDATA[<div>Is it only me or do you think too that the release version of Build 17 is taking longer than anticipated? I thought that after the codec-focused heavy development of B16, B17 would come out sooner.<br />
+<br />
+I was shooting on B16 today and i really wished i had all the UI enhancements of B17 but because of upcoming productions i can't beta test.<br />
+<br />
+Do you think that B17 ended up to be more difficult that expected or RED resources moved to RED's other projects that are now under development?</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Miltos Pilalitos</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21013</guid>
+		</item>
+		<item>
+			<title>Need Help : What is best Gamma for LUSTER CC</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=21012&amp;goto=newpost</link>
+			<pubDate>Sun, 26 Oct 2008 14:04:37 GMT</pubDate>
+			<description>Good day , I want to make CC on Luster . In what Gamma is better to render out DPX files. RED LOG or PD LOGXX . 
+Any experiences with Luster ?...</description>
+			<content:encoded><![CDATA[<div>Good day , I want to make CC on Luster . In what Gamma is better to render out DPX files. RED LOG or PD LOGXX .<br />
+Any experiences with Luster ?<br />
+Thanks.</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Biba</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=21012</guid>
+		</item>
+		<item>
+			<title>An LED monitor is NOT an OLED monitor</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=20978&amp;goto=newpost</link>
+			<pubDate>Sat, 25 Oct 2008 16:44:25 GMT</pubDate>
+			<description><![CDATA[As the resident "tech idiot" I wanted to point out something to my fellow idiots that I found worth repeating. 
+ 
+A lot of companies are coming out...]]></description>
+			<content:encoded><![CDATA[<div>As the resident &quot;tech idiot&quot; I wanted to point out something to my fellow idiots that I found worth repeating.<br />
+<br />
+A lot of companies are coming out with LED monitors.  This is a good thing, but beware it's NOT the ground breaking technology you've been reading about from SONY.  That's called OLED.  And it's amazing.<br />
+<br />
+I think some companies are &quot;playing&quot; with words so the less tech weenie types (Like myself) would become confused and purchase one thing when they thought they were getting another.<br />
+<br />
+OLED technology will indeed be a game changing event and it's a year away at most.  Read up on it if you have not yet.<br />
+<br />
+Just wanted to help out if there were others out there like me (God forbid).<br />
+<br />
+One more thing:  I am not saying the new LED monitors are not an improvement, I'm just saying they are not the watershed event that OLEDs are.<br />
+<br />
+Hope this helps.<br />
+<br />
+Jay</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Jay A. Kelley</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=20978</guid>
+		</item>
+		<item>
+			<title>1080p output?</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=20953&amp;goto=newpost</link>
+			<pubDate>Sat, 25 Oct 2008 03:26:03 GMT</pubDate>
+			<description>We are using Wafian HR-F1(http://www.wafian.com/HR-F1.htm) for record and playback of Digital Cinema Camera footage. Using 1080p output of Red One...</description>
+			<content:encoded><![CDATA[<div>We are using Wafian HR-F1(<a href="http://www.wafian.com/HR-F1.htm" target="_blank">http://www.wafian.com/HR-F1.htm</a>) for record and playback of Digital Cinema Camera footage. Using 1080p output of Red One camera, unable to see the picture clearly. When I've the settings switched in my Wafian to 720p50, It works. The same 1080p24 works very well with Phantom HD Digital Cinema Camera. We are facing the problem only with Red One 1080p output.<br />
+<br />
+Thoughts and Suggestions welcome.</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>gbalaji</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=20953</guid>
+		</item>
+		<item>
+			<title>Customer Service Might Suffer for a month.....</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=20929&amp;goto=newpost</link>
+			<pubDate>Fri, 24 Oct 2008 20:31:09 GMT</pubDate>
+			<description>Hey guys... I have some good news and some bad news. 
+ 
+The good news, is that our manufacturing is turning into a well-oiled machine, we are getting...</description>
+			<content:encoded><![CDATA[<div>Hey guys... I have some good news and some bad news.<br />
+<br />
+The good news, is that our manufacturing is turning into a well-oiled machine, we are getting cameras out in larger batches then every before, and we are shipping hundreds of cameras every batch instead of dozens like we were not so long ago.<br />
+<br />
+The bad news is.. more cameras means more customer service calls and emails. We are growing our Bombsquad team as fast as possible to keep up,  but over the next month or so, the response time is not going to be as fast as we would like to be.  We are also starting the free audio board upgrade plan at this time, so as you can imagine the sheer volume of correspondence between RED and it's customers is going to be quite the undertaking. <br />
+<br />
+For a moment here internally the idea of holding back delivering cameras to ease the call load was actually being kicked around, but when I put my customer hat on,  as I customer,  I would rather have my camera in my hands and be playing with it and wait a few extra beats if I need to contact customer service rather than not having my camera at all... if I am wrong in that decision, let me know. <br />
+<br />
+So I gracefully ask everyone to bear with us :)<br />
+<br />
+Thanks everyone...</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Jarred Land</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=20929</guid>
+		</item>
+		<item>
+			<title>Red 720p output to Panasonic 1400 VTR</title>
+			<link>http://www.reduser.net/forum/showthread.php?t=20926&amp;goto=newpost</link>
+			<pubDate>Fri, 24 Oct 2008 20:01:24 GMT</pubDate>
+			<description>Just wondering if anyone has used a Red Camera as playback to a Panasonic 1400 deck for a client to walk away with a tape?</description>
+			<content:encoded><![CDATA[<div>Just wondering if anyone has used a Red Camera as playback to a Panasonic 1400 deck for a client to walk away with a tape?</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>Atl Cine</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=20926</guid>
+		</item>
+		<item>
+			<title><![CDATA[Soderbergh & Red 3-D]]></title>
+			<link>http://www.reduser.net/forum/showthread.php?t=20925&amp;goto=newpost</link>
+			<pubDate>Fri, 24 Oct 2008 19:44:53 GMT</pubDate>
+			<description>Not to start another speculative thread, but Variety just posted an article that Soderbergh is going to direct a 3-D live-action musical about...</description>
+			<content:encoded><![CDATA[<div>Not to start another speculative thread, but Variety just posted an article that Soderbergh is going to direct a 3-D live-action musical about Cleopatra.  I read a post several weeks ago that Red has trademarked Red 3-D and since Soderbergh has used the R1 for his last three projects..... <br />
+<br />
+Well, who knows what it means but the possibilities seem interesting.<br />
+Here's a link to the article:<br />
+<br />
+<a href="http://www.variety.com/article/VR1117994550.html?categoryId=13&amp;cs=1&amp;nid=2854" target="_blank">http://www.variety.com/article/VR111...&amp;cs=1&amp;nid=2854</a><br />
+<br />
+<br />
+-Miles</div>
+
+]]></content:encoded>
+			<category domain="http://www.reduser.net/forum/forumdisplay.php?f=2">RED ONE - General, News, etc.</category>
+			<dc:creator>mkelly</dc:creator>
+			<guid isPermaLink="true">http://www.reduser.net/forum/showthread.php?t=20925</guid>
+		</item>
+	</channel>
+</rss>

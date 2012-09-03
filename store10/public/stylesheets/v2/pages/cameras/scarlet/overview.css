@@ -1,0 +1,30 @@
+.overview_hero p{
+	text-align: justify;
+	line-height: 150%;
+	width:460px;
+	margin-top: -170px;
+	margin-bottom: 120px;
+}
+
+.scarlet_list{
+	margin-bottom: 50px;
+}
+.scarlet_list img{
+	margin-right: 16px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #2f2f31;
+}
+.pick_your_brain .text_brain{
+	margin-top: 25px;
+}
+
+.pick_your_brain .pigk_brain{
+	margin-right: 30px;
+}
+
+.pick_your_brain p{
+	text-align: justify;
+	line-height: 150%;
+}
+

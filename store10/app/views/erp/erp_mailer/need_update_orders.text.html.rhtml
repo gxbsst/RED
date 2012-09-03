@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://ww
+  w.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>RED / My Account</title>
+  <style type="text/css">
+  h2{font-size: 16px;}
+  #wrapper {width: 900px;  }
+  h3{margin-left: 10px;}
+  .orders{margin-top: -15px;}
+  table  {border-collapse: separate; padding: 0 margin:0; }
+  table tr td, table tr th{ padding: 5px 10px; font-size: 9pt; }
+  .invoice, .delivery{border-collapse: separate;  }
+  .invoice tr th, .delivery tr th{ background: #f7f7f7; text-align:right;  }
+  .invoice tr td, .delivery tr td{  background: #f7f7f7;}
+  .line_orders {border-collapse: separate; margin-bottom: 20px;}
+  .line_orders tr td{background: #f7f7f7; text-align: center; }
+  .line_orders tr th{border-bottom:2px solid #CCCCCC;}
+  .line_orders tr .td1{text-align: left;}
+  #top{background: #FFFFDD; border: 1px solid #FFCC00; padding: 5px;margin-left: 10px;}
+
+  ul li{list-style-type: disc;}
+  #update_item{margin: 20px 10px; padding:5px; background: #EFEFEF;}
+  #update_item h4{color: red;}
+
+  </style>
+</head>
+
+<body>
+  <div id="wrapper" >
+    <div id="top">
+      <h2>AX Error: <%= @orders[:ax_error]%></h2>
+      <p>AX XML UUID: <%= @orders[:uuid] %></p>
+
+      <p>Please manually process this change order while we investigate why change order request was rejected by AX. To manually process the change order, make sure that the clients Open Sales Orders match the information in this email (addresses, line items, quantities), as this is exactly what the client tried to submit to AX. Thank you!
+      </p>
+    </div>
+
+    <!-- Update Items Start.... -->
+    <div id="update_item">
+
+      <h2>Update Items</h2>
+      <% @updated_sales_lines.each do |sales_order_num, lines| %>
+      <h4><%= sales_order_num %> </h4>
+      <ul>
+        <% lines.each do |line| %>
+        <% if line.class_name == 'ERP::InvoiceAddress' %>
+        <li>Change BILL TO Address (<%= ERP::InvoiceAddress.find(line.record_id).address %>)</li>
+        <% elsif line.class_name == 'ERP::DeliveryAddress' %>
+        <li>Change SHIP TO Address (<%= ERP::DeliveryAddress.find(line.record_id).address %>)</li>
+        <% elsif line.class_name == 'ERP::SalesLine' %>
+        <% if line.action.include?('move_sales_line()') %>
+        <li>Move Sales Line to other Sales Order</li>
+        <% elsif line.action.include?('update_sales_line_qty()') %>
+        <li>Update Sales Line Qty: <%=  ERP::SalesLine.find( line.record_id ).item_id %> (<%=  ERP::Item.find_by_item_id( ERP::SalesLine.find(line.record_id).item_id ).name %>) Qty <%=  ERP::SalesLine.find(line.record_id).sales_qty %></li>
+        <% elsif line.action.include?('delete_sales_line()') %>
+        <% line.description =~ /\((\d+)\)/  #=> return $1 is the item_id %>
+        <li>Delete Sales Line <%=  $1 %>  (<%=  ERP::Item.find_by_item_id( $1 ).name%>)</li>
+        <% end %>
+        <% end %>
+        <% end %>
+      </ul>
+      <% end %>
+    </div> 
+    <!-- Update Items End -->
+
+
+
+    <% @orders[:orders].each do |order| %>
+    <h3>#<%= order[:sales_id]%></h3>
+    <table class="orders" width="100%">
+      <tr class="orders_tr1" ><th align="left">Bill To: <%= order[:invoice][:istreet] %> </th><th align="left">Ship To: <%= order[:delivery][:dstreet] %></th></tr>
+      <tr class="orders_tr2">
+        <td>
+          <!-- Address of  Invoice to -->
+          <table class="invoice" width="100%">
+            <tr class="invoice_tr1"><th>Country: </th><td><%= order[:invoice][:icountry] %></td></tr>
+            <tr class="invoice_tr2"><th>Street: </th><td><%= order[:invoice][:istreet] %></td></tr>
+            <tr class="invoice_tr3"><th>State: </th><td><%= order[:invoice][:istate] %></td></tr>
+            <tr class="invoice_tr4"><th>City: </th><td><%= order[:invoice][:icity] %></td></tr>
+            <tr class="invoice_tr5"><th>Zip Code: </th><td><%= order[:invoice][:izip_code] %></td></tr>          
+          </table> 
+        </td>
+        <!-- Address of Delivery to -->
+        <td>
+          <table class="delivery" width="100%">
+            <tr class="delivery_tr1"><th>Country: </th><td><%= order[:delivery][:dcountry_region_id] %></td></tr>
+            <tr class="delivery_tr2"><th>Street: </th><td><%= order[:delivery][:dstreet] %></td></tr>
+            <tr class="delivery_tr3"><th>State: </th><td><%= order[:delivery][:dstate] %></td></tr>
+            <tr class="delivery_tr4"><th>City: </th><td><%= order[:delivery][:dcity] %></td></tr>
+            <tr class="delivery_tr5"><th>Zip Code: </th><td><%= order[:delivery][:dzip_code] %></td></tr>          
+          </table> 
+        </td>
+      </tr>   
+
+      <tr>
+        <td colspan=2>
+          <!-- Line Orders  -->
+          <table class="line_orders" width="100%">
+            <tr class="line_orders_tr1"><th width="30%">Name</th><th width="20%">SKU</th><th width="10%">Status</th><th width="8%">Quantity</th><th width="20%" align="right">Price</th><th align="right">Subtotal</th></tr>
+            <% order[:lines].each do |line| %>
+            <tr class="line_orders_tr2"><td class="td1"><strong><%= line[:name] %></strong></td><td><%= line[:item_id] %></td><td></td><td><%= line[:sales_qty].to_i %></td><td><%= number_to_currency(line[:price]) %></td><td><%= number_to_currency((line[:sales_qty].to_i * line[:price].to_i)) %></td></tr>
+            <% end %>
+          </table>
+        </td>
+      </tr>
+      <table>
+
+        <% end %>
+
+      </div>
+    </body>
+    <html>
+
+

@@ -1,0 +1,16 @@
+<h2>R3D SDK</h2>
+<table>
+  <tr><td ><strong >Name: </strong><%= @sdk.first_name %> <%= @sdk.last_name %></td><td ><strong >Company: </strong><%= @sdk.company %></td></tr>
+</table>
+<table>
+  <tr><td colspan="2" ><strong ><strong>Address1:</strong> </strong><%= @sdk.address1 %></td></tr>
+  <tr><td colspan="2" ><strong>Address2: </strong><%= @sdk.address2 %></td></tr>
+  <tr class="tr2"><td class="td2" ><strong>City: </strong><%= @sdk.city %></td><td><strong>State: </strong><%= @sdk.state %></td></tr>
+  <tr class="tr2"><td class="td2"><strong>Zip Code: </strong><%= @sdk.zip_code %></td><td><strong>Country: </strong><%= @sdk.country %></td></tr>
+  <tr  class="tr2"><td colspan="2"><strong >Email: </strong><%= @sdk.email %></td></tr>
+  <tr class="tr2"><td ><strong >Phone: </strong><%= @sdk.phone %></td><td><strong >Fax: </strong><%= @sdk.fax %></td></tr>
+  <tr ><td colspan="2"><strong >Which Platforms: </strong><%= "Mac" if @sdk.mac %>  <%= "Windows" if @sdk.windows %>  <%= "Linux" if @sdk.linux %></td></tr>
+  <tr ><td colspan="2"><%= "Willing to test Alpha/Beta SDK releases" if @sdk.select_releases %>  </td></tr>
+  <tr><td  colspan="2"><strong >Product Name: </strong><%= @sdk.product_name %></td></tr>
+  <tr><td colspan="2"><strong >Project Description: </strong>	<%= textilize(@sdk.project_description) %></td></tr>
+</table>

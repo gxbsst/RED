@@ -1,0 +1,12 @@
+<h2>Email Address</h2>
+<div class="padLeft" style="padding-bottom:10px;">
+  <%= text_field 'order_user', 'email_address', :class => 'textInput' %>
+	<%= error_message_on(:order_user, :email_address) %>
+</div>
+<% if @store_user %>
+<h2>Password</h2>
+<div class="padLeft" style="padding-bottom:10px;">
+  <%= text_field 'store_user', 'password', :class => 'textInput' %>
+	<%= error_message_on(:store_user, :password) %>
+</div>
+<% end %>

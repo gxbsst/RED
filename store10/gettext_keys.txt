@@ -1,0 +1,34 @@
+# -------------------- IMPORTANT NOTICE -----------------------------------------
+# This file saves the newly added keys in project: RED.com
+# Before using a new Gettext Key in anywhere, you ALWAYS should append it here,
+#   then administrator ("Jerry Guo" <hozaka@gmail.com>) will update the .po files
+#   on PREALPHA or LIVE.
+# -------------------------------------------------------------------------------
+
+# USAGE:
+# msgid "YOUR_KEY_HERE_IN_UPPER_CASE"
+# msgstr "Default value for all language (normally in English)"
+
+# If more than one key need to be added, split them with EMPTY LINE.
+# Reference to Gettext GNU Spec.
+
+msgid "GLOBAL|SIGN_IN"
+msgstr "Sign In"
+
+msgid "GLOBAL|EMAIL_ADDRESS"
+msgstr "Email Address"
+
+msgid "GLOBAL|PASSWORD"
+msgstr "Password"
+
+msgid "SIGN_IN|SETUP_ACCOUNT_TIP"
+msgstr "If you already have a Camera, but can't find your login, please \"Contact Us\":../contact_us so that we can help get your RED Account setup."
+
+msgid "GLOBAL|FORGOT_PASSWORD"
+msgstr "Forgot Password?"
+
+msgid "SIGN_IN|NOTE"
+msgstr "Note: Available only for customers who completed the purchase of their RED ONE Camera."
+
+msgid "SUPPORT|DOWNLOAD|DOWNLOAD_FOR_OTHER_OS"
+msgstr "+ Download for other Operating Systems"

@@ -1,0 +1,136 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/shot_on_red' %>
+  <%= stylesheet_link_tag 'imageflow' %>
+
+
+  <script src="/javascripts/imageflow.js" type="text/javascript" ></script>
+
+
+  <% end %>
+  <% content_for(:heading) do %>
+  <h1>SHOT ON RED</h1>
+  <% end %>
+
+
+  <div class="content-block ">
+    <p>These images are best viewed through a web browser supporting Color Management such as Safari with Apple’s integrated Color Sync. Use a gamma of 2.2 and color profile of Adobe 1998.</p>
+    <div id="myImageFlow" class="imageflow">
+      <%= 
+      html = []
+      (0..10).to_a.each do |i|
+        html << image_tag("/images/pages/shot-on-red/shot_on_red_thumb#{i}.jpg", :alt => "Shot On Red", :size => "210x85", :id => "img#{i}")
+      end
+      html
+      %>
+    </div>
+    <div class="clear"></div>
+    <div class="text-content">
+      <%
+      content_list = [
+        {:name => "Crossing The Line", :director => "Peter Jackson", :writer => "Peter Jackson",  :starring => "", :genre => "", :trailer => "", :discription => "Shot on RED ONE alpha prototypes \"Boris\" and \"Natasha\". Shot in 4K REDCODE RAW and recorded to RED DRIVE. Only the RUN/STOP feature was enabled."},
+        {:name => "Knowing", :director => "Alex Proyas", :writer => "", :starring => "Nicolas Cage", :dp => "Simon Duggan", :release_date => "2009", :genre => "Drama",  :trailer => "http://www.apple.com/trailers/independent/knowing/", :discription => ""},
+        {:name => "CHE", :director => "Steven Soderbergh", :writer => "Peter Buchman", :starring => "Benicio Del Toro", :db => "Peter Andrews", :release_date => "2008 (USA)", :genre => "Biography / Drama", :trailer => "http://www.apple.com/trailers/independent/che/", :discription => "Now In Theatres"},
+        {:name => "Jumper", :director => "Doug Liman", :writer => "David S. Goyer and Jim Uhls and Simon Kinberg and Steven Gould (novel)", :starring => "Hayden Christensen", :dp => "Barry F Peterson", :release_date => "FEB 14, 2008", :genre => "Adventure / Drama / Sci-Fi / Thriller", :trailer => "http://www.apple.com/trailers/fox/jumper/", :discription => ""},
+        {:name => "Labor Pains", :director => "Lara Shapiro", :writer => "Stacey Kramer and Lara Shapiro", :starring => "Lindsay Lohan", :dp => "Daniel Stoloff", :release_date => "2009", :genre => "Comedy", :trailer => "", :discription => ""},
+        {:name => "Game", :director => "Mark Neveldine and Brian Taylor", :writer => "Mark Neveldine and Brian Taylor", :starring => "Gerard Butler", :dp => "Ekkehart Pollack", :release_date => "2009", :genre => "Thriller", :trailer => "", :discription => ""},
+        {:name => "Leverage", :director => "Dean Devlin", :writer => "", :starring => "Timothy Hutton | Gina Bellman ", :dp => "", :release_date => "", :genre => "Drama", :trailer => "http://www.tnt.tv/series/leverage", :discription => ""},
+        {:name => "Angels & Demons (RED ONE used for VFX shots)", :director => "Ron Howard", :writer => "Dan Brown and Akiva Goldsman", :starring => "Tom Hanks", :dp => "Salvatore Totino", :release_date => "2009", :genre => "Thriller", :trailer => "", :discription => ""},
+        {:name => "Sanctuary", :director => "Martin Wood", :writer => "Damian Kindler", :starring => "Amanda Tapping | Robin Dunne ", :dp => "David Geddes", :release_date => "", :genre => "Sci-Fi", :trailer => "http://www.scifi.com/sanctuary", :discription => ""},
+        {:name => "The Informant", :director => "Steven Soderbergh", :writer => "Scott Burns and Kurt Eichenwald", :starring => "Matt Damon", :dp => "Peter Andrews", :release_date => "2009", :genre => "Thriller", :trailer => "", :discription => ""},
+        {:name => "Achchamundu! Achchamundu!", :director => "Arun Vaidyanathan", :writer => "Arun Vaidyanathan", :starring => "John Shea | Prasanna | Sneha", :dp => "", :release_date => "2008", :genre => "Thriller", :trailer => "http://www.aathemovie.com/", :discription => ""} 
+        
+      ]
+      %>
+      <div id="description-outer">
+        <% content_list.each_with_index do |value, index| %>
+        <div id="description<%= index %>" class="descriptions" style="display: none;">
+          <% if index == 0 %>
+          <strong>Director : </strong> Peter Jackson<br/>
+          <strong>Writer : </strong>Peter Jackson<br/>
+          <strong>Trailer : </strong> Download <a href="http://torrents.red.com:6969/torrents/crossing1.mov.torrent">.Torrent</a> | Download <a href="http://red.cachefly.net/video/crossing1.mov">HTTP</a> <br/>
+          <p>Shot on RED ONE alpha prototypes “Boris” and “Natasha”. Shot in 4K REDCODE RAW and recorded to RED DRIVE. Only the RUN/STOP feature was enabled.</p>
+
+          <% else %>
+
+          <% if value[:name] == "CHE" %>
+          <strong style="margin-left: 25px; font-size: 15px; width: 180px;">Now In Theatres</strong><br />
+          <% end %>
+
+          <% if !value[:name].blank? %>
+          <strong>Name :</strong><%= value[:name] %><br />
+          <% end %>
+
+          <% if !value[:director].blank? %>
+          <strong>Director :</strong><%= value[:director] %><br />
+          <% end %>
+
+          <% if !value[:writer].blank? %>
+          <strong>Writers :</strong><%= value[:writer] %><br />
+          <% end %>
+
+          <% if !value[:starring].blank? %>
+          <strong>Starring :</strong><%= value[:starring] %><br />
+          <% end %>
+
+          <% if !value[:dp].blank? %>
+          <strong>DP : </strong><%= value[:dp] %><br />
+          <% end %>
+
+          <% if !value[:release_date].blank? %>
+          <strong>Release Date :</strong><%= value[:release_date] %><br />
+          <% end %>
+
+          <% if !value[:genre].blank? %>
+          <strong>Genre :</strong><%= value[:genre] %><br />
+          <% end %>
+
+          <% if !value[:trailer].blank? %>
+          <strong>Trailer :</strong><a href="<%= value[:trailer] %>"><%= value[:trailer] %></a>
+          <% end %>
+          
+          <% if value[:name] == "Achchamundu! Achchamundu!" %>
+          <div style="float: right; margin-top: -110px; z-index: 100000;">
+            <a href="/indie/achchamundu/?1"><img src="/images/pages/indie/a-1-m.jpg"/></a>
+            <a href="/indie/achchamundu/?2"><img src="/images/pages/indie/a-2-m.jpg"/></a>
+            <a href="/indie/achchamundu/?3"><img src="/images/pages/indie/a-3-m.jpg"/></a>
+          </div>
+          <% end %>
+
+          <% end %>
+
+        </div>
+        <% end %>
+
+      </div>
+      <!-- end .text-content -->
+    </div>  
+    <div  class="clear"></div>
+    <h2 id="h22" class="h22">CROSSING THE LINE<span class="font12">Directed by Peter Jackson</span></h2>
+    <div id="myImageFlow1" class="imageflow">
+      <%= 
+      html = []
+      (101..105).to_a.each do |i|
+        html << image_tag("/images/pages/shot-on-red/crossing_the_line#{i}.jpg", :alt => "Shot On Red", :size => "210x85", :id => "img#{i}")
+      end
+      html
+      %>
+    </div>
+    <div  class="clear"></div>
+
+    <div id="description-outer1">
+      <p>ALL SHOTS RECORDED WITH RED-ONE ALPHA PROTOTYPES “BORIS” AND “NATASHA”<br/><span class="font12">Extracted from “Crossing The Line”, directed by Peter Jackson</span></p>
+        <p align="right"><a href="/skin/img/gallery-still/012916.jpg">Download Still</a></p>
+        <p align="right">Download the Trailer: <a href="http://torrents.red.com:6969/torrents/crossing1.mov.torrent">.Torrent</a> | <a href="http://red.cachefly.net/video/crossing1.mov">HTTP</a></p>
+      </div>
+      <div  class="clear"></div>
+      <div class="transparent-50" id="help_torrent">
+        <h3>You don’t already have BitTorrent? </h3>
+        <ul>
+          <li>For Mac OS X we recommend using the free, lighweight <a href="http://transmission.m0k.org">Transmission</a> BitTorrent client.</li>
+          <li>For Windows we recommend the efficient, lightweight <a href="http://www.utorrent.com/download.php">μTorrent</a> client.</li>
+          <li>Just open the .TORRENT file you downloaded from this page with your BitTorrent client will start loading the source file automatically.</li>
+          <li>For more information about BitTorrent and how it works, see: <a href="http://answers.com/bittorrent">answers.com/BitTorrent</a> .</li>
+        </ul>
+      </div>
+      <!-- end .content-block -->
+    </div>

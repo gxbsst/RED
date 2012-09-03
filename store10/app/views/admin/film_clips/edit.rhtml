@@ -1,0 +1,104 @@
+<style type="text/css" media="screen">
+  form p {
+    float: left;
+    width: 50%;
+  }
+  form p.columns_2 {
+    float: none;
+    width: auto;
+    clear: both;
+  }
+</style>
+
+<div id="left">
+  <h1>Edit Film Clip</h1>
+  <ul class="navigation secondary">
+    <li><%= link_to 'Back to list', :action => 'index' %></li>
+  </ul>
+  
+  <% form_for :film_clip, :url => { :action => 'update', :id => @film_clip }, :html => { :multipart => true } do |form| %>
+  <% form.with_options(:class => 'textInput') do |f| %>
+    <p class="columns_2">
+      <label for="film_clip_title">Title</label>
+      <%= f.text_field :title, :size => '50' %>
+    </p>
+    <p>
+      <label for="film_clip_studio">Studio</label>
+      <%= f.text_field :studio %>
+    </p>
+    <p>
+      <label for="film_clip_producer">Producer</label>
+      <%= f.text_field :producer %>
+    </p>
+    <p>
+      <label for="film_clip_director">Director</label>
+      <%= f.text_field :director %>
+    </p>
+    <p>
+      <label for="film_clip_dp">DP</label>
+      <%= f.text_field :dp %>
+    </p>
+    <p>
+      <label for="film_clip_camera_sn">RED Cameras Serial</label>
+      <%= f.text_field :camera_sn %>
+    </p>
+    <p>
+      <label for="film_clip_lenses_used">Lenses Used</label>
+      <%= f.text_field :producer %>
+    </p>
+    <p>
+      <label for="film_clip_film_type">Type</label>
+      <%= f.select :film_type, FilmClip::FILM_TYPES, {}, :class => 'select' %>
+      <br /><br />
+    </p>
+    <p>
+      <label for="film_clip_release_date">Release Date</label>
+      <%= f.text_field :release_date %>
+    </p>
+    <p class="columns_2">
+      <label for="film_clip_summary">Summary</label>
+      <%= form.text_area :summary, :class => 'textArea', :rows => 5, :cols => 70 %>
+    </p>
+    <p>
+      <label for="film_clip_website_url">URL of Website</label>
+      <%= f.text_field :website_url %>
+    </p>
+    <p>
+      <label for="film_clip_trailer">URL of Trailer</label>
+      <%= f.text_field :trailer_url %>
+    </p>
+    <p>
+      <label for="film_clip_actual_footage_url">URL of Actual Footage</label>
+      <%= f.text_field :actual_footage_url %>
+    </p>
+    <p class="columns_2">
+      <label>
+        <%= form.check_box :authorized %>
+        Authorize this film clip and show on page?
+      </label>
+    </p>
+    <p class="columns_2">
+      <label>
+        <%= form.check_box :sticked %>
+        Stick this film on top of list page?
+      </label>
+    </p>
+    <p class="columns_2">
+      <label for="film_clip_thumbnail">Image for Preview</label>
+      <%= form.file_field :thumbnail %><br />
+      <%= image_tag @film_clip.thumbnail.url(:small) %>
+    </p>
+    
+    <div class="clear"></div>
+    <p class="columns_2">
+      <%= submit_tag 'Submit', :class => 'button hundredfifty' %>
+    </p>
+  <% end %><% end %>
+</div>
+
+<div id="right">
+  <h2>Delete Film Clip</h2>
+  <%= link_to 'Delete', { :action => 'destroy', :id => @film_clip }, :class => 'button hundredfifty' %>
+</div>
+
+<div class="clear"></div>

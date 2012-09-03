@@ -1,0 +1,4 @@
+#content { margin: 0px 10px -70px 170px; position: relative; top: -70px; }
+	#content h1 { font-size: 2em; border-bottom: 3px solid #666; color: #FFF; height: 2em; line-height: 2em; }
+	#content div.content { margin: 10px 20px; }
+		#content div.content h2 { font-size: 1.5em; color: #FFF; text-transform: uppercase; }

@@ -1,0 +1,15 @@
+#content {
+/*	background: #000;*/
+}
+#hero {
+	text-align: center;
+	margin-top: -2px;
+}
+
+#toolbar{text-align:right; list-style-type: none; margin-right:40px;padding:0;height:34px; margin: 0 11px 0 0 ;}
+#toolbar  li{display:inline;}
+#toolbar li a{outline-style:none;outline-width:medium;display:block;font-size:14px;float:right; padding:8px 14px;text-decoration:none;background:#000; margin:0;}
+#toolbar li.active a, #toolbar li a:hover{background: #8F0000; text-decoration:none;color:#FFF;}
+#description {
+	margin-left: 10px;
+}

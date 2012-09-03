@@ -1,0 +1,59 @@
+<tr id="package_<%= product_package.id %>">
+	<th>
+		<%= quantity_tag product_package %>
+		<%= product_package.name %>
+		<%= product_package.additional_html unless product_package.additional_html.blank? %>
+	</th>
+	<td class="price_column" id="subtotal_pcakge_<%= product_package.id %>">$0</td>
+</tr>
+<tr class="product_pack_cell">
+	<td colspan="2">
+		<ul class="inner_products" id="sub_package_<%= product_package.id %>" style="display: none;">
+		<%
+		@rods = { :stainless => [], :cf => [] }
+		
+		product_package.product_package_nodes.each do |node|
+			
+			# "Stainless Steel Rods" & "Carbon Fiber Rods" use another layout
+			#   in which different size will be shrinked in one column.
+			if node.product.name.downcase =~ /steel/
+				@rods[:stainless] << node
+				next
+			elsif node.product.name.downcase =~ /c\.f\./
+				@rods[:cf] << node
+				next
+			end
+		%>
+			<li>
+				<%=
+					@image = node.product.images.first
+					"<span class=\"product_thumb\" style=\"background-image:url(#{url_for_file_column 'image', 'path', 'thumb'})\"></span>"
+				%>
+				<strong><%= node.product.name %></strong>
+				<br />
+				<%= number_to_currency node.product.price %>
+				<br />
+				<%= quantity_tag node, :class => "product_in_package", :force => "dropdown" %>
+			</li>
+		<% end %>
+		
+		<% @rods.each_value do |ary|; next if ary.empty? # Special layout for Rods %>
+			<li class="special_rods">
+				<%= @image = ary.first.product.images.first; "<span class=\"product_thumb\" style=\"background-image:url(#{url_for_file_column 'image', 'path', 'thumb'})\"></span>" %>
+				<strong><%= ary.first.product.name.gsub(/\s\d+\-[a-zA-Z]+/, " ") %></strong>
+				
+				<% ary.each do |node| %>
+				<span class="rod">
+					<%=
+					node.product.name =~ /(\d+)/
+					$1 + " \" @ #{number_to_currency node.product.price}"
+					%>
+					<br />
+					<%= quantity_tag node %>
+				</span>
+				<% end %>
+			</li>
+		<% end %>
+		</ul>
+	</td>
+</tr>

@@ -1,0 +1,30 @@
+<style type="text/css" media="screen">
+tr th{text-align: left; width: 160px;}
+.invoice tr th{ width: 100px;}
+table  {border-collapse: separate; padding: 0 margin:0; }
+table tr td, table tr th{ padding: 5px 10px; font-size: 9pt; }
+ tr th{ background: #f7f7f7; text-align:right;  }
+ tr td{  background: #f7f7f7;}
+tr td{background: #f7f7f7; text-align: left; }
+
+</style>
+
+
+<table class="invoice" width="100%">
+  <tr class="invoice_tr1"><th>ID: </th><td><%= @log.id  %></td></tr>
+  <tr><th>Account Num: </th><td><%= @log.account_num %></td></tr>
+  <tr class="invoice_tr1"><th>Description: </th><td><%= @log.description %></td></tr>
+  <tr class="invoice_tr2"><th>IP: </th><td><%= @log.remote_ip %></td></tr>
+  <tr class="invoice_tr3"><th>Location: </th><td><%= @log.remote_location %></td></tr>
+  <tr class="invoice_tr4"><th>Path: </th><td><%= @log.path  %></td></tr>
+  <tr class="invoice_tr5"><th>User Agent: </th><td><%= @log.user_agent %></td></tr>  
+  <tr class="invoice_tr5"><th>Created At: </th><td><%= @log.created_at %></td></tr>          
+  <tr class="invoice_tr5"><th>Updated At: </th><td><%= @log.updated_at %></td></tr>          
+          
+</table> 
+
+<div>
+  <form align="center">
+    <input type="button" value="Close Window" onClick="window.close()">
+  </form>
+</div>

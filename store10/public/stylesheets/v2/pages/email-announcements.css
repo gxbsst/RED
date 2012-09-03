@@ -1,0 +1,23 @@
+.text-content {
+	font-size: 110%;
+	background: transparent url(/images/pages/email-announcements/background.png) no-repeat 500px 100px;
+}
+	.text-content label {
+		font-size: 110%;
+		display: block;
+		margin: 5px 0;
+	}
+		.radio-group {
+			clear: both;
+			width: 500px;
+		}
+		.radio-group label {
+			float: left;
+			width: 200px;
+		}
+		.subscript {
+			width: 410px;
+		}
+		.text-input {
+			width: 400px;
+		}

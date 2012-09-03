@@ -1,0 +1,17 @@
+doc.findListCustomers :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/Customers" do
+  doc.DocumentContext do
+    doc.MessageId UUID.random_create.to_s
+    doc.SourceEndpointUser 'red.local\rdcwebservice'
+    doc.SourceEndpoint "RedDotCom"
+    doc.DestinationEndpoint "AxRED"
+  end
+  doc.QueryCriteria :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/QueryCriteria" do
+    doc.CriteriaElement do
+      doc.DataSourceName "CustTable_1"
+      doc.FieldName "ModifiedDate"
+      doc.Operator @operator
+      doc.Value1 @value1
+      doc.Value2 @value2
+    end
+  end
+end

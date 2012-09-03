@@ -1,0 +1,107 @@
+#wraper {
+  background: transparent url(/skin/img/china_event/banner_china.png) no-repeat center 70px;
+}
+#content {
+  margin-top: 310px;
+}
+form {
+  font-size: 11pt;
+  width: 730px;
+  margin: 0 auto;
+  position: relative;
+  line-height: 11pt;
+}
+#language_selector {
+  position: absolute;
+  right: 0;
+  top: 1em;
+  font-size: 9pt;
+}
+#language_selector a {
+  text-decoration: none;
+}
+#language_selector a:hover {
+  text-decoration: underline;
+}
+h3 {
+  color: #FFF;
+  font-size: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+label, .input_field, .check_boxes {
+  margin: 0.5em auto;
+}
+label {
+  color: #FFF;
+  display: block;
+  width: 40%;
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  clear: both;
+}
+label em {
+  color: #F00;
+  margin-right: 0.2em;
+  font-family: monospace;
+  font-size: 130%;
+}
+.fields {
+  border-top: 1px solid #FFF;
+  padding: 1em 0;
+  zoom: 1;
+}
+.input_field {
+  display: block;
+  float: left;
+  width: 20em;
+  font-size: 11pt;
+}
+textarea.input_field {
+  height: 5em;
+  padding: 2px;
+}
+.clear {
+  clear: both;
+}
+#subscript {
+  clear: both;
+  text-align: center;
+  padding-top: 2em;
+}
+#buttons {
+  text-align: center;
+}
+#buttons input {
+  background-color: #333;
+  color: #FFF;
+  border-width: 1px;
+  padding: 0.5em 2em;
+}
+.check_boxes span {
+  display: block;
+  width: 18%;
+  float: left;
+}
+
+#flash {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 46%;
+  padding: 0 2%;
+  background-color: #333;
+  border: 1px solid #111;
+  color: #FFF;
+}
+#flath h2 {
+  font-size: 11pt;
+}
+em {
+  color: #910000;
+  font-style: normal;
+}
+#subscript a {
+  color: #910000;
+}

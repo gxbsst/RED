@@ -1,0 +1,17 @@
+<style type="text/css">
+  label { display: block; float: left; width: 200px; }
+  br { clear: both; }
+</style>
+
+<% unless @user.nil? || @user.errors.empty? %>
+<ul id="errors">
+  <%= @user.errors.collect{ |attr, msg| "<li>#{attr.to_s.titleize}: #{msg}</li>" }.join("\n") %>
+</ul>
+<% end %>
+
+<%= form_tag %>
+<label for="user_name">Name:</label><%= text_field 'user', 'name' %><br />
+<label for="user_email_address">Email:</label><%= text_field 'user', 'email_address' %><br />
+<label for="user_erp_account_number">ERP Account Number:</label><%= text_field 'user', 'erp_account_number' %><br />
+  <%= submit_tag 'Submit' %>
+<%= end_form_tag %>

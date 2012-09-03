@@ -1,0 +1,159 @@
+#!/usr/bin/ruby
+
+case
+when ARGV[0].nil?
+ puts "\n  Please specify process environment:"
+ puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+ exit 0
+when ARGV[1].nil?
+ puts "\n  Please specify order number:"
+ puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+ exit 0
+end
+
+
+ENV['RAILS_ENV'] = ARGV.shift
+RAILS_ROOT = File.dirname(__FILE__) + '/..'
+
+require RAILS_ROOT + '/config/environment' 
+
+begin
+  
+#Parse the XML
+def parse_response( response_body )
+  doc = Hpricot.XML( response_body )
+  orders = []
+
+  (doc/'SalesTableUpdate_1').each do |node|
+
+  istreet = (node/"InvoiceStreet").inner_text
+  icity = (node/"InvoiceCity").inner_text
+  istate = (node/"InvoiceState").inner_text
+  izip_code = (node/"InvoiceZipCodeId").inner_text
+  icounty = (node/"InvoiceCounty").inner_text
+  icountry = (node/"InvoiceCountry").inner_text
+  iname = (node/"InvoiceName").inner_text
+  iaddress = (node/"InvoiceAddress").inner_text
+  icountry_region_id = (node/"InvoiceCountryRegionId").inner_text
+
+  dstreet = (node/"DeliveryStreet").inner_text
+  dcity = (node/"DeliveryCity").inner_text
+  dstate = (node/"DeliveryState").inner_text
+  dzip_code = (node/"DeliveryZipCodeId").inner_text
+  dcounty = (node/"DeliveryCounty").inner_text
+  dcountry = (node/"DeliveryCountry").inner_text
+  dcountry_region_id = (node/"DeliveryCountryRegionId").inner_text
+  dname = (node/"DeliveryName").inner_text
+  daddress = (node/"DeliveryAddress").inner_text
+
+  invoice_address = { :icountry_region_id => icountry_region_id, :icountry => icountry, :istreet => istreet, :icity => icity, :istate => istate, :izip_code => izip_code,  :icounty => icounty, :iname => iname, :iaddress => iaddress }
+
+  delivery_address = { :dcountry_region_id => dcountry_region_id, :dcountry => dcountry, :dstreet => dstreet, :dcity => dcity, :dstate => dstate, :dzip_code => dzip_code,  :dcounty => dcounty, :dname => dname, :daddress => daddress }
+
+  lines = []
+
+  (node/'SalesLineUpdate_1').each do |line|
+  item_id = (line/'ItemId').inner_text
+  revision = (line/'Revision').inner_text
+  sales_id = (line/'SalesId').inner_text
+  sales_qty = (line/'SalesQty').inner_text
+  sales_unit =(line/'SalesUnit').inner_text
+
+  name  = ERP::Item.find_by_item_id(item_id).name
+  price = ERP::Item.find_by_item_id(item_id).price
+
+  lines << { :price => price, :name => name, :item_id => item_id, :revision => revision, :sales_id => sales_id,  :sales_qty => sales_qty, :sales_unit => sales_unit }
+  end
+
+  sales_id  = (node.at('SalesId')).inner_text
+
+  orders << { :sales_id => sales_id, :invoice => invoice_address, :delivery => delivery_address, :lines => lines }
+  end
+
+  # sales_id = orders.first[:sales_id]
+  # customer =  ERP::SalesOrder.find_by_sales_id(sales_id).customer
+  # account_num = customer.account_num
+  # assigned_to =  (AppConfig.CUSTOMER_STAFF[customer.assigned_to] ? AppConfig.CUSTOMER_STAFF[customer.assigned_to] : 'bombsquad@red')
+  # assigned_to = 'bombsquad@red'
+  return { :orders => orders }
+  end
+  
+  # Get the line order update detail...
+  def get_update_details( account_num )
+    
+    # Get two last commit_order logs
+    last_commit_logs = MyAccountLog.find( :all, :conditions => ['account_num = ? and sales_order_num is ?', account_num , nil], :order => 'created_at DESC', :limit => 2 )
+    # commit_order_logs = MyAccountLog.find( :all, :conditions => ['account_num = ?', 'CU 0102182'], :order => 'created_at DESC' )
+    # commit_order_logs = MyAccountLog.find( :all, :conditions => ['account_num = ?', account_num ], :order => 'created_at DESC' )
+    
+    
+    first_log = last_commit_logs.first
+    last_log  = last_commit_logs.last
+    # last_commit_logs.select{|line| line.sales_order_num == nil}.size
+    # Get the sales line update record
+    sales_line_order_logs = MyAccountLog.find( :all, :conditions => [' created_at > ? and created_at < ? and sales_order_num is not ? and account_num = ? ', last_log.created_at, first_log.created_at, nil, account_num ] ).group_by(&:sales_order_num)
+    
+    # Filter the log about sales order
+    # sales_logs = logs.select{|line| line.action.include?('update_order_address()') || line.action.include?('delete_sales_line()') || line.action.include?('update_sales_line_qty()')}
+    
+    # sales_logs = logs.select{|line| line.account_num = 'CU 0102182'}
+    
+    return sales_line_order_logs
+  end
+
+  # erp_logs = []
+  # erp_logs << ERP::ERPLog.find(ARGV.shift)
+  
+  # erp_logs = ERP::ERPLog.find( :all, :conditions => ['id = ? AND email_sent = ?', ARGV.shift, false] )
+  # erp_logs = ERP::ERPLog.find( :all, :conditions => ['id = ? AND email_sent = ?', '113916', false] )
+
+  #erp_logs = ERP::ERPLog.find(:all, :conditions => ["service_url = ? and update_complete = ? and updated_at >= ?", AppConfig.SOAP_SO_UPDATE_SERV, false, 7.days.ago])
+erp_logs = []
+
+uuids = ['554f84c5-b1f2-43c8-9df6-542816de1fb5','b0a75bc7-0b88-4a1b-9eb1-e62befc838fa','a2551d04-289c-4172-b60f-689c7cd11387','eb2892d2-3b63-4bde-8246-91de605f29d1',
+'4e4a40aa-83e9-4c74-a96c-e4c3774ee053','7dfd915d-bdca-4621-a502-159dbe8fab3f','5a9cab72-91bf-425e-8921-a43b5d4c7a80','4f8a53e1-b82e-420c-8ce8-494b25f51a25','eff3bf24-506e-438e-9a9c-5fffc745dde7','31f74db6-b924-4b68-bea7-a9fcf3379c63','95874e10-1303-4b10-b63d-64e63a5b0d1f','989fc547-8c7b-4f55-8819-c6b1da068e8a','385162ec-f6eb-493f-9eff-dbb517c1947b','b93e92cd-e945-469e-8935-a63dbb28d3ad','ab06eef1-73ae-4179-b091-60df9b099cbd','b748b3bb-2e30-47f9-9087-782aad043397','874ffb1c-029c-4aa1-a1f0-2c4712385a68','a009411b-44e3-4616-a471-1dca0ba24074','8596d614-ba74-4a0a-a058-613939fe473f','00e535d0-a5ba-4af6-8530-017fa9fdeefe','ff83ac69-b925-4364-9102-85a171dfbc4c','08bd36f9-829d-4bb3-bf3a-9b8a0ba2586d','638ebe5e-7966-4b99-ba67-5b91a06eda2a','2e854095-c0ff-4de7-b3f8-c1002dee75de','f86d77ac-0ce2-4590-9d40-f8ad11e09b13','47065845-bbfd-4517-903d-8a4846bcf34f','b8842d6c-f305-434a-b3df-cd33214b3e2a','0d661b7e-c604-4835-bca4-18fd4667f43d','66c2af04-4539-4a36-adbd-a4dae4812e39','af325e40-3765-4fae-90f3-916ea01c699e','cabb3c7a-ed46-4f53-a58a-6da18ab02678','6b9a7758-43d7-4061-818b-5b6bdc2d9209','ed2e9352-38ec-4157-b061-c577e47bc568','4c5d54d3-d886-4b01-bd58-20adaca2ed37','ebb91bab-1582-4ca2-8e6a-e27058d26781','8fd5cb2f-028b-4abe-97ce-57f2a7625d1d','7dfa5a0a-d9f9-488d-8f1e-ecb89f930591','14155f86-c173-464b-8c3a-916a04c8476d','919dbdb9-0ec3-4c29-be3d-0b79f7163ac2']
+uuids.each do |uuid| 
+  unless ERP::ERPLog.find_by_uuid(uuid).nil?
+  erp_logs << ERP::ERPLog.find_by_uuid(uuid)
+  end
+end
+  #Send the mail
+  erp_logs.each do |erp_log|
+    # uuid = 'bf01e89d-a388-4090-b980-07f42c2947db'
+    # uuid = 'c95fb501-bb40-473e-8d52-43e8d0437d1e'
+    # uuid = '3b67955d-91bc-4220-a157-f4ce4ef15446'
+    # # uuid = '481777e6-629c-4952-9e46-46cffcdc4336'
+    # # uuid = 'a3ec684e-e8cb-4e7f-afae-316474053ee2'
+    # 
+    # erp_log = ERP::ERPLog.find_by_uuid(uuid)
+    # erp_log = ERP::ERPLog.find(113916)
+    
+    message = ErpOrder.query_err_msg( erp_log.uuid )
+    ax_error = (Hpricot.XML(message)/'Description').first.innerHTML
+    
+    response_body = erp_log.post_body
+    orders = parse_response(response_body)
+
+    sales_id = orders[:orders].first[:sales_id]
+    customer =  ERP::SalesOrder.find_by_sales_id(sales_id).customer
+    account_num = customer.account_num
+    updated_sales_lines = get_update_details( account_num )
+    assigned_to =  (AppConfig.CUSTOMER_STAFF[customer.assigned_to] ? AppConfig.CUSTOMER_STAFF[customer.assigned_to] : 'bombsquad@red')
+    uuid = erp_log.uuid
+    
+    orders = orders.merge!({:uuid => uuid }).merge!({:ax_error => ax_error}).merge!({:account_num => account_num }).merge!({ :assigned_to => assigned_to }) # Ask Jerry
+      
+      
+    # ERP::ERPMailer.deliver_need_update_orders(orders)
+    
+    if ERP::ERPMailer.deliver_need_test( orders, updated_sales_lines )
+      erp_log.update_attributes( :email_sent => true )
+    end
+  end
+  rescue NoMethodError
+    puts "Not Found: This log entry does not exist in #{ENV['RAILS_ENV']} environmnet."
+  rescue Exception => ex
+    raise ex
+  end
+
+

@@ -1,0 +1,95 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/cameras/scarlet/tech_specs' %>
+  <script type="text/javascript" src="/javascripts/highslide/highslide.js"></script>
+  <script type="text/javascript">
+     hs.graphicsDir = '/javascripts/highslide/graphics/';
+     hs.captionId = 'the-caption';
+     hs.outlineType = 'drop-shadow';
+     hs.showCredits = false;
+  </script>
+  <link href="/stylesheets/highslide.css" media="screen" rel="Stylesheet" type="text/css" />
+<% end %>
+
+<div id="tech_specs_content">
+  
+  <div class="inner" id="inner1">
+    <%= image_tag '/images/pages/cameras/scarlet/text_2_3.png', :alt => 'text_2_3' %>
+     <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/scarlet/gallery_1.jpg">
+        <img src="/images/pages/cameras/scarlet/gallery_thumb_1.jpg" class = "thumbs" alt="tech_specs_thumb_1" />
+    </a>
+    <table>
+      <tr><td>Mysterium-X</td></tr>
+      <tr><td>“Fly-by-Wire”</td></tr>
+      <tr><td>16:9, 2:1, 2.4:1</td></tr>
+      <tr><td>3K: 1-120fps, (150fps burst)</td></tr>
+      <tr><td>FF1080P: 1-30fps</td></tr>
+      <tr><td>Time Lapse, Ramping</td></tr>
+      <tr><td>REDCODE 42</td></tr>
+      <tr class="price"><td>$3,000	(Brain and Lens)</td></tr>
+      <tr class="price"><td>$3,750	(Complete Kit)</td></tr>
+    </table>
+  </div>
+  
+  <div class="inner">
+    <%= image_tag '/images/pages/cameras/scarlet/text_2_3_cinema.png', :alt => 'text_2_3_cinema' %>
+     <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/scarlet/gallery_2.jpg">
+        <img src="/images/pages/cameras/scarlet/gallery_thumb_2.jpg" class = "thumbs" alt="tech_specs_thumb_2" />
+    </a>    
+    <table>
+     <tr><td>Mysterium-X</td></tr>
+     <tr><td>16:9, 2:1, 2.4:1</td></tr>
+     <tr><td>3K: 1-120fps, (150fps burst)</td></tr>
+     <tr><td>FF1080P: 1-30fps</td></tr>
+     <tr><td>Time Lapse, Ramping</td></tr>
+     <tr><td>REDCODE 42</td></tr>
+     <tr class="price"><td>$2,500 (Brain Only)</td></tr>
+    </table>
+  </div>
+  
+  <div class="inner">
+    <%= image_tag 'pages/cameras/scarlet/text_s35.png', :alt => 'text_s35' %>
+     <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/scarlet/gallery_3.jpg">
+        <img src="/images/pages/cameras/scarlet/gallery_thumb_3.jpg" class = "thumbs" alt="tech_specs_thumb_3" />
+    </a>
+    <table>
+       <tr><td>Mysterium-X</td></tr>
+       <tr><td>16:9, 2:1, 2.4:1, Custom</td></tr>
+       <tr><td>5K: 1-30fps (72fps burst)</td></tr>
+       <tr><td>4K: 1-30fps</td></tr>
+       <tr><td>QuadHD: 1-30fps</td></tr>
+       <tr><td>2K:1-72fps</td></tr>
+       <tr><td>FF1080P: 1-30fps</td></tr>
+       <tr><td>Time Lapse, Ramping</td></tr>
+       <tr><td>REDCODE 80</td></tr>
+       <tr class="price"><td>$7,000 (Brain Only)</td></tr>
+    </table>
+  </div>
+  
+  <div class="inner">
+    <%= image_tag 'pages/cameras/scarlet/text_ff35.png', :alt => 'text_ff35' %>
+     <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/scarlet/gallery_4.jpg">
+        <img src="/images/pages/cameras/scarlet/gallery_thumb_4.jpg" class = "thumbs" alt="tech_specs_thumb_4" />
+    </a>
+    <table>
+     <tr><td>Mysterium Monstro</td></tr>
+     <tr><td>16:9, 3:2, 2:1, 2.4:1, Custom</td></tr>
+     <tr><td>6K: 1-30fps (72fps burst)</td></tr>
+     <tr><td>4K: 1-30fps</td></tr>
+     <tr><td>QuadHD: 1-30fps</td></tr>
+     <tr><td>2K:1-72fps</td></tr>
+     <tr><td>FF1080P: 1-30fps</td></tr>
+     <tr><td>Time Lapse, Ramping</td></tr>
+     <tr><td>REDCODE 100</td></tr>
+     <tr class="price"><td>$9,750 (Brain Only)</td></tr>
+    </table>
+  </div>
+  
+  <div class="clear" ></div>
+</div>
+
+<div class = "banner">
+  <%= image_tag 'pages/cameras/scarlet/hero.png', :alt => 'Tech Specs' %>
+</div>
+
+
+

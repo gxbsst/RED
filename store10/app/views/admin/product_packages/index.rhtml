@@ -1,0 +1,33 @@
+<div id="left">
+	<h1>Product Packages</h1>
+	<p class="subscript">
+		HINTS: Drag nodes to change their position.
+	</p>
+	<%= render :partial => "child_nodes", :object => @child_nodes %>
+</div>
+
+<div id="right">
+	<%= link_to "Create New Package", { :action => "create" }, :class => "button hundredfifty" %>
+	<div class="clear"></div>
+		
+	<h1>Configurations</h1>
+	<p class="info">
+		Example Configurations
+	</p>
+	<table cellspacing="0" cellpadding="0" class="list">
+		<tr>
+			<th>Name</th>
+		</tr>
+		
+		<% @configurations.each do |configuration| %>
+		<tr class="<%= alternate %>">
+			<td>
+				<%= link_to configuration.name, :action => "edit_configuration", :id => configuration.id %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	
+	<div class="clear"></div>
+	<%= link_to "Create Configuration", { :action => "edit_configuration" }, :style => "float: right;" %>
+</div>

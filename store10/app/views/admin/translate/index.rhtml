@@ -1,0 +1,35 @@
+<div id="left">
+  <h1>Welcome to RED Translator</h1>
+  <p>
+    You are now arriving RED Translator based on
+    <a href="http://www.yotabanana.com/hiki/ruby-gettext.html?ruby-gettext">
+    Ruby GetText Package</a>, with which you can manage all contents of entire
+    website for supporting internationalization.
+  </p>
+  
+  <h2>You can:</h2>
+  <ul>
+    <li>Check the entities and tasks in languages listed at right side</li>
+    <li><%= link_to 'Create new entity', :action => 'new' %></li>
+    <li><%= link_to 'Publish entities to website', :action => 'publish' %></li>
+  </ul>
+</div>
+
+<div id="right">
+  <h1>Languages</h1>
+  <p>
+    Check out translation entities in these languages:
+  </p>
+  <table cellspacing="0" cellpadding="0" class="list">
+    <tr>
+      <th>Name</th>
+    </tr>
+    <% @languages.each do |lang| %>
+    <tr class="<%= alternate %>">
+      <td><%= link_to lang.display_name, :action => "list", :lang => lang %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="clear"></div>

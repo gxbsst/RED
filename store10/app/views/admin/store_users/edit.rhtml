@@ -1,0 +1,30 @@
+<div id="left">
+  <h1><%=h @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/accounts/index">Back to Accounts</a></li>
+  </ul>
+  <%= start_form_tag :action => 'update', :id => @store_user %>
+
+  <div id="send_mail"></div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="store_user_field">
+    <%= render :partial => 'account' %>
+  </div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="floatHalf">
+    <%= link_to_remote 'Send password mail', {:update => 'send_mail', :url => {:action => 'reset_password', :id => @store_user.id}}, :class => 'action' %>
+  </div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="line">&nbsp;</div>
+  <%= submit_tag "Update", :class => 'button hundredfifty' %>
+  <div style="float:right;">
+    <%= link_to 'Delete This Account', {:action => 'destroy', :id => @store_user}, :confirm => 'Are you sure?', :class => 'button hundredfifty' %>
+  </div>
+  <%= end_form_tag %>
+</div>
+
+<div id="right">&nbsp;</div>
+<div class="clear">&nbsp;</div>

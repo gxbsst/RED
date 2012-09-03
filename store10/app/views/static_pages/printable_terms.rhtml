@@ -1,0 +1,10 @@
+<style type="text/css" media="all">
+  body {
+    font-family: "Lucida Grande", Arial;
+    font-size: 9pt;
+  }
+</style>
+<h1>
+  <%= h( @agreement.name ) %>
+</h1>
+<%= textile( @agreement.latest_version.content ) %>

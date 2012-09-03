@@ -1,0 +1,14 @@
+<% content_for(:head) do %>
+  <%= javascript_include_tag 'highslide/highslide' %>
+  <script type="text/javascript">
+    hs.graphicsDir = '/javascripts/highslide/graphics/';
+    hs.captionId = 'the-caption';
+    hs.outlineType = 'rounded-white';
+    hs.showCredits = false;
+  </script>
+  <%= stylesheet_link_tag 'highslide', 'v2/pages/cameras/overview' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('CAMERAS') %> / Scarlet</h1>
+<% end %>

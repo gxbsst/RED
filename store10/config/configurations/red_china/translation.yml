@@ -1,0 +1,98 @@
+simplified:
+  NOTICE_TITLE: 想让你了解
+  NOTICE_FAILED: 标红色*符号的为必填的项，否则我们将收不到您提交的信息！
+  NOTICE_SUCCESS: 您的信息已经成功提交，感谢您的参与，我们会及时与您联系。
+  TITLE: 中国 RED ONE 样机演示活动
+  DESCRIPTION: "对很多错过了今年6月份，RED ONE在北京，上海，香港做演示活动的朋友们，这将是一个好消息，RED公司决定在国庆后会发送一台RED ONE长留在中国，方便更多的中国客户了解RED ONE。如果您已经迫不及待地想早日看到样机的演示，请认真填写以下信息：\n\n_请注意，标红色*符号的为必填的项，否则我们将收不到您提交的信息！_"
+  NAME: 姓名
+  EMAIL: Email 地址
+  MOBILE_PHONE: 移动电话
+  FIXED_PHONE: 固定电话
+  COMPANY_NAME: 公司名称
+  CITY: 城镇或城市
+  PROVINCE: 县/郡、 州、省 或地区
+  POSTCODE: 邮政编码
+  ADDRESS: 详细地址
+  WEBSITE: 公司网站
+  BUSINESS: 请选择您的经营范围（可多选）
+  MOVIE: 电影
+  TELEVISION: 电视
+  ADVERTISEMENT: 广告
+  DOCUMENTARY: 纪录片
+  DISTRIBUTOR: 经销商
+  EXHIBITION: 展商
+  OTHERS: 其他
+  CAMERA_TYPE: 您现阶段使用的摄像机及型号
+  SERIAL_NUMBER: 摄像机序列号（限 RED ONE&trade; 用户）
+  PURPOSE: 您对 RED ONE&trade; 产生兴趣的原因
+  PARTICIPANT_NAMES: 陪同您一起看样机的人员
+  AVAILABLE_TIME: 您一般什么时候有时间
+  SUBSCRIPT: 您填写的个人信息只用于我们和您联系，RED不会将客户信息公开或出售给第三方
+  SUBMIT: 提交
+  CLOSE: 关闭
+
+traditional:
+  NOTICE_TITLE: 想讓你了解...
+  NOTICE_FAILED: 您的信息提交失敗，請注意標紅色*號的域為必填項目！
+  NOTICE_SUCCESS: 您的信息已經成功提交，感謝您的參與，我們會及時與您聯繫
+  CLOSE: 關閉
+  TITLE: 中國RED ONE樣機演示活動
+  DESCRIPTION: "對很多錯過了今年6月份，RED OEN在北京，上海，香港做演示活動的朋友們，這將是一個好消息，RED公司決定在國慶後會發送一台RED ONE長留在中國，方便更多的中國客戶了解RED ONE。如果您已經迫不及待地想早日看到樣機的演示，請認真填寫以下信息：\n\n_請注意，標紅色*符號的為必填的項，否則我們將收不到您提交的信息！_"
+  NAME: 姓名
+  EMAIL: Email 地址
+  MOBILE_PHONE: 移動電話
+  FIXED_PHONE: 固定電話
+  COMPANY_NAME: 公司名稱
+  CITY: 城鎮或城市
+  PROVINCE: 縣/郡、 州、省 或地區
+  POSTCODE: 郵政編碼
+  ADDRESS: 詳細地址
+  WEBSITE: 公司網址
+  BUSINESS: 請選擇您的經營範圍 (可多選)
+  MOVIE: 電影
+  TELEVISION: 電視
+  ADVERTISEMENT: 廣告
+  DOCUMENTARY: 紀錄片
+  DISTRIBUTOR: 經銷商
+  EXHIBITION: 展商
+  OTHERS: 其他
+  CAMERA_TYPE: 您現階段使用的攝像機及型號
+  SERIAL_NUMBER: 攝像機序列號 (限RED ONE 用戶) 
+  PURPOSE: 您對RED ONE產生興趣的原因  
+  PARTICIPANT_NAMES: 陪同您一起看樣機的人員
+  AVAILABLE_TIME: 您一般甚麼時候有時間
+  SUBSCRIPT: 您填寫的個人信息只用於我們和您聯繫，RED不會將客戶信息發佈或出售給第三方
+  SUBMIT: 提交
+
+english:
+  NOTICE_TITLE: Want you know...
+  NOTICE_FAILED: The red mark must be entered or we cannot get your information!
+  NOTICE_SUCCESS: Your information has already succeeded to submit, thank you and we will contact you as soon as possible.
+  CLOSE: Close
+  TITLE: RED ONE Show in China
+  DESCRIPTION: "For those who missed the chance to see RED ONE in China this summer, we've got great news. We've sent an official RED ONE demo camera to China and will be available to visit many cities throughout greater China. If you are interested in seeing RED ONE with your own eyes, please fill in the form below.\n\n_Notice: Fields with red * are required!_"
+  NAME: Name
+  EMAIL: Email
+  MOBILE_PHONE: Mobile Phone
+  FIXED_PHONE: Fixed Phone
+  COMPANY_NAME: Company Name
+  CITY: Town/City
+  PROVINCE: County/State/Province/District
+  POSTCODE: Postcode
+  ADDRESS: Address
+  WEBSITE: Company Website
+  BUSINESS: Scope of Business
+  MOVIE: Movie
+  TELEVISION: Television
+  ADVERTISEMENT: Advertisement
+  DOCUMENTARY: Documentary
+  DISTRIBUTOR: Distributor
+  EXHIBITION: Exhibition
+  OTHERS: Others
+  CAMERA_TYPE: Model of Camera You Are Using
+  SERIAL_NUMBER: "Your RED ONE Serial No. <br />(if you've already reserved or purchased)"
+  PURPOSE: What got you interested in RED ONE?
+  PARTICIPANT_NAMES: Will any other colleagues or associates be accompanying you?
+  AVAILABLE_TIME: When will you be available?
+  SUBSCRIPT: "RED will never sell any information about you to anyone (<a href=\"/legal\">privacy policy</a>)"
+  SUBMIT: Submit

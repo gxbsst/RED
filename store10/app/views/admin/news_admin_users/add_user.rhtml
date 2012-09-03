@@ -1,0 +1,14 @@
+<div id="add_user_outer">
+  
+
+<p> <%= error_messages_for 'user' %> </p>
+<% @pagetile ="Login " %>
+<%= form_tag %>
+<p><label class ="username">username:</label><%= text_field("news_admin_users","name")  %></p>
+<p><label class ="username">password:</label><%= password_field("news_admin_users","password")  %></p>
+<p><label class ="username">confirm_password:</label> <%= password_field('news_admin_users','password_confirmation' ) %></p>
+<p id="submit_out">
+    <input type="submit" value="Add User" >
+    </p>
+<%= end_form_tag %>
+  </div>

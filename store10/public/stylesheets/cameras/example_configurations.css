@@ -1,0 +1,42 @@
+#sub_navigation ul li a.example_conf {
+  background: #000;
+}
+.configuration {
+  float: left;
+  width: 283px;
+  margin: 10px;
+  color: #FFF;
+}
+#content .configuration p {
+  margin: 0.5em auto;
+  height: 2em;
+}
+.configuration h2 {
+  font-weight: bold;
+  border-bottom: 2px solid #222;
+  padding: 0 2px;
+  text-transform: uppercase;
+}
+.configuration h3 {
+  padding: 5px;
+  font-size: 10pt;
+  background-color: #222;
+  margin: 2px 0;
+}
+.configuration dl {
+  background-color: #222;
+  padding: 5px;
+  height: 435px;
+  line-height: 2em;
+  margin: 0;
+}
+.configuration dt {
+  float: left;
+  clear: left;
+  width: 200px;
+}
+.configuration dd {
+  float: right;
+  clear: right;
+  margin: 0;
+}

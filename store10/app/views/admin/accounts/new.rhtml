@@ -1,0 +1,22 @@
+<div id="left">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><a href="/admin/accounts/index">Back to Accounts</a></li>
+  </ul>
+
+  <%= start_form_tag :action => 'create' %>
+  <div class="store_user_field">
+    <%= render :partial => 'account' %>
+    <div class="floatHalf">
+      <p><%= check_box_tag 'generate_password_mail', value = '1', checked = false %>&nbsp;Generate password and send email?</p>
+    </div><div class='clear'>&nbsp;</div>
+  </div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="line">&nbsp;</div>
+  <%= submit_tag "Save New Account", :class => 'button hundredfifty' %>
+  <%= end_form_tag %>
+
+</div>
+<div id="right">&nbsp;</div>
+<div class="clear">&nbsp;</div>

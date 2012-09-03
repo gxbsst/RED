@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+      body {
+        font-family: "Lucida Grande",Geneva,Arial,Verdana,sans-serif;
+        font-size: 9pt;
+      }
+      table {
+        background-color: #DDD;
+        text-align: center;
+      }
+      table th { 
+        background-color: #5C5C5C;
+        border-top: 7px solid #424242;
+        color: #FFF;
+        height: 30px;
+      }
+      table td {
+        background-color: #FFF;
+        height: 20px;
+      }
+      table th.th1 {
+        width: 180px;
+      }
+      table tr td.td1 {
+        font-weight: bold;
+        text-align: left;
+      }
+      table tr td.td2 {
+        text-align: right;
+      }
+      table tr.color1 td {
+        background-color: #F0FDE9;
+      }
+      table tr.color2 td {
+        background-color: #FFFFCF;
+      }
+      table tr.color3 td {
+        background-color: #E6F4F5;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <table cellspacing="1" cellpadding="5" width="960">
+      
+      <!-- Table Head -->
+      <tr>
+        <th class="th1"/>
+        <% @weekly.each do |day| %>
+          <th><%= "#{day.strftime('%m-%d')} #{day.strftime('%a')}" %></th>
+        <% end %>
+        <th>SUM</th>
+      </tr>
+      <!-- Table Head End -->
+      
+      <%
+      web_orders = @orders.collect {|o| o.size }
+      total_web_orders = web_orders.inject(0) {|sum, i| sum + i }
+      
+      ax_orders = @orders.collect {|ax| (ax.select {|o| !o.erp_order_number.blank?}).size }
+      total_ax_orders = ax_orders.inject(0) {|sum, i| sum + i }
+			
+			fraud_orders = @orders.collect {|fd| (fd.select {|o| o.order_status_code_id == 15}).size }
+			total_fraud_orders = fraud_orders.inject(0) {|sum, i| sum + i }
+      %>
+      <tr class="color1">
+        <td class="td1">Total Orders</td>
+        <% web_orders.each do |orders| %>
+          <td><%= orders %></td>
+        <% end %>
+        <td><%= total_web_orders %></td>
+      </tr>
+      
+      <tr class="color1">
+        <td class="td1">AX Sales Orders Record</td>
+        <% ax_orders.each do |orders| %>
+          <td><%= orders %></td>
+        <% end %>
+        <td><%= total_ax_orders %></td>
+      </tr>
+			
+			<tr class="color1">
+        <td class="td1">Fraud Orders</td>
+        <% fraud_orders.each do |orders| %>
+          <td><%= orders %></td>
+        <% end %>
+        <td><%= total_fraud_orders %></td>
+      </tr>
+      
+      <tr class="color1">
+        <td class="td1">Variance</td>
+        <% web_orders.each_index do |i| %>
+          <td><%= web_orders[i] - ax_orders[i] - fraud_orders[i] %></td>
+        <% end %>
+        <td><%= total_web_orders - total_ax_orders - total_fraud_orders %></td>
+      </tr>
+      
+      
+         <tr>
+            <td colspan="9"/>
+          </tr>
+      
+      
+      <!-- For erp_logs.... -->
+       <%
+       # For Sales Order Commit
+       # sales_order_commits = @my_account_logs.collect{ |o| o.select{ |l| l.action.include?'commit_orders()' }.size }
+       sales_order_commits = @erp_logs.collect{|o| o.select{|l| l.service_url == AppConfig.SOAP_SO_UPDATE_SERV }.size}
+       total_sales_order_commits = sales_order_commits.inject(0){ |sum, i| sum + i }
+        sales_order_commits_success = @erp_logs.collect{|o| o.select{|l| l.service_url == AppConfig.SOAP_SO_UPDATE_SERV && l.code == 200 }.size}
+       total_sales_order_commits_success = sales_order_commits_success.inject(0){ |sum, i| sum + i }
+
+
+       # For Address Commit
+       address_commits = @my_account_logs.collect{|o| o.select{ |l| l.action.include?('address_book()') || l.action.include?('profile()') || l.action.include?('contacts()')  }.size }
+       total_address_commits = address_commits.inject(0){ |sum, i| sum + i }
+
+       address_commits_success = @erp_logs.collect{|o| o.select{|l| l.service_url == AppConfig.SOAP_CU_UPDATE_SERV }.size}
+       total_address_commits_success = address_commits_success.inject(0){ |sum, i| sum + i }
+
+       %>
+
+       <tr class="color1">
+         <td class="td1">Web Change Order</td>
+         <% sales_order_commits.each do |orders| %>
+           <td><%= orders %></td>
+         <% end %>
+         <td><%= total_sales_order_commits %></td>
+       </tr>
+
+       <tr class="color1">
+         <td class="td1">AX Change Order</td>
+         <% sales_order_commits_success.each do |orders| %>
+           <td><%= orders %></td>
+         <% end %>
+         <td><%= total_sales_order_commits_success %></td>
+       </tr>
+
+       <tr class="color1">
+         <td class="td1">Variance</td>
+         <% sales_order_commits.each_index do |i| %>
+           <td><%= sales_order_commits[i] - sales_order_commits_success[i] %></td>
+         <% end %>
+         <td><%= total_sales_order_commits - total_sales_order_commits_success %></td>
+       </tr>
+
+
+          <tr>
+             <td colspan="9"/>
+           </tr>
+           
+       <tr class="color2">
+         <td class="td1">Web Change Address</td>
+         <% address_commits.each do |orders| %>
+           <td><%= orders %></td>
+         <% end %>
+         <td><%= total_address_commits %></td>
+       </tr>
+
+       <tr class="color2">
+         <td class="td1">AX Change Address</td>
+         <% address_commits_success.each do |orders| %>
+           <td><%= orders %></td>
+         <% end %>
+         <td><%= total_address_commits_success %></td>
+       </tr>
+
+       <tr class="color2">
+         <td class="td1">Variance</td>
+         <% address_commits.each_index do |i| %>
+           <td><%= address_commits[i] - address_commits_success[i] %></td>
+         <% end %>
+         <td><%= total_address_commits - total_address_commits_success %></td>
+       </tr>
+      
+      
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <%
+      pfp_connections = @pfp_logs.collect {|conns| conns.size }
+      total_pfp_connections = pfp_connections.inject(0) {|sum, i| sum + i }
+      
+      pfp_cc_records = @pfp_logs.collect {|pfp_log| (pfp_log.select {|records| records.res_code == '0' }).size }
+      total_pfp_cc_records = pfp_cc_records.inject(0) {|sum, i| sum + i }
+      
+      ax_cc_records  = @orders.collect {|ax| (ax.select {|o| !o.erp_recid.blank? }).size }
+      total_ax_cc_records = ax_cc_records.inject(0) {|sum, i| sum + i }
+      %>
+      <tr class="color2">
+        <td class="td1">PayFlow Connections</td>
+        <% pfp_connections.each do |conns| %>
+          <td><%= conns %></td>
+        <% end %>
+        <td><%= total_pfp_connections %></td>
+      </tr>
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <tr class="color2">
+        <td class="td1">PayFlow Transactions</td>
+        <% pfp_cc_records.each do |records| %>
+          <td><%= records %></td>
+        <% end %>
+        <td><%= total_pfp_cc_records %></td>
+      </tr>
+      
+      <tr class="color2">
+        <td class="td1">AX Credit Card Records</td>
+        <% ax_cc_records.each do |records| %>
+          <td><%= records %></td>
+        <% end %>
+        <td><%= total_ax_cc_records %></td>
+      </tr>
+      
+      <tr class="color2">
+        <td class="td1">Variance</td>
+        <% pfp_cc_records.each_index do |i| %>
+          <td><%= pfp_cc_records[i] - ax_cc_records[i] %></td>
+        <% end %>
+        <td><%= total_pfp_cc_records - total_ax_cc_records %></td>
+      </tr>
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <%
+      xfer_orders = @orders.collect {|os| (os.select {|o| o.wire_transfer_payment?}).size }
+      total_xfer_orders = xfer_orders.inject(0) {|sum, i| sum + i }
+      
+      ax_xfer_orders = @orders.collect {|os| (os.select {|o| o.wire_transfer_payment? && o.erp_complete?}).size }
+      total_ax_xfer_orders = ax_xfer_orders.inject(0) {|sum, i| sum + i }
+      %>
+      <tr class="color2">
+        <td class="td1">Wire Transfer orders</td>
+        <% xfer_orders.each_index do |i| %>
+          <td><%= xfer_orders[i] %></td>
+        <% end %>
+        <td><%= total_xfer_orders %></td>
+      </tr>
+      
+      <tr class="color2">
+        <td class="td1">AX Wire Transfer Orders</td>
+        <% ax_xfer_orders.each_index do |i| %>
+          <td><%= ax_xfer_orders[i] %></td>
+        <% end %>
+        <td><%= total_ax_xfer_orders %></td>
+      </tr>
+      
+      <tr class="color2">
+        <td class="td1">Variance</td>
+        <% xfer_orders.each_index do |i| %>
+          <td><%= xfer_orders[i] - ax_xfer_orders[i] %></td>
+        <% end %>
+        <td><%= total_xfer_orders - total_ax_xfer_orders %></td>
+      </tr>
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <%
+      orders_amount = @orders.map {|o| o.inject(0.0) {|sum, i| sum + i.order_summary.total_due } }
+      total_orders_amount = orders_amount.inject(&:+)
+      
+      creditcards_amount = @orders.map {|o| (o.select {|f| f.creditcard_payment?}).inject(0.0) {|sum, i| sum + i.order_summary.total_due } }
+      total_creditcards_amount = creditcards_amount.inject(&:+)
+      
+      wirexfers_amount = @orders.map {|o| (o.select {|f| f.wire_transfer_payment? }).inject(0.0) {|sum, i| sum + i.order_summary.total_due } }
+      total_wirexfers_amount = wirexfers_amount.inject(&:+)
+      %>
+      <tr class="color1">
+        <td class="td1">Total Dollar Value</td>
+        <% orders_amount.each do |amount| %>
+          <td class="td2"><%= number_to_currency(amount) %></td>
+        <% end %>
+        <td class="td2"><%= number_to_currency(total_orders_amount) %></td>
+      </tr>
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <tr class="color1">
+        <td class="td1">Total Credit Card Value</td>
+        <% creditcards_amount.each do |creditcards| %>
+          <td class="td2"><%= number_to_currency(creditcards) %></td>
+        <% end %>
+        <td class="td2"><%= number_to_currency(total_creditcards_amount) %></td>
+      </tr>
+      
+      <tr class="color1">
+        <td class="td1">Total Wire Xfer Value</td>
+        <% wirexfers_amount.each do |wirexfers| %>
+          <td class="td2"><%= number_to_currency(wirexfers) %></td>
+        <% end %>
+        <td class="td2"><%= number_to_currency(total_wirexfers_amount) %></td>
+      </tr>
+      
+      <tr>
+        <td colspan="9"/>
+      </tr>
+      
+      <%
+      ax_lookups = @ax_logs.collect {|o| o.size }
+      total_ax_lookups = ax_lookups.inject(0) {|sum, i| sum + i }
+      
+      ax_creates = @ax_logs.collect {|ax| (ax.select {|f| f.status == 'CREATE'}).size }
+      total_ax_creates = ax_creates.inject(0) {|sum, i| sum + i }
+      
+      ax_nochanges = @ax_logs.collect {|ax| (ax.select {|f| f.status == 'NO CHANGE'}).size }
+      total_ax_nochanges = ax_nochanges.inject(0) {|sum, i| sum + i }
+      
+      ax_updates = @ax_logs.collect {|ax| (ax.select {|f| f.status == 'UPDATE'}).size }
+      total_ax_updates = ax_updates.inject(0) {|sum, i| sum + i }
+      
+      ax_errors = @ax_logs.collect {|ax| (ax.select {|f| f.status == 'ERROR'}).size }
+      total_ax_errors = ax_errors.inject(0) {|sum, i| sum + i }
+      
+      ax_exceptions = @ax_logs.collect {|ax| (ax.select {|f| f.status == 'EXCEPTION'}).size }
+      total_ax_exceptions = ax_exceptions.inject(0) {|sum, i| sum + i }
+      %>
+      <tr class="color3">
+        <td class="td1">AX Account Lookups</td>
+        <% ax_lookups.each do |lookups| %>
+          <td><%= lookups %></td>
+        <% end %>
+        <td><%= total_ax_lookups %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">AX Account Create</td>
+        <% ax_creates.each do |creates| %>
+          <td><%= creates %></td>
+        <% end %>
+        <td><%= total_ax_creates %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">AX Account No Change</td>
+        <% ax_nochanges.each do |nochanges| %>
+          <td><%= nochanges %></td>
+        <% end %>
+        <td><%= total_ax_nochanges %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">AX Account Update</td>
+        <% ax_updates.each do |updates| %>
+          <td><%= updates %></td>
+        <% end %>
+        <td><%= total_ax_updates %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">AX Account Error</td>
+        <% ax_errors.each do |errors| %>
+          <td><%= errors %></td>
+        <% end %>
+        <td><%= total_ax_errors %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">AX Account Exception</td>
+        <% ax_exceptions.each do |exceptions| %>
+          <td><%= exceptions %></td>
+        <% end %>
+        <td><%= total_ax_exceptions %></td>
+      </tr>
+      
+      <tr class="color3">
+        <td class="td1">Variance</td>
+        <% ax_lookups.each_index do |i| %>
+          <td><%= ax_lookups[i] - ax_creates[i] - ax_nochanges[i] - ax_updates[i] - ax_errors[i] - ax_exceptions[i] %></td>
+        <% end %>
+        <td><%= total_ax_lookups - total_ax_creates - total_ax_nochanges - total_ax_updates - total_ax_errors - total_ax_exceptions %></td>
+      </tr>
+      
+      
+
+    </table>
+  </body>
+</html>

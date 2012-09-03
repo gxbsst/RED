@@ -1,0 +1,28 @@
+%ul.navigator
+  %li= link_to _('FOOTER|CONTACT_US'), :controller => 'static_pages', :action => 'contact_us' 
+  %li= link_to _('FOOTER|FAQS'), '/faq' 
+  %li= link_to _('FOOTER|EMAIL_ANNOUNCEMENTS'), :controller => 'static_pages', :action => 'email_announcements' 
+  %li= link_to _('FOOTER|ABOUT_RED'), :controller => 'static_pages', :action => 'about_red'
+  %li= link_to _('FOOTER|PRESS'), :controller => 'static_pages', :action => 'press'
+  %li= link_to _('FOOTER|GEAR_WE_USE'), :controller => "static_pages", :action => "gear_we_use" 
+
+
+%ul#language.navigator
+  %li= link_to_function('English', 'switchLanguage("en_US")')
+  %li= link_to_function('Espaňol', 'switchLanguage("es_ES")')
+  %li= link_to_function('Čeština', 'switchLanguage("cs_CZ")')
+  %li= link_to_function('简体中文', 'switchLanguage("zh_CN")')
+  %li= link_to_function('日本語', 'switchLanguage("ja_JP")')
+
+%p
+  Copyright &copy; 1999-2009, all rights reserved.
+  \-
+  = link_to('Terms &amp; Conditions', '/terms')
+  %br
+  %br
+  RED Digital Cinema, RED ONE, MYSTERIUM, REDCODE, REDspace, RED EPIC, SCARLET 3K, MONSTRO, REDFLASH, RED-RAM, RED-RAID, RED-DRIVE, RED-CAGE, RED-RAIL, REDCINE, RED QUICK, RED Alert! and RED-GUN are trademarks of the RED Digital Cinema Camera Company.
+
+%div#tip
+  Specifications, prices and delivery dates are subject to change. Count on it.
+  %br
+  We reserve the right to refuse service to anyone with a bad attitude.

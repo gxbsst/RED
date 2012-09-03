@@ -1,0 +1,203 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag(
+    'v2/pages/indie/thenothingmen'
+  ) %>
+  
+  <script type="text/javascript" src="/javascripts/prototype.js"></script>
+  <script type="text/javascript" src="/javascripts/effects.js"></script>
+  <script type="text/javascript" src="/javascripts/highslide/highslide.js"></script>
+  <script type="text/javascript">
+  hs.graphicsDir = '/javascripts/highslide/graphics/';
+  hs.captionId = 'the-caption';
+  hs.outlineType = 'rounded-white';
+  hs.showCredits = false;
+  </script>
+  <script type="text/javascript">
+  window.avaliableTexts = [1, 2, 3];
+
+  function showText(step) {
+  	if (step == 1)
+  	window.avaliableTexts.push(window.avaliableTexts.shift())
+  	else if (step == -1)
+  	window.avaliableTexts.unshift(window.avaliableTexts.pop());
+
+  	var index = window.avaliableTexts[0];
+  	// alert(index);
+  	if(index == 3){
+  		$('next_button').hide();
+  	}
+  	else{
+  		$('next_button').show();
+  	}
+
+  	if(index == 1){
+  		$('previous_button').hide();
+  	}
+  	else{
+  		$('previous_button').show();	
+  	}
+
+  	// alert(index);
+  	var element = $('outer' + index);
+  	var delay = 0;
+  	if (window.previousTextIndex) {
+  		new Effect.Fade('outer' + window.previousTextIndex);
+  		delay = 0;
+  		// alert("ccc");
+  	} 
+
+  	new Effect.Appear(element, { delay: delay });
+  	window.previousTextIndex = index;
+
+  }
+
+  </script>
+  
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1>The Nothing Men</h1>
+<% end %>
+
+
+
+<div id="big_outer">
+	<div id="outer1" class="outers">
+		<div id="banner">
+			<img src="/skin/img/nothing/hero.png" width="896" height="314"> 
+		</div>
+		<div class="content_outers">
+			<div class="left">
+				<p><span class="bold">The Nothing Men</span>, a freshman venture for ALCHEMY Film Productions, stands as a historic piece of work, representing the first full length feature filmed entirely on a RED One camera in the southern hemisphere.  In fact, it is in a head long race with Soderbergh's first RED film, Guerrilla, to become the first to release worldwide. An independent film, shot in Australia beginning in October of '07, produced by Andrew Windsor and Martin Dingle Wall, directed by Mark Fitzpatrick and cinematography by Peter Holland, The Nothing Men is a tribute to the resources and pioneering adventurism of a group of early adopters who, after falling in love with RED's image, saw no other path in satisfying their need for quality while maintaining their independent budget.</p>
+				<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene1.jpg" style=""><img src="/skin/img/nothing/scene1.png" alt="" /></a>
+				<p>When Peter Holland came onto the project, the expectation was that the only way to meet the budget was to shoot on HD. Having had the opportunity to shoot an early RED One (Mike Seymour's #23), Holland knew that the workflow was economical and straightforward, and arranged a small demonstration for the producers and director. If the team had entered that demo skeptical, they left converted. They had seen RED and wanted it!</p>
+				<p>Martin Dingle Wall had come from an acting background and, confident that the story and players were in place, focused on how the film could offer the production values to trade seriously within the international marketplace, while remaining inside the boundaries of his independent resources. "When we received the call introducing us to RED, I knew that we were facing not only a solution, but also what has proved to be a literal revolution", says Dingle Wall.</p>
+				<p>Andrew Windsor, fellow producer and actor, agreed, "The fact that you can see the actual footage 10 minutes after shooting, is magnificent. Eliminating film developing chemicals; that's good for the world, not just</p>
+			</div>
+			<div class="middle">
+				<p>film makers! The fact that the camera is small and portable, easy to use for location and studio, certainly helped the decision to go with RED in the early days, but the main reason was that I knew I would get amazing back up and support from RED themselves."</p>
+				<p>Writer/Director Mark Fitzpatrick was able to bring his 10 year old script to the screen with his directorial debut and felt privileged to be part of the first RED production in Australia. "Although it was untested, I was excited about all the fantastic things it promised. I saw the wonderful images it produced during testing and when I saw the first lot of rushes, I was blown away. It was so clear and the depth of field was astonishing. As a director, it was great to see how the camera could be pulled down to its bare minimum and secured in a Steadicam, enabling the camera to shoot in tight, awkward places or 360˚ smooth capture."</p>
+				<p>Director of Photography, Holland, was confident that this new technology would not only be superior, but economical as well. "The producers organized cost comparisons with HD. To everyone's joy, both the hire of the camera system and the post-production costs were all significantly cheaper than on HD tape acquisition. What RED promised was an affordable 4K tape-less digital capture camera with 35 mm film-like aesthetics, combined with a workflow that was simple and smart. What RED delivered was nothing less than phenomenal. We achieved a photographic quality that everyone is very proud of, and with a resolution that easily stands shoulder to shoulder, on the projection screen, with film." </p>
+				<p>Dingle Wall was excited with this new revolution; the reality was, comparing visual results, he had a system that shaved expenses radically, yet delivered incomparable results. "It had not been thoroughly tested in our environment, so there were cliffs to jump off. We knew that we had the opportunity to make our story look as good as any commercial venture."</p>
+				<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene2.jpg" style=""><img src="/skin/img/nothing/scene2.png" alt="" /></a>
+			</div>
+			<div class="right">
+				<h3>SYNOPSIS</h3>
+				<p>As a hardened crew of factory workers struggle to see out the last two weeks before their redundancy windfalls, panic runs through the ranks with the arrival of a mysterious man sent to join them.<br />
+					Suddenly fearful that their drinking and gambling will be exposed by the head-office "spy" and rob them of their money, top dog Jack (Colin Friels) and the men descend into a compelling world of antagonism and brutality.<br />
+					The intrigue and anxious second-guessing is only enhanced when the pacifist of the group, Wesley (Martin Dingle Wall), befriends the seemingly normal outsider, David (David Field).<br />
+					When Wesley discovers David is hiding a much darker secret, however, the seeds are planted for an explosive finale that seals the fate of The Nothing Men</p>
+					<hr />
+					<h3>CREDITS</h3>
+					<p><strong>Andrew Windsor</strong><br />
+						Producer/Actor</p>
+					<p><strong>Martin Dingle Wall</strong><br />
+							Producer/Actor</p>
+					<p><strong>Mark Fitzpatrick</strong><br />
+								Writer/Director</p>
+					<p><strong>Peter A. Holland</strong><br />
+									DP</p>
+					<p><strong>Rodrigo Vidal-Dawson</strong><br />
+										AC</p>
+					<p><strong>Andrew 'AJ' Johnson</strong><br />
+					Steadicam/Cam Operator</p>
+					<p><strong>Rebecca Lean</strong><br />
+											AC</p>
+					<p><strong>Hugh Rutherford</strong><br />
+												2AC/Clapper Loader</p>
+					<p>PIP the GRIP</p>
+					<p><strong>Warren Lynch from Intercolour</strong><br />
+					Post Workflow</p>
+					<p><strong>Allan Chesher</strong><br />
+														DIT</p>
+					<p><span>The Nothing Men</span> - Feature shot 4K 2:1 25 fps and 2K 2:1 75 fps 1/50, Build 8. RED Zoom 18-50, Angenieux HR 25-250, Zeiss Primes Mk3</p>
+					<p><strong>Cameras and Support</strong> provided by 
+					Lemac Films (Australia) Pty Ltd</p>
+			</div>
+			<!-- end .right -->
+		</div>
+		<!-- end .content_outers -->
+		</div>
+		<!-- end #outer1 -->
+		<div id="outer2" class="outers" style="display:none;">
+			<div id="banner" height="314">
+				<img src="/skin/img/nothing/hero2.png" style=" height: 314px; width: 896px; background: none;">
+			</div>
+			<div class="content_outers">
+				<div class="left">
+					<p><span class="bold">Bumps in the Road</span><br />
+						And jump off the cliff, they did, and not without the occasional bump along the way. This was brand new technology, months from reaching full featured status. These early RED cameras shot a feature on Build 8 ( a very early beta build), as hard as that is to believe. Windsor explains, "as it turned out, there was a problem and both cameras went down in the first hour of the first day. After the initial rush of anxiety, RED was contacted. From the other side of the world, they sent us a special code by email. It was put into the RED One cameras and all was good! You can't get better back up than that. It gave me great confidence as a producer and makes me want to utilize RED cameras all the time!"</p>
+						<p>Rodrigo Vidal-Dawson, 1st AC on A Camera, shares his first time experience with RED. "I was extremely excited to be using a system that I had only read about, having put down my own deposit on RED One #917. My excitement grew even further after working with New Zealand DP James Cowley (Crossing the Line) on a TVC the week prior to the feature, after telling me his experience with Boris and Natasha."</p>
+						<p>To open the box at the rental company was like seeing a baby born", says Vidal-Dawson. "I threw it straight on the bench, with a lens, and we started putting it though its paces. As an AC, I love being challenged and learning new systems. It was very exciting and frustrating at the same time, but both Rebecca Lean (1st AC B Camera) and I loved every second of the experience. As we solved one problem a new one would appear. From collimation, lens choice, data rates, cards, workflow, wireless picture signal, downconverters, powering Microforce controllers, Preston motors, Revolution Steadicam ..... the list seemed endless. And to compound matters .... no viewfinder. But we found solutions and workable systems through patience, care and the occasional butting of heads."</p>
+						<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene3.jpg" style=""><img src="/skin/img/nothing/scene3.png" style="background: none; width: 310px; height: 206px;" alt="" /></a>
+						<p><span class="bold">Namatjira and Matilda</span><br />Named after Australian icons by Vidal-Dawson,<br />
+						Camera A became "Namatjira" (after Australia's most acclaimed Aboriginal artist) and Camera B was named "Matilda".</p>
+				</div>
+				<div class="middle">
+					<p>"Once on set, our main concern was overheating, especially as we were in middle Spring going into Summer. The day temps were varying between 28˚-36˚C outside and we were in a disused warehouse. It was very hot. We had systems and procedures in place as the camera heated up; cool boxes, ice packs, fans, etc. The camera behaved perfectly through the heat, unfortunately we didn't have a lot of the after market products that are now available. Our concerns and ideas were emailed to Jim and the boys at RED. They were extremely helpful; even when a camera went down, a camera was flown out to substitute for a few days."</p>
+					<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene4.jpg" style=""><img src="/skin/img/nothing/scene4.png" style="background: none; width: 324px; height: 216px;" alt="" /></a>
+					<p>Steadicam operator Andrew "AJ" Johnson had his first experience with RED on set. "Just line up the shot and start shooting - that's how easy it was from the word GO on The Nothing Men. The camera behaves and feels more like working with film than video, which re-engages the operator with the art of storytelling instead of worrying about technical crap."</p>
+					<p>AJ goes on, "I'm a big fan of the camera in handheld mode and even more fond of its size (or lack thereof) when stripped down for Steadicam work. The RED One really came into its own when used with my mk-v "AR" Stabilization system which we used for much of the film. The camera is the perfect size and weight for the rig, making it easy to balance and allowing for a wide range of shots, not possible with bulky cameras. During our marathon shoot, one fantastic feature that I never would have thought of, was the fact that our data wrangler was seeing rushes only 10 minutes after we had shot them. This gave us the opportunity to do almost instant retakes if something wasn't perfect, saving the production time and money in re-shoots and pick up days."</p>
+					<p>The size, weight and flexibility of the RED One was not lost either on "Pip the Grip". "I have worked with and 'rigged' just about every type of camera around, from the smallest lipstick camera to the largest 70 mm Imax jobbies, and working with the new RED cameras was a sheer joy. From a grip's perspective, it is one of the most ergonomically friendly and 'rigging friendly' cameras around."</p>
+				</div>
+				<div class="right">
+					<h3>Data Wrangler</h3>
+					<p>Allan Chesher, Data Wrangler for "The Nothing Men" draws his film experience traditionally from the edit/telecine assist world, as well as being a tape operator for a few years. His experience ranges from editing to animation 2D/3D compositing and matte painting, all of which provide a good understanding of post workflows. He came onto The Nothing Men project to act as Art Director.</p>
+					<p>"After my Production Designer fell ill, a new PD was brought in, who in turn brought in his own Art Director, and I had to step aside. Peter Holland called me and asked me if I was interested in being a Data Wrangler for the project. I had already taken the time off work and it sounded interesting with the new RED 4k camera and, well.. I was looking to get on set more and away from the tape room. </p>
+					<p>The cameras arrived 1 week before the shoot and I went through all the testing with the camera, with the crew pushing and testing to see how far they could take the camera, as well as figuring out how to mesh old school protocols with new technology. This, from my viewpoint, seems to be the biggest thing for veteran camera crew, understanding that it's all pretty much the same thing, just done a different way. We were shooting with 2 cameras for 3 weeks and all I was equipped with was 1 Laptop (Intel), 2 card readers, 1 Dual FW800 PCexpress card, 1 SOHO (750 gig Mirrored RAID) and 3 transport drives. A table and chair came later but, hey, it is an independent production after all! With no RED drives, it meant we were shooting everything on CF cards and we totaled 4 for the first few days, 8 after a week, and by the end, it was 10 CF cards.</p>
+				</div>
+				<!-- end .right -->
+			</div>
+			<!-- end .content_outers -->
+</div>
+			<!-- end #outer2 -->
+			<div id="outer3" class="outers" style="display:none;">
+				<div id="banner">
+					<img src="/skin/img/nothing/hero1.png" style=" height: 314px; width: 896px; background: none;" />
+				</div>
+				<div class="content_outers">
+					<div class="left">
+						<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene5.jpg" style=""><img src="/skin/img/nothing/scene5.png" style="background: none; width: 313px; height: 209px;" alt="" /></a>
+						
+						<p><span class="bold">The Big Finish</span><br />
+						The real test for the RED One was getting this spectacular image into a final product. The challenge for the independent film maker is the post workflow and these pioneers were to be the first to tackle the problem. As the film's director, Fitzpatrick, put it, "The biggest question was how would it go in the post edit and grading process. Now that our film is complete, the answer is in the quality of our film. It just looks amazing."</p>
+						<p>The genius behind that amazing quality was Warren Lynch, from Intercolour, listing the Lord of the Rings Trilogy and King Kong among his many credits. "The main advantage the RED camera offers to the colourgrading process is that due to the image files being delivered as 4K RAW, they can be converted and calibrated to suit the Intercolour workflow to our choice of 10 bit log files."</p>
+						<p>"Which is exactly what we use when grading scanned film originated material. This type of of image gives the grading system access to a wide contrast ratio and colourspace. My experience with the converted R3D files for The Nothing Men is that the image adjustability is as dynamic as what I am able to achieve from working on a film originated shot. There are some careful adjustments made in the conversion to log process, and if done properly, the grading for the cinema film out result is a breeze as I grade by viewing our standard Look up Table that we use for our preferred Film Recording and Laboratory facilities, Weta/PRP in NZ, or any number of facilities around the world."</p>
+						<p><span class="bold">4K to Film</span><br />
+						Lynch goes on to say, " The results we have achieved when a selection of graded shots were recorded out to film proved to be very impressive. All involved from the production were delighted with the film print results. The subsequent conversion down to linear space for the television finish is also problem-free and offers great images for the HD and SD masters for broadcast and DVDs, etc. Aside from the large contrast ratio and 10 bit colourspace,</p>
+					</div>
+					<div class="middle">
+						<p> the RED camera picture, being captured on the 4K imager, offers a very high resolution pixel matrix giving us an image that doesn't suffer from aliasing or TV line structure limitations that are evident in HD captured images. Additionally, the fine resolution 4K canvas of the imager doesn't need image enhancement or electronic contouring to achieve nice clean and sharp images compared to HD cameras, which is unavoidably necessary to achieve a sharp image on film and television."</p>
+						<p>Lynch's greatest compliment, "With the 4K RED images, this resolution is clearly evident in its ability to resolve very fine detail and wardrobe selections with fine or complicated weave patterns that would normally present a problem for HD, creating excessive aliasing or moiré error. The 4K imager resolves past these image issues and presents very close, if not better, than what I am accustomed with a film scan picture. I have been dealing with television cameras and the like for many years, and for the first time in a long time, I am positively impressed by this new technology and see it as a part of the future for us all."</p>
+						<a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/skin/img/nothing/big_scene6.jpg"  style=""><img src="/skin/img/nothing/scene6.png" style="background: none; width: 323px; height: 214px;" alt="" /></a>
+						<p><span class="bold">The Future is RED</span><br />
+						Red's impact on this production and its major players was profound. Martin Dingle Wall summed up his feelings, "I must say that prior to principle photography, when the two RED bodies, Matilda and Namatjira, arrived on our set for their first testing, there was a silent energy in that room, like we were privy to something almost illegal. That very excitement saw us through an extremely rigorous schedule, due to the palpable camaraderie at play. We could not be happier with the results." Peter Holland, the film's DP, is already in production for his next film, Cedar Boys, shooting with RED, and the film immediately after is on RED as well. He states, "I would really need a very good reason (but I can't think what that would be) or a massive budget, to consider not shooting on RED. In fact, I liked this camera so much, I'm buying one for myself." </p>
+					</div>
+					<div class="right">
+						<h3>Data Wrangler (Cont.)</h3>
+					<p>	The takes were long and the cards were flying in. I managed my transfer times down to 3 minutes a card or 6 mins for 2 cards (1 through PCexpress and the other through side FW800 port of lappie). So to break it down they would shoot each card to the max, 1 take. 4mins 30sec for 2 cameras, and it would take me 6 mins to transfer them both to our SOHORAID, so you can imagine it was a quick turn around. It was decided after a 380gig day shoot that we needed another RAID, so we got another one and I then had one for each camera. The footage was stored on site until clearance was given from the editor to say he had everything and it was all good. </p>
+
+					<p>With 8 cards there was a small leeway for myself to copy back up and check all the footage before handing the cards back to camera. All cards formatted in camera and all footage was checked, at first, in Red Alert and later in Redcine, which was superior for speed. Quite quickly the limits and sensitivites of the camera became apparent to the DOP and the crew. It was very rare after the first few days that there was any issues with lighting and clipping whites. The role came with a lot of pressure at times, but also did have its down times. There's no data to check if a setup takes 4 hrs. By the end of the shoot, all footage was backed up and ready for transport within 1/2 hr of wrap."</p>
+
+					<p>Chesher concludes, "The workflow for me was intuitive and made sense. Once the ice was broken, it was quite easy and very procedural. The quick ease of playing back newly shot footage and grading for the DOP on set was fantastic. All with one laptop and a few drives."</p>
+					<p>"I would be remiss in not acknowleging the amazing contributions of our camera provider", adds DP, Peter Holland. "Lemac Films were BRILLIANT! They all went through the hoop to get the cameras, then get them set up, as well as constant, on-going, support. </p>
+					</div>
+					<!-- end .right -->
+				</div>
+				<!-- end .content_outers -->
+					</div>
+					<!-- end #outer3 -->
+					
+		</div>
+		<!-- end #big_outer -->
+		<div style="clear:both;">
+			
+		</div>
+		<div id="next">	
+			<table width="660px;" >
+				<tr>
+					<td class="td1" style="text-align:right;width: 334px;"><a id="previous_button" href="#" onclick="showText(-1)" style="display: none;">Previous</a></td>
+					<td class="td2" style="text-align:left;" ><a id="next_button" onclick="showText(1)" href="#" >Next</a></td>
+				</tr>
+			</table>
+		</div>

@@ -1,0 +1,453 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/shot_on_red' %>
+  <%= javascript_include_tag 'prototype' %>
+  <%= javascript_include_tag 'effects' %>
+  <script type="text/javascript">
+  function show_description(row, col){ 
+    var delay = 0;
+    if(!window.current_description){
+      window.current_description=[];
+    }
+    if (window.current_description[row] != null) {
+      if ($(getDescriptionId(window.current_description[row])).style.display !="none"){
+        new Effect.SlideUp(getDescriptionId(window.current_description[row]),{duration: 0.1})
+
+        $(getImageId(window.current_description[row])).style.border="1px solid #444";
+        $(getImageId(window.current_description[row])).style.backgroundColor="#000";
+        delay=0.1;
+        //Not the same row and col
+        if(window.current_description[row][1] != col){
+          new Effect.BlindDown(getDescriptionId([row,col]),{duration: 0.3,delay: delay})
+
+          $(getImageId([row,col])).style.border="1px solid #BFBFBF";
+          $(getImageId([row,col])).style.backgroundColor="#BFBFBF";
+
+        }
+      }
+      else{
+        new Effect.BlindDown(getDescriptionId([row,col]),{duration: 0.3,delay: delay});
+        $(getImageId([row,col])).style.border="1px solid #BFBFBF";
+        $(getImageId([row,col])).style.backgroundColor="#BFBFBF";
+
+      }
+      window.current_description[row] = [row, col];
+    }
+    else{
+      window.current_description[row] = [row, col];
+
+      //alert("ddd" + window.current_description[row]!=null);
+      new Effect.BlindDown(getDescriptionId(window.current_description[row]), { duration: 0.3 });
+      $(getImageId(window.current_description[row])).style.border="1px solid #BFBFBF";
+      $(getImageId(window.current_description[row])).style.backgroundColor="#BFBFBF";
+    }
+  }
+  function getDescriptionId(ary) {
+    return 'description_' + ary[0] + ary[1];
+  }
+  function getImageId(ary){
+    return 'img' + ary[0] + ary[1]
+  }
+  </script>
+  <% end %>
+  <% content_for(:heading) do %>
+  <h1>SHOT ON RED</h1>
+  <% end %>
+
+  <p id="still_gallery_description"><%= _('GALLERY|STILL_GALLERY|DESCRIPTION') %></p>
+  <div id="shot_on_red">
+
+	<a class="imgouter"><img id="img11" src="/skin/img/gallery/shot_on_red_thumb11.jpg" height="85" alt="Shot_on_red" onclick="show_description('1','1')" width="210" /></a>
+
+    <a class="imgouter"><img id="img13" src="/skin/img/gallery/shot_on_red_thumb37.jpg" height="85" alt="Shot_on_red" onclick="show_description('1','3')" width="210" /></a>
+    
+    <a class="imgouter"><img id="img12" src="/skin/img/gallery/redreel.jpg"  height="85" alt="Shot_on_red" onclick="show_description('1','2')" width="210" /></a>
+    
+
+		 <div id="description_11" class="description" style="display:none;">
+	       <p>
+	        <strong>Name :</strong>Gamer<br />
+	        <strong>Directors :</strong>Mark Neveldine and Brian Taylor<br />
+	        <strong>Writers :</strong>Mark Neveldine and Brian Taylor<br />
+	        <strong>Starring :</strong>Gerard Butler<br />
+	        <strong>DP :</strong>Ekkehart Pollack<br />
+	        <strong>Release Date :</strong>2009<br />
+	        <strong>Genre :</strong> Thriller<br />
+			<strong>Trailer :</strong>
+				<a href="http://gamerthemovie.com">http://gamerthemovie.com</a>
+	        </p>
+	      </div>
+
+    <div id="description_13" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong>Beyond a Reasonable Doubt<br />
+        <strong>Director :</strong>Peter Hyams<br />
+        <strong>Writers :</strong>Peter Hyams<br />
+        <strong>Starring :</strong>Michael Douglas and Amber Tamblyn<br />
+        <strong>DP :</strong>Peter Hyams<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Drama<br />
+        <strong>Trailer :</strong><a href="http://www.apple.com/trailers/independent/beyondareasonabledoubt/">http://www.apple.com/trailers/independent/beyondareasonabledoubt/</a>
+        
+      </p>
+    </div>
+    <div id="description_12" class="description" style="display:none;">
+      <p>
+      <strong>Executive Producer :</strong>Jim Jannard<br />
+      <strong>Producer :</strong>Ted Schilowitz<br />
+      <strong>Editor :</strong>Michael Cioni<br />
+      <strong>Digital Cinema Mastering :</strong>PlasterCITY Digital Post, L.L.C.<br />
+      <strong>Digital Cinema Packaging :</strong>Laser Pacific<br />
+      <strong>Specifications :</strong>8:03 @ 720p (448 MB)<br />
+      <a style="margin-left: 185px; text-decoration: underline;" href="http://red.cachefly.net/redreel/RedReel_h264_720.mov" >Download Now</a>
+      </p>
+    </div>
+
+
+    
+     <a class="imgouter"><img id="img21" src="/skin/img/gallery/shot_on_red_thumb27.jpg" height="85" alt="Shot_on_red" onclick="show_description('2','1')" width="210" /></a>        
+     <a class="imgouter"><img id="img23" src="/skin/img/gallery/shot_on_red_thumb16.jpg" height="85" alt="Shot_on_red" onclick="show_description('2','3')" width="210" /></a>
+     <a class="imgouter"><img id="img22" src="/skin/img/gallery/shot_on_red_thumb38.jpg" height="85" alt="Shot_on_red" onclick="show_description('2','2')" width="210" /></a>
+     
+
+    <div id="description_21" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>The Book of Eli<br />
+      <strong>Director :</strong>Allen Hughes and Albert Hughes<br />
+      <strong>Writers :</strong>Gary Whitta<br />
+      <strong>Starring :</strong>Denzel Washington and Gary Oldman<br />
+      <strong>Release Date :</strong>2010<br />
+      <strong>Genre :</strong>Action / Drama / Adventure / Western<br />
+      </p>
+    </div>
+    <div id="description_23" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>Knowing<br />
+      <strong>Director :</strong>Alex Proyas<br />
+      <strong>Starring :</strong>Nicolas Cage<br />
+      <strong>DP : </strong>Simon Duggan<br />
+      <strong>Release Date :</strong>2009<br />
+      <strong>Genre :</strong>Drama<br />
+      <strong>Trailer :</strong><a href="http://www.apple.com/trailers/independent/knowing/">http://www.apple.com/trailers/independent/knowing/</a>
+      </p>
+    </div>
+    <div id="description_22" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong>Night at the Museum: Battle of the Smithsonian<br />
+        <strong>Director :</strong>Shawn Levy<br />
+        <strong>Writers :</strong>Robert Ben Garant<br />
+        <strong>Starring :</strong>Ben Stiller and Amy Adams<br />
+        <strong>DP :</strong>John Schwartzman<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Action<br />
+        <strong>Trailer :</strong><a href="http://www.apple.com/trailers/fox/nightatthemuseumbattleofthesmithsonian/">http://www.apple.com/trailers/fox/nightatthemuseumbattleofthesmithsonian/</a>
+        
+      </p>
+    </div>
+
+    <a class="imgouter"><img id="img31" src="/skin/img/gallery/shot_on_red_thumb26.jpg" height="85" alt="Shot_on_red" onclick="show_description('3','1')" width="210" /></a>
+    <a class="imgouter"><img id="img32" src="/skin/img/gallery/shot_on_red_thumb29.jpg" height="85" alt="Shot_on_red" onclick="show_description('3','2')" width="210" /></a>
+    <a class="imgouter"><img id="img33" src="/skin/img/gallery/shot_on_red_thumb2.jpg"  height="85" alt="Shot_on_red_thumb5"  onclick="show_description('3','3')" width="210" /></a>
+    
+    
+    <div id="description_31" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>My Bloody Valentine 3D<br />
+      <strong>Directors :</strong>Patrick Lussier<br />
+      <strong>Writers :</strong>Todd Farmer and Zane Smith<br />
+      <strong>Starring :</strong>Jensen Ackles and Jaime King<br />
+      <strong>DP :</strong>Brian Pearson<br />
+      <strong>Release Date :</strong>2009<br />
+      <strong>Genre :</strong> Horror / Thriller<br />
+      <strong>Trailer :</strong><a href="http://www.apple.com/trailers/lions_gate/mybloodyvalentine3d/" >http://www.apple.com/trailers/lions_gate/mybloodyvalentine3d/</a>
+      </p>
+    </div>
+
+    <div id="description_32" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>The Girlfriend Experience<br />
+      <strong>Director :</strong>Steven Soderbergh<br />
+      <strong>Writers :</strong>Brian Koppelman and David Levien<br />
+      <strong>Starring :</strong>Sasha Grey and Chris Santos<br />
+      <strong>Release Date :</strong>2009<br />
+      <strong>Genre :</strong>Comedy<br />
+      <strong>Trailer :</strong><a href="http://www.apple.com/trailers/magnolia/thegirlfriendexperience/" >http://www.apple.com/trailers/magnolia/thegirlfriendexperience/</a>
+      
+      </p>
+    </div>
+    
+     <div id="description_33" class="description" style="display:none;">
+       <p>
+        <strong style="margin-left: 25px; font-size: 15px; width: 180px;">Now In Theatres</strong><br />
+        <strong>Name :</strong>CHE<br />
+        <strong>Director :</strong>Steven Soderbergh<br />
+        <strong>Writer :</strong>Peter Buchman<br />
+        <strong>Starring :</strong>Benicio Del Toro<br />
+        <strong>DP :</strong>Peter Andrews<br />
+        <strong>Release Date :</strong>2008 (USA)<br />
+        <strong>Genre :</strong>Biography / Drama<br />
+        <strong>Trailer :</strong><a href="http://www.apple.com/trailers/independent/che/" >http://www.apple.com/trailers/independent/che/</a>
+        </p>
+      </div>
+    <a class="imgouter"><img id="img82" src="/skin/img/gallery/shot_on_red_thumb0.jpg"  height="85" alt="Shot_on_red" onclick="show_description('8','2')" width="210" /></a>
+     <a class="imgouter"><img id="img83" src="/skin/img/gallery/shot_on_red_thumb13.jpg" height="85" alt="Shot_on_red" onclick="show_description('8','3')" width="210" /></a>        
+     <a class="imgouter"><img id="img81" src="/skin/img/gallery/shot_on_red_thumb17.jpg" height="85" alt="Shot_on_red" onclick="show_description('8','1')" width="210" /></a>
+
+    <div id="description_82" class="description" style="display:none;">
+      <p>
+	      <%= _('SHOT_ON_RED|MOVIE|CROSSING_THE_LINE') %>
+      </p>
+    </div>
+      <div id="description_83" class="description" style="display:none;">
+        <p>
+        <strong>Name :</strong>Jumper<br />
+        <strong>Director :</strong>Doug Liman<br />
+        <strong>Writers :</strong>David S. Goyer and Jim Uhls and Simon Kinberg and Steven Gould (novel)<br />
+        <strong>Starring :</strong>Hayden Christensen<br />
+        <strong>DP :</strong>Barry F Peterson<br />
+        <strong>Release Date :</strong>FEB 14, 2008<br />
+        <strong>Genre :</strong>Adventure / Drama / Sci-Fi / Thriller<br />
+        <strong>Trailer :</strong><a href="http://www.apple.com/trailers/fox/jumper/" >http://www.apple.com/trailers/fox/jumper/</a>
+        </p>
+      </div>
+      
+      <div id="description_81" class="description" style="display:none;">
+        <p>
+        <strong>Name :</strong>Labor Pains<br />
+        <strong>Director :</strong>Lara Shapiro<br />
+        <strong>Writers :</strong>Stacey Kramer and Lara Shapiro<br />
+        <strong>Starring :</strong>Lindsay Lohan<br />
+        <strong>DP : </strong>Daniel Stoloff<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Comedy<br />
+        </p>
+      </div>
+
+
+
+     <a class="imgouter"><img id="img42" src="/skin/img/gallery/shot_on_red_thumb32.jpg" height="85" alt="Shot_on_red" onclick="show_description('4','2')" width="210" /></a>
+     
+     <a class="imgouter"><img id="img41" src="/skin/img/gallery/shot_on_red_thumb30.jpg" height="85" alt="Shot_on_red" onclick="show_description('4','1')" width="210" /></a>        
+     
+     <a class="imgouter"><img id="img43" src="/skin/img/gallery/shot_on_red_thumb19.jpg" height="85" alt="Shot_on_red" onclick="show_description('4','3')" width="210" /></a>        
+
+     <div id="description_42" class="description" style="display:none;">
+       <p>
+        <strong>Name :</strong>Southland<br />
+        <strong>Director :</strong>Christopher Chulack<br />
+        <strong>DP : </strong>J. Michael Muro<br />
+        <strong>Writers :</strong>John Wells<br />
+        <strong>Starring :</strong>Tom Everett Scott and Regina King <br />
+        <strong>Genre :</strong>Crime / Drama<br />
+      </p>
+      </div>
+      <div id="description_41" class="description" style="display:none;">
+        <p>
+         <strong>Name :</strong>ER<br />
+         <strong>Director :</strong>Christopher Chulack,Richard Thorpe, among others<br />
+         <strong>DP :</strong>Arthur Albert<br />
+         <strong>Starring :</strong>Parminder Nagra and John Stamos <br />
+         <strong>Genre :</strong>Drama<br />
+         <strong>Trailer :</strong><a href="http://www.nbc.com/ER">http://www.nbc.com/ER</a>
+         </p>
+       </div>
+       <div id="description_43" class="description" style="display:none;">
+         <p>
+          <strong>Name :</strong>Sanctuary<br />
+          <strong>Director :</strong>Martin Wood<br />
+          <strong>DP : </strong>David Geddes<br />
+          <strong>Writers :</strong>Damian Kindler<br />
+          <strong>Starring :</strong>Amanda Tapping and Robin Dunne <br />
+          <strong>Genre :</strong>Sci-Fi<br />
+          <strong>Trailer :</strong><a href="http://www.scifi.com/sanctuary">http://www.scifi.com/sanctuary</a>
+          </p>
+        </div>
+
+
+    <a class="imgouter"><img id="img61" src="/skin/img/gallery/shot_on_red_thumb18.jpg" height="85" alt="Shot_on_red" onclick="show_description('6','1')" width="210" /></a>
+    
+    <a class="imgouter"><img id="img62" src="/skin/img/gallery/shot_on_red_thumb20.jpg" height="85" alt="Shot_on_red" onclick="show_description('6','2')" width="210" /></a>
+    
+    <a class="imgouter"><img id="img63" src="/skin/img/gallery/shot_on_red_thumb34.jpg" height="85" alt="Shot_on_red" onclick="show_description('6','3')" width="210" /></a>
+    
+    <div id="description_61" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>Angels &amp; Demons <i>(RED ONE used for VFX shots)</i><br />
+      <strong>Director :</strong>Ron Howard<br />
+      <strong>Writers :</strong>Dan Brown and Akiva Goldsman<br />
+      <strong>Starring :</strong>Tom Hanks<br />
+      <strong>DP : </strong>Salvatore Totino<br />
+      <strong>Release Date :</strong>2009<br />
+      <strong>Genre :</strong>Thriller<br />
+      </p>
+    </div>
+    <div id="description_62" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>Leverage<br />
+      <strong>Director :</strong>Dean Devlin<br />
+      <strong>Starring :</strong>Timothy Hutton and Gina Bellman <br />
+      <strong>Genre :</strong>Drama<br />
+      <strong>Trailer :</strong><a href="http://www.tnt.tv/series/leverage">http://www.tnt.tv/series/leverage</a>
+      </p>
+    </div>
+    <div id="description_63" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>The Cleaner<br />
+      <strong>Starring :</strong>Benjamin Bratt and Liliana Mumy<br />
+      <strong>DP :</strong>Dennis Hall<br />
+      <strong>Co-Executive Producer:</strong> Jay Silverman and Jack Clements<br />
+      <strong>Unit Production Manager:</strong> Mark Bashaar<br />
+      <strong>Genre :</strong>Drama<br />
+      <strong>Trailer :</strong><a href="http://www.aetv.com/the-cleaner/">http://www.aetv.com/the-cleaner/</a>
+      </p>
+    </div>
+
+
+
+
+    <a class="imgouter"><img id="img121" src="/skin/img/gallery/shot_on_red_thumb39.jpg" height="85" alt="Shot_on_red" onclick="show_description('12','1')" width="210" /></a>
+    <a class="imgouter"><img id="img123" src="/skin/img/gallery/shot_on_red_thumb35.jpg" height="85" alt="Shot_on_red" onclick="show_description('12','3')" width="210" /></a>
+    <a class="imgouter"><img id="img122" src="/skin/img/gallery/shot_on_red_thumb36.jpg" height="85" alt="Shot_on_red" onclick="show_description('12','2')" width="210" /></a>
+    
+    <div id="description_121" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong>The Final<br />
+        <strong>Director :</strong>Joey Stewart<br />
+        <strong>Writers :</strong>Jason Kabolati<br />
+        <strong>Starring :</strong>Marc Donato and Jascha Washington<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Horror<br />
+        <strong>Trailer :</strong><a href="http://agoraentertainment.com">http://agoraentertainment.com</a>
+        
+      </p>
+    </div>
+    <div id="description_123" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong> Splinterheads <br />
+        <strong>Director :</strong>Brant Sersen<br />
+        <strong>Writers :</strong>Brant Sersen<br />
+        <strong>Starring :</strong>Thomas Middleditch and Rachael Taylor<br />
+        <strong>DP :</strong>Michael Simmonds <br />
+        <strong>Genre :</strong>Comedy<br />
+        <strong>Trailer :</strong><a href="http://www.splinterheadsthemovie.com/">http://www.splinterheadsthemovie.com</a>
+      </p>
+    </div>
+    <div id="description_122" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong>Woodshop<br />
+        <strong>Director :</strong>Peter Coggan<br />
+        <strong>Writers :</strong>Peter Coggan<br />
+        <strong>Starring :</strong>Jesse Ventura and Mitch Pileggi<br />
+        <strong>DP :</strong>Paul Lee<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Comedy<br />
+        <strong>Trailer :</strong><a href="http://www.woodshopmovie.com/WoodshopMovie.com/Woodshop_-_Trailers.html">http://www.woodshopmovie.com</a>
+      </p>
+    </div>
+
+
+    <a class="imgouter"><img id="img92" src="/skin/img/gallery/shot_on_red_thumb33.jpg" height="85" alt="Shot_on_red" onclick="show_description('9','2')" width="210" /></a>
+    
+    <a class="imgouter"><img id="img93" src="/skin/img/gallery/shot_on_red_thumb12.jpg" height="85" alt="Shot_on_red" onclick="show_description('9','3')" width="210" /></a>
+    <a class="imgouter"><img id="img91" src="/skin/img/gallery/shot_on_red_thumb25.jpg" height="85" alt="Shot_on_red" onclick="show_description('9','1')" width="210" /></a>    
+    
+    <div id="description_92" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>Anything for You<br />
+      <strong>Director :</strong>Anand Alagappan<br />
+      <strong>Writers :</strong>Anand Alagappan and Priti Trivedi<br />
+      <strong>Starring :</strong>Sam Ghosh and Juliana Fine<br />
+      <strong>Release Date :</strong>2008<br />
+      <strong>Genre :</strong>Romance<br />
+      <strong>Trailer :</strong><a href="http://www.anythingforyoumovie.com/" >http://www.anythingforyoumovie.com/</a>
+      </p>
+    </div>
+
+    <div id="description_93" class="description" style="display:none;">
+      <p>
+      <strong>Name :</strong>The Informant<br />
+      <strong>Director :</strong>Steven Soderbergh<br />
+      <strong>Writers :</strong>Scott Burns and Kurt Eichenwald<br />
+      <strong>Starring :</strong>Matt Damon<br />
+      <strong>DP :</strong>Peter Andrews<br />
+      <strong>Release Date :</strong>2009<br />
+      <strong>Genre :</strong>Thriller<br />
+      </p>
+    </div>
+    <div id="description_91" class="description" style="display:none; position: relative;">
+      <p>
+      <strong>Name :</strong>Achchamundu! Achchamundu!<br />
+      <strong>Director :</strong>Arun Vaidyanathan<br />
+      <strong>Writers :</strong>Arun Vaidyanathan<br />
+      <strong>Starring :</strong>John Shea and Prasanna and Sneha<br />
+      <strong>Release Date :</strong>2008<br />
+      <strong>Genre :</strong>Thriller<br />
+      <strong>Trailer :</strong><a href="http://www.aathemovie.com/">http://www.aathemovie.com/</a>
+      </p>
+      <div  style="position: absolute; right: 0; top: 2px; top: -5px !important;">
+        <a href="/indie/achchamundu/?1"><img src="/images/pages/indie/a-1-m.jpg" /></a>
+        <a href="/indie/achchamundu/?2"><img src="/images/pages/indie/a-2-m.jpg" /></a>
+        <a href="/indie/achchamundu/?3"><img src="/images/pages/indie/a-3-m.jpg" /></a>
+      </div>
+    </div>
+    
+    <a class="imgouter"><img id="img111" src="/skin/img/gallery/shot_on_red_thumb28.jpg" height="85" alt="Shot_on_red" onclick="show_description('11','1')" width="210" /></a>
+    <div id="description_111" class="description" style="display:none;">
+      <p>
+        <strong>Name :</strong>Manure<br />
+        <strong>Director :</strong>Michael Polish<br />
+        <strong>Writers :</strong>Mark Polish and Michael Polish<br />
+        <strong>Starring :</strong>Mark Polish and Billy Bob Thornton<br />
+        <strong>DP :</strong>M David Mullen<br />
+        <strong>Release Date :</strong>2009<br />
+        <strong>Genre :</strong>Comedy<br />
+      </p>
+    </div>
+    
+
+    <div style="clear:both;"></div>
+    <!--end div#shot_on_red -->
+  </div>
+  
+
+  <div id="crossing_the_line">
+    <h2 class="h22" id="h22"><%= _('GALLERY|SHOT_ON_RED|CROSSING_THE_LINE') %></h2>
+    <a class="imgouter"><img id="img51" width="210" height="85" alt="" src="/skin/img/gallery/crossing_the_line1.jpg" onclick="show_description('5','1')" /></a>
+    <a class="imgouter"><img id="img52" width="210" height="85" alt="" src="/skin/img/gallery/crossing_the_line2.jpg" onclick="show_description('5','2')" /></a>
+    <a class="imgouter"><img id="img53" width="210" height="85" alt="" src="/skin/img/gallery/crossing_the_line3.jpg" onclick="show_description('5','3')"  /></a>
+
+    <div id="description_51" class="description" style="display:none;">
+      <h2 class="h22"><%= _('GALLERY|STILL_GALLERY|SUB_TITLE') %></h2>
+      <p align="right"><%= link_to 'Download Still',"/skin/img/gallery-still/005831.jpg" %></p>
+      <p align="right">Download the Trailer: <%= link_to  '.Torrent', "http://torrents.red.com:6969/torrents/crossing1.mov.torrent" %>&nbsp;|&nbsp;<%= link_to  'HTTP',"http://red.cachefly.net/video/crossing1.mov" %></p>
+    </div>
+    <div id="description_52" class="description" style="display:none;">
+      <h2 class="h22"><%= _('GALLERY|STILL_GALLERY|SUB_TITLE') %></h2>
+      <p align="right"><%= link_to 'Download Still',"/skin/img/gallery-still/002965.jpg" %></p>
+      <p align="right">Download the Trailer: <%= link_to  '.Torrent', "http://torrents.red.com:6969/torrents/crossing1.mov.torrent" %>&nbsp;|&nbsp;<%= link_to  'HTTP',"http://red.cachefly.net/video/crossing1.mov" %></p>
+    </div>
+    <div id="description_53" class="description" style="display:none;">
+      <h2 class="h22"><%= _('GALLERY|STILL_GALLERY|SUB_TITLE') %></h2>
+      <p align="right"><%= link_to 'Download Still',"/skin/img/gallery-still/012916.jpg" %></p>
+      <p align="right">Download the Trailer: <%= link_to  '.Torrent', "http://torrents.red.com:6969/torrents/crossing1.mov.torrent" %>&nbsp;|&nbsp;<%= link_to  'HTTP',"http://red.cachefly.net/video/crossing1.mov" %></p>
+    </div>
+
+    <a class="imgouter"><img id="img71"  width="210" height="85" alt="" src="/skin/img/gallery/crossing_the_line4.jpg" onclick="show_description('7','1')" /></a>
+    <a class="imgouter"><img id="img72"  width="210" height="85" alt="" src="/skin/img/gallery/crossing_the_line5.jpg" onclick="show_description('7','2')" /></a>
+
+    <div id="description_71" class="description" style="display:none;">
+      <h2 class="h22"><%= _('GALLERY|STILL_GALLERY|SUB_TITLE') %></h2>
+      <p align="right"><%= link_to 'Download Still',"/skin/img/gallery-still/005634.jpg" %></p>
+      <p align="right">Download the Trailer: <%= link_to  '.Torrent', "http://torrents.red.com:6969/torrents/crossing1.mov.torrent" %>&nbsp;|&nbsp;<%= link_to  'HTTP',"http://red.cachefly.net/video/crossing1.mov" %></p>
+    </div>
+    <div id="description_72" class="description" style="display:none;">
+      <h2 class="h22"><%= _('GALLERY|STILL_GALLERY|SUB_TITLE') %></h2>
+      <p align="right"><%= link_to 'Download Still',"/skin/img/gallery-still/009000.jpg" %></p>
+      <p align="right">Download the Trailer: <%= link_to  '.Torrent', "http://torrents.red.com:6969/torrents/crossing1.mov.torrent" %>&nbsp;|&nbsp;<%= link_to  'HTTP',"http://red.cachefly.net/video/crossing1.mov" %></p>
+    </div>
+  </div>
+  <div style="clear:both;"></div>
+  <div id="help_torrent" class="transparent-50">
+    <h3><%= _('GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT') %></h3>
+    <%= _('GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT|TEXT') %>
+  </div>
+

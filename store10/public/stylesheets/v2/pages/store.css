@@ -1,0 +1,54 @@
+#content {
+	padding: 0;
+	position: relative;
+	margin: 0 auto;
+	width: 930px;
+	background-color: #FFF;
+}
+
+#sidebar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 180px;
+	padding: 20px;
+}
+	#sidebar h2 {
+		margin: 0;
+		border-width: 0;
+	}
+	#sidebar ul {
+		margin: 0;
+		padding: 0;
+	}
+#sidebar #categories { list-style-type: none; padding: 0; border: 0 dotted #CCC; border-width: 1px 0 1px 0; }
+	#categories li { margin: 3px 0;display:block;z-index:2;}
+	#sidebar #categories a { text-decoration: none; display: block; padding: 2px 5px; }
+	#sidebar #categories a:hover, #sidebar #categories a.current { background-color: #666; color: #FFF; }
+#sidebar #back_link { display: block; text-decoration: underline; margin-top: 10px; font-size: 8pt; }
+	#content #sidebar #back_link:hover { color: #000; text-decoration: none; }
+
+#content #products {
+	padding: 15px 0 30px 225px;
+	background: transparent url(/skin/img/store/sidebar_bg.png) repeat-y;
+	height: auto !important;
+	height: 550px;
+	min-height: 550px;
+}
+
+#cart_loading {
+	position:	fixed;
+	right: 10px;
+	top: 10px;
+}
+/* CSS Hack for IE6, using "absolute" position instead of "fixed" */
+* html #cart_loading {
+	position: absolute;
+	right: 10px;
+}
+
+/* CSS for flash message */
+#flash * { font-size:1em; line-height:1em; }
+#flash { background-color:#3A3A3A; border-color: #333333; border-style:none solid solid; border-width:0px 2px 2px; left: 300px; padding:10px; position:absolute; width:400px; z-index:100; text-align: left; top: 0; }
+#flash_error * { margin:0pt auto; width:900px; }
+#flash_error { color:#FFFFFF; }

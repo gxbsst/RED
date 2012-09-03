@@ -1,0 +1,154 @@
+<%= javascript_include_tag "admin/preview.js" %>
+
+<div id="left">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li><%= link_to "back to downloads list", :action => "index" %></li>
+  </ul>
+  
+    <% unless @download.new_record? %>
+    <table class="list" cellpadding="0" cellspacing="0">
+      <colgroup>
+        <col style="width: 50%;"/>
+        <col style="width: 20%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 20%;"/>
+      </colgroup>
+      <tr>
+        <th>Display Version</th>
+        <th>PlatForm</th>
+        <th>Restrict</th>
+        <th>Release Date</th>
+      </tr>
+      <% @download.downloads.each do |item| %>
+        <tr class="<%= alternate %>">
+          <td><%= link_to item.display_version, :action => "edit_version", :id => item %></td>
+          <td><%=h item.platform.join(",") %></td>
+          <td><%=h item.restrict? ? 'Login' : 'Free' %></td>
+          <td><%=h item.release_date %></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="line"><&nbsp;</div>
+    <% end %>
+    <script type="text/javascript" charset="utf-8">
+    
+      function toggleMovieSize(status) {
+        status == 'true' ? $('movie_input_outer').show() : $('movie_input_outer').hide();
+      }
+      
+    </script>
+    <%= form_tag({:action => 'save', :id => @download.id}, :multipart => true) %>
+  
+  <!-- Download Begin -->
+  <div class="floatHalf">
+		<p style="width: 600px;">
+			<label for="download_type">Type: </label>
+		   <%= radio_button :download, :download_type, 'software', :checked => true, :onclick => 'toggleMovieSize("false");' %> Software
+		   <%= radio_button :download, :download_type, 'movie', :onclick => 'toggleMovieSize("true");' %> Movie
+		</p>
+		<% if @download.download_type == 'movie' %>
+		<p id = 'movie_input_outer' >
+		<% else %>
+		<p id = 'movie_input_outer' style="display: none;">
+		<% end %>
+		  <label>Movie Info</label>
+		  Size: <%= text_field :download, :movie_size, :size => 6, :class => 'textInput' %> Duration: <%= text_field :download, :movie_duration, :size => 6, :class => 'textInput' %>
+		</p>
+		<p>
+      <label for="download_title">Title:</label>
+      <%= text_field :download, :title, :class => 'textInput' %>
+      <%= error_message_on(:download, :title) %>
+    </p>
+ 		<p>
+			<label for="movie_url">Movie Link</label>
+			<%= text_field :download, :movie_url%>
+		</p>
+   
+    <p>
+      <label for="download_agreement_id">Agreement:</label>
+      <% agreements = Agreement.find(:all).map {|c| [c.name, c.id]} %>
+      <% agreements.unshift(["None", nil]) %>
+      <%= select :download, :agreement_id, agreements %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <p>
+      <label for="download_code">Code:</label>
+      <%= text_field :download, :code, :class => 'textInput' %>
+      <%= error_message_on(:download, :code) %>
+    </p>
+    
+    <p>
+      <label for="download_disable">Disable:</label>
+      <%= check_box :download, :disable %>
+      <strong>&nbsp;Hide this download at frontend.</strong>
+    </p>
+  </div>
+  
+  <P>
+    <label for="download_display_pattern">Display Pattern:</label>
+    <span class="info">All available variables: <em>$TITLE</em> <em>$VERSION</em> <em>$BUILD</em> <em>$DATE</em></span>
+    <%= text_field :download, :display_pattern, :class => 'textInput' %>
+  </P>
+
+  <p>
+    <label for="download_description">Description:</label>
+    <div class="info" id="textile-note" style="float:left;">
+      HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
+    </div>
+    <div style="float:right">
+      <input type="submit" value="Preview" name="commit" onclick="preview(this.form, '<%= params[:controller]%>');return false;"/>
+    </div>
+    <div style="clear:both;"></div>
+    <%= text_area :download, :description, :class => 'textArea' %>
+  </p>
+  
+  <p>
+    <label for="pic">Upload Picture</label>
+    <% if @download.new_record? %>
+      There are no picture currently.
+    <% else %>
+      <% if @download.picture_exists? %>
+        <%= image_tag @download.picture_url, :style => "display:block;" %>
+      <% else %>
+        <span style="color:red;">
+          If you don't see an picture it means the picture path is broken or doesn't exist any longer.
+        </span>
+      <% end %>
+    <% end %>
+  </p>   
+  
+  <p>
+    <%= file_field :download, :picture %>
+    <%= error_message_on :download, :picture %>
+    <span class="info" style="display:block;">
+      This will replace any existing picture.
+    </span>
+  </p>
+  <!-- Download End-->
+
+  <div class="line">&nbsp;</div>
+  <div style="float:left">
+    <%= submit_tag "Save", :class => 'button hundredfifty' %>
+  </div>
+  <% unless @download.new_record? %>
+    <div style="float:right">
+      <%= link_to "Delete", {:action => 'destroy', :id => @download}, :class => 'button hundredfifty', :confirm => "Are you sure?" %>
+    </div>
+  <% end %>
+  <%= end_form_tag %>
+
+  <div class='clear'></div>
+  <div id="preview-content" style="display: none"></div>
+</div>
+
+<div id="right">
+  <div class="clear">&nbsp;</div>
+  <% unless @download.new_record? %>
+    <%= link_to 'New Version', {:action => 'new_version', :id => @download}, :class => 'button hundredfifty' %>
+  <% end %>
+  <div class="clear">&nbsp;</div>
+</div>
+<div class="clear">&nbsp;</div>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Receipt for Order #<%= @order.order_number %></title>
+    <%= stylesheet_link_tag 'receipt', :media => 'all' %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <ul>
+          <li id="print"><a href="javascript:window.print()"><img src="/skin/img/store/print.png"  alt="print" />Print</a></li>
+          <li id="home"><a href="/"><img src="/skin/img/store/minilogo.png"  alt="print" />Red Home</a></li>
+        </ul>
+      </div>
+      <div id="outer">
+        <div id="inner">
+          <!-- start box1 -->
+          <div id="box1">
+            <div id="logo">
+              <img src="/skin/img/logo/logo.png"  alt="red digital cinema"  />
+            </div>
+            <div class="right">
+              <h3>RED Digital Cinema Camera Company</h3>
+              <p>
+                Phone: +1-949-206-7900<br />
+                FAX: +1-949-206-7990<br />
+                We're available monday - friday,<br />
+                9:00 AM - 5:00 PM Pacific Time (GMT-8) ... unless we are gone.
+              </p>
+              <p>
+                20291 Valencia Circle<br />
+                Lake Forest, CA 92630<br />
+                USA (<a href="http://maps.google.com/maps?f=q&hl=en&q=20291+Valencia+Circle+Lake+Forest,+CA+92653&layer=&sll=33.667567,-117.660723&sspn=0.011001,0.021758&ie=UTF8&z=16&om=1&iwloc=addr">Google Map</a>) (<a href="http://maps.yahoo.com/#mvt=m&lat=33.667656&lon=-117.660856&mag=3&trf=0&q1=20291%20Valencia%20Circle%20Lake%20Forest%2C%20CA">Yahoo Map</a>) (<a href="http://www.mapquest.com/maps/map.adp?latlongtype=internal&addtohistory=&latitude=m8ty%2br%2fmmTq5WMTrIwbaYg%3d%3d&longitude=%2f7UvXdg2mYZu0bMC%2byrt8Q%3d%3d&name=RED%20Digital%20Cinema&country=US&address=20291%20Valencia%20Cir&city=Lake%20Forest&state=CA&zipcode=92630&phone=949%2d206%2d7900&spurl=0&&q=RED%20Digital%20Cinema&qc=Nonclassified%20Establishments">Mapquest</a>)
+              </p>
+            </div>
+            <!-- end box1 -->
+          </div>
+          <div class="clearing"></div>
+          
+          <h1>Order No. <%= @order.order_number -%></h1>
+          <div id="customer_info">
+            <%
+              bill_to = @order.billing_address
+              ship_to = @order.shipping_address
+              payment = @order.account
+            %>
+            <div class="left">
+              <table >
+                <tr>
+                  <td valign="top">
+                    <strong>Bill to</strong>
+                  </td>
+                  <td>
+                    <%= payment.credit_card_payment? ? "#{payment.cardholder_name}<br />" : "#{bill_to.first_name} #{bill_to.last_name}<br />" %>
+                    
+                    <%= "#{bill_to.company}<br />" unless bill_to.company.blank? %>
+                    
+                    <%= "#{bill_to.address}<br />" unless bill_to.address.blank? %>
+                    
+                    <%= "#{bill_to.address_two}<br />" unless bill_to.address_two.blank? %>
+                    
+                    <%= bill_to.city unless bill_to.city.blank? %>
+                    
+                    <%= bill_to.state unless bill_to.state.blank? %>
+                    
+                    <%= bill_to.zip unless bill_to.zip.blank? %>
+
+                    <%= "<br />#{bill_to.country.name}" unless bill_to.country.blank? %>
+                  </td>
+                </tr>
+              </table>
+              <table>
+                <tr>
+                  <td>
+                    <strong>Paid via</strong>
+                  </td>
+                  <td>
+                    <% if payment.credit_card_payment? %>
+                      <span>Credit Card: <%= payment.safe_cc_number %></span>
+                    <% elsif payment.wire_transfer_payment? %>
+                      <span>Wire Transfer</span>
+                    <% end %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="right">
+              <table >
+                <tr>
+                  <td valign="top"><strong>Ship to</strong></td>
+                  <td>
+                    <%= "#{ship_to.first_name} #{ship_to.last_name}<br />" if !ship_to.first_name.blank? || !ship_to.last_name.blank? %>
+                    
+                    <%= "#{ship_to.company}<br />" unless ship_to.company.blank? %>
+                    
+                    <%= "#{ship_to.address}<br />" unless ship_to.address.blank? %>
+                    
+                    <%= "#{ship_to.address_two}<br />" unless ship_to.address_two.blank? %>
+                    
+                    <%= ship_to.city unless ship_to.city.blank? %>
+                    
+                    <%= ship_to.state unless ship_to.state.blank? %>
+                    
+                    <%= ship_to.zip unless ship_to.zip.blank? %>
+
+                    <%= "<br />#{ship_to.country.name}" unless ship_to.country.blank? %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!--end boxinner1-->
+          </div>
+          <div class="clearing"></div>
+          
+          <div id="box2">
+            <h3>Current Account Summary</h3>
+            <table id="line_items" cellpadding="0" cellspacing="0" border="0">
+              <thead>
+                <tr>
+                  <th class="th1">Name</th>
+                  <th>SKU</th>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @order.order_line_items.each do |item| %>
+                  <tr class="tr1">
+                    <td class="td1"><%= item.name %><%= " (DEPOSIT ONLY)" if item.payment_method == 'deposit' %></td>
+                    <td class="td2"><%= item.product.erp_product_item %></td>
+                    <td class="td3"><%= item.quantity %></td>
+                    <td class="td4"><%= number_to_currency(item.unit_price) %></td>
+                    <td class="td6"><%= number_to_currency(item.subtotal) %></td>
+                  </tr>
+                <% end %>
+                <tr class="tr1">
+                  <td class="td1" colspan="3"></td>
+                  <td class="td4">Subtotal</td>
+                  <td class="td6"><%= number_to_currency(@order_summary.subtotal) %></td>
+                </tr>
+                <tr class="tr1">
+                  <td class="td1" colspan="3"></td>
+                  <td class="td4">Shipping</td>
+                  <td class="td6"><%= number_to_currency(@order_summary.shipping_charge) %></td>
+                </tr>
+                <tr class="tr1">
+                  <td class="td7" colspan="4">Estimated Sales Tax <%= "*" if @order_summary.tax_rate != 0.0 %></td>
+                  <td class="td6"><%= number_to_currency(@order_summary.estimated_sales_tax) %></td>
+                </tr>
+                <tr class="tr1">
+                  <td class="td7" colspan="4">
+						<% if payment.credit_card_payment? %>
+                      		Payment In Process
+                    	<% elsif payment.wire_transfer_payment? %>
+                      		Payment Due
+                    	<% end %>
+				  </td>
+                  <td class="td6"><strong style="color: #e31601;"><%= number_to_currency(@order_summary.total_due) %></strong></td>
+                </tr>
+                <% if @order_summary.estimated_balance != 0.0 %>
+                  <tr class="tr1">
+                    <td class="td7" colspan="4">Estimated Balance</td>
+                    <td class="td6"><%= number_to_currency(@order_summary.estimated_balance) %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <dl>
+              <dt>&nbsp;</dt>
+              <dt><%= "&nbsp;&nbsp;*&nbsp;&nbsp; Estimated #{@order_summary.state} Sales Tax Rate of #{@order_summary.tax_rate}%." if @order_summary.tax_rate != 0.0 %></dt>
+              <dt>&nbsp;</dt>
+              <dt>&nbsp;</dt>
+            </dl>
+            <!--end box2-->
+          </div>
+          <!--end inner-->
+        </div>
+        <!--end outer-->
+      </div>
+      <!--end wrapper-->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in `ls -F|grep -v rn|grep -v ComingSoon.jpg`
+do
+  mv -f ComingSoon.jpg $i/small 
+done

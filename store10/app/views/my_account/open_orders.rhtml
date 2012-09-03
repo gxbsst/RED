@@ -1,0 +1,33 @@
+<%= javascript_include_tag "my_account/orders" %>
+
+<%= render :partial => 'sidebar' %>
+
+<%= form_tag( { :action => "commit_orders" }, :class => "notice" ) %>
+  <h3>
+    Want to make changes?
+  </h3>
+  <p>
+    Update your order quantity, delete items, and drag items between orders for any Item that isn't locked.
+    Once you've completed your changes, hit "Save Changes".
+    To add other items, click "ADD" to place a new order for those items via the RED.com Store.  
+    All orders placed under your email address will be accessible via "My Account".
+  </p>
+  <p>
+    <%= submit_tag(
+      "Save Changes",
+      :id => "save_change_button",
+      :disabled => (@customer.modified_orders.empty? ? "disabled" : nil),
+      :class => 'button'
+    ) %>
+    <%= button_to_function "Add", "window.open('#{url_for :controller => "store" }')", :class => 'button' %>
+    <%= link_to "Undo all changes", { :action => "undo_changes" }, :confirm => "Are you sure?\nClick [OK] to roll back all unsaved changes you had done in My Account" %>
+  </p>
+<%= end_form_tag %>
+
+<% @orders.each do |order| %>
+<div id="order_wrapper_<%= order.id %>">
+	<%= render :partial => "open_order", :object => order %>
+</div>	
+<% end %>
+
+<%= javascript_include_tag "my_account/open_order.js" %>

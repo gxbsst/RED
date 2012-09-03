@@ -1,0 +1,5 @@
+#content { background: url(/skin/img/faq/1.gif) 50px 50px no-repeat; padding-left: 300px; }
+
+#faqs {}
+	#faqs dt { margin-top: 2em; color: #FFF; font-weight: bold; font-size: 10pt; }
+	#faqs dd { margin: 0.5em 0; }

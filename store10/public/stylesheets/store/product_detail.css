@@ -1,0 +1,44 @@
+.clearing{clear:both;height:1%;}
+#content .pricelist p{margin:8px 0;}
+.pricelist{float:left;width:350px;margin-left:10px;}
+.imgouter{width:305px;float:left;text-align:center; margin-top: 5px; }
+#price{font-size:14px;}
+#content #price span{color:black;}
+#status_message{font-size:14px;}
+#content #status_message span{color:black;}
+#content #statisfaction{color:#444482;text-decoration:underline;font-size:13px;}
+#content .pricelist #add_to_cart{margin-top:35px;}
+#discription_outer{width:620px;border:1px solid #D7D7D7;background-color: #ECECEC;float:left;padding:10px;}
+#pages_list h3{margin-bottom:0;margin-top:0;font-size:14px;}
+.box {margin:10px 0;zoom:1;padding-bottom:1px;border-top:1px solid #CFCFCF;}
+#box1, #box3{background:url("/skin/img/store/detail_box_bg.png") left top repeat-x;}
+#pages_list  #box1{border-top:3px solid #CFCFCF;}
+#pages_list .box img{float:left;margin-right:10px;margin-top:5px;margin-left:3px;margin-bottom:10px;}
+#pages_list ul {list-style-type: none;}
+#pages_list p{text-align:right;margin-top:-5px;margin-bottom:2px;}
+#pages_list .box p a{padding-right:10px;background:url("/skin/img/store/learnmore.jpg") right center no-repeat;}
+
+
+#wraper #content div.pop_enabled a.handler {
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+}
+#wraper #content div.pop_enabled span{ 	font-size: 14px; }
+#wraper #content div.pop_enabled a:hover{color:red;}
+
+div.pop_enabled {
+	margin: 5px 0;
+}
+ul.pop_layer {
+	background-color: #EEE;
+	list-style: none;
+	padding: 5px;
+	line-height: 1.5em;
+	font-size: 8pt;
+	margin: 5px 0 15px 0;
+}
+
+#quantity , #price, #status_message{ font-size: 14px; }
+
+#content handler a{  font-size: 14px; }

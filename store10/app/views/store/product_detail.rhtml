@@ -1,0 +1,124 @@
+<%= javascript_include_tag 'prototype','effects' %>
+<%= javascript_include_tag  "highslide/highslide.js" %>
+<script type="text/javascript">
+	/* Highslide Configurations */
+	hs.graphicsDir = '/javascripts/highslide/graphics/';
+	hs.outlineType = 'rounded-white';
+	hs.showCredits = false;
+</script>
+
+<%= stylesheet_link_tag "highslide" %>
+
+<!-- Picture layers of Highslide -->
+<div class="imgouter">
+  <%
+    image_url_full = url_for_file_column('image', 'path')
+    image_url_small = url_for_file_column('image', 'path', 'big')
+  -%>
+	
+	<a href="<%= image_url_full %>" class="additional" onclick="return hs.expand(this);">
+	  <%= image_tag(image_url_small, :id => "product_image_#{@product.id}", :align => 'left', :class => 'productImage') %>
+	</a>	
+	<br style="clear:both;"/>	
+	<a href="<%= image_url_full %>" class="additional" onclick="return hs.expand(this);"><img src="/skin/img/store/zoom_in.png" alt="" class="" />Zoom in</a>
+</div>
+
+<%= form_remote_tag(
+  :url => { :action => 'add_to_cart_ajax', :id => @product },
+  :before => "if ($('cart').opened == false) toggleCart();toggleLoading(true)",
+  :complete => "new Effect.Highlight('itemsContainer-outer');toggleLoading(false)",
+  :update => 'cart',
+  :html => { :class => "product" }
+) %>
+	<div class="pricelist">
+		<h1><%= @product.name %></h1>
+		<p id="price">
+		  <strong>Price: </strong>
+		  <span><%= number_to_currency(@product.price) %> </span>
+		</p>
+		<input type="hidden" name="id" value="<%= @product.id %>" />
+
+		<% unless @customized_template || Product::STICKER_ERP_PRODUCT_ITEMS.include?(@product.erp_product_item) %>
+		<div class="pop_enabled">
+			<a href="#" onclick="$('pop_deposit').toggle();return false;" class="handler">
+				<strong>Deposit: </strong>
+			</a>	
+			<span>
+				<span style="color:black"><%= number_to_currency @product.deposit, :unit => '$' %></span>
+				<span style="color:gray">(<%= number_to_percentage(@product.deposit * 100 / @product.price, :precision => 0) %>)</span>
+			</span>
+			<ul class="pop_layer" id="pop_deposit" style="display: none;">
+				<li>- 10% deposit required to secure your order.</li>
+				<li>- Deposit accepted online via Credit Card or Wire Transfer.</li>
+			</ul>
+		</div>
+		<% end %>
+		
+		<%= render :file => "store/customized/#{@customized_template}" unless @customized_template.blank? %>
+		
+		<p id="quantity"><strong>Quantity:  </strong><%= select_tag "qty", options_for_select(%w{1 2 3 4 5 6 7 8 9})  %></p>
+
+		<p id="add_to_cart">
+			<input type="hidden" name="payment_method" id="payment_method_<%= @product.code %>" value="" />
+			<% if @product.accept_deposit == true %>
+			<input class="product_button" type="image" onclick="$('payment_method_<%= @product.code %>').value = 'deposit'" src="/skin/img/store/deposit_icon_b.png"  title="Place Deposit"/>
+			<% end %>
+			<% if @product.accept_buy_now  %>
+			<input class="product_button" type="image" onclick="$('payment_method_<%= @product.code %>').value = 'buy_now'" src="/skin/img/store/detail_add_to_cart.png" title="Buy Now" />
+			<% end %>
+		</p>
+	</div>
+<%= end_form_tag %>
+
+<div class="clearing"></div>
+<div id="product_description">
+	<h2>Product Description</h2>
+	<div id="discription_outer">
+		<%= textilize(@product.description) %>
+	</div>
+	<div class="clearing"></div>
+
+	<% if @product.code == "101001" %>
+	<div id="pages_list">
+		<div class="box" id="box1">
+			<a href="#"> <img src="/skin/img/store/mysterium_thumbnail.jpg" alt="" class="" /></a>
+			<h3>Mysterium&trade;</h3>
+			<ul >
+				<li>- 4520 X 2540 pixel (12-megapixel) CMOS Sensor </li>
+        <li>- 4K (up to 30 fps), 3K (up to 60 fps), 2K (up to 120 fps)</li> 
+        <li>- Variable Compression - REDCODE 28 and REDCODE 36 </li>
+				<li>- Greater than 66db Signal to Noise Ratio</li>
+			</ul>
+		</div>
+		<div class="box" id="box2">
+			<a href=""><img src="/skin/img/store/format_option_thumbnail.jpg" alt=""  /></a>
+			<h3>Format Options</h3>
+			<ul >
+				<li>- 4096 X 2304 (16:9), 4096 X 2048 (2:1), 4K (Anamorphic)</li> 
+				<li>- 3072 X 1728 (16:9), 3072 X 1536 (2:1), 3K (Anamorphic)</li>
+				<li>- 2048 X 1152 (16:9), 2048 X 1024 (2:1), 2K (Anamorphic)</li>
+				
+			</ul>
+		</div>
+		<div class="box" id="box3">
+			<a href="#"> <img src="/skin/img/store/redcine_thumbnail.jpg" alt=""  /></a>
+			<h3>REDCINE&trade;</h3>
+			<ul >
+				<li>- Shoot 4K, 3K and 2K REDCODE RAW</li> 
+				<li>- Load footage into REDCINE do 1st light correction</li>
+				<li>- Export to any number of output options</li>
+			</ul>
+		</div>
+		<div class="box" id="box4">
+			<a href="#"><img src="/skin/img/store/tech_spec_thumbnail.jpg" alt=""  /></a>
+			<h3>Tech Specs</h3>
+			<ul >
+				<li>- 12 Megapixel Mysterium&trade; sensor</li> 
+				<li>- Dynamic Range > 66dB</li>
+				<li>- Depth of Field equivalent to 35mm Cine Lenses</li>
+			</ul>
+		</div>
+	</div>
+	<% end %>
+	
+</div>

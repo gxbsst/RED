@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>Ax Inventories Variance Report</title>
+  <style type="text/css">
+    body { font-family: "Lucida Grande",Geneva,Arial,Verdana,sans-serif; font-size: 9pt; }
+    table { border: thin solid black; border-collapse: collapse; }
+    tr.mark { background-color: yellow; }
+    th, td { border: thin dotted gray; padding: 5px; }
+    th { text-align: left; }
+    td { width: 300px; }
+  </style>
+</head>
+
+<body>
+
+<%= '<h2>New Inventories</h2>' unless @new_items.empty? %>
+
+<% @new_items.each do |item| %>
+  <table>
+    <tr>
+      <th>Item Id</th>
+      <td><%=h item.item_id %></td>
+    </tr>
+    <tr>
+      <th>Item Name</th>
+      <td><%=h item.item_name %></td>
+    </tr>
+    <tr>
+      <th>Item Price</th>
+      <td><%=h item.item_price %></td>
+    </tr>
+    <tr>
+      <th>Dim Group Id</th>
+      <td><%=h item.dim_group_id %></td>
+    </tr>
+    <tr>
+      <th>Item Group Id</th>
+      <td><%=h item.item_group_id %></td>
+    </tr>
+    <tr>
+      <th>Model Group Id</th>
+      <td><%=h item.model_group_id %></td>
+    </tr>
+    <tr>
+      <th>Pct Deposit</th>
+      <td><%=h item.pct_deposit %></td>
+    </tr>
+    <tr>
+      <th>Amt Deposit</th>
+      <td><%=h item.amt_deposit %></td>
+    </tr>
+    <tr>
+      <th>Shipping Points</th>
+      <td><%=h item.shipping_points %></td>
+    </tr>
+  </table>
+<% end %>
+    
+<%= '<h2>Removed Inventories</h2>' unless @removed_items.empty? %>
+
+<% @removed_items.each do |item| %>
+  <table>
+    <tr>
+      <th>Item Id</th>
+      <td><%=h item.item_id %></td>
+    </tr>
+    <tr>
+      <th>Item Name</th>
+      <td><%=h item.item_name %></td>
+    </tr>
+    <tr>
+      <th>Item Price</th>
+      <td><%=h item.item_price %></td>
+    </tr>
+    <tr>
+      <th>Dim Group Id</th>
+      <td><%=h item.dim_group_id %></td>
+    </tr>
+    <tr>
+      <th>Item Group Id</th>
+      <td><%=h item.item_group_id %></td>
+    </tr>
+    <tr>
+      <th>Model Group Id</th>
+      <td><%=h item.model_group_id %></td>
+    </tr>
+    <tr>
+      <th>Pct Deposit</th>
+      <td><%=h item.pct_deposit %></td>
+    </tr>
+    <tr>
+      <th>Amt Deposit</th>
+      <td><%=h item.amt_deposit %></td>
+    </tr>
+    <tr>
+      <th>Shipping Points</th>
+      <td><%=h item.shipping_points %></td>
+    </tr>
+  </table>
+<% end %>
+
+<%= '<h2>Changed Inventories</h2>' unless @changed_items.empty? %>
+
+<% @changed_items.each do |item| %>
+  <table>
+  <tr>
+    <th></th>
+    <th>Original</th>
+    <th>Current</th>
+  </tr>
+  <tr>
+    <th>Item Id</th>
+    <td><%=h item.first.item_id %></td>
+    <td><%=h item.last.item_id %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.item_name != item.last.item_name %>>
+    <th>Item Name</th>
+    <td><%=h item.first.item_name %></td>
+    <td><%=h item.last.item_name %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.item_price != item.last.item_price %>>
+    <th>Item Price</th>
+    <td><%=h item.first.item_price %></td>
+    <td><%=h item.last.item_price %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.dim_group_id != item.last.dim_group_id %>>
+    <th>Dim Group Id</th>
+    <td><%=h item.first.dim_group_id %></td>
+    <td><%=h item.last.dim_group_id %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.item_group_id != item.last.item_group_id %>>
+    <th>Item Group Id</th>
+    <td><%=h item.first.item_group_id %></td>
+    <td><%=h item.last.item_group_id %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.model_group_id != item.last.model_group_id %>>
+    <th>Model Group Id</th>
+    <td><%=h item.first.model_group_id %></td>
+    <td><%=h item.last.model_group_id %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.pct_deposit != item.last.pct_deposit %>>
+    <th>Pct Deposit</th>
+    <td><%=h item.first.pct_deposit %></td>
+    <td><%=h item.last.pct_deposit %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.amt_deposit != item.last.amt_deposit %>>
+    <th>Amt Deposit</th>
+    <td><%=h item.first.amt_deposit %></td>
+    <td><%=h item.last.amt_deposit %></td>
+  </tr>
+  <tr <%= "class='mark'" if item.first.shipping_points != item.last.shipping_points %>>
+    <th>Shipping Points</th>
+    <td><%=h item.first.shipping_points %></td>
+    <td><%=h item.last.shipping_points %></td>
+  </tr>
+  </table>
+<% end %>
+
+</body>
+</html>

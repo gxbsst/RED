@@ -1,0 +1,98 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/film_clips/index' %>
+
+  <%= javascript_include_tag 'tooltips/mootools' %>
+  <%= javascript_include_tag 'tooltips/tooltip' %>
+   <link rel="stylesheet" href="/javascripts/tooltips/styles/default/style.css" type="text/css" />
+     <!--[if lte IE 7]> 
+          <link href="/javascripts/tooltips/styles/default/iehacks.css" media="screen" rel="Stylesheet" type="text/css" />
+     <![endif]-->
+  <script type="text/javascript">
+  function show_description(row, col){ 
+    var delay = 0;
+    if(!window.current_description){
+      window.current_description=[];
+    }
+    if (window.current_description[row] != null) {
+      if ($(getDescriptionId(window.current_description[row])).style.display !="none"){
+        new Effect.SlideUp(getDescriptionId(window.current_description[row]),{duration: 0.1})
+
+        $(getImageId(window.current_description[row])).style.border="1px solid #444";
+        $(getImageId(window.current_description[row])).style.backgroundColor="#000";
+        delay=0.1;
+        //Not the same row and col
+        if(window.current_description[row][1] != col){
+          new Effect.BlindDown(getDescriptionId([row,col]),{duration: 0.3,delay: delay})
+
+          $(getImageId([row,col])).style.border="1px solid #BFBFBF";
+          $(getImageId([row,col])).style.backgroundColor="#BFBFBF";
+
+        }
+      }
+      else{
+        new Effect.BlindDown(getDescriptionId([row,col]),{duration: 0.3,delay: delay});
+        $(getImageId([row,col])).style.border="1px solid #BFBFBF";
+        $(getImageId([row,col])).style.backgroundColor="#BFBFBF";
+
+      }
+      window.current_description[row] = [row, col];
+    }
+    else{
+      window.current_description[row] = [row, col];
+
+      //alert("ddd" + window.current_description[row]!=null);
+      new Effect.BlindDown(getDescriptionId(window.current_description[row]), { duration: 0.3 });
+      $(getImageId(window.current_description[row])).style.border="1px solid #BFBFBF";
+      $(getImageId(window.current_description[row])).style.backgroundColor="#BFBFBF";
+    }
+  }
+  function getDescriptionId(ary) {
+    return 'description_' + ary[0] + ary[1];
+  }
+  function getImageId(ary){
+    return 'img' + ary[0] + ary[1]
+  }
+  </script>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1>SHOT ON RED</h1>
+<% end %>
+
+<div>
+  </div>
+
+  <p id="still_gallery_description"><%= _('GALLERY|STILL_GALLERY|DESCRIPTION') %></p>
+  <div id="shot_on_red">
+    <% row = 1; @film_clips.each_slice(5) do |film_clips| %>
+      <% film_clips.each_with_index do |film_clip, index| %>
+          <%= link_to ( image_tag film_clip.thumbnail.url(:small), :id => "tooltip-#{row}#{index + 1}", :size => '134x193'), :action => "show", :id => film_clip %>
+        <script type="text/javascript">new ToolTip('tooltip-<%= "#{row}#{index + 1}" %>', '<% unless film_clip.title.blank? %><h3><%= film_clip.title %> (<%= film_clip.film_type %>)</h3><% end %><% unless film_clip.producer.blank? %><strong>Producer: </strong> <%= film_clip.producer %><br /><% end %> <% unless film_clip.director.blank? %><strong>Director: </strong> <%= film_clip.director %><br /><% end %> <% unless film_clip.dp.blank? %><strong>DP: </strong> <%= film_clip.dp %><br /><% end %><% unless film_clip.release_date.blank? %><strong>Release Date: </strong> <%= film_clip.release_date %><br /><% end %><% unless film_clip.trailer_url.blank? %><strong>Trailer: </strong> <%= link_to film_clip.trailer_url_host, film_clip.trailer_url %><br /><% end %><% unless film_clip.summary.blank? %><%= escape_javascript(truncate( film_clip.summary, 100, "...")) %><% end %>', { mode: 'cursor', display: 'inline', width: 250, style: 'default', sticky: 0 });</script>
+        
+      <% end %>
+      
+    <% row += 1; end %>
+    
+    <div style="clear:both;"></div>
+    
+    <p align="right">
+      <% if params[:action] != 'more' %>
+        <%= link_to 'More', :action => 'more' %>
+      <% else %>
+        <%= link_to 'Upload your movie', :action => 'new' %>
+      <% end %>
+    </p>
+    
+      <!-- PAGINATION -->
+      <p id="pagenation"><%= link_to(h('< Previous'), {:page => @film_pages.current.previous}) + " | " if @film_pages.current.previous %>
+      <%= pagination_links(@film_pages, :window_size => 10) %>
+      <%= " | " + link_to(h('Next >'), {:page => @film_pages.current.next}) if @film_pages.current.next %></p>
+      <!-- PAGINATION -->
+    </div>
+
+<div style="clear:both;"></div>
+  <div id="help_torrent" class="transparent-50">
+    <h3><%= _('GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT') %></h3>
+    <%= _('GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT|TEXT') %>
+  </div>
+

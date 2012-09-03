@@ -1,0 +1,12 @@
+<%= javascript_include_tag "my_account/orders" %>
+
+<%= render :partial => 'sidebar' %>
+
+<% if @orders.empty? # Display message if no order history under this account %>
+<div class="notice">
+  <h3>ORDER HISTORY IS EMPTY</h3>
+  <p>Orders with items that have not yet been shipped will remain on the Open Orders tab</p>
+</div>
+<% end %>
+
+<%= render :partial => "sales_order", :collection => @orders %>

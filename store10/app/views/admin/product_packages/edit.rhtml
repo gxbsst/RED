@@ -1,0 +1,32 @@
+<div id="left">
+	<h1>Editing Product Package Properties</h1>
+	<%= render :partial => "edit_package" %>
+	
+	<h1>Sub Items</h1>
+	
+	<%= form_tag({ :action => "append_node", :id => @package.id }, :id => "append_node", :class => "show_product") %>
+		<label for="">Append Node</label>
+		
+		<select name="node_type" id="node_type" onchange="this.parentNode.className='show_'+this.value;">
+			<option value="product" selected="selected">Product</option>
+			<option value="package">Package</option>
+		</select>
+		
+		<input type="text" name="new_package_name" id="new_package_name" value="Enter a package name..." />
+		
+		<select name="product_id" id="product_id">
+		<%=
+			options_for_select Product.find(:all, :conditions => "code <> ''", :order => "name").collect{ |product| [product.name, product.id] }
+		%>
+		</select>
+		
+		<input type="submit" value="Append" class="save_button" />
+	<%= end_form_tag %>
+	
+	<%= render :partial => "child_nodes", :object => @package.product_package_nodes %>
+</div>
+
+<div id="right">
+</div>
+
+<div class="clear"></div>

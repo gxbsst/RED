@@ -1,0 +1,22 @@
+login: &login
+  encoding: utf8
+  adapter: mysql
+  username: root
+  password: 
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  database: store
+  <<: *login
+
+test:
+  database: store_test
+  <<: *login
+
+production:
+  database: store
+  <<: *login
+
+mail:
+  database: store_mail
+  <<: *login

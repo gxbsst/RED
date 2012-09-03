@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>RED Digital Cinema</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="<%= @base %>" />
+    <style type="text/css">
+      #wrapper #content a {
+        color: #FFF;
+        text-decoration: underline;
+      }
+      #wrapper #content a:hover {
+        color: #F63;
+      }
+      code {
+        color: #FF0;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  
+  <body style="font-family: Trebuchet MS, Lucida Grande, Arial; font-size: 10pt; background-color: #000; color: #CCC">
+    <div id="wrapper" style="margin: auto 50px;">
+      
+      <div id="header" style="height: 86px; background: url(<%= @base %>/images/mailer/prepare_delivery/head02.png) repeat-x bottom; overflow: hidden;">
+        <a href="<%= @base %>" title="RED Digital Cinema" id="logo" style="float: left;">
+          <img src="<%= [@post_back_url, @mail.token].join("/") %>" width="237" height="86" alt="RED Logo" border="0" />
+        </a>
+        <img src="<%= @base %>/images/mailer/prepare_delivery/head03.png" width="233" height="86" alt="Camera" class="background_camera" style="float: right;" />
+      </div>
+      
+      <div id="content" style="margin: 1em auto;">
+        <%= RedCloth.new( @mail.content, [:no_span_caps, :hard_breaks] ).to_html %>
+      </div>
+      
+    </div>
+  </body>
+</html>

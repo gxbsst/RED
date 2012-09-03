@@ -1,0 +1,27 @@
+<h1>Listing warranty_registrations</h1>
+
+<table>
+  <tr>
+  <% for column in WarrantyRegistration.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for warranty_registration in @warranty_registrations %>
+  <tr>
+  <% for column in WarrantyRegistration.content_columns %>
+    <td><%=h warranty_registration.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => warranty_registration %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => warranty_registration %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => warranty_registration }, :confirm => 'Are you sure?', :method => :post %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @warranty_registration_pages.current.previous } if @warranty_registration_pages.current.previous %>
+<%= link_to 'Next page', { :page => @warranty_registration_pages.current.next } if @warranty_registration_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New warranty_registration', :action => 'new' %>

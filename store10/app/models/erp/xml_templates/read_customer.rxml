@@ -1,0 +1,16 @@
+doc.readCustomers :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/Customers" do
+  doc.DocumentContext do
+    doc.MessageId( UUID.random_create.to_s )
+    doc.SourceEndpointUser( AppConfig.SOAP_USER )
+    doc.SourceEndpoint( AppConfig.SOAP_SOURCE_ENDPOINT )
+    doc.DestinationEndpoint( AppConfig.SOAP_DEST_ENDPOINT )
+  end
+  doc.EntityKey :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/EntityKey" do
+    doc.KeyData do
+      doc.KeyField do
+        doc.Field "AccountNum"
+        doc.Value @customer.account_num
+      end
+    end
+  end
+end

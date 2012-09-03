@@ -1,0 +1,66 @@
+<style type="text/css" media="screen">
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<div id="left">
+  <h1>Uploaded Film Clips</h1>
+  
+  <table id = "film_clips" class="list" cellpadding="0" cellspacing="0">
+    <colgroup>
+      <col width="150" align="center" />
+      <col />
+    </colgroup>
+    <tr>
+      <th>Thumbnail</th>
+      <th>Details</th>
+    </tr>
+  
+    <% @film_clips.each do |film_clip| %>
+    <tr class="<%= alternate %>">
+      <td class="<%= film_clip.authorized? ? 'authorized' : '' %>">
+        <%= image_tag film_clip.thumbnail.url(:small) %>
+      </td>
+      <td>
+        <ol>
+          <%=
+            ['title', 'studio', 'producer', 'director', 'camera_sn'].map do |field|
+              content_tag('li', "<strong>#{field.titleize}</strong>: #{film_clip.send(field)}")
+            end
+          %>
+        </ol>
+        
+        <p align="right">
+          <%= link_to 'Edit', :action => 'edit', :id => film_clip %>
+          <%= link_to 'Delete', :action => 'destroy', :id => film_clip %>
+          <%= link_to 'Authorize', :action => 'authorize', :id => film_clip unless film_clip.authorized? %>
+        </p>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  
+  <p class="big">
+    <strong>Go to page:</strong>
+    <%= pagination_links @film_clip_pages, :windows_size => 10 %>
+    <br />
+    <span class="info"><%= "(Showing #{@film_clip_pages.items_per_page} of #{@film_clip_pages.item_count} items total.)" %></span>
+  </p>
+</div>
+
+<div id="right">
+  <h2>Page Layout</h2>
+  <p>
+    Click this button to manage the of all film clips those are set to "sticked"
+    and will be shown on the list page.
+  </p>
+  <p>
+    <%= link_to "Manage Layout", '#', :class => 'button hundredfifty',
+      :onclick => "showPopWin('#{url_for :action => 'order'}', 400, 400, null, true)" %>
+  </p>
+</div>
+
+<div class="clear"></div>

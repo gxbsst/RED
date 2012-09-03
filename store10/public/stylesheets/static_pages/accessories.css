@@ -1,0 +1,4 @@
+h1 { display: none; }
+#wraper { background: url(/skin/img/accessories/hero.jpg) center 40px no-repeat; }
+#content { margin-top: 350px; }
+	#content img { margin: 10px; }

@@ -1,0 +1,27 @@
+<div id="right">
+  <h1>Delete Entity</h1>
+  <p>
+    If this entity is no longer be used (removed from all places that used),
+    click the below button to mark it as "deleted". Deleted entity will not
+    appear in entities list for ALL languages.
+  </p>
+  <%= form_tag :action => "delete", :id => @revision.entity %>
+    <%= submit_tag 'Delete This Entity', :class => 'button hundredthirty' %>
+  <%= end_form_tag %>
+
+  <h1>Create Task</h1>
+  <% form_for(
+    :task,
+    :url => {:action => "create_task", :id => @revision.entity}
+  ) do |f| %>
+    <label>
+      Task Name:
+      <%= f.text_field :name, :class => "textInput" %>
+    </label>
+    <label>
+      Description:
+      <%= f.text_area :description, :rows => 5, :class => "textArea" %>
+    </label>
+    <%= submit_tag "Create", :class => "button hundred" %>
+  <% end %>
+</div>

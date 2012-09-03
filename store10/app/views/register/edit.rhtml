@@ -1,0 +1,9 @@
+<h1>Editing warranty_registration</h1>
+
+<% form_tag :action => 'update', :id => @warranty_registration do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @warranty_registration %> |
+<%= link_to 'Back', :action => 'list' %>

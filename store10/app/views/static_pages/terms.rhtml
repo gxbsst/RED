@@ -1,0 +1,6 @@
+<% content_for(:heading) do %>
+  <h1><%= _('TERMS|TITLE') %></h1>
+<% end %>
+<div class="text-content justify">
+  <%= textilize(@agreement.content) %>
+</div>

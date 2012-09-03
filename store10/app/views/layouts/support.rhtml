@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><%= page_title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="<%= _('GLOBAL|WEBSITE_DESCRIPTION') %>" />
+	<meta name="keywords" content="<%= _('GLOBAL|WEBSITE_KEYWORDS') %>" />
+	<!-- Google Analytics -->
+	<%= javascript_include_tag 'urchin', 'application' %>
+
+	<script type="text/javascript">
+		_uacct = "UA-666652-2";
+		urchinTracker();
+	</script>
+
+	<%= stylesheet_link_tag 'global' %>
+	<%= stylesheet_if_exists params[:lang], "#{params[:controller]}/#{params[:controller]}", "#{params[:controller]}/#{params[:action]}" %>
+	<!--[if lt IE 7]>
+	<%= stylesheet_link_tag 'ie_fix' %>
+	<%= javascript_include_tag 'pngfix' %>
+  <![endif]-->
+    <link rel="alternate" type="application/rss+xml" href="/rss/recon" title="recon" />
+</head>
+
+<body>
+	<div id="wraper">
+		<div id="header">
+			<%= link_to image_tag('/skin/img/store/logo.png', :size => '95x95', :alt => 'Logo'),
+					{ :lang => params[:lang] }, :title => _('GLOBAL|LOGO_LINK_HINT'), :id => 'logo' %>
+			<h1><%= link_to _('SUPPORT|TITLE'), { :action => 'index' }, :title => 'Back to support home' %></h1>
+			<%= render :partial => 'static_pages/global/main_navigation' %>
+			<span id="login_status">
+			<% if session[:web_user] %>
+				<%= _('SUPPORT|LOGIN_STATUS|WELCOME') %>, <em><%= h "#{session[:web_user].name} <#{session[:web_user].email_address}>" %></em>
+				<%= link_to _('GLOBAL|SIGN_OUT'), :controller => 'account', :action => 'logout' %>
+			<% else %>
+				<%= link_to _('GLOBAL|SIGN_IN'), :controller => 'account', :action => 'login' %>
+			<% end %>
+			</span>
+		</div>
+
+		<div id="content">
+			<%= @content_for_layout %>
+			<div style="clear: both;"></div>
+		</div>
+
+		<%= render :partial => "static_pages/global/footer" %>
+	</div>
+</body>
+</html>

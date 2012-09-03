@@ -1,0 +1,69 @@
+img{border:0;}
+html { background-image: url(/images/common/background.jpg); background-attachment: fixed; height: 100%;margin-bottom:1px; }
+body, input, select, textarea { font-family: "Lucida Grande", Geneva, Arial, Verdana, sans-serif; font-size: 9pt; }
+body { color: #999; margin: 0; background: url(/images/common/bgshadow.png) center center repeat-y; min-height: 100%; line-height: 1.5em; }
+ul, form { margin: 0; }
+h1, h2 { margin: 0.5em auto; line-height: 1.5em; }
+h1 { color: #DDD; font-weight: normal; font-size: 18pt; }
+h2 { color: #FFF; font-weight: normal; font-size: 14pt; }
+.float_left { float: left; }
+
+ul.navigation { list-style-type: none; }
+	ul.navigation li { display: inline; }
+
+a { text-decoration: none; }
+a img { border: 0; }
+
+#message { margin: 5px 20px; color: yellow; font-weight: bold; }
+
+#navigation a { color: #FFF; }
+#navigation a:hover { color: #FFF; text-decoration: underline; }
+
+#footer_navigation a { color: #CCC; }
+#footer_navigation a:hover { color: #FFF; text-decoration: underline; }
+
+#content a { color: #FFF; text-decoration: underline; }
+#content a:hover { color: #F93; text-decoration: underline; }
+
+#wraper { width: 930px; margin: auto; position:relative;}
+
+#header { height: 165px; background: url(/images/menu/menu_bg.png) top repeat-x; }
+	#header #logo { position:absolute; top:10px; left:10px; }
+	#header #navigation { float: right; }
+		#header #navigation li { background: transparent url(/images/menu/menu_line.png) no-repeat scroll left top; padding: 0 0 0 3px; float: left; }
+			#header #navigation li a { padding: 0 10px; height: 70px; line-height: 35px; display: block !important; display: inline-block;text-decoration:none; }
+			#header #navigation li a:hover, #header #navigation li a.current { background: transparent url(/images/menu/menu_hover_bg.png) repeat-x; }
+
+#content { clear: both; margin: 5px 0; padding-left:10px;padding-right:10px;}
+	#content p { line-height: 1.5em; margin: 1em auto; }
+
+.table { line-height: 2em; color: #999; }
+	.table th, .table td { background-color: #141414; padding: 0 5px; vertical-align: top; }
+	.table th { font-weight: normal; color: #FFF; text-align: right; }
+		.table td span { float: left; width: 120px; }
+
+#footer { color: #999; clear: both; margin-top: 30px; padding:10px 10px 4px; border-top: 2px solid #141414; }
+	#footer p { margin: 5px 0; }
+	#footer #footer_navigation { list-style-position: inside; padding: 0; text-align: center; }
+		#footer #footer_navigation li { display: inline; }
+		#footer #footer_navigation a { margin: 0 3px; }
+		#footer #footer_navigation a:hover { color: #FFF; }
+#select_lang{text-align:center;}
+#select_lang li{list-style-type:none;display:inline;}
+#select_lang li a{margin:0 10px;cursor:pointer;}
+
+#footer p.copyright {
+	text-align: center;
+	color: #666;
+	font-size: 8pt;
+	margin: 10px 0 0 0;
+}
+
+#footer #tip { text-align: left; background: url(/skin/img/common/lol.jpg) no-repeat center center; height: 33px; color: #F5F5F5; font-size: 11px; line-height: 120%; padding-left: 270px; padding-top: 4px; margin: 5px 0;}
+#footer p.copyright a {
+	color: #666;
+	text-decoration: underline;
+}
+p.copyright a:hover {
+	color: #FFF;
+}

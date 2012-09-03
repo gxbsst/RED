@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>RED DAY Invitation</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF; background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table><!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;" >
+        <h3><%= "#{@queue.name} -" %></h3>
+        <p>On behalf of everyone at RED, I would like to invite you to RED DAY!  This is an exclusive invitation for camera reservation holders #<%= @queue.class::Delivery_range_begin %> - #<%= @queue.class::Delivery_range_end %>.  At RED DAY, you will experience hands-on training and information sessions conducted by the RED gurus who know RED inside and out.  You will also have the opportunity to purchase additional RED accessories.</p>
+        <p>RED DAYs will be held at the RED headquarters on <strong>March 27 and 28 as well as April 3 and 4</strong>.  Please RSVP back to <a style="color:#FFFFFF;font-weight:bold;text-decoration: underline;" href='mailto:orders@red.com'>orders@red.com</a> by the end of the day on Wednesday, <strong>March 12</strong>, and indicate if you will be attending RED DAY and, if so, what are your three session preferences (in order) from the below time slots: </p>
+        <ul style="padding-left:38px;">
+          <li>March 27, 8am-12pm PT</li>
+          <li>March 28, 8am-12pm PT</li>
+          <li>April 3, 8am-12pm PT</li>
+          <li>April 4, 8am-12pm PT</li>
+        </ul>
+        <p>We will get back to you with what session you have been assigned to and we will try to accommodate your preferences as much as possible.  By the end of the day on Friday, <strong>March 14</strong>, we email you the exact session you will be attending.</p>
+        <p>To protect the intimate nature of the sessions, there will be a limit of (1) attendee per camera in the range of #<%= @queue.class::Delivery_range_begin %> to #<%= @queue.class::Delivery_range_end %>.  In addition, we will limit total attendees per session to (25) to ensure everyone has ample access to RED staff and equipment.</p>
+        <p>At RED DAY, you will attend demonstrations on hardware and on workflow.  Then, you will be able to get hands-on Q&A with RED staff at hardware and workflow bars.  We will also have a retail area if there are any accessories you may wish to purchase.</p>
+        <p>As you can imagine, security is at a premium at a RED DAY.  We respectfully ask that you do not bring any delivered RED product to the event.  In addition, we will not be set up for returns or exchanges at RED DAY.  You will have to reach out through RED.com or via telephone to have our customer support team assist you with that at some other time.  We will have plenty of demo equipment out for you to experiment with and we do not want your equipment co-mingling with ours. </p>
+        <p>If you have not received your camera quite yet, we still invite you to attend RED DAY to see the camera in action and to be able to be part of this exclusive opportunity to meet with RED.  To protect the exclusivity of RED DAY, we remind you to please not discuss the event on the boards or share this event information with other reservation holders.</p>
+        <p><br/>Thank you for your loyal support and patience – you are truly part of the revolution,</p>
+        <p>
+          <br/>
+          -RED BOMB SQUAD<br/>
+          <a href="mailto:orders@red.com" style="color: rgb(255, 255, 255); font-weight: bold; text-decoration: underline;">orders@red.com</a>
+        </p>
+      </div>
+      <!-- div#content end -->
+    </div>
+    <!-- div#wrapper end -->
+  </body>
+</html>

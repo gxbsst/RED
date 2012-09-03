@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Exception Occured on RED.com!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+    body, table, input, textarea, selct { font-family: Tahoma, "Lucida Grande", Arial, Verdana; font-size: 9pt; }
+    body { background-color: #FFF; color: #000; line-height: 1.5em; }
+    h1 { margin: 10px 0; }
+    pre { font-family: "Courier New", "Lucida Console", Monospace; }
+    p.message { margin: 5px 20px; padding: 5px; }
+    .hidden_element { display: none; }
+    
+    table { border: 1px solid #CCC; background-color: #CCC; }
+    th, td { text-align: left; background-color: #FFF; }
+    th.caption { background-color: #FFFFCC; font-size: 12pt; color: Blue; }
+    
+    #variables { margin-bottom: 20px; }
+    #variables.collapse tr.hidden { display: none; }
+    #variables #expand { font-size: 8pt; font-weight: normal; }
+    
+    #panel { margin: 0 0 20px 0; padding: 5px; background-color: #FAFAFA; }
+    
+    #backtrace span { color: Blue; }
+    #backtrace span.line_no { color: Red; }
+  </style>
+  
+  <script type="text/javascript">
+    function switchClass(elementId, class1, class2) {
+      var element = document.getElementById(elementId);
+      if (element == null) return false;
+      
+      element.className = (element.className == class1 ? class2 : class1);
+    }
+    
+    function toggle(elementId) {
+      var panel = document.getElementById('panel');
+      var currentElementId = panel.currentElement;
+      if (currentElementId) {
+        switchClass(currentElementId, 'hidden_element', '');
+      }
+      
+      panel.currentElement = elementId;
+      switchClass(elementId, 'hidden_element', '');
+    }
+  </script>
+</head>
+
+<body>
+  <h1><%= @exception.class.name %></h1>
+  <%=
+    @exception.backtrace.first =~ /(.*)\:(\d+)\.*/
+    "Showing <em>#{$1}</em> where line <strong>##{$2}</strong> raise:"
+  %>
+  <p class="message">
+    <%= @exception.message %>
+  </p>
+  
+  <table width="100%" cellspacing="1" cellpadding="5" border="0" id="variables" class="collapse">
+    <tr>
+      <th colspan="2" class="caption">Header Variable List <a href="#" onclick="toggleHeaders();void(0);" id="expand">(EXPAND)</a></th>
+    </tr>
+  <% 
+    important_fields = ['REQUEST_URI', 'HTTP_USER_AGENT', 'REQUEST_METHOD', 'REMOTE_ADDR']
+    @request.env.to_a.sort{ |a, b| a.first <=> b.first }.each do |field|
+  %>
+    <tr class="<%= important_fields.include?(field.first) ? '' : 'hidden' %>">
+      <th width="300"><%= field.first %></th>
+      <td><%= field.last %></td>
+    </tr>
+  <% end %>
+  </table>
+  
+  <div id="buttons">
+    <%=
+      ['backtrace', 'parameters'].collect{ |element_id| link_to_function(element_id.titleize, "toggle('#{element_id}')") }.join(" - ")
+    %>
+  </div>
+  
+  <div id="panel">
+    <pre id="backtrace" class="hidden_element"><%= @exception.backtrace.join("\n") %></pre>
+    <pre id="parameters" class="hidden_element"><%= params.to_yaml %></pre>
+  </div>
+  
+  <script type="text/javascript">
+    function toggleHeaders () {
+      switchClass('variables', 'collapse', 'expand');void(0);
+      var expand = document.getElementById('expand');
+      expand.innerHTML = '(' + document.getElementById('variables').className.toUpperCase() + ')';
+    }
+  </script>
+</body>
+</html>

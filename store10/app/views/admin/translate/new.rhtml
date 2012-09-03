@@ -1,0 +1,20 @@
+<div id="left">
+  <h1>Creating Entity</h1>
+  <%= form_tag :action => 'create' %>
+    <p>
+      <label>
+        Entity Name:
+        <%= text_field 'entity', 'name', :class => 'textInput' %>
+      </label>
+    </p>
+    <p>
+      <label>
+        Default Content:
+        <%= text_area 'entity', 'text', :class => 'textArea', :rows => 10 %>
+      </label>
+    </p>
+    <p>
+      <%= submit_tag 'Create', :class => 'button hundredthirty' %>
+    </p>
+  <%= end_form_tag %>
+</div>

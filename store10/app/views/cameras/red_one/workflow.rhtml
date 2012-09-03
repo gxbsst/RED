@@ -1,0 +1,81 @@
+<% content_for(:head) do %>
+  <script src="/javascripts/WorkflowEffects.js" type="text/javascript" ></script>
+  <script src="/javascripts/RedEffects.js" type="text/javascript" ></script>
+  <%= stylesheet_link_tag 'v2/pages/cameras/workflow' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('WORKFLOW|TITLE') %></h1>
+<% end %>
+
+<div class="banner">
+<div id="frame">
+  <div id="scroller">
+    <div id="scroller_content">
+      <div id="hd-pane" class="section">
+        <img src="/skin/img/workflow/1.png" alt="" />
+      </div>
+      <div id="di-pane" class="section" >
+        <img src="/skin/img/workflow/2.png" alt="" />
+      </div>
+      <div id="nle-pane" class="section" >
+        <img src="/skin/img/workflow/3.png" alt="" />
+      </div>
+      <div id="redcine-pane" class="section" >
+        <img src="/skin/img/workflow/4.png" alt="" />
+      </div>
+      <!--end div#scoller_content -->
+    </div>
+    <!--end div#scroller -->
+  </div>
+  <!--end div#frame"-->
+</div>
+<!--toolbar -->
+<div id="control">
+  <ul id="toolbar">
+    <li id="hd-tab" class="active"><a onclick="ScrollSection('hd-pane','scroller','hd-pane');return false" href="#hd-pane"><%= _('WORKFLOW|HD_TAB|FINAL_CUT_HD') %></a></li>
+    <li id="di-tab" class="inactive"><a onclick="ScrollSection('di-pane','scroller','hd-pane');return false" href="#di-pane"><%= _('WORKFLOW|HD_TAB|FINAL_CUT_DI') %></a></li>
+    <li id="nle-tab" class="inactive"><a onclick="ScrollSection('nle-pane','scroller','hd-pane');return false" href="#nle-pane"><%= _('WORKFLOW|HD_TAB|OTHER_NLE') %></a></li>
+    <li id="redcine-tab" class="inactive"><a onclick="ScrollSection('redcine-pane','scroller','hd-pane');return false" href="#redcine-pane"><%= _('WORKFLOW|HD_TAB|REDCINE') %></a></li>
+    <!--end ul#toolbar-->
+  </ul>
+  <p><a id="left" href="javascript:ScrollArrow('left','toolbar','scroller','hd-pane');" ><img src="/skin/img/workflow/arrow_left.jpg" alt="" /></a><a id="right" href="javascript:ScrollArrow('right','toolbar','scroller','hd-pane');"><img src="/skin/img/workflow/arrow_right.jpg" alt="" /></a></p>
+</div>
+</div>
+
+<div class="text-content content-block transparent-25">
+  <h2><%= _('WORKFLOW|HD_TAB|FINAL_CUT_PRO') %></h2>
+  <div class="float-left justify">
+    <%= image_tag('pages/cameras/workflow/workflow.png') %>
+    <br />
+    <%= image_tag('pages/cameras/workflow/redcode.png') %>
+    <%= _('WORKFLOW|HD_TAB|FINAL_CUT_PRO|TEXT') %>
+  </div>
+  <div class="float-right transparent-50">
+    <ol>
+      <li>Unlike alternative high-end acquisition tools, RED is the only tool that easily affords users the flexibility to choose custom finishing paths from HD tape through 4K DI.</li>
+      <li>RED is the only acquisition tool that allows for both independent film desktop finishing or studio Digital INtermediate mastering from one original 4K file source.</li>
+      <li>Because R3D 4K files are QuicKtime aware, RED provides the only render free offline solution for start-to-finish post production.</li> 
+      <li>RED's out-of-the-box thinking has hands-down created the most streamlined Digital Intermediate workflow we've ever experienced.</li>
+      <li>RED's render-free QuickTime edit workflow has essentially simplified the post process for any project, never mind the fact that it is 4K! </li>
+    </ol>
+    <p align="right">
+      <strong>- Michael Cioni</strong><br />
+      Digital Intermediate Supervisor<br />
+      PlasterCITY Digital Post, LLC
+    </p>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<div class="text-content content-block transparent-50">
+  <h2><%= _('WORKFLOW|2K_OR_4K_DI_FINISH') %></h2>
+  <%= image_tag 'pages/cameras/workflow/redcode-2.png', :align => 'left' %>
+  <%= _('WORKFLOW|2K_OR_4K_DI_FINISH|TEXT') %>
+</div>
+
+<div class="text-content content-block transparent-50">
+  <h2><%= _('WORKFLOW|AVID_EDITORIAL_WORKFLOW') %></h2> 
+  <%= image_tag 'pages/cameras/workflow/redcode-3.png', :align => 'left' %>
+  <%= _('WORKFLOW|AVID_EDITORIAL_WORKFLOW|TEXT') %>
+</div>

@@ -1,0 +1,44 @@
+<div id="left">
+  <h1>Entities List in "<%= @lang.display_name %>"</h1>
+  
+  <ul class="navigation secondary">
+    <li><%= link_to "Back to Translator", :controller => 'translate' %></li>
+  </ul>
+  
+  <p id="alphabet_links">
+    <%= link_to_alphabet %>
+  </p>
+  
+  <table cellspacing="0" cellpadding="0" id="entities" class="list">
+    
+    <colgroup>
+      <col />
+      <col width="40" />
+      <col width="140" />
+    </colgroup>
+    
+    <tr>
+      <th>Entity Name</th>
+      <th>Rev.</th>
+      <th>Updated At</th>
+    </tr>
+    
+    <% @entities.each do |entity| %>
+    <tr class="<%= alternate %>">
+      <td>
+        <%= link_to titleize(entity.name),
+          :action => "edit", :id => entity, :lang => @lang %>
+      </td>
+      <td align="right"></td>
+      <td align="right"></td>
+    </tr>
+    <% end %>
+    
+  </table>
+  <p class="info">Showing <%= @entities.size %> items in total.</p>
+  
+</div>
+
+<%= render :partial => 'sidebar' %>
+
+<div class="clear"></div>

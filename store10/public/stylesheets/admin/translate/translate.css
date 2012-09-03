@@ -1,0 +1,55 @@
+/* Reset styles inherted from Substruct */
+.textInput, .textArea {
+	padding: 2px;
+	height: auto;
+	font-family: Trebuchet MS;
+	font-size: 110%;
+}
+.button {
+	float: none;
+	margin: 1em 0;
+}
+strong {
+	color: OrangeRed;
+}
+
+#alphabet_links a {
+	margin: 0 5px;
+	text-align: center;
+	color: #5272E0;
+}
+#alphabet_links a.current {
+	font-size: 200%;
+	color: DarkRed;
+	margin: auto 5px;
+}
+#alphabet_links a:hover {
+	text-decoration: underline;
+}
+
+#left form .textInput, #left form .textArea {
+	display: block;
+	width: 100%;
+}
+
+#right dt {
+	font-weight: bold;
+}
+#right dd {
+	margin-left: 2em;
+}
+
+#uncompleted_tasks {
+	background-color: #FFC;
+	color: Brown;
+	padding: 0.5em;
+}
+#uncompleted_tasks p {
+	margin: 0;
+	padding: 0;
+}
+#uncompleted ul {
+	margin: 0;
+	padding: 0;
+	display-position: inline;
+}

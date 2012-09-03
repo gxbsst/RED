@@ -1,0 +1,129 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag 'prototype' %>
+<script type="text/javascript">
+	function checkForm() {
+		var result = Validator.check([
+			{ text: $F('email_announcement_name'), pattern: 'string', message: 'Please fill in your name.'},
+			{ text: $F('email_announcement_email_address'), pattern: 'email', message: 'Please fill in a valid email address.'}
+		]);
+
+		if (result == true)
+			return true;
+		else
+			return false;
+	}
+</script>
+<%= stylesheet_link_tag 'v2/schema-white', 'v2/pages/email-announcements' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('EMAIL_ANNOUNCEMENT|TITLE') %></h1>
+<% end %>
+
+<div class="text-content with-border">
+  <h2><%= _('EMAIL_ANNOUNCEMENT|DESCRIPTION|TEXT', :lite_mode => true) %></h2>
+
+<%= form_tag url_for(), :onsubmit => 'return checkForm()' %>
+<% unless @email_announcement.nil? || @email_announcement.errors.empty? %>
+	<div id="message">
+		<%= @email_announcement.errors.collect{|key, value| value}.join("<br />") %>
+	</div>
+<% end %>
+
+<fieldset id="required_fields">
+	<legend><%= _('EMAIL_ANNOUNCEMENT|REQUIRED_FIELDS') %></legend>
+	<label for="email_announcement_name"><%= _('EMAIL_ANNOUNCEMENT|NAME') %></label>
+	<%= text_field 'email_announcement', 'name' %>
+	<label for="email_announcement_email_address"><%= _('EMAIL_ANNOUNCEMENT|EMAIL_ADDRESS') %></label>
+	<%= text_field 'email_announcement', 'email_address' %>
+</fieldset>
+
+<fieldset id="industry" class="radio-group">
+  <legend><%= _('EMAIL_ANNOUNCEMENT|INDUSTRY') %></legend>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Cinematographer' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|CINEMATOGRAPHER') %>
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Distributor' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|DISTRIBUTOR') %>
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Director' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|DIRECTOR') %>
+  </label>
+<label>
+    <%= radio_button 'email_announcement', 'industry', 'Rental Company' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|RENTAL_COMPANY') %>
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Producer' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|PRODUCER') %>
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Visual FX Artist' %>
+    <%= _('EMAIL_ANNOUNCEMENT|INDUSTRY|VISUAL_FX_ARTIST') %>
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'industry', 'Other' %>
+    <%= _('EMAIL_ANNOUNCEMENT|OTHER') %>
+  </label>
+</fieldset>
+
+<fieldset id="editor" class="radio-group">
+  <legend><%= _('EMAIL_ANNOUNCEMENT|EDITOR') %></legend>
+  <label>
+    <%= radio_button 'email_announcement', 'editor', 'Final Cut Pro' %>
+    Final Cut Pro
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'editor', 'AVID' %>
+    AVID
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'editor', 'Other' %>
+    <%= _('EMAIL_ANNOUNCEMENT|OTHER') %>
+  </label>
+</fieldset>
+
+<fieldset id="system" class="radio-group">
+  <legend><%= _('EMAIL_ANNOUNCEMENT|SYSTEM') %></legend>
+  <label>
+    <%= radio_button 'email_announcement', 'system', 'MAC' %>
+    Mac
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'system', 'PC' %>
+    PC
+  </label>
+  <label>
+    <%= radio_button 'email_announcement', 'system', 'Other' %>
+    Other
+  </label>
+</fieldset>
+
+<fieldset>
+	<legend><%= _('EMAIL_ANNOUNCEMENT|HD_CAMERA') %></legend>
+	<label for="email_announcement_hd_camera"><%= _('EMAIL_ANNOUNCEMENT|CAMERA_MODEL') %></label>
+	<%= text_field 'email_announcement', 'hd_camera' %>
+</fieldset>
+
+<fieldset>
+	<legend><%= _('EMAIL_ANNOUNCEMENT|RAW_CAMERA') %></legend>
+	<label for="email_announcement_raw_camera"><%= _('EMAIL_ANNOUNCEMENT|CAMERA_MODEL') %></label>
+	<%= text_field 'email_announcement', 'raw_camera' %>
+</fieldset>
+
+<fieldset>
+	<legend><label for="email_announcement_comments"><%= _('EMAIL_ANNOUNCEMENT|COMMENTS') %></label></legend>
+	<%= text_area 'email_announcement', 'comments', :class => 'text-input', :rows => 5 %>
+</fieldset>
+
+<p class="subscript justify">
+	<%= _('EMAIL_ANNOUNCEMENT|SUBSCRIPT') %>
+</p>
+
+<%= submit_tag _('GLOBAL|SUBMIT'), :class => 'button' %>
+
+<%= end_form_tag %>
+</div>

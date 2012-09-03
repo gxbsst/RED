@@ -1,0 +1,5 @@
+<select id="product_Categories_select"  name="warranty_registration[product_categories]" >
+  <% @product_categories.each { |categories| %>
+    <option value="<%= categories.id %>" <%= categories.id.to_s == @categories ? "selected" : "" %>><%= categories.name %></option>
+  <% } %>
+</select>

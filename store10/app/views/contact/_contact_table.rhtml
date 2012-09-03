@@ -1,0 +1,17 @@
+<% ticket = contact_table %>
+<table cellspacing="1" cellpadding="0" border="0">
+  <tr>
+    <th width="100"><%= _('CONTACT_US|POST|CATEGORY') %></th>
+    <td><%= h(ticket.queue) %></td>
+  </tr>
+<%
+# Specialize the order of fields.
+[:name, :email, :phone, :subject, :product_type, :serial_numbers, :url, :content].each do |key|
+  next if ticket.send(key).blank?
+%>
+  <tr>
+    <th width="100"><%= key.to_s.titleize %>:</th>
+    <td><%= h(ticket.send(key)) %></td>
+  </tr>
+<% end %>
+</table>

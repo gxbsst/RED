@@ -1,0 +1,88 @@
+<%= form_tag({ :id => @task.id, :template => params[:template] }, :id => "edit_task")%>
+  <div id="left">
+    <!-- Main Form -->
+    <h1>Edit / Create New Mail Task</h1>
+    
+    <ul class="navigation secondary">
+      <li>
+        <%= link_to "Back to task list", :action => "index" %>
+      </li>
+    </ul>
+    
+    <%- if @using_template -%>
+    <div class="description" style="color: red; font-style: italic;">
+      Creating mail task with assigned template, Subject, Sender and
+      Template Body is not available to edit.
+    </div>
+    <%- end -%>
+    
+    <p>
+      <label for="task_name">Name</label>
+      <%= text_field :task, :name, :class => "textInput" %>
+    </p>
+    <p>
+      <label for="task_description">Description</label>
+      <%= text_area :task, :description, :rows => 2, :class => "textArea" %>
+    </p>
+    
+    <%- with_options(:readonly => @using_template ? 'readonly' : nil) do |f| %>
+    <p>
+      <label for="task_subject">Subject</label>
+      <%= f.text_field :task, :subject, :class => "textInput" %>
+    </p>
+    <p>
+      <label for="task_from">From</label>
+      <%=
+        if @using_template
+          f.text_field :task, :from, :class => 'textInput'
+        else
+          f.mail_from_edit_tag :task, :class => "textInput"
+        end
+      %>
+    </p>
+    <p>
+      <label for="task_template_body">
+        Content Template
+        <%= link_to_template_guide %>
+      </label>
+      <%= f.text_area :task, :template_body, :rows => 5, :class => "textArea" %>
+    </p>
+    <%- end -%>
+    
+    <!-- Pick Up Users -->
+    <h1>Select Recipients</h1>
+    <p>
+      <%= link_to_function "Click here", "showPopWin('#{url_for :action => "select_recipients"}', 700, 600, returnRecipients, true)" %>
+      to pick up recipients of this maill. Searching result will be selected as table below. Click on contact row for preview.
+    </p>
+    <p>
+      If you want to select recipients by entering their Account Number (CU xxxxxxx) or RED ONE serial number (4096), 
+      <%= link_to_function(
+        "click this link",
+        "showPopWin('#{url_for( :action => "recipients_in_list" )}', 700, 600, returnRecipients, true)"
+      ) %>
+    </p>
+    
+    <div id="recipients_wrapper" onload="alert('welcome');">
+      <%= render :partial => "mail_recipients" %>
+    </div>
+    
+    <!-- Save Button -->
+    <%= submit_tag "Save Task", :class => "button hundredfifty" %>
+  </div>
+
+  <div id="right">
+    <%= render :partial => "templates_list" %>
+    <%= render :partial => "template_variables", :object => @task.variables %>
+    <h2>Accessibility</h2>
+    <p>Click <%= link_to "here", { :action => "lock_task", :id => @task }, :style => "color: red" %> to lock current task, or click the button below to remove it from list.</p>
+    <p>
+      <%= link_to "Delete This Task", { :action => "delete_task", :id => @task },
+      :class => "button hundredfifty" %>
+    </p>
+  </div>
+<%= end_form_tag %>
+
+<div class="clear" />
+
+<%= javascript_include_tag "admin/mails" %>

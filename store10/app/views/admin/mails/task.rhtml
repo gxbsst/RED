@@ -1,0 +1,56 @@
+<style style="text/css">
+  #preContent { background-image: url(/engine_files/substruct/images/admin/body_background_top_white.png); }
+  #container, #contentBody { background-image: url(/engine_files/substruct/images/admin/body_background_white.png); }
+</style>
+
+<div id="fullContent">
+  <h1><%= @task.name %></h1>
+  
+  <ul class="navigation secondary">
+    <li><%= deliver_unsent_mails_tag(@task) unless @task.disabled? %></li>
+    <li><%= link_to( "Back to tasks list", :controller => "mails" ) %></li>
+  </ul>
+  
+  <p class="description">
+    <%= h( @task.description ) %>
+  </p>
+  
+  <table cellspacing="0" cellpadding="0" class="list" id="mails">
+    <colgroup>
+      <col width="30" />
+      <col width="100" />
+      <col width="150" />
+      <col />
+      <col width="160" />
+      <col width="100" />
+      <col width="100" />
+    </colgroup>
+    <tr>
+      <th>ID</th>
+      <th>Account</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>BombSquad</th>
+      <th>Read At</th>
+      <th>Sent At</th>
+    </tr>
+    <% @task.mails.each do |mail| %>
+    <tr class="<%= alternate %>">
+      <td><%= mail.id %></td>
+      <td><%= mail.account_num %></td>
+      <td><%=
+        name = mail.name || ("#{mail.first_name} #{mail.last_name}")
+        link_to name, { :action => "mail", :id => mail.id }, :target => "_blank"
+      %></td>
+      <td><%= h(mail.email) %></td>
+      <td><%= h(mail.rep_email) %></td>
+      <td><%= friendly_time( mail.read_at ) %></td>
+      <td align="right"><%= send_mail_link( mail ) unless @task.disabled? %></td>
+    </tr>
+    <% end %>
+  </table>
+  
+  <p align="right" class="info">
+    <strong><%= @task.mails.size %></strong> mails matched.
+  </p>
+</div>

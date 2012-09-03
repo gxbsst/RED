@@ -1,0 +1,382 @@
+--- 
+products_tags_123: 
+  tag_id: "25"
+  product_id: "100"
+products_tags_096: 
+  tag_id: "22"
+  product_id: "94"
+products_tags_068: 
+  tag_id: "21"
+  product_id: "61"
+products_tags_124: 
+  tag_id: "22"
+  product_id: "101"
+products_tags_097: 
+  tag_id: "22"
+  product_id: "98"
+products_tags_010: 
+  tag_id: "22"
+  product_id: "79"
+products_tags_069: 
+  tag_id: "23"
+  product_id: "24"
+products_tags_125: 
+  tag_id: "19"
+  product_id: "101"
+products_tags_098: 
+  tag_id: "19"
+  product_id: "45"
+products_tags_011: 
+  tag_id: "22"
+  product_id: "68"
+products_tags_126: 
+  tag_id: "25"
+  product_id: "101"
+products_tags_040: 
+  tag_id: "23"
+  product_id: "28"
+products_tags_099: 
+  tag_id: "19"
+  product_id: "43"
+products_tags_012: 
+  tag_id: "10"
+  product_id: "31"
+products_tags_127: 
+  tag_id: "25"
+  product_id: "103"
+products_tags_041: 
+  tag_id: "22"
+  product_id: "67"
+products_tags_013: 
+  tag_id: "22"
+  product_id: "87"
+products_tags_070: 
+  tag_id: "22"
+  product_id: "75"
+products_tags_042: 
+  tag_id: "22"
+  product_id: "83"
+products_tags_014: 
+  tag_id: "22"
+  product_id: "72"
+products_tags_071: 
+  tag_id: "19"
+  product_id: "48"
+products_tags_043: 
+  tag_id: "16"
+  product_id: "56"
+products_tags_015: 
+  tag_id: "21"
+  product_id: "16"
+products_tags_044: 
+  tag_id: "18"
+  product_id: "52"
+products_tags_016: 
+  tag_id: "24"
+  product_id: "87"
+products_tags_072: 
+  tag_id: "11"
+  product_id: "32"
+products_tags_045: 
+  tag_id: "11"
+  product_id: "69"
+products_tags_100: 
+  tag_id: "18"
+  product_id: "91"
+products_tags_017: 
+  tag_id: "22"
+  product_id: "71"
+products_tags_073: 
+  tag_id: "11"
+  product_id: "34"
+products_tags_101: 
+  tag_id: "18"
+  product_id: "90"
+products_tags_018: 
+  tag_id: "22"
+  product_id: "70"
+products_tags_074: 
+  tag_id: "12"
+  product_id: "57"
+products_tags_046: 
+  tag_id: "24"
+  product_id: "67"
+products_tags_102: 
+  tag_id: "18"
+  product_id: "93"
+products_tags_019: 
+  tag_id: "14"
+  product_id: "37"
+products_tags_075: 
+  tag_id: "23"
+  product_id: "29"
+products_tags_047: 
+  tag_id: "12"
+  product_id: "22"
+products_tags_076: 
+  tag_id: "18"
+  product_id: "56"
+products_tags_048: 
+  tag_id: "16"
+  product_id: "46"
+products_tags_103: 
+  tag_id: "18"
+  product_id: "92"
+products_tags_077: 
+  tag_id: "22"
+  product_id: "66"
+products_tags_049: 
+  tag_id: "19"
+  product_id: "55"
+products_tags_104: 
+  tag_id: "18"
+  product_id: "35"
+products_tags_078: 
+  tag_id: "11"
+  product_id: "33"
+products_tags_105: 
+  tag_id: "24"
+  product_id: "86"
+products_tags_020: 
+  tag_id: "22"
+  product_id: "88"
+products_tags_079: 
+  tag_id: "22"
+  product_id: "69"
+products_tags_106: 
+  tag_id: "21"
+  product_id: "86"
+products_tags_021: 
+  tag_id: "19"
+  product_id: "50"
+products_tags_107: 
+  tag_id: "22"
+  product_id: "81"
+products_tags_022: 
+  tag_id: "22"
+  product_id: "52"
+products_tags_108: 
+  tag_id: "17"
+  product_id: "81"
+products_tags_050: 
+  tag_id: "18"
+  product_id: "42"
+products_tags_023: 
+  tag_id: "21"
+  product_id: "42"
+products_tags_080: 
+  tag_id: "12"
+  product_id: "58"
+products_tags_109: 
+  tag_id: "24"
+  product_id: "81"
+products_tags_051: 
+  tag_id: "15"
+  product_id: "67"
+products_tags_024: 
+  tag_id: "18"
+  product_id: "48"
+products_tags_081: 
+  tag_id: "23"
+  product_id: "26"
+products_tags_052: 
+  tag_id: "16"
+  product_id: "84"
+products_tags_082: 
+  tag_id: "17"
+  product_id: "42"
+products_tags_053: 
+  tag_id: "23"
+  product_id: "25"
+products_tags_025: 
+  tag_id: "24"
+  product_id: "68"
+products_tags_054: 
+  tag_id: "18"
+  product_id: "47"
+products_tags_026: 
+  tag_id: "17"
+  product_id: "39"
+products_tags_083: 
+  tag_id: "22"
+  product_id: "78"
+products_tags_055: 
+  tag_id: "18"
+  product_id: "53"
+products_tags_110: 
+  tag_id: "24"
+  product_id: "102"
+products_tags_027: 
+  tag_id: "11"
+  product_id: "88"
+products_tags_084: 
+  tag_id: "21"
+  product_id: "74"
+products_tags_056: 
+  tag_id: "11"
+  product_id: "19"
+products_tags_111: 
+  tag_id: "21"
+  product_id: "102"
+products_tags_028: 
+  tag_id: "15"
+  product_id: "38"
+products_tags_085: 
+  tag_id: "18"
+  product_id: "44"
+products_tags_057: 
+  tag_id: "13"
+  product_id: "67"
+products_tags_112: 
+  tag_id: "22"
+  product_id: "80"
+products_tags_029: 
+  tag_id: "15"
+  product_id: "59"
+products_tags_086: 
+  tag_id: "22"
+  product_id: "73"
+products_tags_058: 
+  tag_id: "22"
+  product_id: "59"
+products_tags_113: 
+  tag_id: "17"
+  product_id: "80"
+products_tags_087: 
+  tag_id: "18"
+  product_id: "54"
+products_tags_059: 
+  tag_id: "13"
+  product_id: "59"
+products_tags_114: 
+  tag_id: "24"
+  product_id: "80"
+products_tags_115: 
+  tag_id: "16"
+  product_id: "51"
+products_tags_001: 
+  tag_id: "18"
+  product_id: "49"
+products_tags_088: 
+  tag_id: "17"
+  product_id: "78"
+products_tags_116: 
+  tag_id: "18"
+  product_id: "51"
+products_tags_002: 
+  tag_id: "17"
+  product_id: "41"
+products_tags_030: 
+  tag_id: "18"
+  product_id: "55"
+products_tags_089: 
+  tag_id: "21"
+  product_id: "85"
+products_tags_117: 
+  tag_id: "16"
+  product_id: "97"
+products_tags_003: 
+  tag_id: "18"
+  product_id: "46"
+products_tags_060: 
+  tag_id: "21"
+  product_id: "60"
+products_tags_031: 
+  tag_id: "14"
+  product_id: "68"
+products_tags_118: 
+  tag_id: "18"
+  product_id: "97"
+products_tags_032: 
+  tag_id: "21"
+  product_id: "17"
+products_tags_004: 
+  tag_id: "17"
+  product_id: "79"
+products_tags_119: 
+  tag_id: "19"
+  product_id: "99"
+products_tags_061: 
+  tag_id: "11"
+  product_id: "77"
+products_tags_033: 
+  tag_id: "13"
+  product_id: "38"
+products_tags_005: 
+  tag_id: "21"
+  product_id: "15"
+products_tags_090: 
+  tag_id: "18"
+  product_id: "63"
+products_tags_062: 
+  tag_id: "20"
+  product_id: "51"
+products_tags_034: 
+  tag_id: "22"
+  product_id: "89"
+products_tags_006: 
+  tag_id: "24"
+  product_id: "78"
+products_tags_091: 
+  tag_id: "18"
+  product_id: "76"
+products_tags_063: 
+  tag_id: "17"
+  product_id: "40"
+products_tags_035: 
+  tag_id: "20"
+  product_id: "50"
+products_tags_007: 
+  tag_id: "17"
+  product_id: "55"
+products_tags_092: 
+  tag_id: "18"
+  product_id: "64"
+products_tags_064: 
+  tag_id: "16"
+  product_id: "54"
+products_tags_036: 
+  tag_id: "18"
+  product_id: "50"
+products_tags_008: 
+  tag_id: "13"
+  product_id: "37"
+products_tags_093: 
+  tag_id: "22"
+  product_id: "65"
+products_tags_120: 
+  tag_id: "25"
+  product_id: "99"
+products_tags_065: 
+  tag_id: "23"
+  product_id: "27"
+products_tags_037: 
+  tag_id: "13"
+  product_id: "68"
+products_tags_009: 
+  tag_id: "16"
+  product_id: "53"
+products_tags_121: 
+  tag_id: "22"
+  product_id: "100"
+products_tags_066: 
+  tag_id: "22"
+  product_id: "49"
+products_tags_038: 
+  tag_id: "21"
+  product_id: "18"
+products_tags_094: 
+  tag_id: "18"
+  product_id: "65"
+products_tags_122: 
+  tag_id: "19"
+  product_id: "100"
+products_tags_039: 
+  tag_id: "19"
+  product_id: "47"
+products_tags_095: 
+  tag_id: "22"
+  product_id: "95"
+products_tags_067: 
+  tag_id: "19"
+  product_id: "44"

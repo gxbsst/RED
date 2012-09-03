@@ -1,0 +1,51 @@
+<script type="text/javascript" src="/javascripts/highslide/highslide.js"></script>
+<script type="text/javascript">
+   hs.graphicsDir = '/javascripts/highslide/graphics/';
+   hs.captionId = 'the-caption';
+   hs.outlineType = 'rounded-white';
+   hs.showCredits = false;
+</script>
+<link href="/stylesheets/highslide.css" media="screen" rel="Stylesheet" type="text/css" />
+
+
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/cameras/technology' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('NAVIGATION|TECHNOLOGY') %></h1>
+<% end %>
+
+<div class="banner">
+  <img src="/images/pages/cameras/technology/banner.png" alt="Technology" />
+  <div id="mysterium" class="justify text-content">
+    <%= _('TECHNOLOGY|MYSTERIUM_DATA_TO_BURN|TEXT') %>
+  </div>
+</div>
+
+<h2>
+  <%= _('TECHNOLOGY|DIGITAL_SUPER_35MM') %>
+</h2>
+
+<div class="float-left justify text-content">
+  <%= _('TECHNOLOGY|DIGITAL_SUPER_35MM|TEXT') %>
+  
+  <img src="/images/pages/cameras/technology/compare-to-film.png" alt="Compare to 35mm film">
+  <%= _('TECHNOLOGY|HOW_DOES_4K_COMPARE_TO_35MM_FILM|TEXT') %>
+  
+  <img src="/images/pages/cameras/technology/digital-vs-film.png" alt="Digital vs Film" />
+  <%= _('TECHNOLOGY|WHAT_ARE_THE_ADVANTAGES_OF_SHOOTING_DIGITAL_VS_FILM|TEXT') %>
+  
+  <img src="/images/pages/cameras/technology/4k.png" alt="4k" />
+</div>
+
+<div class="float-right">
+  <a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/images/pages/cameras/technology/formats.jpg">
+  <img style="margin-left: 36px;"  src="/images/pages/cameras/technology/relevant-formats.png" alt="Relevant RED Formats" />
+  </a><br />
+  <a onclick='return hs.expand(this, {captionId: "caption1"})' class="hideslide" href="/images/pages/cameras/technology/formats.jpg">
+    <img src="/images/pages/cameras/technology/formats.png" alt="Formats" />
+  </a>
+</div>
+
+<div class="clear"></div>

@@ -1,0 +1,22 @@
+#sidebar {
+	float: left;
+	margin-top: 2em;
+	width: 180px;
+}
+	#sidebar h2 {
+		margin: 0;
+	}
+
+.float-right {
+	float: right;
+	width: 700px;
+	margin-top: 2em;
+}
+
+#release_history {
+	width: 680px;
+}
+	#release_history h2 {
+		font-size: auto;
+		margin: 0;
+	}

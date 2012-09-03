@@ -1,0 +1,29 @@
+<% for product in @products %>
+
+<%= form_remote_tag :url => { :controller=>'store',:action => 'add_to_cart_ajax', :id => product.id }, 
+	:before => "if ($('cart').opened == false) toggleCart();toggleLoading(true)",
+	:complete => "new Effect.Highlight('itemsContainer-outer');toggleLoading(false)",
+	:update => 'cart',
+	:html => { :class => "product" }
+%>
+	<%= 
+	product.id = product.product_id
+	@image = product.images[0]
+	image_url = url_for_file_column('image', 'path', 'small')
+	link_to image_tag(image_url, :id => "product_image_#{product.id}"), { :action => 'product_detail',:id => product.id }, :class => 'product_image'
+	%>
+	
+	<div class="product_info">
+		<%= link_to product.name, :action => 'product_detail', :id => product.id %>
+		<span class="price"><%= number_to_currency(product.price, :precision => 0) %></span>
+		<%= select_tag "qty", options_for_select(%w{1 2 3 4 5 6 7 8 9})  %>
+			<input type="hidden" name="payment_method" id="payment_method_<%= product.code %>" value="" />
+			<% if product.accept_deposit == true %>
+			<input class="product_button" type="image" onclick="$('payment_method_<%= product.code %>').value = 'deposit'" src="/skin/img/store/deposit_icon_m.png"  title="Place Deposit"/>
+			<% end %>
+			<% if product.accept_buy_now  %>
+			<input class="product_button" type="image" onclick="$('payment_method_<%= product.code %>').value = 'buy_now'" src="/skin/img/store/addtocart2.png" title="Buy Now" />
+			<% end %>
+	</div>
+<%= end_form_tag %>
+<% end %>

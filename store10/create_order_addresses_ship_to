@@ -1,0 +1,70 @@
+account_num	 erp_order_numb	 address	 city	 state	 zip	 country_id	 created_on
+CU 0104778	 SO-0017987	 Promenade 5	 Aachen	 NRW	 52076	 72	 Mon Apr 06 00:00:00 +0800 2009
+CU 0101009	 SO-0017990	 338 N. Milwaukee St.,Suite 307	 Milwaukee	 WI	 53202	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104892	 SO-0017991	 1596 trotters bend trail	 jacksonville	 FL	 32225	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104601	 SO-0017992	 Moving Images Department,1740 Stewart St	 Santa Monica	 CA	 90404	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104826	 SO-0017998	 1555 Vine Street,Apt. 552v	 Los Angeles	 CA	 90028	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0101114	 SO-0017999	 23C Elm St.	 Watertown	 MA	 2472	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104875	 SO-0018000	 1447 Second Street,Second Floor	 Santa Monica	 CA	 90401	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0100914	 SO-0018002	 2801 University Boulevard,Suite 101	 Birmingham	 AL	 35233	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0103897	 SO-0018004	 20291 Valencia Circle	 Lake Forest	 CA	 92630	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0101900	 SO-0018006	 Monbijougatan 17b	 Malmö	 N/A	 21153	 173	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104707	 SO-0018009	 1799 S.E. 17th Street	 Fort Lauderdale	 FL	 33312	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104488	 SO-0018017	 Leighside,Bridge Road	 Bristol	 unknown	 BS8 3PB	 3	 Mon Apr 06 00:00:00 +0800 2009
+CU 0104896	 SO-0018019	 1724 N 9th St Rd,#23	 Lafayette	 IN	 47904	 1	 Mon Apr 06 00:00:00 +0800 2009
+CU 0102761	 SO-0018021	 Room 25A.Haiying Building, Caitian South Road,Futian district	 Shenzhen City.	 GuangDong	 518000	 42	 Mon Apr 06 00:00:00 +0800 2009
+CU 0103698	 SO-0018023	 L'ailloux	 Mures	 FRANCE	 74540	 67	 Tue Apr 07 00:00:00 +0800 2009
+CU 0101483	 SO-0018025	 54 academy gardens,duchess of bedford's walk	 London	 London	 w8 7qq	 3	 Tue Apr 07 00:00:00 +0800 2009
+CU 0104898	 SO-0018026	 100 universal city plaza,2315-2	 Universal city	 CA	 91608	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0101717	 SO-0018028	 No17,Alley22,Lane513,Ruiguang Rd	 Taipei	 unknown	 114	 176	 Tue Apr 07 00:00:00 +0800 2009
+CU 0104807	 SO-0018029	 15001 Killion St.	 Sherman Oaks	 CA	 91411	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0103212	 SO-0018032	 377n 3275w	 westpoint	 UT	 84015	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0101580	 SO-0018040	 C/O Hawaii Media Inc,99-1245 Halawa Valley St	 Aiea	 HI	 96701	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0102215	 SO-0018042	 Yookuem Bldg. #101,Shindang-dong 288-1, Joong-ku	 Seoul	 South Kore	 0	 202	 Tue Apr 07 00:00:00 +0800 2009
+CU 0101415	 SO-0018043	 8518 E County Dr	 El Cajon	 CA	 92021	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0104900	 SO-0018046	 550 Kieffer Ln	 El Paso	 TX	 79912	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0100975	 SO-0018047	 82 Pinnacle Rd.	 Farmington	 CT	 6032	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0104901	 SO-0018048	 ruiz huidobro 3631 t.3,pasaje ushuaia 1987	 capital federal	 buenos air	 1430	 13	 Tue Apr 07 00:00:00 +0800 2009
+CU 0104893	 SO-0018049	 32 Avenue of the Americas,22nd Floor	 New York	 NY	 10013	 1	 Tue Apr 07 00:00:00 +0800 2009
+CU 0103834	 SO-0018050	 Zitomirska 7	 Prague	 Vrsovice	 10000	 51	 Tue Apr 07 00:00:00 +0800 2009
+CU 0101987	 SO-0018054	 Sandgt 28	 Trondheim	 ST	 7012	 137	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104451	 SO-0018058	 Rua Sao Nicolau 73 - 2 dt,VAT#506165698	 Lisbon	 Lisbon	 1100-548	 147	 Wed Apr 08 00:00:00 +0800 2009
+CU 0103351	 SO-0018060	 3088 SW 16th Circle	 Gresham	 OR	 97080	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104439	 SO-0018061	 9 Glengrove Drive simpsonville, SC 29681	 simpsonville, SC 29681	 SC	 29681	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104822	 SO-0018062	 A-1202 Jinhua Plaza, 100 Nanjing Road, Qingdao 266071 P.R.China	 Qingdao	 ShangDong	 266071	 85	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104650	 SO-0018075	 11322 Niagara Drive	 Fishers	 IN	 46037	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104904	 SO-0018076	 109 Stony Brook Road	 Hopewell	 NJ	 8525	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0102420	 SO-0018078	 6851 Steger Dr,Suite 100	 Cincinnati	 OH	 45237	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104862	 SO-0018083	 818 W Willow, 2A	 Chicago	 IL	 60614	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104865	 SO-0018084	 234 W. Fairview ave. #104	 Glendale	 CA	 91202	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0103143	 SO-0018086	 Silver Orchid, 395-D, Sabari Flats,,28th street, 6th Sector, K.K.Nagar	 Chennai	 Tamilnadu	 600 078	 5	 Wed Apr 08 00:00:00 +0800 2009
+CU 0102762	 SO-0018087	 LEVERAGE SEASON 2,14911 SE 82ND DRIVE,	 Clackamas	 OR	 97015	 1	 Wed Apr 08 00:00:00 +0800 2009
+CU 0100267	 SO-0018092	 10 nirim st'	 Tal-Aviv	 AL	 67060	 92	 Wed Apr 08 00:00:00 +0800 2009
+CU 0103974	 SO-0018096	 8/F., Front Portion 70C, Tokwawan Road	 Kowloon	 AL	 852	 85	 Wed Apr 08 00:00:00 +0800 2009
+CU 0101961	 SO-0018097	 Kirchenstr. 60	 Munich	 Bavaria	 81675	 72	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104523	 SO-0018098	 221 Parkhurst Road	 London	 London	 SN5 4DU	 3	 Wed Apr 08 00:00:00 +0800 2009
+CU 0104422	 SO-0018101	 Rossa Avenue,Bishopstown	 Cork	 Co. Cork	 21	 91	 Thu Apr 09 00:00:00 +0800 2009
+CU 0100602	 SO-0018102	 SHIN-TOKYO BLDG.,3-1,MARUNOUCHI,3-CHOME,CHIYODA-KU	 TOKYO	 unknown	 100-0005	 95	 Thu Apr 09 00:00:00 +0800 2009
+CU 0104830	 SO-0018103	 1333 S Miami Ave,suite 305	 Miami	 FL	 33130	 1	 Thu Apr 09 00:00:00 +0800 2009
+CU 0102094	 SO-0018109	 Oranienstrasse 6,Berlin, unknown 10997 ,GERMANY	 NONE	 NONE	 00000	 NONE	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103861	 SO-0018110	 130, rue de Belleville	 Paris	 unknown	 75020	 67	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103834	 SO-0018111	 Zitomirska 7	 Prague	 Vrsovice	 10000	 51	 Thu Apr 09 00:00:00 +0800 2009
+CU 0100733	 SO-0018117	 1740 Pacific Ave #301	 San Francisco	 CA	 94109	 1	 Thu Apr 09 00:00:00 +0800 2009
+CU 0101101	 SO-0018119	 20291 Valencia Circle	 Lake Forest	 CA	 92630	 1	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103188	 SO-0018121	 Hospital, 124, 3r EXT	 Barcelona	 Barcelona	 8001	 168	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103864	 SO-0018125	 34, rue Blomet,75015 Paris	 NONE	 NONE	 00000	 67	 Thu Apr 09 00:00:00 +0800 2009
+CU 0100706	 SO-0018126	 738 North Cahuenga Blvd	 Los Angeles	 CA	 90038	 1	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103934	 SO-0018128	 Romanitei no4, ParadisulVerde, Corbeanca, Ilfov,Al. Margaretei 6, Bl.18, Sc.B, Et. 3,	 Campina	 Prahova	 70000	 150	 Thu Apr 09 00:00:00 +0800 2009
+CU 0101025	 SO-0018130	 341 W38th Street,4th Floor	 New York	 NY	 10018	 1	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103467	 SO-0018132	 26 putiki street,arch hill	 auckland	 NZ	 1021	 133	 Thu Apr 09 00:00:00 +0800 2009
+CU 0100602	 SO-0018139	 SHIN-TOKYO BLDG.,3-1,MARUNOUCHI,3-CHOME,CHIYODA-KU	 TOKYO	 unknown	 100-0005	 95	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103851	 SO-0018142	 50 Queen street,suite 402	 Montreal	 Quebec	 H3C 2N5	 2	 Thu Apr 09 00:00:00 +0800 2009
+CU 0103176	 SO-0018147	 al.Lotnikow 1	 Warszawa	 Warszawa	 02-668	 146	 Fri Apr 10 00:00:00 +0800 2009
+CU 0104910	 SO-0018148	 Viale Berbera 49	 Milano	 Lombardia	 20162	 93	 Fri Apr 10 00:00:00 +0800 2009
+CU 0101668	 SO-0018150	 20291 Valencia Circle	 Lake Forest	 CA	 92630	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0100536	 SO-0018164	 580 Broadway, 8th Floor	 New York	 NY	 10012	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0101936	 SO-0018165	 4231 W. Tuckey ln.	 Phoenix	 AZ	 85019	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0103980	 SO-0018166	 1000 N. North Branch street	 Chicago	 IL	 60642	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0103668	 SO-0018167	 20291 Valencia Circle	 Lake Forest	 CA	 92630	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0103798	 SO-0018170	 6929 E Jenan Dr	 Scottsdale	 AZ	 85254	 1	 Fri Apr 10 00:00:00 +0800 2009
+CU 0104771	 SO-0018172	 5737 emerson pointe way	 orlando	 FL	 32819	 1	 Sat Apr 11 00:00:00 +0800 2009

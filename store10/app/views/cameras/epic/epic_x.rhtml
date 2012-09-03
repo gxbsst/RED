@@ -1,0 +1,57 @@
+<% content_for(:head) do %>
+    <style type="text/css">
+      .text-content {
+        position: relative;
+        padding-top: 20px;
+        height: 479px;
+      }
+      #epic-photo {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+      }
+      #the-epic-x {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+      }
+      #red-one-rewand {
+        position: absolute;
+        width: 300px;
+        top: 230px;
+      }
+      #pick-brain {
+        position: absolute;
+        width: 100%;
+        top: 580px;
+      }
+      .adjusted {
+        text-align: justify;
+      }
+    </style>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('NAVIGATION|QUOTES_FOR_RED') %></h1>
+<% end %>
+
+<div class="text-content">
+  <%= image_tag('/images/pages/cameras/epic/epic-photo.png', :id => 'epic-photo') %>
+  
+  <div id="the-epic-x">
+    <%= image_tag('/images/pages/cameras/epic/the-epic-x.png') %>
+    <p class="adjusted" style="width: 450px;">
+      The EPIC X is a Limited Edition EPIC S35 Pro Cinema package that includes a CF Recording Module, I/O Module and Battery Module at no additional cost. It is our way of thanking our loyal RED ONE customers and giving them the most complete and inexpensive upgrade path possible to the new "interchangeable and upgradeable everything" future of the EPIC system.
+    </p>
+    <h3>(RED ONE REWARD)</h3>
+     
+    <p class="adjusted" style="width: 300px;">
+      The EPIC X is available as an upgrade to the RED ONE only. A full trade-in allowance of $17,500 for a RED ONE is credited towards this special package priced at $28,000. These will be the 1st EPICs shipped. Target: End of Summer 2009.
+    </p>
+  </div>
+  
+
+  
+
+</div>
+

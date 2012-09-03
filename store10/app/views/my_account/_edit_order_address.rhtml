@@ -1,0 +1,47 @@
+<% @address = address unless address.nil? %>
+<%=
+	form_remote_tag(
+		:url => { :action => "update_order_address", :id => @address.id },
+		:update => "address_#{@address.id}",
+		:success => "new Effect.Highlight('address_#{@address.id}')",
+		:html => { :id => "address_form_#{@address.id}" }
+	)
+%>
+  <div class="customer_addresses_select">
+    <dt>Select one from my address book:</dt>
+    <dd>
+      <%= customer_addresses_select( @customer, :id => "customer_address_select_#{@address.id}", :onchange => "fillInAddressForm('address_form_#{@address.id}', this.value)" ) %>
+    </dd>
+  </div>
+  
+  <%=
+  unless (errors = @address.errors.full_messages).empty?
+    content_tag( :div, errors.join("<br />"), :class => "errors" )
+  end
+  %>
+  
+	<dt>Country</dt>
+	<dd><%= country_select_tag "address[country_region_id]", @address.country_region_id || "", :id => "address_country" %></dd>
+	
+	<dt>Street</dt>
+	<dd><%= text_area "address", "street", :rows => 5, :class => 'text-input' %></dd>
+	
+	<dt>State / Province / State</dt>
+	<dd><%= text_field "address", "state", :class => 'text-input' %><%= error_field @address, "state" %></dd>
+	
+	<dt>City</dt>
+	<dd><%= text_field "address", "city", :class => 'text-input' %></dd>
+	
+	<dt>Postal / Zip Code</dt>
+	<dd><%= text_field "address", "zip_code", :class => 'text-input' %></dd>
+	
+	<dt />
+	<dd><%= submit_tag "Update", :class => 'button' %></dd>
+	
+	<script type="text/javascript">
+	  $('address_summary_<%= @address.id %>').innerHTML = '<%= h @address.handle.gsub(/\n/, '') %>';
+	  <% unless request.get? %>
+	  $('save_change_button').disabled = false;
+	  <% end %>
+	</script>
+<%= end_form_tag %>

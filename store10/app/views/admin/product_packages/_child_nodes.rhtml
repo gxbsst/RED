@@ -1,0 +1,55 @@
+<%= form_tag :action => "delete" %>
+	<ol id="child_nodes" class="sortable">
+		<%= render :partial => "product_package_child_node", :collection => child_nodes %>
+	</ol>
+	<p id="child_nodes_status">
+		<span id="processing"></span>
+		
+		<input type="button" value="Save Position" onclick="savePosition('child_nodes')" class="button hundredthirty" style="float:right;" />
+		
+		<a href="#" onclick="deleteSelectedItems('child_nodes');return false;" class="delete_link">Delete Selected Items</a>
+	</p>
+	<script type="text/javascript">
+		Sortable.create("child_nodes", { handle: "handle" })
+		
+		function savePosition(elementId) {
+			var parameters = Sortable.serialize(elementId);
+			if (parameters == "") {
+				alert("No child node in this package!")
+				return;
+			}
+			
+			new Ajax.Request("<%= url_for :action => 'change_order' %>", {
+				parameters: parameters,
+				onLoading: function() {
+				  $("processing").innerHTML = "Processing...";
+				  new Effect.Appear("processing");
+				},
+				onSuccess: function() {
+				  $("processing").innerHTML = '<span style="color:Green;">Changes have been saved!<span>'
+				  new Effect.Fade("processing", { delay: 3 })
+				},
+				onFailure: function() {
+				  $("processing").innerHTML = "Something error... :-("
+				  new Effect.Fade("processing", { delay: 3 })
+				}
+			})
+		}
+		
+		function deleteSelectedItems(elementId) {
+			new Ajax.Request("<%= url_for :action => 'delete' %>", {
+				parameters: Form.serialize(elementId),
+				onSuccess: function(transport) {
+					var checkBoxes = document.getElementsByClassName("_node_id");
+					for (i=0; i<checkBoxes.length; i++) {
+						if (checkBoxes[i].checked) {
+							var elementToFade = "item_" + checkBoxes[i].value;
+							new Effect.Fade(elementToFade, { duration: 0.5 });
+							setTimeout("$('"+elementToFade+"').remove()", 500);
+						}
+					}
+				}
+			})
+		}
+	</script>
+<%= end_form_tag %>

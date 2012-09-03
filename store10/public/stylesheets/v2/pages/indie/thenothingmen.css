@@ -1,0 +1,21 @@
+#content{text-align:center;  }
+#logo, #footer, #next{position: relative; z-index: 10;}
+#content .left a, #content .right a{ outline-style:none; outline-width:medium;}
+#content .right{ text-align:left; background: #262626;padding-left: 8px; padding-right: 8px; color: #BBB;}
+#content .right hr{color: #000; border:0;height:2px;background: #111;}
+#content .right h3{margin-top: 5px; font-size: 16px; color: #FFF;}
+#content #big_outer{position: relative;  height: 1450px;  text-align: center; margin-left: 5px;}
+#content .outers{position: absolute;left: 0; top: 0; background: #000; height: 1472px;}
+.left, .right, .middle{
+	float:left;
+	text-align: left;
+}
+.left,.middle{width: 320px; padding: 5px; float: left;}
+.right{width: 214px; padding: 0 8px; float: right; background: #262626; height: 1160px;}
+.left img,.middle img{margin:10px 0; }
+#content .left p, #content .middle p, .right p{text-align:justify; margin-top: 0; margin-bottom: 10px;}
+.left p .bold, .middle p .bold{font-weight:bold;font-size: 13px;}
+#content #next{ font-size: 16px; float:left ; width: 600px; margin-top: -50px;}
+
+#content .right strong{color: #CCC; font-size: 13px;}
+#content #outer1 .right p{ margin-top: 9px; margin-bottom: 9px;}

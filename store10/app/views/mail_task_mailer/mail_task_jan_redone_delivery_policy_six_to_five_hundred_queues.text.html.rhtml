@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>RED Digital Cinem</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF; background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table><!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;" >
+        <h3><%= "#{@queue.name} -" %></h3>
+        <p>It's been an amazing journey.  We have beaten all odds and challenged the conventions of bringing a state of the art product to the market and we have you, our early adopters, to thank for our success.  Your patience through the setbacks and understanding when schedules were not met allowed us to return to the drawing board again and again, each time improving the product, until, ultimately, it became a product that exceeded even our own expectations. </p>
+        <p>The time has come for us to call the RED ONE a production camera, feature-filled and ready for prime time. It will continue to evolve and improve, but we feel that the camera is now everything that we had promised, and much more. Up until now, we have given the customer the option of waiting until the cameras were fully featured for final payment and delivery.  With the impending introductions of Build 14 (estimated Feb 1) and Build 15 (estimated Mar 1) the RED ONE will be feature rich. </p>
+        <p>The time for waiting is over. Reservation holders 101-500 that have been contacted over the last 30 days now have until March 1st to make final payment and receive their cameras and accessories. Any reservation holders in the 101-500 group that have not made final payment by March 1st will be refunded their deposits, their orders cancelled, and their serial numbers retired. If economic concerns or unforeseen circumstances have derailed plans made so many months ago, we understand. If you choose to get back on the waiting list for a future purchase, you are invited to do so. We expect fulfillment of all backorders by May.</p>
+        <p style="margin-bottom: 0px;">According to our records, you have the following RED ONE Serial Number(s) ready for delivery:</p>
+        <ul style="margin-top:6px;padding-left:38px;">
+          <% @queue.serial_numbers.split(',').each do |serial_number|%>
+            <li>RED ONE Serial No. #<%= serial_number %></li>
+          <% end %>
+        </ul>
+        <p>This 30 day grace period will now be in effect for all future reservation holders after receiving final word from RED that their cameras are ready to ship (pending receipt of payment). We are excited to see the amazing progress reached in such a short time and are even more excited about the future! Thank you for all of your support and loyalty for this great RED Revolution!</p>
+        <p>
+          <br/>
+          -The Red Team
+        </p>
+      </div>
+      <!-- div#content end -->
+    </div>
+    <!-- div#wrapper end -->
+  </body>
+</html>

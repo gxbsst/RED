@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  
+  <body>
+    <p>
+      <%= @customer.first_name + " " + @customer.last_name %> -
+    </p>
+    <p>
+      Your RED Digital Cinema registered email address has been changed from <em><%= mail_to @customer.original_email %></em> to <em><%= mail_to @customer.email %></em>.
+    </p>
+    <p>
+      If you did not request this change, please contact RED Digital Cinema immediately at <a href="http://www.red.com/contact_us" target="_blank">www.red.com/contact_us</a>.
+    </p>
+    <p>
+      - RED Digital Cinema
+    </p>
+  </body>
+</html>

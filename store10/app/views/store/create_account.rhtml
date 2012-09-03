@@ -1,0 +1,22 @@
+<!--start .box1-->
+<div id="register_box1" class="box1">
+	
+<% form_for :store_user do |f|  %>
+		<h3>Create RED Account</h3>
+	
+	<dl>
+		<dt id="usernamedt"><label>Full Name:</label><%= f.text_field :name %></dt>
+		<dt id="companydt"><label>Company:</label><%= f.text_field :company %></dt>
+		<dt id="emaildt"><label>Email:</label><%= f.text_field :email_address %></dt>
+		<dt id="confirmemaildt"><label>Confirm:</label><%= f.text_field :confirm_email %></dt>
+		<dt id="passworddt"><label>Password:</label><%= f.password_field :password %></dt>
+    <dt id="confirmpassworddt"><label>Confirm:</label><%= f.password_field :confirm_password %></dt>
+	</dl>
+	<p class="submit_p">
+<%= submit_tag 'Create Account' %>
+</p>
+<% end %>
+<!---end .box1--->
+</div>
+
+

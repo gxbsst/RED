@@ -1,0 +1,222 @@
+<script type="text/javascript">
+  function toggleXML(id) {
+  elem = document.getElementById(id);
+  elemStyle = elem.style;
+  if ( elemStyle.display != "block" ) {
+  elemStyle.display = "block";
+  } else {
+  elemStyle.display = "none";
+  }
+  return true;
+  }
+</script>
+
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  <div class="download_doc" style="position:absolute;left:550px;top:0px;">
+    <%= link_to 'Doc: PayFlow CreditCard Responses.pdf', :action => 'download_pfp_cc_res_pdf' %>
+  </div>
+</div>
+
+<div id="fullContent">
+  
+  <div class="floatHalf">
+    <h2>Card Name :</h2>
+    <p>
+      <%= @pfp_log.card_name %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <script type="text/javascript">
+      function popmsg() {
+      alert("<%= "Response Code: #{@pfp_log.res_code}"%>\n<%= escape_javascript(@pfp_log.response[:pfp_res_code_msg]) %>");
+      }
+    </script>
+    <h2>PFP Transaction Result :</h2>
+    <p class="twoline">
+      <span style="<%= 'color:#FF0000;font-weight: bolder;' if @pfp_log.res_code.blank? or @pfp_log.res_code != '0' %>">
+        <%= @pfp_log.res_message %>
+      </span>
+      <% if @pfp_log.res_code.blank? or @pfp_log.res_code != "0" %>
+        (<a href="#" onclick="popmsg();">Detail</a>)
+      <% end %>
+    </p>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>Email Address :</h2>
+    <p>
+      <%= @pfp_log.email_address %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>CreditCard Message :</h2>
+    <p class="threeline">
+      CreditCard Type: 
+      <span style="<%= 'color: #FF0000;font-weight: bolder;' unless %w(visa mastercard discover american_express).include?(@pfp_log.creditcard_type) %>">
+        <%= @pfp_log.creditcard_type %>
+      </span>
+      <script type="text/javascript">
+        function creditcard_type_warning() {
+        alert("PayFlowPro system just accepts 4 creditcard types: \n * visa \n * mastercard \n * discover \n * american express.");
+        }
+      </script>
+      <% unless %w(visa mastercard discover american_express).include?(@pfp_log.creditcard_type) %>
+        <a href="#" onclick="creditcard_type_warning();">(Detail)</a>
+      <% end %>
+      <br/>
+      CreditCard#: <%= @pfp_log.request[:safe_cc_number] %>
+      <br/>
+      Expiration Date:
+      <% expired_date = CreditCard.date_expired_compare?(@pfp_log.request[:expiration_year], @pfp_log.request[:expiration_month], @pfp_log.created_on) %>
+      <span style="<%= 'color:#FF0000;font-weight: bolder;' if expired_date %>">
+        <%= @pfp_log.request[:expiration_date] %>
+      </span>
+      <% if expired_date %>
+        <script type="text/javascript">
+          function expiration_date() {
+          var input_date = <%= @pfp_log.request[:expiration_date] %>;
+          var transaction_date = <%= @pfp_log.created_on.to_date.strftime("%Y%m") %>;
+          alert("Transaction Date: " + transaction_date + "\n" + "Customer input Date: " + input_date);
+          }
+        </script>
+        <a href="#" onclick="expiration_date();">(Detail)</a>
+      <% end %>
+    </p>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>Street :</h2>
+    <p class="threeline">
+      <%= @pfp_log.request[:street] %>
+    </p>
+  </div>  
+  
+  <div class="floatHalf">
+    <h2>Created and update Time :</h2>
+    <p class="threeline">
+      Created Time: <%= @pfp_log.created_at.to_s(:db) %>
+      <br/>
+      Updated Time: <%= @pfp_log.updated_at.to_s(:db) %>
+    </p>
+  </div>
+  
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>City :</h2>
+    <p>
+      <%= @pfp_log.request[:city] %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>AVS Match :</h2>
+    <p>
+      <%= @pfp_log.response[:avsresult] %>
+    </p>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>State :</h2>
+    <p>
+      <%= @pfp_log.request[:state] %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>Street Match :</h2>
+    <p>
+      <%= @pfp_log.response[:streetmatch] %>
+    </p>
+  </div>  
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>ZIP:</h2>
+    <p>
+      <%= @pfp_log.request[:zip] %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>ZIP Match :</h2>
+    <p>
+      <%= @pfp_log.response[:zipmatch] %>
+    </p>
+  </div>  
+  
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>Country Code :</h2>
+    <p>
+      <%= @pfp_log.request[:country] %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>PFP Log Status :</h2>
+    <p>
+      <%= @pfp_log.response[:status] %>
+    </p>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="floatHalf">
+    <h2>Remote IP & Location :</h2>
+    <p class="threeline">
+      <%= @pfp_log.remote_ip %><br>
+      <%= @pfp_log.remote_location %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <h2>Amount :</h2>
+    <p>
+      <%= number_to_currency(@pfp_log.request[:amount]) %>
+    </p>
+  </div>
+  <div class="clear">&nbsp;</div>
+  
+  <div class="line">&nbsp;</div>
+</div>
+
+<div id="fullContent">
+  <h2><a href="#" onclick="toggleXML('request_header');return false;">Show Request Header :</a></h2>
+  <div id="request_header" style="display: none;">
+    <pre>
+      PayFlowPro Server: <%= @pfp_log.pfp_serv %>
+      <%= @pfp_log.request_header %>
+    </pre>
+  </div>
+</div>
+
+<div id="fullContent">
+  <h2><a href="#" onclick="toggleXML('request_xml');return false;">Show Request XML :</a></h2>
+  <div id="request_xml" style="display: none;">
+    <%= @pfp_log.request[:xml] %>
+  </div>
+</div>
+
+<div id="fullContent">
+  <h2><a href="#" onclick="toggleXML('response_header');return false;">Show Response Head :</a></h2>
+  <div id="response_header" style="display: none;">
+    <pre>
+      PayFlowPro HTTP Response Code: <%= @pfp_log.response_code %>
+      <%= @pfp_log.response_header %>
+    </pre>
+  </div>
+</div>
+
+<div id="fullContent">
+  <h2><a href="#" onclick="toggleXML('response_xml');return false;">Show Response XML :</a></h2>
+  <div id="response_xml" style="display: none;">
+    <%= @pfp_log.response[:xml] %>
+  </div>
+</div>

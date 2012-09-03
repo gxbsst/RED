@@ -1,0 +1,47 @@
+body#store #content {
+  padding-top: 120px;
+  float: none;
+  margin: 0 auto;
+}
+#confirm_form {
+  margin: 0 auto;
+  width: 600px;
+  border: 1px solid #555;
+  background: #272727 url(/skin/img/store/rv_box_bg.png) repeat-x left top;
+  color: #FFF;
+}
+#content #confirm_form h2 {
+  font-weight: normal;
+  font-size: 11pt;
+  padding: 5px 10px;
+}
+#confirm_form h3 {
+  font-weight: normal;
+  padding: 5px;
+}
+#confirm_form .address {
+  float: left;
+  border: 1px ;
+  padding: 10px;
+  margin: 5px;
+  height: 150px;
+  width: 268px;
+}
+.address p {
+  padding-left: 4em;
+  margin: 1em 0;
+}
+body#store #confirm_form .order_summary {
+  margin: 0 5px;
+  clear: both;
+  width: 590px;
+  background-color: #5D5D5D;
+}
+.order_summary th {
+  background-color: #5D5D5D;
+  color: #FFF;
+}
+.order_summary td {
+  background-color: #232323;
+  color: #FFF;
+}

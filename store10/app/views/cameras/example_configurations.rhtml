@@ -1,0 +1,18 @@
+<h1>Example Configurations</h1>
+<%= render :partial => "sub_navigation" %>
+<div style="clear: both;"></div>
+<img src="/skin/img/camera/example_conf.jpg" align="middle" />
+
+<% @example_configurations.each do |configuration| %>
+<div class="configuration">
+  <h2><%= configuration.name %></h2>
+  <p><%= configuration.description %></p>
+  <h3>Package List:</h3>
+  <dl>
+    <% configuration.example_configuration_products.each do |item| %>
+    <dt><%= item.product.name %></dt><dd>x<%= item.quantity %></dd>
+    <% end %>
+  </dl>
+  <%= link_to "Customize This Package ...", :controller => "store", :action => "build_your_red_one", :configuration_id => configuration.id %>
+</div>
+<% end %>

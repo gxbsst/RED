@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+RAILS_ENV = ENV['RAILS_ENV'] = ARGV.shift || 'development'
+require File.dirname(__FILE__) + '/../config/environment'
+
+def log_exception(email, exception)
+  File.open("#{RAILS_ROOT}/log/deliver_terms_and_conditions.failed_list", "a") do |file|
+    file << "#{email}\n"
+  end
+end
+
+def deliver_emails(emails)
+  result = { :success => 0, :failed => 0 }
+  start_time = Time.now
+  puts "#{emails.size} emails in queue...."
+  puts "--------------------"
+  
+  emails.each_index do |index|
+    email = emails[index]
+    begin
+      puts "Sending email to #{email}"
+      StoreUserNotify.deliver_terms_and_conditions(email)
+      puts "Email sent successfully."
+      result[:success] += 1
+      File.open("#{RAILS_ROOT}/log/deliver_terms_and_conditions.successful_list", "a") do |file|
+        file << "#{email}\n"
+      end
+    rescue => e
+      log_exception(email, e)
+      puts "Exception: #{e.message}"
+      result[:failed] += 1
+    ensure
+      puts "----- (#{index + 1} of #{emails.size}) -----"
+    end
+  end
+  
+  puts ""
+  puts "Operation completed in #{Time.now - start_time}(ms)"
+  puts "Success: #{result[:success]}, Failed: #{result[:failed]}"
+  puts "List of failed emails has been saved as 'log/deliver_terms_change_notify.failed_list'." if result[:failed] > 0
+end
+
+def get_integer_input(max)
+  print "How many emails to send (max to #{max}, 0 to exit): "
+  input = gets
+  unless input =~ /\d+/ && input.to_i <= max
+    puts "ERROR: Invalid value\n"
+    get_integer_input(max)
+  else
+    exit(0) if input.to_i == 0
+    return input.to_i
+  end
+end
+
+def main
+  emails = Order.find(:all, :conditions => ["created_on >= ? and created_on <= ?", "2007-09-03", "2007-10-18"]).collect do |o|
+    o.order_user.store_user.email_address
+  end.uniq!
+  deliver_emails(emails)
+end
+
+main

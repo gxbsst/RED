@@ -1,0 +1,59 @@
+<h2>Payment Information</h2>
+<div class="padLeft">
+	<p>
+		<span class="hlt">We accept Visa, MasterCard, and American Express</span>
+	</p>
+
+	<div>
+		<div class="padLeft">
+			<label>Card Number</label>
+			<%= text_field 'order_account', 'cc_number', :maxlength => 17, :class => 'textInput' %>
+	    <%= error_message_on(:order_account, :cc_number) %>
+
+		  <label>Expiration Date</label>
+		  <div class="float">
+		    <%= select('order_account', 'expiration_month', OrderAccount.months) %>
+		    <p class="info">Month</p>
+		  </div>
+	    <div class="float">
+	      <%= text_field 'order_account', 'expiration_year', :maxlength => 17, :size => 4 %>
+	      <p class="info">Year</p>
+	    </div>
+	    <div class="float">
+	      <%= error_message_on(:order_account, :expiration_month) %>
+	    </div>
+		    <div class="clear">&nbsp;</div>
+		</div>
+	</div>
+
+</div>
+<% if @order.id %>
+<h2>Transactions</h2>
+<div class="padLeft">
+	<table class="list" cellpadding="0" cellspacing="0">
+		<tr><th>Transaction ID</th><th>Date</th><th>Type</th><th>Amount</th><th>Tax</th><th>Status</th><th>Del</th></tr>
+		<% @order.order_transactions.each do | @order_transaction |	
+			viaklix_transaction = @order_transaction.viaklix_transaction
+			%>
+		<tr><td><%= text_field 'order_transaction[]', 'transaction_id', :size => 37 %></td>
+			<td><%= viaklix_transaction ? viaklix_transaction.transactiondatetime : '' %></td>
+			<td><%= viaklix_transaction ? viaklix_transaction.transactiontype : '' %></td>
+			<td><%= viaklix_transaction ? viaklix_transaction.ssl_amount : '' %></td>
+			<td><%= viaklix_transaction ? viaklix_transaction.sales_tax : '' %></td>
+			<td><%= viaklix_transaction ? viaklix_transaction.status : '' %></td>
+            <td><%= link_to 'Del', { :action => :destroy_order_transaction, :id => @order_transaction.id, :order_id => @order.id }, :confirm => 'Are you sure?', :post => true  %></td>
+		</tr>
+		<% end %>
+	</table>
+	<div style="text-align: right;">
+		Total: <%= number_to_currency @order.order_transactions_amount %><br /><br />
+		<%= link_to 'Add New Transaction', { :action => :add_order_transaction, :id => @order.id }, :post => true  %>
+    </div>
+</div>
+<% else %>
+<h2>Transaction</h2>
+<div class="padLeft">
+<%= text_field_tag 'transaction_id', '', :size => 37 %>
+<div class="clear">&nbsp;</div>
+</div>
+<% end %>

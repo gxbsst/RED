@@ -1,0 +1,1562 @@
+--- 
+products_093: 
+  name: BNC to DIN 1.0/2.3
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "35"
+  code: "109001"
+  quantity: "0"
+  size_height: "0"
+  id: "94"
+  description: ""
+  size_depth: "0"
+products_072: 
+  name: QUICKPLATE ADAPTOR
+  deposit: "7.5"
+  size_width: "0"
+  erp_product_item: "804016"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "75"
+  code: "804016"
+  quantity: "0"
+  size_height: "0"
+  id: "73"
+  description: ""
+  size_depth: "0"
+products_008: 
+  name: ZZZ_RED EVF Viewfinder
+  deposit: "295"
+  size_width: "0"
+  erp_product_item: "301001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "2950"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "8"
+  description: |
+    Includes:
+    * RED ARM adjustable mount arm
+    * Interface cable - 1ft
+
+  size_depth: "0"
+products_030: 
+  name: ZZZ_RED 50-150mm T3 (f2.8) Zoom
+  deposit: "850"
+  size_width: "0"
+  erp_product_item: "202003"
+  weight: "0"
+  date_available: 2007-07-09 00:00:00
+  price: "8500"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "30"
+  description: Delivery in the end of 2007
+  size_depth: "0"
+products_029: 
+  name: Chainsaw (9")
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901006"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "25"
+  code: "901006"
+  quantity: "0"
+  size_height: "0"
+  id: "29"
+  description: |
+    The Limited Edition 9" Chainsaw RED Digital Cinema Logo Sticker. Printed on VINYL in full color. We use a genuine 3M print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+    
+    Each tooth on our Buzzsaw and Chainsaw specialty stickers is precision cut with over 800 cut paths, for an incredible looking cut sticker.
+
+  size_depth: "0"
+products_051: 
+  name: UNIVERSAL MOUNT
+  deposit: "10"
+  size_width: "0"
+  erp_product_item: "601002"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "100"
+  code: "601002"
+  quantity: "0"
+  size_height: "0"
+  id: "52"
+  description: ""
+  size_depth: "0"
+products_094: 
+  name: Mini-XLR to Mini-XLR
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "35"
+  code: "109002"
+  quantity: "0"
+  size_height: "0"
+  id: "95"
+  description: ""
+  size_depth: "0"
+products_073: 
+  name: RED FLASH DRIVE
+  deposit: "450"
+  size_width: "0"
+  erp_product_item: "501002"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "4500"
+  code: "501002"
+  quantity: "0"
+  size_height: "0"
+  id: "74"
+  description: ""
+  size_depth: "0"
+products_010: 
+  name: ZZZ_RED ARM
+  deposit: "12"
+  size_width: "0"
+  erp_product_item: "604001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "120"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "10"
+  description: RED ARM adjustable mount arm
+  size_depth: "0"
+products_009: 
+  name: ZZZ_RED LCD Screen (5.6")
+  deposit: "170"
+  size_width: "0"
+  erp_product_item: "302001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "1700"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "9"
+  description: |
+    Includes:
+    * RED ARM adjustable mount arm
+    * Interface cable - 1ft
+
+  size_depth: "0"
+products_031: 
+  name: RED ONE BODY ONLY
+  deposit: "1750"
+  size_width: "0"
+  erp_product_item: "101001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "17500"
+  code: "101001"
+  quantity: "0"
+  size_height: "0"
+  id: "31"
+  description: |
+    Includes-
+    * Camera body
+    * P/L Mount
+    * Accessory Cables
+    * Operations Guide
+    * License for REDCINE software
+
+  size_depth: "0"
+products_052: 
+  name: TOP HANDLE
+  deposit: "15"
+  size_width: "0"
+  erp_product_item: "602016"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "150"
+  code: "602016"
+  quantity: "0"
+  size_height: "0"
+  id: "53"
+  description: ""
+  size_depth: "0"
+products_095: 
+  name: ZZZ_EVF Extension Cable (10ft)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "300"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "96"
+  description: ""
+  size_depth: "0"
+products_074: 
+  name: 110mm BUZZSAW METAL ICON
+  deposit: "5"
+  size_width: "0"
+  erp_product_item: "901008"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "50"
+  code: "901008"
+  quantity: "0"
+  size_height: "0"
+  id: "75"
+  description: ""
+  size_depth: "0"
+products_011: 
+  name: ZZZ_EVF / LCD Extension Cable 3ft
+  deposit: "20"
+  size_width: "0"
+  erp_product_item: "309001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "200"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "11"
+  description: ""
+  size_depth: "0"
+products_032: 
+  name: RED 18-50mm T3 Zoom
+  deposit: "650"
+  size_width: "0"
+  erp_product_item: "202002"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "6500"
+  code: "202002"
+  quantity: "0"
+  size_height: "0"
+  id: "32"
+  description: ""
+  size_depth: "0"
+products_053: 
+  name: TOP HANDLE EXT.
+  deposit: "17.5"
+  size_width: "0"
+  erp_product_item: "602012"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "175"
+  code: "602012"
+  quantity: "0"
+  size_height: "0"
+  id: "54"
+  description: ""
+  size_depth: "0"
+products_096: 
+  name: RED HANDLE (Left)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "250"
+  code: 601003L
+  quantity: "0"
+  size_height: "0"
+  id: "97"
+  description: ""
+  size_depth: "0"
+products_075: 
+  name: STEEL 6" ROD (each)
+  deposit: "2"
+  size_width: "0"
+  erp_product_item: "601012"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "20"
+  code: "601012"
+  quantity: "0"
+  size_height: "0"
+  id: "76"
+  description: ""
+  size_depth: "0"
+products_033: 
+  name: RED 50-150mm T3 Zoom
+  deposit: "850"
+  size_width: "0"
+  erp_product_item: "202003"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "8500"
+  code: "202003"
+  quantity: "0"
+  size_height: "0"
+  id: "33"
+  description: ""
+  size_depth: "0"
+products_054: 
+  name: BATTERY PLATE
+  deposit: "17.5"
+  size_width: "0"
+  erp_product_item: "404001"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "175"
+  code: "404001"
+  quantity: "0"
+  size_height: "0"
+  id: "55"
+  description: ""
+  size_depth: "0"
+products_012: 
+  name: ZZZ_LCD Extension Cable (10ft)
+  deposit: "30"
+  size_width: "0"
+  erp_product_item: "309002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "300"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "12"
+  description: ""
+  size_depth: "0"
+products_097: 
+  name: Red Lens Motor
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "1250"
+  code: "801002"
+  quantity: "0"
+  size_height: "0"
+  id: "98"
+  description: ""
+  size_depth: "0"
+products_076: 
+  name: Red Zoom f2.8 CF 18 - 85mm
+  deposit: "997.5"
+  size_width: "0"
+  erp_product_item: "202001"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "9975"
+  code: "202001"
+  quantity: "0"
+  size_height: "0"
+  id: "77"
+  description: "Note: Delivery of the f2.8 CF 18-85mm has been delayed until Summer 2008."
+  size_depth: "0"
+products_055: 
+  name: SIDE HANDLE
+  deposit: "20"
+  size_width: "0"
+  erp_product_item: "602008"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "200"
+  code: "602008"
+  quantity: "0"
+  size_height: "0"
+  id: "56"
+  description: ""
+  size_depth: "0"
+products_013: 
+  name: ZZZ_RED DRIVE 320GB
+  deposit: "90"
+  size_width: "0"
+  erp_product_item: "501001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "900"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "13"
+  description: |
+    Includes- 
+    Dual 160 GB 2.5" SATA Hard Disk Drives 
+
+  size_depth: "0"
+products_034: 
+  name: RED 300mm f2.8 Lens
+  deposit: "495"
+  size_width: "0"
+  erp_product_item: "201001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "4950"
+  code: "201001"
+  quantity: "0"
+  size_height: "0"
+  id: "34"
+  description: ""
+  size_depth: "0"
+products_098: 
+  name: Mitchell Base Mount
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "230"
+  code: "804007"
+  quantity: "0"
+  size_height: "0"
+  id: "99"
+  description: ""
+  size_depth: "0"
+products_077: 
+  name: AC Power Adaptor
+  deposit: "13.5"
+  size_width: "0"
+  erp_product_item: "402002"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "135"
+  code: "402002"
+  quantity: "0"
+  size_height: "0"
+  id: "78"
+  description: ""
+  size_depth: "0"
+products_014: 
+  name: ZZZ_RED RAM 64GB
+  deposit: "450"
+  size_width: "0"
+  erp_product_item: "501002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "4500"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "14"
+  description: |
+    Includes
+    Dual 32 GB 2.5" SATA Flash Memory Drives
+
+  size_depth: "0"
+products_035: 
+  name: BASE PRODUCTION PACK
+  deposit: "125"
+  size_width: "0"
+  erp_product_item: "603001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "1250"
+  code: "603001"
+  quantity: "0"
+  size_height: "0"
+  id: "35"
+  description: "The Base Production Pack includes:\r\n\
+    * (1) Universal Mount \r\n\
+    * (1) RED handle (Right) \r\n\
+    * (1) RED Bottom Plate \r\n\
+    * (1) Shoulder Dovetail \r\n\
+    * (1) Top Mount \r\n\
+    * (1) Top Handle \r\n\
+    * (1) RED Cradle \r\n\
+    * (2) 18\xE2\x80\x9D Steel Rods \r\n\
+    * (1) V Plate\r\n"
+  size_depth: "0"
+products_056: 
+  name: B4 to PL ADAPTOR
+  deposit: "350"
+  size_width: "0"
+  erp_product_item: "804003"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "3500"
+  code: "804003"
+  quantity: "0"
+  size_height: "0"
+  id: "57"
+  description: ""
+  size_depth: "0"
+products_099: 
+  name: 100mm Ball Adaptor
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "195"
+  code: "804008"
+  quantity: "0"
+  size_height: "0"
+  id: "100"
+  description: ""
+  size_depth: "0"
+products_078: 
+  name: Battery Plate Belt Clip
+  deposit: "29"
+  size_width: "0"
+  erp_product_item: "404002"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "290"
+  code: "404002"
+  quantity: "0"
+  size_height: "0"
+  id: "79"
+  description: ""
+  size_depth: "0"
+products_015: 
+  name: RED FLASH (CF) Module
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "502001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "500"
+  code: "502001"
+  quantity: "0"
+  size_height: "0"
+  id: "15"
+  description: |
+    includes:
+    * Camera Read / Write Module for CF flash media
+    * (media is not included)
+
+  size_depth: "0"
+products_036: 
+  name: RED EVF
+  deposit: "295"
+  size_width: "0"
+  erp_product_item: "301001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "2950"
+  code: "301001"
+  quantity: "0"
+  size_height: "0"
+  id: "37"
+  description: ""
+  size_depth: "0"
+products_057: 
+  name: NIKON MOUNT
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "804004"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "500"
+  code: "804004"
+  quantity: "0"
+  size_height: "0"
+  id: "58"
+  description: ""
+  size_depth: "0"
+products_080: 
+  name: Aux. Power Cable
+  deposit: "2"
+  size_width: "0"
+  erp_product_item: "409002"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "120"
+  code: "409002"
+  quantity: "0"
+  size_height: "0"
+  id: "81"
+  description: ""
+  size_depth: "0"
+products_079: 
+  name: DC Power Cable (10ft)
+  deposit: "7.5"
+  size_width: "0"
+  erp_product_item: "409001"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "120"
+  code: "409001"
+  quantity: "0"
+  size_height: "0"
+  id: "80"
+  description: ""
+  size_depth: "0"
+products_016: 
+  name: RED FLASH (EX34) Module
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "502002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "500"
+  code: "502002"
+  quantity: "0"
+  size_height: "0"
+  id: "16"
+  description: |
+    Includes:
+    Camera Read / Write Module for ExpressCard/34 flash media
+    (media is not included)
+
+  size_depth: "0"
+products_037: 
+  name: RED LCD
+  deposit: "170"
+  size_width: "0"
+  erp_product_item: "302001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "1700"
+  code: "302001"
+  quantity: "0"
+  size_height: "0"
+  id: "38"
+  description: INCLUDES RED ARM and CABLE
+  size_depth: "0"
+products_058: 
+  name: RED ARM
+  deposit: "12"
+  size_width: "0"
+  erp_product_item: "604001"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "120"
+  code: "604001"
+  quantity: "0"
+  size_height: "0"
+  id: "59"
+  description: ""
+  size_depth: "0"
+products_081: 
+  name: ZZZ_eSATA Cable 18" (internal)
+  deposit: "10"
+  size_width: "0"
+  erp_product_item: "109003"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "100"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "82"
+  description: eSATA Cable 18" is an internal cable that connects the Camera main-board to a LEMO connector. Not to be confused with "eSATA Cable - external":/store/product_detail/102.
+  size_depth: "0"
+products_017: 
+  name: RED FLASH (SATA) Module
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "502003"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "500"
+  code: "502003"
+  quantity: "0"
+  size_height: "0"
+  id: "17"
+  description: |
+    Includes:
+    * Camera Read / Write Module for SATA 1.8"  flash media
+    * (media is not included)
+
+  size_depth: "0"
+products_038: 
+  name: RED POWER PACK
+  deposit: "145"
+  size_width: "0"
+  erp_product_item: "403001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "1450"
+  code: "403001"
+  quantity: "0"
+  size_height: "0"
+  id: "39"
+  description: |-
+    INCLUDES:
+    * CHARGER
+    * 2 BATTERIES
+    * POWER & CAMERA CABLES
+  size_depth: "0"
+products_060: 
+  name: COMPACT FLASH 8GB
+  deposit: "19.9"
+  size_width: "0"
+  erp_product_item: "502005"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "199"
+  code: "502005"
+  quantity: "0"
+  size_height: "0"
+  id: "61"
+  description: ""
+  size_depth: "0"
+products_059: 
+  name: RED DRIVE (RAID)
+  deposit: "90"
+  size_width: "0"
+  erp_product_item: "501001"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "900"
+  code: "501001"
+  quantity: "0"
+  size_height: "0"
+  id: "60"
+  description: ""
+  size_depth: "0"
+products_082: 
+  name: Red Wing Nut
+  deposit: "1"
+  size_width: "0"
+  erp_product_item: "602017"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "10"
+  code: "602017"
+  quantity: "0"
+  size_height: "0"
+  id: "83"
+  description: ""
+  size_depth: "0"
+products_018: 
+  name: RED RAW PORT Module
+  deposit: "650"
+  size_width: "0"
+  erp_product_item: "502004"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "6500"
+  code: "502004"
+  quantity: "0"
+  size_height: "0"
+  id: "18"
+  description: |
+    Includes - 
+    * Camera Mount Assembly
+    * Ethernet  - Optical Transceiver
+    * NOTE: Factory installed option. Installation removes RED FLASH  options from system configuration.
+
+  size_depth: "0"
+products_040: 
+  name: RED BRICK 140Wh
+  deposit: "45"
+  size_width: "0"
+  erp_product_item: "401001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "450"
+  code: "401001"
+  quantity: "0"
+  size_height: "0"
+  id: "41"
+  description: ""
+  size_depth: "0"
+products_039: 
+  name: RED CHARGER
+  deposit: "55"
+  size_width: "0"
+  erp_product_item: "402001"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "550"
+  code: "402001"
+  quantity: "0"
+  size_height: "0"
+  id: "40"
+  description: ""
+  size_depth: "0"
+products_061: 
+  name: ZZZ_COMPACT FLASH 16GB
+  deposit: "45"
+  size_width: "0"
+  erp_product_item: ""
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "450"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "62"
+  description: ""
+  size_depth: "0"
+products_083: 
+  name: Red Super Grip
+  deposit: "40"
+  size_width: "0"
+  erp_product_item: "801001"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "400"
+  code: "801001"
+  quantity: "0"
+  size_height: "0"
+  id: "84"
+  description: ""
+  size_depth: "0"
+products_020: 
+  name: ZZZ_RED ZOOM (f2.8) CF 18 - 50mm
+  deposit: "650"
+  size_width: "0"
+  erp_product_item: "202002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "6500"
+  code: ""
+  quantity: "1"
+  size_height: "0"
+  id: "20"
+  description: Delivery time for the RED 18-50mm f2.8 close focus zoom lens is scheduled for Summer 2007.
+  size_depth: "0"
+products_019: 
+  name: RED PRIME SET
+  deposit: "1997.5"
+  size_width: "0"
+  erp_product_item: "203001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "19975"
+  code: "203001"
+  quantity: "0"
+  size_height: "0"
+  id: "19"
+  description: |
+    Delivery time is estimated for 1st quarter of 2008.
+    Includes - 
+    * f2.8 15mm
+    * f1.9 25mm
+    * f1.9 35mm
+    * f1.9 50mm
+    * f1.9 85mm
+
+  size_depth: "0"
+products_041: 
+  name: RED CRADLE
+  deposit: "75"
+  size_width: "0"
+  erp_product_item: "602018"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "750"
+  code: "602018"
+  quantity: "0"
+  size_height: "0"
+  id: "42"
+  description: ""
+  size_depth: "0"
+products_062: 
+  name: STEEL 12" ROD (each)
+  deposit: "4"
+  size_width: "0"
+  erp_product_item: "601004"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "40"
+  code: "601004"
+  quantity: "0"
+  size_height: "0"
+  id: "63"
+  description: ""
+  size_depth: "0"
+products_084: 
+  name: Red 1.8" SATA Flash 32GB Media
+  deposit: "60"
+  size_width: "0"
+  erp_product_item: "504004"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "600"
+  code: "504004"
+  quantity: "0"
+  size_height: "0"
+  id: "85"
+  description: ""
+  size_depth: "0"
+products_021: 
+  name: ZZZ_RED B4 to P/L Mount Adaptor
+  deposit: "350"
+  size_width: "0"
+  erp_product_item: "804003"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "3500"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "21"
+  description: |
+    RED B4 to P/L Mount Adaptor
+
+  size_depth: "0"
+products_042: 
+  name: ARRI 15MM BASE
+  deposit: "60"
+  size_width: "0"
+  erp_product_item: "804013"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "600"
+  code: "804013"
+  quantity: "0"
+  size_height: "0"
+  id: "43"
+  description: See also the "ARRI 19MM BASE PLATE":/store/product_detail/45
+  size_depth: "0"
+products_063: 
+  name: STEEL 18" ROD (each)
+  deposit: "5.5"
+  size_width: "0"
+  erp_product_item: "601008"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "55"
+  code: "601008"
+  quantity: "0"
+  size_height: "0"
+  id: "64"
+  description: ""
+  size_depth: "0"
+products_100: 
+  name: 150mm Ball Adaptor
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "195"
+  code: "804009"
+  quantity: "0"
+  size_height: "0"
+  id: "101"
+  description: ""
+  size_depth: "0"
+products_085: 
+  name: Optical Fiber 300ft Cable
+  deposit: "83.5"
+  size_width: "0"
+  erp_product_item: "509001"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "2500"
+  code: "509001"
+  quantity: "0"
+  size_height: "0"
+  id: "86"
+  description: ""
+  size_depth: "0"
+products_022: 
+  name: RED FD Mount (Canon)
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "804002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "500"
+  code: "804002"
+  quantity: "0"
+  size_height: "0"
+  id: "22"
+  description: Canon 35mm Photo Mount
+  size_depth: "0"
+products_043: 
+  name: RED QUICKPLATE
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "804015"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "500"
+  code: "804015"
+  quantity: "0"
+  size_height: "0"
+  id: "44"
+  description: ""
+  size_depth: "0"
+products_064: 
+  name: STEEL 24" ROD (each)
+  deposit: "7"
+  size_width: "0"
+  erp_product_item: "601005"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "70"
+  code: "601005"
+  quantity: "0"
+  size_height: "0"
+  id: "65"
+  description: ""
+  size_depth: "0"
+products_001: 
+  name: ZZZ_RED ONE
+  deposit: "1750"
+  size_width: "0"
+  erp_product_item: "101001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "17500"
+  code: ""
+  quantity: "1"
+  size_height: "0"
+  id: "1"
+  description: |
+    Includes-  
+    * Camera body
+    * P/L Mount
+    * Accessory Cables
+    * Operations Guide
+    * License for REDCINE software
+
+  size_depth: "0"
+products_101: 
+  name: eSATA Cable
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "200"
+  code: "509002"
+  quantity: "0"
+  size_height: "0"
+  id: "102"
+  description: "eSATA Cable #509002 is an external cable that connects the camera to the drive."
+  size_depth: "0"
+products_086: 
+  name: Time Code Cable
+  deposit: "10"
+  size_width: "0"
+  erp_product_item: "509003"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "100"
+  code: "509003"
+  quantity: "0"
+  size_height: "0"
+  id: "87"
+  description: ""
+  size_depth: "0"
+products_044: 
+  name: ARRI 19MM BASE
+  deposit: "90"
+  size_width: "0"
+  erp_product_item: ""
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "900"
+  code: "804014"
+  quantity: "0"
+  size_height: "0"
+  id: "45"
+  description: See also the "ARRI 15MM BASE PLATE":/store/product_detail/43
+  size_depth: "0"
+products_065: 
+  name: FOCUS HOOK SET
+  deposit: "4.5"
+  size_width: "0"
+  erp_product_item: "804011"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "45"
+  code: "804011"
+  quantity: "0"
+  size_height: "0"
+  id: "66"
+  description: ""
+  size_depth: "0"
+products_002: 
+  name: ZZZ_RED ONE BASIC PRODUCTION PACK
+  deposit: "125"
+  size_width: "0"
+  erp_product_item: "603001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "1250"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "2"
+  description: |
+    INCLUDES:
+    RED V PLATE (battery not included)
+    *RED RAIL base package*:
+    * RED RAIL CRADLE (battery plate & magazine adaptor)
+    * RED RAIL MOUNT
+    * RED ROD SHORT (3)
+    * RED GRIP HANDLE
+    * RED RAIL BASE PLATE
+    * RED PAD (shoulder pad and plate adaptor)
+    * RED TOP HANDLE assembly
+
+  size_depth: "0"
+products_023: 
+  name: ZZZ_RED F Mount (Nikon)
+  deposit: "50"
+  size_width: "0"
+  erp_product_item: "804004"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "500"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "23"
+  description: Nikkon 35mm Photo Mount
+  size_depth: "0"
+products_102: 
+  name: RED Camera Cart
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-18 00:00:00
+  price: "1290"
+  code: "804005"
+  quantity: "0"
+  size_height: "0"
+  id: "103"
+  description: ""
+  size_depth: "0"
+products_087: 
+  name: Red Lens Cap
+  deposit: "2"
+  size_width: "0"
+  erp_product_item: "804012"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "20"
+  code: "804012"
+  quantity: "0"
+  size_height: "0"
+  id: "88"
+  description: ""
+  size_depth: "0"
+products_066: 
+  name: LCD CABLE
+  deposit: "18"
+  size_width: "0"
+  erp_product_item: "309003"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "180"
+  code: "309003"
+  quantity: "0"
+  size_height: "0"
+  id: "67"
+  description: ""
+  size_depth: "0"
+products_003: 
+  name: ZZZ_RED ONE PREMIUM PRODUCTION PACK
+  deposit: "275"
+  size_width: "0"
+  erp_product_item: "603002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "2750"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "3"
+  description: |
+    Includes:
+    RED V PLATE (battery not included) 
+    *RED RAIL premium package*
+    * RED RAIL CRADLE (battery plate & magazine adaptor)
+    * RED RAIL MOUNT (3)
+    * RED ROD SHORT (4)
+    * RED ROD LONG (4)
+    * RED RAIL HANDLE BRACKET
+    * RED GRIP HANDLE (2)
+    * RED SIDE HANDLE (4)
+    * RED RAIL BASE PLATE
+    * RED PAD (shoulder pad and plate adaptor)
+    * RED TOP HANDLE assembly
+    * RED RAIL TOP PLATE
+    * RED 15mm ROD ADAPTOR (Studio)
+    * RED 15mm ROD ADAPTOR (Lightweight)
+
+  size_depth: "0"
+products_024: 
+  name: 10" LOGO STICKER
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901003"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "20"
+  code: "901003"
+  quantity: "0"
+  size_height: "0"
+  id: "24"
+  description: |
+    The official RED Digital Cinema 10" inch round Logo Sticker. Printed on VINYL in full color. We use a genuine 3M print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+
+  size_depth: "0"
+products_045: 
+  name: SHOULDER DOVETAIL
+  deposit: "55"
+  size_width: "0"
+  erp_product_item: "602009"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "550"
+  code: "602009"
+  quantity: "0"
+  size_height: "0"
+  id: "46"
+  description: ""
+  size_depth: "0"
+products_088: 
+  name: 90mm Logo
+  deposit: "5"
+  size_width: "0"
+  erp_product_item: "901007"
+  weight: "0"
+  date_available: 2007-09-09 00:00:00
+  price: "50"
+  code: "901007"
+  quantity: "0"
+  size_height: "0"
+  id: "89"
+  description: ""
+  size_depth: "0"
+products_067: 
+  name: EVF CABLE
+  deposit: "18"
+  size_width: "0"
+  erp_product_item: "309001"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "180"
+  code: "309001"
+  quantity: "0"
+  size_height: "0"
+  id: "68"
+  description: ""
+  size_depth: "0"
+products_004: 
+  name: ZZZ_RED PRIME (f2.8) 300mm
+  deposit: "495"
+  size_width: "0"
+  erp_product_item: "201001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "4950"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "4"
+  description: Delivery time for the RED 300mm f2.8 is similar to RED ONE camera body. P/L Mount.
+  size_depth: "0"
+products_025: 
+  name: 6" LOGO STICKER
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901002"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "10"
+  code: "901002"
+  quantity: "0"
+  size_height: "0"
+  id: "25"
+  description: |
+    The official RED Digital Cinema 6" inch round Logo Sticker. Printed on VINYL in full color. We use a genuine 3M print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+
+  size_depth: "0"
+products_046: 
+  name: RED BOTTOM PLATE
+  deposit: "60"
+  size_width: "0"
+  erp_product_item: "601007"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "600"
+  code: "601007"
+  quantity: "0"
+  size_height: "0"
+  id: "47"
+  description: ""
+  size_depth: "0"
+products_090: 
+  name: C.F. 12" ROD (each)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "40"
+  code: "601009"
+  quantity: "0"
+  size_height: "0"
+  id: "91"
+  description: |-
+    CARBON FIBER RED ROD.
+    WARNING: may explode.
+  size_depth: "0"
+products_089: 
+  name: C.F. 6" ROD (each)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "20"
+  code: "601013"
+  quantity: "0"
+  size_height: "0"
+  id: "90"
+  description: |-
+    CARBON FIBER RED ROD.
+    WARNING: may explode.
+  size_depth: "0"
+products_068: 
+  name: LENS REAR CAP
+  deposit: "2.5"
+  size_width: "0"
+  erp_product_item: "201101"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "25"
+  code: "201101"
+  quantity: "0"
+  size_height: "0"
+  id: "69"
+  description: ""
+  size_depth: "0"
+products_005: 
+  name: ZZZ_RED ONE POWER PACK
+  deposit: "145"
+  size_width: "0"
+  erp_product_item: "403001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "1450"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "5"
+  description: |
+    Includes:
+    * RED BRICK 140Wh Battery Pack  (2)
+    * RED CHARGER 
+    * Camera-Charger cable - 10ft
+
+  size_depth: "0"
+products_026: 
+  name: 3" LOGO STICKER
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "5"
+  code: "901001"
+  quantity: "0"
+  size_height: "0"
+  id: "26"
+  description: |
+    The official RED Digital Cinema 3" inch round Logo Sticker. Printed on VINYL in full color. We use a genuine 3M print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+
+  size_depth: "0"
+products_047: 
+  name: RED CHEESE PLATE
+  deposit: "30"
+  size_width: "0"
+  erp_product_item: "602020"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "300"
+  code: "602020"
+  quantity: "0"
+  size_height: "0"
+  id: "48"
+  description: ""
+  size_depth: "0"
+products_091: 
+  name: C.F. 18" ROD (each)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "55"
+  code: "601010"
+  quantity: "0"
+  size_height: "0"
+  id: "92"
+  description: |-
+    CARBON FIBER RED ROD.
+    WARNING: may explode.
+  size_depth: "0"
+products_070: 
+  name: BOLT SET
+  deposit: "0.9"
+  size_width: "0"
+  erp_product_item: "101137"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "9"
+  code: "101137"
+  quantity: "0"
+  size_height: "0"
+  id: "71"
+  description: ""
+  size_depth: "0"
+products_069: 
+  name: BODY CAP
+  deposit: "1.2"
+  size_width: "0"
+  erp_product_item: "101208"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "12"
+  code: "101208"
+  quantity: "0"
+  size_height: "0"
+  id: "70"
+  description: ""
+  size_depth: "0"
+products_006: 
+  name: ZZZ_RED BRICK 140Wh Battery Pack
+  deposit: "45"
+  size_width: "0"
+  erp_product_item: "401001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "450"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "6"
+  description: V Mount Lithium Ion Battery
+  size_depth: "0"
+products_027: 
+  name: 20" LOGO STICKER
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901004"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "50"
+  code: "901004"
+  quantity: "0"
+  size_height: "0"
+  id: "27"
+  description: |
+    20" inches huge!
+    The official RED Digital Cinema 20" inch round Logo Sticker. Printed on VINYL in full color. We use a genuine 3M print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+    Picture features this monster 20" inch logo sticker mounted on the RED XUV.
+
+  size_depth: "0"
+products_048: 
+  name: TOP MOUNT
+  deposit: "25"
+  size_width: "0"
+  erp_product_item: "602010"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "250"
+  code: "602010"
+  quantity: "0"
+  size_height: "0"
+  id: "49"
+  description: ""
+  size_depth: "0"
+products_092: 
+  name: C.F. 24" ROD (each)
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: 
+  weight: "0"
+  date_available: 2007-09-14 00:00:00
+  price: "70"
+  code: "601011"
+  quantity: "0"
+  size_height: "0"
+  id: "93"
+  description: |-
+    CARBON FIBER RED ROD.
+    WARNING: may explode.
+  size_depth: "0"
+products_071: 
+  name: 15MM ADAPTOR
+  deposit: "9.5"
+  size_width: "0"
+  erp_product_item: "602019"
+  weight: "0"
+  date_available: 2007-09-06 00:00:00
+  price: "95"
+  code: "602019"
+  quantity: "0"
+  size_height: "0"
+  id: "72"
+  description: ""
+  size_depth: "0"
+products_007: 
+  name: ZZZ_RED CHARGER
+  deposit: "55"
+  size_width: "0"
+  erp_product_item: "402001"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "550"
+  code: ""
+  quantity: "0"
+  size_height: "0"
+  id: "7"
+  description: |-
+    Includes - 
+    * Dual sequential Battery Charger
+    * Integrated 100W D.C power output.
+    * Camera-Charger cable - 10ft
+  size_depth: "0"
+products_028: 
+  name: Buzzsaw (9")
+  deposit: "0"
+  size_width: "0"
+  erp_product_item: "901005"
+  weight: "0"
+  date_available: 2007-04-08 00:00:00
+  price: "25"
+  code: "901005"
+  quantity: "0"
+  size_height: "0"
+  id: "28"
+  description: |
+    &tThe Limited Edition 9" Buzzsaw RED Digital Cinema Logo Sticker. Printed on VINYL in full color. We use a genuine print process then laminate each sticker. All stickers carry a 5 year 3M guarantee against fading or cracking. 100% weatherproof.
+    
+    Each tooth on our Buzzsaw and Chainsaw specialty stickers is precision cut with over 800 cut paths, for an incredible looking cut sticker.
+
+  size_depth: "0"
+products_050: 
+  name: RED HANDLE (Right)
+  deposit: "25"
+  size_width: "0"
+  erp_product_item: "601003"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "250"
+  code: 601003R
+  quantity: "0"
+  size_height: "0"
+  id: "51"
+  description: |-
+    See also "RED HANDLE - Left":/store/product_detail/97.
+    Our left handed RED HANDLE.
+  size_depth: "0"
+products_049: 
+  name: RED HANDLE MOUNT
+  deposit: "15"
+  size_width: "0"
+  erp_product_item: "601006"
+  weight: "0"
+  date_available: 2007-09-05 00:00:00
+  price: "150"
+  code: "601006"
+  quantity: "0"
+  size_height: "0"
+  id: "50"
+  description: ""
+  size_depth: "0"

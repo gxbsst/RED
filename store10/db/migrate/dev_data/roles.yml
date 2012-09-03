@@ -1,0 +1,5 @@
+--- 
+roles_001: 
+  name: Administrator
+  id: "1"
+  description: Access everything in Substruct.

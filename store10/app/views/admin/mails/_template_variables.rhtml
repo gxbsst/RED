@@ -1,0 +1,18 @@
+<h2>Template Variables</h2>
+<table id="template_variables_list" class="list" cellspacing="0" cellpadding="0">
+  <tr>
+    <th>Variables List</th>
+  </tr>
+  <% template_variables.each do |key, value| %>
+  <tr class="<%= alternate %>">
+    <td>
+      <label for="variables[<%= key %>]" class="info"><%= key %></label>
+      <%= text_field_tag "variables[#{key}]", value, :class => "textInput variable" %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<p class="info">
+  Variables listed here will be used to fill in content of mails. <%= link_to "How to create variables?", { :action => "template_guide", :anchor => "variables" }, :target => "_blank" %>
+</p>

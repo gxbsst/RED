@@ -1,0 +1,10 @@
+<% debug(@users) %>
+<div class="clear">
+  
+</div>
+<table id="user_list" cellspacing="5" cellpadding="5" width="60%">
+  <tr><th>Name</th><th>Edit</th></tr>
+  <% for user in @users %>
+  <tr><td> <%= user.name %></td><td>Edit <%= link_to "Delete", :action => "delete",:id => user %></td></tr>
+  <% end %>
+</table>

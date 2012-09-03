@@ -1,0 +1,167 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag 'prototype' %>
+<%= stylesheet_link_tag 'v2/schema-white', 'v2/pages/contact-us' %>
+<script type="text/javascript">
+/*
+before submit the form, the screen resolution will be generated and set the ACTION
+property to prevent spam.
+TODO: Spam Protection.
+*/
+function checkForm() {
+	var queues = document.getElementsByName('contact[queue]');
+	var queue = '';
+	for (i=0; i<queues.length; i++) {
+		if (queues[i].checked) {
+			queue = queues[i].value;
+			break;
+		}
+	}
+	var userScreen = screen.width + 'x' + screen.height + ', ' + screen.pixelDepth + ' Bits';
+	
+	var requiredFields = [
+		{ text: queue, pattern: 'string', message: 'Please select a queue.' },
+		{ text: $F('name'), pattern: /^[^\"\,\<\>\[\]]+$/, message: 'Name is invalid.' },
+		{ text: $F('email'), pattern: 'email', message: 'Invalid email address.' },
+		{ text: $F('summary'), pattern: 'string', message: 'Summary can not be empty.' },
+		{ text: $F('detail'), pattern: 'string', message: 'Detail can no be empty.' }
+	];
+	
+	if (queue == 'TechSupport') {
+		requiredFields.push( { text: $F('contact_serial_no'), pattern: 'string', message: 'Please enter your serial number.' } );
+	}
+	
+	
+	var result = Validator.check(requiredFields);
+	if (result == true) {
+		$('contact_us').setAttribute('action', '<%= url_for :controller => 'contact', :action => 'tickets' %>');
+		$('screen_resolution').value = userScreen;
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/*
+if website is the selected queue, the input field of problem url
+should be displaied.
+*/
+function toggleProblemURL(event) {
+	var element = event.target || event.srcElement;
+	if (element.type == 'radio' && element.getAttribute('name') == 'contact[queue]') {
+		// var isWebsite = document.getElementById('website').checked;
+		// isWebsite ? $('problem_url').show() : $('problem_url').hide();
+		$('contact_us').className =  element.getAttribute('value');
+	}
+}
+
+</script>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('CONTACT_US|TITLE') %></h1>
+<% end %>
+
+<div class="text-content with-border">
+  <h2><%= _('CONTACT_US|TITLE') %></h2>
+  
+<%= form_tag(
+  { :controller => 'contact', :action => 'tickets' },
+  { :id => 'contact_us', :name => 'contact', :multipart => true,
+    :onclick => 'toggleProblemURL(event)', :onsubmit => 'return checkForm()' }
+)%>
+	<input type="hidden" id="screen_resolution" name="contact[user_screen]" value="" />
+	<%= hidden_field_tag 'contact[lang]', params[:lang]||'en_US' %>
+	<div id="queue_selector">
+		<div class="form_field"><input type="radio" id="orders" name="contact[queue]" value="orders" /><label for="orders"><strong><%= _('CONTACT_US|QUEUE|ORDERS') %></strong> <%= _('CONTACT_US|QUEUE|ORDERS_TEXT', :lite_mode => true) %></label></div>
+		<div class="form_field"><input type="radio" id="tech" name="contact[queue]" value="TechInfo" /><label for="tech"><strong><%= _('CONTACT_US|QUEUE|TECHNICAL_QUESTIONS') %></strong> <%= _('CONTACT_US|QUEUE|TECHNICAL_QUESTIONS_TEXT', :lite_mode => true) %></label></div>
+		<div class="form_field">
+			<input type="radio" id="techsupport" name="contact[queue]" value="TechSupport" /><label for="techsupport"><%= _('CONTACT_US|QUEUE|TECH_SUPPORT') %></label>
+		</div>
+		<div class="form_field"><input type="radio" id="idea"     name="contact[queue]" value="idea" /><label for="idea"><strong><%= _('CONTACT_US|QUEUE|IDEA') %></strong> <%= _('CONTACT_US|QUEUE|IDEA_TEXT', :lite_mode => true) %></label></div>
+
+		<div class="form_field"><input type="radio" id="business" name="contact[queue]" value="BizDev" /><label for="business"><strong><%= _('CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT') %></strong> <%= _('CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT_TEXT', :lite_mode => true) %></label></div>
+		<div class="form_field"><input type="radio" id="jobs" name="contact[queue]" value="jobs" /><label for="jobs"><strong><%=_('CONTACT_US|QUEUE|JOBS') %></strong> <%= _('CONTACT_US|QUEUE|JOBS_TEXT', :lite_mode => true) %></label></div>
+		<div class="form_field"><input type="radio" id="website" name="contact[queue]" value="Website" /><label for="website"><strong><%=_('CONTACT_US|QUEUE|WEBSITE') %></strong> <%= _('CONTACT_US|QUEUE|WEBSITE_TEXT', :lite_mode => true) %></label></div>
+		<div class="form_field"><input type="radio" id="general" name="contact[queue]" value="general" /><label for="general"><strong><%=_('CONTACT_US|QUEUE|GENERAL') %></strong> <%= _('CONTACT_US|QUEUE|GENERAL_TEXT', :lite_mode => true) %></label></div>
+	</div>
+	<div id="fields">
+		<div class="form_field"><label for="name"><%= _('CONTACT_US|POST|NAME') %></label><input type="text" class="text-input" name="contact[name]" id="name" value="" style="width: 200px;" /></div>
+		<div class="form_field"><label for="email"><%= _('CONTACT_US|POST|EMAIL') %></label><input type="text" class="text-input" name="contact[email]" id="email" value="" style="width: 200px;" /></div>
+		<div class="form_field optional_field" id="phone">
+			<label for="contact_phone"><%= _('CONTACT_US|POST|PHONE') %></label>
+			<input type="text" class="text-input" name="contact[phone]" id="contact_phone" style="width: 450px;" />
+		</div>
+		<div class="form_field"><label for="summary"><%= _('CONTACT_US|POST|SUMMARY') %></label><input type="text" class="text-input" name="contact[subject]" id="summary" value="" style="width: 450px;" /></div>
+		<div class="form_field optional_field" id="problem_url">
+			<label for="contact_problem_url"><%= _('CONTACT_US|POST|PROBLEM_URL') %></label>
+			<input type="text" class="text-input" name="contact[url]" id="contact_problem_url" style="width: 450px;" />
+		</div>
+		<div class="form_field optional_field" id="product_type">
+			<label for="contact_product_type"><%= _('CONTACT_US|POST|PRODUCT_TYPE') %></label>
+			<select name="contact[product_type]" id="contact_product_type">
+				<%= options_for_select ['Camera', 'EVF', 'LCD', 'Charger', 'Battery', 'Other'] %>
+			</select>
+		</div>
+		<div class="form_field optional_field" id="serial_no">
+			<label for="contact_serial_no"><%= _('CONTACT_US|POST|SERIAL_NO') %></label>
+			<input type="text" class="text-input" name="contact[serial_numbers]" id="contact_serial_no" style="width: 450px;" />
+			<span class="tip"><%= _('CONTACT_US|POST|SERIAL_NO|TIP') %></span>
+		</div>
+		<div class="form_field optional_field" id="attachment">
+			<label for="contact_attachment">Attachment:</label>
+			<input type="file" name="contact[attachment]" id="contact_attachment" style="background-color: #FFF;" />
+		</div>
+		<div class="form_field" id="mail_detail">
+			<label for="detail"><%= _('CONTACT_US|POST|DETAIL') %></label>
+			<textarea id="detail" name="contact[content]" rows="5" style="width: 450px;" class="text-input"></textarea>
+		</div>
+		<p class="optional_field" id="subscript">
+      Please attached any relevant LOG files that might assist RED with your Incident Ticket.  Note that file size limit is 8 MB. Only RED ONE "LOG" files are permitted at this time.
+      <br />
+			<%= _('CONTACT_US|POST|TECH_SUPPORT|SUBSCRIPT') %>
+		</p>
+		<%= submit_tag _('CONTACT_US|POST|SEND'), :class => 'button' %>
+	</div>
+</form>
+
+<div id="company-info">
+	<h3><%= _('GLOBAL|FULL_COMPANY_NAME') %></h3>
+
+	<h4>RED Headquarters</h4>
+	<p>
+		<%= _('CONTACT_US|ADDRESS') %>
+	</p>
+	<p>
+		<%= _('CONTACT_US|PHONE') %><br/>
+		<%= _('CONTACT_US|FAX') %><br/><br/>
+		<%= br _('CONTACT_US|OPERATION_HOURS') %><br>
+		<%= br _('CONTACT_US|AVAILABLE_TIME') %>
+<br/><br/>
+		(<a href="http://maps.google.com/maps?f=q&hl=en&q=20291+Valencia+Circle+Lake+Forest,+CA+92653&layer=&sll=33.667567,-117.660723&sspn=0.011001,0.021758&ie=UTF8&z=16&om=1&iwloc=addr">Google Map</a>)
+		(<a href="http://maps.yahoo.com/#mvt=m&lat=33.667656&lon=-117.660856&mag=3&trf=0&q1=20291%20Valencia%20Circle%20Lake%20Forest%2C%20CA" target="_blank">Yahoo Map</a>)
+		(<a href="http://www.mapquest.com/maps/map.adp?latlongtype=internal&addtohistory=&latitude=m8ty%2br%2fmmTq5WMTrIwbaYg%3d%3d&longitude=%2f7UvXdg2mYZu0bMC%2byrt8Q%3d%3d&name=RED%20Digital%20Cinema&country=US&address=20291%20Valencia%20Cir&city=Lake%20Forest&state=CA&zipcode=92630&phone=949%2d206%2d7900&spurl=0&&q=RED%20Digital%20Cinema&qc=Nonclassified%20Establishments">Mapquest</a>)
+	</p>
+</div>
+
+<div id="company-info">
+	<h4>RED Europe Ltd</h4>
+	<p>
+		Pinewood Studios<br/>
+		Iver Heath<br/>
+		Bucks, England<br/>
+		SL0 0NH<br/>
+
+	</p>
+	<p>
+		Phone: +44(0)1753 785454<br/>
+		Fax: +44(0)1753 785453<br><br>
+		<%= br _('CONTACT_US|OPERATION_HOURS') %><br>
+		Monday – Friday, 9:00 AM – 6:00 PM British Time<br/><br/>
+		(<a href="http://maps.google.com/maps?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&um=1&ie=UTF-8&q=Pinewood+Studios+Iver+Heath+Bucks,+England+SL0+0NH&fb=1&split=1&gl=us&ei=Syf_SbufE5mNtgenkOSiDQ&sa=X&oi=local_group&resnum=1&ct=image">Google Map</a>)
+		(<a href="http://maps.yahoo.com/#mvt=m&lat=51.536786&lon=-0.517342&zoom=9&q1=Pinewood%2520Studios%2520near%2520Iver%252C%2520SL0%25200NH%252C%2520UK" target="_blank">Yahoo Map</a>)
+		(<a href="http://europe.mapquest.com/maps/map.adp?formtype=address&addtohistory=&address=[46-26]%20Iver%20Lane&city=Iver&state=&zipcode=SL0%209&country=GB&location=vAxfc5gAovoky8SMyFSDi3urqLWihavq19eoiqdw%2blb0%2fLiBYXry1fKVLpQWViuVI5dYguuEwbFZSFH0oakOpCam5AmFz3tcQ7rchQxfQ8hj5tH5vQ84oYybcf3icWRMoU6eTep4RWI%3d&ambiguity=1">Mapquest</a>)
+	</p>
+</div>
+
+<div class="clear"></div>
+</div>

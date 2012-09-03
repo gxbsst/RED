@@ -1,0 +1,111 @@
+<% @page_title = "RED / Index" %> 
+<script type="text/javascript" src="/javascripts/prototype_for_homepage.js"></script>
+<script type="text/javascript" src="/javascripts/banner_slider.js"></script>
+<script type="text/javascript"src="/javascripts/scriptaculous_for_homepage.js"></script> 
+<script type="text/javascript" language = "Javascript" charset = "utf-8"> 
+<!--
+document.write('<style type="text/css">#crossfade {visibility:hidden;}<\/style>'); //-->
+</script> 
+<script type ="text/javascript" >
+setAuto(); 
+</script>
+<style type="text/css">
+#hero{margin-top:10px; height: 550px;width:910px;position:relative;}
+#hero .fader{position:absolute;text-align:center;width:910px;left:0;top:0;}
+#hero .fader .image{margin:0 auto;}
+#text1 {margin-top:-510px;text-align:center;}
+#text2 {margin-top:-170px;text-align:left;margin-left:30px;}
+img, div { behavior: url(/stylesheets/iepngfix.htc) }
+</style>
+
+<div id="hero">
+  <%= link_to image_tag('/skin/img/index/epic.png', :size => '223x537'), 'http://www.reduser.net/forum/showthread.php?p=289850#post289850' %>
+  <%= link_to image_tag('/skin/img/index/redone.png', :size => '223x537'), :controller => 'cameras' %>
+  <%= link_to image_tag('/skin/img/index/scarlet_nab.png', :size => '223x537'), 'http://www.scarletuser.com/showthread.php?p=21391#post21391' %>
+  <%= link_to image_tag('/skin/img/index/redray.png', :size => '223x537'), :controller => 'nab', :action => 'redray' %>
+</div><!--/hero-->
+
+<div id="firmware">
+  Current RED ONE Firmware :
+  <%= download_link 'firmware_release' %>
+  |
+  <%= download_link 'red_alert' %>
+  |
+  <%= download_link 'redcine' %>
+  |
+  <%= link_to image_tag('/skin/img/index/more_button.gif', :align => 'absmiddle'), :controller => "support" %>
+</div>
+
+<div id="recon">
+  <h2><%= link_to image_tag('/skin/img/index/rss_icon.jpg', :size => '54x18'),'/rss/recon' %><a href="http://www.reduser.net/forum/forumdisplay.php?f=29" class="red_link" >RECON<br /><span class="font11" >Words from Jim</span></a></h2>
+  <ul>
+    <% @red_con[0..6].each do |news| %>
+    <li>
+      <%= link_to truncate(news.title,30), news.link,:alt => news.title %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="red_user_news">
+  <h2><%= link_to image_tag('/skin/img/index/rss_icon.jpg', :size => '54x18'), '/rss/reduser' %><a href="http://www.reduser.net/forum/index.php" class="red_link"> REDUSER.NET<br /><span class="font11">RED Online Community</span></a></h2>
+  <ul>
+    <% @red_user_news[0..6].each do |news| %> <li> <%= link_to truncate(news.title,30), news.link,:alt => news.title %> </li> <% end %>
+  </ul>
+</div>
+
+<div id="hot_news">
+  <div id="au">
+     <div class="outer" onmouseout="setAuto();" onmouseover="Mea(0);clearAuto();">
+          <div class="inner">
+            <a href="/developer"><img src="/skin/img/index/r3d_sdk.png" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+
+        <div class="outer"  style="display: none;"  onmouseout="setAuto();" onmouseover="Mea(1);clearAuto();">
+          <div class="inner">
+            <img src="/skin/img/index/serving.png" alt=""  height="155" width="450" align="left" />
+          </div>
+        </div><!--end .outer-->
+
+        <div class="outer" style="display: none;"  onmouseout="setAuto();" onmouseover="Mea(2);clearAuto();">
+          <div class="inner">
+            <a href="/indie/thenothingmen"><img src="/skin/img/index/thenothingmen.png" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+        <div class="outer" style="display: none;"  onmouseout="setAuto();" onmouseover="Mea(3);clearAuto();">
+          <div class="inner">
+            <a href="interviews"><img src="/skin/img/index/interviews.jpg" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+
+        <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(4);clearAuto();">
+          <div class="inner">
+            <a href="/skin/img/nab_2008/nab2008.pdf"><img src="/skin/img/index/nab.png" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+        <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(5);clearAuto();">
+          <div class="inner">
+            <a href="red_mythbusters"><img src="/skin/img/index/redmythbusters.png" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+        <div class="outer" style="display: none;" onmouseout="setAuto();" onmouseover="Mea(6);clearAuto();">
+          <div class="inner">
+            <a href="shot_on_red"><img src="/skin/img/index/crossingtheline.png" alt=""  height="155" width="450" align="left" /></a>
+          </div>
+        </div><!--end .outer-->
+
+      </div><!--end au-->
+      <div id="control_panel">
+        <a id="pause" onclick="setPause();return false" href="#"><img src="/skin/img/index/pause.gif" alt="" /></a>
+        <ul id="No">
+          <li id="t6" ><a onmouseout="setAuto();" onmouseover="Mea(6);clearAuto();" >7</a></li>
+          <li id="t5" ><a onmouseout="setAuto();" onmouseover="Mea(5);clearAuto();" >6</a></li>
+          <li id="t4" ><a onmouseout="setAuto();" onmouseover="Mea(4);clearAuto();" >5</a></li>
+          <li id="t3" ><a onmouseout="setAuto();" onmouseover="Mea(3);clearAuto();" >4</a></li>
+          <li id="t2" ><a onmouseout="setAuto();" onmouseover="Mea(2);clearAuto();" >3</a></li>
+          <li id="t1" ><a onmouseout="setAuto();" onmouseover="Mea(1);clearAuto();" >2</a></li>
+          <li id="t0" class="active"><a onmouseout="setAuto();" onmouseover="Mea(0);clearAuto();" >1</a></li>
+        </ul>
+      </div><!--end #control_panel-->
+    </div><!--end#hot_news-->

@@ -1,0 +1,43 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag 'highslide/highslide' %>
+<script type="text/javascript">
+hs.graphicsDir = '/javascripts/highslide/graphics/';
+hs.captionId = 'the-caption';
+hs.outlineType = 'rounded-white';
+hs.showCredits = false;
+</script>
+<%= stylesheet_link_tag 'highslide', 'v2/pages/accessories/power_system' %>
+<% end %>
+<% content_for(:heading) do %>
+<h1><%= _('ACCESSORIES|SUB_NAVIGATION|POWER_SYSTEM') %></h1>
+<% end %>
+<div class="banner">
+  <img src="/images/pages/accessories/power_system_hero.png" alt="" align="center" />
+</div>
+
+<div id="power_pack" class="text-content">
+  <hr />
+  <img align="right" style="margin-left: 20px;" src="/images/pages/accessories/power_pack.png" alt=""/>
+  <h2><img align="center" alt="" src="/images/pages/accessories/powerpack-text.png" /></h2>
+  <%= _('ACCESSORIES|POWER_SYSTEM|POWER_PACK|TEXT') %>
+</div>
+
+<div id="red_charger" class="text-content">
+  <hr style="margin-bottom: 30px;"/>
+
+  <div class="images-outer"><img   src="/images/pages/accessories/red_charger.png" alt="" /> <br /><%= _('ACCESSORIES|POWER_SYSTEM|RED_CHARGER|SCRIPT|BATTERY_PLATE_BELT_CLIP') %></div>
+
+  <p><img align="center" src="/images/pages/accessories/charger-text.png" alt="" /></p>
+  <%= _('ACCESSORIES|POWER_SYSTEM|RED_CHARGER|TEXT') %>
+  <div class="clear"></div>
+  <div class="images-outer"><img  src="/images/pages/accessories/power_adaptor.png" alt="" /><br /><%= _('ACCESSORIES|POWER_SYSTEM|POWER_ADAPTOR|SCRIPT|AC_POWER_ADAPTER') %></div>
+  <%= _('ACCESSORIES|POWER_SYSTEM|POWER_ADAPTOR|TEXT') %>
+  <div class="clear"></div>
+  <div id="brick">
+    <h2><img align="center" src="/images/pages/accessories/brick-text.png" alt="" /></h2>
+    <%= _('ACCESSORIES|POWER_SYSTEM|RED_BRICK|TEXT') %>
+  </div>
+</div>
+
+
+

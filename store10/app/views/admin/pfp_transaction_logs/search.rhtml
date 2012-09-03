@@ -1,0 +1,22 @@
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  <div id="search_box" style="position:absolute;left:550px;top:-10px;">
+    <%= start_form_tag :action => 'search' %>
+    <input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" />
+    <%= submit_tag('Search', {:class => 'button hundred'}) %>
+    <%= end_form_tag %>
+  </div>
+  <div class="clear info">&nbsp;</div>
+</div>
+
+<div id="fullContent">
+  <%= render(:partial => 'list') %>
+  
+  <!-- PAGINATION -->
+  <p><%= link_to(h('< Previous'), {:page => @pfp_log_pages.current.previous, :term => @term}) + " | " if @pfp_log_pages.current.previous %>
+    <%= pagination_links(@pfp_log_pages, :window_size => 10, :params => {:term => @term}) %>
+  <%= " | " + link_to(h('Next >'), {:page => @pfp_log_pages.current.next, :term => @term}) if @pfp_log_pages.current.next %></p>
+  <span class="info"><%= "(Showing #{@pfp_log_pages.items_per_page} of #{@pfp_log_pages.item_count} Accounts total.)" %></span>
+  <!-- PAGINATION -->
+</div>
+

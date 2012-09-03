@@ -1,0 +1,44 @@
+<%= render :partial => 'sidebar' %>
+
+<%= flash_notice_tag %>
+
+<p><strong><%= @user.name %></strong>,</p>
+<p>
+	Welcome to your RED Digital Cinema Account. Your account number is <em><%= @user.customer.account_num %></em>.
+	<%= "<strong>This account is authorized to download RED ONE Firmware.</strong>" if @user.customer.red_one_shipped? %>
+</p>
+
+<p>
+  Your current account balance is <em><%= number_to_currency( @customer.account_balance || 0 ) %></em>
+</p>
+
+<% if (open_orders = @customer.open_orders).size > 0 %>
+<p>
+	You have <%= open_orders.size %> <%= link_to "Open Orders", :action => "open_orders" %> that you can modify now:
+	<ul>
+	    <%= open_orders.collect{ |order| "<li>#{order.order_number}</li>"}.join %>
+	</ul>
+</p>
+<% end %>
+
+<% if (orders = @user.customer.sales_orders).size > 0 %>
+<p>
+	You have <%= orders.size %> total orders on file. See your <%= link_to "Order History", :action => "order_history" %>
+</p>
+<% end %>
+
+<p>
+	Your email on file is: <%= @user.email %><br />
+	You can <%= link_to "Update Your Contact Information", :action => "contacts", :id => @user.id %> or <%= link_to "Change Your Password", :action => "change_password" %>.
+</p>
+
+<p>
+	<% if (other_contacts = @user.customer.contact_people.select{|contact| contact.id != @user.id}).size > 0 %>
+	The following users have access to this account:
+	<ul>
+		<%= other_contacts.collect{|contact| "<li>#{contact.name} &lt;#{contact.email}&gt;</li>"}.join %>
+	</ul>
+	<% else %>
+	No additional users have access to this account. To grant access to other users, for example your business partners or administrative staff, add them in the <%= link_to "Alternate Contacts", :action => "contacts" %> section.
+	<% end %>
+</p>

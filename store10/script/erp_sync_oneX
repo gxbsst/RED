@@ -1,0 +1,139 @@
+#!/usr/bin/ruby
+
+case
+when ARGV[0].nil?
+  puts "\n  Please specify process environment:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+when ARGV[1].nil?
+  puts "\n  Please specify order number:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+end
+
+
+ENV['RAILS_ENV'] = ARGV.shift
+RAILS_ROOT = File.dirname(__FILE__) + '/..'
+
+require RAILS_ROOT + '/config/environment' 
+
+begin
+
+  # Parse the XML
+  def parse_response( response_body )
+    doc = Hpricot.XML( response_body )
+    orders = []
+
+    (doc/'SalesTableUpdate_1').each do |node|
+
+      istreet = (node/"InvoiceStreet").inner_text
+      icity = (node/"InvoiceCity").inner_text
+      istate = (node/"InvoiceState").inner_text
+      izip_code = (node/"InvoiceZipCodeId").inner_text
+      icounty = (node/"InvoiceCounty").inner_text
+      icountry = (node/"InvoiceCountry").inner_text
+      iname = (node/"InvoiceName").inner_text
+      iaddress = (node/"InvoiceAddress").inner_text
+      icountry_region_id = (node/"InvoiceCountryRegionId").inner_text
+
+      dstreet = (node/"DeliveryStreet").inner_text
+      dcity = (node/"DeliveryCity").inner_text
+      dstate = (node/"DeliveryState").inner_text
+      dzip_code = (node/"DeliveryZipCodeId").inner_text
+      dcounty = (node/"DeliveryCounty").inner_text
+      dcountry = (node/"DeliveryCountry").inner_text
+      dcountry_region_id = (node/"DeliveryCountryRegionId").inner_text
+      dname = (node/"DeliveryName").inner_text
+      daddress = (node/"DeliveryAddress").inner_text
+
+      invoice_address = { :icountry_region_id => icountry_region_id, :icountry => icountry, :istreet => istreet, :icity => icity, :istate => istate, :izip_code => izip_code,  :icounty => icounty, :iname => iname, :iaddress => iaddress }
+
+      delivery_address = { :dcountry_region_id => dcountry_region_id, :dcountry => dcountry, :dstreet => dstreet, :dcity => dcity, :dstate => dstate, :dzip_code => dzip_code,  :dcounty => dcounty, :dname => dname, :daddress => daddress }
+
+      lines = []
+
+      (node/'SalesLineUpdate_1').each do |line|
+        item_id = (line/'ItemId').inner_text
+        revision = (line/'Revision').inner_text
+        sales_id = (line/'SalesId').inner_text
+        sales_qty = (line/'SalesQty').inner_text
+        sales_unit =(line/'SalesUnit').inner_text
+
+        name  = ERP::Item.find_by_item_id(item_id).name
+        price = ERP::Item.find_by_item_id(item_id).price
+
+        lines << { :price => price, :name => name, :item_id => item_id, :revision => revision, :sales_id => sales_id,  :sales_qty => sales_qty, :sales_unit => sales_unit }
+      end
+
+      sales_id  = (node.at('SalesId')).inner_text
+
+      orders << { :sales_id => sales_id, :invoice => invoice_address, :delivery => delivery_address, :lines => lines }
+    end
+
+    # sales_id = orders.first[:sales_id]
+    # customer =  ERP::SalesOrder.find_by_sales_id(sales_id).customer
+    # account_num = customer.account_num
+    # assigned_to =  (AppConfig.CUSTOMER_STAFF[customer.assigned_to] ? AppConfig.CUSTOMER_STAFF[customer.assigned_to] : 'bombsquad@red')
+    # assigned_to = 'bombsquad@red'
+    return { :orders => orders }
+  end
+
+  # Get the line order update detail...
+  def get_update_details( account_num )
+
+    # Get two last commit_order logs
+    last_commit_logs = MyAccountLog.find( :all, :conditions => ['account_num = ? and sales_order_num is ?', account_num , nil], :order => 'created_at DESC', :limit => 2 )
+    # commit_order_logs = MyAccountLog.find( :all, :conditions => ['account_num = ?', 'CU 0102182'], :order => 'created_at DESC' )
+    # commit_order_logs = MyAccountLog.find( :all, :conditions => ['account_num = ?', account_num ], :order => 'created_at DESC' )
+
+
+    first_log = last_commit_logs.first
+    last_log  = last_commit_logs.last
+    # last_commit_logs.select{|line| line.sales_order_num == nil}.size
+    # Get the sales line update record
+    sales_line_order_logs = MyAccountLog.find( :all, :conditions => [' created_at > ? and created_at < ? and sales_order_num is not ? and account_num = ? ', last_log.created_at, first_log.created_at, nil, account_num ] ).group_by( &:sales_order_num )
+
+    # Filter the log about sales order
+    # sales_logs = logs.select{|line| line.action.include?('update_order_address()') || line.action.include?('delete_sales_line()') || line.action.include?('update_sales_line_qty()')}
+
+    # sales_logs = logs.select{|line| line.account_num = 'CU 0102182'}
+
+    return sales_line_order_logs
+  end
+
+
+  # erp_logs = []
+  # erp_logs << ERP::ERPLog.find(ARGV.shift)
+  erp_logs = ERP::ERPLog.find( :all, :conditions => ['id = ? AND email_sent = ?', ARGV.shift, false] )
+  # erp_logs = ERP::ERPLog.find(:all, :conditions => ["service_url = ? and update_complete = ? and updated_at >= ?", AppConfig.SOAP_SO_UPDATE_SERV, false, 7.days.ago])
+  # Send the mail
+  erp_logs.each do |erp_log|
+    message = ErpOrder.query_err_msg( erp_log.uuid )
+    ax_error = (Hpricot.XML(message)/'Description').first.innerHTML
+
+    response_body = erp_log.post_body
+    orders = parse_response(response_body)
+
+    sales_id = orders[:orders].first[:sales_id]
+    customer =  ERP::SalesOrder.find_by_sales_id(sales_id).customer
+    account_num = customer.account_num
+    updated_sales_lines = get_update_details( account_num )
+    assigned_to =  (AppConfig.CUSTOMER_STAFF[customer.assigned_to] ? AppConfig.CUSTOMER_STAFF[customer.assigned_to] : 'bombsquad@red')
+    uuid = erp_log.uuid
+
+    orders = orders.merge!({:uuid => uuid }).merge!({:ax_error => ax_error}).merge!({:account_num => account_num }).merge!({ :assigned_to => assigned_to }) # Ask Jerry
+
+    if ERP::ERPMailer.deliver_need_update_orders( orders, updated_sales_lines )
+      erp_log.update_attributes( :email_sent => true )
+    end
+
+    # ERP::ERPMailer.deliver_need_update_orders(orders)
+    # ERP::ERPMailer.deliver_need_update_orders_test(orders)
+  end
+rescue NoMethodError
+  puts "Not Found: This log entry does not exist in #{ENV['RAILS_ENV']} environmnet."
+rescue Exception => ex
+  raise ex
+end
+
+

@@ -1,0 +1,20 @@
+.banner {
+	position: relative;
+}
+	.banner #mysterium {
+		position: absolute;
+		top: 180px;
+		left: 450px;
+	}
+
+div.float-left {
+	float: left;
+	width: 450px;
+}
+	img.float-right {
+		margin-left: 1em;
+		float: right;
+	}
+div.float-right {
+	float: right;
+}

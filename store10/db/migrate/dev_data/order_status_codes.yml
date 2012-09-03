@@ -1,0 +1,43 @@
+--- 
+order_status_codes_013: 
+  name: SENT TO FULFILLMENT
+  id: "7"
+order_status_codes_002: 
+  name: DEPOSIT (CASH)
+  id: "11"
+order_status_codes_014: 
+  name: TO CHARGE
+  id: "2"
+order_status_codes_003: 
+  name: DEPOSIT (CHECK)
+  id: "10"
+order_status_codes_004: 
+  name: DEPOSIT (RED CREDIT)
+  id: "13"
+order_status_codes_005: 
+  name: DEPOSIT (WIRE TRANSFER)
+  id: "12"
+order_status_codes_006: 
+  name: DEPOSIT PAID
+  id: "1"
+order_status_codes_007: 
+  name: ON HOLD - AWAITING PAYMENT
+  id: "4"
+order_status_codes_008: 
+  name: ON HOLD - AWAITING WIRE TRANSF
+  id: "14"
+order_status_codes_010: 
+  name: ORDERED - PAID - SHIPPED
+  id: "6"
+order_status_codes_009: 
+  name: ON HOLD - PAYMENT FAILED
+  id: "3"
+order_status_codes_011: 
+  name: ORDERED - PAID - TO SHIP
+  id: "5"
+order_status_codes_012: 
+  name: RETURNED
+  id: "9"
+order_status_codes_001: 
+  name: CANCELLED
+  id: "8"

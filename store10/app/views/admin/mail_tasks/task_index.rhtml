@@ -1,0 +1,53 @@
+<%= javascript_include_tag "sorttable"%>
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  <table class="list"  id="maillist"  cellpadding="0" cellspacing="0">
+    <colgroup>
+      <col style="width: 4%;"/>
+      <col style="width: 13%;"/>
+      <col/>
+      <col/>
+      <col style="width: 10%;"/>
+      <col style="width: 5%;"/>
+      <col style="width: 5%;"/>
+      <col style="width: 5%;"/>
+    </colgroup>
+    <tr>
+      <th  style="cursor: pointer;"  onclick="sortTable('maillist', 1, 'n')">#</th>
+      <th  style="cursor: pointer;"  onclick="sortTable('maillist', 2, 's')">ERP Account</th>
+      <th  style="cursor: pointer;"  onclick="sortTable('maillist', 3, 's')">Name</th>
+      <th  style="cursor: pointer;"  onclick="sortTable('maillist', 4, 's')">Email</th>
+      <th  style="cursor: pointer;"  onclick="sortTable('maillist', 5, 's')">Assign To</th>
+      <th>Sent</th>
+      <th>Preview</th>
+      <th>Resend</th>
+    </tr>
+    <% @task.sub_queues.each do |queue| %>
+      <tr class="<%= alternate %>">
+        <td><%= queue.id %></td>
+        <td><%= queue.ax_account_number %></td>
+				<% if params[:id].to_i == 24 || params[:id].to_i == 25 %>
+				<td><%= queue.full_name %></td>
+				<% else %>
+				<td><%= queue.name %></td>
+				<% end %>
+        <td>
+          <span id="queue_email_address_<%= queue.id %>_in_place_editor" class="in_place_editor_field" title="Click to edit" style="background-color: transparent; background-image: none;"><%= "#{queue.email_address.downcase}" %></span>
+          <script type="text/javascript">
+            //<![CDATA[
+            new Ajax.InPlaceEditor('queue_email_address_<%= queue.id %>_in_place_editor', "<%= url_for :action => 'in_place_update', :id => queue, :task_id => @task, :attribute => 'email_address' %>")
+            //]]>
+          </script>
+        </td>
+				<td> 
+					<% if queue.methods.include?'assign_to' %>
+					<%= queue.assign_to %>
+					<% end %>
+				</td>
+        <td><%= queue.complete ? "Yes" : "No" %></td>
+        <td><%= link_to 'Preview', :action => 'preview_mail', :id => queue, :task_id => @task %></td>
+        <td><%= resend_link(@task, queue) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

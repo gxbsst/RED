@@ -1,0 +1,44 @@
+h2{ 
+    padding: 0; 
+    font-weight: normal;
+		margin: 9px 0;
+    }   
+/*#content { width: auto;}
+*/#lenses #img_menu{height:158px;padding-top:10px; margin: 0;}
+#lenses #img_menu div{width:199px;float:left;margin:0 11px;cursor:pointer; }
+#lenses #img_menu div img{clear:both;display:block;}
+#lenses #img_menu div span{font-size:11px;display:block;width:119px;height:16px;margin:0 auto;}
+.side_bar{
+	float:left;
+	width: 260px;
+	}
+	#tab_4 .side_bar{
+		margin-top: 30px;
+	}
+body #content .side_bar .f14{font-size:14px;}
+body #content .side_bar .p3 a{color:red;font-size:16px;}
+.img_list{margin-top:50px;width:235px; text-align: center;}
+ #tab_3 .img_list {text-align:left;}
+ #tab_3, #tab_1, #tab_2, #tab_4{ 
+   padding-top: 1px;
+   background: transparent url(/images/theme/background-net2.png) no-repeat center top; 
+   margin-top: 30px;
+   padding-left: 20px; 
+   padding-right: 20px; 
+    }
+body #content .img_list p{text-align:center;color:#333;font-size:11px;}
+#content .right{text-align:left; margin-top: 24px;}
+#content .right table {
+	background: #000;
+}
+#content .right table th{
+	background-color:#111111;
+	font-weight:normal;
+	text-align:left;
+	vertical-align:top;
+	padding:0.5em 1em;
+}
+#content .right table td{
+	padding:0.5em 1em;
+	background-color:#050505;
+}

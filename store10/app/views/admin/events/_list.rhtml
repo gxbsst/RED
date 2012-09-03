@@ -1,0 +1,65 @@
+<div id='left'>
+	<h1><%= @title %></h1>
+	
+	<ul class="navigation secondary">
+		<li><a href="/admin/events/">Back to All People List</a></li>
+	</ul>
+	<table id = "people_list" class="list" cellpadding="0" cellspacing="0">
+		<colgroup>
+
+		<col style="width:50px;" />
+		<col style="width:130px;" />
+		<col style="width:133px;" />
+		<col style="width:100px;" />
+		
+
+	</colgroup>
+	<tr>
+	    <%= sort_header_tag('id', :controller_name => 'events',:update => 'container', :caption => 'ID') %>
+		  <%= sort_header_tag('name', :controller_name => "events", :update => "container",:caption => "Name")%>
+
+		<%= sort_header_tag('company_name', :controller_name => "events",:caption => "Company", :update => "container") %>
+		<%= sort_header_tag('city', :controller_name => "events", :update => "container") %>
+		<%= sort_header_tag('created_at',:controller_name => "events",:caption => "Created At", :update => "container")%>
+		
+	</tr>
+</table>
+
+<style type="text/css" media="screen">
+#list, #list  li ul  {list-style-type: none; padding: 0;}
+#list li{ list-style-type: none; padding-top: 0; }
+#list {border-left: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666;}
+#list li.odd, #list li.even{width: 568px; padding-top: 0; height: 25px; padding-bottom: 0; }
+#list  li.even{background: #ECEEF2; }
+#list  li ul li { float: left;  padding: 0; height: 15px; padding: 2px;}
+#list  li ul li.li1{width: 125px !important; width: 230px; border-right: 1px solid #CCC;}
+#list  li ul li.li2{width: 128px !important; width: 90px; border-right: 1px solid #CCC;}
+#list  li ul li.li5{width: 45px !important; width: 90px; border-right: 1px solid #CCC;}
+
+#list  li ul li.li3{width: 95px !important; width: 55px; border-right: 1px solid #CCC;}
+#list  li ul li.li4{width:100px;height:15px;overflow:hidden; }
+
+</style>
+
+<ul id="list">
+	<% unless @participanters.blank? %>
+	<% @participanters.compact.each do |p| %>
+	<li class="<%= alternate %>" id="item_<%= p.id %>">
+		<ul>
+		  <li class="li5"><%= p.id %></li>
+			<li class="li1"><%= link_to(h(p.name), :action => 'edit', :id => p.id ) %></li>
+			<li class="li2"><%= p.company_name %></li>
+			<li class="li3"><%= p.city %></li>
+			<li class="li4"><%= p.created_at %></li>
+		
+		</ul>
+	</li>
+	<% end %>
+	<% else %>
+	<li>No products to show in this view.</li>
+	<% end %>
+	<div style="clear: both;"></div>
+</ul>
+
+
+</div>

@@ -1,0 +1,24 @@
+<h2>Templates</h2>
+
+<table cellpadding="0" cellspacing="0" class="list" id="templates">
+  <colgroup>
+    <col width="30" />
+    <col />
+  </colgroup>
+  <tr>
+    <th></th>
+    <th>Name</th>
+  </tr>
+  <% MailTasks::Template.find(:all, :order => "name").each do |template| %>
+  <tr class="<%= alternate %>">
+    <td><%= radio_button :task, :template_id, template.id, :rel => url_for( :template => template ) %></td>
+    <td><%= link_to template.name, :action => "template", :id => template.id %></td>
+  </tr>
+  <% end %>
+</table>
+<p class="info">
+  If a template was selected, mails settings (Subject, From, Content Template) in left side will be ignored.
+</p>
+<p>
+  <%= link_to "Create New Template", { :action => "template", :id => nil }, :class => "button hundredfifty" %>
+</p>

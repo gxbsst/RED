@@ -1,0 +1,46 @@
+<!--start .box1-->
+<!--<div id="login_box1" class="box1">
+  <h3 class="shadow" title="Already have a reservation?"><span>Already have a reservation?</span></h3>
+  <div class="clearing">
+
+  </div>
+  <p>Check order status online, monitor the progress of your order, modify your payment information, and save your information on file for future reorders.</p>
+  <div class="button">
+
+    <%= link_to 'Find my reservation','find_reservation' %>
+  </div>-->
+  <!---end .box1--->
+  <!-- </div> --> 
+<!--start .box1-->
+<div id="login_box2" class="box1">
+  <h3 class="shadow" title="Create RED Account"><span>Create RED Account</span></h3>
+  <div class="clearing">
+
+  </div>
+  <p>Check order status online, monitor the progress of your order, modify your payment information, and save your information on file for future reorders.</p>
+  <div class="button">
+    <%= link_to 'Create Account','create_account' %>
+  </div>
+  <!---end .box1--->
+</div>
+
+
+<!--start .box1-->
+<div id="login_box3" class="box1">
+  <%= form_tag %>
+  <h3 class="shadow" title="RED Account Login"><span>RED Account Login</span></h3>
+  <div class="clearing">
+
+  </div>
+  <dl style='margin-top: 30px;'>
+    <dt id="emaildt"><label>Email:</label>  <%= text_field_tag  'login' %></dt>
+    <dt id="passworddt"><label>Password:</label> <%= password_field_tag 'password' %>
+  </dl>
+  <div class="button">
+    <%= submit_tag 'Login' %><%= link_to 'Forgot password?', '../account/forgot_password', :style => 'margin-left: 20px; text-decoration: underline;' %>
+  </div>	
+  <%= end_form_tag %>
+  <!---end .box1--->
+</div>
+
+

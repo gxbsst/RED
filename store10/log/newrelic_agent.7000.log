@@ -1,0 +1,5 @@
+# Logfile created on Thu Oct 16 15:24:06 +0800 2008 by /
+[10/16/08 15:24:06 (562)] INFO : New Relic RPM Agent Initialized: pid = 562
+[10/16/08 15:24:06 (562)] INFO : Runtime environment: Mongrel
+[10/16/08 15:24:06 (562)] INFO : Transaction tracer enabled: false
+[10/16/08 15:24:06 (562)] WARN : Did not trace Dependencies#load_file because that method does not exist

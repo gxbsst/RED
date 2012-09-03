@@ -1,0 +1,44 @@
+<div id="left">
+  <h1>All Tasks List</h1>
+  <p>
+    Click on the task name to <strong>Edit</strong>, or click on the mails count to <strong>Show</strong> all mails of this task.
+  </p>
+  
+  <table cellspacing="0" cellpadding="0" class="list" id="tasks">
+    <colgroup>
+      <col />
+      <col width="150" span="2" />
+      <col width="50" />
+    </colgroup>
+    <tr>
+      <th>Name</th>
+      <th>Created At</th>
+      <th>Sent At</th>
+      <th>Mails</th>
+    </tr>
+    <% @mail_tasks.each do |task| %>
+    <tr class="<%= alternate %>">
+      <td><%=
+        if task.disabled?
+          task.name
+        else
+          link_to task.name, :action => "edit", :id => task.id
+        end
+      %></td>
+      <td><%= friendly_time( task.created_at ) %></td>
+      <td><%= friendly_time( task.sent_at )%></td>
+      <td><%= link_to task.mails_count, :action => "task", :id => task.id %></td>
+    </tr>
+    <% end %>
+  </table>
+  <p class="info" align="right">
+    <strong><%= @mail_tasks.size %></strong> tasks matched.
+  </p>
+</div>
+
+<div id="right">
+  <h2>New Task</h2>
+  <%= link_to "Create New Task", { :action => "edit" }, :class => "button hundredfifty" %>
+</div>
+
+<div style="clear:both;" />

@@ -1,0 +1,52 @@
+
+body, html {
+	padding: 0;
+	margin: 0;
+	background: #000;
+	text-align: center;
+}
+
+.pages-nav {
+	width: 800px; 
+	margin: 0 auto;
+	height: 50px;
+}
+.pages-nav  a{
+	height: 26px;
+	width: 30px;
+	background: #DDD;
+	font-size: 20px;
+	display: block;
+	float: right;
+	margin: 5px;
+	text-decoration: none; 
+	padding-top: 5px;
+	color: #000;
+	font-weight: bold;
+}
+.pages-nav  a:hover {
+	background: #333;	
+	color: #FFF;
+}
+
+.pages-nav  a.cur {
+	background: #333;	
+	color: #FFF;
+}
+.images-outer {
+	width: 800px;
+	margin: 0 auto;
+	position: relative;
+}
+#inner1, #inner2, #inner3 {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.hidden {
+	display: none;
+}
+.show {
+	display: block;
+}

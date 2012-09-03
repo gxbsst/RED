@@ -1,0 +1,50 @@
+<%= stylesheet_link_tag 'admin/mails/select_recipients' %>
+<%= javascript_include_tag 'admin/mails' %>
+<script type="text/javascript">
+  var conditions = <%= MailTasks::RecipientsConditions::CONFIGURATION.to_json%>;
+</script>
+
+<%= form_tag(
+  { :action => "recipients" },
+  :class => "recipients_conditions",
+  :_conditions => "0", 
+  :id => "recipients_conditions_form"
+) %>
+  <h1>Recipients Filter</h1>
+  
+  <div id="conditions_wrapper">
+    <div class="conditions" id="conditions_0">
+      <p>
+        <%= recipients_conditions_select_tag %>
+        <span class="info">Condition</span>
+      </p>
+      <p>
+        <%= recipients_conditions_product_select_tag %>
+      </p>
+      <p>
+        <%= text_field_tag "conditions[][values][]" %>
+        <span class="info">Value 1</span>
+      </p>
+      <p>
+        <%= text_field_tag "conditions[][values][]" %>
+        <span class="info">Value 2</span>
+      </p>
+    </div>
+  </div>
+  
+  <input type="checkbox" name="ignore_do_not_contact" value="1" />
+  Ignore "Do Not Contact" setting
+  <br />
+  
+  <%= link_to_function "Preview", "queryForRecipients(false);", :class => "button hundred", :id => "preview_button" %>
+  <%= link_to_function "Another condition", "appendCondition()", :id => "append_condition_link" %>
+<%= end_form_tag %>
+
+<div id="select_recipients_wrapper">
+  <%= render :partial => "mail_recipients" %>
+</div>
+
+<div class="line"></div>
+
+<%= link_to_function "OK", "queryForRecipients(true);", :class => "button hundred" %>
+<%= link_to_function "Cancel", "window.top.hidePopWin(false)", :class => "button hundred", :style => "margin-left: 10px;" %>

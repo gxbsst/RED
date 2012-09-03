@@ -1,0 +1,26 @@
+#!/usr/bin/ruby
+
+case 
+when ARGV[0].nil?
+  puts "\n  Please specify process environment:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+when ARGV[1].nil?
+  puts "\n  Please specify order number:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+end
+
+
+ENV['RAILS_ENV'] = ARGV.shift
+RAILS_ROOT = File.dirname(__FILE__) + '/..'
+require RAILS_ROOT + '/config/environment' 
+begin
+  erp_log = ERP::ERPLog.find(ARGV.shift)
+  ERP::ERPAgent.post(:erp_log => erp_log)
+  puts "Web Service Status: #{erp_log.code}" unless erp_log.code.blank?
+rescue NoMethodError
+  puts "Not Found: This log entry does not exist in #{ENV['RAILS_ENV']} environmnet."
+rescue Exception => ex
+  raise ex
+end

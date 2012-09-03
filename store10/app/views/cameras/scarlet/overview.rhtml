@@ -1,0 +1,41 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/cameras/scarlet/overview' %>
+  <script type="text/javascript" src="/javascripts/highslide/highslide.js"></script>
+  <script type="text/javascript">
+     hs.graphicsDir = '/javascripts/highslide/graphics/';
+     hs.captionId = 'the-caption';
+     hs.outlineType = 'drop-shadow';
+     hs.showCredits = false;
+  </script>
+  <link href="/stylesheets/highslide.css" media="screen" rel="Stylesheet" type="text/css" />
+<% end %>
+
+<div class="overview_hero">
+  <img src="/images/pages/cameras/scarlet/overview_hero.png" alt="Cameras_scarlet" title="" />
+  <p>
+     Scarlet and EPIC are the DNA of RED's new DSMC system. Using a DSMC (Digital Stills and Motion Camera) lets you shoot no-compromise still or motion images with the same camera. Well actually with over a million different cameras. Configure your camera to handle like a DSLR ... or a full-blown studio cinema camera... or anything you can imagine.
+  </p>
+</div>
+
+<div class="scarlet_list">
+  <% (1..4).each do |pic| %>
+    <%= 
+      %Q(
+      <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/scarlet/overview_#{pic}.jpg">
+        <img src="/images/pages/cameras/scarlet/overview_thumb_#{pic}.jpg" alt="#{pic}" />
+      </a>)
+    %>
+  <% end %>
+</div>
+
+<div class="pick_your_brain">
+  <img class="pick_brain" src="/images/pages/cameras/scarlet/pick_brain.png" alt="pigk_brain" align="left" title="" />
+  <img class="text_brain" src="/images/pages/cameras/scarlet/text_brain.png" alt="text_brain" title="" />
+  <p>
+    Just select a Scarlet or EPIC  "brain" and start configuring. (You’ll find a new prime number before you get through all the possible configurations) Now, if you can think it, it’s possible.
+    <br />
+       <h3><%= link_to "View Specifications &raquo;", "/cameras/scarlet/tech_specs" %> </h3>
+  </p>
+</div>
+
+<div class="clear" ></div>

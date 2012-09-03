@@ -1,0 +1,25 @@
+<table class="list" cellpadding="0" cellspacing="0">
+  <colgroup>
+    <col style="width: 20%;"/>
+    <col style="width: 20%;"/>
+    <col style="width: 20%;"/>
+    <col style="width: 20%;"/>
+    <col style="width: 20%;"/>
+  </colgroup>
+  <tr>
+    <th>Card Name</th>
+    <th>Email Address</th>
+    <th>Order Number</th>
+    <th>Message</th>
+    <th>Create Time</th>
+  </tr>
+  <% @pfp_logs.each do |pfp_log| %>
+  <tr class="<%= alternate %>">
+    <td><%= link_to pfp_log["card_name"], :action => 'show', :id => pfp_log %></td>
+    <td><%=h pfp_log.email_address %></td>
+    <td><%=h pfp_log.order_number %></td>
+    <td><%=h pfp_log.res_message %></td>
+    <td><%=h pfp_log.created_at.to_s(:db) %></td>
+  </tr>
+  <% end %>
+</table>

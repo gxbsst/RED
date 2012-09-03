@@ -1,0 +1,8 @@
+<h1>Congratulation!</h1>
+<p>
+<% if @user.is_newly_created %>
+  This user has been created and a confirmation email has been sent to <%= h @user.email_address %>.
+<% else %>
+  This user is valid.
+<% end %>
+</p>

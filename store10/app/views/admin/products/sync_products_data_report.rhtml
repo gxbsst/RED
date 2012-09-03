@@ -1,0 +1,279 @@
+<style type="text/css">
+  .list th, .list tr.header td, .list td.header {
+  	font-weight: bold;
+  	background-color: #cae8ea;
+  	background-image: none;
+  	color: #4f6b83;
+  	border-bottom: 1px solid #666666;
+  	border-right: 1px solid #666666;
+  	text-transform:capitalize;
+  	padding: 4px;
+  	text-align: left;
+  }
+  
+</style>
+
+<div id = "fullContent">
+  
+  <%= "<table class='list' cellpadding='0' cellspacing='0'><tr><th style='color:#009900' colspan='9' ><h1> No new AX Items were created on website </h1></th></tr></table>" if @new_items.blank? %>
+  
+</div>
+
+<div id = "fullContent">
+  <% unless @new_items.blank? %>
+    <table class="list" cellpadding="0" cellspacing="0">
+      <tr><th style="color:#009900" colspan="9" ><h1>New AX Items were created on website</h1></th></tr>
+      <colgroup>
+        <col style="width: 10%;"/>
+        <col style="width: 20%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+      </colgroup>
+      <tr>
+        <th>Product ID</th>
+        <th>ERP Product Item </th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Deposit</th>
+        <th>Shipping Points</th>
+        <th>Group ID</th>
+        <th>Products Status </th>
+      </tr>
+      <% @new_items.each do |item| %>
+      <tr class="<%= alternate %>">
+        <% if ( item.erp_product_item.match(/^[0-9]{6}([\w\-\.]+)?$/) ) %>
+          <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}" %>
+          </td>
+          <td><%=h item.erp_product_item %></td>
+          <td><%=h item.name %></td>
+          <td><%=h item.price %></td>
+          <td><%=h item.quantity %></td>
+          <td><%=h item.deposit %></td>
+          <td><%=h item.shipping_points %></td>
+          <td><%=h item.group_id %></td>
+          <td><%=h item.product_status %></td>
+        <% end %>
+
+        <% unless ( item.erp_product_item.match(/^[0-9\-\.]+/) ) %>
+          <td></td>
+          <td><%=h item.erp_product_item %></td>
+          <td colspan="10"><b> please modify the value of the item_id column in ERP Items table, for match [0-9\-\.][0-9a-zA-Z\-\.]</b> </td>
+        <% end %>
+      </tr>
+      <% end %>
+      
+    </table>
+  <% end %>  
+</div>
+
+<div id = "fullContent">
+   <%= "<table class='list' cellpadding='0' cellspacing='0'><tr><th style='color:#009900' colspan='9' ><h1> No Items have been removed from AX since last sync </h1></th></tr></table>" if @new_items.blank? %>
+</div>
+
+<div id = "fullContent">
+<% unless @removed_items.blank? %>
+  <table class="list" cellpadding="0" cellspacing="0">
+    <tr><th style="color:#009900" colspan="10" ><h1>Items have been removed from AX since last sync</h1></th></tr>
+    <colgroup>
+      <col style="width: 10%;"/>
+      <col style="width: 20%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+    </colgroup>
+    <tr>
+      <th>Product Id</th>
+      <th>Erp Product Item</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Dim Group Id</th>
+      <th>Group Id</th>
+      <th>Model Group Id</th>
+      <th>Percent Deposit</th>
+      <th>Amount Deposit</th>
+      <th>Shipping Points</th>
+    </tr>
+    <% @removed_items.each do |item| %>
+      <tr class="<%= alternate %>"> 
+        <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}"  %></td>
+        <td><%=h item.erp_product_item %></td>
+        <td><%=h item.name %></td>
+        <td><%=h item.price %></td>	
+        <td><%=h item.dim_group_id %></td>
+        <td><%=h item.group_id %></td>
+        <td><%=h item.model_group_id %></td>
+        <td><%=h item.percent_deposit %></td>
+        <td><%=h item.amount_deposit %></td>
+        <td><%=h item.shipping_points %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end%>
+</div>
+
+<div id = "fullContent">
+  <%= "<h1>Without items be changed between products and erp items </h1>" if @changed_items.blank? %>
+</div>
+
+<div id = "fullContent">
+<% unless @changed_items.blank? %>
+  <%= start_form_tag :action => 'ignore_display_in_sync_report' %> 
+    <table class="list" cellpadding="0" cellspacing="0">
+      <tr><th style="color:#009900" colspan="12" ><h1>Changed Inventories Between Products and Erp Items</h1></th></tr>
+      <colgroup>
+        <col style="width: 10%;"/>
+        <col style="width: 20%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+      </colgroup>
+      <tr>
+        <th> Product ID </th>
+        <th> ERP Product Item </th>
+        <th> NAME {LOCAL}  </th>
+        <th> NAME {AX}  </th>
+        <th> PRICE {LOCAL} </th>
+        <th> PRICE {AX} </th>
+        <th> DEPOSIT {LOCAL}  </th>
+        <th> DEPOSIT {AX}  </th>
+        <th> SHIPPING POINTS {LOCAL}  </th>
+        <th> SHIPPING POINTS {AX}  </th>
+        <th> DELIVERY CODE</th>
+        <th> Is Ignore </th>
+      </tr>
+      <tr><th style="color:#4f6b83" colspan="12" ><b>Delivery Code equal to 0 or 1</b></th></tr>
+      <% @changed_items_for_code_equal_to_0_1.each do |item| %>
+         <% next if item.is_ignore %>
+         <tr class="<%= alternate %>">
+           <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}" %></td>
+           <td><%= item.erp_product_item %></td>
+           <td><%= item.name_local %></td>
+           <td><%= item.name_ax %></td>
+           <td><%= item.price_local %></td>
+           <td><%= item.price_ax %></td>
+           <td><%= item.deposit_local %></td>
+           <td><%= item.deposit_ax %></td>
+           <td><%= item.shipping_points_local %></td>
+           <td><%= item.shipping_points_ax %></td>
+           <td><%= "#{Product.find_by_id(item.product_id).delivery_code}"%></td>
+           <td><input type="checkbox" value="<%= "#{item.product_id}" %>" name="item[is_ignore][]"  /></td>
+         </tr>
+      <% end %>
+      <tr><th style="color:#4f6b83" colspan="12" ><b>Delivery Code equal to 2 or 9</b></th></tr>
+      <% @changed_items_for_code_equal_to_others.each do |item| %>
+         <% next if item.is_ignore %>
+         <tr class="<%= alternate %>">
+           <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}" %></td>
+           <td><%= item.erp_product_item %></td>
+           <td><%= item.name_local %></td>
+           <td><%= item.name_ax %></td>
+           <td><%= item.price_local %></td>
+           <td><%= item.price_ax %></td>
+           <td><%= item.deposit_local %></td>
+           <td><%= item.deposit_ax %></td>
+           <td><%= item.shipping_points_local %></td>
+           <td><%= item.shipping_points_ax %></td>
+           <td><%= "#{Product.find_by_id(item.product_id).delivery_code}"%></td>
+           <td><input type="checkbox" value="<%= "#{item.product_id}" %>" name="item[is_ignore][]"  /></td>
+         </tr>
+      <% end %>
+    </table>
+    <%= submit_tag('Ignore', {:class => 'button hundred'}) %>
+    <%= end_form_tag %>
+<% end %>
+</div>
+
+<div style="clear:both;" />
+
+<div id = "fullContent">
+<% unless @changed_items.blank? %>
+  <%= start_form_tag :action => 'unignore_display_in_sync_report' %> 
+    <table class="list" cellpadding="0" cellspacing="0">
+      <tr><th style="color:#009900" colspan="12" ><h1>Have been ignored items</h1></th></tr>
+      <colgroup>
+        <col style="width: 10%;"/>
+        <col style="width: 20%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+        <col style="width: 10%;"/>
+      </colgroup>
+      <tr>
+        <th> Product ID </th>
+        <th> ERP Product Item </th>
+        <th> NAME {LOCAL}  </th>
+        <th> NAME {AX}  </th>
+        <th> PRICE {LOCAL} </th>
+        <th> PRICE {AX} </th>
+        <th> DEPOSIT {LOCAL}  </th>
+        <th> DEPOSIT {AX}  </th>
+        <th> SHIPPING POINTS {LOCAL}  </th>
+        <th> SHIPPING POINTS {AX}  </th>
+        <th> DELIVERY CODE</th>
+        <th> Is Ignore </th>
+      </tr>
+      <tr><th style="color:#4f6b83" colspan="12" ><b>Delivery Code equal to 0 or 1</b></th></tr>
+      <% @changed_items_for_code_equal_to_0_1.each do |item| %>
+         <% next unless item.is_ignore %>
+         <tr class="<%= alternate %>">
+           <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}" %></td>
+           <td><%= item.erp_product_item %></td>
+           <td><%= item.name_local %></td>
+           <td><%= item.name_ax %></td>
+           <td><%= item.price_local %></td>
+           <td><%= item.price_ax %></td>
+           <td><%= item.deposit_local %></td>
+           <td><%= item.deposit_ax %></td>
+           <td><%= item.shipping_points_local %></td>
+           <td><%= item.shipping_points_ax %></td>
+           <td><%= "#{Product.find_by_id(item.product_id).delivery_code}"%></td>
+           <td><input type="checkbox" value="<%= "#{item.product_id}" %>" name="item[is_ignore][]"  /></td>
+         </tr>
+      <% end %>
+      <tr><th style="color:#4f6b83" colspan="12" ><b>Delivery Code equal to 2 or 9</b></th></tr>
+      <% @changed_items_for_code_equal_to_others.each do |item| %>
+         <% next unless item.is_ignore %>
+         <tr class="<%= alternate %>">
+           <td><%= link_to "#{item.product_id}", :controller => "products",:action => "edit",:id => "#{item.product_id}" %></td>
+           <td><%= item.erp_product_item %></td>
+           <td><%= item.name_local %></td>
+           <td><%= item.name_ax %></td>
+           <td><%= item.price_local %></td>
+           <td><%= item.price_ax %></td>
+           <td><%= item.deposit_local %></td>
+           <td><%= item.deposit_ax %></td>
+           <td><%= item.shipping_points_local %></td>
+           <td><%= item.shipping_points_ax %></td>
+           <td><%= "#{Product.find_by_id(item.product_id).delivery_code}"%></td>
+           <td><input type="checkbox" value="<%= "#{item.product_id}" %>" name="item[is_ignore][]"  /></td>
+         </tr>
+      <% end %>
+    </table>
+    <%= submit_tag('UnIgnore', {:class => 'button hundred'}) %>
+    <%= end_form_tag %>
+<% end %>
+</div>
+
+<div style="clear:both;" />

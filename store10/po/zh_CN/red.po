@@ -1,0 +1,4156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red\n"
+"POT-Creation-Date: 2008-01-24 22:45-0500\n"
+"PO-Revision-Date: 2007-07-12 13:02+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/helpers/application_helper.rb:18
+#: app/views/app/helpers/application_helper.rb:18
+#: app/views/static_pages/lenses.rhtml:50
+#: app/views/static_pages/lenses.rhtml:91
+#: app/views/static_pages/lenses.rhtml:137
+#: app/views/static_pages/lenses.rhtml:193
+#: app/views/app/views/static_pages/lenses.rhtml:9
+#: app/views/app/views/static_pages/lenses.rhtml:20
+#: app/views/app/views/static_pages/lenses.rhtml:31
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "GLOBAL|CURRENCY_SYMBOL"
+msgstr "$"
+
+#: app/helpers/static_pages_helper.rb:5
+#: app/views/app/helpers/static_pages_helper.rb:5
+#: app/views/accessories/_sub_navigation.rhtml:5
+#: app/views/cameras/_sub_navigation.rhtml:5
+#: app/views/app/views/cameras/_sub_navigation.rhtml:6
+msgid "GLOBAL|BUY_NOW"
+msgstr "立即购买"
+
+#: app/models/email_announcement.rb:-
+msgid "email announcement"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Name"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Email address"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Industry"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Editor"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|System"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Comments"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Hd camera"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Raw camera"
+msgstr ""
+
+#: app/models/email_announcement.rb:2
+#: app/views/app/models/email_announcement.rb:2
+msgid "GLOBAL|MESSAGE|EMPTY_FIRST_NAME"
+msgstr ""
+
+#: app/models/email_announcement.rb:3
+#: app/views/app/models/email_announcement.rb:3
+msgid "GLOBAL|MESSAGE|EMAIL_ALREADY_EXISTS"
+msgstr ""
+"\"You're email address has already been registered. No need to sign up again."
+"\""
+
+#: app/models/email_announcement.rb:4
+#: app/views/app/models/email_announcement.rb:4
+msgid "GLOBAL|MESSAGE|INVALID_EMAIL"
+msgstr ""
+
+# app/models/reservation_item.rb:-
+#: app/models/reservation_item.rb:-
+msgid "reservation item"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Reservation"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Serial number"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Description"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Price"
+msgstr ""
+
+# app/models/order_transaction.rb:-
+#: app/models/order_transaction.rb:-
+msgid "order transaction"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Created on"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Order"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Transaction"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Description"
+msgstr ""
+
+# app/models/order_address.rb:-
+#: app/models/order_address.rb:-
+msgid "order address"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Order user"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Is shipping"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Telephone"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|City"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|State"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Zip"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Country"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Created on"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Updated on"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Shipping label"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Company"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address two"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|First name"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Last name"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "product"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Code"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Name"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Description"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Price"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Date available"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Quantity"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size width"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size height"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size depth"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Weight"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Erp product item"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Deposit"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|For serial number"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Delivery message"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "news admin user"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Name"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Hashed password"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Created at"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Status"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Level"
+msgstr ""
+
+# app/models/image.rb:-
+#: app/models/image.rb:-
+msgid "image"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Path"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Description"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Width"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Height"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "erp order log"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp order"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Uuid"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Order number"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp serv"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Log msg"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Xml"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Created on"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Updated on"
+msgstr ""
+
+# app/models/order_account.rb:-
+#: app/models/order_account.rb:-
+msgid "order account"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order user"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order address"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order account type"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Account number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration month"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration year"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Routing number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Bank name"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Cardholder name"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Payment type"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Safe cc number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Encrypted cc number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote ip"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp amount"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp pnref"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp authcode"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs result"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs streetmatch"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs zipmatch"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Erp recid"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Created on"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Updated on"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote location"
+msgstr ""
+
+# app/models/store_user.rb:-
+#: app/models/store_user.rb:-
+msgid "store user"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Name"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Company"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Email address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Password"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Ship to address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Bill to address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Order account"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Security token"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Erp account number"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Creation email"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Purchased"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "order line item"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Product"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Order"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Quantity"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit price"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit deposit"
+msgstr ""
+
+# app/models/reservation.rb:-
+#: app/models/reservation.rb:-
+msgid "reservation"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Email address"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Secret code"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Order"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Total"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Name"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Payment method"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source name"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Paid on"
+msgstr ""
+
+# app/models/order_user.rb:-
+#: app/models/order_user.rb:-
+msgid "order user"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Email address"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Password"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Created on"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Updated on"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Name"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Company"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Store user"
+msgstr ""
+
+# app/models/order.rb:-
+#: app/models/order.rb:-
+msgid "order"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order number"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Created on"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipped on"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order user"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order status code"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Notes"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Referer"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order shipping type"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Product cost"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipping cost"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Tax"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Auth transaction"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Sent email receipt"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp order number"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp status msg"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp account uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp order uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp cc uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp complete"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Pre ax"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "news"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Title"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Language"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Permalink"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Random"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Remote url"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Beta visible"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Live visible"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Headline or sticky"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Headline position"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Sticky position"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Description"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Content"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Created at"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Updated at"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Post timestamp"
+msgstr ""
+
+# app/models/viaklix_transaction.rb:-
+#: app/models/viaklix_transaction.rb:-
+msgid "viaklix transaction"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactionid"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiontype"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiondatetime"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Approvalcode"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl invoice number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Sales tax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2 indicator"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2response"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Customer code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Card number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Exp date"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth response code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth message"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth source"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth avs response"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Status"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount2"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs address"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs zip"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl card number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl customer code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl description"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl exp date"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl salestax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Settlement number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl city"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl email"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl first name"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl last name"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl state"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "ip2address"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "warranty registration"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|First name"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Last name"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Company"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Product categories"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Product"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Serial number"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Address1"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Address2"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|City"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|State"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Zip"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Country"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Phone number"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Email address"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "pfp transaction log"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Pfp serv"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Store user"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Card name"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Email address"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Order number"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Uuid"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Req xml"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res xml"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Status"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res code"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res message"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Created on"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Created at"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Updated at"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Remote ip"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Remote location"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Creditcard type"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Request header"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Response header"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Response code"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "agreement log"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Agreement version"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Store user"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Order"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Remote ip"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Created at"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Http header"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Email address"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Order number"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Remote location"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Agreement name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download version"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "agreement"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Name"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Created at"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Updated at"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "agreement version"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Agreement"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Content"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Version"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Created at"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Account balance"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Discounts"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Currency"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust first name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust last name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Email"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust group"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Language"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Phone"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Address"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|City"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Country region"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|State"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Street"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Contact person name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Contact person select address"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Created date"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Modified date"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Status"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Red one shipped"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "ax order"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery city"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery country region"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery country"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery state"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery street"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery zip code"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Purch order form num"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Sales tax"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Shipping charges"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Discounts"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Created date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Modified date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Sales status"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Status"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "ax order line item"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Ax order"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Item"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales qty"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales unit"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Updated at"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "redone serial number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax account"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax order"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Email address"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|First name"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Last name"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Serial number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Purch order form num"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Sent mail"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Created at"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "ax account address"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Address type"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Address"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|City"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Country region"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|State"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Street"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "download"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Download category"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version major"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version minor"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version revision"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Windows"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Mac"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Release note"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Release date"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Filename"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Filesize"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Created at"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Restrict"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Build number"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "download category"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Title"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Description"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Agreement"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Code"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Disable"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Display pattern"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Position"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task sent log"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Mail queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|From"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|To"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Subject"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Body"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Sent"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task jan prepare delivery queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Account balance"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Discounts"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Phone"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Contact person name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Contact person select address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Readed at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task jan prepare delivery queue line item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid ""
+"MailTaskJanPrepareDeliveryQueueLineItem|Mail task jan prepare delivery queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Item name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales qty"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales unit"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Price"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Delivery message"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task description"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Table name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task date"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Available"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "mail task jan ready to ship queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Account balance"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Discounts"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Phone"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Contact person name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Contact person select address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Readed at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "mail task jan ready to ship queue line item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Mail task jan ready to ship queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Item name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales qty"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales unit"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Price"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Delivery message"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "mail task redone serial number notify queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Serial number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Purch order form num"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Readed at"
+msgstr ""
+
+#: app/controllers/contact_controller.rb:47
+#: app/views/app/controllers/contact_controller.rb:47
+msgid "CONTACT_US|POST|FAILED"
+msgstr "对不起，服务器正忙，无法处理您的请求。请稍后再试。"
+
+#: app/controllers/account_controller.rb:68
+#: app/views/app/controllers/account_controller.rb:68
+msgid "GLOBAL|MESSAGE|USER_NOT_EXISTS"
+msgstr ""
+
+#: app/controllers/account_controller.rb:74 app/views/layouts/support.rhtml:37
+#: app/views/account/login.rhtml:2 app/views/account/login.rhtml:15
+msgid "GLOBAL|SIGN_IN"
+msgstr "Sign In"
+
+#: app/controllers/static_pages_controller.rb:19
+msgid "PAGE_TITLE|HOME_PAGE"
+msgstr "RED Digital Cinema Camera Company"
+
+#: app/controllers/static_pages_controller.rb:55
+msgid "PAGE_TITLE|EMAIL_ANNOUNCEMENTS"
+msgstr "订阅邮件通知"
+
+#: app/controllers/static_pages_controller.rb:65
+msgid "PAGE_TITLE|FAQS"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:69
+msgid "PAGE_TITLE|GEAR_WE_USE"
+msgstr "使用元件"
+
+#: app/controllers/static_pages_controller.rb:73
+msgid "PAGE_TITLE|CONTACT_US"
+msgstr "联系我们"
+
+#: app/controllers/static_pages_controller.rb:77
+msgid "PAGE_TITLE|ABOUT_RED"
+msgstr "关于 RED"
+
+#: app/controllers/static_pages_controller.rb:81
+msgid "PAGE_TITLE|PRIVACY_POLICY"
+msgstr "隐私协议（英语）"
+
+#: app/controllers/static_pages_controller.rb:85
+msgid "PAGE_TITLE|RETURN_POLICY"
+msgstr "退订协议（英语）"
+
+#: app/controllers/static_pages_controller.rb:89
+msgid "PAGE_TITLE|LENSES"
+msgstr "镜头"
+
+#: app/controllers/static_pages_controller.rb:98
+msgid "PAGE_TITLE|WORKFLOW"
+msgstr "工作流程"
+
+#: app/controllers/static_pages_controller.rb:102
+msgid "PAGE_TITLE|TECHNOLOGY"
+msgstr "技术特性"
+
+#: app/controllers/static_pages_controller.rb:106
+msgid "PAGE_TITLE|SUPPORT"
+msgstr "Support"
+
+#: app/views/app/models/pfp_transaction.rb:-
+msgid "pfp transaction"
+msgstr ""
+
+#: app/views/gallery/_sub_navigation.rhtml:2
+#: app/views/app/views/gallery/_sub_navigation.rhtml:2
+#: app/views/app/views/gallery/index.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|VIDEO_GALLERY"
+msgstr "视频展示"
+
+#: app/views/gallery/_sub_navigation.rhtml:3
+#: app/views/gallery/still_gallery.rhtml:1
+#: app/views/app/views/gallery/_sub_navigation.rhtml:3
+#: app/views/app/views/gallery/still_gallery.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|STILL_GALLERY"
+msgstr "静态画面"
+
+#: app/views/gallery/_sub_navigation.rhtml:4
+#: app/views/gallery/poster_gallery.rhtml:1
+#: app/views/app/views/gallery/_sub_navigation.rhtml:4
+#: app/views/app/views/gallery/poster_gallery.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|POSTER_GALLERY"
+msgstr "海报"
+
+#: app/views/gallery/still_gallery.rhtml:2 app/views/gallery/index.rhtml:49
+#: app/views/static_pages/shot_on_red.rhtml:49
+#: app/views/app/views/gallery/still_gallery.rhtml:2
+msgid "GALLERY|STILL_GALLERY|DESCRIPTION"
+msgstr ""
+"为达到最佳浏览效果，请使用支持色彩管理的浏览器，如拥有 Apple 色彩同步功能的 "
+"Safari 浏览器。Gamma 值设置为 2.2，并使用 Adobe 1998 对应的配置。"
+
+#: app/views/gallery/still_gallery.rhtml:5 app/views/gallery/index.rhtml:66
+#: app/views/static_pages/shot_on_red.rhtml:90
+#: app/views/app/views/gallery/still_gallery.rhtml:5
+msgid "GALLERY|RED_50_150MM_T3_ZOOM"
+msgstr ""
+"以下是使用RED摄影机配 50-150MM T3 镜头的拍摄效果 <br />\n"
+"<span class=\"font12\">用 4K REDCODE RAW&trade;拍摄, 转成 4K JPEG。</span>"
+
+#: app/views/gallery/still_gallery.rhtml:7 app/views/gallery/index.rhtml:73
+#: app/views/static_pages/shot_on_red.rhtml:98
+#: app/views/app/views/gallery/still_gallery.rhtml:7
+msgid "GALLERY|TEST_CHART_SHOT_ON_CAMERA"
+msgstr ""
+"系列号为32的摄像机在ISO 320标准下的测试图<br />\n"
+"<span class=\"font12\">用 4K REDCODE RAW&trade;拍摄, 转成 2K JPEG。</span>"
+
+#: app/views/gallery/still_gallery.rhtml:9 app/views/gallery/index.rhtml:69
+#: app/views/static_pages/shot_on_red.rhtml:94
+#: app/views/app/views/gallery/still_gallery.rhtml:9
+msgid "GALLERY|STILL_GALLERY|SHOT_WITH_PRE_PRODUCTION"
+msgstr ""
+"以下是使用前期的摄影机(布拉格)配RED 18-50MM T3镜头的拍摄效果\n"
+"<br /> <span class=\"font12\">使用4K REDCODE RAW&trade;,转成2K JPEG.拍摄于 "
+"Indy NHRA Nationals。</span>"
+
+#: app/views/gallery/still_gallery.rhtml:11 app/views/gallery/index.rhtml:120
+#: app/views/gallery/index.rhtml:125 app/views/gallery/index.rhtml:130
+#: app/views/gallery/index.rhtml:139 app/views/gallery/index.rhtml:144
+#: app/views/static_pages/shot_on_red.rhtml:138
+#: app/views/static_pages/shot_on_red.rhtml:143
+#: app/views/static_pages/shot_on_red.rhtml:148
+#: app/views/static_pages/shot_on_red.rhtml:157
+#: app/views/static_pages/shot_on_red.rhtml:162
+#: app/views/app/views/gallery/still_gallery.rhtml:11
+msgid "GALLERY|STILL_GALLERY|SUB_TITLE"
+msgstr ""
+"以下内容均使用 RED ONE 原型机 “BORIS” 和 “NATASHA” 拍摄<br /><span class="
+"\"font12\">截取自彼得·杰克逊导演的 “Crossing The Line”</span>"
+
+#: app/views/gallery/index.rhtml:67 app/views/gallery/index.rhtml:70
+#: app/views/gallery/index.rhtml:74 app/views/gallery/index.rhtml:85
+#: app/views/static_pages/shot_on_red.rhtml:91
+#: app/views/static_pages/shot_on_red.rhtml:95
+#: app/views/static_pages/shot_on_red.rhtml:99
+#: app/views/static_pages/shot_on_red.rhtml:108
+#: app/views/support/release_history.rhtml:35
+#: app/views/app/views/support/release_history.rhtml:33
+msgid "GLOBAL|DOWNLOAD"
+msgstr "下载"
+
+#: app/views/gallery/index.rhtml:83
+#: app/views/static_pages/shot_on_red.rhtml:106
+#: app/views/app/views/gallery/index.rhtml:5
+msgid "GALLERY|VIDEO_GALLERY|SNEAK_PREVIEW"
+msgstr "影片预览：即将发布RED 的视频剪辑"
+
+#: app/views/gallery/index.rhtml:89
+#: app/views/static_pages/shot_on_red.rhtml:111
+#: app/views/app/views/gallery/index.rhtml:28
+msgid "GALLERY|VIDEO_GALLERY|REDCODE"
+msgstr "REDCODE&trade; RAW 1080p 视频剪辑"
+
+#: app/views/gallery/index.rhtml:90
+#: app/views/static_pages/shot_on_red.rhtml:112
+#: app/views/app/views/gallery/index.rhtml:29
+msgid "GALLERY|VIDEO_GALLERY|REDCODE|DESCRIPTION"
+msgstr "87 MB，11 秒，24 fps，1920 x 1080。"
+
+#: app/views/gallery/index.rhtml:91 app/views/gallery/index.rhtml:97
+#: app/views/gallery/index.rhtml:107
+#: app/views/static_pages/shot_on_red.rhtml:113
+#: app/views/static_pages/shot_on_red.rhtml:119
+#: app/views/static_pages/shot_on_red.rhtml:127
+#: app/views/app/views/gallery/index.rhtml:19
+#: app/views/app/views/gallery/index.rhtml:31
+#: app/views/app/views/gallery/index.rhtml:43
+#: app/views/app/views/gallery/index.rhtml:51
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_TORRENT"
+msgstr "下载 .torrent 种子"
+
+#: app/views/gallery/index.rhtml:92 app/views/gallery/index.rhtml:98
+#: app/views/gallery/index.rhtml:108
+#: app/views/static_pages/shot_on_red.rhtml:114
+#: app/views/static_pages/shot_on_red.rhtml:120
+#: app/views/static_pages/shot_on_red.rhtml:128
+#: app/views/app/views/gallery/index.rhtml:7
+#: app/views/app/views/gallery/index.rhtml:20
+#: app/views/app/views/gallery/index.rhtml:32
+#: app/views/app/views/gallery/index.rhtml:44
+#: app/views/app/views/gallery/index.rhtml:52
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_VIA_HTTP"
+msgstr "通过 HTTP 下载"
+
+#: app/views/gallery/index.rhtml:95
+#: app/views/static_pages/shot_on_red.rhtml:117
+#: app/views/app/views/gallery/index.rhtml:41
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_3"
+msgstr "75 MB，8 秒，24 fps，1024x560"
+
+#: app/views/gallery/index.rhtml:105
+#: app/views/static_pages/shot_on_red.rhtml:125
+#: app/views/app/views/gallery/index.rhtml:49
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_4"
+msgstr "107 MB，15 秒，1025x512"
+
+#: app/views/gallery/index.rhtml:112
+#: app/views/static_pages/shot_on_red.rhtml:133
+msgid "GALLERY|SHOT_ON_RED|CROSSING_THE_LINE"
+msgstr ""
+"CROSSING THE LINE<br /><span class=\"font12\">Directed by Peter Jackson</"
+"span>"
+
+#: app/views/gallery/index.rhtml:171
+#: app/views/static_pages/shot_on_red.rhtml:169
+#: app/views/app/views/gallery/index.rhtml:63
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT"
+msgstr "没有安装 BitTorrent 工具吗？"
+
+#: app/views/gallery/index.rhtml:172
+#: app/views/static_pages/shot_on_red.rhtml:170
+#: app/views/app/views/gallery/index.rhtml:64
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT|TEXT"
+msgstr ""
+"* Max OS X 用户我们推荐使用免费的、轻量级的 \"Transmission\":http://"
+"transmission.m0k.org BitTorrent 客户端。\n"
+"* Windows 用户我们推荐高效的、轻量级的 \"&mu;Torrent\":http://utorrent.com/"
+"download.php 客户端。\n"
+"* 安装完成以后，使用你的 BitTorrent 客户端打开下载好的 .torrent 文件即能自动"
+"开始下载。\n"
+"* 更多关于 BitTorrent 以及工作原理的信息，请查阅 \"answers.com/BitTorrent\":"
+"http://answer.com/bittorrent 。"
+
+#: app/views/pages/shot_on_red.rhtml:27
+#: app/views/app/views/pages/shot_on_red.rhtml:27
+msgid "PAGES|SHOT_ON_RED|TEXT"
+msgstr ""
+"h1. SHOT ON RED\n"
+"\n"
+"p{color:white;font-size:13px;}. Movies and television series in production "
+"being shot on RED:\n"
+"\n"
+"<div class= \"inner\" id =\"inner1\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic2.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. Guerrilla\n"
+" \n"
+"*Director:*<br />\n"
+"Steven Soderbergh<br />\n"
+"*Writers:*<br />\n"
+"Peter Buchman<br />\n"
+"*Release Date:*<br />\n"
+"2008 (USA)<br />\n"
+"*Genre:*<br />\n"
+"Biography / Drama<br />\n"
+"\n"
+"</div>\n"
+"</div>\n"
+"\n"
+"\n"
+"<div class= \"inner\" id =\"inner2\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic2.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. The<br />Argentine\n"
+" \n"
+"*Director:*<br />\n"
+"Steven Soderbergh<br />\n"
+"*Writers:*<br />\n"
+"Peter Buchman<br />\n"
+"*Release Date:*<br />\n"
+"2008 (USA)<br />\n"
+"*Genre:*<br />\n"
+"Biography / Drama<br /> \n"
+"</div>\n"
+"</div>\n"
+"\n"
+"<div class= \"inner\" id =\"inner3\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic2.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. Wanted\n"
+" \n"
+"*Director:*<br />\n"
+"Timur Bekmambetov<br />\n"
+"*Writers:*<br />\n"
+"Michael Brandt<br />\n"
+"Dean Georgaris (re-written by)<br />\n"
+"*Release Date:*<br />\n"
+"28 March 2008 (USA) <br />\n"
+"*Genre:* Action<br />\n"
+"</div>\n"
+"</div>\n"
+"\n"
+"<div class=\"clear\"></div>\n"
+"<p style=\"margin:20px;color:white;font-size:13px;clear:both;height:1%;"
+"\">Movies and television series in pre-production to be shot on RED:</p>\n"
+"<div class=\"clear\"></div>\n"
+"<div class=\"coming_soon\"><span class=\"m50\">Names coming soon...</span></"
+"div>\n"
+"        \n"
+
+#: app/views/pages/red_ibc_2007.rhtml:22
+#: app/views/app/views/pages/red_ibc_2007.rhtml:22
+msgid "PAGES|RED_WILL_BE_AT_IBC|TEXT"
+msgstr ""
+"h1. RED将会在9月7号到11号参加荷兰阿姆斯特丹的IBC国际广播电视展览会\n"
+"\n"
+"RED的展位将会放映使用昵称为鲍里斯和娜塔莎的RED alpha原型机拍摄的最新剪辑的演"
+"示片— Peter Jackson的《<a href=\"../gallery\" >Crossing the Line</a>》 也将展"
+"示RED ONE摄像机的工作样机。\n"
+"\n"
+"此外，IBC2007大屏幕器材展示专场将会在每个晚上（周五，周六和周日）5点到6点之间"
+"展示RED。主题将会涵盖： <br />\"Mysterium\":../technology &trade;， 其他RED科"
+"技，RED工作流软件和播放4K尺寸的 《Crossing the Line》。\n"
+"\n"
+"!/images/news/1187005649/ibc_w1.jpg!\n"
+"\n"
+" · IBC2007大屏幕器材展示专场 的日程安排: <a href=\"http://www.ibc.org/cgi-"
+"bin/displaypage.cgi?pageref=3278\">http://www.ibc.org/cgi-bin/displaypage."
+"cgi?pageref=3278</a>\n"
+" · IBC 预注册: <a href=\" http://www.ibc.org/cgi-bin/displaypage.cgi?"
+"pageref=1104\">http://www.ibc.org/cgi-bin/displaypage.cgi?pageref=1104</a>\n"
+" · IBC RED用户组: <a href=\"http://www.reduser.net/forum/showthread.php?"
+"t=3470\">http://www.reduser.net/forum/showthread.php?t=3470</a>\n"
+"\n"
+
+#: app/views/pages/red_in_china_and_japan.rhtml:23
+#: app/views/app/views/pages/red_in_china_and_japan.rhtml:23
+msgid "PAGES|RED_IN_CHINA_AND_JAPAN|TEXT"
+msgstr ""
+"h1. RED在北京和东京\n"
+"\n"
+"p. RED数码摄像机公司的Ted Schilowitz正在随苹果公司一起巡游展示著名导演Peter "
+"Jackson的影片“Crossing the Line”，它采用了RED摄像机的alpha版本昵称为鲍里斯和"
+"娜塔莎的原型机。在苹果公司的展区用MacPro在大屏幕上直接播放该影片来演示RED "
+"ONE 4K 数码摄像机的能力和苹果新的ProRes无损解码算法，其放映使用了一块AJA "
+"Kona3高清非线性编辑卡。\n"
+"\n"
+"p(p2). !/images/news/1187003879/cnj2.jpg(RED in Japan)!:http://bee.jesa.or."
+"jp <br />\n"
+"日本东京：11月20－22号(InterBee)\n"
+"更多新闻请访问:: \"http://bee.jesa.or.jp\":http://bee.jesa.or.jp\n"
+" \n"
+"p(p1). !/images/news/1187003879/cnj1.jpg(RED in China)!:http://www.birtv."
+"com \n"
+"中国北京：8月22－24号(BIRTV) \n"
+"更多信息请访问: \"http://www.birtv.com\":http://www.birtv.com\n"
+"\n"
+"       "
+
+#: app/views/layouts/static_pages.rhtml:6
+#: app/views/layouts/white_store.rhtml:6 app/views/layouts/support.rhtml:6
+#: app/views/layouts/blank.rhtml:6
+#: app/views/app/views/layouts/static_pages.rhtml:6
+#: app/views/app/views/layouts/white_store.rhtml:6
+#: app/views/app/views/layouts/support.rhtml:6
+msgid "GLOBAL|WEBSITE_DESCRIPTION"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:7
+#: app/views/layouts/white_store.rhtml:7 app/views/layouts/support.rhtml:7
+#: app/views/layouts/blank.rhtml:7
+#: app/views/app/views/layouts/static_pages.rhtml:7
+#: app/views/app/views/layouts/white_store.rhtml:7
+#: app/views/app/views/layouts/support.rhtml:7
+msgid "GLOBAL|WEBSITE_KEYWORDS"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:26
+#: app/views/layouts/white_store.rhtml:45 app/views/layouts/support.rhtml:28
+#: app/views/app/views/layouts/static_pages.rhtml:26
+#: app/views/app/views/layouts/white_store.rhtml:45
+#: app/views/app/views/layouts/support.rhtml:28
+msgid "GLOBAL|LOGO_LINK_HINT"
+msgstr "RED Digital Cinema Camera"
+
+#: app/views/layouts/support.rhtml:29
+#: app/views/app/views/layouts/support.rhtml:29
+msgid "SUPPORT|TITLE"
+msgstr "Support"
+
+#: app/views/layouts/support.rhtml:33
+#: app/views/app/views/layouts/support.rhtml:32
+msgid "SUPPORT|LOGIN_STATUS|WELCOME"
+msgstr "您好"
+
+#: app/views/layouts/support.rhtml:35
+msgid "GLOBAL|SIGN_OUT"
+msgstr "登出"
+
+#: app/views/accessories/index.rhtml:3
+#: app/views/accessories/_sub_navigation.rhtml:1
+#: app/views/cameras/_sub_navigation.rhtml:1 app/views/cameras/index.rhtml:9
+#: app/views/app/views/cameras/_sub_navigation.rhtml:2
+#: app/views/app/views/cameras/index.rhtml:3
+msgid "CAMERAS|SUB_NAVIGATION|INTRODUCING_RED_ONE"
+msgstr "RED ONE&trade; 简介"
+
+#: app/views/accessories/monitoring_options.rhtml:1
+#: app/views/static_pages/technology.rhtml:1
+#: app/views/static_pages/global/_main_navigation.rhtml:8
+#: app/views/cameras/_sub_navigation.rhtml:14
+#: app/views/cameras/technology.rhtml:1
+#: app/views/app/views/static_pages/technology.rhtml:1
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:7
+msgid "NAVIGATION|TECHNOLOGY"
+msgstr "技术特性"
+
+#: app/views/accessories/power_system.rhtml:3
+#: app/views/accessories/_sub_navigation.rhtml:2
+#: app/views/cameras/tech_specs.rhtml:3
+#: app/views/cameras/_sub_navigation.rhtml:2
+#: app/views/cameras/_sub_navigation.rhtml:13
+#: app/views/app/views/cameras/tech_specs.rhtml:2
+#: app/views/app/views/cameras/_sub_navigation.rhtml:3
+msgid "CAMERAS|SUB_NAVIGATION|TECH_SPECS"
+msgstr "技术规格"
+
+#: app/views/accessories/_sub_navigation.rhtml:3
+#: app/views/cameras/format_options.rhtml:1
+#: app/views/cameras/_sub_navigation.rhtml:3
+#: app/views/app/views/cameras/format_options.rhtml:1
+#: app/views/app/views/cameras/_sub_navigation.rhtml:4
+msgid "CAMERAS|SUB_NAVIGATION|FORMAT_OPTIONS"
+msgstr "格式参数"
+
+#: app/views/accessories/_sub_navigation.rhtml:4
+#: app/views/cameras/photo_tour.rhtml:4
+#: app/views/cameras/_sub_navigation.rhtml:4
+#: app/views/app/views/cameras/photo_tour.rhtml:4
+#: app/views/app/views/cameras/_sub_navigation.rhtml:5
+msgid "CAMERAS|SUB_NAVIGATION|PHOTO_TOUR"
+msgstr "产品图片"
+
+#: app/views/static_pages/contact_us.rhtml:2
+#: app/views/app/views/static_pages/contact_us.rhtml:2
+#: app/views/app/views/support/index.rhtml:8
+msgid "CONTACT_US|TITLE"
+msgstr "联系我们"
+
+#: app/views/static_pages/contact_us.rhtml:54
+#: app/views/app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|ORDERS"
+msgstr "订单/预定"
+
+#: app/views/static_pages/contact_us.rhtml:54
+#: app/views/app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|ORDERS_TEXT"
+msgstr "订单状态、更新和信用卡问题"
+
+#: app/views/static_pages/contact_us.rhtml:55
+#: app/views/app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS"
+msgstr "技术性问题"
+
+#: app/views/static_pages/contact_us.rhtml:55
+#: app/views/app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS_TEXT"
+msgstr "关于 RED ONE 和其他产品的技术细节"
+
+#: app/views/static_pages/contact_us.rhtml:57
+#: app/views/app/views/static_pages/contact_us.rhtml:57
+msgid "CONTACT_US|QUEUE|TECH_SUPPORT"
+msgstr "*技术支持* 联系 RED 以获得 RED ONE 和其他 RED 产品的技术帮助"
+
+#: app/views/static_pages/contact_us.rhtml:59
+#: app/views/app/views/static_pages/contact_us.rhtml:59
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT"
+msgstr "业务发展"
+
+#: app/views/static_pages/contact_us.rhtml:59
+#: app/views/app/views/static_pages/contact_us.rhtml:59
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT_TEXT"
+msgstr "咨询与技术、产品或者业务联系相关的信息"
+
+#: app/views/static_pages/contact_us.rhtml:60
+#: app/views/app/views/static_pages/contact_us.rhtml:60
+msgid "CONTACT_US|QUEUE|JOBS"
+msgstr "工作职位"
+
+#: app/views/static_pages/contact_us.rhtml:60
+#: app/views/app/views/static_pages/contact_us.rhtml:60
+msgid "CONTACT_US|QUEUE|JOBS_TEXT"
+msgstr "求职意愿或相关咨询"
+
+#: app/views/static_pages/contact_us.rhtml:61
+#: app/views/app/views/static_pages/contact_us.rhtml:61
+msgid "CONTACT_US|QUEUE|WEBSITE"
+msgstr "网站"
+
+#: app/views/static_pages/contact_us.rhtml:61
+#: app/views/app/views/static_pages/contact_us.rhtml:61
+msgid "CONTACT_US|QUEUE|WEBSITE_TEXT"
+msgstr "您对网站的意见、建议、问题或者提交漏洞报告"
+
+#: app/views/static_pages/contact_us.rhtml:62
+#: app/views/app/views/static_pages/contact_us.rhtml:62
+msgid "CONTACT_US|QUEUE|GENERAL"
+msgstr "一般咨询"
+
+#: app/views/static_pages/contact_us.rhtml:62
+#: app/views/app/views/static_pages/contact_us.rhtml:62
+msgid "CONTACT_US|QUEUE|GENERAL_TEXT"
+msgstr "产品信息、相关日期或其他类型的问题"
+
+#: app/views/static_pages/contact_us.rhtml:65 app/views/support/index.rhtml:14
+#: app/views/app/views/static_pages/contact_us.rhtml:65
+#: app/views/app/views/support/index.rhtml:14
+msgid "CONTACT_US|POST|NAME"
+msgstr "姓名："
+
+#: app/views/static_pages/contact_us.rhtml:66 app/views/support/index.rhtml:16
+#: app/views/app/views/static_pages/contact_us.rhtml:66
+#: app/views/app/views/support/index.rhtml:16
+msgid "CONTACT_US|POST|EMAIL"
+msgstr "邮箱："
+
+#: app/views/static_pages/contact_us.rhtml:68 app/views/support/index.rhtml:18
+#: app/views/app/views/static_pages/contact_us.rhtml:68
+#: app/views/app/views/support/index.rhtml:18
+msgid "CONTACT_US|POST|PHONE"
+msgstr "电话："
+
+#: app/views/static_pages/contact_us.rhtml:71 app/views/support/index.rhtml:19
+#: app/views/app/views/static_pages/contact_us.rhtml:71
+#: app/views/app/views/support/index.rhtml:19
+msgid "CONTACT_US|POST|SUMMARY"
+msgstr "摘要："
+
+#: app/views/static_pages/contact_us.rhtml:73
+#: app/views/app/views/static_pages/contact_us.rhtml:73
+msgid "CONTACT_US|POST|PROBLEM_URL"
+msgstr "页面地址："
+
+#: app/views/static_pages/contact_us.rhtml:77 app/views/support/index.rhtml:20
+#: app/views/app/views/static_pages/contact_us.rhtml:77
+#: app/views/app/views/support/index.rhtml:20
+msgid "CONTACT_US|POST|PRODUCT_TYPE"
+msgstr "产品类型："
+
+#: app/views/static_pages/contact_us.rhtml:83 app/views/support/index.rhtml:24
+#: app/views/app/views/static_pages/contact_us.rhtml:83
+#: app/views/app/views/support/index.rhtml:24
+msgid "CONTACT_US|POST|SERIAL_NO"
+msgstr "产品序列号："
+
+#: app/views/static_pages/contact_us.rhtml:85
+#: app/views/app/views/static_pages/contact_us.rhtml:85
+msgid "CONTACT_US|POST|SERIAL_NO|TIP"
+msgstr "提示：多个序列号之间请使用\"*,*\"（逗号）分隔"
+
+#: app/views/static_pages/contact_us.rhtml:88 app/views/support/index.rhtml:25
+#: app/views/app/views/static_pages/contact_us.rhtml:88
+#: app/views/app/views/support/index.rhtml:25
+msgid "CONTACT_US|POST|DETAIL"
+msgstr "详细内容："
+
+#: app/views/static_pages/contact_us.rhtml:91
+#: app/views/app/views/static_pages/contact_us.rhtml:91
+#: app/views/app/views/support/index.rhtml:27
+msgid "CONTACT_US|POST|TECH_SUPPORT|SUBSCRIPT"
+msgstr ""
+"When you hit the “Send” button, an Incident Ticket will be generated and an "
+"on-call RED technical support representative will be notified. The "
+"representative will contact you within 4 hours via email or phone to discuss "
+"the incident.  We ask that you ONLY use the Technical Support Incident "
+"Ticket form when you require a response to an urgent technical issue.  For "
+"all other issues, please select another webform above."
+
+#: app/views/static_pages/contact_us.rhtml:94
+#: app/views/contact/confirm_contact.rhtml:13 app/views/support/index.rhtml:28
+#: app/views/app/views/static_pages/contact_us.rhtml:93
+#: app/views/app/views/contact/confirm_contact.rhtml:13
+#: app/views/app/views/support/index.rhtml:28
+msgid "CONTACT_US|POST|SEND"
+msgstr "发送"
+
+#: app/views/static_pages/contact_us.rhtml:97
+#: app/views/app/views/static_pages/contact_us.rhtml:96
+msgid "GLOBAL|FULL_COMPANY_NAME"
+msgstr "RED 数码摄像机公司"
+
+#: app/views/static_pages/contact_us.rhtml:99
+#: app/views/app/views/static_pages/contact_us.rhtml:98
+msgid "CONTACT_US|PHONE"
+msgstr ""
+"国际电话：（＋1）949 2067900<br>\n"
+"<span style=\"font-size:90%;color:#999999\">（周一至周五，北京时间11:00PM－"
+"08:00AM）</span><br>\n"
+"中文服务：（+86）021 63455287<br>\n"
+"<span style=\"font-size:90%;color:#999999\">（周一至周五，北京时间08:00AM－"
+"05:00PM）</span>\n"
+
+#: app/views/static_pages/contact_us.rhtml:100
+#: app/views/app/views/static_pages/contact_us.rhtml:99
+msgid "CONTACT_US|FAX"
+msgstr "国际传真：(+1) 949 2067990"
+
+#: app/views/static_pages/contact_us.rhtml:101
+#: app/views/support/index.rhtml:10
+#: app/views/app/views/static_pages/contact_us.rhtml:100
+#: app/views/app/views/support/index.rhtml:10
+msgid "CONTACT_US|AVAILABLE_TIME"
+msgstr "&nbsp;"
+
+#: app/views/static_pages/contact_us.rhtml:104
+#: app/views/app/views/static_pages/contact_us.rhtml:103
+msgid "CONTACT_US|ADDRESS"
+msgstr ""
+"地址：\n"
+"美国加州森林湖市瓦伦西亚圈路20291号\n"
+"邮编：92630"
+
+#: app/views/static_pages/faqs.rhtml:1
+#: app/views/app/views/static_pages/faqs.rhtml:1
+msgid "FAQS|TITLE"
+msgstr "常见问题解答"
+
+#: app/views/static_pages/faqs.rhtml:3
+#: app/views/app/views/static_pages/faqs.rhtml:3
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr "摄像机的价格如何？"
+
+#: app/views/static_pages/faqs.rhtml:4
+#: app/views/app/views/static_pages/faqs.rhtml:4
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr "RED-ONE 摄像机基本价格为 $17,500 (不含税,不含运输费)"
+
+#: app/views/static_pages/faqs.rhtml:6
+#: app/views/app/views/static_pages/faqs.rhtml:6
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr "摄像机的配套镜头价格如何？"
+
+#: app/views/static_pages/faqs.rhtml:7
+#: app/views/app/views/static_pages/faqs.rhtml:7
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr ""
+"目前已有的任何一款P/L mount S16mm or 35mm 镜头都可以用在摄像机上.。RED 300mm "
+"长焦镜目前售价为 $4,995 包含运输费,消费税,进口关税也可以包含在内。RED 18-"
+"85mm f.28 zoom 镜头目前的售价为 $9,500. 其他<a href=\"lenses\">RED镜头</a>将"
+"在不久后问世。"
+
+#: app/views/static_pages/faqs.rhtml:9
+#: app/views/app/views/static_pages/faqs.rhtml:9
+msgid ""
+"FAQS|QUESTION|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr "存储介质的收录时间以及价格是多少？"
+
+#: app/views/static_pages/faqs.rhtml:10
+#: app/views/app/views/static_pages/faqs.rhtml:10
+msgid "FAQS|ANSWER|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr ""
+"存储介质的收录时间因图像的收录比率和分辨率而不同。 我们将 RED-DRIVE 的入门级"
+"别配置目标价格定在$1,000以下。 "
+
+#: app/views/static_pages/faqs.rhtml:12
+#: app/views/app/views/static_pages/faqs.rhtml:12
+msgid "FAQS|QUESTION|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr "摄像机支持 NTSC 和 PAL 格式吗？"
+
+#: app/views/static_pages/faqs.rhtml:13
+#: app/views/app/views/static_pages/faqs.rhtml:13
+msgid "FAQS|ANSWER|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr ""
+"RED-ONE 摄像机可以支持目前所有 HDTV 和数码影院发布的主流格式, 诸如 NTSC 或 "
+"PAL 标准版本都可以通过压缩技术得到支持。 "
+
+#: app/views/static_pages/faqs.rhtml:15
+#: app/views/app/views/static_pages/faqs.rhtml:15
+msgid "FAQS|QUESTION|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr "摄像机什么时候可以支持胶片？"
+
+#: app/views/static_pages/faqs.rhtml:16
+#: app/views/app/views/static_pages/faqs.rhtml:16
+msgid "FAQS|ANSWER|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr "我们已经支持胶片了。具体请访问<a href=\"shot_on_red\">视频展示</a>。"
+
+#: app/views/static_pages/faqs.rhtml:18
+#: app/views/app/views/static_pages/faqs.rhtml:18
+msgid "FAQS|QUESTION|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "摄像原形机什么时候可以上市？"
+
+#: app/views/static_pages/faqs.rhtml:19
+#: app/views/app/views/static_pages/faqs.rhtml:19
+msgid "FAQS|ANSWER|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "原型机已经组装完成，请看我们2006目标。 "
+
+#: app/views/static_pages/faqs.rhtml:21
+#: app/views/app/views/static_pages/faqs.rhtml:21
+msgid "FAQS|QUESTION|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "摄像机配套组件何时可以上市？"
+
+#: app/views/static_pages/faqs.rhtml:22
+#: app/views/app/views/static_pages/faqs.rhtml:22
+msgid "FAQS|ANSWER|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "2007年初将有第一批配套组件上市。"
+
+#: app/views/static_pages/privacy_policy.rhtml:1
+#: app/views/app/views/static_pages/privacy_policy.rhtml:1
+msgid "PRIVACY_POLICY|TITLE"
+msgstr "隐私协议"
+
+#: app/views/static_pages/privacy_policy.rhtml:3
+#: app/views/app/views/static_pages/privacy_policy.rhtml:3
+msgid "PRIVATY_POLICY|RICH_CONTENT"
+msgstr ""
+"h2. RED will never sell any information about you to anyone\n"
+"\n"
+"RED’s privacy and security measures are designed with deep bunker security "
+"in mind, so any personal information that you provide to RED is used for the "
+"purpose of personalizing and enhancing your web experience with RED, and for "
+"no other purpose. RED’s specific privacy policies are outlined below.\n"
+"\n"
+"h2. The Information We Collect\n"
+"\n"
+"There are three ways that RED obtains information from you: (1) via signup "
+"on RED’s website; (2) from an on-line purchase; or (3) navigational "
+"information about where visitors go on our website.\n"
+"\n"
+"h2. How We Use The Information\n"
+"\n"
+"The information obtained from registration on-line is utilized to improve "
+"your web experience with RED by enabling you to obtain a faster checkout for "
+"purchases and/or opt-in to receive occasional e-mails, which provide you "
+"with the latest and greatest information regarding RED and its products.\n"
+"\n"
+"The information we ask for when you order on-line is your name, address, "
+"phone number, credit card number and email address, and is used only to "
+"complete the order, to confirm the order and to confirm shipment of the "
+"order. You may, upon placement of an order, opt to allow RED to save the "
+"information for a speedier checkout process the next time. This information "
+"is then stored only for the purposes of faster checkout and is not used for "
+"any other purpose.\n"
+"\n"
+"The navigational information allows us to see which areas of our Web site "
+"are most visited and helps us improve the quality of your online experience "
+"by recognizing and delivering more of the most desired features and "
+"services. Additional non-personally identifiable information (for example, "
+"browser version, IP address) may be collected which will provide information "
+"regarding the general use of our website.\n"
+"\n"
+"RED will never sell any information about you to anyone. \"Cookies\" are "
+"used by RED only to allow you to use RED’s web site in the most efficient "
+"manner.\n"
+"\n"
+"h2. E-Mail\n"
+"\n"
+"RED will only send e-mails to you if you ask for them and you can easily "
+"unsubscribe at any time you want. RED has a company policy not to flood "
+"people with e-mail correspondence, but simply gives you periodic information "
+"so you can stay up to date on what RED is offering. RED also uses your e-"
+"mail address to confirm your order and to confirm shipment of your order and "
+"to respond to any inquiries you make on-line. All e-mails you receive will "
+"provide you with information as to how to get off the e-mail mailing list if "
+"you so desire.\n"
+"\n"
+"h2. Children’s Privacy\n"
+"\n"
+"Use RED.com only with involvement of a parent or guardian. Although RED does "
+"not specifically direct its web site to children, RED strives to provide "
+"children with as much customer service as possible without violating their "
+"privacy rights. For their protection, RED asks that anyone under 14 years of "
+"age not attempt to register with RED or otherwise provide RED with any "
+"personal information without the consent of a parent or legal guardian.\n"
+"\n"
+"h2. Access To Your Personal Information\n"
+"\n"
+"RED will provide you with access to the personal information you provided to "
+"RED by allowing you to view, update or correct your information. In order to "
+"protect your privacy, RED takes steps to verify your identity before "
+"granting you access to the private information or enabling you to make "
+"corrections. RED will accomplish this through the use of passwords and "
+"personal data."
+
+#: app/views/static_pages/return_policy.rhtml:1
+#: app/views/app/views/static_pages/return_policy.rhtml:1
+msgid "RETURN_POLICY|TITLE"
+msgstr "退订协议"
+
+#: app/views/static_pages/return_policy.rhtml:3
+#: app/views/app/views/static_pages/return_policy.rhtml:3
+msgid "RETURN_POLICY|RICH_CONTENT"
+msgstr ""
+"Red is still finalizing equipment specifications. Additional information "
+"regarding availability and shipping targets will be posted to our website at "
+"\"http://www.red.com\":http://www.red.com as development proceeds.\n"
+"\n"
+"*THE DEPOSITS FOR RED CAMERAS AND RELATED EQUIPMENT ARE FULLY REFUNDABLE "
+"PRIOR TO PRODUCT DELIVERY TO THE CUSTOMER.*\n"
+"\n"
+"Red makes no promises or representations as to the delivery date of the "
+"camera equipment or final specifications. Deposit holder’s only remedy under "
+"their deposit arrangement is the full return of the customer’s deposit. All "
+"disputes regarding a deposit receipt must be adjudicated in Orange County, "
+"California, USA."
+
+#: app/views/static_pages/about_red.rhtml:1
+#: app/views/app/views/static_pages/about_red.rhtml:1
+msgid "ABOUT_RED|TITLE"
+msgstr "关于 RED 数码影院"
+
+#: app/views/static_pages/about_red.rhtml:3
+#: app/views/app/views/static_pages/about_red.rhtml:3
+msgid "ABOUT_RED|TEXT"
+msgstr ""
+"Red摄影机系统的构造理念十分简单，那就是设计并创造出一款高性能的数码电影摄影"
+"机，这款摄影机的功能在可以与用35mm胶卷拍摄出来的效果相匹敌的同时，又可以让消"
+"费者享受纯数码的简便。Red摄影机提供给了我们无可匹敌的图像质量并且没有相关的系"
+"统限制。 "
+
+#: app/views/static_pages/index.rhtml:50
+#: app/views/app/views/static_pages/index.rhtml:23
+msgid "INDEX|SHOT_ON_RED|TEXT"
+msgstr ""
+"!/images/index/scarlet.jpg!\n"
+"h2. \"用RED拍摄\":page\n"
+"\n"
+"正在使用RED摄像机拍摄的电影和电视剧:\n"
+"《Guerrilla》和《The Argentine》，由奥斯卡最佳导演奖获得者，彼得·杰克逊导演\n"
+"* *《Guerrilla》* 和 *《The Argentine》*, 由奥斯卡最佳导演奖获得者，彼得·杰克"
+"逊导演。\n"
+"* *《Wanted》*, 提莫·贝克曼贝托夫导演，安吉利娜·朱莉主演。 \n"
+"p(none_listtype). 即将使用RED拍摄的电影和电视剧:\n"
+"* 名称即将列出......\n"
+"!/images/index/go.gif!:page\n"
+"\n"
+"[page]./shot_on_red\n"
+
+#: app/views/static_pages/workflow.rhtml:1 app/views/cameras/workflow.rhtml:4
+#: app/views/app/views/static_pages/workflow.rhtml:1
+msgid "WORKFLOW|TITLE"
+msgstr "工作流程"
+
+#: app/views/static_pages/workflow.rhtml:8
+#: app/views/app/views/static_pages/workflow.rhtml:8
+msgid "WORKFLOW|TEXT"
+msgstr ""
+"* 使用 4K REDCODE RAW 格式录制（27MB/秒）\n"
+"* 将影片导入 REDCINE ，做第一次光校正\n"
+"* 可以使用任何输出参数导出\n"
+"* REDCINE 只支持基于 Intel 芯片的 Mac 系统或 Windows XP"
+
+#: app/views/static_pages/technology.rhtml:3
+#: app/views/cameras/technology.rhtml:5
+#: app/views/app/views/static_pages/technology.rhtml:3
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM"
+msgstr "超级 35mm 数码摄像机"
+
+#: app/views/static_pages/technology.rhtml:4
+#: app/views/cameras/technology.rhtml:6
+#: app/views/app/views/static_pages/technology.rhtml:4
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM|TEXT"
+msgstr ""
+"p. 储存格式为RAW格式，2540点阵逐行扫描并拥有60帧刷新率。分辨率为4520 X 2540 "
+"像素, Mysterium&trade; 将这部完美的高端数码摄像机呈现在您的面前。\n"
+"\n"
+"p(p1). RED ONE&trade; 中的 Mysterium&trade; 同样支持将原有图像压缩到 \"1080p "
+"和 720p\":tech_specs 。\n"
+"\n"
+"p(p1). 摄像机拥有区域或者点对焦两种对焦模式。Mysterium&trade; 拥有杰出的每 "
+"29 平方微米 66db 的信噪比，能同时传输 12,065,000 个像素，所以是一种高清摄像"
+"机。\n"
+
+#: app/views/static_pages/technology.rhtml:8
+#: app/views/cameras/technology.rhtml:10
+#: app/views/app/views/static_pages/technology.rhtml:8
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN"
+msgstr "Mysterium&trade;：超大分辨率"
+
+#: app/views/static_pages/technology.rhtml:9
+#: app/views/cameras/technology.rhtml:11
+#: app/views/app/views/static_pages/technology.rhtml:9
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN|TEXT"
+msgstr ""
+"4520x2540 像素超大分辨率。RED 的核心感光设备是一块1200万像素的 "
+"Mysterium&trade; CMOS 感应器，超大 35mm 尺寸，拥有无与伦比的保真度和适应"
+"性。\n"
+"\n"
+"p(p1). 它拥有低噪点以及出色的续航能力可以让你对它在 35mm 镜头拍摄中的持续拍摄"
+"以及色彩还原能力赞不绝口。\n"
+
+#: app/views/static_pages/gear_we_use.rhtml:1
+#: app/views/app/views/static_pages/gear_we_use.rhtml:1
+msgid "GEAR_WE_USE|TITLE"
+msgstr "我们使用的元件"
+
+#: app/views/static_pages/gear_we_use.rhtml:3
+#: app/views/app/views/static_pages/gear_we_use.rhtml:3
+msgid "GEAR_WE_USE|TEXT"
+msgstr ""
+"以下所列出的公司是我们 RED 所使用的一些元件的合作伙伴，包括了拍摄，手柄，在我"
+"们网站上你可以看到的用于 Mysterium&trade; 传感器得到的图像的屏幕，以及在阿姆"
+"斯特丹，纽约以及马上在洛杉矶可以看到的4k显示屏。"
+
+#: app/views/static_pages/email_announcements.rhtml:16
+#: app/views/static_pages/_email_announcement_success.rhtml:1
+#: app/views/app/views/static_pages/email_announcements.rhtml:16
+#: app/views/app/views/static_pages/_email_announcement_success.rhtml:1
+msgid "EMAIL_ANNOUNCEMENT|TITLE"
+msgstr "订阅邮件通知"
+
+#: app/views/static_pages/email_announcements.rhtml:17
+#: app/views/app/views/static_pages/email_announcements.rhtml:17
+msgid "EMAIL_ANNOUNCEMENT|DESCRIPTION|TEXT"
+msgstr "订阅我们的邮件通知，我们将不定期的通过 Email 发送最新的 RED 信息。"
+
+#: app/views/static_pages/email_announcements.rhtml:27
+#: app/views/app/views/static_pages/email_announcements.rhtml:27
+msgid "EMAIL_ANNOUNCEMENT|REQUIRED_FIELDS"
+msgstr "必填项目"
+
+#: app/views/static_pages/email_announcements.rhtml:28
+#: app/views/app/views/static_pages/email_announcements.rhtml:28
+msgid "EMAIL_ANNOUNCEMENT|NAME"
+msgstr "姓名："
+
+#: app/views/static_pages/email_announcements.rhtml:30
+#: app/views/app/views/static_pages/email_announcements.rhtml:30
+msgid "EMAIL_ANNOUNCEMENT|EMAIL_ADDRESS"
+msgstr "Email 地址："
+
+#: app/views/static_pages/email_announcements.rhtml:35
+#: app/views/app/views/static_pages/email_announcements.rhtml:35
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY"
+msgstr "您所在的行业是："
+
+#: app/views/static_pages/email_announcements.rhtml:36
+#: app/views/app/views/static_pages/email_announcements.rhtml:36
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|CINEMATOGRAPHER"
+msgstr "摄影师"
+
+#: app/views/static_pages/email_announcements.rhtml:37
+#: app/views/app/views/static_pages/email_announcements.rhtml:37
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DISTRIBUTOR"
+msgstr "发行商"
+
+#: app/views/static_pages/email_announcements.rhtml:38
+#: app/views/app/views/static_pages/email_announcements.rhtml:38
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DIRECTOR"
+msgstr "导演"
+
+#: app/views/static_pages/email_announcements.rhtml:39
+#: app/views/app/views/static_pages/email_announcements.rhtml:39
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|RENTAL_COMPANY"
+msgstr "租赁公司"
+
+#: app/views/static_pages/email_announcements.rhtml:40
+#: app/views/app/views/static_pages/email_announcements.rhtml:40
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|PRODUCER"
+msgstr "制造商"
+
+#: app/views/static_pages/email_announcements.rhtml:41
+#: app/views/app/views/static_pages/email_announcements.rhtml:41
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|VISUAL_FX_ARTIST"
+msgstr "视觉艺术家"
+
+#: app/views/static_pages/email_announcements.rhtml:42
+#: app/views/static_pages/email_announcements.rhtml:49
+#: app/views/app/views/static_pages/email_announcements.rhtml:42
+#: app/views/app/views/static_pages/email_announcements.rhtml:49
+msgid "EMAIL_ANNOUNCEMENT|OTHER"
+msgstr "其他"
+
+#: app/views/static_pages/email_announcements.rhtml:46
+#: app/views/app/views/static_pages/email_announcements.rhtml:46
+msgid "EMAIL_ANNOUNCEMENT|EDITOR"
+msgstr "现在使用的非线性编辑平台是："
+
+#: app/views/static_pages/email_announcements.rhtml:53
+#: app/views/app/views/static_pages/email_announcements.rhtml:53
+msgid "EMAIL_ANNOUNCEMENT|SYSTEM"
+msgstr "您使用的计算机是："
+
+#: app/views/static_pages/email_announcements.rhtml:60
+#: app/views/app/views/static_pages/email_announcements.rhtml:60
+msgid "EMAIL_ANNOUNCEMENT|HD_CAMERA"
+msgstr "您已经拥有一台 HD 摄像机了吗？"
+
+#: app/views/static_pages/email_announcements.rhtml:61
+#: app/views/static_pages/email_announcements.rhtml:67
+#: app/views/app/views/static_pages/email_announcements.rhtml:61
+#: app/views/app/views/static_pages/email_announcements.rhtml:67
+msgid "EMAIL_ANNOUNCEMENT|CAMERA_MODEL"
+msgstr "型号："
+
+#: app/views/static_pages/email_announcements.rhtml:66
+#: app/views/app/views/static_pages/email_announcements.rhtml:66
+msgid "EMAIL_ANNOUNCEMENT|RAW_CAMERA"
+msgstr "您已经拥有一台支持 RAW 格式的数码相机？"
+
+#: app/views/static_pages/email_announcements.rhtml:72
+#: app/views/app/views/static_pages/email_announcements.rhtml:72
+msgid "EMAIL_ANNOUNCEMENT|COMMENTS"
+msgstr "您对 RED 的意见或建议："
+
+#: app/views/static_pages/email_announcements.rhtml:77
+#: app/views/app/views/static_pages/email_announcements.rhtml:77
+msgid "EMAIL_ANNOUNCEMENT|SUBSCRIPT"
+msgstr ""
+"您填写的个人信息只用于我们和您联系。RED 不会将客户信息发布或出售给第三方。您"
+"必须满 14 周岁才能订阅。"
+
+#: app/views/static_pages/email_announcements.rhtml:80
+#: app/views/app/views/static_pages/email_announcements.rhtml:80
+msgid "GLOBAL|SUBMIT"
+msgstr "确定"
+
+#: app/views/static_pages/lenses.rhtml:9
+#: app/views/static_pages/global/_main_navigation.rhtml:4
+#: app/views/app/views/static_pages/lenses.rhtml:1
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:4
+msgid "NAVIGATION|LENSES"
+msgstr "镜头"
+
+#: app/views/static_pages/lenses.rhtml:50
+#: app/views/app/views/static_pages/lenses.rhtml:9
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|PRICE"
+msgstr "8,500"
+
+#: app/views/static_pages/lenses.rhtml:59
+#: app/views/app/views/static_pages/lenses.rhtml:5
+#: app/views/app/views/static_pages/lenses.rhtml:7
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM"
+msgstr "RED 50-150M T-3(f2.8) Zoom"
+
+#: app/views/static_pages/lenses.rhtml:91
+#: app/views/app/views/static_pages/lenses.rhtml:20
+msgid "LENSES|RED_18-50MM_F2.8_CF|PRICE"
+msgstr "6,500"
+
+#: app/views/static_pages/lenses.rhtml:103
+#: app/views/app/views/static_pages/lenses.rhtml:16
+#: app/views/app/views/static_pages/lenses.rhtml:18
+msgid "LENSES|RED_18-50MM_F2.8_CF"
+msgstr "RED 18-50MM f2.8 CF 镜头"
+
+#: app/views/static_pages/lenses.rhtml:137
+#: app/views/app/views/static_pages/lenses.rhtml:31
+msgid "LENSES|RED_300MM_F2.8|PRICE"
+msgstr "4,995"
+
+#: app/views/static_pages/lenses.rhtml:178
+#: app/views/app/views/static_pages/lenses.rhtml:27
+#: app/views/app/views/static_pages/lenses.rhtml:29
+msgid "LENSES|RED_300MM_F2.8"
+msgstr "RED 300MM f2.8 镜头"
+
+#: app/views/static_pages/lenses.rhtml:193
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|RED_PRIME_SET|PRICE"
+msgstr "19,975"
+
+#: app/views/static_pages/lenses.rhtml:200
+#: app/views/app/views/static_pages/lenses.rhtml:38
+#: app/views/app/views/static_pages/lenses.rhtml:40
+msgid "LENSES|RED_PRIME_SET"
+msgstr "RED 镜头套件"
+
+#: app/views/static_pages/_email_announcement_success.rhtml:2
+#: app/views/app/views/static_pages/_email_announcement_success.rhtml:2
+msgid "EMAIL_ANNOUNCEMENT|MESSAGE|SUCCESS"
+msgstr ""
+"订阅成功。在 RED 有新消息的时候，我们将发送邮件至您的邮箱，请注意查收。"
+
+#: app/views/static_pages/terms.rhtml:1 app/views/store/terms.rhtml:4
+#: app/views/app/views/static_pages/terms.rhtml:1
+#: app/views/app/views/store/terms.rhtml:4
+msgid "TERMS|TITLE"
+msgstr "RED.COM, INC. TERMS AND CONDITIONS"
+
+#: app/views/static_pages/shot_on_red.rhtml:66
+msgid "SHOT_ON_RED|MOVIE|CROSSING_THE_LINE"
+msgstr ""
+"<strong>Director : </strong> Peter Jackson<br />\n"
+"<strong>Writer : </strong>Peter Jackson<br />\n"
+"<strong>Trailer : </strong> Download <a href=\"http://torrents.red.com:6969/"
+"torrents/crossing1.mov.torrent\">.Torrent</a>&nbsp;|&nbsp;Download <a href="
+"\"http://red.cachefly.net/video/crossing1.mov\">HTTP</a>\n"
+"<p>Shot on RED ONE alpha prototypes \"Boris\" and \"Natasha\". Shot in 4K "
+"REDCODE RAW and recorded to RED DRIVE. Only the RUN/STOP feature was enabled."
+"</p>"
+
+#: app/views/static_pages/shot_on_red.rhtml:76
+msgid "SHOT_ON_RED|MOVIE|GAME"
+msgstr ""
+"<strong> Name : </strong>Game<br />\n"
+"<strong> Directors : </strong>Mark Neveldine and Brian Taylor<br />\n"
+"<strong> Writers : </strong>Mark Neveldine and Brian Taylor<br />\n"
+"<strong> Release Date : </strong>2009<br />\n"
+"<strong> Genre : </strong>Thriller\n"
+
+#: app/views/static_pages/shot_on_red.rhtml:82
+msgid "SHOT_ON_RED|MOVIE|WANTED"
+msgstr ""
+"<strong>Director :</strong>\n"
+"Timur Bekmambetov<br />\n"
+"<strong>Writers :</strong>\n"
+"Michael Brandt, re-written by Dean Georgaris<br />\n"
+"<strong>Release Date :</strong>\n"
+"2008 (USA) <br />\n"
+"<strong>Trailer: </strong><a href="http://www.apple.com/trailers/universal/wanted/">Download the trailer at apple.com/trailers</a><br />\n"
+"<strong>Website: </strong><a href=\"http://www.WantedMovie.com\">www."
+"WantedMovie.com</a>\n"
+
+#: app/views/static_pages/shot_on_red.rhtml:83
+msgid "SHOT_ON_RED|MOVIE|GUERRILLA"
+msgstr ""
+"<strong>Director :</strong>\n"
+"Steven Soderbergh<br />\n"
+"<strong>Writers :</strong>\n"
+"Peter Buchman<br />\n"
+"<strong>Release Date :</strong>\n"
+"2008 (USA)<br />\n"
+"<strong>Genre :</strong>Biography / Drama"
+
+#: app/views/static_pages/shot_on_red.rhtml:84
+msgid "SHOT_ON_RED|MOVIE|ARGENTINE"
+msgstr ""
+"<strong>Director :</strong>\n"
+"Steven Soderbergh<br />\n"
+"<strong>Writers :</strong>\n"
+"Peter Buchman<br />\n"
+"<strong>Release Date :</strong>\n"
+"2008 (USA)<br />\n"
+"<strong>Genre :</strong>\n"
+"Biography / Drama"
+
+#: app/views/static_pages/global/_footer.rhtml:3
+#: app/views/app/views/static_pages/global/_footer.rhtml:7
+msgid "FOOTER|CONTACT_US"
+msgstr "联系我们"
+
+#: app/views/static_pages/global/_footer.rhtml:4
+#: app/views/app/views/static_pages/global/_footer.rhtml:3
+msgid "FOOTER|EMAIL_ANNOUNCEMENTS"
+msgstr "订阅邮件通知"
+
+#: app/views/static_pages/global/_footer.rhtml:5
+#: app/views/app/views/static_pages/global/_footer.rhtml:4
+msgid "FOOTER|FAQS"
+msgstr "常见问题"
+
+#: app/views/static_pages/global/_footer.rhtml:6
+#: app/views/app/views/static_pages/global/_footer.rhtml:5
+msgid "FOOTER|NEWS"
+msgstr "新闻"
+
+#: app/views/static_pages/global/_footer.rhtml:7
+#: app/views/app/views/static_pages/global/_footer.rhtml:6
+msgid "FOOTER|GEAR_WE_USE"
+msgstr "使用元件"
+
+#: app/views/static_pages/global/_footer.rhtml:8
+#: app/views/app/views/static_pages/global/_footer.rhtml:8
+msgid "FOOTER|ABOUT_RED"
+msgstr "关于 RED"
+
+#: app/views/static_pages/global/_footer.rhtml:9
+#: app/views/app/views/static_pages/global/_footer.rhtml:9
+msgid "FOOTER|PRIVACY_POLICY"
+msgstr "隐私协议（英语）"
+
+#: app/views/static_pages/global/_footer.rhtml:10
+#: app/views/app/views/static_pages/global/_footer.rhtml:10
+msgid "FOOTER|RETURN_POLICY"
+msgstr "退订协议（英语）"
+
+#: app/views/static_pages/global/_footer.rhtml:11
+#: app/views/app/views/static_pages/global/_footer.rhtml:11
+msgid "FOOTER|TERMS"
+msgstr "Terms & Conditions"
+
+#: app/views/static_pages/global/_footer.rhtml:25
+#: app/views/app/views/static_pages/global/_footer.rhtml:16
+msgid "FOOTER|COPYRIGHT"
+msgstr "Copyright &copy; 1999-%CURRENT_YEAR%, 版权所有"
+
+#: app/views/static_pages/global/_footer.rhtml:26
+#: app/views/app/views/static_pages/global/_footer.rhtml:17
+msgid "FOOTER|TRADE"
+msgstr ""
+"RED Digital Cinema, RED ONE, MYSTERIUM, REDCODE, REDspace, Scarlet 2K, Scarlet 3K, Monstro, REDFLASH, RED-RAM, RED-RAID, RED-DRIVE, RED-CAGE, RED-RAIL, REDCINE, RED QUICK, RED Alert!, RED Quick and RED-GUN are trademarks of the RED Digital Cinema Camera Company."
+
+#: app/views/static_pages/global/_main_navigation.rhtml:2
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:2
+msgid "NAVIGATION|HOME"
+msgstr "首页"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:3
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:3
+msgid "NAVIGATION|CAMERAS"
+msgstr "摄像机"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:5
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:5
+msgid "NAVIGATION|ACCESSORIES"
+msgstr "附属部件"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:7
+#: app/views/cameras/_sub_navigation.rhtml:15
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:6
+msgid "NAVIGATION|WORKFLOW"
+msgstr "工作流程"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:10
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:8
+msgid "NAVIGATION|GALLERY"
+msgstr "展示"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:11
+#: app/views/static_pages/global/_main_navigation.rhtml:13
+msgid "NAVIGATION|SUPPORT"
+msgstr "技术支持"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:12
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:9
+msgid "NAVIGATION|STORE"
+msgstr "订购"
+
+#: app/views/cameras/format_options.rhtml:7
+#: app/views/cameras/tech_specs.rhtml:90
+#: app/views/app/views/cameras/format_options.rhtml:7
+msgid "CAMERAS|FORMAT_OPTIONS|AVAILABLE_VIDEO_FORMATS"
+msgstr ""
+"Available<br />\n"
+"Video formats"
+
+#: app/views/cameras/format_options.rhtml:8
+#: app/views/cameras/tech_specs.rhtml:91
+#: app/views/app/views/cameras/format_options.rhtml:8
+msgid "CAMERAS|FORMAT_OPTIONS|USING_LENS_FORMATS"
+msgstr "Using lens formats"
+
+#: app/views/cameras/format_options.rhtml:22
+#: app/views/cameras/tech_specs.rhtml:106
+#: app/views/app/views/cameras/format_options.rhtml:22
+msgid "CAMERAS|FORMAT_OPTIONS|ATTRIBUTES_2540P_RAW"
+msgstr ""
+"帧速率\n"
+"最大帧速\n"
+"REDCODE\n"
+"HD-SDI\n"
+"RAW 数据接口\n"
+
+#: app/views/cameras/format_options.rhtml:25
+#: app/views/cameras/tech_specs.rhtml:109
+#: app/views/app/views/cameras/format_options.rhtml:25
+msgid "CAMERAS|FORMAT_OPTIONS|2540p_S35mm"
+msgstr ""
+"支持\n"
+"可变\n"
+"60fps\n"
+"不支持\n"
+"不支持\n"
+"高于 60fps\n"
+
+#: app/views/cameras/format_options.rhtml:38
+#: app/views/cameras/format_options.rhtml:51
+#: app/views/cameras/format_options.rhtml:64
+#: app/views/cameras/tech_specs.rhtml:122
+#: app/views/cameras/tech_specs.rhtml:135
+#: app/views/cameras/tech_specs.rhtml:148
+#: app/views/app/views/cameras/format_options.rhtml:38
+#: app/views/app/views/cameras/format_options.rhtml:51
+#: app/views/app/views/cameras/format_options.rhtml:64
+msgid "CAMERAS|FORMAT_OPTIONS|ATTRIBUTES"
+msgstr ""
+"帧速率\n"
+"最大帧速\n"
+"REDCODE\n"
+"HD-SDI\n"
+"RAW 数据接口\n"
+
+#: app/views/cameras/format_options.rhtml:40
+#: app/views/cameras/format_options.rhtml:53
+#: app/views/cameras/tech_specs.rhtml:124
+#: app/views/cameras/tech_specs.rhtml:137
+#: app/views/app/views/cameras/format_options.rhtml:40
+#: app/views/app/views/cameras/format_options.rhtml:53
+msgid "CAMERAS|FORMAT_OPTIONS|4K_35mm_224"
+msgstr "YES\nVariable\n60 fps\n"
+
+#: app/views/cameras/format_options.rhtml:42
+#: app/views/cameras/format_options.rhtml:55
+#: app/views/cameras/tech_specs.rhtml:126
+#: app/views/cameras/tech_specs.rhtml:139
+#: app/views/app/views/cameras/format_options.rhtml:42
+#: app/views/app/views/cameras/format_options.rhtml:55
+msgid "CAMERAS|FORMAT_OPTIONS|4K_35mm"
+msgstr "YES\nVariable\n60 fps\n\n"
+
+#: app/views/cameras/format_options.rhtml:69
+#: app/views/cameras/tech_specs.rhtml:153
+#: app/views/app/views/cameras/format_options.rhtml:69
+msgid "CAMERAS|FORMAT_OPTIONS|2K_S16mm"
+msgstr "YES\nVariable\n120 fps\n"
+
+#: app/views/cameras/format_options.rhtml:71
+#: app/views/cameras/tech_specs.rhtml:155
+#: app/views/app/views/cameras/format_options.rhtml:71
+msgid "CAMERAS|FORMAT_OPTIONS|2K_B4"
+msgstr "YES\nVariable\n120 fps\n"
+
+#: app/views/cameras/format_options.rhtml:75
+#: app/views/cameras/tech_specs.rhtml:159
+#: app/views/app/views/cameras/format_options.rhtml:75
+msgid "CAMERAS|FORMAT_OPTIONS|SUBSCRIPT"
+msgstr ""
+"Larger format lenses may be used, limited to the indicated optical format "
+"coverage.\n"
+"* B4 requires optional B4 to P/L mount adaptor\n"
+"Project frame rates include 23.98, 24, 25, 29.97, 30, 50, 59.94, 60 fps\n"
+"All formats recorded as 12 bit linear uncompressed or compressed RAW"
+
+#: app/views/cameras/tech_specs.rhtml:7
+#: app/views/app/views/cameras/tech_specs.rhtml:7
+msgid "GLOBAL|SENSOR"
+msgstr "传感器"
+
+#: app/views/cameras/tech_specs.rhtml:8
+#: app/views/app/views/cameras/tech_specs.rhtml:8
+msgid "GLOBAL|RED_ONE|SENSOR"
+msgstr "Mysterium&trade; 1200万像素"
+
+#: app/views/cameras/tech_specs.rhtml:16
+#: app/views/app/views/cameras/tech_specs.rhtml:16
+msgid "GLOBAL|PHYSICAL_SIZE"
+msgstr "物理尺寸"
+
+#: app/views/cameras/tech_specs.rhtml:17
+#: app/views/app/views/cameras/tech_specs.rhtml:17
+msgid "GLOBAL|RED_ONE|PHYSICAL_SIZE"
+msgstr "24.4mm x 13.7mm （超级35mm）"
+
+#: app/views/cameras/tech_specs.rhtml:20
+#: app/views/app/views/cameras/tech_specs.rhtml:20
+msgid "GLOBAL|ACTIVE_PIXEL_ARRAY"
+msgstr "有效像素阵列"
+
+#: app/views/cameras/tech_specs.rhtml:21
+#: app/views/app/views/cameras/tech_specs.rhtml:21
+msgid "GLOBAL|RED_ONE|ACTIVE_PIXEL_ARRAY"
+msgstr "4520（横向） x 2540（纵向）"
+
+#: app/views/cameras/tech_specs.rhtml:24
+#: app/views/app/views/cameras/tech_specs.rhtml:24
+msgid "GLOBAL|FULL_PIXEL_ARRAY"
+msgstr "完全像素阵列"
+
+#: app/views/cameras/tech_specs.rhtml:25
+#: app/views/app/views/cameras/tech_specs.rhtml:25
+msgid "GLOBAL|RED_ONE|FULL_PIXEL_ARRAY"
+msgstr "4900（横向） x 2580（纵向）"
+
+#: app/views/cameras/tech_specs.rhtml:28
+#: app/views/app/views/cameras/tech_specs.rhtml:28
+msgid "GLOBAL|DYNAMIC_RANGE"
+msgstr "动态范围"
+
+#: app/views/cameras/tech_specs.rhtml:29
+#: app/views/app/views/cameras/tech_specs.rhtml:29
+msgid "GLOBAL|RED_ONE|DYNAMIC_RANGE"
+msgstr "> 66dB"
+
+#: app/views/cameras/tech_specs.rhtml:32
+#: app/views/app/views/cameras/tech_specs.rhtml:32
+msgid "GLOBAL|DEPTH_OF_FIELD"
+msgstr "景深"
+
+#: app/views/cameras/tech_specs.rhtml:33
+#: app/views/app/views/cameras/tech_specs.rhtml:33
+msgid "GLOBAL|RED_ONE|DEPTH_OF_FIELD"
+msgstr "等同于35mm电影镜头（16mm 标准屏幕）"
+
+#: app/views/cameras/tech_specs.rhtml:36
+#: app/views/app/views/cameras/tech_specs.rhtml:36
+msgid "GLOBAL|ACQUISITION_FORMATS"
+msgstr "有效格式"
+
+#: app/views/cameras/tech_specs.rhtml:37
+#: app/views/app/views/cameras/tech_specs.rhtml:37
+msgid "GLOBAL|RED_ONE|ACQUISITION_FORMATS"
+msgstr "4K (16:9, 2:1)\n3K (16:9, 2:1)\n2K (16:9, 2:1)"
+
+#: app/views/cameras/tech_specs.rhtml:40
+#: app/views/app/views/cameras/tech_specs.rhtml:40
+msgid "GLOBAL|RAW_OUTPUT"
+msgstr "RAW 输出"
+
+#: app/views/cameras/tech_specs.rhtml:41
+#: app/views/app/views/cameras/tech_specs.rhtml:41
+msgid "GLOBAL|RED_ONE|RAW_OUTPUT"
+msgstr "4K RGB\n3K RGB \n2K RGB \n1920×1080 progressive, RGB or 4:2:2 \n1280×720 progressive, RGB or 4:2:2"
+
+#: app/views/cameras/tech_specs.rhtml:44
+#: app/views/app/views/cameras/tech_specs.rhtml:44
+msgid "GLOBAL|FRAME_RATES"
+msgstr "帧速率"
+
+#: app/views/cameras/tech_specs.rhtml:45
+#: app/views/app/views/cameras/tech_specs.rhtml:45
+msgid "GLOBAL|RED_ONE|FRAME_RATES"
+msgstr "23.98, 24, 25, 29.97, 30 fps 4K\nplus 50, 59.94 and 60 fps 3K (windowed)\nplus 75 and 120 fps 2K (windowed)"
+
+#: app/views/cameras/tech_specs.rhtml:49
+#: app/views/app/views/cameras/tech_specs.rhtml:49
+msgid "GLOBAL|VIDEO_OUTPUTS"
+msgstr "视频输出"
+
+#: app/views/cameras/tech_specs.rhtml:50
+#: app/views/app/views/cameras/tech_specs.rhtml:50
+msgid "GLOBAL|RED_ONE|VIDEO_OUTPUTS"
+msgstr ""
+"一个或两个 HD-SDI 接口\n"
+"2K\t4:4:4 RGB\n"
+"1080p\t4:4:4 RGB\n"
+"1080p\t4:2:2\n"
+"1080i\t4:2:2\n"
+"720p\t4:2:2\n"
+
+#: app/views/cameras/tech_specs.rhtml:53
+#: app/views/app/views/cameras/tech_specs.rhtml:53
+msgid "GLOBAL|DIGITAL_MEDIA_MAGAZINE"
+msgstr "存储介质"
+
+#: app/views/cameras/tech_specs.rhtml:54
+#: app/views/app/views/cameras/tech_specs.rhtml:54
+msgid "GLOBAL|RED_ONE|DIGITAL_MEDIA_MAGAZINE"
+msgstr "FireWire 800/400, USB-2 and e-SATA interfaces \nRED DRIVE (RAID)&trade; hard disk drive (320GB) \nREDFLASH&trade; flash memory drive (64 GB) \n(CF) Compact Flash Module\n \n"
+
+#: app/views/cameras/tech_specs.rhtml:56
+#: app/views/app/views/cameras/tech_specs.rhtml:56
+msgid "GLOBAL|REDCODE_CODEC"
+msgstr "REDCODE 编码"
+
+#: app/views/cameras/tech_specs.rhtml:57
+#: app/views/app/views/cameras/tech_specs.rhtml:57
+msgid "GLOBAL|RED_ONE|REDCODE_CODEC"
+msgstr "12 bit RAW 4K, 3K and 2K (windowed sensor) \n1 – 30 fps 4K\n1 - 60 fps 3K\n1 – 120 fps 2K"
+
+#: app/views/cameras/tech_specs.rhtml:61
+#: app/views/app/views/cameras/tech_specs.rhtml:61
+msgid "GLOBAL|RAW_PORT_OPTION"
+msgstr "RAW PORT&trade; Option "
+
+#: app/views/cameras/tech_specs.rhtml:62
+#: app/views/app/views/cameras/tech_specs.rhtml:62
+msgid "GLOBAL|RED_ONE|RAW_PORT_OPTION"
+msgstr ""
+"High speed serial interface \n"
+"1 – 60 fps  2540p (4K+) \n"
+"1 – 120 fps 1270p (2K+, windowed sensor) \n"
+
+#: app/views/cameras/tech_specs.rhtml:66
+#: app/views/app/views/cameras/tech_specs.rhtml:65
+msgid "GLOBAL|AUDIO"
+msgstr "音频"
+
+#: app/views/cameras/tech_specs.rhtml:67
+#: app/views/app/views/cameras/tech_specs.rhtml:66
+msgid "GLOBAL|RED_ONE|AUDIO"
+msgstr "4 通道，16 / 24 bit，48KHz"
+
+#: app/views/cameras/tech_specs.rhtml:70
+#: app/views/app/views/cameras/tech_specs.rhtml:69
+msgid "GLOBAL|MONITOR"
+msgstr "显示屏"
+
+#: app/views/cameras/tech_specs.rhtml:71
+#: app/views/app/views/cameras/tech_specs.rhtml:70
+msgid "GLOBAL|RED_ONE|MONITOR"
+msgstr "纯平液晶显示器，高清 EVF 显示 （可选）"
+
+#: app/views/cameras/tech_specs.rhtml:74
+#: app/views/app/views/cameras/tech_specs.rhtml:73
+msgid "GLOBAL|WEIGHT"
+msgstr "重量"
+
+#: app/views/cameras/tech_specs.rhtml:75
+#: app/views/app/views/cameras/tech_specs.rhtml:74
+msgid "GLOBAL|RED_ONE|WEIGHT"
+msgstr "大约 4.5 公斤 （不包括镜头，电池以及其他附加设备）"
+
+#: app/views/cameras/tech_specs.rhtml:78
+#: app/views/app/views/cameras/tech_specs.rhtml:77
+msgid "GLOBAL|CONSTRUCTION"
+msgstr "机身材质"
+
+#: app/views/cameras/tech_specs.rhtml:79
+#: app/views/app/views/cameras/tech_specs.rhtml:78
+msgid "GLOBAL|RED_ONE|CONSTRUCTION"
+msgstr "铝合金"
+
+#: app/views/cameras/tech_specs.rhtml:83
+#: app/views/app/views/cameras/tech_specs.rhtml:82
+msgid "CAMERAS|TECH_SPECS|SUBSCRIPT"
+msgstr ""
+"*Delivery formats provided by REDCINE&trade; application software (one "
+"Public Beta license supplied with camera) <br />\n"
+"\n"
+"All specifications are subject change without notice. Not all features will "
+"be enabled on first product shipment."
+
+#: app/views/cameras/index.rhtml:43 app/views/app/views/cameras/index.rhtml:15
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE"
+msgstr "RED 让过时成为不可能"
+
+#: app/views/cameras/index.rhtml:45 app/views/app/views/cameras/index.rhtml:17
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE|TEXT"
+msgstr ""
+"RED ONE&trade; 的机身设计兼顾了灵活性和功能性。重量在 10 磅左右，流线型整体设"
+"计提供最全面的拍摄选项，35mm PL 镜头带来世界最好的光学特性。模块化和可升级"
+"性，RED ONE&trade; 是一台技术不会过时，您可以信赖的摄像机。RED ONE&trade; 的"
+"模块化设计意味着在我们添加新特性的同时，您也能获得新的附件以提高系统规格。"
+
+#: app/views/cameras/index.rhtml:49 app/views/app/views/cameras/index.rhtml:21
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE"
+msgstr "伪高清和像素插值不会在这里出现"
+
+#: app/views/cameras/index.rhtml:51 app/views/app/views/cameras/index.rhtml:23
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE|TEXT"
+msgstr ""
+"目前典型的最高端民用照相机有210万像素的传感器，能够拍摄最高每秒 30 帧 3:1:1 "
+"色彩取样的视频。但是我们发布的摄像机具有1200万像素的传感器，能够以每秒60 帧的"
+"速率拍摄12位自然RAW或者10位取样的高清视频。这就意味着每一秒可以获得多5倍且超"
+"高质量的存储信息。你的工作流程不需要这么多数据吗？那就把参数调整小一点，同样"
+"保有 \"Mysterium\":cameras/technology &trade; 超级35mm(24.4 x 13.7mm)传感器的所有其他"
+"优点。你能够得到和传统胶片摄像机一样令人震惊的景深和可选焦点。 "
+"Mysterium&trade; 提供了比66db信噪比更好的方案，这要归功于它高达29平方微米的像"
+"素面积。拥有 12,065,000 像素的分辨率，唯有自豪地称之为超级高清高清。"
+
+#: app/views/cameras/index.rhtml:54 app/views/app/views/cameras/index.rhtml:26
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN"
+msgstr "RED ONE 是一种模块化的设计"
+
+#: app/views/cameras/index.rhtml:56 app/views/app/views/cameras/index.rhtml:28
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN|TEXT"
+msgstr ""
+"可以用轻量级的 ENG 模式（铝合金磨砂机身，重约 9 磅）拍摄，或者装载更多的部件"
+"以拍摄更加细致的影片。可选配件包括 RED-RAIL&trade; 外架附件，用来提高机身。配"
+"置三角架、升降支架或长焦镜头配件。高分辨率的 RED 屏幕是取景、曝光和对焦的利"
+"器。 RED ONE&trade; 机身上众多不锈钢接口可以链接上百种可选的 RED 或者第三方的"
+"附件，有些甚至是你做梦都想不到的。\n"
+"\n"
+"*建议价格：RED ONE&trade; 机身 $17,500*<br />\n"
+"*预计于 2007 年早期发布*"
+
+#: app/views/contact/confirm_contact.rhtml:1
+#: app/views/app/views/contact/confirm_contact.rhtml:1
+msgid "CONTACT_US|CONFIRMATION|TITLE"
+msgstr "确认你的联系信息"
+
+#: app/views/contact/confirm_contact.rhtml:3
+#: app/views/app/views/contact/confirm_contact.rhtml:3
+msgid "CONTACT_US|CONFIRMATION|INVALID_TITLE"
+msgstr "无效的格式"
+
+#: app/views/contact/confirm_contact.rhtml:12
+#: app/views/app/views/contact/confirm_contact.rhtml:12
+msgid "CONTACT_US|POST|EDIT"
+msgstr "编辑"
+
+#: app/views/contact/post_contact.rhtml:1
+#: app/views/app/views/contact/post_contact.rhtml:1
+msgid "CONTACT_US|SUCCESSFUL_TITLE"
+msgstr ""
+"非常感谢，您的请求已经成功提交，并且我们发送了一份副本到您的 email 邮箱，请查"
+"收。"
+
+#: app/views/contact/_contact_table.rhtml:4
+#: app/views/app/views/contact/_contact_table.rhtml:4
+msgid "CONTACT_US|POST|CATEGORY"
+msgstr "类别："
+
+#: app/views/contact/_contact_table.rhtml:13
+#: app/views/app/views/contact/_contact_table.rhtml:13
+msgid "CONTACT_US|POST|"
+msgstr ""
+
+#: app/views/account/login.rhtml:8
+msgid "GLOBAL|EMAIL_ADDRESS"
+msgstr "Email Address"
+
+#: app/views/account/login.rhtml:12
+msgid "GLOBAL|PASSWORD"
+msgstr "Password"
+
+#: app/views/account/login.rhtml:15
+msgid "GLOBAL|FORGOT_PASSWORD"
+msgstr "Forgot Password?"
+
+#: app/views/account/login.rhtml:17
+msgid "SIGN_IN|SETUP_ACCOUNT_TIP"
+msgstr ""
+"Already have your RED Camera, but don't know which <br />\n"
+"email or password to use? <strong >\"Contact Us\":../contact_us </strong>"
+
+#: app/views/account/login.rhtml:18
+msgid "SIGN_IN|NOTE"
+msgstr ""
+"Note: Available only for customers who completed the purchase of their RED "
+"ONE Camera."
+
+#: app/views/register/_form.rhtml:5 app/views/app/views/register/_form.rhtml:5
+msgid "REGISTER|FIRST_NAME"
+msgstr "姓"
+
+#: app/views/register/_form.rhtml:8 app/views/app/views/register/_form.rhtml:8
+msgid "REGISTER|LAST_NAME"
+msgstr "名"
+
+#: app/views/register/_form.rhtml:11
+#: app/views/app/views/register/_form.rhtml:11
+msgid "REGISTER|COMPANY"
+msgstr "公司"
+
+#: app/views/register/_form.rhtml:13
+#: app/views/app/views/register/_form.rhtml:13
+msgid "REGISTER|PRODUCT_CATEGORIES"
+msgstr "产品类型"
+
+#: app/views/register/_form.rhtml:16
+#: app/views/register/_product_select.rhtml:1
+#: app/views/app/views/register/_form.rhtml:16
+#: app/views/app/views/register/_product_select.rhtml:1
+msgid "REGISTER|PRODUCT"
+msgstr "所属产品"
+
+#: app/views/register/_form.rhtml:18
+#: app/views/app/views/register/_form.rhtml:19
+msgid "REGISTER|SERIAL_NUMBER"
+msgstr "产品系列号"
+
+#: app/views/register/_form.rhtml:22
+#: app/views/app/views/register/_form.rhtml:22
+msgid "REGISTER|CONTACT_INFORMATION"
+msgstr "联系信息"
+
+#: app/views/register/_form.rhtml:23
+#: app/views/app/views/register/_form.rhtml:23
+msgid "REGISTER|ADDRESS1"
+msgstr "地址"
+
+#: app/views/register/_form.rhtml:25
+#: app/views/app/views/register/_form.rhtml:25
+msgid "REGISTER|ADDRESS2"
+msgstr "地址 2"
+
+#: app/views/register/_form.rhtml:27
+#: app/views/app/views/register/_form.rhtml:27
+msgid "REGISTER|COUNTRY"
+msgstr "国家"
+
+#: app/views/register/_form.rhtml:50
+#: app/views/app/views/register/_form.rhtml:54
+msgid "REGISTER|CITY"
+msgstr "城市"
+
+#: app/views/register/_form.rhtml:53
+#: app/views/app/views/register/_form.rhtml:57
+msgid "REGISTER|ZIP"
+msgstr "邮政编码"
+
+#: app/views/register/_form.rhtml:61
+#: app/views/app/views/register/_form.rhtml:64
+msgid "REGISTER|PHONE_NUMBER"
+msgstr "电话号码"
+
+#: app/views/register/_form.rhtml:63
+#: app/views/app/views/register/_form.rhtml:66
+msgid "REGISTER|EMAIL_ADDRESS"
+msgstr "E-mail"
+
+#: app/views/register/_state_select.rhtml:1
+#: app/views/app/views/register/_state_select.rhtml:2
+#: app/views/app/views/register/_state_select.rhtml:4
+#: app/views/app/views/register/_state_select.rhtml:6
+#: app/views/app/views/register/_state_select.rhtml:8
+#: app/views/app/views/register/_state_select.rhtml:10
+#: app/views/app/views/register/_state_select.rhtml:12
+#: app/views/app/views/register/_state_select.rhtml:16
+#: app/views/app/views/register/_state_select.rhtml:18
+msgid "REGISTER|STATE"
+msgstr "省（区)"
+
+#: app/views/register/index.rhtml:9 app/views/app/views/register/index.rhtml:9
+msgid "REGISTER|CAPTION"
+msgstr ""
+"Please fill in your information to register ownership of your camera. This "
+"will assist us in providing camera ownership records to insurance and police "
+"authorities in the event of camera loss or theft."
+
+#: app/views/support/release_history.rhtml:2
+#: app/views/app/views/support/release_history.rhtml:2
+msgid "SUPPORT|CATEGORIES"
+msgstr "目录"
+
+#: app/views/support/release_history.rhtml:8
+#: app/views/support/release_history.rhtml:24
+#: app/views/app/views/support/release_history.rhtml:8
+#: app/views/app/views/support/release_history.rhtml:23
+msgid "SUPPORT|RELEASE_HISTORY|TITLE"
+msgstr "发布日志"
+
+#: app/views/support/release_history.rhtml:30
+#: app/views/app/views/support/release_history.rhtml:30
+msgid "SUPPORT|RELEASE_DATE"
+msgstr "发布日期"
+
+#: app/views/support/index.rhtml:8
+msgid "SUPPORT|CONTACT|TITLE"
+msgstr "联系技术支持"
+
+#: app/views/support/index.rhtml:27
+msgid "SUPPORT|POST|SUBSCRIPT"
+msgstr ""
+"When you hit the “Send” button, an Incident Ticket will be generated and an "
+"on-call RED technical support representative will be notified. The "
+"representative will contact you within 4 hours via email or phone to discuss "
+"the incident.  We ask that you ONLY use the Technical Support Incident "
+"Ticket form when you require a response to an urgent technical issue.  For "
+"all other issues, please select another webform at <a href=\"/zh_CN/"
+"contact_us\">Contact Us</a>"
+
+#: app/views/support/index.rhtml:48
+msgid "SUPPORT|COMING_SOON"
+msgstr "Coming Soon"
+
+#: app/views/support/index.rhtml:55 app/views/app/views/support/index.rhtml:43
+msgid "SUPPORT|PLATFORM_NOT_SUPPORT"
+msgstr "Sorry, your operation system has not been supported yet."
+
+#: app/views/support/index.rhtml:76 app/views/app/views/support/index.rhtml:51
+msgid "SUPPORT|DOWNLOAD|RELEASE_HISTORY"
+msgstr "+ Release History (Including other systems)"
+
+#: app/views/support/index.rhtml:77
+msgid "SUPPORT|DOWNLOAD|DOWNLOAD_FOR_OTHER_OS"
+msgstr "+ Download for other Operating Systems"
+
+#: app/views/app/views/gallery/index.rhtml:16
+#, fuzzy
+msgid "GALLERY|VIDEO_GALLERY|CROSSING_THE_LINE|DESCRIPTION"
+msgstr "87 MB，11 秒，24 fps，1920 x 1080。"
+
+#: app/views/app/views/gallery/index.rhtml:59
+msgid "GALLERY|VIDEO_GALLERY|SUBSCRIPT"
+msgstr ""
+"Captured by MYSTERIUM&trade; at 5k, downrezzed to 4k, and compressed down to "
+"1k. Shot without a low pass filter."
+
+#: app/views/app/views/layouts/support.rhtml:34
+#, fuzzy
+msgid "SUPPORT|LOGIN_STATUS|LOG_OUT"
+msgstr "您好"
+
+#: app/views/app/views/static_pages/accessories.rhtml:1
+msgid "ACCESSORIES|TITLE"
+msgstr "附属部件"
+
+#: app/views/app/views/static_pages/accessories.rhtml:4
+msgid "ACCESSORIES|MODULAR_DESIGN"
+msgstr "模块化设计"
+
+#: app/views/app/views/static_pages/accessories.rhtml:5
+msgid "ACCESSORIES|MODULAR_DESIGN|TEXT"
+msgstr ""
+"RED ONE&trade; 的模块化使之升级硬件、软件、内存、处理器和监视器时给外方便。你"
+"可以用重量最轻的配置（铝合金磨砂机身，重约 4 公斤）以 ENG 模式拍摄，或者装载"
+"更多的部件以拍摄更加细致的影片。可以配备三角架，升降机或长焦镜头。 随附的RED "
+"LCD屏或外接高清晰RED监视器是取景，曝光，调焦的理想工具。 RED ONE&trade; 照相"
+"机的机身上附有众多不锈钢的接口用以连接数以百计的RED可选配件或第三方提供的附"
+"件...其中有些接口可以连接的附件，是你做梦也想不到的哦。"
+
+#: app/views/app/views/static_pages/accessories.rhtml:9
+msgid "ACCESSORIES|RED_RAILS"
+msgstr "RED-RAIL&trade;"
+
+#: app/views/app/views/static_pages/accessories.rhtml:10
+msgid "ACCESSORIES|RED_RAILS|TEXT"
+msgstr ""
+"衡量三角支架的接口或把手好坏的关键在于是否可以平衡机身...RED-RAIL™ 系统依靠这"
+"样的优势从而控制重量偏向于机身还是三脚架而让操控显得更简单。凭借数码储存设备"
+"和手柄的重量，你可以平衡不同的镜头和附件的重量，来达到希望的平衡点，创造最佳"
+"的摄影条件。 RED-RAIL™ 系统在提供了无限宽容度的同时，让肩膀的作用退居到了第二"
+"位。"
+
+#: app/views/app/views/static_pages/accessories.rhtml:14
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY"
+msgstr "关键是灵活性"
+
+#: app/views/app/views/static_pages/accessories.rhtml:15
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY|TEXT"
+msgstr ""
+"灵活性是 RED ONE&trade; 概念的关键所在：买个 RED-CAGE&trade; 配置的照相机用于"
+"摄影工作室或 Crane mount （如右图所示），可以尽情地添加附件。使用 RED-"
+"RAIL&trade; 和 RED-GRIP&trade; 系统的超轻相机（如上图所示）可以随身携带，实现"
+"舒适而平衡的徒手拍照功能。"
+
+#: app/views/app/views/static_pages/index.rhtml:16
+msgid "INDEX|SIDE_BAR|TEXT"
+msgstr ""
+"p(text). “我喜欢他们干得——制造一个超高性能的摄像机，并且让独立电影制作人们能"
+"够负担得起。”\n"
+"\n"
+"p(subscript). %(author)- 奥斯卡最佳导演奖获得者，彼得·杰克逊% 电影《指环王》"
+"三部曲和新版《金刚》的导演和制片人\n"
+"\n"
+"p(text). “在我的整个职业生涯中一直都在等待这样一部机器：一台轻得用一只手就能"
+"够拍出令人震惊的图象的机器 。...RED将会改变一切。”\n"
+"\n"
+"p(subscript). %(author)- 奥斯卡最佳导演奖获得者，史蒂文·索德伯格% 电影《十一"
+"罗汉》《毒品网络》《飞向太空2002》的导演和摄像\n"
+"\n"
+"p(text). “我有机会在过去几周内测试了RED ONE摄像机，包括和我拍摄的‘24’的胶片做"
+"直接的比较。我唯一能说的是我非常的吃惊。革命这个词已经不足以形容RED公司正在做"
+"的事情了。”\n"
+"\n"
+"p(subscript). %(author)- 罗德尼·查特斯% 《24反恐部队》摄像师\n"
+"\n"
+"p(text). “胶片死了。顺带说，（传统）摄像机也一样。这句话的意思是RED代表着未"
+"来，但对我们来说这就是现在。在亲自接触了这些小家伙们，并且通过了 neveldine/"
+"taylor 完整而严格的测试后，我们对在RED实验室的这些疯狂科学家们有着无限信心。"
+"我们向所有正在进行中的项目都推荐 RED”\n"
+"\n"
+"p(subscript). %(author)- 马克·内维尔迪内 和 布莱恩·泰勒% 《怒火攻心》的编剧和"
+"导演\n"
+"\n"
+"p(text). “我们同时使用RED和电影胶片摄像机进行了一次拍摄。我们将它们放在同一个"
+"环境中，对比它们拍出的影片。当我们在屏幕上同时播放，我们丝毫找不出任何差别。"
+"实际上，大多人把RED拍摄的认为是胶片，因为它有更棒的动态范围，在高光区比5218还"
+"好。事实上我们使用数码和胶片做镜头交切，这也许还不足以说明数字影像是最棒的 ,"
+"但是RED数字影像看上去显然比胶片影像更棒,我想我永远都不会否认这一点。”\n"
+"\n"
+"p(subscript). %(author)- 乔·法哈特% 电影《Wanted》的视觉效果总监"
+
+#: app/views/app/views/static_pages/lenses.rhtml:6
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|DESCRIPTION"
+msgstr "&nbsp;"
+
+#: app/views/app/views/static_pages/lenses.rhtml:9
+#: app/views/app/views/static_pages/lenses.rhtml:20
+#: app/views/app/views/static_pages/lenses.rhtml:31
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|MSRP"
+msgstr "MSRP："
+
+#: app/views/app/views/static_pages/lenses.rhtml:10
+#: app/views/app/views/static_pages/lenses.rhtml:21
+#: app/views/app/views/static_pages/lenses.rhtml:32
+#: app/views/app/views/static_pages/lenses.rhtml:44
+msgid "GLOBAL|ESTIMATED_SHIP_DATE"
+msgstr "预计上市日期："
+
+#: app/views/app/views/static_pages/lenses.rhtml:10
+msgid "RED_50-150MM_T-3_F2.8_ZOOM|ESTIMATED_SHIP_DATE"
+msgstr "2007 年末"
+
+#: app/views/app/views/static_pages/lenses.rhtml:17
+msgid "LENSES|RED_18-50MM_F2.8_CF|DESCRIPTION"
+msgstr "RED 18-50mm f2.8 CF 镜头计划上市时间为 2007 年末。"
+
+#: app/views/app/views/static_pages/lenses.rhtml:21
+msgid "LENSES|RED_18-50MM_F2.8_CF|ESTIMATED_SHIP_DATE"
+msgstr "2007 年末"
+
+#: app/views/app/views/static_pages/lenses.rhtml:28
+msgid "LENSES|RED_300MM_F2.8|DESCRIPTION"
+msgstr ""
+"RED 300mm f2.8的上市时间和RED ONE&trade; 机身大致相同。 同时您可以选择任何"
+"Super 35mm PL mount 镜头, Super 16mm PL mount 镜头, 或者选择B4镜头。"
+
+#: app/views/app/views/static_pages/lenses.rhtml:32
+msgid "LENSES|RED_300MM_F2.8|ESTIMATED_SHIP_DATE"
+msgstr "2007 年初"
+
+#: app/views/app/views/static_pages/lenses.rhtml:39
+msgid "LENSES|RED_PRIME_SET|DESCRIPTION"
+msgstr ""
+"包括：\n"
+"15mm f2.8, 25mm f1.9, 35mm f1.9\n"
+"50mm f1.9, 85mm f1.9\n"
+
+#: app/views/app/views/static_pages/lenses.rhtml:41
+msgid "LENSES|RED_PRIME_SET|IMAGE_NOTE"
+msgstr "提示：上图并非是实物照片"
+
+#: app/views/app/views/static_pages/lenses.rhtml:44
+msgid "LENSES|RED_PRIME_SET|ESTIMATED_SHIP_DATE"
+msgstr "2008 春天"
+
+#: app/views/app/views/static_pages/terms.rhtml:3
+#: app/views/app/views/store/terms.rhtml:7
+msgid "TERMS|CONTENT"
+msgstr ""
+"1. These terms govern the sale of goods between Red.com, Inc. (“Red”) and "
+"the Buyer (“Buyer”). This document acknowledges receipt of the Buyer’s order "
+"by Red, and confirms the sale of product evidenced by the invoice as "
+"expressly conditioned on the Buyer’s acceptance of the terms and conditions "
+"set forth herein. \n"
+"  \n"
+"2. PRICES - All published prices are subject to change without notice. "
+"Written quotations shall expire thirty (30) calendar days from the date of "
+"quotation unless withdrawn in writing sooner.  Verbal quotations are "
+"provided for budgetary guidance only. Unless otherwise specifically stated, "
+"prices are in U.S. Dollars. \n"
+" \n"
+"3. TERMS OF PAYMENT - \n"
+" \n"
+"3a. Deposits – Buyer must make a deposit equal to the amount specified by "
+"Red at the time of the order, typically 10% of the total order value "
+"(excluding any sales tax, freight, duties, import tax and delivery charges). "
+"Camera reservation numbers and delivery estimates are provided at the sole "
+"discretion of Red.  \n"
+" \n"
+"3b. Method of Payment - Credit card payment via VISA, MASTERCARD, AMERICAN "
+"EXPRESS or DISCOVER is provided as a convenience with valid credit card "
+"authorizations.  Please contact the RED Customer Service Department for "
+"Remit To information when transferring bank to bank payments or visit Red’s "
+"website for bank information. All orders are payable in U.S. dollars "
+"(USD).   \n"
+" \n"
+"3c. Standard Payment Terms – All orders must be paid in full prior to "
+"shipment via wire transfer, cash equivalent (such as money order, cashier’s "
+"check, or personal check drawn from a United States bank), or credit card. \n"
+" \n"
+"3d. Deposit Payments – Deposit payments in the amount of $7,500.00 USD or "
+"greater will only be accepted via wire transfer or cash equivalent (such as "
+"money order, cashier’s check, or personal check drawn from a United States "
+"bank). Deposit payments in the amount of $7,499.99 USD or less may be "
+"remitted via credit card payments, wire transfer or cash equivalent as "
+"outlined above. \n"
+" \n"
+"3e. Balance Payments – Buyer must pay the full remaining balance of the "
+"invoice before order will be processed for shipment. Balance payments in the "
+"amount of $7,500.00 USD or greater will only be accepted via wire transfer "
+"or cash equivalent (such as money order, cashier’s check, or personal check "
+"drawn from a United States bank). Balance payments in the amount of "
+"$7,499.99 USD or less may be remitted via credit card payments, wire "
+"transfer or cash equivalent as outlined above. \n"
+" \n"
+"3f. Leasing – Red does not offer any leasing options for Red product.  Red "
+"does not affiliate, authorize, or support any entities offering leasing "
+"options for Red product.  Red assumes no liability for services or product "
+"offered by unauthorized third-party entities offering Red product or "
+"services. \n"
+" \n"
+"4. DELIVERY AND ACCEPTANCE - All product shipments shall be made “ex "
+"works” (Incoterms 2000) from the Red facility at Lake Forest, California, at "
+"which time title and risk of loss shall pass to the Buyer.  Buyer shall be "
+"the importer of record for all purchased products. Licensing requirements "
+"for importation to non-U.S. countries is the sole obligation of the Buyer. "
+"In the absence of specific shipping instructions from the Buyer, Red will "
+"ship by the method it deems, in its soles discretion, most advantageous.  "
+"Transportation charges will be collected prior to shipment.  Unless "
+"otherwise indicated, Buyer is obligated to obtain insurance against damage "
+"to the product being shipped.  Unless otherwise specified, products will be "
+"shipped in standard commercial packaging.  When special packaging or export "
+"instructions are requested by the Buyer, any additional costs will be the "
+"responsibility of the Buyer.   \n"
+" \n"
+"Red shall use reasonable efforts to notify Buyer of any anticipated delays "
+"in delivery.  Red will not be liable for any loss, damages or penalty "
+"resulting from delay in delivery. \n"
+" \n"
+"Acceptance of the product by the Buyer shall occur no later than fifteen "
+"(15) days after shipment.  Product not rejected during this fifteen-day "
+"period shall be deemed accepted, and all returns shall be handled in "
+"accordance with Section 6 (Returns).  Product cannot be rejected by Buyer "
+"based on criteria that were unknown to Red or based on test procedures that "
+"Red does not conduct. \n"
+" \n"
+"5. WARRANTY – Red warrants all products will be of good quality and "
+"workmanship and free from material defects.  Upon the expiration of the time "
+"periods identified below, all liabilities of Red will terminate.  In no "
+"event shall Red be liable for consequential damages.  \n"
+" \n"
+"5a. Standard Warranty – A Standard Warranty is granted to the original "
+"purchaser for a period of one (1) year, parts and labor, for the camera and "
+"camera accessories excluding Digital Media and Batteries. Standard Warranty "
+"for Digital Media is ninety (90) days.  Standard Warranty for Batteries is "
+"ninety (90) days or charge cycles of less than 400, whichever comes first. "
+"The Standard Warranty covers parts and labor charges for products that have "
+"been returned pre-paid shipment to an Authorized Service Center. All "
+"warranty returns shall be done in accordance with Red’s warranty return "
+"merchandise authorization (“WMA”) policy, a copy of which is set forth in "
+"Section 6 (RETURNS) and is posted on Red’s website. Any repaired or replaced "
+"product shall be warranted as set forth in this section for a period the "
+"greater of (i) the balance of the applicable warranty period relating to "
+"such product or (ii) ninety (90) days after it is received by Buyer. Only "
+"the components that were repaired or replaced will be eligible for the 90-"
+"day period set forth in paragraph 5a (ii).  \n"
+" \n"
+"A Standard Warranty effective date is the date of “ex works” from Lake "
+"Forest or when Buyer picks up product at designated Red shipping "
+"facility.  \n"
+" \n"
+"Red’s warranty does not include products that have defects or failures "
+"resulting from; (a) alterations, modifications or repairs by Buyer or "
+"unauthorized third parties or (b) accident, disaster, neglect, abuse, "
+"misuse, improper handling or storage by the Buyer. This includes, but is not "
+"limited to: water damage, mold in the lenses from improper storage, "
+"droppage, modification to the camera, opening the camera, use of non-red "
+"cables, or third party accessories etc. \n"
+" \n"
+"ALL WARRANTIES IMPLIED BY LAW, INCLUDING MERCHANTABILITY, SHALL BE AS SET "
+"FORTH IN THIS WARRANTY SECTION.  NO OTHER EXPRESS WARRANTY OR GUARANTY "
+"EXCEPT AS STATED ABOVE, GIVEN BY ANY PERSON, FIRM, OR CORPORATION WITH "
+"RESPECT TO RED PRODUCT SHALL BE BINDING TO RED.  SOME STATES DO NOT ALLOW "
+"LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY LASTS, SO THE ABOVE LIMITATIONS "
+"MAY NOT APPLY TO BUYER.  NEITHER RED NOR ANY OTHER PERSON, FIRM, OR "
+"CORPORATION IS OR SHALL BE RESPONSIBLE FOR ANY INCIDENTAL OR CONSEQUENTIAL "
+"DAMAGES CAUSED BY RED PRODUCT.  SOME STATES DO NOT ALLOW THE EXCLUSION OR "
+"LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION "
+"OR EXCLUSION MAY NOT APPLY TO BUYER. \n"
+" \n"
+"5b. Third-Party Warranty – Red does not honor warranty agreements extended "
+"by third parties.  Only warranty agreements granted by Red will be honored "
+"by Red. \n"
+" \n"
+"THE SOLE REMEDY UNDER THIS WARRANTY SHALL BE THE REPAIR, REPLACEMENT, OR "
+"CREDIT FOR DEFECTIVE PARTS AS STATED ABOVE.  THIS WARRANTY IS THE SOLE "
+"WARRANTY GIVEN BY RED AND IS IN LIEU OF ANY OTHER WARRANTIES EITHER EXPRESS "
+"OR IMPLIED.  THIS WARRANTY EXTENDS TO THE BUYER AND IS NON-TRANSFERABLE TO "
+"OTHER THIRD PARTIES. \n"
+" \n"
+"5c. Red Re-Certified Product Warranty – Product that is not possessed by the "
+"original Buyer may be sent to an Authorized Red Service Center for an "
+"evaluation fee of $500.  Red will provide a quotation for the re-"
+"certification of the product to existing Red product specifications at time "
+"of repair. The Customer is responsible for all costs associated with such re-"
+"certification, such as troubleshooting, diagnosis, repair, test, "
+"calibration, and shipping costs. Upon completion of re-certification, "
+"customer may be offered a Red Re-Certified Product Warranty for an "
+"additional cost. \n"
+" \n"
+"“Customer” is defined as an entity who obtained Red product by other means "
+"than directly from Red. \n"
+" \n"
+"A Red Re-Certified Product Warranty is valid for a period of ninety (90) "
+"days for the camera and camera accessories after the warranty is accepted by "
+"the Customer.  Red Re-Certified Product Warranty is not available for "
+"Digital Media and Batteries.  \n"
+" \n"
+"5d. Non-Warranty Repair - Product that no longer qualifies for Warranty "
+"Repair may be sent to an Authorized Red Service Center for an evaluation fee "
+"of $500.  If the product is sent to RED for non-warranty repair by original "
+"Buyer, the evaluation fee of $500 is waived by Red.  Red will provide a "
+"quotation for the repair of the product. The Customer is responsible for all "
+"costs associated with such refurbishment, such as troubleshooting, "
+"diagnosis, repair, test, calibration, and shipping costs.  Any repaired or "
+"replaced product shall be warranted for ninety (90) days after it is "
+"received by Buyer. Only the components that were repaired or replaced will "
+"be eligible for the 90- day period.  \n"
+" \n"
+"6. RETURNS – Buyers must obtain a Return Merchandise Authorization (“RMA”) "
+"prior to the return of any product.  Cameras may only be returned for refund "
+"within ten (10) days of original delivery by Red at shipping address "
+"specified by Buyer and with less than 25 hours of run time. Accessories, "
+"except Digital Media and Batteries, may be returned for refund within ten "
+"(10) days of original delivery by Red at shipping address specified by "
+"Buyer.  \n"
+" \n"
+"6a. Factory Seal - If the factory seal on the product has been broken, "
+"returned product for refund is subject to a 30% restocking fee and must be "
+"approved by Red as set forth herein. All equipment must be shipped in as new "
+"condition and in the original shipping materials. Refunds are subject to an "
+"evaluation of the merchandise upon receipt at Red as defined below, in "
+"addition to other test to ascertain condition of returned goods.  A refund "
+"less the restocking fee will be provided within thirty (30) days of "
+"completion of evaluation of goods at Red. \n"
+" \n"
+"6b. Shipping - Buyer is responsible for shipping costs to return product to "
+"Red.  For Buyer’s protection, Red recommends that the Buyer uses a traceable "
+"and insurable form of mail for shipment. \n"
+" \n"
+"6c. Buyer has ten (10) days from the date the RMA is issued to deliver the "
+"product to Red.  All product received ten (10) days after the RMA was issued "
+"will not be considered eligible as a return for credit.  Red will return "
+"product to Buyer and Buyer will assume all shipping costs.   \n"
+" \n"
+"7. CUSTOMER SOURCE INSPECTION - A fee of $500.00 will be charged for any "
+"order requiring customer source inspection or receipt of goods, at the Red "
+"facility.   \n"
+" \n"
+"7a. No-Trouble Found Inspection Fee – Any product sent to Red for inspection "
+"or evaluation where Red finds no defects or problems with Red product will "
+"be subject to a No-Trouble Found Inspection Fee of $500.  The No-Trouble "
+"Found Inspection policy is in place to encourage the Customer to exhaust all "
+"technical support resources before shipping product to Red. \n"
+"  \n"
+"8. LIMITATION OF LIABILITY – IN NO EVENT SHALL RED BE LIABLE TO BUYER FOR "
+"ANY INDIRECT, CONSEQUENTIAL, PUNITIVE, INCIDENTAL, OR SPECIAL DAMAGES, OR "
+"ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS (HOWEVER "
+"CAUSED AND UNDER ANY THERORY OF LIABILITY), EVEN IF RED HAS BEEN ADVISED OF "
+"THE POSSIBILITY OF SUCH DAMAGES.  IN NO EVENT SHALL RED’S LIABILITY FOR A "
+"PRODUCT (WHETHER ASSERTED AS A TORT CLAIM, A CONTRACT CLAIM OR OTHERWISE) "
+"EXCEED THE AMOUNTS PAID TO RED FOR SUCH PRODUCT.  IN ADDITION, IN NO EVENT "
+"SHALL RED’S LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THIS "
+"ORDER EXCEED $25,000 (TWENTY-FIVE THOUSAND U.S. DOLLARS).  IN NO EVENT WILL "
+"RED BE LIABLE FOR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS BY BUYER.  IN NO "
+"EVENT SHALL RED BE LIABLE FOR DAMAGES ARISING OUT OF ANY LATE DELIVERY.  THE "
+"LIMITATIONS SET FORTH HEREIN SHALL APPLY TO ALL LIABILITIES THAT MAY ARISE "
+"OUT OF THIRD-PARTY CLAIMS AGAINST BUYER.  THESE LIMITATIONS SHALL APPLY "
+"NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.  THE "
+"LIMITATION SET FORTH IN THIS SECTION SHALL APPLY WHERE THE DAMAGES ARISE OUR "
+"OF OR RELATED TO THIS AGREEMENT. \n"
+" \n"
+"9. INDEMNIFICATION –  Buyer shall indemnify, defend, and hold Red and Red’s "
+"officers, agents and other representatives harmless from all demands, "
+"claims, actions, causes of actions, proceedings, suits, assessments, losses, "
+"damages, liabilities, settlements, judgments, fines, penalties, interest, "
+"costs and expenses incurred (including fees and disbursements of legal "
+"counsel) of every kind (i) based upon personal injury or death or injury to "
+"property to the extent any of the foregoing is proximately caused by "
+"defective product or by the negligent or willful acts or omissions by the "
+"Buyer, (ii) based on any breach of this agreement, (iii) that the product "
+"does not comply with any law, including but not limited to the Federal "
+"Communication Commission or the official CE marking or equivalent in certain "
+"non-U.S. countries and any similar legislation or requirement, and/or (iv) "
+"arising from or relating to any actual or alleged infringement or "
+"misappropriation of any patent, trademark, copyright, trade secret or any "
+"actual or alleged violation of any other intellectual property rights "
+"arising from or in connection with the products. \n"
+" \n"
+"10. PROPRIETARY INFORMATION – Red retains for itself all proprietary rights, "
+"including without limitation all patent, trademark, trade secret, copyright "
+"and other intellectual property rights in and to all Red designs, "
+"manufacturing processes, engineering details, and other data pertaining to "
+"any product sold except where the rights have been assigned pursuant to a "
+"written agreement with a corporate officer of Red.  The products are offered "
+"for sale and sold by Red on the condition that such sale does not convey any "
+"right, express or implied, stated or otherwise, under any intellectual "
+"property or manufacturing process.  Red expressly reserves all intellectual "
+"property rights in the product. \n"
+"  \n"
+"11. NON-WAIVER – Failure of Red to insist upon strict performance of any "
+"terms and conditions herein shall not be deemed a waiver of any subsequent "
+"default of terms and conditions thereof.\n"
+"  \n"
+"12. LAW GOVERNING – All contracts are to be interpreted in accordance with "
+"the laws of Orange County, California, United States of America. \n"
+"  \n"
+"13.  COMPLETE AGREEMENT – The terms and conditions set forth herein comprise "
+"the entire agreement between Red and the Buyer. "
+
+#: app/views/app/views/cameras/index.rhtml:11
+msgid "CAMERAS|INTRODUCING|PHOTO_TOUR|VIEW_THE_COMPLETE_RED_ONE_PHOTO_TOUR"
+msgstr "查看所有 RED ONE&trade; 图片"
+
+#~ msgid "PAGE_TITLE|GALLERY|STILL_GALLERY"
+#~ msgstr "以下内容均使用 RED ONE 原型机 “BORIS” 和 “NATASHA” 拍摄"
+
+#, fuzzy
+#~ msgid "PAGE_TITLE|CONTACT_US|COMPLETE"
+#~ msgstr "确认你的联系信息"
+
+#~ msgid "PAGE_TITLE|ACCESSORIES"
+#~ msgstr "附属部件"
+
+#~ msgid "PAGE_TITLE|CAMERAS|FORMAT_OPTIONS"
+#~ msgstr ""
+#~ "支持\n"
+#~ "可变\n"
+#~ "120fps\n"
+#~ "高于 60fps\n"
+#~ "不支持\n"
+#~ "高于 120fps\n"
+
+#~ msgid "PAGE_TITLE|CONTACT_US|CONFIRM"
+#~ msgstr "确认你的联系信息"
+
+#, fuzzy
+#~ msgid "PAGE_TITLE|CAMERAS|PHOTO_TOUR"
+#~ msgstr ""
+#~ "支持\n"
+#~ "可变\n"
+#~ "120fps\n"
+#~ "高于 60fps\n"
+#~ "不支持\n"
+#~ "高于 120fps\n"
+
+#~ msgid "PAGE_TITLE|GALLERY"
+#~ msgstr "展示"
+
+#~ msgid "PAGE_TITLE|GALLERY|POSTER_GALLERY"
+#~ msgstr "海报"
+
+#~ msgid "PAGE_TITLE|CAMERAS"
+#~ msgstr "摄像机"
+
+#, fuzzy
+#~ msgid "PAGE_TITLE|CAMERAS|TECH_SPECS"
+#~ msgstr "摄像机"
+
+#~ msgid "CAMERAS|FORMAT_OPTIONS|1270_S16mm"
+#~ msgstr ""
+#~ "支持\n"
+#~ "可变\n"
+#~ "120fps\n"
+#~ "高于 120fps\n"
+#~ "50 或 60fps\n"

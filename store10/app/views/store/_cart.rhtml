@@ -1,0 +1,121 @@
+<script type="text/javascript">
+function checkQty(qty, id) {
+	if (qty > 20){
+		alert("Only 20 Items may be added at one time.");
+		return $(id).value="20"
+	}
+}
+/*
+function switchCart(){
+	var delay = 0;
+	if(!window.current_cart){
+		window.current_cart="show";
+	}
+	if(window.current_cart=="show"){
+		new Effect.SlideUp("itemsContainer-outer",{duration: 0.1});
+		window.current_cart="hide";
+		$('hide1').innerHTML="Show Cart";
+	}
+	else{
+		new Effect.BlindDown("itemsContainer-outer",{duration: 0.3,delay: delay});
+		window.current_cart="show";
+		$('hide1').innerHTML="Hide Cart";
+	}
+	
+}
+*/
+
+// Open/Close the shopping cart.
+function toggleCart() {
+  var cart = $("cart");
+  if (cart.opened == true || cart.opened == null) {  // Current is opened, close it.
+    new Effect.BlindUp("itemsContainer-outer", { duration: 0.5 });
+    cart.opened = false;
+  } else {
+    new Effect.BlindDown("itemsContainer-outer", { duration: 0.5 });
+    cart.opened = true;
+  }
+  $("cart_handle").innerHTML = (cart.opened ? "Hide Cart" : "Show Cart");
+}
+</script>
+<% if @cart.empty? then %>
+<div id="textinner" >
+	<div id="indicator" style="text-align:right;">
+		<span><%= @cart.items.size %> items</span>
+		<%= number_to_currency(@cart.total) %>
+        <!-- <span><a onclick="switchCart();return false;" href="#" id="hide1">Hide Cart</a></span> -->
+	</div>
+	<!--end #textinner-->
+</div>
+<% else %>
+<% if flash[:notice] -%>
+    <div id="flash" style="display:none;">
+      <h2>Wanted to let you know...</h2>
+      <p>
+        <%= flash[:notice] %>
+      </p>
+      <p style="text-align:center;">
+        <a href="#" class="action" onmousedown="new Effect.BlindUp($('flash'))">Close</a>
+      </p>
+    </div>
+    <script type="text/javascript">
+      new Effect.BlindDown($("flash"));
+    </script>
+<% end -%>  
+<div id="textinner" >
+	<div id="indicator" style="text-align:right;">
+		<span><%= @cart.items.size %> items</span>
+		<%= number_to_currency(@cart.total) %>
+		<span><a onclick="toggleCart();return false;" href="#" id="cart_handle">Hide Cart</a></span>
+	</div>
+	<!--end #textinner-->
+</div>
+<div id="itemsContainer-outer">
+	<%= form_remote_tag(:url => {:controller=>'store',:action => 'update_to_cart_ajax'},
+	:complete => "if (e=$('itemsContainer-outer')) new Effect.Highlight(e);",
+	:update   => 'cart'
+	) %>
+	<table id="cart_table" cellpadding="2" cellspacing="0" border="0" width="100%">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>SKU</th>
+				<th>Quantity</th>
+				<th>Unit</th>
+				<th>Subtotal</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @cart.items.each do |item| %>
+			<tr class="tr1"  onMouseOver="this.style.backgroundColor='#484848'" onMouseOut="this.style.backgroundColor='transparent'">
+				<td class="td1"><%= item.name %><%= " (DEPOSIT ONLY)" if item.payment_method == "deposit" %></td>
+				<td class="td2"><%= item.product.erp_product_item %></td>
+				<td class="td3"><%= text_field_tag "items[#{item.product_id},#{item.payment_method}]", item.quantity, :id => "#{item.product_id}_#{item.payment_method}", :onchange => "checkQty(this.value, this.id)", :size => 3, :maxlength => 2 %></td>
+				<td class="td4"><%= number_to_currency(item.unit_price) %></td>
+				<td class="td6"><%= number_to_currency(item.subtotal) %></td>
+				<td class="td7" id="remover">
+					<%= link_to_remote '<img src="/skin/img/store/remove_gray.jpg"  />',
+					:url => {
+						:controller     => "store",
+						:action         => "remove_from_cart_ajax",
+						:id             => item.product_id,
+						:qty            => item.quantity,
+						:payment_method => item.payment_method},
+						:complete       => "if (e=$('itemsContainer-outer')) new Effect.Highlight(e);",
+						:update         => "cart"
+						%>
+					</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<div id="sub_des">
+		<span>Subtotal:</span>
+		<span><%= number_to_currency(@cart.total) %></span>
+		<%= submit_tag('Update', :class => 'button') %>
+		<%= button_to_function 'Check Out', "window.location='#{url_for(:action => 'checkout')}'", :class => 'button' %>
+	</div>
+	<%= end_form_tag %>
+</div>
+<% end %>

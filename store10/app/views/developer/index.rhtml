@@ -1,0 +1,122 @@
+<!-- JavaScript -->
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag(
+  'v2/pages/developer/developer',
+    'v2/schema-white'
+      ) %>
+      <script type="text/javascript" src="/javascripts/prototype.js"></script>
+      <script type="text/javascript" src="/javascripts/effects.js"></script>
+      <script type="text/javascript">
+
+      /*
+      before submit the form, the screen resolution will be generated and set the ACTION
+      property to prevent spam.
+      TODO: Spam Protection.
+      */
+      function checkForm() {
+      	// var queues = document.getElementsByName('contact[queue]');
+      	// var queue = '';
+      	// for (i=0; i<queues.length; i++) {
+      	// 	if (queues[i].checked) {
+      	// 		queue = queues[i].value;
+      	// 		break;
+      	// 	}
+      	// }
+      	var userScreen = screen.width + 'x' + screen.height + ', ' + screen.pixelDepth + ' Bits';
+
+      	var requiredFields = [
+      		// { text: queue, pattern: 'string', message: 'Please select a queue.' },
+      		{ text: $F('first_name'), pattern: /^[^\"\,\<\>\[\]]+$/, message: 'First Name is invalid.' },
+      		{ text: $F('last_name'), pattern: /^[^\"\,\<\>\[\]]+$/, message: 'Last Name is invalid.' },
+      		{ text: $F('address1'), pattern: 'string', message: 'Address can not be empty.' },
+      		{ text: $F('city'), pattern: 'string', message: 'City can not be empty.' },
+
+      		{ text: $F('phone'), pattern: 'string', message: 'Phone can not be empty.' },
+      		{ text: $F('sdk_survey_zip_code'), pattern: 'string', message: 'City can not be empty.' },
+      		{ text: $F('product_name'), pattern: 'string', message: 'Product Name can not be empty.' },
+      		{ text: $F('project_description'), pattern: 'string', message: 'Product Description can not be empty.' },
+
+      		{ text: $F('state'), pattern: 'string', message: 'State can not be empty.' },
+      		{ text: $F('email'), pattern: 'email', message: 'Invalid email address.' }
+      		// { text: $F('summary'), pattern: 'string', message: 'Summary can not be empty.' },
+      		// { text: $F('detail'), pattern: 'string', message: 'Detail can no be empty.' }
+      	];
+
+      	// if (queue == 'TechSupport') {
+      	// 	requiredFields.push( { text: $F('contact_serial_no'), pattern: 'string', message: 'Please enter your serial number.' } );
+      	// }
+      	// 
+      	var result = Validator.check(requiredFields);
+      	if (result == true) {
+      		$('sdk').setAttribute('action', '/developer');
+      		$('screen_resolution').value = userScreen;
+      		return true;
+      	} else {
+      		return false;
+      	}
+      }
+      </script>
+      <style type="text/css" media="screen">
+      ul li{list-style-type :none;}
+      label{display: block;}
+      /* CSS for flash message */
+      #flash * { font-size:1em; line-height:1em; }
+      #flash { background-color:#3A3A3A; border-color: #333333; border-style:none solid solid; border-width:0px 2px 2px; left: 400px; padding:10px; position:absolute; width:400px; z-index:100; text-align: left; top: -60px; color: #FFF; }
+      #flash_error * { margin:0pt auto; width:900px; }
+      #flash_error { color:#FFFFFF; }
+      </style>
+<% end %>
+<% content_for(:heading) do %>
+  <h1>RED DIGITAL CINEMA R3D SOFTWARE DEVELOPMENT KIT SIGNUP</h1>
+<% end %>
+<% if flash[:notice] -%>
+<div id="flash" style="display:none;">
+	<h2>Wanted to let you know...</h2>
+	<p>
+		<%= flash[:notice] %>
+	</p>
+	<p style='text-align: center;'>
+		<a href="#" class="action" onmousedown="new Effect.BlindUp($('flash'))" />Close</a>
+	</p>
+</div>
+<script type="text/javascript">
+new Effect.BlindDown($("flash"));
+</script>
+<% end -%>
+<div id="downloads">
+  <div class="note justify">
+    <p>This signup is for companies wanting to integrate R3D file loading and decoding into their own software products on Windows, Mac or Linux platforms. This SDK is not for controlling the camera.</p>
+
+    <p style="font-weight: bold;">This kit is for software developers with serious projects only. If you are a
+    RED ONE customer or someone looking for our post production software please
+    go to our software download page: <a href="http://www.red.com/support">http://www.red.com/support</a></p>
+  </div>
+
+	<% form_for :sdk_survey, @sdk_survey, :url => {:action => false}, :html => { :onsubmit => 'return checkForm();', :id => 'sdk' } do |f| %>
+	<table>
+		<tr><td ><label class="desc">Name</label><%= f.text_field :first_name, :size => 15, :id => 'first_name' %><br /><span class="gray">First</span></td><td valign="bottom" width="148" ><%= f.text_field :last_name, :size => 20, :id => 'last_name' %><br /><span  class="gray">Last</span></td><td valign="top" ><label class="desc">Company</label><%= f.text_field :company, :id => 'company'%></td></tr>
+	</table>
+	
+	<table>
+		<tr><td colspan="2" class="long_input"><label class="desc">Address</label><%= f.text_field :address1, :size => 85, :id => 'address1' %><br/ ><span  class="gray">Street Address</span></td></tr>
+		<tr><td colspan="2" class="long_input"><%= f.text_field :address2, :size => 85, :id => 'address2' %><br/ ><span  class="gray">Address Line 2</span></td></tr>
+		<tr class="tr2"><td class="td2" ><%= f.text_field :city, :id => 'city' %><br /><span class="gray">City</span></td><td><%= f.text_field :state, :id => 'state' %><br /><span class="gray"> State / Province / Region</span></td></tr>
+		<tr class="tr2"><td class="td2"><%= f.text_field :zip_code, id => 'zip_code' %><br /><span class="gray">Postal / Zip Code</span></td><td>
+			
+		<%= country_select 'sdk_survey','country', priority_countries=['United States'],{} %><br /><span class="gray">Country</span></td></tr>
+		
+		<tr  class="tr2"><td colspan="2"><label class="desc">Email</label>
+			
+		<%= f.text_field :email, :id => 'email' %></td></tr>
+		
+		<tr class="tr2"><td ><label class="desc"><label class="desc">Phone</label><%= f.text_field :phone, :id => 'phone' %></td><td><label class="desc">Fax</label><%= f.text_field :fax, :id => 'fax' %></td></tr>
+		<tr><td colspan="2"><label class="desc">Which Platforms</label><%= check_box :sdk_survey, :mac %> <span class="gray">Intel Mac</span> <%= check_box :sdk_survey, :windows %><span class="gray">Windows</span> <%= check_box :sdk_survey, :linux %><span class="gray">x86 Linux (Not yet available)</span></td></tr>
+		<tr><td colspan="2"><label class="desc"></label><%= check_box :sdk_survey, :select_releases %> <span class="gray">Willing to test Alpha/Beta SDK releases</span> </td></tr>
+		<tr><td class="long_input" colspan="2"><label class="desc"><label class="desc">Product Name</label><%= f.text_field :product_name, :size => 85, :id => 'product_name' %></td></tr>
+		
+		<tr><td colspan="2"><label class="desc"><label class="desc">Project Description</label>	<%= text_area  :sdk_survey, :project_description, :id => 'project_description' %></td></tr>
+		<tr><td colspan="2" align="center"><label class="desc"><%= submit_tag 'Confirm' %></td></tr>
+	</table>
+	<% end %>
+				<!-- end #downloads -->
+</div>

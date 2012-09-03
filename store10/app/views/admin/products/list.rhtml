@@ -1,0 +1,124 @@
+
+<div id="left">
+	<h1><%= @title %></h1>
+
+	<% if @search_term || @list_options %>
+	<!-- Navigation back to all products list -->
+	<ul class="navigation secondary">
+		<li><a href="/admin/products/list/">Back to All Product List</a></li>
+	</ul>
+	<% end %>
+
+	<table id = "products_list" class="list" cellpadding="0" cellspacing="0">
+		<colgroup>
+		<% if params[:key] %>
+		<col style="width:60px;" />
+		<col style="width:200px;" />
+		<col style="width:80px;" />
+		<col style="width:65px;" />
+		<col style="width:30px;" />		
+		
+		<% else %>
+		<col style="width:230px;" />
+		<col style="width:80px;" />
+		<col style="width:75px;" />
+		<col style="width:60px;" />		
+
+		<% end %>
+
+	</colgroup>
+	<tr>
+		<% if params[:key] %>
+		  <%= sort_header_tag('product_sort_id', :controller_name => "products", :update => "container",:caption => "Order")%>
+		<% end %>
+		<%= sort_header_tag('name', :controller_name => "products", :update => "container") %>
+		<%= sort_header_tag('erp_product_item', :controller_name => "products",:caption => "Item No.", :update => "container") %>
+		<%= sort_header_tag('price', :controller_name => "products", :update => "container") %>
+		<th>Status</th>
+		<%= sort_header_tag('delivery_message',:controller_name => "products",:caption => "Override", :update => "container")%>
+	</tr>
+</table>
+
+<% if params[:key] %>
+<style type="text/css" media="screen">
+#list, #list  li ul  {list-style-type: none; padding: 0;}
+#list li{ list-style-type: none; padding-top: 0; }
+#list {border-left: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666;}
+#list li.odd, #list li.even{width: 568px; padding-top: 0; height: 25px; padding-bottom: 0; }
+#list  li.even{background: #ECEEF2; }
+#list  li ul li { float: left;  padding: 0; height: 15px; padding: 2px;}
+
+#list  li ul li.li5{width: 55px !important; width: 60px; border-right: 1px solid #CCC;}
+#list  li ul li.li1{width: 195px !important; width: 230px; border-right: 1px solid #CCC;}
+#list  li ul li.li2{width: 73px !important; width: 90px; border-right: 1px solid #CCC;}
+#list  li ul li.numeric1{width: 60px !important; width: 67px; border-right: 1px solid #CCC;}
+
+#list  li ul li.li3{width: 40px !important; width: 55px; border-right: 1px solid #CCC;}
+</style>
+
+
+
+<% else %>
+
+<style type="text/css" media="screen">
+#list, #list  li ul  {list-style-type: none; padding: 0;}
+#list li{ list-style-type: none; padding-top: 0; }
+#list {border-left: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666;}
+#list li.odd, #list li.even{width: 568px; padding-top: 0; height: 25px; padding-bottom: 0; }
+#list  li.even{background: #ECEEF2; }
+#list  li ul li { float: left;  padding: 0; height: 15px; padding: 2px;}
+#list  li ul li.li1{width: 225px !important; width: 230px; border-right: 1px solid #CCC;}
+#list  li ul li.li2{width: 76px !important; width: 90px; border-right: 1px solid #CCC;}
+#list  li ul li.numeric1{width: 69px !important; width: 67px; border-right: 1px solid #CCC;}
+
+#list  li ul li.li3{width: 55px !important; width: 55px; border-right: 1px solid #CCC;}
+#list  li ul li.li4{width:100px;height:15px;overflow:hidden; }
+</style>
+
+
+<% end %>
+<ul id="list">
+	<% unless @products.blank? %>
+	<% @products.compact.each do |product| %>
+	<li class="<%= alternate %>" id="item_<%= product.id if params[:key]%>">
+		<ul>
+			<% if params[:key] %>
+			<li class="li5"><%= (product.read_display_order(product.id,params[:key]))["product_sort_id"] unless (product.read_display_order(product.id,params[:key])).blank? %></li>
+			<% end %>
+			<li class="li1"><%= link_to(h(product.name), :action => 'edit', :id => params[:key] ? product.id : product) %></li>
+			<li class="li2"><%= product.erp_product_item %></li>
+			<li class="numeric1"><%= number_to_currency(product.price) %></li>
+			<li class="li3"><%= product.delivery_code %></li>
+			<li class="li4"><%= product.attributes["delivery_message"].to_s.to(24) %></li>
+		
+		</ul>
+	</li>
+	<% end %>
+	<% else %>
+	<li>No products to show in this view.</li>
+	<% end %>
+	<div style="clear: both;"></div>
+</ul>
+
+
+<% if params[:key] %>
+<%= sortable_element 'list' %>
+
+
+<p align="right"><input type="button" href="#" onclick='new Ajax.Request("/admin/products/update_products_order?key=<%= params[:key] %>", {asynchronous:true, evalScripts:true, onComplete:function(request){new Ajax.Updater("container", "/admin/products/list_by_tags?key=<%= params[:key] %>", {asynchronous:true, evalScripts:true});}, parameters:Sortable.serialize("list")}); return false;' value="Save" /></p>
+<% end %>
+
+
+<% if @product_pages %>
+<!-- PAGINATION -->
+<br/>
+<p class="big">
+	<strong>Go to page:</strong>
+	<%= pagination_links(@product_pages, :windows_size => 10) %>
+	<br/>
+	<span class="info"><%= "(Showing #{@product_pages.items_per_page} of #{@product_pages.item_count} items total.)" %></span>
+</p>
+<% end %>
+</div>
+
+<%= render(:partial => 'right_side') %>

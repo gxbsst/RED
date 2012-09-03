@@ -1,0 +1,15 @@
+			<ul id="navigation" class="navigation">
+				<li><%= nav_link_to _('NAVIGATION|HOME'), :controller => 'static_pages' %></li>
+				<li><%= nav_link_to _('NAVIGATION|CAMERAS'), :controller => 'cameras' %></li>
+				<li><%= nav_link_to _('NAVIGATION|LENSES'), :controller => 'static_pages', :action => 'lenses' %></li>
+				<li><%= nav_link_to _('NAVIGATION|ACCESSORIES'), :controller => 'accessories' %></li>
+        <!--
+				<li><%= nav_link_to _('NAVIGATION|WORKFLOW'), :controller => 'static_pages', :action => 'workflow' %></li>
+				<li><%= nav_link_to _('NAVIGATION|TECHNOLOGY'), :controller => 'static_pages', :action => 'technology' %></li>
+        -->
+				<li><%= nav_link_to _('NAVIGATION|GALLERY'), :controller => 'static_pages', :action => 'shot_on_red' %></li>
+				<li><%= nav_link_to _('NAVIGATION|SUPPORT'), :controller => 'support' %></li>
+				<li><%= link_to 'FAQ','/faq' %></li>
+				<li><%= nav_link_to _('NAVIGATION|STORE'), :controller => 'store' %></li>
+				<li style="display:none;"><%= nav_link_to _('NAVIGATION|SUPPORT'), :controller => 'support' %></li>
+			</ul>

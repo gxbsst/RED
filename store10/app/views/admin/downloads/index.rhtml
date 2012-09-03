@@ -1,0 +1,31 @@
+<div id="left">
+  <h1><%= @title %></h1>
+ 
+<% unless @downloads.empty? %>
+  <ul id="downloads">
+    <% @downloads.each do |download| %>
+      <li>
+        <div class="download_picture"><%= download_picture_link(download) %></div>
+        <%= link_to "#{download.title} (Items: #{download.downloads.size})", :action => "edit", :id => download.id %><br />
+        <%= download.description.blank? ? "Description is empty!" : textile(download.description, [:no_span_caps, :lite_mode]) %>
+        <br />
+        <%= link_to 'Top', :action => 'move', :id => download, :position => 'highest' %>
+        <%= link_to 'Up', :action => 'move', :id => download, :position => 'higher' %>
+        <%= link_to 'Down', :action => 'move', :id => download, :position => 'lower' %>
+        <%= link_to 'Bottom', :action => 'move', :id => download, :position => 'lowest' %>        
+        <div class="clear">&nbsp;</div>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%#= sortable_element "downloads" %>
+
+</div>
+
+<div id="right">
+  <div class="clear">&nbsp;</div>
+  <%= link_to 'New Download', {:action => 'new'}, :class => 'button hundredfifty' %>
+  <div class="clear">&nbsp;</div>
+</div>
+<div class="clear" />

@@ -1,0 +1,36 @@
+!!!Traditional
+%html{ html_attrs }
+  %head
+    %meta{ 'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf8' }
+    %title= page_title
+    %meta{ :name => 'keywords', :content => '' }
+    %meta{ :name => 'description', :content => '' }
+    
+    = javascript_include_tag 'urchin', 'application', 'prototype'
+    %script{ :type => 'text/javascript' }
+      _uacct = "UA-666652-2";
+      urchinTracker();
+            
+    = stylesheet_link_tag 'v2/basic', 'v2/extension'
+    = stylesheet_if_exists params[:lang]
+    /[if lte IE 6]
+      = stylesheet_link_tag 'v2/ie'
+      = javascript_include_tag 'v2/ie', 'pngfix'
+    = yield(:head)
+  
+  %body
+    #wrapper
+      #header
+        = render(:partial => 'layouts/global/header')
+      
+      #content
+        = yield
+        .clear
+      
+      #footer
+        = render(:partial => 'layouts/global/footer')
+        
+  %script{:type => 'text/javascript'}
+    / document.body.onload = main_display();
+    = "RED.Navigator.initStatus(#{"'#{params[:controller]}'" if ['cameras', 'accessories'].include?(params[:controller].to_s.downcase)})"
+    

@@ -1,0 +1,32 @@
+<% @recipients ||= [] %>
+
+<div class="listContainer">
+<table cellpadding="0" cellspacing="0" class="list" id="recipients">
+  <colgroup>
+    <col width="100" />
+    <col width="150" />
+    <col style="text-decoration: underline; overflow: hidden" />
+  </colgroup>
+  <tr>
+    <th>Account</th>
+    <th>Name</th>
+    <th>Email Address</th>
+  </tr>
+  <tbody>
+    <% @recipients.each do |r| %>
+    <% style_class = [alternate, ("do_not_contact" if r.do_not_contact?)].join(" ") %>
+    <tr class="<%= style_class %>" rel="<%= r.id %>">
+
+      <td><%= r.customer.account_num if !r.customer.nil? %></td>
+      <td><%= r.name %></td>
+      <td><%= r.email %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<p class="info" align="right">
+  <%= recipients_count_tag %>
+  <%= hidden_field_tag "task[recipients]", @recipients.collect{ |r| r.id }.join(",") %>
+</p>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16" ?>
+<Inventory xmlns="http://schemas.microsoft.com/dynamics/2006/02/documents/Inventory">- 
+<InventTable class="entity">
+   <DimGroupId>WLB</DimGroupId>
+   <ItemAvailability>0.00</ItemAvailability>
+   <ItemDangerousGood>Yes</ItemDangerousGood>
+   <ItemGroupId>Power-RM</ItemGroupId>
+   <ItemId>401001</ItemId>
+   <ItemName>Red Brick 140Wh</ItemName>
+   <ModelGroupId>NONQ</ModelGroupId>
+   <PctDeposit>0.00</PctDeposit>
+   <ShippingPoints>2.65</ShippingPoints>
+</InventTable>
+</Inventory>
+

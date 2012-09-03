@@ -1,0 +1,554 @@
+
+/*Index css start*/
+
+body#home #content{
+
+border-bottom:1px solid #0b0b0b;
+
+
+border-top:1px solid #0b0b0b;
+
+}
+body#home #main-feature{
+
+	
+	height:530px;
+	background: transparent url('/images/index/banner.png') no-repeat left top;
+
+}
+body#home #contentLeft{
+width:308px;
+margin: 0;
+}
+body#home #contentLeft,body#home #contentMiddle{
+float:left;
+
+
+
+}
+body#home #contentLeft,body#home #contentMiddle,body#home #contentRight{
+padding-top: 5px;
+
+}
+body#home #contentMiddle{
+padding-left: 10px;
+border-right:1px solid #0b0b0b;
+border-left:1px solid #0b0b0b;
+margin: 0;
+
+}
+body#home #contentRight{
+
+float:right;
+}
+
+/*for safari*/
+html* #contentMiddle[id]{
+	/*
+margin-left:16px;
+*/
+}
+body#home #content h2{
+font-size:18px;
+font-weight:normal;
+padding:5px 0;
+
+
+}
+body#home #content #contentLeft h2{
+width:270px;
+margin-left: 15px;
+
+}
+body#home #content #contentMiddle h2{
+width:370px;
+}
+body#home #content #contentRight h2{
+width:221px;
+}
+ #content h2 span.more{
+float:right;
+margin:-22px 5px 0 0;
+background:transparent  url('/images/index/moreBg.png') no-repeat left 2px;
+font-size: 70%;
+height:18px;
+width:54px;
+text-align:center;
+padding-top:3px;
+
+}
+body#home #content h2 span.more a{
+
+color: #000;
+}
+html*  #content h2 span.more[class]{
+/*for safari*/
+margin:0 5px 0 0;
+padding-top:2px;
+}
+@media all and (min-width: 0px){/* opera 7 styles */
+ #content h2 span.more[class] { margin:0 5px 0 0;}
+	}
+body#home #content h3{
+font-size:12px;
+float:left;
+margin-left:5px;
+width:290px !important;
+width:290px;
+}
+body#home #content h3 a{
+color:#D4D4D4;
+}
+body#home #content ul li{
+list-style:none; 
+background:transparent  url('/images/index/listType.png') no-repeat left 3px;
+margin:0 0 5px 0 !important;
+margin:0 0 5px 0;
+padding:0 0 0 12px;
+
+}
+body#home #content p,body#home #content ul li a{
+
+color:#BDBDBD;
+}
+body#home #content .imgOuter{
+
+float:left;
+margin:5px 0 0 5px;
+}
+body#home #content #contentMiddle .imgOuter{
+margin-bottom:13px;
+
+}
+/*
+#content #contentMiddle .contentouter img{
+
+float:left;
+margin-top:-15px;
+margin-left:5px;
+}
+#content #contentMiddle .contentouter{
+font-size:95%;
+margin-bottom:10px;
+line-height: 120%;
+float:left;
+}
+#content #contentMiddle h3{
+margin-left:76px !important;
+margin-left:40px;
+}
+*/
+body#home #content p{
+margin:0 5px 0 5px;
+float:left;
+
+}
+body#home #content #contentLeft p{
+
+width:173px !important;
+width:165px;
+}
+body#home #content #contentLeft p.button{
+margin-top:10px;
+}
+body#home #content #contentMiddle p{
+
+width:290px !important;
+width:290px;
+}
+.firstBox,.twoBox{
+	
+float:left;
+
+}
+
+body#home #content #contentLeft .firstBox .middle{
+border-bottom:1px solid #0b0b0b;
+
+}
+#content #contentLeft h2 {
+padding-left: 15px;
+float: left;
+
+}
+#content #contentLeft h2#towBoxH2{
+margin-top:15px;
+}
+#contentLeft .top{
+/*
+background: transparent url('/images/index/mainLeftTop.png') no-repeat left top;
+*/
+padding-top:7px;
+
+
+}
+body#home #contentLeft .bottom{
+	/*
+background: transparent url('/images/index/mainLeftBottom.png') no-repeat left bottom;
+
+padding-bottom:7px;
+*/
+float:left;
+
+}
+body#home #contentLeft .middle{
+	/*
+background: transparent url('/images/index/mainLeftMiddle.png') repeat-y left top;
+padding-bottom:8px;
+*/
+height:134px !important;
+height:136px;
+width:294px;
+float:left;
+
+padding-left: 15px;
+}
+
+
+
+body#home #contentMiddle .top{
+/*
+background: transparent url('/images/index/mainMiddleTop.png') no-repeat left top;
+*/
+padding-top:8px;
+
+}
+body#home #contentMiddle .bottom{
+	/*
+background: transparent url('/images/index/mainMiddleBottom.png') no-repeat left bottom;
+*/
+padding-bottom:8px;
+float:left;
+}
+body#home #contentMiddle .middle{
+	/*
+background: transparent url('/images/index/mainMiddleMiddle.png') repeat-y left top;
+*/
+height:323px !important;
+height:326px;
+width:376px;
+float:left;
+padding-bottom:8px;
+
+}
+
+
+body#home #contentRight .top{
+/*
+background: transparent url('/images/index/mainRightTop.png') no-repeat left top;
+*/
+padding-top:8px;
+
+}
+body#home #contentRight .bottom{
+	/*
+background: transparent url('/images/index/mainRightBottom.png') no-repeat left bottom;
+*/
+padding-bottom:8px;
+float:left;
+}
+body#home #contentRight .middle{
+	/*
+background: transparent url('/images/index/mainRightMiddle.png') repeat-y left top;
+*/
+height:323px !important;
+height:326px;
+width:222px;
+float:left;
+padding-bottom:8px;
+}
+/*--------------- Index css end---------------*/
+
+/*--------------- lenses css start---------------*/
+body#lenses #main-feature{
+
+	background: transparent url('/images/lenses/hero.jpg') no-repeat left top;
+
+	
+	height:391px;
+	
+	
+}
+/*--------------- lenses css end---------------*/
+/*--------------- accessories css start---------------*/
+body#accessories #main-feature{
+
+	background: transparent url('/images/accessories/hero.jpg') no-repeat left top;
+
+	
+	height:391px;
+	
+	
+}
+/*--------------- accessories css end---------------*/
+
+/*--------------- workflow css start---------------*/
+body#workflow #main-feature{
+
+	background: transparent url('/images/workflow/hero.jpg') no-repeat left top;
+
+	
+	height:391px;
+	
+	
+}
+/*--------------- workflow css end---------------*/
+/*--------------- technology css start---------------*/
+body#technology #main-feature{
+
+	background: transparent url('/images/technology/hero.jpg') no-repeat left top;
+
+	
+	height:391px;
+	
+	
+}
+/*--------------- technology css end---------------*/
+/*--------------- gallery-video css start---------------*/
+body#gallery-video #main-feature{
+/*
+	background: transparent url('/images/technology/hero.jpg') no-repeat left top;
+
+	
+	height:391px;
+	
+	*/
+}
+/*--------------- cameras css end---------------*/
+/*--------------- cameras css start---------------*/
+body#cameras #main-feature{
+
+	background: transparent url('/images/camera/hero.jpg') no-repeat left top;
+	height:391px;
+	
+
+}
+/*--------------- gallery-video css end---------------*/
+
+/*--------------- techspecs css start---------------*/
+body#techspecs #main-feature{
+
+	background: transparent url('/images/spec/hero.jpg') no-repeat left top;
+	height:391px;
+	
+
+}
+/*--------------- techspecs css end---------------*/
+
+
+/*--------------- formatoptions css start---------------*/
+body#formatoptions #main-feature{
+
+	background: transparent url('/images/format/hero.jpg') no-repeat left top;
+	height:391px;
+	
+
+}
+/*--------------- formatoptions css end---------------*/
+
+
+/*--------------- photo-tour css start---------------*/
+body#photo-tour #main-feature{
+
+	background: transparent url('/images/photo/hero.jpg') no-repeat left top;
+	height:391px;
+	
+
+}
+/*--------------- photo-tour css end---------------*/
+
+
+/*--------------- signup css start---------------*/
+body#signup #main-feature{
+/*
+	background: transparent url('/images/top_bg.jpg') repeat-x left top;
+	height:391px;
+*/
+
+}
+body#signup .top50,body#gear-we-use .top50{
+
+margin-top: 100px;
+}
+
+/*--------------- signup css end---------------*/
+
+
+/*--------------- store css start---------------*/
+body#store #content{
+margin-top: 40px;
+
+}
+/*-register-*/
+body#store #content #register_box1{
+width: 547px;
+height: 339px;
+margin: 20px 0 0 182px;
+	background: transparent url('/images/store/re_box_bg.png') no-repeat left top;
+
+
+}
+
+body#store #register_box1 form{
+margin: 21px 0 0 37px;
+float: left;
+width: 300px;
+
+}
+body#store #register_box1 form h3{
+
+font-size: 16px;
+}
+body#store #register_box1 form dl{
+margin: 50px 0 0  0;
+
+}
+body#store #register_box1 form dl dt{
+font-size: 12px;
+margin: 5px 0 0 0;
+}
+body#store #register_box1 form dl dt input{
+
+width: 180px;
+}
+/*
+body#store #register_box1 form dl dt input#order_user_email_address,body#store #register_box1 form dl dt input#email_address2{
+width: 213px;
+}
+*/
+body#store #register_box1 form dl dt#emaildt,body#store #register_box1 form dl dt#passworddt{
+margin-top: 20px;
+}
+body#store #register_box1 form dl dt lable{
+width: 61px;
+text-align: right;
+padding: 0 10px 0 0;
+
+display: block;
+float: left;
+}
+body#store #register_box1 form	.submit_p{
+margin:10px 0 0 72px;
+}
+body#store #register_box1 form	.submit_p input{
+	width: 143px;
+	height:23px;
+	border: 0;
+	color: #fff;
+	
+	background: transparent url('/images/store/submit_bg.png') no-repeat left top;
+
+
+}
+/*-login-*/
+body#store #login_box1{
+	margin: 0 0 0 278px;
+width: 556px;
+height: 158px;
+background: transparent url('/images/store/login_box1_bg.png') no-repeat left top;
+
+}
+body#store #login_box2{
+	margin: 61px 0 0 54px;
+width: 450px;
+height: 155px;
+background: transparent url('/images/store/login_box2_bg.png') no-repeat left top;
+
+}
+body#store #login_box3{
+	margin: 61px 0 0 330px;
+width: 450px;
+height: 155px;
+background: transparent url('/images/store/login_box2_bg.png') no-repeat left top;
+
+}
+body#store #login_box1 .shadow{
+font-size: 16px;
+margin: 5px 0 0 154px;
+float: left;
+
+
+}
+body#store #login_box2 .shadow,body#store #login_box3 .shadow{
+margin:5px 0 0 20px;
+float: left;
+font-size: 16px;
+}
+body#store #login_box1  p{
+margin: 20px 0 0 154px;
+width: 367px;
+}
+ #login_box2  p{
+margin: 20px 0 0 20px;
+width: 395px;
+}
+/*for safari*/
+ html* #login_box2  p{
+margin: 40px 0 0 20px;
+width: 395px;
+}
+body#store #login_box1 .button,body#store #login_box2 .button{
+	width: 141px;
+	height:23px;
+	border: 0;
+	color: #fff;
+	text-align: center;
+	background: transparent url('/images/store/submit_bg_1.png') no-repeat left top;
+	margin: 30px 0 0 254px;
+	padding: 5px 0 0 0;
+
+}
+body#store #login_box2 div.button,{
+		margin: 25px 0 0 159px;
+}
+body#store #login_box3 div.button{
+
+	margin: 18px 0 0 121px;
+}
+body#store #login_box3 div.button input{
+
+width: 80px;
+}
+body#store #login_box1 .button a,body#store #login_box2 .button a,body#store #login_box3 .button a{
+text-decoration: none;
+color: #fff;
+}
+.shadow  { position:relative; display:block; color:#fff; 
+
+font-weight: normal;
+filter:DropShadow(color=#666666,offx=1,offy=1,);
+
+
+}
+.shadow span { position:absolute; display:block; top:0px;  }
+.shadow:before { display:block; padding:2px; content: attr(title); color:#000;  } 
+ div#login_box3 dl{
+margin: 20px 0 0  50px;
+
+}
+html* div#login_box3[id] dl{
+margin: 50px 0 0  50px;
+
+}
+body#store div#login_box3 dl dt{
+font-size: 12px;
+margin: 5px 0 0 0;
+}
+body#store div#login_box3 dl dt input{
+
+width: 166px;
+}
+body#store form#register dl dt input#confirmemail,body#store form#register dl dt input#email{
+width: 213px;
+}
+
+body#store div#login_box3 dl dt lable{
+width: 61px;
+text-align: left;
+padding: 7px 10px 0 0;
+
+display: block;
+float: left;
+}
+
+/*--------------- store css end---------------*/

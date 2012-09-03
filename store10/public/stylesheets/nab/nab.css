@@ -1,0 +1,9 @@
+#content{color:#FFF;margin-top:-90px;}
+#toolbar{text-align:right; list-style-type: none; margin-right:40px;padding:0;height:34px;}
+#toolbar  li{display:inline;}
+#toolbar li a{outline-style:none;outline-width:medium;display:block;font-size:14px;float:right; padding:8px 14px;text-decoration:none;background:#1F1F1F; margin:0 1px 0 0;}
+#toolbar li.active a, #toolbar li a:hover{background: #8F0000; text-decoration:none;color:#FFF;}
+#toolbar li#nab_logo{margin-left:160px;float:left; margin-bottom:-5px;}
+#hero{text-align: center;margin:0 auto;}
+/*#hero img{text-align: center;border-top:3px solid #333; border-left:1px solid #333; border-right: 1px solid #333; border-bottom: 1px solid #333;}
+*/#hero {text-align: center;border-top:3px solid #333; border-left:1px solid #333; border-right: 1px solid #333; border-bottom: 1px solid #333;width:881px;height:562px;}

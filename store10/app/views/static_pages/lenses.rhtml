@@ -1,0 +1,198 @@
+<% content_for(:head) do %>
+<%= javascript_include_tag 'highslide/highslide' %>
+<%= stylesheet_link_tag 'highslide', 'v2/pages/lenses' %>
+
+<script type="text/javascript">
+  hs.graphicsDir = '/javascripts/highslide/graphics/';
+  hs.captionId = 'the-caption';
+  hs.outlineType = 'rounded-white';
+  hs.showCredits = false;
+  
+  function swap_tab(n){
+  	for(var i=1;i<=4;i++){
+  		var curC=document.getElementById("tab_"+i);
+  		var curB=document.getElementById("tab_t"+i);
+  		if(n==i){
+  			curC.style.display="block";
+  			curB.className="active"
+  		}else{
+  			curC.style.display="none";
+  			curB.className="img_inner"
+  		}
+  	}
+  }
+  
+</script>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('NAVIGATION|LENSES') %></h1>
+<% end %>
+
+<!--[if lte IE 6]> 
+  <style type="text/css" media="screen">
+    #tab_3, #tab_1, #tab_2, #tab_4{  
+    	background-image: none;
+    	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/images/theme/background-net2.png", sizingMethod="crop");
+    }
+    
+  </style>
+<![endif]-->
+
+
+<div id="lenses">
+	<div id="img_menu">
+		<div class="active" id="tab_t1"  onclick="return swap_tab(1);">
+			<img src="/images/pages/lense/lense_18_50.png" alt="">
+
+
+		</div>
+		<div class="img_inner" id="tab_t2" onclick="return swap_tab(2);">
+			<img src="/images/pages/lense/lense_50_150mm.png" alt="">
+		</div>
+		<div class="img_inner" id="tab_t3" onclick="return swap_tab(3);">
+			<img src="/images/pages/lense/lense_18-85mm.png" alt="">
+		</div>
+		<div class="img_inner" id="tab_t4" onclick="return swap_tab(4);">
+			<img src="/images/pages/lense/prime_set.png" alt="">
+		</div>
+		<!--end div#img_menu --> 
+	</div>
+	<div class="clear"></div>
+	<div id="tab_2" style="display:none;">
+		<h2><%= _('LENSES|SPECIFICATIONS') %></h2>
+		<div class="side_bar">
+			<div class="img_outer">
+			  <h2><img src="/images/pages/lense/50_150mm_text.png" alt="" /></h2>
+				<img src="/images/pages/lense/red_t3_thumb.png" alt="" />
+				</p>
+			</div>
+			<!--end div#side_bar -->
+
+		</div>
+		<div class="right">
+
+			<h2><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM') %></h2>
+			<table cellspacing="1" cellpadding="0" border="0" >
+				<tr><th cospan="2"><%= _('GLOBAL|SPECIFICATIONS') %></th></tr>
+				<tr><th width=204><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCAL_LENGTH_RANGE') %></th><td width=345><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCAL_LENGTH_RANGE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|T_STOP_RANGE') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|T_STOP_RANGE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MAXIMUM_F_STOP') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MAXIMUM_F_STOP|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|CLOSE_FOCUS_FROM_LENS_FRONT') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|CLOSE_FOCUS_FROM_LENS_FRONT|VALUE') %></td> </tr>
+				<tr> <th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|LENGTH_FROM_FRONT_OF_LENS_TO_IMAGE_PLANE') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|LENGTH_FROM_FRONT_OF_LENS_TO_IMAGE_PLANE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MINIMUM_MARKED_OBJECT_DISTANCE') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MINIMUM_MARKED_OBJECT_DISTANCE|VALUE') %></td> </tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MAXIMUM_FORMAT_COVERED') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|MAXIMUM_FORMAT_COVERED|VALUE') %></td> </tr>
+				<tr> <th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|DIAGONAL_ANGLE_OF_VIEW_FOR_30MM_IMAGE_CIRCLE') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|DIAGONAL_ANGLE_OF_VIEW_FOR_30MM_IMAGE_CIRCLE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|IRIS_SCALES') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|IRIS_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_OF_IRIS') %></th> <td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_OF_IRIS|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|IRIS_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|IRIS_DRIVE_GEAR|VALUE') %></td> </tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCUS_SCALES') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCUS_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_FROM_INFINITY_TO_MOD_ENDSTOP') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_FROM_INFINITY_TO_MOD_ENDSTOP|VALUE') %></td></tr>
+				<tr> <th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_BETWEEN_END_STOPS') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_BETWEEN_END_STOPS|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCUS_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FOCUS_DRIVE_GEAR|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ZOOM_SCALES') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ZOOM_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_OF_ZOOM_SCALES') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ANGULAR_ROTATION_OF_ZOOM_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ZOOM_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|ZOOM_DRIVE_GEAR|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|LENGTH_FROM_FRONT_OF_LENS_TO_LENS_MOUNT') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|LENGTH_FROM_FRONT_OF_LENS_TO_LENS_MOUNT|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FRONT_DIAMETER') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|FRONT_DIAMETER|VALUE') %></td></tr>
+				<tr> <th><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|WEIGHT') %></th><td><%= _('LENSES|RED_50-150MM_T-3_F2.8_ZOOM|WEIGHT|VALUE') %></td></tr>
+			</table>
+		</div>
+		<!--end #tab_1 -->
+	</div>
+	<div id="tab_1" style="display:block;" >
+		<h2><%= _('LENSES|SPECIFICATIONS') %></h2>
+		
+		<div class="side_bar">
+			<div class="img_outer">
+			  <h2><img src="/images/pages/lense/18_50mm_text.png" alt="" /></h2>
+				<img src="/images/pages/lense/red_f28_thumb.png" alt="" />
+			</div>
+			<div class="img_list">
+			  <h2><img src="/images/pages/lense/views_text.png" alt="" /></h2>
+				<p><%= _('GLOBAL|CLICK_AN_IMAGE_TO_ZOOM_IN') %></p>
+				<a href="/images/pages/lense/2/1.jpg" class="highslide" onclick="return hs.expand(this, {captionId: 'caption1'})">
+					<img src="/images/pages/lense/2/thumb_1.jpg" alt="" />
+				</a>
+			</div>
+			<!--end div#side_bar -->
+		</div>
+		<div class="right">
+			<h2><%= _('LENSES|RED_18-50MM_F2.8_CF') %></h2>
+			<table  cellspacing="1" cellpadding="0" border="0" >
+				<tr><th colspan="2"><%= _('GLOBAL|SPECIFICATIONS') %></th></tr>
+				<tr><th width=204><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCAL_LENGTH_RANGE') %></th><td width=345><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCAL_LENGTH_RANGE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|T_STOP_RANGE') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|T_STOP_RANGE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|MAXIMUM_F_STOP') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|MAXIMUM_F_STOP|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|CLOSE_FOCUS_FROM_LENS_FRONT') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|CLOSE_FOCUS_FROM_LENS_FRONT|VALUE') %></td> </tr>
+				<tr> <th><%= _('LENSES|RED_18-50MM_F2.8_CF|LENGTH_FROM_FRONT_OF_LENS_TO_IMAGE_PLANE') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|LENGTH_FROM_FRONT_OF_LENS_TO_IMAGE_PLANE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|MINIMUM_MARKED_OBJECT_DISTANCE') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|MINIMUM_MARKED_OBJECT_DISTANCE|VALUE') %></td> </tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|MAXIMUM_FORMAT_COVERED') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|MAXIMUM_FORMAT_COVERED|VALUE') %></td> </tr>
+				<tr> <th><%= _('LENSES|RED_18-50MM_F2.8_CF|DIAGONAL_ANGLE_OF_VIEW_FOR_30MM_IMAGE_CIRCLE') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|DIAGONAL_ANGLE_OF_VIEW_FOR_30MM_IMAGE_CIRCLE|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|IRIS_SCALES') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|IRIS_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_OF_IRIS') %></th> <td><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_OF_IRIS|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|IRIS_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|IRIS_DRIVE_GEAR|VALUE') %></td> </tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCUS_SCALES') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCUS_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_FROM_INFINITY_TO_MOD_ENDSTOP') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_FROM_INFINITY_TO_MOD_ENDSTOP|VALUE') %></td></tr>
+				<tr> <th><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_BETWEEN_END_STOPS') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_BETWEEN_END_STOPS|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCUS_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|FOCUS_DRIVE_GEAR|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|ZOOM_SCALES') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|ZOOM_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_OF_ZOOM_SCALES') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|ANGULAR_ROTATION_OF_ZOOM_SCALES|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|ZOOM_DRIVE_GEAR') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|ZOOM_DRIVE_GEAR|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|LENGTH_FROM_FRONT_OF_LENS_TO_LENS_MOUNT') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|LENGTH_FROM_FRONT_OF_LENS_TO_LENS_MOUNT|VALUE') %></td></tr>
+				<tr><th><%= _('LENSES|RED_18-50MM_F2.8_CF|FRONT_DIAMETER') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|FRONT_DIAMETER|VALUE') %></td></tr>
+				<tr> <th><%= _('LENSES|RED_18-50MM_F2.8_CF|WEIGHT') %></th><td><%= _('LENSES|RED_18-50MM_F2.8_CF|WEIGHT|VALUE') %></td></tr>
+			</table>
+			<!--end #right -->
+		</div>
+		<!--end #tab_2 -->
+	</div>
+
+	<div id="tab_3"  style="display:none;">
+		<h2><%= _('LENSES|SPECIFICATIONS') %></h2>
+		
+		<div class="side_bar">
+			<div class="img_outer">
+				<h2><img src="/images/pages/lense/lens_f28_text.png" alt="" /></h2>
+				<img src="/images/pages/lense/18-85thum.png" alt="" />
+				</p>
+			</div>
+			
+	<!--end div#side_bar -->
+	</div>
+	<div class="right">
+		<h2>RED PRO 18-85MM T-3(F2.8) ZOOM (IMPERIAL OR METRIC SCALES)</h2>
+		<table  cellspacing="1" cellpadding="0" border="0" >
+			<tr><th colspan="2">Specifications:</th></tr>
+      <tr><th width=204>Focal Length Range</th><td width=345>18-85mm</td></tr>
+			<tr><th>Maximum f Stop</th><td>T2.9</td></tr>
+			<tr><th>Close Focus from Lens Front</th><td>700mm</td></tr>
+			<tr><th>Length from Front of Lens to Image Plane</th><td>980mm</td></tr>
+			<tr><th>Minimum Marked Object Distance</th><td>2' 4"</td></tr>
+			<tr><th>Maximum Format Covered</th><td>Super 35mm</td></tr>
+			<tr><th>Iris Drive Gear	</th><td>0.8 metric module</td></tr>
+			<tr><th>Angular Rotation from Infinity to MOD Endstop</th><td>271 degrees </td></tr>
+			<tr><th>Angular Rotation Between End-stops</th><td>120 degrees</td></tr>
+			<tr><th>Focus Drive Gear	</th><td>0.8 metric module </td></tr>
+			<tr><th>Zoom Ratio		</th><td>429X</td></tr>
+			<tr><th>Rotational Torque</th><td>0.34N.m (2.5Kg-cm)</td></tr>
+			<tr><th>Zoom Drive Gear	</th><td>0.8 metric module</td></tr>
+			<tr><th>Length from Front of Lens to Lens Mount</th><td>11 inches (28cm)</td></tr>
+			<tr><th>Weight	</th><td>4.5 kg / 9.9 lbs.</td></tr>
+		</table>
+
+		<!--end #right -->
+	</div>
+	<!--end #tab_3 -->
+</div>
+
+<div id="tab_4"  style="display:none; padding-left: 0; padding-right: 0;">
+	<h2><%= _('LENSES|SPECIFICATIONS') %></h2>
+		<h2 style="margin-top: 20px;"><%#= _('LENSES|RED_PRIME_SET') %>RED PRO PRIMES</h2>
+ <!-- <img style="margin-top:-10px; " src="/images/theme/coming-soon.jpg" height=216 width=898 />-->
+ <img style="margin-top:-10px; " src="/images/theme/LENSSpecsV12.png" />
+	<!--end #tab_4 -->
+</div>
+
+<!--end#lenses -->
+</div>

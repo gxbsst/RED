@@ -1,0 +1,80 @@
+#products .product { margin: 5px; padding: 0; text-align: center; float: left; clear: none; border: 1px solid #CCC; display: inline;}
+	#products .product .product_info a { display: block; font-weight: bold; text-align: center; text-decoration: none; line-height: 20px; height: 20px; margin-bottom: -5px; overflow: hidden; }
+	#products .product a:hover { text-decoration: underline; }
+	.product .product_info { text-align: center; background-color: #DADADA; padding-left: 2px; }
+	#products .product .price{ 
+		font-size:8pt;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	    text-align:center;}
+	
+	#products .product_info .price{ 
+			font-size:8pt;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		    text-align:center;}	
+
+/*	.product .price { float: left; font-size: 8pt; font-weight: bold; }*/
+	.product select { font-size: 8pt; position: relative; top: -5px !important; top: -3px; }
+	#products .product p.subscript { margin: 0 -5px -10px; font-size: 6pt; color: #666; text-align: center; }
+	#products .product p.delivery_message{ 
+/*		display:block;*/
+		font-size:6pt;
+	    margin-top: 0px;
+	    margin-bottom:5px;
+	    width:144px;
+	    height:15px;
+	    overflow:hidden;
+	    text-align:center;}
+	
+.add_to_cart { height: 18px;  border: none; }
+.columns_2 .add_to_cart, .columns_3 .add_to_cart { background-image: url(/skin/img/store/addtocart1.png); width: 70px; }
+.columns_4 .add_to_cart { background-image: url(/skin/img/store/addtocart2.png); width: 23px; }
+
+.columns_2 { width: 336px; }
+.columns_3 { width: 220px; }
+.columns_4, .columns_8 { width: 162px; }
+/* Special Style */
+#product_403001 p.subscript { height: 20px; }
+
+#products #product_401001 .product_info a, #products #product_402001 .product_info a { margin-bottom: -5px; }
+#products #product_401001 .product_info p.delivery_message, #products #product_402001 .product_info p.delivery_message {  padding-bottom: 20px;}
+
+#product_502001 .product_info a { margin-left: -5px; margin-right: -5px; }
+#t_shirt_link {text-align:right;margin-right:16px;}
+#content #t_shirt_link a{color:red;text-decoration:underline;font-size:14px;}
+
+#products #product_202004, #products #product_202005, #products #product_202006 { display: none; }
+#product_202002, #product_202003, #product_202004, #product_202005, #product_201001, #product_202001, #product_202006 { width: 162px; }
+/*#product_201001 .product_info { height: 77px !important; height: 40px; }*/
+/*#product_902026 .product_info { height: 73px !important; height: 48px; }*/
+
+#notice { background-color: #FFD; border: 1px solid #FC0; padding: 0 5px; margin: 5px 14px 5px 5px; }
+#content #notice h3 { color: DarkRed; font-size: 11pt; margin: 1em 0; }
+#content #notice p.subscript { font-weight: bold; font-size: 8pt; }
+
+
+#products p.coming_soon {
+  margin: 0;
+  text-align: center;
+}
+.product .product_info {
+/*  min-height: 56px;*/
+  height: auto !important;
+  height: 56px;
+}
+
+.product  .product_info_swith{
+	height: 56px;;text-align: center; background-color: #DADADA; padding-left: 2px;
+}
+
+.product  .product_info_subscript{
+	height: 43px;text-align: center; background-color: #DADADA; padding-left: 2px;
+}
+
+
+.product_info input {
+  position: relative;
+  top: 3px;
+}
+/*.product_info .price { padding: 6px 0; }*/

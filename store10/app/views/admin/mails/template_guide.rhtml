@@ -1,0 +1,162 @@
+<style style="text/css">
+  #preContent { background-image: url(/engine_files/substruct/images/admin/body_background_top_white.png); }
+  #container, #contentBody { background-image: url(/engine_files/substruct/images/admin/body_background_white.png); }
+  
+  h2 {
+    margin-top: 1em;
+    font-size: 2em;
+    color: Chocolate;
+  }
+  pre {
+    margin: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid LightSteelBlue;
+    border-left-width: 5px;
+  }
+  code {
+    font-family: Monaco, "Courier New";
+    font-size: 9pt;
+    color: #000;
+  }
+</style>
+
+<div id="fullContent">
+  <h1>RED Mails Blaster / Template Guide</h1>
+  
+  <h2 id="customer">ERP Customer Master</h2>
+  <p>
+    The Following Fields from the ERP Customer Master are available:
+  </p>
+  <table cellspacing="0" cellpadding="0" border="0" class="list">
+    <colgroup>
+      <col width="40%" valign="top" />
+      <col />
+    </colgroup>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.account_num</td>
+      <td>Account Number of customer.</td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.email</td>
+      <td>Email Address form the customer master record.</td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.first_name</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.last_name</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.discounts</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.phone</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.account_balance</td>
+      <td>Customer's account balance (un-formatted).</td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.currency</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.red_one_shipped</td>
+      <td>(Boolean value) Useful in "if" condition.</td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.rep_email</td>
+      <td>BombSquad Rep this account is assigned to. Such as <strong>"stuff &lt;stuff@red.com&gt;"</strong></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.name</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.delivery_mode</td>
+      <td></td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@customer.id</td>
+      <td>Useful if you want to create a link to the clients "My Account" page.</td>
+    </tr>
+  </table>
+  
+  <h2 id="contacts">Contacts</h2>
+  <p>
+    Additionally, fields from the "Additional Contact" information is also available. The email will always be delivered to the Contact Record on the customer master, so @contact.first_name and @contact.last_name should normally be used in preference over @customer.first_name.
+  </p>
+  <table cellspacing="0" cellpadding="0" border="0" class="list">
+    <colgroup>
+      <col width="40%" valign="top" />
+      <col />
+    </colgroup>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@contact.email</td>
+      <td>Email address of this contact, as the mail recipient.</td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>@contact.name</td>
+      <td>Full name of this contact person.</td>
+    </tr>
+  </table>
+  
+  <!-- Variables -->
+  <h2 id="variables">Variables</h2>
+  <p>
+    While build a template, you can use "placeholder" for variables. For example, if you are creating a template for "RED ONE ready to ship", with a serail number range from "2000" to "2100". The variable you should give looks like:
+    
+  <pre><code>rante_start: 2000
+range_end: 2100</code></pre>
+  
+    And template body looks like:
+    
+  <pre><code>..... for RED ONE from #&lt;%= @variables['range_start'] %&gt; to #&lt;%= @variables['range_end'] %&gt;</code></pre>
+  
+  </p>
+  
+  <!-- Helper Methods -->
+  <h2 id="helper_methods">Helper Methods</h2>
+  <p>
+    In addition to the attributes list above, RED Mail Blaster provides several Helper Methods. These collection of methods will help you to create friendly mail content.
+  </p>
+  <table cellspacing="0" cellpadding="0" border="0" class="list">
+    <colgroup>
+      <col width="40%" valign="top" />
+      <col />
+    </colgroup>
+    <tr>
+      <th>Method</th>
+      <th>Description</th>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>item( code, display_name=auto )</td>
+      <td>
+        Create a hyperlink to product detail page with product's name unless you over-write this by giving another display_name.
+        <pre><code>&lt;%= item( "101001" ) %&gt;
+&lt;%= item( "101001", "Wow! RED ONE!" ) %&gt;
+</code></pre>
+      </td>
+    </tr>
+    <tr class="<%= alternate %>">
+      <td>h( string )</td>
+      <td>
+        Escape string with HTML entities code.
+        <pre><code>&lt;%= h( "&lt;script&gt;" ) %&gt; # => <%= h( "&lt;script&gt;" ) %></code></pre>
+      </td>
+    </tr>
+  </table>
+  </p>
+</div>

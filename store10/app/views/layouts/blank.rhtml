@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><%= page_title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="<%= _('GLOBAL|WEBSITE_DESCRIPTION') %>" />
+	<meta name="keywords" content="<%= _('GLOBAL|WEBSITE_KEYWORDS') %>" />
+	<!-- Google Analytics -->
+	<%= javascript_include_tag 'urchin', 'application' %>
+	<script type="text/javascript">
+		_uacct = "UA-666652-2";
+		urchinTracker();
+	</script>
+    <%= stylesheet_link_tag 'global', "#{params[:controller]}/#{params[:controller]}", "#{params[:controller]}/#{params[:action]}" %>
+    <%= stylesheet_link_tag params[:lang] if File.exist?("#{RAILS_ROOT}/public/stylesheets/#{params[:lang]}.css") %>
+	<!--[if lt IE 7]>
+	<%= stylesheet_link_tag 'ie_fix' %>
+	<%= javascript_include_tag 'pngfix' %>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="wraper">
+		<%= @content_for_layout %>
+	</div>
+</body>
+</html>

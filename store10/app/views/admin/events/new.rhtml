@@ -1,0 +1,21 @@
+<div class="create_event" id = "left">
+	<h1>Create A Event</h1>
+	<ul class="navigation secondary">
+		<li><a href="/admin/events/">Back to All People List</a></li>
+	</ul>
+	
+	<ul>
+	<% form_for :event, @event, :url => {:action => 'create'}  do |f| -%>
+	 name:
+	  <p>
+	    <%= f.text_field :name %>
+	  </p>
+	 Description:
+	  <p> <%= f.text_area :description, :rows => 14, :class => 'textArea' %></p>
+	
+	  <%= submit_tag '提交' %>
+	<% end -%>
+	</ul>
+</div>
+
+<%= render(:partial => 'right_side') %>

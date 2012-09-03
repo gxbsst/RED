@@ -1,0 +1,43 @@
+.heading h1{
+/*	font-size: 16px;
+*/	
+}
+#content {
+	position: relative;
+}
+#downloads { 
+	margin: 10px auto;
+	width: 540px;
+	
+	}
+
+#downloads  h2{font-weight: bold; border-bottom:1px  dotted  #DDD; margin-right: 20px;}
+	#downloads form ul li{ }
+	#downloads form ul li.right_half{float: right;}
+	 label.desc{font-weight: bold; font-size: 13px; line-height: 150%; }
+	#downloads form textarea{width: 532px; height: 130px;}
+	#downloads form input{background: #FFF;}
+	#downloads form tr td p{float: left;}
+	td.td2{width: 226px;}
+	#sdk_survey_country{width: 266px;}
+	.long_input input{width: 528px;}
+	.tr2 td input{width: 259px;}
+	#first_name {width: 130px;}
+	#last_name {width: 130px;}
+	#company{width: 240px;  }
+#downloads form span {margin: 0 10px 0 0;}
+
+#sdk {
+
+}
+
+.note { 
+	padding: 0 10px;
+	background: #EFEFEF;
+	border: 1px solid  #DDD;
+  }
+.note p {
+	padding 0;
+	font-size: 11pt;
+}
+

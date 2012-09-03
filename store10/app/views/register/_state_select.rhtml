@@ -1,0 +1,6 @@
+<label for="warranty_registration_state"><%= _('REGISTER|STATE') %>:</label>
+<% if RegisterHelper::COUNTRY_STATES.keys.include? (current_country) %>
+	<%= select 'warranty_registration', 'state', RegisterHelper::COUNTRY_STATES[current_country].unshift(['-- Please Select Your State --', '']) %>
+<% else %>
+	<%= text_field 'warranty_registration', 'state', :class => 'text' %>
+<% end %>

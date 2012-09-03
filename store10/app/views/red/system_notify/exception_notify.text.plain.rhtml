@@ -1,0 +1,17 @@
+An exception occured on RED.com:
+
+<%= @exception.class.name %>
+<%= @exception.message %>
+----------------------------------
+
+<%= @request.env.collect{ |key, value| "#{key}: #{value}" }.join("\n") %>
+
+----------------------------------
+
+Request URI: <%= @request.request_uri %>
+Parameters:
+<%= @request.params.collect{ |key, value| "\t#{key}: #{value}" }.join("\n") %>
+
+----------------------------------
+
+* Check the exception track by switching to HTML view.

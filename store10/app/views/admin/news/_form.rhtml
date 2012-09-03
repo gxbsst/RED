@@ -1,0 +1,63 @@
+<script type="text/javascript">  
+function permalink(permalink_value){
+  return $('news_permalink').value = permalink_value 
+}
+</script> 
+
+<% textile_editor_button 'Image',
+:onclick => "TextileEditor.insertTag(this,  \"!/images/news/#{@news.random_id}/!\");return false" 
+%>
+
+<% textile_editor_button 'Texttitle Reference',
+:onclick => "window.open(\"http://#{request.host_with_port}\/textilereference.html\",'myWindow', 
+'status = 0, height = 700, width = 700, resizable = 1,scrollbars=1');return false" 
+%>
+<%= error_messages_for 'news' %>
+<!--[form:news]-->
+<div id="form_left">
+  <p><label class="left_label" for="news_title">Title:</label>
+    <%= text_field 'news', 'title'  %></p>
+    <p><label class="left_label" for="news_language">Language:</label> <%= select_tag 'news[language]', options_for_select($I18N.collect{|key, value| [value, key]},@news.language || "en_US") %> </p>
+    <p><label class="left_label" for="news_permalink">Permalink:</label> <%= text_field 'news', 'permalink' %><input type="button" onclick = "permalink('<%= Time.now.strftime("%Y/%m/%d") + '/' + @news.random_id %>')" value = "Generate" /></p> 
+    <%= hidden_field 'news','random_id',:value => @news.random_id %>
+    
+      <p><label for="news_remote_url"  class="left_label">Remote url:</label><%= text_field 'news', 'remote_url'  %></p>
+
+      <p><label for="news_beta_visible"  class="left_label">Beta visible:</label><%= radio_button("news", "beta_visible", true ) %> <label for = "news_beta_visible_true">YES</label> <%= radio_button("news", "beta_visible", false) %><label for = "news_beta_visible_false">NO</label></p>
+
+      <p><label for="news_live_visible"  class="left_label">Live visible:</label> <%= radio_button("news", "live_visible", true ) %> <label for = "news_live_visible_true">YES</label> <%= radio_button("news", "live_visible", false) %><label for = "news_live_visible_false">NO</label></p>
+
+      <p><label for="news_headline_or_sticky" class="left_label" >Headline or sticky:</label>
+        <%= radio_button("news", "headline_or_sticky", true ) %>    <label for = "news_headline_or_sticky_true"  >Headline</label>
+
+        <%= radio_button("news", "headline_or_sticky", false) %> <label for = "news_headline_or_sticky_false">sticky</label>   
+      </p>
+      <div class="clear"> </div>
+      <p><label for="news_headline_position"  class="left_label">Headline position:</label><%= text_field 'news', 'headline_position'  %></p>
+
+      <p><label for="news_sticky_position"  class="left_label">Sticky position:</label><%= text_field 'news', 'sticky_position'  %></p>
+
+      <p><label for="news_post_timestamp"  class="left_label">Post timestamp:</label><%= date_field('news', 'post_timestamp', :value => @news.post_timestamp || Time.now) %> </p>
+     
+        <p id ="imageaddress"> <label for="image address"  class="left_label">Image address:</label> 
+          <a  href="<%= 'sftp://' + request.host + ":" + $SSH_PORT + "/" + $SSH_PATH  +  @news.random_id  %>">Upload Images</a>[/public/images/news/<%= @news.random_id%>]
+        </p>
+      <!--end  #form_left -->
+    </div>
+
+    <div id="form_right">
+     <p>  <% file_path = File.join(Dir.pwd,'public/images/news/',@news.random_id,'description.jpg') %>
+       <% if File.file?file_path %>
+       <img id="thumbnail_image" src="/images/news/<%= @news.random_id %>/description.jpg" alt="" />         
+       <% end %></p>
+     <p style="margin-top: 5px;"><label class="left_label">Des_img:</label><input type="file" id="description_img" name="description_img" /></p>
+      <p><label for="news_desription">Desription</label><br/><%= text_area('news', 'description') -%></p>
+      <!--end form_right-->
+    </div>
+    
+    <div class="clear"></div>
+    <div id="conent_outer">
+      <p><label for="news_content" id="news_content_label">News Content</label><br/><%= textile_editor 'news', 'content' -%></p>
+    </div>
+    <!--[eoform:news]-->
+    <%= textile_editor_initialize -%>

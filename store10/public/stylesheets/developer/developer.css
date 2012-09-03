@@ -1,0 +1,18 @@
+#content { margin: -50px 10px 0px 170px; position:relative; top:-70px; }
+ #content h1 { font-size: 2em; border-bottom: 3px solid #666; color: #FFF; height: 2em; line-height: 2em;font-weight:bold; }
+#downloads  h2{font-weight: bold; border-bottom:1px  dotted  #DDD; margin-right: 20px;}
+	#downloads form ul li{ }
+	#downloads form ul li.right_half{float: right;}
+	 label.desc{font-weight: bold; font-size: 13px; line-height: 150%; color: #FFF;}
+		span.gray{color: #666; font-size: 10px;  }
+	#downloads form textarea{width: 442px; height: 130px;}
+	#downloads form input{background: #FFF;}
+	#downloads form tr td p{float: left;}
+	td.td2{width: 226px;}
+	#sdk_survey_country{width: 212px;}
+	.long_input input{width: 438px;}
+	.tr2 td input{width: 208px;}
+	#first_name {width: 70px;}
+	#last_name {width: 130px;}
+	#company{width: 208px;}
+#downloads form span {margin: 0 10px 0 0;}

@@ -1,0 +1,38 @@
+<% form_for(:order_address) do |f|  %>
+  <div id="st_box1" class="box1">
+    <div class="top">
+      <div class="bottom">
+        <h3 class="shadow" title="Shipping Destination"><span>Shipping Destination</span></h3>
+        <div id="inpulist">
+          <p class="input1"><span>Your First Name:</span><%= f.text_field(:first_name) %></p>
+          <p class="input1"><span>Your Last Name:</span><%= f.text_field(:last_name) %></p>
+          <p class="input2"><span>Company Name:</span><%= f.text_field(:company) %></p>
+          <p class="input9">
+            <span >Country:</span>
+            <% selected_country = instance_variable_get("@order_address").country_id.to_s %>
+            <%= render_component(:controller => "countries", :action => "select_list", :params => {:select_name => "order_address", :selected => selected_country}) %>
+          </p>
+          <p class="input3"><span>Address 1:</span><%= f.text_field(:address)%></p>
+          <p class="input4"><span>Address 2:</span><%= f.text_field(:address_two)%></p>
+          <p class="input6"><span>City:</span><%= f.text_field(:city) %></p>
+          <p class="input7" id="state"><span>State/Province:</span><%= f.text_field(:state) %></p>
+          <script type="text/javascript">
+            var country = $F('country');
+            var state = $('order_address_state').value;
+            new Ajax.Updater('state','/countries/select_state?country='+country+'&state='+state, {asynchronous:true, evalScripts:true});
+            function change_country(country) {
+            var state = $('order_address_state').value;
+            new Ajax.Updater('state','/countries/select_state?country='+country+'&state='+state, {asynchronous:true, evalScripts:true});
+            }
+          </script>
+          <p class="input5"><span >ZIP/Post Code:</span><%= f.text_field(:zip) %></p>
+          <p class="input8"><span>Phone Number:</span><%= f.text_field(:telephone) %></p>
+        </div>
+        <div class="clearing">&nbsp;</div>
+        <div class="button">
+          <%= submit_tag 'Continue' %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+#external-links {
+	list-style: none;
+	padding: 0;
+}
+	#external-links li {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	#external-links a {
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		padding: 4px;
+		font-size: 110%;
+	}
+	#external-links img {
+		border: 3px solid #CCC;
+		margin-bottom: 5px;
+		padding: 0 10px;
+	}
+		#external-links a:hover img {
+			border-color: #C00;
+		}
+	

@@ -1,0 +1,40 @@
+#wrapper {
+	background: #FFF;
+}
+.with-border {
+	border: 3px solid #666;
+	margin: 2em 0;
+	padding: 1em 2em 3em 2em;
+}
+#content {
+	color: #333;
+}
+	#content h1, #content h2, #content h3 {
+		color: #000;
+		text-transform: uppercase;
+		font-weight: normal;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #CCC;
+	}
+	#content h2 {
+		font-size: 2em;
+	}
+	#content h3 {
+		font-size: 1.5em;
+	}
+	#content h4 {
+		font-size: 1.3em;
+	}
+	#content a {
+		color: #000;
+	}
+	#content a:hover {
+		color: #C00;
+	}
+	#content .button {
+		border-color: #CCC;
+	}
+
+.text-input {
+	border: 2px solid #CCC;
+}

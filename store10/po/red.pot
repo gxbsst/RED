@@ -1,0 +1,3405 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: red\n"
+"POT-Creation-Date: 2008-01-24 22:45-0500\n"
+"PO-Revision-Date: 2007-06-07 10:51+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: app/helpers/application_helper.rb:18
+#: app/views/app/helpers/application_helper.rb:18
+#: app/views/static_pages/lenses.rhtml:50
+#: app/views/static_pages/lenses.rhtml:91
+#: app/views/static_pages/lenses.rhtml:137
+#: app/views/static_pages/lenses.rhtml:193
+#: app/views/app/views/static_pages/lenses.rhtml:9
+#: app/views/app/views/static_pages/lenses.rhtml:20
+#: app/views/app/views/static_pages/lenses.rhtml:31
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "GLOBAL|CURRENCY_SYMBOL"
+msgstr ""
+
+#: app/helpers/static_pages_helper.rb:5
+#: app/views/app/helpers/static_pages_helper.rb:5
+#: app/views/accessories/_sub_navigation.rhtml:5
+#: app/views/cameras/_sub_navigation.rhtml:5
+#: app/views/app/views/cameras/_sub_navigation.rhtml:6
+msgid "GLOBAL|BUY_NOW"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "email announcement"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Name"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Email address"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Industry"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Editor"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|System"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Comments"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Hd camera"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Raw camera"
+msgstr ""
+
+#: app/models/email_announcement.rb:2
+#: app/views/app/models/email_announcement.rb:2
+msgid "GLOBAL|MESSAGE|EMPTY_FIRST_NAME"
+msgstr ""
+
+#: app/models/email_announcement.rb:3
+#: app/views/app/models/email_announcement.rb:3
+msgid "GLOBAL|MESSAGE|EMAIL_ALREADY_EXISTS"
+msgstr ""
+
+#: app/models/email_announcement.rb:4
+#: app/views/app/models/email_announcement.rb:4
+msgid "GLOBAL|MESSAGE|INVALID_EMAIL"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "reservation item"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Reservation"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Serial number"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Description"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Price"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "order transaction"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Created on"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Order"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Transaction"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Description"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "order address"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Order user"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Is shipping"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Telephone"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|City"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|State"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Zip"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Country"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Created on"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Updated on"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Shipping label"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Company"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address two"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|First name"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Last name"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "product"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Code"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Name"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Description"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Price"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Date available"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Quantity"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size width"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size height"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size depth"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Weight"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Erp product item"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Deposit"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|For serial number"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Delivery message"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "news admin user"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Name"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Hashed password"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Created at"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Status"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Level"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "image"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Path"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Description"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Width"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Height"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "erp order log"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp order"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Uuid"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Order number"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp serv"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Log msg"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Xml"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Created on"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Updated on"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "order account"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order user"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order address"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order account type"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Account number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration month"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration year"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Routing number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Bank name"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Cardholder name"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Payment type"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Safe cc number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Encrypted cc number"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote ip"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp amount"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp pnref"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp authcode"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs result"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs streetmatch"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs zipmatch"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Erp recid"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Created on"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Updated on"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote location"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "store user"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Name"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Company"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Email address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Password"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Ship to address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Bill to address"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Order account"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Security token"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Erp account number"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Creation email"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Purchased"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "order line item"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Product"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Order"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Quantity"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit price"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit deposit"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "reservation"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Email address"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Secret code"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Order"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Total"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Name"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Payment method"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source name"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Paid on"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "order user"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Email address"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Password"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Created on"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Updated on"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Name"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Company"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Store user"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "order"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order number"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Created on"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipped on"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order user"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order status code"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Notes"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Referer"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order shipping type"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Product cost"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipping cost"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Tax"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Auth transaction"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Sent email receipt"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp order number"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp status msg"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp account uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp order uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp cc uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp complete"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Pre ax"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "news"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Title"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Language"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Permalink"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Random"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Remote url"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Beta visible"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Live visible"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Headline or sticky"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Headline position"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Sticky position"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Description"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Content"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Created at"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Updated at"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Post timestamp"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "viaklix transaction"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactionid"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiontype"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiondatetime"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Approvalcode"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl invoice number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Sales tax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2 indicator"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2response"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Customer code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Card number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Exp date"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth response code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth message"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth source"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth avs response"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Status"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount2"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs address"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs zip"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl card number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl customer code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl description"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl exp date"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl salestax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Settlement number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl city"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl email"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl first name"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl last name"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl state"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "ip2address"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "warranty registration"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|First name"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Last name"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Company"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Product categories"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Product"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Serial number"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Address1"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Address2"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|City"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|State"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Zip"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Country"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Phone number"
+msgstr ""
+
+#: app/models/warranty_registration.rb:-
+msgid "WarrantyRegistration|Email address"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "pfp transaction log"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Pfp serv"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Store user"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Card name"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Email address"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Order number"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Uuid"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Req xml"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res xml"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Status"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res code"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Res message"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Created on"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Created at"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Updated at"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Remote ip"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Remote location"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Creditcard type"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Request header"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Response header"
+msgstr ""
+
+#: app/models/log/pfp_transaction_log.rb:-
+msgid "PfpTransactionLog|Response code"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "agreement log"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Agreement version"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Store user"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Order"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Remote ip"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Created at"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Http header"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Email address"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Order number"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Remote location"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Agreement name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download name"
+msgstr ""
+
+#: app/models/log/agreement_log.rb:-
+msgid "AgreementLog|Download version"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "agreement"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Name"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Created at"
+msgstr ""
+
+#: app/models/agreement/agreement.rb:-
+msgid "Agreement|Updated at"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "agreement version"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Agreement"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Content"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Version"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Created at"
+msgstr ""
+
+#: app/models/agreement/agreement_version.rb:-
+msgid "AgreementVersion|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Account balance"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Discounts"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Currency"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust first name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust last name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Email"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Cust group"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Language"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Phone"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Address"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|City"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Country region"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|State"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Street"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Contact person name"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Contact person select address"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Created date"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Modified date"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Status"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account.rb:-
+msgid "AxAccount|Red one shipped"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "ax order"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery city"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery country region"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery country"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery state"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery street"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Delivery zip code"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Purch order form num"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Sales tax"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Shipping charges"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Discounts"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Created date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Modified date"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Sales status"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Status"
+msgstr ""
+
+#: app/models/read_ax/ax_order.rb:-
+msgid "AxOrder|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "ax order line item"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Ax order"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Item"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales qty"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Sales unit"
+msgstr ""
+
+#: app/models/read_ax/ax_order_line_item.rb:-
+msgid "AxOrderLineItem|Updated at"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "redone serial number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax account"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax order number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Ax order"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Email address"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|First name"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Last name"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Serial number"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Purch order form num"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Sent mail"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Created at"
+msgstr ""
+
+#: app/models/read_ax/redone_serial_number.rb:-
+msgid "RedoneSerialNumber|Updated at"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "ax account address"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Ax account"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Ax account number"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Address type"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Address"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|City"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Country region"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|State"
+msgstr ""
+
+#: app/models/read_ax/ax_account_address.rb:-
+msgid "AxAccountAddress|Street"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "download"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Download category"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version major"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version minor"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Version revision"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Windows"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Mac"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Release note"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Release date"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Filename"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Filesize"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Created at"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Restrict"
+msgstr ""
+
+#: app/models/downloads/download.rb:-
+msgid "Download|Build number"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "download category"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Title"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Description"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Agreement"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Code"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Disable"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Display pattern"
+msgstr ""
+
+#: app/models/downloads/download_category.rb:-
+msgid "DownloadCategory|Position"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task sent log"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Mail queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|From"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|To"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Subject"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Body"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Sent"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskSentLog|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task jan prepare delivery queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Account balance"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Discounts"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Phone"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Contact person name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Contact person select address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Invoice street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Delivery street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueue|Readed at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task jan prepare delivery queue line item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid ""
+"MailTaskJanPrepareDeliveryQueueLineItem|Mail task jan prepare delivery queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Item name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales qty"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Sales unit"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Price"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTaskJanPrepareDeliveryQueueLineItem|Delivery message"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task description"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Table name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Task date"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Available"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_prepare_delivery_queue.rb:-
+msgid "MailTask|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "mail task jan ready to ship queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Account balance"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Discounts"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Phone"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Contact person name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Contact person select address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Invoice street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery city"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery country region"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery state"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Delivery street"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Readed at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "mail task jan ready to ship queue line item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Mail task jan ready to ship queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Confirmed lv"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Delivered in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Invoiced in total"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Item"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Item name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Remain sales physical"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales item reservation number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales qty"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Sales unit"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Price"
+msgstr ""
+
+#: app/models/mail_task/mail_task_jan_ready_to_ship_queue.rb:-
+msgid "MailTaskJanReadyToShipQueueLineItem|Delivery message"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "mail task redone serial number notify queue"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Mail task"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Ax account number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Ax order number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Email address"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|First name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Last name"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Serial number"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Purch order form num"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Complete"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Sid"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Created at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Updated at"
+msgstr ""
+
+#: app/models/mail_task/mail_task_redone_serial_number_notify_queue.rb:-
+msgid "MailTaskRedoneSerialNumberNotifyQueue|Readed at"
+msgstr ""
+
+#: app/controllers/contact_controller.rb:47
+#: app/views/app/controllers/contact_controller.rb:47
+msgid "CONTACT_US|POST|FAILED"
+msgstr ""
+
+#: app/controllers/account_controller.rb:68
+#: app/views/app/controllers/account_controller.rb:68
+msgid "GLOBAL|MESSAGE|USER_NOT_EXISTS"
+msgstr ""
+
+#: app/controllers/account_controller.rb:74 app/views/layouts/support.rhtml:37
+#: app/views/account/login.rhtml:2 app/views/account/login.rhtml:15
+msgid "GLOBAL|SIGN_IN"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:19
+msgid "PAGE_TITLE|HOME_PAGE"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:55
+msgid "PAGE_TITLE|EMAIL_ANNOUNCEMENTS"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:65
+msgid "PAGE_TITLE|FAQS"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:69
+msgid "PAGE_TITLE|GEAR_WE_USE"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:73
+msgid "PAGE_TITLE|CONTACT_US"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:77
+msgid "PAGE_TITLE|ABOUT_RED"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:81
+msgid "PAGE_TITLE|PRIVACY_POLICY"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:85
+msgid "PAGE_TITLE|RETURN_POLICY"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:89
+msgid "PAGE_TITLE|LENSES"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:98
+msgid "PAGE_TITLE|WORKFLOW"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:102
+msgid "PAGE_TITLE|TECHNOLOGY"
+msgstr ""
+
+#: app/controllers/static_pages_controller.rb:106
+msgid "PAGE_TITLE|SUPPORT"
+msgstr ""
+
+#: app/views/app/models/pfp_transaction.rb:-
+msgid "pfp transaction"
+msgstr ""
+
+#: app/views/gallery/_sub_navigation.rhtml:2
+#: app/views/app/views/gallery/_sub_navigation.rhtml:2
+#: app/views/app/views/gallery/index.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|VIDEO_GALLERY"
+msgstr ""
+
+#: app/views/gallery/_sub_navigation.rhtml:3
+#: app/views/gallery/still_gallery.rhtml:1
+#: app/views/app/views/gallery/_sub_navigation.rhtml:3
+#: app/views/app/views/gallery/still_gallery.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|STILL_GALLERY"
+msgstr ""
+
+#: app/views/gallery/_sub_navigation.rhtml:4
+#: app/views/gallery/poster_gallery.rhtml:1
+#: app/views/app/views/gallery/_sub_navigation.rhtml:4
+#: app/views/app/views/gallery/poster_gallery.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|POSTER_GALLERY"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:2 app/views/gallery/index.rhtml:49
+#: app/views/static_pages/shot_on_red.rhtml:49
+#: app/views/app/views/gallery/still_gallery.rhtml:2
+msgid "GALLERY|STILL_GALLERY|DESCRIPTION"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:5 app/views/gallery/index.rhtml:66
+#: app/views/static_pages/shot_on_red.rhtml:90
+#: app/views/app/views/gallery/still_gallery.rhtml:5
+msgid "GALLERY|RED_50_150MM_T3_ZOOM"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:7 app/views/gallery/index.rhtml:73
+#: app/views/static_pages/shot_on_red.rhtml:98
+#: app/views/app/views/gallery/still_gallery.rhtml:7
+msgid "GALLERY|TEST_CHART_SHOT_ON_CAMERA"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:9 app/views/gallery/index.rhtml:69
+#: app/views/static_pages/shot_on_red.rhtml:94
+#: app/views/app/views/gallery/still_gallery.rhtml:9
+msgid "GALLERY|STILL_GALLERY|SHOT_WITH_PRE_PRODUCTION"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:11 app/views/gallery/index.rhtml:120
+#: app/views/gallery/index.rhtml:125 app/views/gallery/index.rhtml:130
+#: app/views/gallery/index.rhtml:139 app/views/gallery/index.rhtml:144
+#: app/views/static_pages/shot_on_red.rhtml:138
+#: app/views/static_pages/shot_on_red.rhtml:143
+#: app/views/static_pages/shot_on_red.rhtml:148
+#: app/views/static_pages/shot_on_red.rhtml:157
+#: app/views/static_pages/shot_on_red.rhtml:162
+#: app/views/app/views/gallery/still_gallery.rhtml:11
+msgid "GALLERY|STILL_GALLERY|SUB_TITLE"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:67 app/views/gallery/index.rhtml:70
+#: app/views/gallery/index.rhtml:74 app/views/gallery/index.rhtml:85
+#: app/views/static_pages/shot_on_red.rhtml:91
+#: app/views/static_pages/shot_on_red.rhtml:95
+#: app/views/static_pages/shot_on_red.rhtml:99
+#: app/views/static_pages/shot_on_red.rhtml:108
+#: app/views/support/release_history.rhtml:35
+#: app/views/app/views/support/release_history.rhtml:33
+msgid "GLOBAL|DOWNLOAD"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:83
+#: app/views/static_pages/shot_on_red.rhtml:106
+#: app/views/app/views/gallery/index.rhtml:5
+msgid "GALLERY|VIDEO_GALLERY|SNEAK_PREVIEW"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:89
+#: app/views/static_pages/shot_on_red.rhtml:111
+#: app/views/app/views/gallery/index.rhtml:28
+msgid "GALLERY|VIDEO_GALLERY|REDCODE"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:90
+#: app/views/static_pages/shot_on_red.rhtml:112
+#: app/views/app/views/gallery/index.rhtml:29
+msgid "GALLERY|VIDEO_GALLERY|REDCODE|DESCRIPTION"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:91 app/views/gallery/index.rhtml:97
+#: app/views/gallery/index.rhtml:107
+#: app/views/static_pages/shot_on_red.rhtml:113
+#: app/views/static_pages/shot_on_red.rhtml:119
+#: app/views/static_pages/shot_on_red.rhtml:127
+#: app/views/app/views/gallery/index.rhtml:19
+#: app/views/app/views/gallery/index.rhtml:31
+#: app/views/app/views/gallery/index.rhtml:43
+#: app/views/app/views/gallery/index.rhtml:51
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_TORRENT"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:92 app/views/gallery/index.rhtml:98
+#: app/views/gallery/index.rhtml:108
+#: app/views/static_pages/shot_on_red.rhtml:114
+#: app/views/static_pages/shot_on_red.rhtml:120
+#: app/views/static_pages/shot_on_red.rhtml:128
+#: app/views/app/views/gallery/index.rhtml:7
+#: app/views/app/views/gallery/index.rhtml:20
+#: app/views/app/views/gallery/index.rhtml:32
+#: app/views/app/views/gallery/index.rhtml:44
+#: app/views/app/views/gallery/index.rhtml:52
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_VIA_HTTP"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:95
+#: app/views/static_pages/shot_on_red.rhtml:117
+#: app/views/app/views/gallery/index.rhtml:41
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_3"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:105
+#: app/views/static_pages/shot_on_red.rhtml:125
+#: app/views/app/views/gallery/index.rhtml:49
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_4"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:112
+#: app/views/static_pages/shot_on_red.rhtml:133
+msgid "GALLERY|SHOT_ON_RED|CROSSING_THE_LINE"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:171
+#: app/views/static_pages/shot_on_red.rhtml:169
+#: app/views/app/views/gallery/index.rhtml:63
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:172
+#: app/views/static_pages/shot_on_red.rhtml:170
+#: app/views/app/views/gallery/index.rhtml:64
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT|TEXT"
+msgstr ""
+
+#: app/views/pages/shot_on_red.rhtml:27
+#: app/views/app/views/pages/shot_on_red.rhtml:27
+msgid "PAGES|SHOT_ON_RED|TEXT"
+msgstr ""
+
+#: app/views/pages/red_ibc_2007.rhtml:22
+#: app/views/app/views/pages/red_ibc_2007.rhtml:22
+msgid "PAGES|RED_WILL_BE_AT_IBC|TEXT"
+msgstr ""
+
+#: app/views/pages/red_in_china_and_japan.rhtml:23
+#: app/views/app/views/pages/red_in_china_and_japan.rhtml:23
+msgid "PAGES|RED_IN_CHINA_AND_JAPAN|TEXT"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:6
+#: app/views/layouts/white_store.rhtml:6 app/views/layouts/support.rhtml:6
+#: app/views/layouts/blank.rhtml:6
+#: app/views/app/views/layouts/static_pages.rhtml:6
+#: app/views/app/views/layouts/white_store.rhtml:6
+#: app/views/app/views/layouts/support.rhtml:6
+msgid "GLOBAL|WEBSITE_DESCRIPTION"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:7
+#: app/views/layouts/white_store.rhtml:7 app/views/layouts/support.rhtml:7
+#: app/views/layouts/blank.rhtml:7
+#: app/views/app/views/layouts/static_pages.rhtml:7
+#: app/views/app/views/layouts/white_store.rhtml:7
+#: app/views/app/views/layouts/support.rhtml:7
+msgid "GLOBAL|WEBSITE_KEYWORDS"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:26
+#: app/views/layouts/white_store.rhtml:45 app/views/layouts/support.rhtml:28
+#: app/views/app/views/layouts/static_pages.rhtml:26
+#: app/views/app/views/layouts/white_store.rhtml:45
+#: app/views/app/views/layouts/support.rhtml:28
+msgid "GLOBAL|LOGO_LINK_HINT"
+msgstr ""
+
+#: app/views/layouts/support.rhtml:29
+#: app/views/app/views/layouts/support.rhtml:29
+msgid "SUPPORT|TITLE"
+msgstr ""
+
+#: app/views/layouts/support.rhtml:33
+#: app/views/app/views/layouts/support.rhtml:32
+msgid "SUPPORT|LOGIN_STATUS|WELCOME"
+msgstr ""
+
+#: app/views/layouts/support.rhtml:35
+msgid "GLOBAL|SIGN_OUT"
+msgstr ""
+
+#: app/views/accessories/index.rhtml:3
+#: app/views/accessories/_sub_navigation.rhtml:1
+#: app/views/cameras/_sub_navigation.rhtml:1 app/views/cameras/index.rhtml:9
+#: app/views/app/views/cameras/_sub_navigation.rhtml:2
+#: app/views/app/views/cameras/index.rhtml:3
+msgid "CAMERAS|SUB_NAVIGATION|INTRODUCING_RED_ONE"
+msgstr ""
+
+#: app/views/accessories/monitoring_options.rhtml:1
+#: app/views/static_pages/technology.rhtml:1
+#: app/views/static_pages/global/_main_navigation.rhtml:8
+#: app/views/cameras/_sub_navigation.rhtml:14
+#: app/views/cameras/technology.rhtml:1
+#: app/views/app/views/static_pages/technology.rhtml:1
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:7
+msgid "NAVIGATION|TECHNOLOGY"
+msgstr ""
+
+#: app/views/accessories/power_system.rhtml:3
+#: app/views/accessories/_sub_navigation.rhtml:2
+#: app/views/cameras/tech_specs.rhtml:3
+#: app/views/cameras/_sub_navigation.rhtml:2
+#: app/views/cameras/_sub_navigation.rhtml:13
+#: app/views/app/views/cameras/tech_specs.rhtml:2
+#: app/views/app/views/cameras/_sub_navigation.rhtml:3
+msgid "CAMERAS|SUB_NAVIGATION|TECH_SPECS"
+msgstr ""
+
+#: app/views/accessories/_sub_navigation.rhtml:3
+#: app/views/cameras/format_options.rhtml:1
+#: app/views/cameras/_sub_navigation.rhtml:3
+#: app/views/app/views/cameras/format_options.rhtml:1
+#: app/views/app/views/cameras/_sub_navigation.rhtml:4
+msgid "CAMERAS|SUB_NAVIGATION|FORMAT_OPTIONS"
+msgstr ""
+
+#: app/views/accessories/_sub_navigation.rhtml:4
+#: app/views/cameras/photo_tour.rhtml:4
+#: app/views/cameras/_sub_navigation.rhtml:4
+#: app/views/app/views/cameras/photo_tour.rhtml:4
+#: app/views/app/views/cameras/_sub_navigation.rhtml:5
+msgid "CAMERAS|SUB_NAVIGATION|PHOTO_TOUR"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:2
+#: app/views/app/views/static_pages/contact_us.rhtml:2
+#: app/views/app/views/support/index.rhtml:8
+msgid "CONTACT_US|TITLE"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:54
+#: app/views/app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|ORDERS"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:54
+#: app/views/app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|ORDERS_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:55
+#: app/views/app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:55
+#: app/views/app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:57
+#: app/views/app/views/static_pages/contact_us.rhtml:57
+msgid "CONTACT_US|QUEUE|TECH_SUPPORT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:59
+#: app/views/app/views/static_pages/contact_us.rhtml:59
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:59
+#: app/views/app/views/static_pages/contact_us.rhtml:59
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:60
+#: app/views/app/views/static_pages/contact_us.rhtml:60
+msgid "CONTACT_US|QUEUE|JOBS"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:60
+#: app/views/app/views/static_pages/contact_us.rhtml:60
+msgid "CONTACT_US|QUEUE|JOBS_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:61
+#: app/views/app/views/static_pages/contact_us.rhtml:61
+msgid "CONTACT_US|QUEUE|WEBSITE"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:61
+#: app/views/app/views/static_pages/contact_us.rhtml:61
+msgid "CONTACT_US|QUEUE|WEBSITE_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:62
+#: app/views/app/views/static_pages/contact_us.rhtml:62
+msgid "CONTACT_US|QUEUE|GENERAL"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:62
+#: app/views/app/views/static_pages/contact_us.rhtml:62
+msgid "CONTACT_US|QUEUE|GENERAL_TEXT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:65 app/views/support/index.rhtml:14
+#: app/views/app/views/static_pages/contact_us.rhtml:65
+#: app/views/app/views/support/index.rhtml:14
+msgid "CONTACT_US|POST|NAME"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:66 app/views/support/index.rhtml:16
+#: app/views/app/views/static_pages/contact_us.rhtml:66
+#: app/views/app/views/support/index.rhtml:16
+msgid "CONTACT_US|POST|EMAIL"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:68 app/views/support/index.rhtml:18
+#: app/views/app/views/static_pages/contact_us.rhtml:68
+#: app/views/app/views/support/index.rhtml:18
+msgid "CONTACT_US|POST|PHONE"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:71 app/views/support/index.rhtml:19
+#: app/views/app/views/static_pages/contact_us.rhtml:71
+#: app/views/app/views/support/index.rhtml:19
+msgid "CONTACT_US|POST|SUMMARY"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:73
+#: app/views/app/views/static_pages/contact_us.rhtml:73
+msgid "CONTACT_US|POST|PROBLEM_URL"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:77 app/views/support/index.rhtml:20
+#: app/views/app/views/static_pages/contact_us.rhtml:77
+#: app/views/app/views/support/index.rhtml:20
+msgid "CONTACT_US|POST|PRODUCT_TYPE"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:83 app/views/support/index.rhtml:24
+#: app/views/app/views/static_pages/contact_us.rhtml:83
+#: app/views/app/views/support/index.rhtml:24
+msgid "CONTACT_US|POST|SERIAL_NO"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:85
+#: app/views/app/views/static_pages/contact_us.rhtml:85
+msgid "CONTACT_US|POST|SERIAL_NO|TIP"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:88 app/views/support/index.rhtml:25
+#: app/views/app/views/static_pages/contact_us.rhtml:88
+#: app/views/app/views/support/index.rhtml:25
+msgid "CONTACT_US|POST|DETAIL"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:91
+#: app/views/app/views/static_pages/contact_us.rhtml:91
+#: app/views/app/views/support/index.rhtml:27
+msgid "CONTACT_US|POST|TECH_SUPPORT|SUBSCRIPT"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:94
+#: app/views/contact/confirm_contact.rhtml:13 app/views/support/index.rhtml:28
+#: app/views/app/views/static_pages/contact_us.rhtml:93
+#: app/views/app/views/contact/confirm_contact.rhtml:13
+#: app/views/app/views/support/index.rhtml:28
+msgid "CONTACT_US|POST|SEND"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:97
+#: app/views/app/views/static_pages/contact_us.rhtml:96
+msgid "GLOBAL|FULL_COMPANY_NAME"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:99
+#: app/views/app/views/static_pages/contact_us.rhtml:98
+msgid "CONTACT_US|PHONE"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:100
+#: app/views/app/views/static_pages/contact_us.rhtml:99
+msgid "CONTACT_US|FAX"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:101
+#: app/views/support/index.rhtml:10
+#: app/views/app/views/static_pages/contact_us.rhtml:100
+#: app/views/app/views/support/index.rhtml:10
+msgid "CONTACT_US|AVAILABLE_TIME"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:104
+#: app/views/app/views/static_pages/contact_us.rhtml:103
+msgid "CONTACT_US|ADDRESS"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:1
+#: app/views/app/views/static_pages/faqs.rhtml:1
+msgid "FAQS|TITLE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:3
+#: app/views/app/views/static_pages/faqs.rhtml:3
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:4
+#: app/views/app/views/static_pages/faqs.rhtml:4
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:6
+#: app/views/app/views/static_pages/faqs.rhtml:6
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:7
+#: app/views/app/views/static_pages/faqs.rhtml:7
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:9
+#: app/views/app/views/static_pages/faqs.rhtml:9
+msgid ""
+"FAQS|QUESTION|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:10
+#: app/views/app/views/static_pages/faqs.rhtml:10
+msgid "FAQS|ANSWER|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:12
+#: app/views/app/views/static_pages/faqs.rhtml:12
+msgid "FAQS|QUESTION|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:13
+#: app/views/app/views/static_pages/faqs.rhtml:13
+msgid "FAQS|ANSWER|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:15
+#: app/views/app/views/static_pages/faqs.rhtml:15
+msgid "FAQS|QUESTION|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:16
+#: app/views/app/views/static_pages/faqs.rhtml:16
+msgid "FAQS|ANSWER|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:18
+#: app/views/app/views/static_pages/faqs.rhtml:18
+msgid "FAQS|QUESTION|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:19
+#: app/views/app/views/static_pages/faqs.rhtml:19
+msgid "FAQS|ANSWER|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:21
+#: app/views/app/views/static_pages/faqs.rhtml:21
+msgid "FAQS|QUESTION|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:22
+#: app/views/app/views/static_pages/faqs.rhtml:22
+msgid "FAQS|ANSWER|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+
+#: app/views/static_pages/privacy_policy.rhtml:1
+#: app/views/app/views/static_pages/privacy_policy.rhtml:1
+msgid "PRIVACY_POLICY|TITLE"
+msgstr ""
+
+#: app/views/static_pages/privacy_policy.rhtml:3
+#: app/views/app/views/static_pages/privacy_policy.rhtml:3
+msgid "PRIVATY_POLICY|RICH_CONTENT"
+msgstr ""
+
+#: app/views/static_pages/return_policy.rhtml:1
+#: app/views/app/views/static_pages/return_policy.rhtml:1
+msgid "RETURN_POLICY|TITLE"
+msgstr ""
+
+#: app/views/static_pages/return_policy.rhtml:3
+#: app/views/app/views/static_pages/return_policy.rhtml:3
+msgid "RETURN_POLICY|RICH_CONTENT"
+msgstr ""
+
+#: app/views/static_pages/about_red.rhtml:1
+#: app/views/app/views/static_pages/about_red.rhtml:1
+msgid "ABOUT_RED|TITLE"
+msgstr ""
+
+#: app/views/static_pages/about_red.rhtml:3
+#: app/views/app/views/static_pages/about_red.rhtml:3
+msgid "ABOUT_RED|TEXT"
+msgstr ""
+
+#: app/views/static_pages/index.rhtml:50
+#: app/views/app/views/static_pages/index.rhtml:23
+msgid "INDEX|SHOT_ON_RED|TEXT"
+msgstr ""
+
+#: app/views/static_pages/workflow.rhtml:1 app/views/cameras/workflow.rhtml:4
+#: app/views/app/views/static_pages/workflow.rhtml:1
+msgid "WORKFLOW|TITLE"
+msgstr ""
+
+#: app/views/static_pages/workflow.rhtml:8
+#: app/views/app/views/static_pages/workflow.rhtml:8
+msgid "WORKFLOW|TEXT"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:3
+#: app/views/cameras/technology.rhtml:5
+#: app/views/app/views/static_pages/technology.rhtml:3
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:4
+#: app/views/cameras/technology.rhtml:6
+#: app/views/app/views/static_pages/technology.rhtml:4
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM|TEXT"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:8
+#: app/views/cameras/technology.rhtml:10
+#: app/views/app/views/static_pages/technology.rhtml:8
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:9
+#: app/views/cameras/technology.rhtml:11
+#: app/views/app/views/static_pages/technology.rhtml:9
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN|TEXT"
+msgstr ""
+
+#: app/views/static_pages/gear_we_use.rhtml:1
+#: app/views/app/views/static_pages/gear_we_use.rhtml:1
+msgid "GEAR_WE_USE|TITLE"
+msgstr ""
+
+#: app/views/static_pages/gear_we_use.rhtml:3
+#: app/views/app/views/static_pages/gear_we_use.rhtml:3
+msgid "GEAR_WE_USE|TEXT"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:16
+#: app/views/static_pages/_email_announcement_success.rhtml:1
+#: app/views/app/views/static_pages/email_announcements.rhtml:16
+#: app/views/app/views/static_pages/_email_announcement_success.rhtml:1
+msgid "EMAIL_ANNOUNCEMENT|TITLE"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:17
+#: app/views/app/views/static_pages/email_announcements.rhtml:17
+msgid "EMAIL_ANNOUNCEMENT|DESCRIPTION|TEXT"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:27
+#: app/views/app/views/static_pages/email_announcements.rhtml:27
+msgid "EMAIL_ANNOUNCEMENT|REQUIRED_FIELDS"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:28
+#: app/views/app/views/static_pages/email_announcements.rhtml:28
+msgid "EMAIL_ANNOUNCEMENT|NAME"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:30
+#: app/views/app/views/static_pages/email_announcements.rhtml:30
+msgid "EMAIL_ANNOUNCEMENT|EMAIL_ADDRESS"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:35
+#: app/views/app/views/static_pages/email_announcements.rhtml:35
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:36
+#: app/views/app/views/static_pages/email_announcements.rhtml:36
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|CINEMATOGRAPHER"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:37
+#: app/views/app/views/static_pages/email_announcements.rhtml:37
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DISTRIBUTOR"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:38
+#: app/views/app/views/static_pages/email_announcements.rhtml:38
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DIRECTOR"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:39
+#: app/views/app/views/static_pages/email_announcements.rhtml:39
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|RENTAL_COMPANY"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:40
+#: app/views/app/views/static_pages/email_announcements.rhtml:40
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|PRODUCER"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:41
+#: app/views/app/views/static_pages/email_announcements.rhtml:41
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|VISUAL_FX_ARTIST"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:42
+#: app/views/static_pages/email_announcements.rhtml:49
+#: app/views/app/views/static_pages/email_announcements.rhtml:42
+#: app/views/app/views/static_pages/email_announcements.rhtml:49
+msgid "EMAIL_ANNOUNCEMENT|OTHER"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:46
+#: app/views/app/views/static_pages/email_announcements.rhtml:46
+msgid "EMAIL_ANNOUNCEMENT|EDITOR"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:53
+#: app/views/app/views/static_pages/email_announcements.rhtml:53
+msgid "EMAIL_ANNOUNCEMENT|SYSTEM"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:60
+#: app/views/app/views/static_pages/email_announcements.rhtml:60
+msgid "EMAIL_ANNOUNCEMENT|HD_CAMERA"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:61
+#: app/views/static_pages/email_announcements.rhtml:67
+#: app/views/app/views/static_pages/email_announcements.rhtml:61
+#: app/views/app/views/static_pages/email_announcements.rhtml:67
+msgid "EMAIL_ANNOUNCEMENT|CAMERA_MODEL"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:66
+#: app/views/app/views/static_pages/email_announcements.rhtml:66
+msgid "EMAIL_ANNOUNCEMENT|RAW_CAMERA"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:72
+#: app/views/app/views/static_pages/email_announcements.rhtml:72
+msgid "EMAIL_ANNOUNCEMENT|COMMENTS"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:77
+#: app/views/app/views/static_pages/email_announcements.rhtml:77
+msgid "EMAIL_ANNOUNCEMENT|SUBSCRIPT"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:80
+#: app/views/app/views/static_pages/email_announcements.rhtml:80
+msgid "GLOBAL|SUBMIT"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:9
+#: app/views/static_pages/global/_main_navigation.rhtml:4
+#: app/views/app/views/static_pages/lenses.rhtml:1
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:4
+msgid "NAVIGATION|LENSES"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:50
+#: app/views/app/views/static_pages/lenses.rhtml:9
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|PRICE"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:59
+#: app/views/app/views/static_pages/lenses.rhtml:5
+#: app/views/app/views/static_pages/lenses.rhtml:7
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:91
+#: app/views/app/views/static_pages/lenses.rhtml:20
+msgid "LENSES|RED_18-50MM_F2.8_CF|PRICE"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:103
+#: app/views/app/views/static_pages/lenses.rhtml:16
+#: app/views/app/views/static_pages/lenses.rhtml:18
+msgid "LENSES|RED_18-50MM_F2.8_CF"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:137
+#: app/views/app/views/static_pages/lenses.rhtml:31
+msgid "LENSES|RED_300MM_F2.8|PRICE"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:178
+#: app/views/app/views/static_pages/lenses.rhtml:27
+#: app/views/app/views/static_pages/lenses.rhtml:29
+msgid "LENSES|RED_300MM_F2.8"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:193
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|RED_PRIME_SET|PRICE"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:200
+#: app/views/app/views/static_pages/lenses.rhtml:38
+#: app/views/app/views/static_pages/lenses.rhtml:40
+msgid "LENSES|RED_PRIME_SET"
+msgstr ""
+
+#: app/views/static_pages/_email_announcement_success.rhtml:2
+#: app/views/app/views/static_pages/_email_announcement_success.rhtml:2
+msgid "EMAIL_ANNOUNCEMENT|MESSAGE|SUCCESS"
+msgstr ""
+
+#: app/views/static_pages/terms.rhtml:1 app/views/store/terms.rhtml:4
+#: app/views/app/views/static_pages/terms.rhtml:1
+#: app/views/app/views/store/terms.rhtml:4
+msgid "TERMS|TITLE"
+msgstr ""
+
+#: app/views/static_pages/shot_on_red.rhtml:66
+msgid "SHOT_ON_RED|MOVIE|CROSSING_THE_LINE"
+msgstr ""
+
+#: app/views/static_pages/shot_on_red.rhtml:76
+msgid "SHOT_ON_RED|MOVIE|GAME"
+msgstr ""
+
+#: app/views/static_pages/shot_on_red.rhtml:82
+msgid "SHOT_ON_RED|MOVIE|WANTED"
+msgstr ""
+
+#: app/views/static_pages/shot_on_red.rhtml:83
+msgid "SHOT_ON_RED|MOVIE|GUERRILLA"
+msgstr ""
+
+#: app/views/static_pages/shot_on_red.rhtml:84
+msgid "SHOT_ON_RED|MOVIE|ARGENTINE"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:3
+#: app/views/app/views/static_pages/global/_footer.rhtml:7
+msgid "FOOTER|CONTACT_US"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:4
+#: app/views/app/views/static_pages/global/_footer.rhtml:3
+msgid "FOOTER|EMAIL_ANNOUNCEMENTS"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:5
+#: app/views/app/views/static_pages/global/_footer.rhtml:4
+msgid "FOOTER|FAQS"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:6
+#: app/views/app/views/static_pages/global/_footer.rhtml:5
+msgid "FOOTER|NEWS"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:7
+#: app/views/app/views/static_pages/global/_footer.rhtml:6
+msgid "FOOTER|GEAR_WE_USE"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:8
+#: app/views/app/views/static_pages/global/_footer.rhtml:8
+msgid "FOOTER|ABOUT_RED"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:9
+#: app/views/app/views/static_pages/global/_footer.rhtml:9
+msgid "FOOTER|PRIVACY_POLICY"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:10
+#: app/views/app/views/static_pages/global/_footer.rhtml:10
+msgid "FOOTER|RETURN_POLICY"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:11
+#: app/views/app/views/static_pages/global/_footer.rhtml:11
+msgid "FOOTER|TERMS"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:25
+#: app/views/app/views/static_pages/global/_footer.rhtml:16
+msgid "FOOTER|COPYRIGHT"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:26
+#: app/views/app/views/static_pages/global/_footer.rhtml:17
+msgid "FOOTER|TRADE"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:2
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:2
+msgid "NAVIGATION|HOME"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:3
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:3
+msgid "NAVIGATION|CAMERAS"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:5
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:5
+msgid "NAVIGATION|ACCESSORIES"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:7
+#: app/views/cameras/_sub_navigation.rhtml:15
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:6
+msgid "NAVIGATION|WORKFLOW"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:10
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:8
+msgid "NAVIGATION|GALLERY"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:11
+#: app/views/static_pages/global/_main_navigation.rhtml:13
+msgid "NAVIGATION|SUPPORT"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:12
+#: app/views/app/views/static_pages/global/_main_navigation.rhtml:9
+msgid "NAVIGATION|STORE"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:7
+#: app/views/cameras/tech_specs.rhtml:90
+#: app/views/app/views/cameras/format_options.rhtml:7
+msgid "CAMERAS|FORMAT_OPTIONS|AVAILABLE_VIDEO_FORMATS"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:8
+#: app/views/cameras/tech_specs.rhtml:91
+#: app/views/app/views/cameras/format_options.rhtml:8
+msgid "CAMERAS|FORMAT_OPTIONS|USING_LENS_FORMATS"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:22
+#: app/views/cameras/tech_specs.rhtml:106
+#: app/views/app/views/cameras/format_options.rhtml:22
+msgid "CAMERAS|FORMAT_OPTIONS|ATTRIBUTES_2540P_RAW"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:25
+#: app/views/cameras/tech_specs.rhtml:109
+#: app/views/app/views/cameras/format_options.rhtml:25
+msgid "CAMERAS|FORMAT_OPTIONS|2540p_S35mm"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:38
+#: app/views/cameras/format_options.rhtml:51
+#: app/views/cameras/format_options.rhtml:64
+#: app/views/cameras/tech_specs.rhtml:122
+#: app/views/cameras/tech_specs.rhtml:135
+#: app/views/cameras/tech_specs.rhtml:148
+#: app/views/app/views/cameras/format_options.rhtml:38
+#: app/views/app/views/cameras/format_options.rhtml:51
+#: app/views/app/views/cameras/format_options.rhtml:64
+msgid "CAMERAS|FORMAT_OPTIONS|ATTRIBUTES"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:40
+#: app/views/cameras/format_options.rhtml:53
+#: app/views/cameras/tech_specs.rhtml:124
+#: app/views/cameras/tech_specs.rhtml:137
+#: app/views/app/views/cameras/format_options.rhtml:40
+#: app/views/app/views/cameras/format_options.rhtml:53
+msgid "CAMERAS|FORMAT_OPTIONS|4K_35mm_224"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:42
+#: app/views/cameras/format_options.rhtml:55
+#: app/views/cameras/tech_specs.rhtml:126
+#: app/views/cameras/tech_specs.rhtml:139
+#: app/views/app/views/cameras/format_options.rhtml:42
+#: app/views/app/views/cameras/format_options.rhtml:55
+msgid "CAMERAS|FORMAT_OPTIONS|4K_35mm"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:69
+#: app/views/cameras/tech_specs.rhtml:153
+#: app/views/app/views/cameras/format_options.rhtml:69
+msgid "CAMERAS|FORMAT_OPTIONS|2K_S16mm"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:71
+#: app/views/cameras/tech_specs.rhtml:155
+#: app/views/app/views/cameras/format_options.rhtml:71
+msgid "CAMERAS|FORMAT_OPTIONS|2K_B4"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:75
+#: app/views/cameras/tech_specs.rhtml:159
+#: app/views/app/views/cameras/format_options.rhtml:75
+msgid "CAMERAS|FORMAT_OPTIONS|SUBSCRIPT"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:7
+#: app/views/app/views/cameras/tech_specs.rhtml:7
+msgid "GLOBAL|SENSOR"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:8
+#: app/views/app/views/cameras/tech_specs.rhtml:8
+msgid "GLOBAL|RED_ONE|SENSOR"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:16
+#: app/views/app/views/cameras/tech_specs.rhtml:16
+msgid "GLOBAL|PHYSICAL_SIZE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:17
+#: app/views/app/views/cameras/tech_specs.rhtml:17
+msgid "GLOBAL|RED_ONE|PHYSICAL_SIZE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:20
+#: app/views/app/views/cameras/tech_specs.rhtml:20
+msgid "GLOBAL|ACTIVE_PIXEL_ARRAY"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:21
+#: app/views/app/views/cameras/tech_specs.rhtml:21
+msgid "GLOBAL|RED_ONE|ACTIVE_PIXEL_ARRAY"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:24
+#: app/views/app/views/cameras/tech_specs.rhtml:24
+msgid "GLOBAL|FULL_PIXEL_ARRAY"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:25
+#: app/views/app/views/cameras/tech_specs.rhtml:25
+msgid "GLOBAL|RED_ONE|FULL_PIXEL_ARRAY"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:28
+#: app/views/app/views/cameras/tech_specs.rhtml:28
+msgid "GLOBAL|DYNAMIC_RANGE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:29
+#: app/views/app/views/cameras/tech_specs.rhtml:29
+msgid "GLOBAL|RED_ONE|DYNAMIC_RANGE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:32
+#: app/views/app/views/cameras/tech_specs.rhtml:32
+msgid "GLOBAL|DEPTH_OF_FIELD"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:33
+#: app/views/app/views/cameras/tech_specs.rhtml:33
+msgid "GLOBAL|RED_ONE|DEPTH_OF_FIELD"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:36
+#: app/views/app/views/cameras/tech_specs.rhtml:36
+msgid "GLOBAL|ACQUISITION_FORMATS"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:37
+#: app/views/app/views/cameras/tech_specs.rhtml:37
+msgid "GLOBAL|RED_ONE|ACQUISITION_FORMATS"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:40
+#: app/views/app/views/cameras/tech_specs.rhtml:40
+msgid "GLOBAL|RAW_OUTPUT"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:41
+#: app/views/app/views/cameras/tech_specs.rhtml:41
+msgid "GLOBAL|RED_ONE|RAW_OUTPUT"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:44
+#: app/views/app/views/cameras/tech_specs.rhtml:44
+msgid "GLOBAL|FRAME_RATES"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:45
+#: app/views/app/views/cameras/tech_specs.rhtml:45
+msgid "GLOBAL|RED_ONE|FRAME_RATES"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:49
+#: app/views/app/views/cameras/tech_specs.rhtml:49
+msgid "GLOBAL|VIDEO_OUTPUTS"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:50
+#: app/views/app/views/cameras/tech_specs.rhtml:50
+msgid "GLOBAL|RED_ONE|VIDEO_OUTPUTS"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:53
+#: app/views/app/views/cameras/tech_specs.rhtml:53
+msgid "GLOBAL|DIGITAL_MEDIA_MAGAZINE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:54
+#: app/views/app/views/cameras/tech_specs.rhtml:54
+msgid "GLOBAL|RED_ONE|DIGITAL_MEDIA_MAGAZINE"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:56
+#: app/views/app/views/cameras/tech_specs.rhtml:56
+msgid "GLOBAL|REDCODE_CODEC"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:57
+#: app/views/app/views/cameras/tech_specs.rhtml:57
+msgid "GLOBAL|RED_ONE|REDCODE_CODEC"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:61
+#: app/views/app/views/cameras/tech_specs.rhtml:61
+msgid "GLOBAL|RAW_PORT_OPTION"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:62
+#: app/views/app/views/cameras/tech_specs.rhtml:62
+msgid "GLOBAL|RED_ONE|RAW_PORT_OPTION"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:66
+#: app/views/app/views/cameras/tech_specs.rhtml:65
+msgid "GLOBAL|AUDIO"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:67
+#: app/views/app/views/cameras/tech_specs.rhtml:66
+msgid "GLOBAL|RED_ONE|AUDIO"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:70
+#: app/views/app/views/cameras/tech_specs.rhtml:69
+msgid "GLOBAL|MONITOR"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:71
+#: app/views/app/views/cameras/tech_specs.rhtml:70
+msgid "GLOBAL|RED_ONE|MONITOR"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:74
+#: app/views/app/views/cameras/tech_specs.rhtml:73
+msgid "GLOBAL|WEIGHT"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:75
+#: app/views/app/views/cameras/tech_specs.rhtml:74
+msgid "GLOBAL|RED_ONE|WEIGHT"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:78
+#: app/views/app/views/cameras/tech_specs.rhtml:77
+msgid "GLOBAL|CONSTRUCTION"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:79
+#: app/views/app/views/cameras/tech_specs.rhtml:78
+msgid "GLOBAL|RED_ONE|CONSTRUCTION"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:83
+#: app/views/app/views/cameras/tech_specs.rhtml:82
+msgid "CAMERAS|TECH_SPECS|SUBSCRIPT"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:43 app/views/app/views/cameras/index.rhtml:15
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:45 app/views/app/views/cameras/index.rhtml:17
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE|TEXT"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:49 app/views/app/views/cameras/index.rhtml:21
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:51 app/views/app/views/cameras/index.rhtml:23
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE|TEXT"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:54 app/views/app/views/cameras/index.rhtml:26
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:56 app/views/app/views/cameras/index.rhtml:28
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN|TEXT"
+msgstr ""
+
+#: app/views/contact/confirm_contact.rhtml:1
+#: app/views/app/views/contact/confirm_contact.rhtml:1
+msgid "CONTACT_US|CONFIRMATION|TITLE"
+msgstr ""
+
+#: app/views/contact/confirm_contact.rhtml:3
+#: app/views/app/views/contact/confirm_contact.rhtml:3
+msgid "CONTACT_US|CONFIRMATION|INVALID_TITLE"
+msgstr ""
+
+#: app/views/contact/confirm_contact.rhtml:12
+#: app/views/app/views/contact/confirm_contact.rhtml:12
+msgid "CONTACT_US|POST|EDIT"
+msgstr ""
+
+#: app/views/contact/post_contact.rhtml:1
+#: app/views/app/views/contact/post_contact.rhtml:1
+msgid "CONTACT_US|SUCCESSFUL_TITLE"
+msgstr ""
+
+#: app/views/contact/_contact_table.rhtml:4
+#: app/views/app/views/contact/_contact_table.rhtml:4
+msgid "CONTACT_US|POST|CATEGORY"
+msgstr ""
+
+#: app/views/contact/_contact_table.rhtml:13
+#: app/views/app/views/contact/_contact_table.rhtml:13
+msgid "CONTACT_US|POST|"
+msgstr ""
+
+#: app/views/account/login.rhtml:8
+msgid "GLOBAL|EMAIL_ADDRESS"
+msgstr ""
+
+#: app/views/account/login.rhtml:12
+msgid "GLOBAL|PASSWORD"
+msgstr ""
+
+#: app/views/account/login.rhtml:15
+msgid "GLOBAL|FORGOT_PASSWORD"
+msgstr ""
+
+#: app/views/account/login.rhtml:17
+msgid "SIGN_IN|SETUP_ACCOUNT_TIP"
+msgstr ""
+
+#: app/views/account/login.rhtml:18
+msgid "SIGN_IN|NOTE"
+msgstr ""
+
+#: app/views/register/_form.rhtml:5 app/views/app/views/register/_form.rhtml:5
+msgid "REGISTER|FIRST_NAME"
+msgstr ""
+
+#: app/views/register/_form.rhtml:8 app/views/app/views/register/_form.rhtml:8
+msgid "REGISTER|LAST_NAME"
+msgstr ""
+
+#: app/views/register/_form.rhtml:11
+#: app/views/app/views/register/_form.rhtml:11
+msgid "REGISTER|COMPANY"
+msgstr ""
+
+#: app/views/register/_form.rhtml:13
+#: app/views/app/views/register/_form.rhtml:13
+msgid "REGISTER|PRODUCT_CATEGORIES"
+msgstr ""
+
+#: app/views/register/_form.rhtml:16
+#: app/views/register/_product_select.rhtml:1
+#: app/views/app/views/register/_form.rhtml:16
+#: app/views/app/views/register/_product_select.rhtml:1
+msgid "REGISTER|PRODUCT"
+msgstr ""
+
+#: app/views/register/_form.rhtml:18
+#: app/views/app/views/register/_form.rhtml:19
+msgid "REGISTER|SERIAL_NUMBER"
+msgstr ""
+
+#: app/views/register/_form.rhtml:22
+#: app/views/app/views/register/_form.rhtml:22
+msgid "REGISTER|CONTACT_INFORMATION"
+msgstr ""
+
+#: app/views/register/_form.rhtml:23
+#: app/views/app/views/register/_form.rhtml:23
+msgid "REGISTER|ADDRESS1"
+msgstr ""
+
+#: app/views/register/_form.rhtml:25
+#: app/views/app/views/register/_form.rhtml:25
+msgid "REGISTER|ADDRESS2"
+msgstr ""
+
+#: app/views/register/_form.rhtml:27
+#: app/views/app/views/register/_form.rhtml:27
+msgid "REGISTER|COUNTRY"
+msgstr ""
+
+#: app/views/register/_form.rhtml:50
+#: app/views/app/views/register/_form.rhtml:54
+msgid "REGISTER|CITY"
+msgstr ""
+
+#: app/views/register/_form.rhtml:53
+#: app/views/app/views/register/_form.rhtml:57
+msgid "REGISTER|ZIP"
+msgstr ""
+
+#: app/views/register/_form.rhtml:61
+#: app/views/app/views/register/_form.rhtml:64
+msgid "REGISTER|PHONE_NUMBER"
+msgstr ""
+
+#: app/views/register/_form.rhtml:63
+#: app/views/app/views/register/_form.rhtml:66
+msgid "REGISTER|EMAIL_ADDRESS"
+msgstr ""
+
+#: app/views/register/_state_select.rhtml:1
+#: app/views/app/views/register/_state_select.rhtml:2
+#: app/views/app/views/register/_state_select.rhtml:4
+#: app/views/app/views/register/_state_select.rhtml:6
+#: app/views/app/views/register/_state_select.rhtml:8
+#: app/views/app/views/register/_state_select.rhtml:10
+#: app/views/app/views/register/_state_select.rhtml:12
+#: app/views/app/views/register/_state_select.rhtml:16
+#: app/views/app/views/register/_state_select.rhtml:18
+msgid "REGISTER|STATE"
+msgstr ""
+
+#: app/views/register/index.rhtml:9 app/views/app/views/register/index.rhtml:9
+msgid "REGISTER|CAPTION"
+msgstr ""
+
+#: app/views/support/release_history.rhtml:2
+#: app/views/app/views/support/release_history.rhtml:2
+msgid "SUPPORT|CATEGORIES"
+msgstr ""
+
+#: app/views/support/release_history.rhtml:8
+#: app/views/support/release_history.rhtml:24
+#: app/views/app/views/support/release_history.rhtml:8
+#: app/views/app/views/support/release_history.rhtml:23
+msgid "SUPPORT|RELEASE_HISTORY|TITLE"
+msgstr ""
+
+#: app/views/support/release_history.rhtml:30
+#: app/views/app/views/support/release_history.rhtml:30
+msgid "SUPPORT|RELEASE_DATE"
+msgstr ""
+
+#: app/views/support/index.rhtml:8
+msgid "SUPPORT|CONTACT|TITLE"
+msgstr ""
+
+#: app/views/support/index.rhtml:27
+msgid "SUPPORT|POST|SUBSCRIPT"
+msgstr ""
+
+#: app/views/support/index.rhtml:48
+msgid "SUPPORT|COMING_SOON"
+msgstr ""
+
+#: app/views/support/index.rhtml:55 app/views/app/views/support/index.rhtml:43
+msgid "SUPPORT|PLATFORM_NOT_SUPPORT"
+msgstr ""
+
+#: app/views/support/index.rhtml:76 app/views/app/views/support/index.rhtml:51
+msgid "SUPPORT|DOWNLOAD|RELEASE_HISTORY"
+msgstr ""
+
+#: app/views/support/index.rhtml:77
+msgid "SUPPORT|DOWNLOAD|DOWNLOAD_FOR_OTHER_OS"
+msgstr ""
+
+#: app/views/app/views/gallery/index.rhtml:16
+msgid "GALLERY|VIDEO_GALLERY|CROSSING_THE_LINE|DESCRIPTION"
+msgstr ""
+
+#: app/views/app/views/gallery/index.rhtml:59
+msgid "GALLERY|VIDEO_GALLERY|SUBSCRIPT"
+msgstr ""
+
+#: app/views/app/views/layouts/support.rhtml:34
+msgid "SUPPORT|LOGIN_STATUS|LOG_OUT"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:1
+msgid "ACCESSORIES|TITLE"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:4
+msgid "ACCESSORIES|MODULAR_DESIGN"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:5
+msgid "ACCESSORIES|MODULAR_DESIGN|TEXT"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:9
+msgid "ACCESSORIES|RED_RAILS"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:10
+msgid "ACCESSORIES|RED_RAILS|TEXT"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:14
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY"
+msgstr ""
+
+#: app/views/app/views/static_pages/accessories.rhtml:15
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY|TEXT"
+msgstr ""
+
+#: app/views/app/views/static_pages/index.rhtml:16
+msgid "INDEX|SIDE_BAR|TEXT"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:6
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|DESCRIPTION"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:9
+#: app/views/app/views/static_pages/lenses.rhtml:20
+#: app/views/app/views/static_pages/lenses.rhtml:31
+#: app/views/app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|MSRP"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:10
+#: app/views/app/views/static_pages/lenses.rhtml:21
+#: app/views/app/views/static_pages/lenses.rhtml:32
+#: app/views/app/views/static_pages/lenses.rhtml:44
+msgid "GLOBAL|ESTIMATED_SHIP_DATE"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:10
+msgid "RED_50-150MM_T-3_F2.8_ZOOM|ESTIMATED_SHIP_DATE"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:17
+msgid "LENSES|RED_18-50MM_F2.8_CF|DESCRIPTION"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:21
+msgid "LENSES|RED_18-50MM_F2.8_CF|ESTIMATED_SHIP_DATE"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:28
+msgid "LENSES|RED_300MM_F2.8|DESCRIPTION"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:32
+msgid "LENSES|RED_300MM_F2.8|ESTIMATED_SHIP_DATE"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:39
+msgid "LENSES|RED_PRIME_SET|DESCRIPTION"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:41
+msgid "LENSES|RED_PRIME_SET|IMAGE_NOTE"
+msgstr ""
+
+#: app/views/app/views/static_pages/lenses.rhtml:44
+msgid "LENSES|RED_PRIME_SET|ESTIMATED_SHIP_DATE"
+msgstr ""
+
+#: app/views/app/views/static_pages/terms.rhtml:3
+#: app/views/app/views/store/terms.rhtml:7
+msgid "TERMS|CONTENT"
+msgstr ""
+
+#: app/views/app/views/cameras/index.rhtml:11
+msgid "CAMERAS|INTRODUCING|PHOTO_TOUR|VIEW_THE_COMPLETE_RED_ONE_PHOTO_TOUR"
+msgstr ""

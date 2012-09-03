@@ -1,0 +1,16 @@
+@import url('../indent_content.css');
+
+#content { top: -120px; }
+#content h1 { text-align: right; border: none; }
+
+div.content p.telephone_bg {
+	height: auto !important; height: 100px; min-height: 100px;
+	background: transparent url(/skin/img/telephone_bg.png) no-repeat left top;
+	padding-left: 100px;
+	padding-top: 20px;
+}
+
+div.content ul { padding: 0; }
+div.content ul li { list-style: none; background: transparent url(/skin/img/gray_bg_left.png) no-repeat left center; padding-left: 5px; margin: 5px 0; }
+#content div.content ul li a { background: #3E3E3E url(/skin/img/gray_bg_right.png) no-repeat right top; display: block; width: 300px; line-height: 21px; text-decoration: none; }
+div.content strong { color: #FFF; }

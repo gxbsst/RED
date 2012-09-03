@@ -1,0 +1,31 @@
+/*#content { background: url(/skin/img/contactus/banner.jpg) no-repeat right -50px; }*/
+
+#company_info { color: #FFF; width: 280px; position: absolute; right: 0; top: 200px; background: url(/skin/img/contactus/t.gif) center bottom no-repeat; padding-bottom: 10px; }
+	#company_info h2 { background: url(/skin/img/contactus/t.gif) center top no-repeat; font-size: 14px; padding: 10px;  }
+	#company_info p { padding: 0 10px; line-height: 1.5em; }
+
+#contact_us { position: relative; padding-bottom: 3em; }
+	#contact_us label strong { color: #EEE; }
+	#contact_us #queue_selector { padding-bottom: 20px; }
+		#contact_us #queue_selector div.form_field { height: 1.5em; line-height: 1.5em; }
+	#contact_us #fields { margin-right: 350px; }
+		#contact_us #fields div.form_field { clear: left; margin: 10px 0; min-height: 25px; }
+			#fields div.form_field label { display: block; float: left; width: 80px; line-height: 1em; }
+			#fields div.form_field input { padding: 2px; height: 18px; border-width: 1px; }
+			#fields div.form_field select { height: 22px; }
+				#fields #mail_detail textarea { height: 200px; padding: 2px; overflow: auto; border-width: 1px; }
+	#contact_us div.button { text-align: right; margin-right: 20px; }
+		#contact_us div.button input { background: url(/skin/img/contactus/send.jpg) center center no-repeat; width: 70px; height: 23px; border: 0; }
+
+.tip { clear: left; margin-left: 80px; }
+.tip strong { color: #FFF; }
+
+/* Style for custom fields */
+.optional_field { display: none; }
+#contact_product_type { width: 200px; }
+
+/* Queue: Website */
+.Website #problem_url { display: block; }
+/* Queue: TechSupport */
+.TechSupport #phone, .TechSupport #product_type, .TechSupport #serial_no, .TechSupport #attachment { display: block; }
+.TechSupport #subscript { display: block; margin-left: 80px; width: 450px; }

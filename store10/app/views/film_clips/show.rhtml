@@ -1,0 +1,40 @@
+<% content_for(:heading) do %>
+  <h1><%= @film_clip.title %></h1>
+<% end %>
+
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/film_clips/show' %>
+<% end %>
+
+<div id="description">
+<p id="image-outer" ><%= image_tag @film_clip.thumbnail.url(:small),  :size => '134x193', :align => "left" %></p>
+<p><%= @film_clip.summary %></p>
+<ul>
+
+  <% unless @film_clip.title.blank? %>
+  <li> <strong>Title: </strong><%= @film_clip.title %> (<%= @film_clip.film_type %>)</li>
+  <% end %>
+
+  <% unless @film_clip.producer.blank? %>
+  <li><strong>Producer: </strong><%= @film_clip.producer %></li>
+  <% end %>
+
+  <% unless @film_clip.director.blank? %>
+  <li><strong>Director: </strong><%= @film_clip.director %></li>
+  <% end %>
+
+  <% unless @film_clip.dp.blank? %>
+  <li><strong>DP: </strong><%= @film_clip.dp %></li>
+  <% end %>
+
+  <% unless @film_clip.release_date.blank? %>
+  <li><strong>Release Date: </strong><%= @film_clip.release_date %></li>
+  <% end %>
+
+  <% unless @film_clip.trailer_url.blank? %>
+  <li><strong>Trailer: </strong><%= link_to @film_clip.trailer_url_host, @film_clip.trailer_url %></li>
+  <% end %>
+
+</ul>
+
+</div>

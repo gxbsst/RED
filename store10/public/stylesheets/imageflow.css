@@ -1,0 +1,80 @@
+@charset 'utf-8';
+
+/* ImageFlow Settings - CSS 2.1
+==================================== */
+@media screen, projection {
+	.imageflow {
+		visibility:hidden;
+		position: relative; 
+		text-align: left;
+		width: 100%;		
+		margin-left: -44px;
+/*		width: 710px;*/
+	}
+
+	
+	.imageflow img {
+		visibility:hidden;
+		position: absolute; 
+		top: 0px;
+		border: none;
+	}
+	.imageflow p{
+		text-align:center;
+		margin:0 auto;
+	}
+	.imageflow .loading {
+		position: relative;
+		left: 50%;
+		margin-left: -106px;
+		width: 200px;
+		height: 15px;
+		padding:5px;
+		visibility: visible;
+		border: 1px solid white;
+	}
+	.imageflow .loading_bar {
+		height: 15px;
+		width: 1%;
+		background: #fff;
+		visibility: visible;
+	}
+	.imageflow .caption {
+		font-weight:bold;
+		position:relative; 
+		text-align:center;
+		z-index:10000;
+	}
+	.imageflow .scrollbar {
+		visibility:hidden;
+		position:relative; 
+		border-bottom:1px solid #b3b3b3;
+		z-index:10001;
+		width: 900px;
+	}
+	.imageflow .slider {
+		position:absolute;
+		z-index:10002;
+		background:url(/skin/img/gallery/slider.png) center center repeat-x;
+		width: 10px;
+	height:17px;
+	}
+	#myImageFlow {
+	}
+	#myImageFlow_scrollbar, #myImageFlow1_scrollbar {
+		height: 16px;
+		border: 1px solid #333; 
+/*		padding-left: 20px;*/
+		margin: 0;
+		background: url(/skin/img/gallery/scollbar_bg.jpg) left center repeat-x;
+
+	}
+	#myImageFlow1_scrollbar {
+	}
+	#myImageFlow_slider, #myImageFlow1_slider {
+		height: 17px;
+/*		width: 40px;*/
+		margin-top: 0;
+		margin-right: 0;
+	}
+}

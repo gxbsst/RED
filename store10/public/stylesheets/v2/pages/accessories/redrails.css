@@ -1,0 +1,18 @@
+#modula_design h2{text-align:left;}
+#red_rail{text-align:justify;}
+#red_rail img{margin-left:10px;margin-top:3px;}
+#flexibility img{margin-right:5px;}
+#content p{text-align:justify;}
+.text-content {
+  padding-bottom: 1em; 
+}
+.text-content hr {
+	clear: both;
+	margin: 1em 0;
+	border: none;
+	background: transparent url(/images/theme/horizontal-line.png) repeat-y left center;
+	height: 10px;
+}
+.images-outer img{ 
+  margin-right: 16px;
+  }

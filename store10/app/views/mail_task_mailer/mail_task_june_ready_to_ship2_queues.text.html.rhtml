@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>RED Digital Cinem</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF;background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table>
+      <!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;">
+        <h3><%=h @queue.name %> -</h3>
+        <p>Your RED orders are nearly ready to ship.   Hopefully, you have had a chance to review your existing orders as well as place additional orders on RED.com.  We will begin shipping on July 21, 2008, in order of payment received within this delivery group. As of July 17, here are the items we have on order for you....</p>
+        <h2>UPDATED ORDER DETAILS </h2>
+        <p>Your updated orders can be found at <a href="http://www.red.com/my_account" style="color: #f5ffd4; font-weight: bold;">www.red.com/my_account</a> .  You will need to log on with your user name (ie, <%= @queue.email_address %>) and password.  If you forgot your password, please use our <a href="http://www.red.com/account/forgot_password" style="color: #FFF;">Password Recovery Page</a>  to securely reset your password.  Also, as you review the items that you've ordered, please ensure that you’ll have a working system that is configured for the way you plan to use your RED ONE.</p>
+				<p>PLEASE NOTE THAT THE MY ACCOUNT SECTION OF RED.COM IS IN BETA.  IF YOU SEE ANY ERRORS OR BUGS, PLEASE EMAIL ME AT <%= @queue.staff_email_address %> IMMEDIATELY.</p>
+				
+        <p>
+          <strong>NOTES:</strong>
+          <ul style="padding-left:38px;">
+            <li>
+						EVFs, 18-50 ZOOM LENS (METRIC), BLACK ALUMINUM RODS, RED RAID DRIVE, and 50-150 ZOOM LENSES (IMPERIAL) are in limited supply and backorders for that product are currently being fulfilled in order of RED ONE delivery date. If they do not ship with your above order, they will ship separately as soon as they are available</li>
+						<li> We have limited quantities of RED BRICKS in stock at this time. To ensure that each of our customers has access to RED BRICKS, we are only making a total of four RED BRICKS available per camera. If you order more than four, the BRICK quantity above four will be in a backorder situation. We hope to resolve this inventory issue as soon as possible.</li>
+            <li>"Coming Soon" accessories (ie, not currently released for delivery): </li>
+            <ul style="margin:8px 0;">
+              <li>RED FLASH DRIVE</li>
+              <li>16 GB COMPLACT FLASH CARDS</li>
+              <li>RED PRO PRIME SET OF LENSES (BOTH IMPERIAL AND METRIC)</li>
+              <li>RED PRO 18-85 ZOOM LENS (BOTH IMPERIAL AND METRIC)</li>
+							<li>RED PRO 300mm PRIME LENS (BOTH IMPERIAL AND METRIC)</li>
+              <li>50-150 ZOOM LENS (METRIC)</li>
+              <li>300mm PRIME LENS (METRIC)</li>
+              <li>CARBON FIBER RODS (STANDARD)</li>
+              <li>RED PRO 7" LCD</li>
+							<li>RED LENS MOTOR</li>
+            </ul>
+            <li>All parts subject to availability. </li>
+            <li>Once final payment has been received, please allow a minimum of 3-5 business days for order processing.  At times of extremely heavy processing volume, order processing can take approximately 10 business days after final payment has been received. </li>
+            <li>International shipping and handling charges NOT INCLUDE import duties, VAT, or other international fees.</li>
+            <li>All prepaid deposits will be applied to this order.  Additional prepayments can be made at anytime via wire transfer, check drawn from a US bank, or cash.</li>
+            <li>THE ORDER TOTALS INCLUDE ALL ITEMS ORDERED – AVAILABLE AND COMING SOON.  YOU CAN CHOOSE TO PAY FOR YOUR ENTIRE ORDER NOW AND HAVE PRODUCT SHIP AS IT BECOMES AVAILABLE OR ONLY PAY FOR AVAILABLE PRODUCT AT THIS TIME.</li>
+            <li>Only RED ONE camera(s) in the serial number range of #<%= @queue.class::Delivery_range_begin %> - #<%= @queue.class::Delivery_range_end %> are available for delivery at this time.</li>
+            <li>If you think you qualify for any California or Washington tax exemptions, please notify me immediately at <a style="color:#FFFFFF;font-weight:bold;text-decoration: underline;" href='mailto:<%= @queue.staff_email_address %>'><%= @queue.staff_email_address %></a>.</li>
+						<li>Please check with FedEx to ensure you do not have a signature release on file for your delivery address.  A signature release could result in your package(s) being dropped off and left unattended at the delivery address.</li>
+          </ul>
+        </p>
+        <p>THIS WILL BE THE FINAL SALES EMAIL COMMUNICATION FROM RED ON CAMERAS #<%= @queue.class::Delivery_range_begin %> - #<%= @queue.class::Delivery_range_end %>.</p>
+        <h2>ACCOUNT INFORMATION</h2>
+				<p>Please use <a href="http://www.red.com/my_account" style="color: #f5ffd4; font-weight: bold;">www.red.com/my_account</a> to confirm/update all of your contact information to ensure your order is processed and delivered in the most efficient manner.</p>
+        <h2>CONTACT US</h2>
+        <p>In an effort to best facilitate our customers in a timely manner, we are making all contacts via email and would encourage you to respond in kind to me at <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="mailto:<%= @queue.staff_email_address %>" ><%= @queue.staff_email_address %></a>. Please always include your customer number or camera serial number in any email sent to RED so that we may locate your account quickly. Due to the large volume of sales, direct contact by phone is only encouraged in the event that we are unable to resolve an inquiry by email.</p>
+        <h2>PAYMENT INSTRUCTIONS</h2>
+				<table cellpadding="0" cellspacing="0" bordercolor="#000000" style="border:collapse;border:0;" width="100%">
+          <tr>
+            <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding:5px 22px 0 22px;">
+              Your complete subtotal: <strong><%= number_to_currency(@queue.complete_subtotal) %></strong> (Excludes future cameras scheduled for a later delivery)
+            </td>
+          </tr>
+          <% unless @queue.deposits == 0.0 %>
+            <tr>
+              <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding:0px 22px 0px 22px;">
+                Prepaid deposits on your account: <strong><%= number_to_currency(@queue.deposits) %></strong>
+              </td>
+            </tr>
+          <% end %>
+
+          <% unless @queue.shipping_charges == 0.0 %>
+            <tr>
+              <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding:0px 22px 0px 22px;">
+                <%   if @queue.delivery_country_region_id == "US" %>
+                Fed Ex 2 Day Air: <strong><%= number_to_currency(@queue.shipping_charges) %></strong>
+                <% else %>
+                 Fed Ex International Priority: <strong><%= number_to_currency(@queue.shipping_charges) %></strong>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+          <% unless @queue.sales_tax == 0.0 %>
+            <tr>
+              <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding:0px 22px 0px 22px;">
+                <%=h @queue.sales_tax_state_name %> Sales Tax: <strong><%= number_to_currency(@queue.sales_tax) %></strong>
+              </td>
+            </tr>
+          <% end %>
+
+          <% unless @queue.total_due <= 0.0 %>
+            <tr>
+              <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding:0px 22px 5px 22px;">
+                <span style="font-size:16px;font-weight:bold;">TOTAL DUE: <strong><%= number_to_currency(@queue.total_due) %></strong></span>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+        <p>* Actual shipping charges will be calculated at time of shipment.</p>
+        <p>Payment for the balance of your order must be completed via wire transfer, check drawn on a US bank, or cash equivalent.</p>
+        <p>
+          <strong>NOTES: </strong>
+          Your order will not being the fulfillment process until your payment has been received by RED. Checks will require a (10) day clearing period once received by RED before order will ship. Wire transfers can take up to 3-5 days to be received by RED.
+        </p>
+        <p>When executing the wire transfer, you are responsible for transferring the net of <strong><%= number_to_currency((@queue.total_due <= 0.0) ? 0.0 : @queue.total_due) %></strong> (USD).  In addition to the net balance due, you must select to pay any fees associated with the transfer. </p>
+        <h2>Wire transfer instructions:</h2>
+        <table width="600px" cellpadding="2" cellspacing="1" bgcolor="#000000" bordercolor="#000000">
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Amount to Transfer : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= number_to_currency((@queue.total_due <= 0.0) ? 0.0 : @queue.total_due) %> USD</font> plus any associated wire transfer fees</td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Name : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_name] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Address : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_address] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">ABA Routing Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:aba_routing_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">SWIFT Code : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:swift_code] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">To Credit : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:to_credit] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Account Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:account_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Reference Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= "#{@queue.ax_account_number}" %> <%= "/ #{@queue.last_name}" unless @queue.last_name.blank? %></font></td></tr>
+        </table>
+        <p>The REFERENCE NUMBER IS VERY IMPORTANT. Be certain to include the REFERENCE NUMBER on your transfer to avoid delay in crediting the payment to your account and shipping your camera.</p>
+        <h2>OTHER</h2>
+        <p>As of receiving this updated order email, you will have (30) days to make final payment for your camera package(s) in the range of #<%= @queue.class::Delivery_range_begin %> - #<%= @queue.class::Delivery_range_end %>.  If you wish to delay delivery of your camera package (for any reason), you can by notifying RED at <a style="color:#FFFFFF;font-weight:bold;text-decoration: underline;" href='mailto:orders@red.com'>orders@red.com</a> by <strong>August 18</strong>.  Once you decide you are ready to take delivery of your camera, you can send final payment and RED has (30) days to work you back into the delivery rotation. Your camera serial number will remain intact.</p>
+        <p>Before your order will ship, you must accept RED's <a style="color:#FFF;font-weight:bold;text-decoration: underline;" href="http://www.red.com/terms">Terms and Conditions</a>.</p>
+        <p>RED will also contact you about any future training sessions or events at RED as the information becomes available.</p>
+        <p>Thank you for your order and we look forward to having you as part of the RED family!</p>
+        <p>
+          <br/>
+          - RED BOMB SQUAD<br />
+          <a style="color:#FFF;font-weight:bold;text-decoration: none;" href="mailto:<%= @queue.staff_email_address %>">&nbsp;&nbsp;&nbsp;<%= @queue.staff_email_address %></a><br/>
+          &nbsp;&nbsp;&nbsp;949.206.7900
+        </p>
+        <!-- end div#content -->
+      </div>
+      <!--end div#wrapper -->
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,168 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag(
+    'v2/schema-white',
+    'v2/pages/support/support',
+    'v2/pages/support/index'
+  ) %>
+  <script type="text/javascript">
+    function checkForm() {
+      return Validator.check([
+        { text: $F('contact_name'), pattern: /^[^\"\,\<\>\[\]]+$/, message: 'Name is invalid.' },
+        { text: $F('contact_email'), pattern: 'email', message: 'Invalid email address.' },
+        { text: $F('contact_summary'), pattern: 'string', message: 'Summary can not be empty.' },
+        { text: $F('contact_detail'), pattern: 'string', message: 'Detail can no be empty.' },
+        { text: $F('contact_serial_no'), pattern: 'string', message: 'Please enter your serial number.' }
+      ]);
+    }
+  </script>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1>RED Support</h1>
+<% end %>
+
+  <div id="sidebar">
+  	<h2>Categories</h2>
+  	<ul id="categories">
+  		<li><a href="http://www.reduser.net">REDUSER.net</a></li>
+  		<li><%= link_to 'RED FAQs', '/faq'%></li>
+  		<li><%= link_to "Product Registration", :controller => "register" %></li>
+  		<li><a href="http://www.google.com">More Information</a></li>
+  	</ul>
+  	
+  	<h2>Tech Support</h2>
+  	<div id="technical_support">
+  		<%= form_tag(
+  		  { :controller => 'contact', :action => 'tickets' },
+  		  :multipart => true, :onsubmit => 'return checkForm();'
+  		) %>
+  		<input type="hidden" name="contact[queue]" value="TechSupport" />
+
+  		<label for="contact_name"><%= _('CONTACT_US|POST|NAME') %></label>
+  		<%= text_field_tag 'contact[name]', (session[:web_user].blank? ? nil : session[:web_user].name), :id => 'contact_name', :class => 'input_field' %>
+  		<label for="contact_email"><%= _('CONTACT_US|POST|EMAIL') %></label>
+  		<%= text_field_tag 'contact[email]', (session[:web_user].blank? ? nil : session[:web_user].email_address), :id => 'contact_email', :class => 'input_field' %>
+  		<%= labeled_text_field _('CONTACT_US|POST|PHONE'), 'contact', 'phone' %>
+  		<%= labeled_text_field _('CONTACT_US|POST|SUMMARY'), 'contact', 'subject' %>
+  		<label for="contact_product_type"><%= _('CONTACT_US|POST|PRODUCT_TYPE') %></label>
+  		<select name="contact[product_type]" id="contact_product_type" class="input_field">
+  			<%= options_for_select ['Camera', 'EVF', 'LCD', 'Charger', 'Battery', 'Other'] %>
+  		</select>
+  		<%= labeled_text_field _('CONTACT_US|POST|SERIAL_NO'), 'contact', 'serial_numbers' %>
+  		<label for="contact_detail"><%= _('CONTACT_US|POST|DETAIL') %></label>
+  		<textarea id="contact_detail" name="contact[content]" class="input_field" rows="4" cols="20"></textarea>
+  		<label for="contact_attachment">Attach File</label>
+  		<input type="file" name="contact[attachment]" id="contact_attachment" size="12" class="input_field" />
+  		<br />
+  		<%= submit_tag _('CONTACT_US|POST|SEND'), :class => 'button' %>
+  		<p class="subscript"><%= _('SUPPORT|POST|SUBSCRIPT') %></p>
+  		<%= end_form_tag %>
+  	</div>
+  </div>
+
+<div id="downloads" class="float-right">
+  <div class="warring">
+       <p><strong>WINDOWS:</strong></p>
+        <ul>
+          <li>- Intel Core i7 machine with 3 GB of memory and 7200 RPM harddisk</li>
+       <li>- NVIDIA Quadro-based graphics card (other brands might not work)</li>
+       <li>- Windows Vista SP1 or Windows XP SP2 or higher</li>
+       </ul>
+
+       <p><strong>MAC:</strong></p>
+       <ul>
+      <li>- Two 3.2GHz Quad-Core Intel Xeon Mac Pro with 4 GB of memory</li>
+       <li>- 2.8 GHz Intel Macbook Pro with 4 GB of memory and 7200 RPM harddisk</li>
+       <li>- Any modern ATI or NVIDIA graphics card (Intel graphics cards do not work)</li>
+       <li>- OS X 10.5 (Leopard) or 10.4 (Tiger)</li>
+       </ul>
+
+  </div><!--end warring-->
+		<% @categories.each do |category, download| %>
+		<div class="download">
+			<% if category.download_type == 'movie' %>
+			<h2><%= category.title %></h2>
+			<div class="description_outer">
+				<p class="movie">
+					<%= link_to((image_tag category.picture_url, :align => 'center'), "#{category.movie_url}")  %>
+					<%= textile category.description, [:no_span_caps, :lite_mode] %>
+				</p>
+				<p class="download_version">
+					<%= link_to image_tag('/skin/img/support/button_download_enable.png'), "#{category.movie_url}",:class => 'download' %>
+					<span> <%= "<strong>Size:</strong> #{category.movie_size}" unless category.movie_size.blank? %> <br /> <%= "<strong>Duration:</strong> #{category.movie_duration}" unless category.movie_duration.blank? %></span>
+				</p>
+			</div>
+			
+			<% else %>
+			
+			<h2><%= category.title %></h2>
+			<div class="description_outer" >
+				<p class="description">
+					<%= image_tag category.picture_url, :align => 'left' %>
+					<%= textile category.description, [:no_span_caps, :lite_mode] %>
+				</p>
+
+				<p class="download_version">
+				  
+					<% if category.downloads.empty? %>
+					
+					<%= image_tag "/skin/img/support/button_download_disable.png",:alt => "You Can't Download",:align=>"left" %>
+					<span class="revision coming_soon"><%= _('SUPPORT|COMING_SOON') %></span>
+					<% else %>
+					<% if download.nil? %>
+					<%= image_tag "/skin/img/support/button_download_disable.png",:alt => "You Can't Download",:align=>"left" %>
+					<% if category.code == 'red_scratch' %>
+					<span class="revision">Scratch only supports windows at this time<%= "<br /> #{platform_images category}" %></span>                            
+					
+					<% else %>
+					
+					<span class="revision"><%= _('SUPPORT|PLATFORM_NOT_SUPPORT') %><%= "<br /> #{platform_images category}" %></span>
+					
+					<% end %>
+					
+					<% else %>
+
+					<% if download.restrict %>
+					
+					<%= link_to (session[:web_user].blank? ? image_tag('/skin/img/support/button_download_restrict.png') : image_tag('/skin/img/support/button_download_enable.png')), {:action => 'download', :id => download.id }, :class => 'download' %>
+					
+					<% else %>
+					
+					<%= link_to image_tag('/skin/img/support/button_download_enable.png'), {:action => 'download', :id => download.id }, :class => 'download' %>
+					
+					<% end %>
+					
+					<span class="revision">
+						<%= "#{download.display_version} <br/>#{roundf download.size_in_megabytes} MB <br /> #{platform_images category}" %>
+					</span>
+					
+					<% end %>
+					
+				</p>
+				<ul>
+				  
+					<% if category.code == 'red_scratch' %> 
+
+					<li><a href='/skin/img/support/SCRATCH_REDCODE_Installation_Notes.pdf' > Installation Notes</a> </li>
+					<li>&nbsp; </li>
+					
+					<% else %>
+					
+					<li><%= link_to _('SUPPORT|DOWNLOAD|RELEASE_HISTORY'), { :action => 'release_history', :id => category.id }, :class => 'releases' %></li>
+					<li><%= link_to _('SUPPORT|DOWNLOAD|DOWNLOAD_FOR_OTHER_OS'), { :action => 'release_history', :id => category.id }, :class => 'releases' %></li>
+					
+					<% end %>
+					
+				</ul>
+				
+				<% end %>
+
+			</div>
+			
+			<% end %>
+
+		</div>
+		
+		<% end %>
+
+	</div>

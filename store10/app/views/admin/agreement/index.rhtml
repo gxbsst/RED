@@ -1,0 +1,34 @@
+<div id="left">
+  <h1><%= @title %></h1>
+  
+  <table class="list" cellpadding="0" cellspacing="0">
+    <colgroup>
+      <col style="width: 50%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 10%;"/>
+      <col style="width: 30%;"/>
+    </colgroup>
+    <tr>
+      <th>Name</th>
+      <th>Items</th>
+      <th>LastVersion</th>
+      <th>UpdateTime</th>
+    </tr>
+    <% @agreements.each do |agreement| %>
+      <tr class="<%= alternate %>">
+        <td><%= link_to agreement.name, :action => "edit", :id => agreement %></td>
+        <td><%=h agreement.agreement_versions.size %></td>
+        <td><%=h agreement.agreement_versions.blank? ? "Empty" : agreement.agreement_versions.last.version %></td>
+        <td><%=h agreement.agreement_versions.blank? ? "Empty" : agreement.agreement_versions.last.created_at.to_s(:db) %></td>
+      </tr>
+    <% end %>
+  </table>
+  
+</div>
+
+<div id="right">
+  <div class="clear">&nbsp;</div>
+  <%= link_to 'New Agreement', {:action => 'new'}, :class => 'button hundredfifty' %>
+  <div class="clear">&nbsp;</div>
+</div>
+<div class="clear">&nbsp;</div>

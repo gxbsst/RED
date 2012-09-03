@@ -1,0 +1,11 @@
+<li id="item_<%= (node = product_package_child_node).id %>">
+	<%= check_box_tag "node_ids[]", node.id, false, :class => "_node_id" %>
+	<%=
+		if node.is_a? ProductPackage
+			link_to "#{node.name} (#{node.product_package_nodes.size} items)", { :action => "edit", :id => node.id }, :title => "Edit this package ..."
+		else
+			link_to node.product.name, { :action => "edit_package_product", :id => node.id }, :title => "Edit this package product ..."
+		end
+	%>
+	<img src="http://finepower.updatelog.com/images/drag_handle.gif" class="handle" alt="Drag Handler" title="Drag me..." />
+</li>

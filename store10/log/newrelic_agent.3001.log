@@ -1,0 +1,5 @@
+# Logfile created on Thu Dec 11 21:12:11 +0800 2008 by /
+[12/11/08 21:12:11 (7126)] INFO : New Relic RPM Agent Initialized: pid = 7126
+[12/11/08 21:12:11 (7126)] INFO : Runtime environment: Webrick
+[12/11/08 21:12:11 (7126)] INFO : Transaction tracer enabled: false
+[12/11/08 21:12:11 (7126)] WARN : Did not trace Dependencies#load_file because that method does not exist

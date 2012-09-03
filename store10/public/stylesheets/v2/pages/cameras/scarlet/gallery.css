@@ -1,0 +1,11 @@
+#cameras_gallery{
+	margin: 0 auto;
+	width: 894px;
+}
+#cameras_gallery a {
+	display: block;
+	float: left;
+	margin: 12px 12px;
+	border: 1px solid #333;
+	padding: 0;
+}

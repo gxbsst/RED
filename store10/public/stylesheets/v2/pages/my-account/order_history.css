@@ -1,0 +1,96 @@
+.list {
+	background-color: transparent;
+	padding: 0;
+	border: none;
+	position: relative;
+	margin-bottom: 40px;
+}
+.sales_order {
+	background-color: #F7F7F7;
+	clear: left;
+}
+h3 {
+	font-weight: bold;
+	font-size: 14pt;
+	margin: 10px 0;
+}
+.currency {
+  text-align: right;
+}
+
+/* Delivery Mode */
+.delivery_mode {
+  position: absolute;
+  left: 180px;
+  top: -2px;
+}
+
+/* Billing Address & Shipping Address */
+.addresses_handler {
+}
+.addresses_handler span {
+  right: 0;
+  top: 0;
+  width: 280px;
+  position: absolute;
+  overflow: hidden;
+  height: 1.5em;
+}
+#content .addresses_handler a {
+	display: block;
+	width: 335px;
+	margin-left: 10px;
+	float: left;
+	position: relative;
+	text-decoration: none;
+}
+.addresses {
+  display: block;
+  clear: both;
+}
+.addresses dl {
+	width: 325px;
+	border: 1px dotted #CCC;
+	padding: 4px;
+	margin: 0 0 10px 0px;
+	margin: 0 0 10px 10px !important;
+	margin: 0 0 10px 5px;
+	float: left;
+	line-height: 20px;
+}
+
+.addresses dl.full_address {
+ border: 0;
+}
+.addresses dt {
+	font-weight: bold;
+	font-size: 10pt;
+}
+.addresses dd {
+	background-color: #F7F7F7;
+	margin: 0;
+	padding: 2px 5px;
+}
+
+/* Link Style */
+#content .list a {
+  text-decoration: none;
+  font-weight: bold;
+}
+#content .list a:hover {
+  text-decoration: underline;
+}
+#content .list .addresses_handler a {
+  text-decoration: none;
+}
+#content .list .addresses_handler a:hover span {
+  text-decoration: underline;
+}
+
+/* Sales Order Summary */
+#content .summary {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+}

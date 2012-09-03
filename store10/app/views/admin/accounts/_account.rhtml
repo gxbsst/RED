@@ -1,0 +1,54 @@
+<div class="floatHalf">
+  <h2>Name:</h2>
+  <%= text_field 'store_user', 'name', :class => 'textInput' %>
+  <%= error_message_on(:store_user, :name) %>
+</div>
+
+<div class="floatHalf">
+  <h2>Company:</h2>
+  <%= text_field 'store_user', 'company', :class => 'textInput' %>
+  <%= error_message_on(:store_user, :company) %>
+</div><div class='clear'>&nbsp;</div>
+
+<div class="floatHalf">
+  <h2>Email Address:</h2>
+  <%= text_field 'store_user', 'email_address', :class => 'textInput' %>
+  <%= error_message_on(:store_user, :email_address) %>
+</div>
+
+<div class="floatHalf">
+  <h2>Password:</h2>
+  <%= text_field 'store_user', 'password', :class => 'textInput' %>
+  <%= error_message_on(:store_user, :password) %>
+</div><div class='clear'>&nbsp;</div>
+
+<div class="floatHalf">
+  <h2>ERP Account Number:</h2>
+  <%= text_field 'store_user', 'erp_account_number', :class => 'textInput' %>
+  <%= error_message_on(:store_user, :erp_account_number) %>
+</div>
+
+<div class="clear"></div>
+<h1>Account Settings</h1>
+
+<%
+  account_settings = [
+    [:purchased, "Can download firmware"],
+    [:r3dsdk_user, "User of R3D SDK"],
+    [:post_user, "Post user of RED ONE"],
+    [:red_one_user, "RED ONE User (non-owner)"],
+    [:do_not_contact, "Do not send any mail to this user"]
+  ]
+%>
+<% account_settings.each do |setting| %>
+<div class="floatHalf">
+  <p>
+    <label for="<%= [:store_user, setting.first].join("_") %>">
+      <%= check_box :store_user, setting.first %>
+      <%= setting.last %>
+    </label>
+  </p>
+</div>
+<% end %>
+
+<div class='clear'>&nbsp;</div>

@@ -1,0 +1,96 @@
+<%= javascript_include_tag 'prototype','effects','t_shirt' %>
+<%= javascript_include_tag  "highslide/highslide.js" %>
+<script type="text/javascript">
+	/* Highslide Configurations */
+	hs.graphicsDir = '/javascripts/highslide/graphics/';
+	hs.outlineType = 'rounded-white';
+	hs.showCredits = false;
+</script>
+
+<%= stylesheet_link_tag "highslide" %>
+
+
+<div class="imgouter">
+	
+	<a href="/skin/img/store/t_shirt.png"  class="additional" onclick="return hs.expand(this);"><%= image_tag("/skin/img/store/t_shirt_thmb.png",  :align => 'left', :class => 'productImage') %></a>	
+	
+		<br style="clear:both;"/>	
+		
+		
+	<a href="/skin/img/store/t_shirt.png" class="additional" onclick="return hs.expand(this);"><img src="/skin/img/store/zoom_in.png" alt="" class="" />Zoom in</a>
+	
+  
+</div>
+<form id="product_form" onsubmit="new Ajax.Updater('items', '/store/add_to_cart_ajax', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('indicator');new Effect.Highlight('itemsContainer-outer');}, onLoading:function(request){Element.show('indicator')}, parameters:Form.serialize(this)});return false;
+      " method="post" action="/store/add_to_cart_ajax" >
+  <div class="pricelist">
+    
+    <h1>RED T-SHIRT</h1>
+    
+    <p id="price"><strong>Price: <span>$20</span></strong></p>
+    <!-- <p id="statisfaction">100% Satisfaction Guaranteed</p> -->
+<!--
+    <div class="pop_enabled">
+      <a href="#" onclick="$('pop_satisfaction').toggle();return false;" class="handler">
+        100% Satisfaction Guaranteed
+      </a>
+      <ul class="pop_layer" id="pop_satisfaction" style="display: none;">
+        <li>- Deposit is 100% refundable at any time for any reason.</li>
+        <li>- Full 1-year warranty on RED ONE.</li>
+    <li>- Review the detailed <%= link_to "Terms & Conditions", :controller => 'static_pages', :action => 'terms' %>.</li>
+    </ul>
+  </div>
+  -->
+  <div class="pop_enabled">
+    <ul class="pop_layer" id="pop_deposit" style="display: none;">
+      <li>- 10% deposit required to secure your order.</li>
+      <li>- Deposit accepted online via Credit Card or Wire Transfer.</li>
+    </ul>
+  </div>
+  
+  <div id="outer" class="men">
+    <ul id="sex_outer">
+      <li id="men" onclick="swap_tab2('men');" class="active"><strong>Men's</strong></li>
+      <li id="women" onclick="swap_tab2('women');" class="normal"><strong>Women's</strong></li>
+    </ul>
+    <div style="clear:both;"></div>
+    <div id="tab2_1">
+      <input type="hidden" name="sex" value="men" id="sex" />
+      <input type="hidden" name="product_type" value="t_shirt" />
+      <input type="hidden" name="payment_method" value="buy_now" />
+      <ul id="color_outer" >
+        <li><input type="radio" onclick="selectColor('white');" value="white" name="color" id="white" checked="checked" /><label for="white"><img src="/skin/img/store/white.jpg" onclick="selectColor('white');"  /></label></li>
+        <li><input type="radio" onclick="selectColor('red');"  value="red" name="color" id="red" /><label for="red"><img src="/skin/img/store/red.jpg" onclick="selectColor('red');" /></label></li>
+        <li><input type="radio" onclick="selectColor('black');"  value="black" name="color" id="black" /><label for="black"><img src="/skin/img/store/black.jpg" onclick="selectColor('black');" /></label></li>
+      </ul>
+      <div style="clear:both;"></div>
+      <ul id="size">
+        <li id="size1"><input  type="radio" value="s"    name="size" />S</li>
+        <li id="size2"><input  type="radio" value="m"    name="size"  checked="checked"/>M</li>
+        <li id="size3"><input  type="radio" value="l"    name="size" />L</li>
+        <li id="size4"><input  type="radio" value="xl"   name="size" />XL</li>
+        <li id="size5"><input  type="radio" value="xxl"  name="size" />XXL</li>
+        <!--
+          <li id="size6"><input  type="radio" value="xxxxl" name="size" />XXXXL</li> 
+-->
+      </ul>
+      <div style="clear:both;"></div>
+      <p id="quantity">Quantity:  <%= select_tag "qty", options_for_select(%w{1 2 3 4 5 6 7 8 9})  %></p>
+    </div><!--end tab2-1-->
+  </div><!--end outer-->
+  <p id="add_to_cart"><input type="image" src="/skin/img/store/detail_add_to_cart.png" /></p>
+</form>
+</div>
+<!-- begin div.product_description -->
+<div class="clearing"></div>
+<div id="product_description">
+  <h2>Product Description</h2>
+  <!-- begin div.discription_outer -->
+  <div id="discription_outer">
+    <p>NOTICE: RED T-shirts are always in limited availability.</p> 
+  </div>
+  <!-- end div.discription_outer -->
+  <div class="clearing">
+    
+  </div>
+</div>

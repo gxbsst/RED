@@ -1,0 +1,18 @@
+
+#wraper { background: url(/skin/img/index/hero.jpg) no-repeat; }
+
+#sub_navigation a.introducing { font-weight: bold; color: #FFF; }
+
+#photo_tour { float: right; text-align: center; width: 250px; }
+	#photo_tour img { margin: 3px; }
+	#photo_tour a { font-size: 10pt; text-decoration: none; }
+	#photo_tour a:hover { text-decoration: none; }
+
+#introduction { margin-right: 280px; }
+	#introduction h2 { color: #FFF; font-size: 12pt; }
+
+#content p strong { color: #CCC; }
+#contentboxouter{margin-top:260px;}
+#contentLeft{float:left;width:290px;}
+#contentMiddle{width:380px;float:left;}
+#contentRight{width:220px;float:left;}

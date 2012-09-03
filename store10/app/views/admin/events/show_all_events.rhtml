@@ -1,0 +1,57 @@
+<div id='left'>
+	<h1><%= @title %></h1>
+	
+	<ul class="navigation secondary">
+		<li><a href="/admin/events/">Back to All People List</a></li>
+	</ul>
+	<table id = "event_list" class="list" cellpadding="0" cellspacing="0">
+		<colgroup>
+
+		<col style="width:20px;" />
+		<col style="width:153px;" />
+
+		
+
+	</colgroup>
+	<tr>
+	    <%= sort_header_tag('id', :controller_name => "events", :update => "container",:caption => "ID") %>
+		  <%= sort_header_tag('name', :controller_name => "events", :update => "container",:caption => "Name") %>
+
+		
+	</tr>
+</table>
+
+<style type="text/css" media="screen">
+#list, #list  li ul  {list-style-type: none; padding: 0;}
+#list li{ list-style-type: none; padding-top: 0; }
+#list {border-left: 1px solid #666; border-right: 1px solid #666; border-bottom: 1px solid #666;}
+#list li.odd, #list li.even{width: 568px; padding-top: 0; height: 25px; padding-bottom: 0; }
+#list  li.even{background: #ECEEF2; }
+#list  li ul li { float: left;  padding: 0; height: 15px; padding: 2px;}
+/*#list  li ul li.li1{width: 153px !important; width: 230px; border-right: 1px solid #CCC;}*/
+
+
+#list  li ul li.li3{width: 70px !important; width: 55px; border-right: 1px solid #CCC;}
+
+</style>
+
+<ul id="list">
+	<% unless @events.blank? %>
+	<% @events.compact.each do |e| %>
+	<li class="<%= alternate %>" id="item_<%= e.id %>">
+		<ul>
+		  <li class='li3'><%= e.id %> </li>
+			<li class="li1"><%= link_to(h(e.name), :action => 'edit_event', :id => e.id ) %></li>		
+		</ul>
+	</li>
+	<% end %>
+	<% else %>
+	<li>No events to show in this view.</li>
+	<% end %>
+	<div style="clear: both;"></div>
+</ul>
+
+
+</div>
+
+<%= render(:partial => 'right_side') %>

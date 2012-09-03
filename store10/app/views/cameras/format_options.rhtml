@@ -1,0 +1,78 @@
+<h1><%= _('CAMERAS|SUB_NAVIGATION|FORMAT_OPTIONS') %></h1>
+
+<%= render :partial => 'sub_navigation' %>
+
+<table border="0" cellspacing="1" cellpadding="0" width="850" align="center" id="format_options" class="table">
+	<tr>
+		<th rowspan="2" width="250"><%= _('CAMERAS|FORMAT_OPTIONS|AVAILABLE_VIDEO_FORMATS') %></th>
+		<th colspan="4" width="600"><%= _('CAMERAS|FORMAT_OPTIONS|USING_LENS_FORMATS') %></th>
+	</tr>
+	<tr>
+		<td>S35mm</td>
+		<td>35mm</td>
+		<td>S16mm</td>
+		<td>B4 *</td>
+	</tr>
+	<tr>
+		<td colspan="5" class="subtitle">RAW PORT</td>
+	</tr>
+	<tr>
+		<td class="attr_cell">
+			<span>2540p RAW</span>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES_2540P_RAW') %>
+		</td>
+		<td>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|2540p_S35mm') %>
+		</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td colspan="5" class="subtitle">REDCODE</td>
+	</tr>
+	<tr>
+		<td class="attr_cell">
+			<span>4K RAW</span>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+		</td>
+		<td>	<%= br _('CAMERAS|FORMAT_OPTIONS|4K_35mm_224') %></td>
+		<td>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|4K_35mm') %>
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+		<tr>
+		<td class="attr_cell">
+			<span>4K 2:1</span>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+		</td>
+		<td>	<%= br _('CAMERAS|FORMAT_OPTIONS|4K_35mm_224') %></td>
+		<td>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|4K_35mm') %>
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td class="attr_cell">
+			<span>2K RAW</span>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+		</td>
+		<td></td>
+		<td></td>
+		<td>
+			<%= br _('CAMERAS|FORMAT_OPTIONS|2K_S16mm') %>
+		</td>
+		<td><%= br _('CAMERAS|FORMAT_OPTIONS|2K_B4') %></td>
+	</tr>
+	<tr>
+		<td colspan="5" class="subscript">
+			<%= br _('CAMERAS|FORMAT_OPTIONS|SUBSCRIPT') %>
+		</td>
+	</tr>
+</table>

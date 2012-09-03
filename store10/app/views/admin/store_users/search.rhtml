@@ -1,0 +1,25 @@
+<div id="left">
+  <h1><%= @title %></h1>
+  <%= render(:partial => 'list') %> 
+
+  <!-- PAGINATION -->
+  <p><%= link_to(h('< Previous'), {:page => @user_pages.current.previous, :term => @term}) + " | " if @user_pages.current.previous %>
+  <%= pagination_links(@user_pages, :window_size => 10, :params => {:term => @term}) %>
+  <%= " | " + link_to(h('Next >'), {:page => @user_pages.current.next, :term => @term}) if @user_pages.current.next %></p>
+  <span class="info"><%= "(Showing #{@user_pages.items_per_page} of #{@user_pages.item_count} Accounts total.)" %></span>
+  <!-- PAGINATION -->
+</div>
+
+<div id="right">
+  <br/>
+  <%= link_to 'Add New Account', {:action => 'new'}, :class => 'button hundredfifty' %>
+  <div class="clear">&nbsp;</div>
+  <h1>Search Accounts</h1>
+  <%= start_form_tag :action => 'search' %>
+  <input class="textInput" type="text" name="term" size="28" style="width:135px;float:left;margin-right:5px;" />
+  <%= submit_tag('Go', {:class => 'button fifty'}) %>
+  <div class="clear info">&nbsp;</div>
+  <span class="info">Name, Email or ERP Account #.</span>
+  <%= end_form_tag %>
+</div>
+<div class="clear">&nbsp;</div>

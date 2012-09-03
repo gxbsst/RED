@@ -1,0 +1,9 @@
+Message:
+  <%= @exception.message %>
+  
+Record Validation Failed for customer:
+----
+<%= @customer.attributes.to_yaml %>
+
+Source:
+<%= @source.attributes.to_yaml if @source.is_a?( ActiveRecord::Base ) %>

@@ -1,0 +1,108 @@
+<script type="text/javascript">
+  function displayDiv(x) {
+    if (x=="creditcard" || x.checked=="checked") {
+    document.getElementById("creditcard_box").style.display="block";
+    document.getElementById("wiretransfer_box").style.display="none";
+    document.getElementById("xfer_name").style.display="none"
+    } else if (x=="wiretransfer" || x.checked=="checked") {
+    document.getElementById("creditcard_box").style.display="none";
+    document.getElementById("wiretransfer_box").style.display="block";
+    document.getElementById("xfer_name").style.display="block"
+    } else {
+    document.getElementById('creditcard_box').style.display='block';
+    document.getElementById('wiretransfer_box').style.display='none';
+    document.getElementById("xfer_name").style.display="none"
+    }
+  }
+
+function inputEnable(y) {
+  var inputcheck=document.getElementById(y).checked;
+  with(window.document.wtform){
+    if(inputcheck == true){
+      document.getElementById('addressouter1').style.display='none';
+      order_address_address.readOnly=true;
+      order_address_address_two.readOnly=true;
+      order_address_city.readOnly=true;
+      order_address_state.readOnly=true;
+      order_address_zip.readOnly=true;
+      order_address_telephone.readOnly=true;
+      order_address[country_id].readOnly=true;
+    } else {
+      document.getElementById('addressouter1').style.display='block';
+      order_address_address.readOnly=false;
+      order_address_address_two.readOnly=false;
+      order_address_city.readOnly=false;
+      order_address_state.readOnly=false;
+      order_address_zip.readOnly=false;
+      order_address_telephone.readOnly=false;
+      order_address[country_id].readOnly=false;
+    }
+  }
+}
+</script>
+
+<style>
+  #amount_table {
+  margin-left: 10px;
+  }
+  
+  #amount_table p{
+  margin: 10px;
+  }
+  
+  #amount_table ol li{
+  list-style: decimal;
+  }
+  
+  #amount_table ul li{
+  list-style: circle;
+  }
+  
+  #amount_table li{
+  margin-left: 30px;
+  }
+  h3 li {font-family: "Lucida Grande",Geneva,Arial,Verdana,sans-serif;}
+  h3 {font-weight: normal;}
+  li {color:#999999;line-height:1.5em;padding-right:10px;}
+  .bottom p {color:#999999;margin-bottom:5px;padding-right:10px;}
+</style>
+
+<%= error_messages_for 'order_address' %>
+<%= error_messages_for 'order_accounts' %>
+
+<div style='margin-left: 177px;'>
+  
+  <%= start_form_tag %>
+  <div id="pm_box1" class="box1">
+    <div class="bottom">
+      <h3>SELECT PAYMENT METHOD:</h3>
+      <div style='clear: left; height: 1px;'> &nbsp;</div>
+      <div id="inpulist" style='margin-top: 40px;'>
+        <p class="input2" style="margin-bottom:0;">
+          <input type="radio" name="order_account[payment_type]" onclick="displayDiv(this.id)" id="creditcard"   value="<%= OrderAccount::CREDIT_CARD_PAYMENT_TYPE%>" checked="checked">
+          <label  for="creditcart">CREDIT CARD</label>
+        </p>
+        <p class="input5">
+          <input type="radio" name="order_account[payment_type]" onclick="displayDiv(this.id)" id="wiretransfer" value="<%= OrderAccount::WIRE_TRANSFER_PAYMENT_TYPE %>">
+          <lable>WIRE TRANSFER</lable>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="pm_box3" class="box1">
+    <div class="bottom">
+      <%= render :partial => 'bill_to_credit_card' %>
+      <%= render :partial => 'bill_to_wire_transfer' %>
+      <%= render :partial => 'bill_to_address' %>
+      <div class="clearing">&nbsp;</div>
+      <p class="submit">
+        <input type="submit" name="continue" value="continue"  style="margin-top: 25px;margin-bottom:10px;" />
+      </p>
+    </div>
+  </div>
+  
+  <%= end_form_tag %>
+</div>
+
+<div class="clearing">&nbsp;</div>

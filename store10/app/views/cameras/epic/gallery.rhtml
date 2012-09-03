@@ -1,0 +1,30 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/cameras/scarlet/gallery' %>
+  <script type="text/javascript" src="/javascripts/highslide/highslide.js"></script>
+  <script type="text/javascript">
+     hs.graphicsDir = '/javascripts/highslide/graphics/';
+     hs.captionId = 'the-caption';
+     hs.outlineType = 'drop-shadow';
+     hs.showCredits = false;
+  </script>
+  <link href="/stylesheets/highslide.css" media="screen" rel="Stylesheet" type="text/css" />
+<% end %>
+
+<div id="cameras_gallery">
+  <% (1..12).each do |pic|  %>
+      <!-- <%= 
+        %Q(
+        <a onclick="return hs.expand(this, {captionId: 'caption1'})" class="hideslide" href="/images/pages/cameras/epic/epic_#{pic}.jpg">
+          <img src="/images/pages/cameras/epic/epic_thumb_#{pic}.jpg" alt="Formats" />
+        </a>)
+        
+      %> -->
+      <%= content_tag('a',
+        image_tag("/images/pages/cameras/epic/epic_thumb_#{pic}.jpg"),
+        :onclick => 'return hs.expand(this, {})',
+        :class => 'highslide',
+        :href => "/images/pages/cameras/epic/epic_#{pic}.jpg"
+      ) %>
+      
+  <% end %>
+</div>

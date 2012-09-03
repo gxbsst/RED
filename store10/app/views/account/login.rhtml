@@ -1,0 +1,20 @@
+<%= form_tag flash[:login_delegate] %>
+  <h1><%= _('GLOBAL|SIGN_IN') %></h1>
+  <div id="content">
+    <% if flash[:message] %>
+    <p id="message"><%= flash[:message] %></p>
+    <% end %>
+    <p>
+      <label for="email_address"><%= _('GLOBAL|EMAIL_ADDRESS') %></label>
+      <%= text_field_tag 'email_address', params[:email_address], :class => 'input_field' %>
+    </p>
+    <p>
+      <label for="password"><%= _('GLOBAL|PASSWORD') %></label>
+      <input type="password" value="" name="password" id="password" class="input_field" />
+    </p>
+    <p class="indent"><%= submit_tag _('GLOBAL|SIGN_IN'), :style => 'width: 100px; margin-right: 10px;' %> <%= link_to _('GLOBAL|FORGOT_PASSWORD'), :action => 'forgot_password' %></p>
+    
+    <p class="subscript" style="color:#000;"><%= _('SIGN_IN|SETUP_ACCOUNT_TIP') %></p>
+    <p class="subscript"><%= _('SIGN_IN|NOTE') unless flash[:login_mode] == 'all' %></p>
+  </div>
+<%= end_form_tag %>

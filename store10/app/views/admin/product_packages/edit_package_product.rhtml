@@ -1,0 +1,31 @@
+<div id="left">
+	<h1>Product under a Package</h1>
+	
+	<p class="subscript">
+		Only the display style can be modified because this node links to a product. <%= link_to "Click here", :controller => "products", :action => "edit", :id => @node.product.id %> if you really want modify attributes of this product.
+	</p>
+	
+	<%= form_tag %>
+		<label>Product Name</label>
+		<%= text_field_tag "product_name", @node.product.name, :size => 60, :disabled => "disabled", :class => "textInput" %>
+		
+		<label for="node_description">
+			Description
+			<label for="using_product_desc" style="font-size: 9pt; font-weight: normal; color: #000;">
+				<input type="checkbox" name="using_product_desc" id="using_product_desc" onclick="$('node_description').disabled=this.checked" />
+				Using product's original description.
+			</label>
+		</label>
+		<%= text_area "node", "description", :cols => 80, :rows => 10, :class => "textArea" %>
+		
+		<label for="node_is_dropdown">Style</style>
+		<%= select "node", "display_style", [["Check Box", "checkbox"], ["Radio Button", "radio"], ["Dropdown List", "dropdown"]] %>
+		
+		<p>
+			<input type="submit" value="Save" class="button hundred" />
+		</p>
+	<%= end_form_tag %>
+	
+</div>
+
+<div class="clear"></div>

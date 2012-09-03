@@ -1,0 +1,15 @@
+a{outline-color:invert;
+outline-style:none;
+outline-width:medium;}
+h1 { display: none; }
+#wraper { background: url(empty) center 70px no-repeat; }
+#content{margin-top:-80px;}
+/*
+#sub_navigation { font-size: 10pt; border-top: 2px solid #141414; border-bottom: 2px solid #141414; padding: 5px 0; text-align: center; margin: 10px 0; }
+#sub_navigation a { color: #CCC; margin: 0 10px; text-decoration: none; }
+ */
+#sub_navigation {padding-left:200px;height:37px;background:url("/skin/img/workflow/sub_nav_left_bg.jpg") 180px bottom no-repeat;}
+#sub_navigation ul{float:right;padding-right:60px;background:url("/skin/img/workflow/sub_nav_right_bg.jpg") right bottom no-repeat;}
+#sub_navigation ul li{display:inline;list-style-type:none;}
+#sub_navigation ul li a{margin:0;display:block;float:left;height:37px;padding:0 8px;cursor:pointer;text-decoration:none;background:url("/skin/img/workflow/sub_nav_middle_bg.jpg") left top repeat-x;border-right:1px solid #000;}
+#sub_navigation ul li#i1 a{border-left:1px solid #000;}

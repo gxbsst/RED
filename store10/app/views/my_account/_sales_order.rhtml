@@ -1,0 +1,56 @@
+<div id="sales_order_<%= sales_order.id %>" class="list">
+	<h3>#<%= sales_order.order_number %></h3>
+	
+	<p class="summary">
+		Total: <%= number_to_currency( sales_order.total ) %>,
+		Modified: <%= parse_date( sales_order.erp_modstamp ) %>
+	</p>
+	
+	<div class="addresses_handler">
+		<%= link_to_function "Bill To: <span>#{sales_order.bill_to_address.handle}</span>", "toggleAddress(#{sales_order.id})" %>
+		<%= link_to_function "Ship To: <span>#{sales_order.bill_to_address.handle}</span>", "toggleAddress(#{sales_order.id})" %>
+	</div>
+	
+	<div class="addresses" id="addresses_<%= sales_order.id %>" style="display: none;">
+		<div>
+			<%= render :partial => "order_address", :object => sales_order.bill_to_address %>
+			<%= render :partial => "order_address", :object => sales_order.ship_to_address %>
+		</div>
+	</div>
+	
+	<table id="sales_order_details_<%= sales_order.id %>" cellpadding="2" cellspacing="2" border="0" width="100%" class="sales_order">
+		<colgroup>
+			<col width="50" />
+			<col />
+			<col width="70" />
+			<col width="100" />
+			<col width="70" />
+			<col width="70" />
+			<col width="80" />
+		</colgroup>
+		<thead>
+			<tr>
+				<td class="no_border"></td>
+				<th>Name</th>
+				<th>SKU</th>
+				<th>Status</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Subtotal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% sales_order.sales_lines.each do |line| %>
+			<tr class="sales_line">
+				<td class="no_border"></td>
+				<td class="product_name"><%= sales_line_product_tag( line ) %></td>
+				<td align="center"><%= line.item_id %></td>
+				<td><%= line.status %></td>
+				<td class="currency"><%= line.sales_qty.to_i %></td>
+				<td class="currency"><%= number_to_currency( line.display_price ) %></td>
+				<td class="currency"><%= number_to_currency( line.line_amount ) %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

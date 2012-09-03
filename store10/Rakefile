@@ -1,0 +1,24 @@
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+
+require(File.join(File.dirname(__FILE__), 'config', 'boot'))
+
+require 'rake'
+require 'rake/testtask'
+require 'rake/rdoctask'
+
+require 'tasks/rails'
+
+require 'gettext/utils' 
+
+desc 'Update po/pot files.'
+task :makemo do
+  GetText.create_mofiles true, 'po', 'locale'
+end
+
+desc 'Create mo files.'
+task :updatepo do
+  # Ruby on Windows need the next line for GetText
+  ENV["MSGMERGE_PATH"] = 'rmsgmerge.cmd' if RUBY_PLATFORM =~ /mswin32/
+  GetText.update_pofiles 'red', Dir.glob('{app,lib,bin}/**/*.{rb,rhtml}'), 'red'
+end

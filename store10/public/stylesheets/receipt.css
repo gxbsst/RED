@@ -1,0 +1,46 @@
+body { background:#1a1a1a; font-family: arial, verdana, sans-serif; font-size: 12px; background-image: url(/images/theme/background.jpg);
+}
+
+h1,h2,h3,h4,p,ul,li,dl,dt,dd,ol,body,html { padding: 0; margin: 0; }
+
+h1{ width:682px; margin:30px auto 0 auto; border-top:1px dashed #888; text-align:center; padding-top:20px; }
+
+img { display: block; border: 0; }
+img, input { behavior: url("/javascripts/pngbehavior.htc"); }
+
+a { color: #666666; text-decoration: none;}
+a:hover { color: #FF9933; text-decoration: overline underline; }
+
+.clearing { clear: both; height: 0; line-height: 0; font-size: 0; }
+
+#wrapper { width:800px; margin:0 auto; }
+#wrapper #header ul { float:right; padding-top:5px; }
+#wrapper #header ul li { padding:0 6px; height:20px; display:table-cell; *display: inline; zoom:1; vertical-align:middle; }
+#wrapper #header ul li a { color:#fff; }
+#wrapper #header ul li img { float:left; margin-right:2px; }
+
+#outer { width:800px; float:left; background:#fff; }
+#inner { margin:10px; float:left; width:778px; border:1px dashed #000; background:#ecebeb }
+
+#box1 #logo { float:left; margin:40px 0 0 20px; }
+#box1 .right { margin:40px 0 0 40px; float:left; }
+#box1 .right p { line-height:130%; margin-top:20px; }
+
+#customer_info { font-size: 98%; width: 690px; margin: 20px auto; }
+#customer_info .left, .customer_info .right { float: left; width: 342px; }
+#customer_info td { padding: 6px 5px; }
+#customer_info strong { font-size:13px; }
+
+#box2 { width:682px; margin:30px auto 0 auto; }
+
+#line_items { border-collapse: collapse; padding: 0; width: 680px; margin-left:4px; }
+#line_items .tr1 td { border-top:0; } 
+#line_items { margin-top: 16px; text-align: center; }
+#line_items thead tr { border-collapse: collapse; height: 25px; background: #999; padding: 0; margin: 0; }
+#line_items thead tr th { color: #000; }
+#line_items tr td { border:1px solid #444; }
+#line_items tr .td1 { padding-left: 10px; text-align: left; border-left: 0; }
+#line_items tr .td2 { text-align: center; width: 70px; }
+#line_items tr .td3 { text-align: center; width: 60px; }
+#line_items tr .td4, #line_items tr .td5, #line_items tr .td6 { text-align: right; padding-right: 10px; width: 70px; border-right: 0; }
+#line_items tr .td7 { border-left: 0; text-align: right; padding-right: 10px; } 

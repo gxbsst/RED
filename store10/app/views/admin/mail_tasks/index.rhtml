@@ -1,0 +1,28 @@
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  
+  <table class="list" cellpadding="0" cellspacing="0">
+    <colgroup>
+      <col style="width: 5%;"/>
+      <col/>
+      <col style="width: 10%"/>
+      <col style="width: 6%;"/>
+    </colgroup>
+    <tr>
+      <th>ID</th>
+      <th>Task Name</th>
+      <th>Send Date</th>
+      <th>View</th>
+			<th></th>
+    </tr>
+    <% @tasks.each do |task| %>
+      <tr class="<%= alternate %>">
+        <td><%= task.id %></td>
+        <td><%= "#{task.task_name} (include: #{task.sub_queue_count} mails)" %></td>
+        <td><%= task.task_date %></td>
+        <td><%= link_to "View", :action => 'task_index', :id => task %></td>
+				<td><%= link_to ("Send", {:action => "send_mails", :id => task.id }, :confirm => 'Are you sure?') if task.task_date.blank? %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

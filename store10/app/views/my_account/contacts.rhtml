@@ -1,0 +1,62 @@
+<%= render :partial => 'sidebar' %>
+
+<div class="notice">
+	<h3>Each additional contact that you add to your RED Digital Cinema account</h3>
+	<ul>
+		<li>Will be copied on all automatic emails about your RED account</li>
+		<li>Will be permitted to download firmware and contact support</li>
+		<li>Will be able to place additional orders under your existing RED customer account</li>
+	</ul>
+	<strong>NOTE: No Credit Card or other payment information will be shared</strong>
+</div>
+
+<div class="list">
+	<table border="0" cellspacing="2" cellpadding="4" width="100%" style="text-align: left;">
+		<colgroup>
+			<col span="2" />
+			<col width="30" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email Address</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% @customer.contact_people.each do |contact| %>
+			<tr class="<%= 'current' if contact.id == params[:id].to_i %>">
+				<td><%= link_to contact.name, :id => contact %></td>
+				<td><%= contact.email %></td>
+				<td align="center"><%= link_to image_tag("my_account/trash.gif"), :id => contact, :method => "delete" %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= form_tag :id => @contact, :method => (@contact.nil? || @contact.new_record?) ? "add" : "update" %>
+	<% if flash[:message] %>
+	<div class="notice">
+		<%= flash[:message] %>
+	</div>
+	<% end %>
+	
+	<p>
+		<label for="contact_first_name">Name</label>
+		<%= text_field "contact", "first_name", :size => "10", :class => "text-input" %>
+		-
+		<%= text_field "contact", "last_name", :size => "15", :class => "text-input" %>
+		<%= error_field @contact, "first_name" %>
+		<%= error_field @contact, "last_name" %>
+	</p>
+	<p>
+		<label for="contact_email">Email</label>
+		<%= text_field "contact", "email", :size => "30", :class => "text-input" %>
+		<%= error_field @contact, "email" %>
+	</p>
+	<p>
+		<%= submit_tag (@contact.nil? || @contact.new_record?) ? "Add This Contact" : "Save Changes", :class => 'button' %>
+	</p>
+<%= end_form_tag %>

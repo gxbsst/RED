@@ -1,0 +1,28 @@
+.clear{height:1px;clear:both;}
+#register_outer{padding:0 0 0 180px;}
+.formError{color:red;margin-top:-10px;}
+#caption{padding:20px 0 0 0;height:40px; font-weight: bold;}
+form p{clear:both;width:100%; font-weight: bold;}
+form #name_outer p{float:left;width:auto;clear: none; }
+#register_outer #last_name{margin-left:10px;}
+#register_outer .p1{padding-left:11px;}
+#register_outer .p2{padding-top:15px;padding-left:11px;}
+#register_outer .p3{height:0;}
+#register_outer fieldset.contact_infomation{margin-top: 40px;border:1px solid #444;padding-bottom:20px;padding-left:10px;}
+#register_outer fieldset.contact_infomation p{padding:10px 0;}
+#register_outer fieldset LEGEND{margin-left:10px;}
+form p input{float:left;}
+label{width:100px;display: block;position: relative;clear:left;float:left;}
+.submit_out{text-align:right;}
+form .submit_out input{display:inline;float:none;width:90px;}
+#address1 input,#address2 input{width:300px;}
+.field_with_errors input{border: 2px solid red;padding:3px;}
+#content .errorExplanation{color:red;border: 1px solid #999;}
+#city input,#state input,#zip input,#country input{width:140px;}
+#p_country select,#state_select select,#state_select input{width:305px;}
+#product_Categories select,#product select{width:220px;}
+
+/*for safari*/
+html* #product_Categories[id] select,html* #product[id] select{
+width:236px;
+}

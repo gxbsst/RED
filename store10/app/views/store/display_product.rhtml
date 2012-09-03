@@ -1,0 +1,48 @@
+<div class="inner">
+
+<%= form_remote_tag(:url => {:controller=>'store',:action => 'add_to_cart_ajax'}, 
+:loading => "Element.show('indicator')",
+:complete => "Element.hide('indicator');new Effect.Highlight('itemsContainer-outer');",
+:update => 'items'
+) %>
+
+<table class="innertable" width="100%">
+  <tr class="tr1">
+    <td class="td1" align="center" colspan="2"  valign="middle" >
+        <%
+        if @image then
+          image_url = url_for_file_column('image', 'path', 'small')
+          if image_url then
+            %>
+            <%= link_to image_tag(image_url, :id => "product_image_#{@product.id}", :align => 'left', :class => 'productImage'),:action => 'product_detail', :id => @product.id %>
+            <%
+          end
+        end
+        %>
+    </td>
+  </tr>
+  <tr class="tr2">
+    <td class="td1" colspan="2" align="top" style="height:28px;" >
+    <%= link_to @product.name, :action => 'product_detail', :id => @product.id %>
+  </td>
+</tr>
+<tr class="tr3">
+  <td class="td1">
+  <%= number_to_currency(@product.price) %>	<input type="hidden" name="id" value="<%= @product.id %>" />
+</td>
+<td class="td2" align="right">
+<%= select_tag "qty", options_for_select(%w{1 2 3 4 5 6 7 8 9})  %>
+</td>
+</tr>
+<tr class="tr4">
+  <td align="center" colspan="2" class="td1">
+    <input type="image" src="/skin/img/store/cart.png" />
+  </td>
+</tr>
+</table>
+
+<%= end_form_tag %>
+<!--end inner-->
+</div>
+
+

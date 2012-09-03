@@ -1,0 +1,282 @@
+<?php
+
+# Table Names
+$GLOBALS['TRANSACTIONS'] = "viaklix_transactions";
+$GLOBALS['BATCHES'] = "viaklix_batches";
+
+# Database and Viaklix Configurations...
+define('DB_HOST','localhost');
+define('DB_USER','root');
+define('DB_PASS','ypg93ml5zkzp');
+define('ACCT_ID','408748');
+define('ACCT_USER','joanne');
+define('ACCT_PASS','august2007');
+
+function connectDB(){
+  $link = mysql_connect(constant('DB_HOST'),constant('DB_USER'),constant('DB_PASS'));
+  if (!$link){
+    die ("Could Not Connect To The Database");
+  }
+  $selected_db = mysql_select_db('store', $link);
+  if (!$selected_db) {
+    die ('Could Not Find Database : ' . mysql_error());
+  }
+  return $link;
+}
+
+function quote_smart($value, $db_link){
+  $value=((get_magic_quotes_gpc())?stripslashes($value):$value);
+  $value=((!is_numeric($value))?"'".mysql_real_escape_string($value, $db_link)."'":$value);
+  return  strip_tags($value);
+}
+
+function post($array) {
+  $vars=null;
+  foreach($array as $key=>$value) {
+    if($key && $value) {
+      $vars.=$key."=".urlencode($value)."&";
+    }
+  }
+  return $vars;
+}
+
+$post_data = array();
+$post_data['vid'] = constant('ACCT_ID');
+$post_data['uid'] = constant('ACCT_USER');
+$post_data['pwd'] = constant('ACCT_PASS');
+$post_data['action'] = 'Login';
+$post_data['forcedpwdchange'] = 'False';
+$post_data['nextpage'] = '';
+
+
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www2.viaklix.com/Admin/login.asp");
+curl_setopt($ch, CURLOPT_REFERER, "https://www2.viaklix.com/Admin/login.asp");
+curl_setopt($ch, CURLOPT_POST, TRUE);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_COOKIESESSION, TRUE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_COOKIEJAR, "/tmp/cookie_jar.viaklix");
+curl_setopt($ch, CURLOPT_POSTFIELDS, post($post_data) );
+
+curl_exec($ch);
+unset($post_data);
+echo "Requested ViaKlix Session Login Credentials\n";
+
+$post_data = array();
+$post_data['ssl_Pin'] = 'N4SZJH';
+curl_setopt($ch, CURLOPT_URL, "https://www2.viaklix.com/Admin/setterminal.asp?target=/Admin/VirtualTerminal/terminal.asp?s=1");
+curl_setopt($ch, CURLOPT_POSTFIELDS, post($post_data) );
+curl_exec($ch);
+unset($post_data);
+echo "Selected ViaKlix 'INTERNET' Terminal\n";
+
+$post_data = array();
+$post_data['PageSize'] = '1000000000';
+$post_data['batchtype'] = 'CLOSED';
+$post_data['s'] = '1';
+$post_data['page'] = '1';
+$post_data['action'] = "";
+$post_data['sortfield'] = "";
+$post_data['batchfilter'] = '';
+# https://www2.viaklix.com/Admin/VirtualTerminal/terminal.asp?PageSize=999&page=1&action=&sortfield=&batchfilter=&batchtype=CLOSED&s=1
+
+#curl_setopt($ch, CURLOPT_URL, "https://www2.viaklix.com/Admin/VirtualTerminal/terminal.asp?s=1");
+curl_setopt($ch, CURLOPT_URL, "https://www2.viaklix.com/Admin/VirtualTerminal/terminal.asp");
+curl_setopt($ch, CURLOPT_POSTFIELDS, post($post_data) );
+$html_list = curl_exec($ch);
+echo "Requested ViaKlix Transaction List\n";
+$batch_details = array();
+# "javascript:batchdetail('1844991','GBOK 00804120111','04-12-2007 01:11:06')"
+#  javascript:batchdetail('1837592','GBOK 00604100115','04-10-2007 01:15:20')
+# Note that *every* item is listed twice, so be sure to only capture unique items
+
+$batch_list = array();
+preg_match_all( '/"javascript:batchdetail[^"]+"/' , $html_list, $batch_details );
+foreach($batch_details[0] as $key => $val) {
+  $matches = array();
+  preg_match("/javascript:batchdetail\('([\d]+)','([^']+)','([^']+)'.*/", $val, $matches);
+  #$settlement_number = $matches[2];
+  #$batch_id = $matches[1];
+  #$settlement_data = $matches[3];
+  $batch_list[$matches[2]] = array( $matches[1], $matches[3] );
+}
+
+$post_data = array();
+$post_data['filetype'] = 'tab-delimited';
+$post_data['version'] = '2';
+$post_data['qualifier'] = 'TRUE';
+$post_data['batchtype'] = 'CLOSED';
+$db_link = connectDB();
+$q = "show fields from {$GLOBALS['TRANSACTIONS']} ";
+$result = mysql_query($q, $db_link);
+if (!$result) {
+  die("SQL: Unable to download field list for {$GLOBALS['TRANSACTIONS']} " . mysql_error());
+}
+#$viaklix_table_def = mysql_fetch_assoc($result);
+$i = 0;
+$transaction_columns = array();
+while ($row = mysql_fetch_assoc($result)){
+  $c_name = $row['Field'];
+  $table_fields[$c_name] = "1";
+  $i++;
+}
+unset($i);
+
+foreach($batch_list as $key => $val) {
+  $post_data['settleid'] = $key;
+  $post_data['batchid'] = $val[0]; #'1860365';
+  #$post_data['settleid'] = $val[2]; #'GBOK 02004171801';
+
+  $db_link = connectDB();
+  $q = "SELECT count(*) FROM {$GLOBALS['BATCHES']} WHERE settlement_number='$key'";
+  #$q = "SELECT count(*) FROM {$GLOBALS['BATCHES']} WHERE settle_id=";
+  #$q .= quote_smart($post_data['settleid'], $db_link);
+  #$q .= " AND batch_number=".quote_smart($post_data['batchid'], $db_link);
+  $result = mysql_query($q, $db_link);
+  if (!$result) {
+    echo("NOTICE: SQL Problem searching for Settlement #$key\n");
+    echo("Query:  $q\n");
+    continue; # Skip to next record in Batch List
+  }
+  $row = mysql_fetch_row($result);
+  if ($row[0] > 0){
+    echo("NOTICE: Skipping already downloaded Settlement #$key\n");
+    continue; # Very Normal! Skip...
+  }
+  unset($row); unset($q);
+
+  #print $post_data['batchid'] . " => " . $post_data['settleid'] . "\n";
+  curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, FALSE);
+  curl_setopt($ch,CURLOPT_POSTFIELDS,post($post_data) );
+  curl_setopt($ch,CURLOPT_URL,"https://www2.viaklix.com/Admin/VirtualTerminal/batchdownload.klx");
+  curl_setopt($ch,CURLOPT_POST,TRUE);
+  echo("Downloading 3 Copies of Settlement #$key\n");
+  $html = '';
+  $html1 = curl_exec($ch);
+  $html2 = curl_exec($ch);
+  $html3 = curl_exec($ch);
+  $md51 = md5($html1);
+  $md52 = md5($html2);
+  $md53 = md5($html3);
+
+  # Just to be safe... Download 3 copies of *each* Settlement Report
+  if ( $md51 == $md52 and $md52 == $md53 ) {
+    $html = $html1;
+  } else {
+    echo "NOTICE: One of the 3 Settlement Files DID NOT MATCH\n";
+    if ( $md51 == $md52 ) {
+      $html = $html1;
+    } else if ( $md51 == $md53 ) {
+      $html = $html1;
+    } else if ( $md52 == $md53 ) {
+      $html = $html2;
+    } else {
+      die( "ERROR: Unable to download reliable Report Files\n" );
+    }
+  }
+
+  $handle = fopen('tempcsv.csv', 'w');
+  fwrite($handle, $html);
+  fclose($handle);
+
+  $temp_csv = fopen('tempcsv.csv', 'r');
+
+  $l = 0;
+  while ($html_lines = fgetcsv($temp_csv, '0', "\t")){
+
+	  if ($l=="0"){
+		  $field_names = $html_lines;
+		  $unique_field_names = array();
+		  for($j=0;$j<=count($field_names);$j++) {
+			$base_name = $field_names[$j];
+			$field_name = $base_name;
+			if ($base_name == false ) {
+			  continue; # Just grab the next record -- this one is blank
+			}
+			if (!strpos($field_name,'_transactionid') === false ) {
+			  $base_name = preg_replace('/^.*_/','',$field_name);
+			}
+			$i = 1;
+			while(! array_search($field_name, $unique_field_names) === false) {
+			  $i++;
+			  $field_name = $field_names[$j] . $i;
+			  if ($i > 10) {
+				die("Problem with $field_name!");
+			  }
+			}
+			$unique_field_names[$j] = $field_name;
+			$field_names[$j] = $field_name;
+		   }
+	  } else {
+		$transaction_field = $html_lines;
+		$trash_fields = array();
+		$ssl_amount = "";
+		for($j=0; $j<count($transaction_field); $j++) {
+		  $search_key = $field_names[$j];
+
+		 if($field_names[$j]=="transactiontype" && $transaction_field[$j]=="CREDIT"){
+			$ssl_amount="negative";
+		 }
+
+		 if (array_key_exists($search_key, $table_fields)) {
+			if ($field_names[$j]=="ssl_amount" && $ssl_amount=="negative"){
+				$values .= quote_smart('-'.$transaction_field[$j], $db_link).",";
+			}else {
+				$values .= quote_smart($transaction_field[$j], $db_link).",";
+			}
+		  } else if ($j==0){
+			$values .= quote_smart($transaction_field[$j], $db_link).",";
+		  } else {
+			$trash_fields[] = $search_key;
+			echo "Only Trash shows up here... right? : $search_key\n";
+		  }
+		}
+
+		$k=1;
+		$q = "INSERT INTO {$GLOBALS['TRANSACTIONS']} (";
+		for ($j=0; $j<count($field_names); $j++){
+		  if ($j=="0"){
+			$field_names[$j] = preg_replace('/^[^_]+_/','',$field_names[$j]);
+		  } else if($field_names[$j]=="ssl_amount"){
+			if ($k > 1){
+			  $field_names[$j] = "ssl_amount$k";
+			} #end
+			$k++;
+		  } #end
+
+		  if (array_key_exists($field_names[$j], $table_fields)) {
+			$q .= $field_names[$j].",";
+		  }
+		}
+
+		$q .= "settlement_number) ";
+		$q .= "VALUES(" . $values . "'$key'" . ")";
+		$result = mysql_query($q, $db_link);
+		$values = "";
+		if (empty($result)){
+			print "ERROR****" .  $q . "\n";
+		}
+  	} # Loop foreach Settlement Download Row...
+  	$l++;
+  }
+
+  $q = "INSERT INTO {$GLOBALS['BATCHES']} ";
+  $q .= "(batch_number, download_date, settlement_number) VALUES (";
+  $q .= quote_smart($val[0], $db_link).",".quote_smart($val[1],$db_link).",".quote_smart($key, $db_link).")";
+  #$post_data['settleid'] = $key;
+  #$post_data['batchid'] = $val[0]; #'1860365';
+  $result = mysql_query($q, $db_link);
+  unset($q);
+  $batch_id = mysql_insert_id();
+}
+
+	$result = mysql_query("select settlement_number from {$GLOBALS['BATCHES']}", $db_link);
+	while ($row = mysql_fetch_assoc($result)){
+		mysql_query("update {$GLOBALS['BATCHES']} set total = (select sum(ssl_amount) from {$GLOBALS['TRANSACTIONS']} where settlement_number = '{$row['settlement_number']}') where settlement_number = '{$row['settlement_number']}'", $db_link);
+
+	}
+
+?>

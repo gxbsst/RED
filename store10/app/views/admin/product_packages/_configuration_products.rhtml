@@ -1,0 +1,11 @@
+<table class="list" cellpadding="0" cellspacing="0">
+  <tr>
+    <th colspan="2">Product Name</th>
+  </tr>
+  <% @configuration.example_configuration_products.each do |item| %>
+  <tr class="<%= alternate %>">
+    <td><%= item.product.name %></td>
+    <td width="20">x<%= item.quantity %></td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Payment Status of Your Order</title>
+  </head>
+  <body style="font-family: 'Lucida Grande',Geneva,Arial,Verdana,sans-serif; font-size: 12px; color: #FFF; background:#000;" >
+    <!-- div#wrapper begin -->
+    <div id="wrapper" style="width:96%;margin:0 auto;min-width:650px;">
+      <!-- #header begin -->
+      <table width="100%" cellpadding="0" cellspacing="0" bordercolor="#000" background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+        <tr background="http://www.red.com/images/mailer/prepare_delivery/head02.png">
+          <td align='left'><img src="http://www.red.com/images/mailer/prepare_delivery/head01.png" alt='' /> </td>
+          <td align='right'><img src="http://www.red.com/images/mailer/prepare_delivery/head03.png" alt='' /> </td>
+        </tr>
+      </table><!-- #header end -->
+      <!-- div#content begin -->
+      <div id="content" style="padding: 10px;" >
+        <h3><%= "#{@queue.name} -" %></h3>
+        <p>Thank you again for the order you placed on (<%= @queue.order_create_date %>).  According to our records, RED has not received your deposit in full via wire transfer.   Please submit the remainder due using the wire transfer instructions at the bottom of this email.  If you would like to pay your deposit via credit card, cashiers check, money order, or check drawn from a US bank, please contact RED at <a href="mailto:orders@red.com" style="color: rgb(255, 255, 255); font-weight: bold; text-decoration: underline;">orders@red.com</a> to change your method of payment.</p>
+        <p>We can no longer hold your reservation number if we do not receive your deposit by April 15, 2008.</p>
+        <h2>DETAILS:</h2>
+        <table cellpadding="0" cellspacing="0" bordercolor="#000000" style="border:collapse;border:0;" width="100%">
+          <tr>
+            <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px; padding: 5px 22px 0 22px;">
+              Total Deposit Due: <strong><%= number_to_currency(@queue.prepayments_due) %></strong>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding: 5px 22px 0 22px;">
+              Payments Received-to-Date: <strong><%= number_to_currency(@queue.payments_received) %></strong>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-weight: normal;font-size: 12px;background-color: #202020;height: 20px;padding: 5px 22px 5px 22px;">
+              Remaining Payment Due: <strong><%= number_to_currency(@queue.payments_needed) %></strong>
+            </td>
+          </tr>
+        </table>
+        <p>If you have any questions or concerns, please contact us at <a href="mailto:orders@red.com" style="color: rgb(255, 255, 255); font-weight: bold; text-decoration: underline;">orders@red.com</a>. Thanks,</p>
+        <p>
+          <br/>
+          -RED BOMB SQUAD<br/>
+          <a href="mailto:orders@red.com" style="color: rgb(255, 255, 255); font-weight: bold; text-decoration: underline;">orders@red.com</a>
+        </p>
+        <h2> WIRE TRANSFER INSTRUCTIONS:</h2>
+        <p>This wire transfer can be submitted with the help of your bank. You may be required to visit your bank in person to execute the wire transfer.</p>
+        <table width="600px" cellpadding="2" cellspacing="1" bgcolor="#000000" bordercolor="#000000">
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Amount to Transfer : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= number_to_currency(@queue.prepayments_due) %> USD</font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Name : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_name] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Bank Address : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:bank_address] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">ABA Routing Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:aba_routing_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">SWIFT Code : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:swift_code] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">To Credit : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:to_credit] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Account Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= AppConfig.WIRE_XFER[:account_number] %></font></td></tr>
+          <tr><th align='right' bgcolor="#111111"><font color="#FFFFFF">Reference Number : </font></th><td bgcolor="#202020"> <font size="2" color="#FFFFFF"><%= "#{@queue.customer_number}" %></font></td></tr>
+        </table>
+        <h3>REFERENCE NUMBER WARNING:</h3>
+        <p>You must write the reference number as provided above on your wire transfer. If you fail to write the reference number properly on the wire transfer your payment may not be processed.</p>
+        <h3>CLIENTS OUTSIDE THE USA</h3>
+        <p>Please be advised that for international wires your bank my require and charge you for the use of an intermediary bank. You should contact your bank and inquire about the possibility of any additional fees.</p>
+      </div>
+      <!-- div#content end -->
+    </div>
+    <!-- div#wrapper end -->
+  </body>
+</html>

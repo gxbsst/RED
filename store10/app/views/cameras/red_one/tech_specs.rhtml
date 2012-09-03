@@ -1,0 +1,160 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/pages/cameras/tech-specs' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('CAMERAS|SUB_NAVIGATION|TECH_SPECS') %></h1>
+<% end %>
+
+<div class="banner">
+  <%= image_tag 'pages/cameras/tech-specs/banner.png', :alt => 'Tech Specs' %>
+</div>
+
+<div class="content-block transparent-50">
+  <h2><%= _('CAMERAS|TECH_SPECS|SPECIFICATIONS') %></h2>
+  <table border="0" cellpadding="0" cellspacing="1" id="tech-specs" class="table">
+    <tr>
+      <th width="150"><%= _('GLOBAL|SENSOR') %></th>
+      <td><%= _('GLOBAL|RED_ONE|SENSOR') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|PHYSICAL_SIZE') %></th>
+      <td><%= _('GLOBAL|RED_ONE|PHYSICAL_SIZE') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|ACTIVE_PIXEL_ARRAY') %></th>
+      <td><%= _('GLOBAL|RED_ONE|ACTIVE_PIXEL_ARRAY') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|FULL_PIXEL_ARRAY') %></th>
+      <td><%= _('GLOBAL|RED_ONE|FULL_PIXEL_ARRAY') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|DYNAMIC_RANGE') %></th>
+      <td><%= _('GLOBAL|RED_ONE|DYNAMIC_RANGE') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|DEPTH_OF_FIELD') %></th>
+      <td><%= _('GLOBAL|RED_ONE|DEPTH_OF_FIELD') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|ACQUISITION_FORMATS') %></th>
+      <td><%= _('GLOBAL|RED_ONE|ACQUISITION_FORMATS') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|DELIVERY_FORMATS') %></th>
+      <td><%= _('GLOBAL|RED_ONE|DELIVERY_FORMATS') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|PROJECT_FRAME_RATES') %></th>
+      <td><%= _('GLOBAL|RED_ONE|PROJECT_FRAME_RATES') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|VIDEO_OUTPUTS') %></th>
+      <td><%= _('GLOBAL|RED_ONE|VIDEO_OUTPUTS') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|DIGITAL_MEDIA') %></th>
+      <td><%= _('GLOBAL|RED_ONE|DIGITAL_MEDIA') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|REDCODE_CODEC') %></th>
+      <td><%= _('GLOBAL|RED_ONE|REDCODE_CODEC') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|AUDIO') %></th>
+      <td><%= _('GLOBAL|RED_ONE|AUDIO') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|MONITOR') %></th>
+      <td><%= _('GLOBAL|RED_ONE|MONITOR') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|WEIGHT') %></th>
+      <td><%= _('GLOBAL|RED_ONE|WEIGHT') %></td>
+    </tr>
+    <tr>
+      <th><%= _('GLOBAL|CONSTRUCTION') %></th>
+      <td><%= _('GLOBAL|RED_ONE|CONSTRUCTION') %></td>
+    </tr>
+    <tr>
+      <th>Temperature Ranges</th>
+      <td>Operating range: 0C to +40C (32F to 104F)<br />Storage range: -20C to +50C (-4F to 122F)</td>
+    </tr>
+    <tr >
+      <td colspan="2">
+        <%= _('CAMERAS|TECH_SPECS|SUBSCRIPT') %>
+      </td>
+    </tr>
+  </table>
+  <div id="camera-views">
+    <img src="/images/pages/cameras/tech-specs/camera-views.png" alt="Camera Views" />
+    <% (1..3).each do |index| %>
+    <%= image_tag "pages/cameras/tech-specs/red-one-thumb-#{index}.png",
+      :alt => "RED ONE Thumbnail" %>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</div>
+  
+<div class="content-block transparent-50">
+  <h2>Lenses Specifications</h2>
+  
+  <table border="0" cellspacing="1" cellpadding="0" id="format-options" class="table">
+    <tr>
+      <th rowspan="2" width="250">Available<br />Video formats</th>
+      <th colspan="6" width="600">Using lens formats</th>
+    </tr>
+    <tr>
+      <td>Anamorphic<br />35mm</td>
+      <td>S35mm</td>
+      <td>35mm</td>
+      <td>Anamorphic <br />16mm</td>
+      <td>S16mm</td>
+      <td>B4 *</td>
+    </tr>
+    <tr>
+      <th>
+        <span>4K REDCODE</span>
+        <%= _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+      </th>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|4K_ANAMORPHIC_35MM') %></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|4K_2540p_S35mm') %></td>
+      <td>
+        <%= _('CAMERAS|FORMAT_OPTIONS|4K_2540p_35mm') %>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>
+        <span>3K REDCODE</span>
+        <%= _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+      </th>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|3K_ANAMORPHIC_35MM') %></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|3K_2540p_S35mm') %></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|3K_2540p_35mm') %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>
+        <span>2K REDCODE</span>
+        <%= _('CAMERAS|FORMAT_OPTIONS|ATTRIBUTES') %>
+      </th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|ANAMORPHIC_16MM') %></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|2K_S16mm') %></td>
+      <td><%= _('CAMERAS|FORMAT_OPTIONS|2K_B4') %></td>
+    </tr>
+    <tr>
+      <td colspan="7" class="subscript">
+        <%= _('CAMERAS|FORMAT_OPTIONS|SUBSCRIPT') %>
+      </td>
+    </tr>
+  </table>
+</div>

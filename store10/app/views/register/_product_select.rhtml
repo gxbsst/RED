@@ -1,0 +1,5 @@
+<label for="warranty_registration_product"><%=  _('REGISTER|PRODUCT') %>:</label><select id="warranty_registration_product" name="warranty_registration[product]">
+  <% @products.each do |product| %>
+    <option value="<%= product.id.to_s %>" <%= product.id.to_s == @product ? "selected" : "" %>><%= product.name %></option>
+  <% end %>
+</select>

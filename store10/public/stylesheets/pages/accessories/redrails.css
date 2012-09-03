@@ -1,0 +1,20 @@
+#sub_navigation a.introducing {background:#000; }
+#modula_design{border: 1px solid red; }
+#modula_design h2{text-align:left;}
+#modula_design,#red_rail{border-top:2px solid #191919;}
+#red_rail,#flexibility{}
+#red_rail{text-align:justify;border-bottom:2px solid #191919;}
+#red_rail img{margin-left:10px;margin-top:3px;}
+#flexibility img{margin-right:5px;}
+#content{margin-bottom:0;}
+#content p{text-align:justify;color:#FFF;}
+#footer{margin-top:0;}
+
+.text-content hr {
+	clear: both;
+	margin: 2em 0;
+	border: none;
+	background: transparent url(/images/theme/horizontal-line.png) repeat-y left center;
+	height: 10px;
+}
+

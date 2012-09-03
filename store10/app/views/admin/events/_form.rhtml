@@ -1,0 +1,80 @@
+<%= error_messages_for 'participant' %>
+
+<div class="float">
+  <p>
+    <label for="product_title">姓名</label>
+    <%= text_field :participant, :name, :class => 'textInput'  %>
+  </p> 
+  <p>
+    <label for="product_title">Email</label>
+    <%= text_field :participant, :email, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">省份</label>
+    <%= text_field :participant, :province, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">城市</label>
+    <%= text_field :participant, :city, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">邮编</label>
+    <%= text_field :participant, :post_code, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">公司名字</label>
+    <%= text_field :participant, :company_name, :class => 'textInput'  %>
+  </p> 
+  <p>
+    <label for="product_title">公司网址</label>
+    <%= text_field :participant, :company_website, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title"> 地址</label>
+    <%= text_field :participant, :address, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">手机</label>
+    <%= text_field :participant, :mobile_phone, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">固定电话</label>
+    <%= text_field :participant, :fixed_phone, :class => 'textInput'  %>
+  </p>
+
+  <p>
+    <label for="product_title"> 序列号</label>
+    <%= text_field :participant, :serial_number, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title"> 经营范围</label>
+    <%= text_field :participant, :scope_of_business, :class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title"> 用户的摄像机类型</label>
+    <%= text_field :participant, :camera_type_using, :class => 'textInput'  %>
+  </p>
+
+  <p>
+    <label for="product_title">参加此次活动原因</label>
+    <%= text_area :participant, :reason, :rows => 14,:class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">参与人数</label>
+    <%= text_area :participant, :participanter_name, :rows => 5,:class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">什么时候有时间</label>
+    <%= text_area :participant, :available_time, :rows => 5,:class => 'textInput'  %>
+  </p>
+  <p>
+    <label for="product_title">Is Available ?</label>
+    <%= check_box :participant,:deleted  %>
+  </p>
+  <p>
+	<%= submit_tag 'Save This Participanter', :class => 'button hundredthirty' %>
+	<div style="float:right;">
+		<%= link_to 'Delete This Participanter', {:action => 'destroy', :id => @participant}, :confirm => 'Are you sure?', :class => 'action' %>
+	</div>
+  </p>
+</div>

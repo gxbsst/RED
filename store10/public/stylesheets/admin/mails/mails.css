@@ -1,0 +1,35 @@
+.textInput, .textArea {
+  width: 100%;
+}
+select.textInput {
+  height: 26px;
+  width: 577px;
+}
+select.textInput option {
+  font-family: Trebuchet MS;
+  padding: 0 5px;
+  line-height: 1.5em !important;
+}
+	.textInput[readonly], textarea[readonly] {
+		border-color: #CCC;
+		color: #999;
+	}
+.listContainer {
+  height: 300px;
+}
+#recipients_wrapper tr[rel] {
+  cursor: pointer;
+}
+#recipients_wrapper tr[rel]:hover td {
+  background-color: #FFFF99;
+  color: DarkRed;
+}
+#right label.info {
+	font-weight: normal;
+}
+#right input.variable {
+	width: 180px;
+}
+.do_not_contact {
+	text-decoration: line-through;
+}

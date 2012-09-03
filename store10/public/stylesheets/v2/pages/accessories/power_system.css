@@ -1,0 +1,25 @@
+#content p{text-align:justify;}
+
+.text-content {
+  padding-bottom: 2em; 
+}
+.text-content hr {
+	clear: both;
+	margin: 1em 0;
+	border: none;
+	background: transparent url(/images/theme/horizontal-line.png) repeat-y left center;
+	height: 10px;
+}
+
+
+#brick {
+  padding-left: 230px; 
+}
+.images-outer {
+	float: left;
+	width: 230px; 
+	font-size: 9pt;
+	text-align: center;
+	margin: 10px 10px 0 0;
+}
+

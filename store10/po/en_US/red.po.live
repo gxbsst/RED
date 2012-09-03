@@ -1,0 +1,2103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: red\n"
+"POT-Creation-Date: 2007-08-19 18:27-0700\n"
+"PO-Revision-Date: 2007-07-12 11:50+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/views/static_pages/technology.rhtml:10
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM|TEXT"
+msgstr " Record 2540 progressive at up to 60 fps RAW. With 4520 X 2540 pixels, Mysterium&trade; puts pure digital Ultra-High Def in the palm of your hand. RED ONE&trade; and REDCINE&trade; also support down-sampling to 1080p and 720p for in-field monitoring and compatibility with non-linear editors. You get the same breathtaking field of view and selective focus found on film cameras. Mysterium&trade; boasts a greater than 66db Signal to Noise Ratio thanks to its large 29 sq. micron pixels. And 12,065,000 pixels deliver resolution that can only be called Ultra High Definition."
+
+#: app/views/static_pages/contact_us.rhtml:65
+msgid "CONTACT_US|POST|PROBLEM_URL"
+msgstr "Problem URL:"
+
+#: app/views/static_pages/technology.rhtml:5
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN|TEXT"
+msgstr " 4520 X 2540 pixels… DATA TO BURN. At the heart of RED lives the 12-megapixel Mysterium&trade; CMOS sensor, Super 35mm sized, with unparalleled fidelity and flexibility. It combines low noise with superior charge capacity for dynamic range and color fidelity that allows you to finally have a no excuse digital imaging alternative to shooting 35mm film."
+
+#: app/views/cameras/format_options.rhtml:7
+msgid "GLOBAL|FORMAT_OPTIONS"
+msgstr "Format Options"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Payment type"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order number"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:56
+msgid "CONTACT_US|QUEUE|JOBS"
+msgstr "Jobs"
+
+#: app/views/contact/confirm_contact.rhtml:12
+msgid "CONTACT_US|POST|EDIT"
+msgstr "Edit"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl salestax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2response"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp pnref"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Ipfrom"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:72
+#: app/views/contact/confirm_contact.rhtml:13
+msgid "CONTACT_US|POST|SEND"
+msgstr "Send"
+
+#: app/views/static_pages/lenses.rhtml:9
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|PRICE"
+msgstr "8,500"
+
+#: app/views/static_pages/accessories.rhtml:14
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY"
+msgstr "FLEXIBILITY IS THE KEY"
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Transaction"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:37
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DISTRIBUTOR"
+msgstr "Distributor"
+
+#: app/views/gallery/_sub_navigation.rhtml:2 app/views/gallery/index.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|VIDEO_GALLERY"
+msgstr "VIDEO GALLERY"
+
+#: app/views/static_pages/global/_footer.rhtml:7
+msgid "FOOTER|CONTACT_US"
+msgstr "Contact Us"
+
+#: app/models/news.rb:-
+msgid "News|Language"
+msgstr ""
+
+#: app/models/email_announcement.rb:3
+msgid "GLOBAL|MESSAGE|EMAIL_ALREADY_EXISTS"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "order user"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "erp order log"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:20
+msgid "GALLERY|VIDEO_GALLERY|REDCODE"
+msgstr "REDCODE&trade; RAW 1080p video clip"
+
+#: app/models/order.rb:-
+msgid "Order|Product cost"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Beta visible"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Routing number"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:8
+msgid "GLOBAL|LENS_FORMAT"
+msgstr "LENS FORMAT"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Account number"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:28
+msgid "LENSES|RED_300MM_F2.8|DESCRIPTION"
+msgstr ""
+"Delivery time for the RED 300mm f2.8 is similar to RED ONE&trade; camera "
+"body. Choose any Super 35mm PL mount lens, Super 16mm PL mount lens, or "
+"optional B4 lens mount."
+
+#: app/views/gallery/index.rhtml:21
+msgid "GALLERY|VIDEO_GALLERY|REDCODE|DESCRIPTION"
+msgstr "87 MB. 11 seconds @ 24 fps. 1920 x 1080."
+
+#: app/views/static_pages/email_announcements.rhtml:60
+msgid "EMAIL_ANNOUNCEMENT|HD_CAMERA"
+msgstr "Do you own/use any HD cameras currently, if so what:"
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Serial number"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:30
+msgid "EMAIL_ANNOUNCEMENT|EMAIL_ADDRESS"
+msgstr "Email Address:"
+
+#: app/views/cameras/tech_specs.rhtml:6
+msgid "GLOBAL|SENSOR"
+msgstr "Sensor"
+
+#: app/views/static_pages/contact_us.rhtml:61
+msgid "CONTACT_US|POST|NAME"
+msgstr "Name:"
+
+#: app/models/order.rb:-
+msgid "Order|Erp complete"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:1
+#: app/views/static_pages/global/_main_navigation.rhtml:7
+msgid "NAVIGATION|TECHNOLOGY"
+msgstr "Technology"
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Payment method"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT"
+msgstr "Business Development"
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Order"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:22
+msgid "FAQS|ANSWER|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+"We are working on an updated production schedule and will post it at www.red."
+"com as soon as the schedule is complete."
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Security token"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Description"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|System"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:53
+msgid "EMAIL_ANNOUNCEMENT|SYSTEM"
+msgstr "Do you use:"
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Raw camera"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:24
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN"
+msgstr "RED ONE IS A MODULAR DESIGN"
+
+#: app/views/static_pages/workflow.rhtml:8
+msgid "WORKFLOW|TEXT"
+msgstr ""
+"* Shoot 4K REDCODE RAW @27MB/sec.\n"
+"* Load footage into REDCINE Do 1st light correction.\n"
+"* Export to any number of output options.\n"
+"* REDCINE is supported on Intel Mac and Windows XP only."
+
+#: app/views/static_pages/lenses.rhtml:17
+msgid "LENSES|RED_18-50MM_F2.8_CF|DESCRIPTION"
+msgstr ""
+"Delivery time for the RED 18-50mm f2.8 close focus zoom lens is scheduled "
+"for Summer 2007."
+
+#: app/views/cameras/tech_specs.rhtml:63
+msgid "GLOBAL|MONITOR"
+msgstr "Monitor"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl city"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:79
+msgid "CAMERAS|FORMAT_OPTIONS|720p_S16mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"120 fps\n"
+"Up to 120 fps\n"
+"50 or 60 fps\n"
+
+#: app/models/order_transaction.rb:-
+msgid "order transaction"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Encrypted cc number"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Created on"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:9
+msgid ""
+"FAQS|QUESTION|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr "What is the record time and pricing for a Digital Maginize?"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|First name"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:7
+msgid "GLOBAL|WEBSITE_KEYWORDS"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Status"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth response code"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Safe cc number"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:55
+msgid "CONTACT_US|QUEUE|BUSINESS_DEVELOPMENT_TEXT"
+msgstr "sponsorship, product development, and distribution opportunities"
+
+#: app/views/static_pages/contact_us.rhtml:58
+msgid "CONTACT_US|QUEUE|GENERAL"
+msgstr "General"
+
+#: app/views/static_pages/privacy_policy.rhtml:1
+msgid "PRIVACY_POLICY|TITLE"
+msgstr "RED Privacy Policy"
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Order number"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Content"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:66
+msgid "CAMERAS|FORMAT_OPTIONS|1080p_2/3\"B4"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"Up to 60 fps\n"
+"24, 25 or 30 fps\n"
+
+#: app/views/cameras/index.rhtml:19
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE"
+msgstr "PIXEL SHIFTING AND UP-REZZING NOT SPOKEN HERE"
+
+#: app/views/static_pages/email_announcements.rhtml:28
+msgid "EMAIL_ANNOUNCEMENT|NAME"
+msgstr "Your Name:"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount2"
+msgstr ""
+
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl state"
+msgstr ""
+
+#: app/views/layouts/static_pages.rhtml:26
+msgid "GLOBAL|LOGO_LINK_HINT"
+msgstr "RED Digital Cinema"
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Editor"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl email"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Paid on"
+msgstr ""
+
+#: app/views/static_pages/index.rhtml:23
+msgid "INDEX|SHOT_ON_RED|TEXT"
+msgstr ""
+"!/images/index/shot_on_red1.jpg!:page\n"
+"h2. \"SHOT ON RED\":page\n"
+"\n"
+"Movies and television series in production being shot on RED:\n"
+"\n"
+"* *Guerrilla* and *The Argentine*, by Academy Award winning director Steven "
+"Soderbergh.\n"
+"* *Wanted*. Directed by Timur Bekmambetov. Starring Angelina Jolie. \n"
+"p(none_listtype). Movies and Television Series in Pre-production to be shot "
+"on RED:\n"
+"* Names coming soon...\n"
+"!/images/index/go.gif!:page\n"
+"\n"
+"[page]pages/shot_on_red\n"
+
+#: app/views/static_pages/faqs.rhtml:3
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr "What is the price of the camera?"
+
+#: app/views/static_pages/faqs.rhtml:7
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr ""
+"Any existing P/L mount S16mm or 35mm lens is suitable for use with the RED "
+"ONE camera. More information on the current lineup of RED lenses is "
+"available in the \"RED Lenses\":lenses section."
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth avs response"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:10
+#: app/views/static_pages/lenses.rhtml:21
+#: app/views/static_pages/lenses.rhtml:32
+#: app/views/static_pages/lenses.rhtml:44
+msgid "GLOBAL|ESTIMATED_SHIP_DATE"
+msgstr "Estimated Ship Date:"
+
+#: app/models/order.rb:-
+msgid "Order|Erp account uuid"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit deposit"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:45
+msgid "GLOBAL|RED_ONE|RAW_OUTPUT"
+msgstr ""
+"High speed serial interface\n"
+"1 - 60 fps\t\t2540p, 4K\n"
+"1 - 120 fps\t2K (windowed sensor)\n"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs zip"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:9
+msgid "NAVIGATION|STORE"
+msgstr "Store"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration year"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Created at"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:82
+msgid "CONTACT_US|ADDRESS"
+msgstr ""
+"20302 Valencia Circle\n"
+"Lake Forest, CA 92630\n"
+"USA\n"
+
+#: app/views/cameras/index.rhtml:13
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE"
+msgstr "RED RENDERS OBSOLESCENCE OBSOLETE"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Settlement number"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "order address"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Secret code"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactionid"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Size height"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:27
+msgid "EMAIL_ANNOUNCEMENT|REQUIRED_FIELDS"
+msgstr "Required Fields"
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Updated on"
+msgstr ""
+
+#: app/views/static_pages/technology.rhtml:9
+msgid "TECHNOLOGY|DIGITAL_SUPER_35MM"
+msgstr "DIGITAL SUPER 35mm"
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Price"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Random"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Price"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:6
+msgid "FOOTER|GEAR_WE_USE"
+msgstr "Gear We Use"
+
+#: app/views/static_pages/accessories.rhtml:15
+msgid "ACCESSORIES|FLEXIBILITY_IS_THE_KEY|TEXT"
+msgstr "Flexibility is the key to the RED ONE&trade; concept… Grow the camera for Studio shooting or Crane mount, or go super light and shoot handheld EFP. Either way you will be able to shoot in comfort and proper balance."
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl customer code"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp cc uuid"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:33
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_3"
+msgstr "75 MB. 8 seconds @ 24 fps. 1/48th sec 1024 x 560."
+
+#: app/views/gallery/still_gallery.rhtml:4
+msgid "GALLERY|STILL_GALLERY|DESCRIPTION"
+msgstr ""
+"These images are best viewed through a web browser supporting Color "
+"Management such as Safari with Apple's integrated Color Sync. Use a gamma of "
+"2.2 and color profile of Adobe 1998."
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs streetmatch"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:24
+msgid "GLOBAL|FULL_PIXEL_ARRAY"
+msgstr "Full Pixel Array"
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Email address"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Order status code"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:41
+msgid "GALLERY|VIDEO_GALLERY|VIDEO_4"
+msgstr "107 MB. 15 seconds @ 24 fps. 1/48sec 1024 x 512."
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Cardholder name"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:67
+msgid "GLOBAL|WEIGHT"
+msgstr "Weight"
+
+#: app/models/pfp_transaction.rb:-
+msgid "pfp transaction"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:46
+msgid "EMAIL_ANNOUNCEMENT|EDITOR"
+msgstr "What parimary Non Linear Editing platform do you use:"
+
+#: app/models/reservation_item.rb:-
+msgid "ReservationItem|Reservation"
+msgstr ""
+
+#: app/controllers/account_controller.rb:68
+msgid "GLOBAL|MESSAGE|USER_NOT_EXISTS"
+msgstr ""
+
+#: app/views/pages/red_will_be_at_ibc.rhtml:22
+msgid "PAGES|RED_WILL_BE_AT_IBC|TEXT"
+msgstr "h1. RED WILL BE AT IBC IN AMSTERDAM FROM SEPTEMBER 7TH - 11TH\n\nThe RED booth will feature the newly edited trailer of  Peter Jackson’s \"<a href=\"../gallery\" >Crossing the Line</a>\"  shot on alpha prototype RED cameras Nicknamed “Boris & Natasha”. Working RED ONE cameras will be in the RED booth.\n\nAdditionally, the IBC Big Screen 2007 will be featuring RED each  evening (Friday, Saturday and Sunday) from 5:00 - 6:00 pm. The RED Screening will cover: <br /><a href=\"../technology\">Mysterium</a>&trade;, other RED technology, the RED workflow, and the 4k screening of “Crossing the Line”.\n\n!/images/news/1187005649/ibc_w1.jpg!\n\n · IBC Big Screen 2007 Schedule: <a href=\"http://www.ibc.org/cgi-bin/displaypage.cgi?pageref=3278\">http://www.ibc.org/cgi-bin/displaypage.cgi?pageref=3278</a>\n · IBC Pre-Registration: <a href=\" http://www.ibc.org/cgi-bin/displaypage.cgi?pageref=1104\">http://www.ibc.org/cgi-bin/displaypage.cgi?pageref=1104</a>\n · IBC Reduser Group Meeting: <a href=\"http://www.reduser.net/forum/showthread.php?t=3470\">http://www.reduser.net/forum/showthread.php?t=3470</a>\n\n"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp authcode"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:5
+msgid "NAVIGATION|ACCESSORIES"
+msgstr "Accessories"
+
+#: app/views/static_pages/lenses.rhtml:20
+msgid "LENSES|RED_18-50MM_F2.8_CF|PRICE"
+msgstr "6,500"
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Erp account number"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:42
+#: app/views/static_pages/email_announcements.rhtml:49
+msgid "EMAIL_ANNOUNCEMENT|OTHER"
+msgstr "Other"
+
+#: app/models/product.rb:-
+msgid "Product|Size depth"
+msgstr ""
+
+#: app/views/gallery/poster_gallery.rhtml:1
+#: app/views/gallery/_sub_navigation.rhtml:4
+msgid "GALLERY|SUB_NAVIGATION|POSTER_GALLERY"
+msgstr "POSTER GALLERY"
+
+#: app/models/product.rb:-
+msgid "Product|Quantity"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Log msg"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:39
+msgid "LENSES|RED_PRIME_SET|DESCRIPTION"
+msgstr ""
+"Includes:\n"
+"15mm f2.8, 25mm f1.9, 35mm f1.9\n"
+"50mm f1.9, 85mm f1.9\n"
+
+#: app/views/static_pages/accessories.rhtml:10
+msgid "ACCESSORIES|RED_RAILS|TEXT"
+msgstr "The RED ONE&trade;  camera body and RED-RAIL&trade;  components provide multiple mounting points to allow hundreds of optional RED and third party accessories. Start with a BASIC PRODUCTION PACK (left), which includes a top handle and front grip to shoot handheld, or grow the camera with a PREMIUM PRODUCTION PACK (below) that adds side handles and a full top plate to bolt on accessories to your hearts content...… including some that haven’t even been dreamed of yet. "
+
+#: app/models/order.rb:-
+msgid "Order|Erp order uuid"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Created on"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:1
+#: app/views/static_pages/global/_main_navigation.rhtml:4
+msgid "NAVIGATION|LENSES"
+msgstr "Lenses"
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Unit price"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Sticky position"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:87
+msgid "CAMERAS|FORMAT_OPTIONS|SUBSCRIPT"
+msgstr ""
+"2540p = 4520 x 2540 pixels, progressive scan.<br />*B4 Requires optional B4 "
+"to P/L Mount Adaptor.<br />24fps includes 23.98 and 24.00Hz , 60fps includes "
+"59.94 and 60.00Hz.<br />Formats may be recorded at 10 bit log, 10 bit linear "
+"or 12 bit linear bit depth."
+
+#: app/models/order.rb:-
+msgid "Order|Erp order number"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Bill to address"
+msgstr ""
+
+#: app/models/reservation_item.rb:-
+msgid "reservation item"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "ip2address"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:82
+msgid "CAMERAS|FORMAT_OPTIONS|720p_2/3\"B4"
+msgstr ""
+"YES\n"
+"Variable\n"
+"120 fps\n"
+"Up to 120 fps\n"
+"50 or 60 fps\n"
+
+#: app/views/cameras/index.rhtml:15
+msgid "CAMERAS|INTRODUCING|RED_RENDERS_OBSOLESCENCE_OBSOLETE|TEXT"
+msgstr "The RED ONE&trade; body – designed for flexibility and functionality. Weighing in at around 9 lbs, a streamlined package specifically designed to maximize your shooting options. Matched with a 35mm PL lens mount it allows you to take advantage of the world’s best optics. Modular and upgradeable, the RED ONE&trade; camera is a future-proof acquisition system you can build upon. RED ONE&trade;’s modular design means you can upgrade with us as we add new features, accessories and improve system specifications.\n"
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Created on"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:71
+msgid "GLOBAL|CONSTRUCTION"
+msgstr "Construction"
+
+#: app/views/contact/post_contact.rhtml:1
+msgid "CONTACT_US|SUCCESSFUL_TITLE"
+msgstr ""
+"Thank you. Your inquiry has been submitted and a copy has been sent to your "
+"email."
+
+#: app/views/cameras/tech_specs.rhtml:17
+msgid "GLOBAL|RED_ONE|PHYSICAL_SIZE"
+msgstr "24.4mm x 13.7mm (Super35mm)"
+
+#: app/views/cameras/tech_specs.rhtml:20
+msgid "GLOBAL|ACTIVE_PIXEL_ARRAY"
+msgstr "Active Pixel Array"
+
+#: app/views/static_pages/about_red.rhtml:3
+msgid "ABOUT_RED|TEXT"
+msgstr ""
+"The idea behind the RED camera system is simple. Design and build a high "
+"performance digital cine camera with the quality of 35mm film and "
+"convenience of pure digital. RED delivers unmatched image quality with no "
+"recording system limitations.\n"
+"\n"
+
+#: app/models/product.rb:-
+msgid "Product|Weight"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:68
+msgid "GLOBAL|RED_ONE|WEIGHT"
+msgstr "Around 9 lbs (without lens, battery and external viewfinder)"
+
+#: app/views/static_pages/contact_us.rhtml:75
+msgid "GLOBAL|FULL_COMPANY_NAME"
+msgstr "RED Digital Cinema Camera Company"
+
+#: app/views/static_pages/contact_us.rhtml:69
+msgid "CONTACT_US|POST|DETAIL"
+msgstr "Detail:"
+
+#: app/views/static_pages/lenses.rhtml:44
+msgid "LENSES|RED_PRIME_SET|ESTIMATED_SHIP_DATE"
+msgstr "End of 2007"
+
+#: app/views/static_pages/email_announcements.rhtml:38
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|DIRECTOR"
+msgstr "Director"
+
+#: app/views/cameras/tech_specs.rhtml:16
+msgid "GLOBAL|PHYSICAL_SIZE"
+msgstr "Physical Size"
+
+#: app/views/static_pages/global/_footer.rhtml:14
+msgid "FOOTER|COPYRIGHT"
+msgstr "Copyright &copy; 1999-%CURRENT_YEAR%, all rights reserved."
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Email address"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Title"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:41
+msgid "GLOBAL|RED_ONE|FRAME_RATES"
+msgstr ""
+"Variable\n"
+"1 – 60 fps\t2540p, 4K, 2K,1080p, 720p\n"
+"1 – 120 fps\t2K, 720p (windowed sensor)\n"
+"50 / 59.94fps\t1080i, 720p\n"
+
+#: app/models/order_account.rb:-
+msgid "order account"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:8
+msgid "GLOBAL|FRAME_SIZE"
+msgstr "Frame Size"
+
+#: app/views/static_pages/faqs.rhtml:6
+msgid "FAQS|QUESTION|WHAT_IS_THE_PRICE_OF_LENSES_SUITABLE_FOR_THE_CAREMA"
+msgstr "What is the price of lenses suitable for the camera?"
+
+#: app/views/static_pages/global/_footer.rhtml:8
+msgid "FOOTER|ABOUT_RED"
+msgstr "About RED"
+
+#: app/helpers/static_pages_helper.rb:5
+#: app/views/cameras/_sub_navigation.rhtml:6
+msgid "GLOBAL|BUY_NOW"
+msgstr "Buy Now!"
+
+#: app/views/gallery/index.rhtml:12 app/views/gallery/index.rhtml:24
+#: app/views/gallery/index.rhtml:36 app/views/gallery/index.rhtml:44
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_VIA_HTTP"
+msgstr "Download via HTTP"
+
+#: app/views/static_pages/contact_us.rhtml:2
+msgid "CONTACT_US|TITLE"
+msgstr "Contact Us"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth message"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Erp status msg"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Created at"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:9
+#: app/views/static_pages/lenses.rhtml:20
+#: app/views/static_pages/lenses.rhtml:31
+#: app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|MSRP"
+msgstr "MSRP:"
+
+#: app/models/order.rb:-
+msgid "Order|Order shipping type"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:64
+msgid "GLOBAL|RED_ONE|MONITOR"
+msgstr "Flex mounted High Resolution LCD, High Resolution color EVF (optional)"
+
+#: app/helpers/application_helper.rb:18 app/views/static_pages/lenses.rhtml:9
+#: app/views/static_pages/lenses.rhtml:20
+#: app/views/static_pages/lenses.rhtml:31
+#: app/views/static_pages/lenses.rhtml:43
+msgid "GLOBAL|CURRENCY_SYMBOL"
+msgstr "$"
+
+#: app/views/static_pages/faqs.rhtml:4
+msgid "FAQS|ANSWER|WHAT_IS_THE_PRICE_OF_THE_CAREMA"
+msgstr ""
+"The price for the RED-ONE camera is $17,500 plus shipping, sales taxesand "
+"import duties if applicable."
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|City"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Sales tax"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Country"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs zipmatch"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "image"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:37
+msgid "GLOBAL|RED_ONE|ACQUISITION_FORMATS"
+msgstr ""
+"2540p (4k+)\n"
+"4K\n"
+"2K\n"
+"1080p\n"
+"1080i\n"
+"720p\n"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Telephone"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|State"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Product"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Company"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Live visible"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:76
+msgid "CAMERAS|FORMAT_OPTIONS|720p_35mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"Up to 60 fps\n"
+"50 or 60 fps\n"
+
+#: app/views/static_pages/lenses.rhtml:38
+#: app/views/static_pages/lenses.rhtml:40
+msgid "LENSES|RED_PRIME_SET"
+msgstr "RED PRIME SET"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Referer"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl invoice number"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:59
+msgid "GLOBAL|AUDIO"
+msgstr "Audio"
+
+#: app/views/static_pages/faqs.rhtml:15
+msgid "FAQS|QUESTION|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr "When will footage be available from the camera?"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Created on"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:19
+msgid "FAQS|ANSWER|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr ""
+"Prototype camera assemblies are complete, meeting our December 2006 target. "
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Last name"
+msgstr ""
+
+#: app/views/static_pages/workflow.rhtml:1
+msgid "WORKFLOW|TITLE"
+msgstr "Workflow"
+
+#: app/models/email_announcement.rb:2
+msgid "GLOBAL|MESSAGE|EMPTY_FIRST_NAME"
+msgstr ""
+
+#: app/views/static_pages/global/_main_navigation.rhtml:8
+msgid "NAVIGATION|GALLERY"
+msgstr "Gallery"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Order user"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:80
+msgid "GLOBAL|SUBMIT"
+msgstr "Submit"
+
+#: app/views/static_pages/contact_us.rhtml:58
+msgid "CONTACT_US|QUEUE|GENERAL_TEXT"
+msgstr "product information, release dates, and everything else..."
+
+#: app/views/static_pages/global/_main_navigation.rhtml:3
+msgid "NAVIGATION|CAMERAS"
+msgstr "Cameras"
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Ipcity"
+msgstr ""
+
+#: app/controllers/contact_controller.rb:41
+msgid "CONTACT_US|POST|FAILED"
+msgstr ""
+"Sorry, the web server is busy now, pleasy try again several minutes later."
+
+#: app/models/image.rb:-
+msgid "Image|Width"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipped on"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:44
+msgid "GLOBAL|RAW_OUTPUT"
+msgstr "Raw Output"
+
+#: app/views/cameras/tech_specs.rhtml:25
+msgid "GLOBAL|RED_ONE|FULL_PIXEL_ARRAY"
+msgstr "4900 (h) x 2580 (v)"
+
+#: app/views/cameras/format_options.rhtml:49
+msgid "CAMERAS|FORMAT_OPTIONS|2K_S16mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"120 fps\n"
+"Up to 60 fps\n"
+"No\n"
+"Up to 120 fps\n"
+
+#: app/views/cameras/tech_specs.rhtml:40
+msgid "GLOBAL|FRAME_RATES"
+msgstr "Frame Rates"
+
+#: app/views/static_pages/lenses.rhtml:43
+msgid "LENSES|RED_PRIME_SET|PRICE"
+msgstr "19,975"
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Status"
+msgstr ""
+
+#: app/views/cameras/_sub_navigation.rhtml:3
+#: app/views/cameras/tech_specs.rhtml:1
+msgid "CAMERAS|SUB_NAVIGATION|TECH_SPECS"
+msgstr "TECH SPECS"
+
+#: app/views/static_pages/return_policy.rhtml:1
+msgid "RETURN_POLICY|TITLE"
+msgstr "RED Deposit Refund Policy"
+
+#: app/views/cameras/format_options.rhtml:60
+msgid "CAMERAS|FORMAT_OPTIONS|1080p_35mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"Up to 60 fps\n"
+"24, 25 or 30 fps\n"
+
+#: app/models/news.rb:-
+msgid "news"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiondatetime"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl exp date"
+msgstr ""
+
+#: app/views/static_pages/privacy_policy.rhtml:3
+msgid "PRIVATY_POLICY|RICH_CONTENT"
+msgstr ""
+"h2. RED will never sell any information about you to anyone\n"
+"\n"
+"RED’s privacy and security measures are designed with deep bunker security "
+"in mind, so any personal information that you provide to RED is used for the "
+"purpose of personalizing and enhancing your web experience with RED, and for "
+"no other purpose. RED’s specific privacy policies are outlined below.\n"
+"\n"
+"h2. The Information We Collect\n"
+"\n"
+"There are three ways that RED obtains information from you: (1) via signup "
+"on RED’s website; (2) from an on-line purchase; or (3) navigational "
+"information about where visitors go on our website.\n"
+"\n"
+"h2. How We Use The Information\n"
+"\n"
+"The information obtained from registration on-line is utilized to improve "
+"your web experience with RED by enabling you to obtain a faster checkout for "
+"purchases and/or opt-in to receive occasional e-mails, which provide you "
+"with the latest and greatest information regarding RED and its products.\n"
+"\n"
+"The information we ask for when you order on-line is your name, address, "
+"phone number, credit card number and email address, and is used only to "
+"complete the order, to confirm the order and to confirm shipment of the "
+"order. You may, upon placement of an order, opt to allow RED to save the "
+"information for a speedier checkout process the next time. This information "
+"is then stored only for the purposes of faster checkout and is not used for "
+"any other purpose.\n"
+"\n"
+"The navigational information allows us to see which areas of our Web site "
+"are most visited and helps us improve the quality of your online experience "
+"by recognizing and delivering more of the most desired features and "
+"services. Additional non-personally identifiable information (for example, "
+"browser version, IP address) may be collected which will provide information "
+"regarding the general use of our website.\n"
+"\n"
+"RED will never sell any information about you to anyone. \"Cookies\" are "
+"used by RED only to allow you to use RED’s web site in the most efficient "
+"manner.\n"
+"\n"
+"h2. E-Mail\n"
+"\n"
+"RED will only send e-mails to you if you ask for them and you can easily "
+"unsubscribe at any time you want. RED has a company policy not to flood "
+"people with e-mail correspondence, but simply gives you periodic information "
+"so you can stay up to date on what RED is offering. RED also uses your e-"
+"mail address to confirm your order and to confirm shipment of your order and "
+"to respond to any inquiries you make on-line. All e-mails you receive will "
+"provide you with information as to how to get off the e-mail mailing list if "
+"you so desire.\n"
+"\n"
+"h2. Children’s Privacy\n"
+"\n"
+"Use RED.com only with involvement of a parent or guardian. Although RED does "
+"not specifically direct its web site to children, RED strives to provide "
+"children with as much customer service as possible without violating their "
+"privacy rights. For their protection, RED asks that anyone under 14 years of "
+"age not attempt to register with RED or otherwise provide RED with any "
+"personal information without the consent of a parent or legal guardian.\n"
+"\n"
+"h2. Access To Your Personal Information\n"
+"\n"
+"RED will provide you with access to the personal information you provided to "
+"RED by allowing you to view, update or correct your information. In order to "
+"protect your privacy, RED takes steps to verify your identity before "
+"granting you access to the private information or enabling you to make "
+"corrections. RED will accomplish this through the use of passwords and "
+"personal data.\n"
+"\n"
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Uuid"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Card number"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Auth source"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:77
+msgid "EMAIL_ANNOUNCEMENT|SUBSCRIPT"
+msgstr ""
+"Your personal information is used for RED Digital Cinema communications "
+"only. RED does not distribute or sell consumer information to any outside "
+"parties. You must be 14 years or older to submit."
+
+#: app/views/contact/confirm_contact.rhtml:3
+msgid "CONTACT_US|CONFIRMATION|INVALID_TITLE"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl card number"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:16
+msgid "FAQS|ANSWER|WHEN_WILL_FOOTAGE_BE_AVAILABLE_FROM_THE_CAREMA"
+msgstr ""
+"Footage is available now. See the <a href=\"gallery\">video gallery</a>."
+
+#: app/views/static_pages/lenses.rhtml:5 app/views/static_pages/lenses.rhtml:7
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM"
+msgstr "RED 50-150mm T-3(f2.8) Zoom"
+
+#: app/views/cameras/tech_specs.rhtml:60
+msgid "GLOBAL|RED_ONE|AUDIO"
+msgstr "4 channel uncompressed, 16 / 24 bit, 48KHz"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Bank name"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp order"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:78
+msgid "CONTACT_US|FAX"
+msgstr "Fax: +1-949-206-7990"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Updated on"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Hashed password"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:32
+msgid "LENSES|RED_300MM_F2.8|ESTIMATED_SHIP_DATE"
+msgstr "Early 2007"
+
+#: app/views/cameras/tech_specs.rhtml:53
+msgid "GLOBAL|RED_ONE|DIGITAL_MEDIA_MAGAZINE"
+msgstr ""
+"FireWire 800/400, USB-2 and e-SATA interfaces\n"
+"RED-DRIVE&trade;\t\thard disk drive (40 – 160GB)\n"
+"REDFLASH&trade;\t\tflash memory (32 – 128GB)\n"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Approvalcode"
+msgstr ""
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Uuid"
+msgstr ""
+
+#: app/views/static_pages/gear_we_use.rhtml:1
+msgid "GEAR_WE_USE|TITLE"
+msgstr "Gear We Use"
+
+#: app/views/gallery/_sub_navigation.rhtml:3
+#: app/views/gallery/still_gallery.rhtml:1
+msgid "GALLERY|SUB_NAVIGATION|STILL_GALLERY"
+msgstr "STILL GALLERY"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl amount"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:21
+msgid "CAMERAS|INTRODUCING|PIXEL_SHIFTING_AND_UP-REZZING_NOT_SPOKEN_HERE|TEXT"
+msgstr ""
+"Typical high-end HD camcorders have 2.1M pixel sensors and record with 3:1:1 "
+"color sub-sampled video at up to 30fps. We deliver 12M pixels at up to 60fps "
+"and record 12 bit native RAW, or 10 bit over-sampled HD your choice. That’s "
+"more than 5 times the amount of information available every second and a "
+"vastly superior recording quality. Don’t need all that data for your "
+"workflow? Dial it back, and keep all the other advantages of the \"Mysterium"
+"\":technology &trade; Super 35mm cine sized (24.4 x 13.7mm) sensor. You get "
+"the same breathtaking Depth of Field and selective focus as found in film "
+"cameras. \"Mysterium\":technology &trade; boasts a greater than 66db Signal "
+"to Noise Ratio thanks to its large 29 sq. micron pixels. And 12,065,000 "
+"pixels deliver resolution that can only be called Ultra High Definition."
+
+#: app/views/static_pages/contact_us.rhtml:57
+msgid "CONTACT_US|QUEUE|WEBSITE_TEXT"
+msgstr "comments, suggestions, problems and bug reports"
+
+#: app/views/cameras/tech_specs.rhtml:33
+msgid "GLOBAL|RED_ONE|DEPTH_OF_FIELD"
+msgstr "Equivalent to 35mm Cine Lenses (S16mm with windowed sensor)"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote ip"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Customer code"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Creation email"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:9
+msgid "FOOTER|PRIVACY_POLICY"
+msgstr "Privacy Policy"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order account type"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Tax"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:17
+msgid "EMAIL_ANNOUNCEMENT|DESCRIPTION|TEXT"
+msgstr "Sign up and receive the latest news from RED."
+
+#: app/models/viaklix_transaction.rb:-
+msgid "viaklix transaction"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl description"
+msgstr ""
+
+#: app/views/static_pages/gear_we_use.rhtml:3
+msgid "GEAR_WE_USE|TEXT"
+msgstr ""
+"Below are some of the companies we at RED used equipment from to shoot, "
+"handle post production and screen the images from the Mysterium Sensor that "
+"you see on our website and in the 4k screenings in Amsterdam, NYC, LA and "
+"Las Vegas."
+
+#: app/views/static_pages/contact_us.rhtml:56
+msgid "CONTACT_US|QUEUE|JOBS_TEXT"
+msgstr "jobs  applications and inquiries"
+
+#: app/views/static_pages/lenses.rhtml:16
+#: app/views/static_pages/lenses.rhtml:18
+msgid "LENSES|RED_18-50MM_F2.8_CF"
+msgstr "RED 18-50mm F2.8 CF LENS"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl last name"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:26
+msgid "CAMERAS|INTRODUCING|RED_ONE_IS_A_MODULAR_DESIGN|TEXT"
+msgstr ""
+"Shoot lightweight ENG style (body around 9 lbs., in rugged aluminum alloy) "
+"or load it up to shoot a feature film. Options include RED-RAIL&trade; "
+"mounting accessories that  “grow” the camera body. Configure for tripod, "
+"crane or long lens applications. High-resolution RED monitors come equipped "
+"with advanced tools for framing, exposure and focus. The RED ONE&trade; "
+"camera has numerous stainless steel mounting points on the body to allow "
+"hundreds of optional RED and third party accessories... some that haven’t "
+"even been dreamed of yet."
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source name"
+msgstr ""
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Description"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:15
+msgid "FOOTER|TRADE"
+msgstr ""
+"RED Digital Cinema,  RED ONE,  MYSTERIUM,  REDCODE,  REDFLASH,  RED-RAM,  "
+"RED-RAID,  RED-DRIVE, RED-CAGE, RED-RAIL, REDCINE, RED GRIP and RED-GUN are "
+"trademarks of the RED Digital Cinema Camera Company. "
+
+#: app/models/store_user.rb:-
+msgid "store user"
+msgstr ""
+
+#: app/views/gallery/still_gallery.rhtml:3
+msgid "GALLERY|STILL_GALLERY|SUB_TITLE"
+msgstr ""
+"ALL SHOTS RECORDED WITH RED-ONE ALPHA PROTOTYPES \"BORIS\" AND \"NATASHA\""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Company"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Avs result"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:53
+msgid "CONTACT_US|QUEUE|ORDERS_TEXT"
+msgstr "order status, updates and credits"
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Level"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:11 app/views/gallery/index.rhtml:23
+#: app/views/gallery/index.rhtml:35 app/views/gallery/index.rhtml:43
+msgid "GALLERY|VIDEO_GALLERY|DOWNLOAD_TORRENT"
+msgstr "Download the .torrent file"
+
+#: app/models/news.rb:-
+msgid "News|Remote url"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Created on"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:7
+msgid "GLOBAL|RED_ONE"
+msgstr "RED ONE"
+
+#: app/views/static_pages/email_announcements.rhtml:39
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|RENTAL_COMPANY"
+msgstr "Rental Company"
+
+#: app/models/news.rb:-
+msgid "News|Updated at"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:36
+msgid "CAMERAS|FORMAT_OPTIONS|4K_35mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"Up to 30 fps\n"
+"No\n"
+"Up to 60 fps\n"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:6
+msgid "NAVIGATION|WORKFLOW"
+msgstr "Workflow"
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Ipregion"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:31
+msgid "LENSES|RED_300MM_F2.8|PRICE"
+msgstr "4,950"
+
+#: app/views/pages/red_in_china_and_japan.rhtml:23
+msgid "PAGES|RED_IN_CHINA_AND_JAPAN|TEXT"
+msgstr ""
+"h1. RED IN CHINA AND JAPAN\n"
+"\n"
+"p. Ted Schilowitz of RED Digital Cinema is traveling with Apple showing off "
+"the Peter Jackson movie “Crossing the Line” shot with alpha prototype RED "
+"cameras nicknamed “Boris & Natasha”. RED and Apple are showcasing the "
+"capability of the RED ONE 4k camera and the visually lossless quality of "
+"Apples new ProRes codec, by playing the movie directly off a MacPro on the "
+"big screen at the Apple booth, via an AJA Kona3 card directly to the "
+"projector.\n"
+"\n"
+"p(p2). !/images/news/1187003879/cnj2.jpg(RED in Japan)!:http://bee.jesa.or."
+"jp <br />\n"
+"Tokyo, Japan: November 20th - 22nd (InterBee)\n"
+"More Information at: \"http://bee.jesa.or.jp\":http://bee.jesa.or.jp\n"
+" \n"
+"p(p1). !/images/news/1187003879/cnj1.jpg(RED in China)!:http://www.birtv."
+"com \n"
+"Beijing, China: August 22 - 24th (BIRTV)\n"
+"More Information at: \"http://www.birtv.com\":http://www.birtv.com\n"
+"\n"
+"       "
+
+#: app/views/cameras/tech_specs.rhtml:36
+msgid "GLOBAL|ACQUISITION_FORMATS"
+msgstr "Acqusition Formats"
+
+#: app/views/static_pages/accessories.rhtml:5
+msgid "ACCESSORIES|MODULAR_DESIGN|TEXT"
+msgstr "RED ONE&trade; has a modular design that easily accepts upgrades in hardware, software, storage, handling and monitoring accessories. Shoot lightweight EFP style (body around 9 lbs., in rugged aluminum alloy) or load it up to shoot a feature film. Options include RED-RAIL&trade; mounting accessories that “grow” the camera body. Configure for tripod, crane or long lens applications. High-resolution RED monitors come equipped with advanced tools for framing, exposure and focus. "
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Industry"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:21
+msgid "LENSES|RED_18-50MM_F2.8_CF|ESTIMATED_SHIP_DATE"
+msgstr "End of 2007"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Shipping label"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Sent email receipt"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Notes"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:57
+msgid "CONTACT_US|QUEUE|WEBSITE"
+msgstr "Website"
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Email address"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:79
+msgid "CONTACT_US|AVAILABLE_TIME"
+msgstr ""
+"We're available monday - friday, 9:00 AM - 5:00 PM Pacific Time (GMT-8)\n"
+"... unless we are gone."
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Password"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Pfp amount"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Remote location"
+msgstr ""
+
+#: app/views/static_pages/_email_announcement_success.rhtml:2
+msgid "EMAIL_ANNOUNCEMENT|MESSAGE|SUCCESS"
+msgstr "You are enlisted. We'll notify you via email as news happens."
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Name"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Hd camera"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:18
+msgid "FAQS|QUESTION|WHEN_WILL_PROTOTYPES_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "When will prototypes of the camera be available?"
+
+#: app/views/static_pages/accessories.rhtml:4
+msgid "ACCESSORIES|MODULAR_DESIGN"
+msgstr "MODULAR DESIGN"
+
+#: app/views/static_pages/lenses.rhtml:10
+msgid "RED_50-150MM_T-3_F2.8_ZOOM|ESTIMATED_SHIP_DATE"
+msgstr "End of 2007"
+
+#: app/models/order_line_item.rb:-
+msgid "OrderLineItem|Quantity"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Post timestamp"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Description"
+msgstr ""
+
+#: app/models/news.rb:-
+msgid "News|Headline or sticky"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:63
+msgid "CONTACT_US|POST|SUMMARY"
+msgstr "Summary:"
+
+#: app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS_TEXT"
+msgstr "detailed technical questions about RED ONE and other products"
+
+#: app/models/image.rb:-
+msgid "Image|Height"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:17
+msgid "CAMERAS|FORMAT_OPTIONS|IMAGE_FORMAT"
+msgstr "IMAGE FORMAT"
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Comments"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Shipping cost"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "EmailAnnouncement|Name"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:3
+msgid "FOOTER|EMAIL_ANNOUNCEMENTS"
+msgstr "Email Announcements"
+
+#: app/views/static_pages/faqs.rhtml:21
+msgid "FAQS|QUESTION|WHEN_WILL_PRODUCTION_UNITS_OF_THE_CAREMA_BE_AVAILABLE"
+msgstr "When will production units of the camera be available?"
+
+#: app/models/product.rb:-
+msgid "Product|Description"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:56
+msgid "GLOBAL|RED_ONE|REDCODE_CODEC"
+msgstr ""
+"Variable Bit Rate, Wavelet\n"
+"RAW\n"
+"10 bit\t\t4:2:2\t1080p / 1080i / 720p\n"
+"10 bit log\t\t4:4:4\t2K\n"
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Updated on"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:27
+#: app/views/static_pages/lenses.rhtml:29
+msgid "LENSES|RED_300MM_F2.8"
+msgstr "RED 300m F2.8 LENS"
+
+#: app/views/contact/confirm_contact.rhtml:1
+msgid "CONTACT_US|CONFIRMATION|TITLE"
+msgstr "Confirm your contact"
+
+#: app/views/static_pages/global/_footer.rhtml:4
+msgid "FOOTER|FAQS"
+msgstr "FAQs"
+
+#: app/views/gallery/index.rhtml:56
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT|TEXT"
+msgstr ""
+"* For Mac OS X we recommend using the free, lighweight \"Transmission\":"
+"http://transmission.m0k.org BitTorrent client.\n"
+"* For Windows we recommend the efficient, lightweight \"&mu;Torrent\":http://"
+"www.utorrent.com/download.php client.\n"
+"* Just open the .TORRENT file you downloaded from this page with your "
+"BitTorrent client will start loading the source file automatically.\n"
+"* For more information about BitTorrent and how it works, see: \"answers.com/"
+"BitTorrent\":http://answers.com/bittorrent ."
+
+#: app/views/cameras/format_options.rhtml:63
+msgid "CAMERAS|FORMAT_OPTIONS|1080p_S16mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"Up to 60 fps\n"
+"24, 25 or 30 fps\n"
+
+#: app/models/order.rb:-
+msgid "Order|Order user"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:72
+msgid "GLOBAL|RED_ONE|CONSTRUCTION"
+msgstr "Aluminum alloy"
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Name"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "news admin user"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:6
+msgid "LENSES|RED_50-150MM_T-3_F2.8_ZOOM|DESCRIPTION"
+msgstr "&nbsp;"
+
+#: app/views/static_pages/email_announcements.rhtml:35
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY"
+msgstr "Are you a/an:"
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Store user"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Countryshort"
+msgstr ""
+
+#: app/views/cameras/format_options.rhtml:20
+#: app/views/cameras/format_options.rhtml:32
+#: app/views/cameras/format_options.rhtml:44
+#: app/views/cameras/format_options.rhtml:56
+#: app/views/cameras/format_options.rhtml:72
+msgid "CAMERAS|FORMAT_OPTIONS|ATTRIBUTES"
+msgstr ""
+"Frame Rate\n"
+"Max fps\n"
+"REDCODE\n"
+"HD-SDI\n"
+"RAW Data Port\n"
+
+#: app/views/cameras/tech_specs.rhtml:55
+msgid "GLOBAL|REDCODE_CODEC"
+msgstr "REDCODE Codec"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order address"
+msgstr ""
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Xml"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Erp product item"
+msgstr ""
+
+#: app/views/static_pages/global/_footer.rhtml:5
+msgid "FOOTER|NEWS"
+msgstr "News"
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Ipto"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:41
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|VISUAL_FX_ARTIST"
+msgstr "Visual FX Artist"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Expiration month"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Exp date"
+msgstr ""
+
+#: app/views/cameras/index.rhtml:9
+msgid "CAMERAS|INTRODUCING|PHOTO_TOUR|VIEW_THE_COMPLETE_RED_ONE_PHOTO_TOUR"
+msgstr "VIEW THE COMPLETE RED ONE PHOTO TOUR"
+
+#: app/models/news.rb:-
+msgid "News|Permalink"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:54
+msgid "CONTACT_US|QUEUE|TECHNICAL_QUESTIONS"
+msgstr "Technical Questions"
+
+#: app/views/static_pages/faqs.rhtml:12
+msgid "FAQS|QUESTION|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr "Does the camera support NTSC or PAL?"
+
+#: app/views/contact/_contact_table.rhtml:13
+msgid "CONTACT_US|POST|"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Name"
+msgstr ""
+
+#: app/models/order_line_item.rb:-
+msgid "order line item"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:32
+msgid "GLOBAL|DEPTH_OF_FIELD"
+msgstr "Depth of Field"
+
+#: app/views/static_pages/email_announcements.rhtml:40
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|PRODUCER"
+msgstr "Producer"
+
+#: app/models/email_announcement.rb:4
+msgid "GLOBAL|MESSAGE|INVALID_EMAIL"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:29
+msgid "GLOBAL|RED_ONE|DYNAMIC_RANGE"
+msgstr "> 66dB"
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Order account"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl first name"
+msgstr ""
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Ship to address"
+msgstr ""
+
+#: app/models/order_user.rb:-
+msgid "OrderUser|Password"
+msgstr ""
+
+#: app/views/static_pages/accessories.rhtml:9
+msgid "ACCESSORIES|RED_RAILS"
+msgstr "RED RAILS"
+
+#: app/views/static_pages/global/_footer.rhtml:10
+msgid "FOOTER|RETURN_POLICY"
+msgstr "Return Policy"
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Erp recid"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:1
+msgid "FAQS|TITLE"
+msgstr "Frequently Asked Questions"
+
+#: app/views/static_pages/global/_main_navigation.rhtml:2
+msgid "NAVIGATION|HOME"
+msgstr "Home"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Cvv2 indicator"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:72
+msgid "EMAIL_ANNOUNCEMENT|COMMENTS"
+msgstr "Suggestions/Comments for RED:"
+
+#: app/views/layouts/static_pages.rhtml:6
+msgid "GLOBAL|WEBSITE_DESCRIPTION"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:77
+msgid "CONTACT_US|PHONE"
+msgstr "Phone: +1-949-206-7900"
+
+#: app/models/product.rb:-
+msgid "Product|Date available"
+msgstr ""
+
+#: app/models/news_admin_user.rb:-
+msgid "NewsAdminUser|Name"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Name"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "Order|Pre ax"
+msgstr ""
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Ssl avs address"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Zip"
+msgstr ""
+
+#: app/views/static_pages/accessories.rhtml:1
+msgid "ACCESSORIES|TITLE"
+msgstr "Accessories"
+
+#: app/views/static_pages/contact_us.rhtml:53
+msgid "CONTACT_US|QUEUE|ORDERS"
+msgstr "Orders/Reservations"
+
+#: app/models/news.rb:-
+msgid "News|Headline position"
+msgstr ""
+
+#: app/models/ip2address.rb:-
+msgid "Ip2address|Countrylong"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Source"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Is shipping"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Order"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Address two"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:36
+msgid "EMAIL_ANNOUNCEMENT|INDUSTRY|CINEMATOGRAPHER"
+msgstr "Cinematographer"
+
+#: app/views/static_pages/index.rhtml:16
+msgid "INDEX|SIDE_BAR|TEXT"
+msgstr "p(text). “I liked what they were doing–making a digital camera of the utmost quality, and making it affordable for indie filmmakers.”\n\np(subscript). %(author)- Academy Award winning Director, Peter Jackson% Director and Producer of *The Lord of the Rings* trilogy and *King Kong*\n\np(text). This is the camera I've been waiting for my whole career: jaw-dropping imagery recorded onboard a camera light enough to hold with one hand. ...RED is going to change everything.”\n\np(subscript).  %(author)- Academy Award winning Director, Steven Soderbergh%  Director and Cinematographer of *Ocean's Eleven*, *Traffic* and *Solaris*\n\np(text). \"I have had the opportunity to test the RED ONE camera over the past few weeks, including direct comparison to the same film I shoot on ‘24’. All I can say is that I am totally amazed. Revolutionary might not be a strong enough word to describe what RED is doing.\"\n\np(subscript).  %(author)- Rodney Charters%  Cinematographer on *24*\n\np(text). \"Film is dead. And by the way, so is video. The word is getting out that RED is the future, but for us it is right now. After holding these bad boys in our hands and putting the cameras through the full neveldine/taylor acid test our faith in the mad scientists at RED labs is unlimited. We're committed to RED for every project we've got in the pipeline.\"\n\np(subscript).  %(author)- Mark Neveldine and Brian Taylor% Writers and Directors for *Crank*\n\np(text). \"We're shooting RED side by side film. We scanned the film 4k and took both into the Baselight, compared them and then did a filmout of both. When we screened side by side, we literally could not tell the difference. In fact, most people picked the RED footage as film because of a greater dynamic range in the highlights than in the 5218. We are actually inter-cutting the digital images with film. It's not enough to say it is the best digital image out there. The RED image looks remarkably better than the filmed images. I thought I would never be able to say that\"\n\np(subscript).  %(author)- Jon Farhat%  VFX Supervisor of *Wanted*"
+
+#: app/views/pages/shot_on_red.rhtml:27
+msgid "PAGES|SHOT_ON_RED|TEXT"
+msgstr ""
+"h1. SHOT ON RED\n"
+"\n"
+"p{color:white;font-size:13px;}. Movies and television series in production "
+"being shot on RED:\n"
+"\n"
+"<div class= \"inner\" id =\"inner1\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic1.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. Guerrilla\n"
+" \n"
+"*Director:*<br />\n"
+"Steven Soderbergh<br />\n"
+"*Writers:*<br />\n"
+"*Peter Buchman*<br />\n"
+"Steven Soderbergh<br />\n"
+"*Release Date:*<br />\n"
+"2008 (USA)<br />\n"
+"*Genre:*<br />\n"
+"Biography / Drama<br />\n"
+"*Plot Outline:*<br />\n"
+" In 1964, Argentine revolutionary Ernesto 'Che' Guevara (Benicio del Toro) "
+"travels to New York City to address the United Nations. \n"
+"</div>\n"
+"</div>\n"
+"\n"
+"\n"
+"<div class= \"inner\" id =\"inner2\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic2.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. The<br />Argentine\n"
+" \n"
+"*Director:*<br />\n"
+"Steven Soderbergh<br />\n"
+"*Writers:*<br />\n"
+"Peter Buchman<br />\n"
+"*Genre:*<br />\n"
+"Biography / Drama<br /> \n"
+"*Plot Outline:*<br />\n"
+"In 1956, Ernesto 'Che' Guevara (Benicio Del Toro) and a band of Castro-led "
+"Cuban exiles mobilize an army to topple the regime of dictator Fulgencio "
+"Batista.\n"
+"</div>\n"
+"</div>\n"
+"\n"
+"<div class= \"inner\" id =\"inner3\">\n"
+"<div class=\"img_outer\">\n"
+"!/images/news/1187006207/pic2.jpg!\n"
+"</div>\n"
+"<div class=\"text_outer\">\n"
+"\n"
+"h2. Wanted\n"
+" \n"
+"*Director:*<br />\n"
+"Timur Bekmambetov<br />\n"
+"*Writers:*<br />\n"
+"Michael Brandt<br />\n"
+"Dean Georgaris (re-written by)<br />\n"
+"*Release Date:*<br />\n"
+"28 March 2008 (USA) <br />\n"
+"*Genre:* Action<br />\n"
+"*Plot Summary:*<br />\n"
+"A young man (McAvoy) finds out his long lost father is an assassin. And when "
+"his father is murdered...\n"
+"\n"
+"</div>\n"
+"</div>\n"
+"\n"
+"<div class=\"clear\"></div>\n"
+"<p style=\"margin:20px;color:white;font-size:13px;clear:both;height:1%;"
+"\">Movies and television series in pre-production to be shot on RED:</p>\n"
+"<div class=\"clear\"></div>\n"
+"<div class=\"coming_soon\"><span class=\"m50\">Names coming soon...</span></"
+"div>\n"
+"        \n"
+
+#: app/models/order_transaction.rb:-
+msgid "OrderTransaction|Order"
+msgstr ""
+
+#: app/views/cameras/_sub_navigation.rhtml:2 app/views/cameras/index.rhtml:1
+msgid "CAMERAS|SUB_NAVIGATION|INTRODUCING_RED_ONE"
+msgstr "INTRODUCING RED ONE&trade;"
+
+#: app/views/cameras/_sub_navigation.rhtml:4
+#: app/views/cameras/format_options.rhtml:1
+msgid "CAMERAS|SUB_NAVIGATION|FORMAT_OPTIONS"
+msgstr "FORMAT OPTIONS"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Company"
+msgstr ""
+
+#: app/models/image.rb:-
+msgid "Image|Path"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Code"
+msgstr ""
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Message"
+msgstr ""
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Xml"
+msgstr ""
+
+#: app/views/static_pages/lenses.rhtml:41
+msgid "LENSES|RED_PRIME_SET|IMAGE_NOTE"
+msgstr "Note: not actual picture of prime set"
+
+#: app/views/static_pages/email_announcements.rhtml:61
+#: app/views/static_pages/email_announcements.rhtml:67
+msgid "EMAIL_ANNOUNCEMENT|CAMERA_MODEL"
+msgstr "Camera Model:"
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Created on"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "Product|Deposit"
+msgstr ""
+
+#: app/models/product.rb:-
+msgid "product"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "Reservation|Total"
+msgstr ""
+
+#: app/models/order_account.rb:-
+msgid "OrderAccount|Order user"
+msgstr ""
+
+#: app/views/static_pages/email_announcements.rhtml:66
+msgid "EMAIL_ANNOUNCEMENT|RAW_CAMERA"
+msgstr "Do you own/use any Digital Still Cameras that shoot RAW?"
+
+#: app/views/static_pages/email_announcements.rhtml:16
+#: app/views/static_pages/_email_announcement_success.rhtml:1
+msgid "EMAIL_ANNOUNCEMENT|TITLE"
+msgstr "Join The Rebellion"
+
+#: app/views/cameras/tech_specs.rhtml:52
+msgid "GLOBAL|DIGITAL_MEDIA_MAGAZINE"
+msgstr "Digital Media Magazine"
+
+#: app/models/viaklix_transaction.rb:-
+msgid "ViaklixTransaction|Transactiontype"
+msgstr ""
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Created on"
+msgstr ""
+
+#: app/models/order.rb:-
+msgid "order"
+msgstr ""
+
+#: app/views/cameras/_sub_navigation.rhtml:5
+#: app/views/cameras/photo_tour.rhtml:4
+msgid "CAMERAS|SUB_NAVIGATION|PHOTO_TOUR"
+msgstr "PHOTO TOUR"
+
+#: app/views/cameras/tech_specs.rhtml:28
+msgid "GLOBAL|DYNAMIC_RANGE"
+msgstr "Dynamic Range"
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Pfp serv"
+msgstr ""
+
+#: app/views/static_pages/about_red.rhtml:1
+msgid "ABOUT_RED|TITLE"
+msgstr "About RED Digital Cinema"
+
+#: app/views/static_pages/faqs.rhtml:10
+msgid "FAQS|ANSWER|WHIS_IS_THE_RECORD_TIME_AND_PRICING_FOR_A_DIGITAL_MAGAZINE"
+msgstr ""
+"Digital Magazine recording times will vary with the image frame rate and "
+"resolution selected. An entry level configuration with a RED-DRIVE has a "
+"target price of under $1,000."
+
+#: app/views/static_pages/technology.rhtml:4
+msgid "TECHNOLOGY|MYSTERIUM_DATA_TO_BURN"
+msgstr "MYSTERIUM&trade; DATA TO BURN"
+
+#: app/models/news.rb:-
+msgid "News|Description"
+msgstr ""
+
+#: app/models/reservation.rb:-
+msgid "reservation"
+msgstr ""
+
+#: app/views/static_pages/faqs.rhtml:13
+msgid "FAQS|ANSWER|DOES_THE_CAREMA_SUPPORT_NTSC_OR_PAL"
+msgstr ""
+"The RED-ONE camera has been designed to support all current HDTV and Digital "
+"Cinema distribution master standards, from which an NTSC or PAL standard "
+"definition version can be obtained via standard down conversion techniques."
+
+#: app/models/erp_order_log.rb:-
+msgid "ErpOrderLog|Erp serv"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:51
+msgid "GALLERY|VIDEO_GALLERY|SUBSCRIPT"
+msgstr ""
+"Captured by MYSTERIUM&trade; at 5k, downrezzed to 4k, and compressed down to "
+"1k. Shot without a low pass filter."
+
+#: app/views/cameras/format_options.rhtml:23
+msgid "CAMERAS|FORMAT_OPTIONS|2540p_S35mm"
+msgstr ""
+"YES\n"
+"Variable\n"
+"60 fps\n"
+"No\n"
+"No\n"
+"Up to 60 fps\n"
+
+#: app/views/contact/_contact_table.rhtml:4
+msgid "CONTACT_US|POST|CATEGORY"
+msgstr "Category:"
+
+#: app/views/cameras/tech_specs.rhtml:7
+msgid "GLOBAL|RED_ONE|SENSOR"
+msgstr "12 Megapixel Mysterium&trade;"
+
+#: app/views/gallery/index.rhtml:55
+msgid "GALLERY|VIDEO_GALLERY|HELP_OF_TORRENT"
+msgstr "You don't already have BitTorrent? "
+
+#: app/views/static_pages/return_policy.rhtml:3
+msgid "RETURN_POLICY|RICH_CONTENT"
+msgstr ""
+"Red is still finalizing equipment specifications. Additional information "
+"regarding availability and shipping targets will be posted to our website at "
+"\"http://www.red.com\":http://www.red.com as development proceeds.\n"
+"\n"
+"*THE DEPOSITS FOR RED CAMERAS AND RELATED EQUIPMENT ARE FULLY REFUNDABLE "
+"PRIOR TO PRODUCT DELIVERY TO THE CUSTOMER.*\n"
+"\n"
+"Red makes no promises or representations as to the delivery date of the "
+"camera equipment or final specifications. Deposit holder’s only remedy under "
+"their deposit arrangement is the full return of the customer’s deposit. All "
+"disputes regarding a deposit receipt must be adjudicated in Orange County, "
+"California, USA.\n"
+
+#: app/models/store_user.rb:-
+msgid "StoreUser|Email address"
+msgstr ""
+
+#: app/views/static_pages/contact_us.rhtml:62
+msgid "CONTACT_US|POST|EMAIL"
+msgstr "Email:"
+
+#: app/models/order.rb:-
+msgid "Order|Auth transaction"
+msgstr ""
+
+#: app/models/order_address.rb:-
+msgid "OrderAddress|Updated on"
+msgstr ""
+
+#: app/models/email_announcement.rb:-
+msgid "email announcement"
+msgstr ""
+
+#: app/views/cameras/tech_specs.rhtml:49
+msgid "GLOBAL|RED_ONE|VIDEO_OUTPUTS"
+msgstr ""
+"Single and dual link HD-SDI\n"
+"2K\t4:4:4 RGB\n"
+"1080p\t4:4:4 RGB\n"
+"1080p\t4:2:2\n"
+"1080i\t4:2:2\n"
+"720p\t4:2:2\n"
+
+#: app/models/pfp_transaction.rb:-
+msgid "PfpTransaction|Updated on"
+msgstr ""
+
+#: app/views/gallery/index.rhtml:8
+msgid "GALLERY|VIDEO_GALLERY|CROSSING_THE_LINE|DESCRIPTION"
+msgstr ""
+"Shot on alpha prototype cameras \"Boris\" and \"Natasha\", with 180° shutter "
+"at 24 fps. Shot in REDCODE RAW 4K on onboard media.\n"
+"1K Extract is 91 MB. 30 seconds @ 24 fps. 1024 x 512."
+
+#: app/models/product.rb:-
+msgid "Product|Size width"
+msgstr ""
+
+
+#: app/views/cameras/tech_specs.rhtml:21
+msgid "GLOBAL|RED_ONE|ACTIVE_PIXEL_ARRAY"
+msgstr "4520 (h) x 2540 (v)"
+
+#: app/views/cameras/tech_specs.rhtml:48
+msgid "GLOBAL|VIDEO_OUTPUTS"
+msgstr "Video Outputs"

@@ -1,0 +1,33 @@
+<%= form_tag %>
+	<p>
+		<label for="address_name">Name</label>
+		<%= text_field "address", "name", :class => 'text-input' %>
+		<span class="tip">
+			How it appears in dropdown box. Example: "Downtown Office", "Home". Etc.
+		</span>
+	</p>
+	<p>
+		<label for="address_conntry">Country</label>
+		<%= country_select_tag "address[country_region_id]", (@address.nil? ? "US" : @address.country_region_id), :id => "address_country" %>
+	</p>
+	<p>
+		<label for="address_street">Street</label>
+		<%= text_area "address", "street", :class => "text-input", :cols => 35, :rows => 3 %>
+	</p>
+	<p>
+		<label for="address_city">City</label>
+		<%= text_field "address", "city", :class => "text-input" %>
+	</p>
+	<p>
+		<label for="address_state">State / Provice / Region</label>
+		<%= text_field "address", "state", :class => "text-input" %>
+		<%= error_field @address, "state" %>
+	</p>
+	<p>
+		<label for="address_zip_code">Postal / Zip Code</label>
+		<%= text_field "address", "zip_code", :class => "text-input" %>
+	</p>
+	<p>
+		<%= submit_tag @address.nil? ? "Add Address" : "Save Changes", :class => 'button' %>
+	</p>
+<%= end_form_tag %>

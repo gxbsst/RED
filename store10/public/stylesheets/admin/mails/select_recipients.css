@@ -1,0 +1,58 @@
+.recipients_conditions {
+  clear: both;
+  height: 200px;
+}
+.recipients_conditions p {
+  float: left;
+  width: 25%;
+  padding: 0;
+}
+.recipients_conditions input, .recipients_conditions select {
+  margin: 2px 0;
+  width: 99%;
+}
+.recipients_conditions .button {
+  clear: both;
+}
+#select_recipients_wrapper .listContainer { 
+  height: 300px;
+  clear: both;
+}
+#select_recipients_wrapper .do_not_contact {
+	text-decoration: line-through;
+}
+
+/* Display tips only in the first condition */
+#conditions_wrapper {
+  height: 120px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+.conditions span.info {
+  display: none;
+}
+#conditions_0 span.info {
+  display: block;
+}
+#append_condition_link {
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 10px;
+  font-size: smaller;
+  text-decoration: underline;
+}
+
+optgroup option {
+	padding-left: 2em;
+}
+
+/* Account Numbers */
+textarea#accounts {
+	display: block;
+	width: 100%;
+	height: 90px;
+	font-family: Monaco, "Courier New";
+	font-size: 10pt;
+}

@@ -1,0 +1,77 @@
+<% content_for(:head) do %>
+  <style type="text/css">
+    .text-content {
+      position: relative;
+      padding-top: 20px;
+      height: 999px;
+    }
+    #epic-photo {
+           position: absolute;
+           z-index: 1;
+           right: 0;
+         }
+    
+    #the-epic-x {
+      z-index: 2;
+      position: absolute;
+      padding: 5px 5px;
+      width: 400px;
+      top: 100px;
+      
+    }
+    #the-epic-x p {
+      margin-top: 22px ;
+    }
+    #the-epic-x h3 {
+      font-size: 15pt;
+      line-height: 150%;
+    }
+   .white {
+     color: #FFF;
+   }
+    #red-one-rewand {
+      position: absolute;
+      width: 300px;
+      top: 30px;
+    }
+    #pick-brain {
+      position: absolute;
+      width: 100%;
+      top: 680px;
+      
+    }
+  </style>
+<% end %>
+
+<div class="text-content">
+  <%= image_tag('/images/pages/cameras/epic/overview-hero.png', :id => 'epic-photo') %>
+  
+  <div id="the-epic-x" >
+    <h3 class="white">2,251,799,813,685,248  POSSIBILITIES<br />(AS OF TODAY)</h3>
+    <p>
+      Prices, Specifications and Delivery Dates are subject to drastic changes. Count on it and you won't be disappointed. RED Epic, Scarlet, DSMC, Mysterium, REDCODE, Monstro, are registered trademarks of RED Digital Cinema. 2005-2009
+
+    </p>
+    <p>(Last update on: <span class="white">December 3, 2008</span>) </p>      
+    
+  </div>
+
+  
+  <div id="pick-brain">
+    <%= image_tag('/images/pages/cameras/epic/pick-brain-photo.png', :align => 'left') %>
+    <p>
+      <%= image_tag('/images/pages/cameras/epic/pick-brain.png') %>
+    </p>
+    <p>
+      Just select an EPIC "brain" and start configuring. You’ll find a new prime number before you get through all the possible configurations.
+    </p>
+    <p>
+      <%= %W{s35 ff35 645  617}.map { |text| image_tag("/images/pages/cameras/epic/epic-#{text}-text.png", :style => 'margin: 5px 0;') + '<br />' } %>
+    </p>
+    <p>
+      <%= link_to 'View Specifications &raquo;', :id => 'tech_specs' %>
+    </p>
+  </div>
+</div>
+
+<%= image_tag('/images/pages/cameras/epic/red-617.png') %>

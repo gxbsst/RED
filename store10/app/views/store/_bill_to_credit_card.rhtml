@@ -1,0 +1,35 @@
+<div id="creditcard_box" style="display:block;">
+  <h3>CREDIT CARD:</h3>
+  <div class="box_inner">
+    <p id="cardname"><span>Issued to Name:</span><%= text_field :order_account, 'cardholder_name' %></p>
+    <p id="creditcardname"><span>Credit Card Number:</span>
+      <%= text_field :order_account, 'cc_number', :size => '28', :maxlength => '22' %>
+    </p>
+    <p id="creditexpmonth"><span>Expiration Month:</span>
+      <%= text_field :order_account, 'expiration_month', :size => '3', :maxlength => '2' %>
+    </p>
+    <p id="creditexpyear"><span>Year:</span>
+      <%= text_field :order_account, 'expiration_year', :size => '3', :maxlength => '2' %>
+    </p>
+    <table id="cridittype">
+      <tr class="tr1">
+        <th class="td1">Credit Card Type:</th>
+        <td class="td2"  align="center"><img src="/skin/img/store/visa.png" alt="visa" onclick="document.getElementById('r1').checked='checked'" /></td>
+        <td class="td3"><img src="/skin/img/store/marstercard.png" alt="marstercard" onclick="document.getElementById('r2').checked='checked'" /></td>
+        <td class="td4"><img src="/skin/img/store/ae.png" alt="ae" onclick="document.getElementById('r3').checked='checked'" /></td>
+        <td class="td5"><img src="/skin/img/store/discover.png" alt="discover" onclick="document.getElementById('r4').checked='checked'" /></td>
+      </tr>
+      <tr class="tr2">
+        <th class="td1"></th>
+        <td class="td2" align="center"><input type="radio"  name="cc" id="r1"></td>
+        <td class="td3"><input type="radio" name="cc" id="r2"></td>
+        <td class="td4"><input type="radio" name="cc" id="r3"></td>
+        <td class="td5"><input type="radio" name="cc" id="r4"></td>
+      </tr>
+    </table>
+    <p id="seccode">
+      <span>Security Code:</span>
+      <%= text_field :order_account, 'credit_ccv', :size => '5', :maxlength => '4' %>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<% for product in @products %>
+
+<%= form_remote_tag :url => { :controller=>'store',:action => 'add_to_cart_ajax', :id => product.id }, 
+	:before => "if ($('cart').opened == false) toggleCart();toggleLoading(true)",
+	:complete => "new Effect.Highlight('itemsContainer-outer');toggleLoading(false)",
+	:update => 'cart',
+	:html => { :class => "product" }
+%>
+	<%= 
+	product.id = product.product_id
+	@image = product.images[0]
+	image_url = url_for_file_column('image', 'path', 'small')
+	image_url = "/image/path/109/small/ComingSoon.jpg" if image_url.blank?
+	link_to image_tag(image_url, :id => "product_image_#{product.id}"), { :action => 'product_detail',:id => product.erp_product_item }, :class => 'product_image'
+	%>
+	
+	<div class="product_info">
+		<%= link_to product.name, :action => 'product_detail', :id => product.erp_product_item %>
+	    <p class="price"><%= number_to_currency(product.price, :precision => 0) %></p>
+
+	</div>
+<%= end_form_tag %>
+<% end %>

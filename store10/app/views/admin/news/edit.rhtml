@@ -1,0 +1,18 @@
+<%= form_tag("/admin/news/update/#{params[:id]}",:multipart => true, :id => 'news_form' )  %>
+  <%= render :partial => 'form' %>
+  
+<p id="submit_out"><%= submit_tag "edit" %><input type="button" value="Preview" onclick="preview();" />
+  <%= link_to 'Show',:controller => "/news" ,:action => 'show', :id => @news %> |
+  <%= link_to 'Back',:controller =>"/news", :action => 'list' %>
+  </p>
+<%= end_form_tag %>
+<script type="text/javascript">
+function preview() {
+  var form = document.getElementById('news_form');
+  form.setAttribute('target', '_blank');
+  form.submit();
+  form.setAttribute('target', '');
+}
+</script>
+
+

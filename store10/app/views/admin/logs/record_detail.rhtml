@@ -1,0 +1,109 @@
+<style type="text/css" media="screen">
+tr th{text-align: left; width: 160px;}
+.invoice tr th{ width: 100px;}
+table  {border-collapse: separate; padding: 0 margin:0; }
+table tr td, table tr th{ padding: 5px 10px; font-size: 9pt; }
+ tr th{ background: #f7f7f7; text-align:right;  }
+ tr td{  background: #f7f7f7;}
+tr td{background: #f7f7f7; text-align: left; }
+
+</style>
+<!--<%= @record.to_yaml %>-->
+
+<% if @record.is_a?(ERP::SalesLine) %>
+<h1>Update Sales Line <%= @sales_order_num %></h1>
+
+<table width='100%'>
+  <tr><th>ID: </th><td><%= @record.id %></td></tr>
+  <tr><th>Account Num: </th><td><%= @account_num %></td></tr>
+  <tr><th>Sales Order Num: </th><td><%= @sales_order_num %></td></tr>
+  <tr><th>Product ID: </th><td><%= @record.item_id %></td></tr>
+  <tr><th>Product Name: </th><td><%=  @record.product.name %></td></tr>
+  <tr><th>Quantity</th><td><%= @record.sales_qty %></td></tr>
+  <tr><th>Price</th><td><%= @record.sales_price %></td></tr>
+  <tr><th>Line Amount</th><td><%= @record.line_amount %></td></tr>
+  <tr><th>Line Percent</th><td><%= @record.line_percent %></td></tr>
+  <tr><th>Sales Unit</th><td><%= @record.sales_unit %></td></tr>
+  <tr><th>Delivered In Total</th><td><%= @record.delivered_in_total %></td></tr>
+  <tr><th>Invoiced In Total</th><td><%= @record.invoiced_in_total %></td></tr>
+  <tr><th>Updated At</th><td><%= @record.updated_at %></td></tr>
+  <tr><th>Completed</th><td><%= @record.completed %></td></tr>
+</table>
+<% elsif @record.is_a?( ERP::InvoiceAddress ) || @record.is_a?( ERP::DeliveryAddress ) %>
+<% if @record.is_a?( ERP::InvoiceAddress )  %>
+  <h1>Update Sales Line <%= @sales_order_num %>  Invoice Address</h1>
+<% else %>
+<h1>Update Sales Line <%= @sales_order_num %> Delivery Address</h1>
+<% end %>
+
+<table class="invoice" width="100%">
+  <tr class="invoice_tr1"><th>ID: </th><td><%= @record.id  %></td></tr>
+  <tr><th>Account Num: </th><td><%= @account_num %></td></tr>
+  <tr><th>Sales Order Num: </th><td><%= @sales_order_num %></td></tr>
+  <tr class="invoice_tr1"><th>Country: </th><td><%= @record.country.blank? ? @record.country_region_id : @record.country %></td></tr>
+  <tr class="invoice_tr2"><th>Street: </th><td><%= @record.street %></td></tr>
+  <tr class="invoice_tr3"><th>State: </th><td><%= @record.state %></td></tr>
+  <tr class="invoice_tr4"><th>City: </th><td><%= @record.city  %></td></tr>
+  <tr class="invoice_tr5"><th>Zip Code: </th><td><%= @record.zip_code %></td></tr>          
+</table> 
+
+<% elsif @record.is_a?( ERP::ContactPerson ) %>
+<h1>Update  Customer <%= @account_num %>  </h1>
+
+<table class="invoice" width="100%">
+  <tr class="invoice_tr1"><th>ID: </th><td><%= @record.id  %></td></tr>
+  <tr><th>Account Num: </th><td><%= @account_num %></td></tr>
+  <tr><th>Sales Order Num: </th><td><%= @sales_order_num %></td></tr>
+  <tr class="invoice_tr1"><th>First Name: </th><td><%= @record.first_name %></td></tr>
+  <tr class="invoice_tr2"><th>Last Name : </th><td><%= @record.last_name  %></td></tr>
+  <tr class="invoice_tr3"><th>Email: </th><td><%= @record.email %></td></tr>
+  <tr class="invoice_tr4"><th>Created At: </th><td><%= @record.created_at  %></td></tr>
+</table> 
+
+<% elsif @record.is_a?( ERP::Customer ) %>
+  <h1>Update  Customer <%= @account_num %>  </h1>
+
+<table class="invoice" width="100%">
+  <tr class="invoice_tr1"><th>ID: </th><td><%= @record.id  %></td></tr>
+  <tr><th>Account Num: </th><td><%= @account_num %></td></tr>
+  <tr><th>Sales Order Num: </th><td><%= @sales_order_num %></td></tr>
+  <tr class="invoice_tr1"><th>First Name: </th><td><%= @record.first_name %></td></tr>
+  <tr class="invoice_tr2"><th>Last Name : </th><td><%= @record.last_name  %></td></tr>
+  <tr class="invoice_tr3"><th>Email: </th><td><%= @record.email %></td></tr>
+  
+  <tr class="invoice_tr1"><th>First Name: </th><td><%= @record.first_name %></td></tr>
+  <tr class="invoice_tr2"><th>Last Name : </th><td><%= @record.last_name  %></td></tr>
+  <tr class="invoice_tr3"><th>Email: </th><td><%= @record.email %></td></tr>
+  
+  <tr class="invoice_tr1"><th>Phone: </th><td><%= @record.phone %></td></tr>
+  <tr class="invoice_tr2"><th>RED One Shipped: </th><td><%= @record.red_one_shipped  %></td></tr>
+  <tr class="invoice_tr3"><th>Account Balance: </th><td><%= @record.account_balance %></td></tr>
+  
+  <tr class="invoice_tr1"><th>Transfer: </th><td><%= @record.to_transfer  %></td></tr>
+  <tr class="invoice_tr2"><th>Subtotal: </th><td><%= @record.subtotal  %></td></tr>
+  <tr class="invoice_tr3"><th>Shipping Method: </th><td><%= @record.shipping_method  %></td></tr>
+  
+</table> 
+
+
+<% elsif @record.is_a?( ERP::CustomerAddress ) %>
+  <h1>Update  Customer Address <%= @account_num %>  </h1>
+
+  <table class="invoice" width="100%">
+    <tr class="invoice_tr1"><th>ID: </th><td><%= @record.id  %></td></tr>
+    <tr><th>Account Num: </th><td><%= @account_num %></td></tr>
+    <tr><th>Sales Order Num: </th><td><%= @sales_order_num %></td></tr>
+    <tr class="invoice_tr1"><th>Country: </th><td><%= @record.country.blank? ? @record.country_region_id : @record.country %></td></tr>
+    <tr class="invoice_tr2"><th>Street: </th><td><%= @record.street %></td></tr>
+    <tr class="invoice_tr3"><th>State: </th><td><%= @record.state %></td></tr>
+    <tr class="invoice_tr4"><th>City: </th><td><%= @record.city  %></td></tr>
+    <tr class="invoice_tr5"><th>Zip Code: </th><td><%= @record.zip_code %></td></tr>          
+  </table> 
+
+
+<% end %>
+<div>
+  <form align="center">
+    <input type="button" value="Close Window" onClick="window.close()">
+  </form>
+</div>

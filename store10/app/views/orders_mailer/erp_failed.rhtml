@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css" media="all">
+      body {
+        color: #333333;
+        font-family: "Lucida Grande",Geneva,Arial,Verdana,sans-serif;
+        font-size: 10pt;
+      }
+      pre {
+        background-color: #F1F1F3;
+        margin: 12px;
+        padding: 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      pre .namespace { color: blue;}
+      pre .punct { color: blue;}
+      pre .tag { color: blue;}
+      pre .string { color: red;}
+      pre .attribute { color: green;}
+    </style>
+  </head>
+  
+  <body>
+    <p>
+      <label>Erp Server Address :</label>
+      <%= @log.erp_serv %>
+    </p>
+    
+    <p>
+      <label>Error Message :</label>
+      <%= @log.log_msg.to_s %>
+    </p>
+    
+    <p>
+      <label>Order Number :</label>
+      <%= @log.order_number %>
+    </p>
+    
+    <p>
+      <label>Create Time :</label>
+      <%= @log.created_on.to_s %>
+    </p>
+    
+    <p>
+      <label>Update Time :</label>
+      <%= @log.updated_on.to_s %>
+    </p>
+    
+    <p>
+      <hr />
+      <div class="xml">
+        <%= ErpHelper.xml2html(ErpHelper.tidy_xml(@log.xml)) %>
+      </div>
+    </p>
+    
+    <br/>
+    
+    <p>
+      <label>UUID :</label>
+      <%= "#{@log.uuid}" %>
+    </p>
+    
+    <p>
+      <label>Query Erp Exception Result :</label>
+      <hr />
+      <div class="xml">
+        <%= "#{@ex_message}" %>
+      </div>
+    </p>
+    
+  </body>
+</html>

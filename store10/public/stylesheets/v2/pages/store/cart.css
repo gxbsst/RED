@@ -1,0 +1,32 @@
+#cart{
+	text-align: center;
+	background-image: url(/images/theme/background-content.jpg);
+}
+	#cart form {
+		padding: 0 20px;
+	}
+#cart a{color:#FFF;outline-color:invert;outline-style:none;outline-width:medium;}
+#textinner {
+	padding: 2px 20px;
+}
+#itemsContainer-outer{padding-bottom:10px;}
+#textinner span{margin:0 10px;}
+#cart_table{width:910px;margin:5px 10px; color: #FFF;}
+#cart_table thead th{background:#282828;}
+#cart_table .tr1 td,#cart_table thead th{border-top:1px solid #707070;border-bottom:1px solid #181818;border-left:1px solid #5E5E5E;border-right:1px solid #2C2C2C;background:#3a3a3a;}
+#sub_des{padding:5px 0; text-align: right; }
+ #sub_des span{margin: 0 6px 0 0;}
+#sub_des input, #sub_des img{margin-bottom:-10px}
+#mini_cart_img{margin-bottom:-3px;}
+/*
+#loading{padding:0;margin:0;position:absolute;left:0;top:0;}
+#loading img{height:2px;}
+*/
+#indicator{display:relative;}
+#wraper #content{margin-top:0;}
+
+/* CSS Created By Jerry */
+#cart th { font-size: 10pt; }
+#cart .td1 { text-align: left; padding-left: 10px; }
+#cart .td4, #cart .td6 { text-align: right; padding-right: 10px; }
+#cart .td3 input { text-align: right; font-size: 8pt; }

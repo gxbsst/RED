@@ -1,0 +1,50 @@
+<div id="left">
+  <h1>Editing example configuration</h1>
+  
+  <%= form_tag %>
+    <p>
+      <%= labeled_text_field "Display Name", "configuration", "name", :class => "textInput", :size => 80 %>
+    </p>
+    <p>
+      <label for="configuration_description">Description</label>
+      <%= text_area "configuration", "description", :cols => 80, :rows => 10, :class => "textArea" %>
+    </p>
+    <p>
+      <%= submit_tag "Save", :class => "button hundredthirty" %>
+    </p>
+  <%= end_form_tag %>
+</div>
+
+<div id="right">
+  <h1>Products</h1>
+  
+  <% if @configuration.new_record? %>
+    Manage products for this configuration after saving ...
+  <% else %>
+  
+  <div id="configuration_products">
+    <%= render :partial => "configuration_products" %>
+  </div>
+  <p>
+    <script type="text/javascript">
+      function updateProducts() {
+        new Effect.BlindUp("configuration_products");
+        setTimeout(doUpdate, 100);  // Unknown bug in Substruct
+      }
+      
+      function doUpdate() {
+        new Ajax.Updater("configuration_products", "<%= url_for :action => "configuration_products", :id => @configuration.id %>", {
+          onComplete: function() {
+            new Effect.BlindDown("configuration_products")
+          }
+        })
+      }
+    </script>
+    
+    <%= link_to_function "Manage Products", "showPopWin('#{url_for :action => "configuration_products", :id => @configuration.id}', 400, 500, updateProducts, false)" %>
+  </p>
+  
+  <% end %>
+</div>
+
+<div class="clear" />

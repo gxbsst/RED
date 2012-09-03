@@ -1,0 +1,48 @@
+doc.createcustomerUpdate :xmlns => "http://schemas.microsoft.com/dynamics/2006/02/documents/customerUpdate" do
+  doc.DocumentContext do
+    doc.MessageId UUID.random_create.to_s
+    doc.SourceEndpointUser 'red.local\rdcwebservice'
+    doc.SourceEndpoint "RedDotCom"
+    doc.DestinationEndpoint "AxRED"
+  end
+  doc.customerUpdate do
+    # doc.DocPurpose "Original"
+    doc.SenderId "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xsi:nil" => "true"
+    
+    doc.CustTableUpdate :class => "entity" do
+      doc.AccountNum @customer.account_num
+      # doc.DlvMode @customer.delivery_mode
+      doc.Email @customer.email
+      doc.Phone @customer.phone
+      
+      # Update Addresses
+      @addresses.each do |address|
+        doc.AddressUpdate :class => "entity" do
+          doc.AccountNum @customer.account_num
+          doc.AddressCity address.city
+          doc.AddressCountryRegionId address.country_region_id
+          doc.AddressStateFree address.state
+          doc.AddressStreet address.street
+          doc.AddressZipCodeFree address.zip_code
+          # doc.ContactName address.contact_person.name
+          doc.Name address.name
+          # doc.RecordId address.record_id
+          # doc.Type address.address_type
+        end
+      end
+      doc.AddressUpdate( { :class => "entity" }, "" )
+      
+      # Update Contact People
+      @contacts.each do |contact|
+        doc.ContactUpdate :class => "entity" do
+          doc.CustAccount @customer.account_num
+          doc.Email contact.email
+          doc.FirstName contact.first_name
+          doc.LastName contact.last_name
+        end
+      end
+      doc.ContactUpdate( { :class => "entity" }, "" )
+      
+    end
+  end
+end

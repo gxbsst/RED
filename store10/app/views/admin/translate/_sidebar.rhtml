@@ -1,0 +1,48 @@
+<div id="right">
+  <h1>Search</h1>
+  <p>
+    Search for all entities in this language (default: English) by entity name:
+  </p>
+  
+  <%= form_tag({:action => "list"}, :method => "get") %>
+    <%= text_field_tag 'keyword', params[:keyword], :class => 'textInput' %>
+    <span class="info">
+      
+    </span>
+    <%= submit_tag 'Search', :name => nil, :class => 'button hundred'%>
+  <%= end_form_tag %>
+  
+  
+  <h1>Tasks</h1>
+  <p>
+    To complete new pages on website, check out all of this tasks and complete them.<br />
+    Click on take name to editing page.
+  </p>
+  
+  <%= form_tag(:action => "complete") %>
+    <table cellpadding="0" cellspacing="0" class="list">
+      <colgroup>
+        <col width="20" />
+        <col />
+      </colgroup>
+      <tr>
+        <th colspan="2">Tasks List</th>
+      </tr>
+    
+      <% @lang.completions.each do |completion| %>
+      <tr class="<%= alternate %>">
+        <td valign="top"><%= check_box_tag "task_id[]", completion.task.id %></td>
+        <td>
+          <%= link_to completion.task.name,
+            :action => "edit", :id => completion.task.entity_id %>
+          <br />
+          <span class="info">
+            <%= time_ago_in_words completion.task.created_at %> ago
+          </span>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+    <%= submit_tag "Update", :class => "button hundred" %>
+  <%= end_form_tag %>
+</div>

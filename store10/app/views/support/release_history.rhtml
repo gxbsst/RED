@@ -1,0 +1,54 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag(
+    'v2/schema-white',
+    'v2/pages/support/support',
+    'v2/pages/support/index'
+  ) %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1>Release History</h1>
+<% end %>
+
+<div id="sidebar" class="float-left">
+  <h2><%= _('SUPPORT|CATEGORIES') %></h2>
+  <ul>
+    <% @download_categories.each do |category| %>
+      <li><%= link_to category.title, { :id => category.id }, :class => ('current' if current_page?( :id => category.id)) %></li>
+    <% end %>
+  </ul>
+  <h2><%= _('SUPPORT|RELEASE_HISTORY|TITLE') %></h2>
+  <ul>
+    <% @category.downloads.each do |download| %>
+      <li>
+        <a href="#<%= download.id%>">
+          <%= download.display_version %>
+          <%= image_tag '/skin/img/support/icon_windows.png', :title => 'Windows Supported' if download.windows? %>
+          <%= image_tag '/skin/img/support/icon_mac.png', :title => 'Inter Mac OS X Supported' if download.mac? %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div id="release_history" class="float-right">
+  <h2><%= @category.title %></h2>
+  <%= image_tag "/skin/img/support/#{title_to_css @category.title}.png", :class => 'category_image', :title => @category.title, :alt => @category.title, :align => 'left' %>
+  <% @category.downloads.each do |download| %>
+    <div class="release">
+      <%= link_to download.display_version, { :action => 'download', :id => download.id }, :class => 'download', :name => download.id %>
+      <br />
+      <!-- <span class="release_date"> --><%= _('SUPPORT|RELEASE_DATE') %>: <%= download.release_date %><!-- </span> -->
+      <%= image_tag '/skin/img/support/icon_windows.png', :title => 'Windows Supported' if download.windows? %>
+      <%= image_tag '/skin/img/support/icon_mac.png', :title => 'Inter Mac OS X Supported' if download.mac? %>
+    
+      <br />
+      <strong><%= link_to _('GLOBAL|DOWNLOAD'), {:action => 'download',:id=>download.id} %></strong>
+
+      <%= textile download.release_note %>
+      
+      <%= "<hr />" unless download.id == @category.downloads.last.id %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,25 @@
+		<div id="footer">
+			<ul id="footer_navigation" class="navigation">
+				<li><%= link_to _('FOOTER|FAQS'), '/faq' %></li>
+        <li>&sdot;<%= link_to _('FOOTER|CONTACT_US'), :controller => 'static_pages', :action => 'contact_us' %></li>
+				<li>&sdot;<%= link_to _('FOOTER|EMAIL_ANNOUNCEMENTS'), :controller => 'static_pages', :action => 'email_announcements' %></li>
+				<li>&sdot;<%= link_to _('FOOTER|GEAR_WE_USE'), :controller => "static_pages", :action => "gear_we_use" %></li>
+				<li>&sdot;<%= link_to _('FOOTER|TERMS'), :controller => 'static_pages', :action => 'terms' %></li>
+        <!--		
+        <li><%= language_selector(params[:lang]) %></li>
+        -->
+			</ul>
+      <ul id="select_lang">
+        <li><a onclick="switchLanguage('en_US');">English</a></li>
+        <li><a onclick="switchLanguage('es_ES');">Espaňol</a></li>
+        <li><a onclick="switchLanguage('cs_CZ');">Čeština</a></li>
+        <li><a onclick="switchLanguage('zh_CN');">简体中文</a></li>
+        <li><a onclick="switchLanguage('ja_JP');">日本語</a></li>
+      </ul>
+      <div style="clear:both;"></div>
+      <div id="tip">Specifications, prices and delivery dates are subject to change. Count on it.<br />We reserve the right to refuse service to anyone with a bad attitude.</div>
+			<p align="center" class="copyright">
+        Copyright &copy; 1999-<%= Time.now.year.to_s %>, all rights reserved.
+ 				<%= link_to "Legal", :controller => "static_pages", :action => "legal" %>
+			</p>
+		</div>

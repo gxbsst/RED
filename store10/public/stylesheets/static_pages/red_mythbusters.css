@@ -1,0 +1,11 @@
+#red_mythbusters_title{text-align:right;*width:860px;*float:right;border-top:2px solid #141414; border-bottom:2px solid #141414; padding:3px 16px 3px 0; color:#FFF; margin-left:30px; }
+#red_mythbusters_outert {margin-top:20px;*margin-top:50px;}
+#red_mythbusters_outert #left{float:left; width:270px;margin-top:80px;}
+#red_mythbusters_outert #left ul{list-style-type:none;padding-left:20px;}
+#red_mythbusters_outert #left ul li span{display:block;float:left; width: 66px; text-align:right;margin-right:10px;}
+#red_mythbusters_outert #right{width:638px;float:right; }
+#red_mythbusters_outert #right img{margin-bottom:5px;}
+#red_mythbusters_outert  #description{margin-bottom:10px;}
+#red_mythbusters_outert  #description h4{color:red;margin-top:10px; margin-bottom:10xpx;}
+#red_mythbusters_outert  #description p{margin:6px 0;}
+#content{margin-top: -70px;}

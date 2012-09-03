@@ -1,0 +1,30 @@
+.float-left {
+	float: left;
+}
+.text-content p {
+	margin-left: 375px;
+	text-align: justify;
+}
+
+#gallery {
+}
+	#gallery .photos {
+		padding-left: 13px;
+/*		background: transparent url(/images/theme/logo.png) no-repeat 730px 180px;*/
+	}
+	#gallery a {
+		display: block;
+		width: 164px;
+		height: 164px;
+		float: left;
+		text-align: center;
+		background: transparent url(/images/pages/cameras/gallery/background.png) no-repeat center center;
+		margin:0 13px 13px 0;
+		text-decoration: none;
+	}
+	#gallery a:hover {
+		background-image: url(/images/pages/cameras/gallery/background-hover.png);
+	}
+	.photos img {
+		margin-top: 2em;
+	}

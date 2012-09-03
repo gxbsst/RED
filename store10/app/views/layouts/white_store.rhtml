@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= page_title %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="<%= _('GLOBAL|WEBSITE_DESCRIPTION') %>" />
+  <meta name="keywords" content="<%= _('GLOBAL|WEBSITE_KEYWORDS') %>" />
+  <!-- Google Analytics -->
+  <%= javascript_include_tag 'urchin', 'application', 'menu' %>
+  <%= javascript_include_tag "prototype","calendar","effects", "dragdrop", "controls" %>
+  
+  <script type="text/javascript">
+    _uacct = "UA-666652-2";
+    urchinTracker();
+    
+    function toggleLoading(flag) {
+      if (flag==true) {
+        // hacking IE6
+        if (window.isIE) $("cart_loading").style.top = document.documentElement.scrollTop + 10 + 'px';
+        new Effect.Appear("cart_loading");
+      }  else
+        new Effect.Fade("cart_loading");
+    }
+  </script>
+  
+  <%= stylesheet_link_tag 'v2/basic', 'v2/extension' %>
+  <%= stylesheet_link_tag 'v2/schema-white' %>
+  <%= stylesheet_if_exists params[:lang], 'v2/pages/store', "v2/pages/store/#{params[:action]}", 'v2/pages/store/cart' %>
+  <!--[if lte IE 6]>
+  <%= stylesheet_link_tag 'v2/ie' %>
+  <%= javascript_include_tag 'v2/ie', 'pngfix' %>
+  <![endif]-->
+  <link rel="alternate" type="application/rss+xml" href="/rss/recon" title="recon" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <%= render :partial => 'layouts/global/header' %>
+    </div>
+    
+    <div id="cart">
+      <a name="cart"></a>
+      <div id="items">
+        <%= render(:partial => 'store/cart') %>
+      </div>
+    </div>
+    
+    <div id="content">
+      <div id="sidebar">
+        <h2>CATEGORIES</h2>
+        <ul id="categories">
+          <%= Tag.find_alpha.collect{ |tag| "<li>#{link_to tag.name, { :action => 'tags', :tags => (tag.name).downcase.split(" ").join("_")}, :class => (tag.name == @tag_name ? 'current' : nil)}</li>" }.join %>
+          <li><a href="/store/t_shirt" <%= " class=\"current\"" if controller.action_name == "t_shirt"%>>RED T-Shirts</a></li>
+          <li><%= nav_link_to 'RED Caps', :action => 'red_caps' %></li>
+        </ul>
+        <%= link_to "&#171; Back to RED Store", { :action => 'index' }, :id => 'back_link' %>
+      </div>
+      
+      <div id="products">
+				<div class="sub_nav">
+					<ul class="navigator" id="language"> 
+						<li><a href="#" onclick="switchLanguage(&quot;zh_CN&quot;); return false;">大陆</a></li> 
+						<li><a href="#" onclick="switchLanguage(&quot;zh_HK&quot;); return false;">香港</a></li> 
+						<li><a href="#" onclick="switchLanguage(&quot;zh_TW&quot;); return false;">台湾</a></li> 
+
+					</ul>
+				</div>
+        <%= yield %>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+    
+    <a id="cart_loading" style="display:none;" href="#cart">
+      <img src="/images/store/cartontop.gif" width="146" height="270" alt="Cart on top" title="Go to my shopping cart" />
+    </a>
+    
+    <div id="footer">
+      <%= render :partial => "layouts/global/footer" %>
+    </div>
+  </div>
+</body>
+</html>

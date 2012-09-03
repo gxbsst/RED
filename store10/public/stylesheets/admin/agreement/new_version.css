@@ -1,0 +1,17 @@
+#container {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+}
+#preContent {
+    background-image: url(/engine_files/substruct/images/admin/body_background_top_white.png);
+    background-repeat: no-repeat;
+    height: 83px;
+}
+#contentBody {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+    clear: both;
+    padding: 0px;
+    width: 879px;
+}
+
+#version_content { height: 380px; width: 99%; }
+#preview-content { border: 1px solid #999; background-color: #FFFFDD; padding: 5px; width: 98%; overflow-y: auto; }

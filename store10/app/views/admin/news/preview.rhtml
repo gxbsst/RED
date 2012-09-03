@@ -1,0 +1,29 @@
+<style type="text/css" media="screen">
+content{margin: -80px 0px 0 0;}
+#content_inner{margin: 0;width:700px;float:right;}
+#news_date{border-collapse: collapse;padding:0 0 5px 0;border-bottom:4px solid #3b3b3b;}
+#news_date .td2{font-size:22px;pdding-right:5px;font-weight:bold;color:white;}
+#content_inner h3{padding:10px 0;font-size:18px;}
+#content_inner p{padding:10px 0;}
+</style>
+<div id="content_inner">
+  <table id="news_date" width="100%"  >
+    <tr>
+      <td align="left" class="td1" >
+        <%=  @news.post_timestamp.blank? ? @news.created_at.strftime('%F') : @news.post_timestamp.strftime('%F')  %> 
+      </td>
+      <td  align="right" class="td2">RED NEWS
+      </td>
+    </tr>
+  </table>
+  <h3><%= @news.title %></h3>
+  <div><%= @news.content %></div>
+  <!--end #content_inner-->
+</div>
+<div style="clear:both;"></div>
+<% if session[:user_id] %>
+<p align="right">
+  <%= link_to 'Edit', :controller => '/admin/news',:action => 'edit', :id => @news %> |
+  <%= link_to 'Back', :action => 'list' %>
+</p>
+<% end %>

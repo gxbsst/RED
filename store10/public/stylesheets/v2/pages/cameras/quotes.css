@@ -1,0 +1,22 @@
+.text-content {
+	margin-top: 3em;
+	padding: 2em 1px;
+}
+.text-content p {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+.p1 {
+	color: #CCC;
+	font-size: larger;
+	background: transparent url(/images/theme/quotations.png) no-repeat left top;
+	padding-left: 70px;
+	/* min-height */
+	height: auto !important;
+	min-height: 50px;
+	height: 50px;
+}
+.p2 {
+	text-align: right;
+	margin-bottom: 4em;
+}

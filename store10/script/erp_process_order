@@ -1,0 +1,30 @@
+#!/usr/bin/ruby
+
+case 
+when ARGV[0].nil?
+  puts "\n  Please specify process environment:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+when ARGV[1].nil?
+  puts "\n  Please specify order number:"
+  puts "  eg: erp_process_order [ENV] [ORDER#]\n "
+  exit 0
+end
+
+
+ENV['RAILS_ENV'] = ARGV.shift
+RAILS_ROOT = File.dirname(__FILE__) + '/..'
+require RAILS_ROOT + '/config/environment' 
+begin
+  order = ErpOrder.find_by_order_number(ARGV.shift)
+  order.erp_process
+  puts "ERP State Message: #{order.erp_status_msg}" unless order.erp_complete
+  puts "ERP User Account: #{order.erp_account_number}" unless order.erp_account_number.blank?
+  puts "ERP Order Number: #{order.erp_order_number}" unless order.erp_order_number.blank?
+  puts "ERP CreditCard Recid: #{order.erp_recid}" unless order.erp_recid.blank?
+  puts "ERP Process Complete: #{order.erp_complete}"
+rescue NoMethodError
+  puts "Not Found: This order number not exist in #{ENV['RAILS_ENV']} environmnet."
+rescue Exception => ex
+  puts "ERP Process order false."
+end

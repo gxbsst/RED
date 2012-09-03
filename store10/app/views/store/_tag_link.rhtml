@@ -1,0 +1,20 @@
+<%
+# Tag names are passed in so we can generate a view link that includes
+# our tag breadcrumb navigation.
+if tag_names then
+  link_to_tags = tag_names.clone
+  link_to_tags << tag_link.name
+else
+  link_to_tags = tag_link.name
+end
+#if tag_link.name =='DIGITAL MEDIA OPTIONS'
+#@li='li1'
+#else
+#@li='li2'
+#end
+
+%>
+
+
+<li id="<%= @li  %>"><%= link_to h(tag_link.name), :controller => 'store', :action => 'tags', :tags => link_to_tags %>
+</li>

@@ -1,0 +1,25 @@
+<% content_for(:head) do %>
+  <%= stylesheet_link_tag 'v2/schema-white', 'v2/pages/contact-us' %>
+<% end %>
+
+<% content_for(:heading) do %>
+  <h1><%= _('CONTACT_US|TITLE') %></h1>
+<% end %>
+
+<div class="text-content with-border">
+  <% unless @ticket.errors.empty? %>
+    <h2>Contack Ticket Is Invalid</h2>
+    <ul style="height: 200px;">
+      <%= @ticket.errors.full_messages.map { |msg| content_tag('li', msg)  } %>
+    </ul>
+    <%= button_to_function(
+      _('CONTACT_US|POST|EDIT'),
+      'history.back()',
+      :class => 'button'
+    ) %>
+  <% else %>
+    <h2><%= _('CONTACT_US|CONFIRMATION|TITLE') %></h2>
+    <p><%= _('CONTACT_US|SUCCESSFUL_TITLE')%></p>
+    <%= render :partial => 'contact_table', :object => @ticket %>
+  <% end -%>
+</div>

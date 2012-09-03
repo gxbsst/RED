@@ -1,0 +1,38 @@
+<table class="list" cellpadding="0" cellspacing="0">
+  <colgroup>
+    <col style="width: 5%;"/>
+    <col style="width: 12%;"/>
+    <col style="width: 10%;"/>
+    <col style="width: 15%;"/>
+    <col style="width: 20%;"/>
+    <col style="width: 8%;"/>
+    
+  </colgroup>
+  <tr>
+    <th>ID</th>
+    <th>ACCOUNT NUM</th>
+    <th>SALES ORDER</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Time</th>
+  </tr>
+  <% @sales_line_order_logs.each do |line| %>
+  
+  <tr class="<%= alternate %>">
+    <td><a onClick="window.open('/admin/logs/user_agent_detail/<%= line.id %>','mywindow','width=600,height=400px,left=400, scrollbars=yes'); return false;" href = "#"><%= line.id %></a></td>
+    <td><%= link_to "#{ line.account_num }", :action => "search", :term => "#{ line.account_num }" %></td>
+    <td><%= link_to "#{ line.sales_order_num }", :action => "search", :term => "#{ line.sales_order_num }" %></td>
+    <% if line.record %>
+    <td><a onClick="window.open('/admin/logs/record_detail/<%= line.id %>','mywindow','width=600,height=400px,left=400, scrollbars=yes'); return false;" href = "#"><%= line.description %></a></td>
+    <% else %>
+    <td><%= line.description %></td>
+    <% end %>
+<!--    <td><a onClick="window.open('/admin/logs/user_agent_detail/<%= line.id %>','mywindow','width=600,height=400px,left=400, scrollbars=yes'); return false;" href = "#"><%= line.user_agent %></a></td>-->
+<td><%= line.remote_location %></td>
+
+    
+    <td><%=  time_ago_in_words( line.created_at )  %> ago</td>
+  </tr>
+  <% end %>
+  
+</table>

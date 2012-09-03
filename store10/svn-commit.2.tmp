@@ -1,0 +1,15 @@
+[Bug Fix]
+1. The slide banner...
+2. Mudify the hero images on the home pages...
+--This line, and those below, will be ignored--
+
+M    app/views/static_pages/index.rhtml
+M    public/skin/img/index/epic.png
+AM   public/skin/img/index/hero_china.jpg
+M    public/skin/img/index/crossingtheline.jpg
+M    public/skin/img/index/scarlet_nab.png
+AM   public/skin/img/index/thenothingmen.jpg
+AM   public/skin/img/index/serving.jpg
+M    public/skin/img/index/redray.png
+AM   public/skin/img/index/hero_china.png
+AM   public/skin/img/index/redmythbusters.jpg

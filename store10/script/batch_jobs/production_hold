@@ -1,0 +1,27 @@
+#!/user/bin/env ruby
+require File.dirname(__FILE__) + '/../../config/boot'
+RAILS_ENV = ENV['RAILS_ENV'] = ARGV.shift || 'development'
+require RAILS_ROOT + '/config/environment'
+
+# Date: 2007-10-25
+# RED is on Productin Hold, for upgrade of RED ONE. Send email to users
+#   in the list.
+# List flename: email_list.txt
+
+email_address = []
+open(File.dirname(__FILE__) + '/email_list.txt').each_line do |line|
+  email_address << line.strip if line =~ /.+\@.+/
+end
+email_address.uniq!
+
+puts "[INFO] #{email_address.size} email address detected."
+
+email_address.each do |email_address|
+  begin
+    StoreUserNotify.deliver_production_hold(email_address)
+    puts "[INFO] Email sent to #{email_address}"
+  rescue => e
+    puts "[ERROR] #{e.message}, mail not be sent to #{email_address}"
+    File.open("#{File.dirname(__FILE__)}/failed_email_list.txt", "a") { |file| file << email_address + "\n" }
+  end
+end

@@ -1,0 +1,19 @@
+/*
+  Extended style in website, for better experience. Requires CSS 2 (some
+  features requires CSS 3) supported browsers.
+*/
+input[type=text], textarea {
+	outline-style: none;
+}
+
+.text-input {
+	/*
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	*/
+}
+.text-input[readonly], .text-input[disabled] {
+	background-color: #EEE;
+	color: #CCC;
+}

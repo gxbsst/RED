@@ -1,0 +1,21 @@
+h1 { display: none; }
+
+#content {text-align:center; padding-top: 0; margin-bottom: 0;margin-top:-80px;}
+body{color:#FFF;}
+body #content p,body #content table tr {color:#FFF;}
+#footer { margin-top: 0; }
+#lenses #img_menu{background:url('/skin/img/lenses/img_menu_bg.png') left top repeat-x;height:158px;padding-left:180px;padding-top:10px;}
+#lenses #img_menu div{width:140px;float:left;margin:0 15px;cursor:pointer;}
+#lenses #img_menu div img{clear:both;display:block;}
+#lenses #img_menu div span{font-size:11px;display:block;width:119px;height:16px;margin:0 auto;}
+#lenses #img_menu div.active span{background:url('/skin/img/lenses/text_bg.png') left top no-repeat;color:#000;}
+.side_bar{float:left;}
+body #content .side_bar .f14{font-size:14px;}
+body #content .side_bar .p3 a{color:red;font-size:16px;}
+.img_list{margin-top:50px;width:235px;}
+body #content #tab_3 .img_list {text-align:left;}
+body #content .img_list p{text-align:center;color:#333;font-size:11px;background:url('/skin/img/lenses/search_icon.jpg') 58px center no-repeat;}
+#content .right{text-align:left;padding-left:250px;}
+#content .right table{border-collapse:collapse;}
+#content .right table th{font-size:20px;font-weight:normal;padding-bottom:20px;}
+#content .right table td{padding:5px 0;width:325px;border-top:1px solid #222;border-bottom:1px solid #222;}

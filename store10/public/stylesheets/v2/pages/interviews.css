@@ -1,0 +1,15 @@
+#red_mythbusters_title{text-align:right;*width:860px;*float:right;border-top:2px solid #141414; border-bottom:2px solid #141414; padding:3px 16px 3px 0; color:#FFF; margin-left:30px; }
+/*#interviews {margin-top:20px;*margin-top:50px;}*/
+#interviews #left{float:left; width:240px;margin-top:80px;}
+#interviews .left{height:300px; *height:340px; margin-top:40px;}
+#interviews .left .download img{margin-left: 30px;}
+#interviews #left ul{list-style-type:none;padding-left:20px;}
+#interviews #left ul li span{display:block;float:left; width: 66px; text-align:right;margin-right:10px;}
+#interviews #right{width:638px;float:right; }
+#interviews #right h2, #interviews #right #nav a{display:inline;color:#8D8D8D; margin:0; }
+#interviews #right #nav a:hover{color:#FF9933;text-decoration:underline;}
+/*#interviews #right img{margin:10px 0;zoom:1; display:inline-block;}*/
+#interviews #right a {zoom:1; margin:20px 0; display:block;}
+*/#interviews  #description{margin-bottom:10px;}
+#interviews  #description h4{color:red;margin-top:10px; margin-bottom:10xpx;}
+#interviews  #description p{margin:6px 0;}

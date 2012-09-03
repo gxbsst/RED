@@ -1,0 +1,91 @@
+<% if @order.include_redone? -%>
+Note: Your camera serial number(s) will be emailed to you shortly after they are assigned.
+
+<% end -%>
+Order #: <%= @order.order_number %>
+
+ORDER DETAILS
+============================================================
+BILLING ADDRESS
+--------------------
+<% if @order.account.credit_card_payment? -%>
+Cardholder Name: <%= @order.account.cardholder_name %>
+<% elsif @order.account.wire_transfer_payment? -%>
+First Name: <%= @order.billing_address.first_name %>
+Last Name: <%= @order.billing_address.last_name %>
+<% end -%>
+<%= "Company: #{@order.billing_address.company}" unless @order.billing_address.company.blank? || @order.billing_address.blank? %>
+Address: <%= @order.billing_address.address %>
+<%- if !@order.billing_address.address_two.nil? -%>
+Address 2: <%= @order.billing_address.address_two %>
+<% end -%>
+City: <%= @order.billing_address.city %>
+State: <%= @order.billing_address.state %>
+Postal Code: <%= @order.billing_address.zip %>
+Country: <%= @order.billing_address.country.name %>
+
+SHIPPING ADDRESS
+--------------------
+First Name: <%= @order.shipping_address.first_name %>
+Last Name: <%= @order.shipping_address.last_name %>
+Company: <%= @order.shipping_address.company %>
+Address: <%= @order.shipping_address.address %>
+<% if !@order.shipping_address.address_two.nil? -%>
+Address 2: <%= @order. shipping_address.address_two %>
+<% end -%>
+City: <%= @order.shipping_address.city %>
+State: <%= @order.shipping_address.state %>
+Postal Code: <%= @order.shipping_address.zip %>
+Country: <%= @order.shipping_address.country.name %>
+------------------------------------------------------------
+Email: <%= @order.order_user.email_address %>
+<% if @order.account.credit_card_payment? %>
+CC Number: <%= @order.account.safe_cc_number %>
+CC Exp Month: <%= @order.account.expiration_month %>
+CC Exp Year: <%= @order.account.expiration_year %>
+<% else %>
+This wire transfer can be submitted with the help of your bank. You may be required to visit your bank in person to execute the wire transfer.
+
+Amount to Transfer: <%= number_to_currency(@order.order_summary.total_due) %> USD
+Bank Name: <%= AppConfig.WIRE_XFER[:bank_name] %>
+Bank Address: <%= AppConfig.WIRE_XFER[:bank_address] %>
+ABA Routing Number: <%= AppConfig.WIRE_XFER[:aba_routing_number] %>
+SWIFT Code: <%= AppConfig.WIRE_XFER[:swift_code] %>
+To Credit: <%= AppConfig.WIRE_XFER[:to_credit] %>
+Account Number: <%= AppConfig.WIRE_XFER[:account_number] %>
+Reference Number: <%= @order.order_number %> / <%= @order.billing_address.last_name %>
+
+REFERENCE NUMBER WARNING:
+You must write the reference number as provided above on your wire transfer. If you fail to write the reference number properly on the wire transfer your payment may not be processed.
+
+CLIENTS OUTSIDE THE USA
+Please be advised that for international wires your bank my require and charge you for the use of an intermediary bank. You should contact your bank and inquire about the possibility of any additional fees.
+<% end %>
+------------------------------------------------------------
+<% for item in @order.order_line_items %>
+Item Description: <%= item.product.name %>
+Quantity: <%= item.quantity %>
+Amount Per Item: <%= number_to_currency(item.unit_price) %>
+Sub Total: <%= number_to_currency(item.subtotal) %><%= " (DEPOSIT ONLY)" if item.payment_method == 'deposit' %>
+<% end %>
+------------------------------------------------------------
+============================================================
+SUBTOTAL: <%= number_to_currency(@order.order_summary.subtotal) %>
+<% if @order.order_summary.shipping_charge != 0.0 -%>
+SHIPPING: <%= number_to_currency(@order.order_summary.shipping_charge) %>
+<% end -%>
+ESTIMATED SALES TAX<%= " *" if @order.order_summary.tax_rate != 0.0 %>: <%= number_to_currency(@order.order_summary.estimated_sales_tax) %>
+PAID TODAY: <%= number_to_currency(@order.order_summary.total_due) %>
+<% if @order.order_summary.estimated_balance != 0.0 -%>
+ESTIMATED BALANCE: <%= number_to_currency(@order.order_summary.estimated_balance) %> (DUE AT TIME OF SHIPMENT)
+<% end -%>
+
+<% if @order.order_summary.shipping_charge != 0.0 -%>
+SHIPPING METHOD: <%= "#{DeliveryMode::DELIVERY_MODE_MAP[@order.order_summary.delivery_mode]}" %> (<%= "#{@order.order_summary.delivery_mode}" %>)
+<% end -%>
+
+<%= "*  Estimated #{@order.order_summary.state} Sales Tax Rate of #{@order.order_summary.tax_rate}%." if @order.order_summary.tax_rate != 0.0 %>
+All product availability is subject to change.  Product on backorder will ship as soon as it is available.
+
+When your Rush Order is ready to ship, your total invoice amount will include shipping charges and actual sales tax.  Please note that Rush Orders have a minimum of a 3-5 day processing time after payment is received by RED.  Please contact us at redorders@red.com or your BOMB SQAUD rep if you have any questions.
+

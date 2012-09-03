@@ -1,0 +1,51 @@
+--- 
+order_shipping_types_001: 
+  shipping_multiplier: "0.8"
+  company: FedEx
+  name: FedEx Ground (USA Only)
+  code: FGR
+  flat_fee: "10"
+  transaction_type: rate_ground
+  id: "1"
+  service_type: ground_service
+  is_domestic: "1"
+order_shipping_types_002: 
+  shipping_multiplier: "1.5"
+  company: FedEx
+  name: FedEx Next Day Air Shipping (USA Only)
+  code: FES
+  flat_fee: "35"
+  transaction_type: rate_express
+  id: "2"
+  service_type: standard_overnight
+  is_domestic: "1"
+order_shipping_types_003: 
+  shipping_multiplier: "1"
+  company: FedEx
+  name: FedEx 2nd Day Air Shipping (USA Only)
+  code: F2D
+  flat_fee: "17"
+  transaction_type: rate_express
+  id: "3"
+  service_type: 2day
+  is_domestic: "1"
+order_shipping_types_004: 
+  shipping_multiplier: "2"
+  company: FedEx
+  name: FedEx International Economy (International Only)
+  code: FIC
+  flat_fee: "30"
+  transaction_type: rate_ground
+  id: "4"
+  service_type: international_economy
+  is_domestic: "0"
+order_shipping_types_005: 
+  shipping_multiplier: "3"
+  company: FedEx
+  name: FedEx International Priority (International Only)
+  code: FIX
+  flat_fee: "45"
+  transaction_type: rate_express
+  id: "5"
+  service_type: international_priority
+  is_domestic: "0"

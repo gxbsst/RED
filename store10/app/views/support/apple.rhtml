@@ -1,0 +1,30 @@
+<img src="/images/apple/final_cut.png" class="final_cut" alt="" align="left" />
+
+<div id="final_cut">
+	<img src="/images/apple/screenshot.png" alt="" align="right" />
+	<h1>Final Cut Studio 2 now REDCODE RAW enabled</h1>
+	<%= textile( @category.description, [] ) %>
+	
+	<%= 
+		download = @category.downloads.first
+		link_to image_tag('/skin/img/support/button_download_enable.png'),
+			{ :controller => 'support', :action => 'download', :id => download.id },
+			:class => 'download_button'
+	%>
+	<span class="revision">
+		<%= "#{download.version} (#{roundf download.size_in_megabytes} MB)" %>
+		<br />
+		<%= platform_images(@category) %>
+	</span>
+	
+	<img src="/images/apple/line.png" alt="" height="5" class="line" />
+	
+	<% @category.downloads.each do |download| %>
+	<h2>
+		<%= link_to download.version, :controller => 'support', :action => 'download', :id => download.id %>
+		<%= platform_images(@category) %>
+	</h2>
+	Release Date: <%= download.release_date %>
+	<%= textile download.release_note %>
+	<% end %>
+</div>

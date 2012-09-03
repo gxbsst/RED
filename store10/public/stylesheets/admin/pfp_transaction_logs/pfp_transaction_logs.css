@@ -1,0 +1,40 @@
+#container {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+}
+#preContent {
+    background-image: url(/engine_files/substruct/images/admin/body_background_top_white.png);
+    background-repeat: no-repeat;
+    height: 83px;
+}
+#contentBody {
+    background-image: url(/engine_files/substruct/images/admin/body_background_white.png);
+    clear: both;
+    padding: 0px;
+    width: 879px;
+}
+.floatHalf p {
+    height: 25px;
+    width:  270px;
+    border: 1px solid #999999;
+    line-height: 25px;
+    padding: 0 10px;
+}
+.floatHalf p.twoline {
+    height: 50px;
+}
+.floatHalf p.threeline {
+    height: 75px;
+}
+pre {
+    background-color: #F1F1F3;
+    margin: 10px;
+    padding: 10px;
+    height: 250px;
+    overflow-x: hide;
+    overflow-y: auto;
+}
+pre .namespace { color: blue;}
+pre .punct { color: blue;}
+pre .tag { color: blue;}
+pre .string { color: red;}
+pre .attribute { color: green;}

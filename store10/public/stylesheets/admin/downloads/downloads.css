@@ -1,0 +1,6 @@
+html { overflow-y: scroll; }
+
+#downloads { padding-left: 0; }
+  #downloads li { list-style-type: none; }
+
+.download_picture { height: 125px; min-width: 116px; float: left; text-align: center;}

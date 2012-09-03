@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+if ARGV[0].nil?
+  puts "Please specify process ENV:"
+  puts "  eg: erp_query_err [ENV] [UUID]"
+elsif ARGV[1].nil?
+  puts "Please specify UUID:"
+  puts "  eg: erp_query_err [ENV] [UUID]"
+else
+  ENV['RAILS_ENV'] = ARGV.shift
+  RAILS_ROOT = File.dirname(__FILE__) + '/..'
+  require RAILS_ROOT + '/config/environment' 
+  doc = Hpricot.XML(ErpOrder.query_err_msg(ARGV.shift))
+  (doc/:Description).each do |description|
+    puts description.inner_text
+  end
+end

@@ -1,0 +1,117 @@
+<%= javascript_include_tag "admin/preview.js" %>
+
+<div id="fullContent">
+  <h1><%= @title %></h1>
+  <ul class="navigation secondary">
+    <li>
+      <li><%= link_to 'Back to Download', {:action => 'edit', :id => @download} %></li>
+    </li>
+  </ul>
+  
+  <%= form_tag({:action => 'save_version', :id => @version.id}, :multipart => true) %>  
+  
+  <%= hidden_field :download, :id %>
+  
+  <p>
+    <label for="version_release_note">Release Note:</label>
+    <div class="info" id="textile-note" style="float:left;">
+      HTML and <a href="http://hobix.com/textile/" target="_blank">Textile</a> markup is allowed here.
+    </div>
+    <div style="float:right">
+      <input type="submit" value="Preview" name="commit" onclick="preview(this.form, '<%= params[:controller]%>');return false;"/>
+    </div>
+    <div style="clear:both;"></div>
+    <%= text_area :version, :release_note, :class => 'textArea' %>
+  </p>
+  
+  <div class="floatHalf">
+    <p>
+      <label for="version_version_major">Version Number:</label>
+      <span class="info" style="display:block;margin-bottom:3px;">
+        MajorVersion.MinorVersion.RevisionNumber
+      </span>
+      <%= text_field :version, "version_major", :size => 2, :maxlength => 2 %>&nbsp;.&nbsp;
+      <%= text_field :version, "version_minor", :size => 2, :maxlength => 2 %>&nbsp;.&nbsp;
+      <%= text_field :version, "version_revision", :size => 2, :maxlength => 2 %>
+      <style type="text/css">
+        .fieldWithErrors { display:inline; }
+      </style>
+      <%= error_message_on(:version, :version_major) %>
+      <%= error_message_on(:version, :version_minor) %>
+      <%= error_message_on(:version, :version_revision) %>
+    </p>
+    
+    <p>
+      <label for="version_build_number">Build Number:</label>
+      <%= text_field :version, "build_number", :size => 4, :maxlength => 4 %>
+    </p>
+  </div>
+  
+  <div class="floatHalf">
+    <p>
+      <label for="version_release_date">Release Date:</label>
+      <%= date_select :version, :release_date %>
+    </p>
+    
+    <p>
+      <label for="version_platform">PlatForm:</label>
+      <%= check_box :version, 'windows' %>
+      <label for="version_windows" style="display:inline;">
+        <strong>&nbsp;Windows</strong>
+      </label>
+      <%= check_box :version, 'mac' %>
+      <label for="version_mac" style="display:inline;">
+        <strong>&nbsp;Mac OSX</strong>
+      </label>
+      <%= error_message_on(:version, :windows) %>
+    </p>
+    
+    <p>
+      <label for="version_restrict">Download Restrict:</label>
+      <%= check_box :version, 'restrict' %>
+      <strong>&nbsp;Checked for login required.</strong>
+    </p>
+  </div>
+  <div class='clear'>&nbsp;</div>
+  
+  <div class="float">
+    <label for="file">Download Link: </label>
+    <% if @version.filename.blank? %>
+      This download link has no file associated with it currently.
+    <% elsif File.file?(File.join(Download::UPLOAD_PATH, @version.filename)) %>
+                      <%= link_to @version.filename, :action => "download_file", :id => @version.filename %>
+    <% else %>
+      <span style="color:red;">
+        If you don't see an file link it means the file path is broken or doesn't exist any longer.
+      </span>
+    <% end %>
+    
+    <p>
+      <label for="file">File to Upload</label>
+      <%= file_field :version, :file %>
+      <%= error_message_on(:version, :file) %>
+      <span class="info" style="display:block;">
+        This will replace any existing file for this download version.
+      </span>
+    </p>
+  </div>
+  
+  <div class="clear">&nbsp;</div>
+  
+  <div class="line">&nbsp;</div>
+  
+  <div style="float:left">
+    <%= submit_tag "Save version", :class => 'button hundredfifty' %>
+  </div>
+  
+  <% unless @version.new_record? %>
+    <div style="float:right">
+      <%= link_to "Delete", {:action => 'destroy_version', :id => @version, :download => @download}, :class => 'button hundredfifty', :confirm => "Are you sure?" %>
+    </div>
+  <% end %>
+  
+  <%= end_form_tag %>
+  
+  <div class='clear'></div>
+  <div id="preview-content" style="display: none"></div>
+</div>
